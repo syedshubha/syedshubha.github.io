@@ -43,47 +43,19 @@
 
 <body class="is-preload">
 
-    <div id="main">
-        <section class="one">
-            <div class="container">
-                <header>
-                    <h2>My Memes</h2>
-                </header>
-
-                <div class="meme-slider">
-                    <div class="meme-slide">
-                        <img src="images/meme1.jpg" alt="Meme 1" style="width: 50%; display: block; margin: 0 auto;">
-                        <div class="explanation-toggle" onclick="toggleExplanation('meme1')">Show Explanation</div>
-                        <div class="meme-explanation" id="meme1">
-                            <p>Explanation for meme 1 goes here. This could be about the context, the joke, or any
-                                relevant information.</p>
-                        </div>
-                    </div>
-
-                    <div class="meme-slide">
-                        <img src="images/meme3.jpg" alt="Meme 2" style="width: 50%; display: block; margin: 0 auto;">
-                        <div class="explanation-toggle" onclick="toggleExplanation('meme2')">Show Explanation</div>
-                        <div class="meme-explanation" id="meme2">
-                            <p>Explanation for meme 2 goes here.</p>
-                        </div>
-                    </div>
-
-                    </div>
+    <div id="header">
+        <div class="top">
+            <div id="logo">
+                <span class="image avatar48"><img src="images/avatar.JPG" alt="" /></span>
+                <h1 id="title">Shubha</h1>
+                <p>Quantum Researcher</p>
             </div>
-        </section>
-    </div>
 
-    <script>
-        function toggleExplanation(id) {
-            var explanation = document.getElementById(id);
-            if (explanation.style.display === "none") {
-                explanation.style.display = "block";
-            } else {
-                explanation.style.display = "none";
-            }
-        }
-    </script>
-
-</body>
-
-</html>
+            <nav id="nav">
+                <ul>
+                    <li><a href="index.html" id="top-link"><span class="icon solid fa-home">Home</span></a></li>
+                    <li><a href="research.html" id="portfolio-link"><span class="icon solid fa-th">Research and Projects</span></a></li>
+                    <li><a href="about.html" id="about-link"><span class="icon solid fa-user">Hobbies and Achievements</span></a></li>
+                    <li><a href="blog.html" id="about-link"><span class="icon solid fa-user">My Writings and Videos</span></a></li>
+                    <li><a href="memes.html" id="memes-link"><span class="icon solid fa-grin-beam">Memes</span></a></li>
+                    <li><a href="#contact" id="contact-link"><span class="icon solid fa-envelope
