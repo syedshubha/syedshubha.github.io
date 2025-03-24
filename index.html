@@ -6,6 +6,36 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
     <link rel="stylesheet" href="assets/css/main.css" />
+    <style>
+        /* Style for expandable sections */
+        .expandable-section {
+            margin-top: 1em;
+            border: 1px solid #ddd;
+        }
+
+        .section-header {
+            background-color: #f9f9f9;
+            padding: 0.5em 1em;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .section-content {
+            padding: 1em;
+            display: none;
+        }
+
+        .section-header:after {
+            content: '\002B'; /* Plus sign */
+            font-size: 1.5em;
+        }
+
+        .section-header.active:after {
+            content: '\002D'; /* Minus sign */
+        }
+    </style>
 </head>
 
 <body class="is-preload">
@@ -21,10 +51,6 @@
             <nav id="nav">
                 <ul>
                     <li><a href="#top" id="top-link"><span class="icon solid fa-home">Home</span></a></li>
-                    <li><a href="research.html" id="portfolio-link"><span class="icon solid fa-th">Research and Projects</span></a></li>
-                    <li><a href="about.html" id="about-link"><span class="icon solid fa-user">Hobbies and Achievements</span></a></li>
-                    <li><a href="blog.html" id="about-link"><span class="icon solid fa-user">My Writings and Videos</span></a></li>
-                    <li><a href="memes.html" id="memes-link"><span class="icon solid fa-grin-beam">Memes</span></a></li>
                     <li><a href="#contact" id="contact-link"><span class="icon solid fa-envelope">Contact Me</span></a></li>
                 </ul>
             </nav>
@@ -48,56 +74,261 @@
     <div id="main">
         <section id="top" class="one dark cover">
             <div class="container">
+                <div style="text-align: center;">
+                    <img src="images/avatar.JPG" alt="Your Photo" style="width: 200px; height: 200px; border-radius: 50%;" />
+                </div>
                 <header>
                     <h2 class="alt"><strong> Syed Emad Uddin Shubha </strong></h2>
                     <h2>Aspiring Researcher in Quantum Information </h2>
                 </header>
-                <p style="text-align: justify;"> I completed my B.Sc. in Electrical and Electronic Engineering from
-                    Bangladesh University of Engineering and Technology in May 2022. Following this, I served as a Research
-                    Assistant at North South University and attended lab courses at BRAC University. Currently, I am
-                    working as a Graduate Research Assistant at Louisiana State University. My research interests include
-                    Quantum Communication, Quantum Computing, and Quantum Information. Outside of academia, I enjoy
-                    creating memes on social issues, science, and mathematics, as well as playing chess and reading comics.
+                <p style="text-align: justify;">
+                    I completed my B.Sc. in Electrical and Electronic Engineering from Bangladesh University of Engineering and Technology in May 2022. Following this, I served as a Research Assistant at North South University and attended lab courses at BRAC University. Currently, I am working as a Graduate Research Assistant at Louisiana State University. My research interests include Quantum Communication, Quantum Computing, and Quantum Information. Outside of academia, I enjoy creating memes on social issues, science, and mathematics, as well as playing chess and reading comics.
                 </p>
-                <br>
-                <h2 class="alt" style="text-align: center;"> <strong>
-                        Updates </strong>
-                </h2>
-
-                <ul style="text-align: justify; list-style-type: circle;">
-                    <li>
-                        A paper I co-supervised, titled "Multi-Layered Security System: Integrating Quantum Key Distribution
-                        with Classical Cryptography to Enhance Steganographic Security," has been accepted for publication
-                        in Alexandria Engineering Journal (Q1, IF=6.2). Special thanks to Arman Sykot (1st author) and Md
-                        Shawmoon Azad. Read <a
-                            href="https://www.sciencedirect.com/science/article/pii/S1110016825002339?via%3Dihub#d1e3237">
-                            the paper here </a>.
-                    </li>
-                    <li>
-                        My work, "Increasing Teleportation Fidelity ​using Stabilizer Code based on ​Information Entropy
-                        Metrics," has been accepted for presentation at the <a
-                            href="https://sites.google.com/view/lsuqnet/home">Q-Net Symposium 2025</a> by the APS Chapter at
-                        LSU.
-                    </li>
-
-
-                    <li> My two arXiv preprints are currently under review.
-                    </li>
-
-                    <li> A paper I co-supervised, titled "RESCUED: Robust Quantum Error Correction With Surface Code In
-                        Noisy Channels Using Ensemble Decoder," was presented at IEEE ICTP 2023. </li>
-                    <li> My paper, "Significant improvement of fidelity for encoded quantum bell pairs at long and
-                        short-distance communication along with generalized circuit," has been published in Heliyon (Q1,
-                        IF=4.00). </li>
-                    <li> My conference paper based on my undergraduate thesis is currently online: <a
-                            href="https://ieeexplore.ieee.org/document/10088665">https://ieeexplore.ieee.org/document/10088665</a>
-                    </li>
-                </ul>
-                <br>
-                <h2 class="alt" style="text-align: center;"> <strong>
-                    </strong>
+                <div style="text-align: center; margin-bottom: 1em;">
                     <a href="https://drive.google.com/file/d/1mmDVCgf3C6df7iuY3FPT2_-kMFSptB48/view?usp=sharing"
                         class="button" target="_blank">Click here to view my Curriculum Vitae</a>
+                </div>
+
+                <div class="expandable-section">
+                    <div class="section-header" onclick="toggleSection('updates')">
+                        Updates
+                    </div>
+                    <div class="section-content" id="updates">
+                        <ul style="text-align: justify; list-style-type: circle;">
+                            <li>
+                                A paper I co-supervised, titled "Multi-Layered Security System: Integrating Quantum Key
+                                Distribution with Classical Cryptography to Enhance Steganographic Security," has been
+                                accepted for publication in Alexandria Engineering Journal (Q1, IF=6.2). Special thanks
+                                to Arman Sykot (1st author) and Md Shawmoon Azad. Read <a
+                                    href="https://www.sciencedirect.com/science/article/pii/S1110016825002339?via%3Dihub#d1e3237">
+                                    the paper here </a>.
+                            </li>
+                            <li>
+                                My work, "Increasing Teleportation Fidelity ​using Stabilizer Code based on ​Information
+                                Entropy Metrics," has been accepted for presentation at the <a
+                                    href="https://sites.google.com/view/lsuqnet/home">Q-Net Symposium 2025</a> by the APS
+                                Chapter at LSU.
+                            </li>
+                            <li> My two arXiv preprints are currently under review.
+                            </li>
+                            <li> A paper I co-supervised, titled "RESCUED: Robust Quantum Error Correction With Surface Code
+                                In Noisy Channels Using Ensemble Decoder," was presented at IEEE ICTP 2023. </li>
+                            <li> My paper, "Significant improvement of fidelity for encoded quantum bell pairs at long and
+                                short-distance communication along with generalized circuit," has been published in
+                                Heliyon (Q1, IF=4.00). </li>
+                            <li> My conference paper based on my undergraduate thesis is currently online: <a
+                                    href="https://ieeexplore.ieee.org/document/10088665">https://ieeexplore.ieee.org/document/10088665</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="expandable-section">
+                    <div class="section-header" onclick="toggleSection('research')">
+                        Research and Projects
+                    </div>
+                    <div class="section-content" id="research">
+                        <p style="text-align: justify;">
+                            <strong>
+                                Here are some notable academic projects and research works of mine:
+                            </strong>
+                        </p>
+                        <ul style="list-style-type:square">
+                            <li>
+                                <strong>Significant improvement of fidelity for encoded quantum bell pairs at long and
+                                    short-distance communication along with generalized circuit</strong>
+                                <p style="text-align: justify;">Accepted for publication in Heliyon. DOI: <a
+                                        href=" https://doi.org/10.1016/j.heliyon.2023.e19700 ">
+                                        10.1016/j.heliyon.2023.e19700 \[quant-ph] </a></p>
+                                <p style="text-align: justify;">arXiv preprint link: <a
+                                        href=" https://doi.org/10.48550/arXiv.2303.07425" target="_blank">
+                                        arXiv:2303.07425v1 \[quant-ph] </a></p>
+                            </li>
+                            <li>
+                                <strong>Effect of Quantum Repetition Code on Fidelity of Bell States in Bit Flip Channels</strong>
+                                <p style="text-align: justify;">This paper is based on my undergraduate thesis, supervised
+                                    by Dr. Md. Saifur Rahman, Professor, Dept. of EEE, BUET. Accepted at the 12th
+                                    International Conference on Electrical and Computer Engineering (ICECE). DOI link:
+                                    <a href=" https://doi.org/10.1109/ICECE57408.2022.10088665" target="_blank">
+                                        https://doi.org/10.1109/ICECE57408.2022.10088665. </a></p>
+                            </li>
+                            <li>
+                                <strong>Effect of EOG Artifact Removal on EEG Motor-Imagery Classification</strong>
+                                <p style="text-align: justify;">This paper is based on our Biomedical Engineering
+                                    sessional course project during L4T2. Accepted at the 12th International Conference
+                                    on Electrical and Computer Engineering (ICECE). DOI link: <a
+                                        href=" https://doi.org/10.1109/ICCIT57492.2022.10056062" target="_blank">
+                                        https://doi.org/10.1109/ICCIT57492.2022.10056062. </a></p>
+                            </li>
+                            <li>
+                                <strong>Image Encoding and Decoding using FRQI and NEQR Method using Qiskit</strong>
+                                <p style="text-align: justify;">This was an assignment project during my RA-ship. Link to
+                                    Jupyter notebook: <a
+                                        href=" https://github.com/syedshubha/QuantumImageProcessing/blob/main/qiskit_assignment_shubha.ipynb"
+                                        target="_blank"> here. </a></p>
+                            </li>
+                            <li>
+                                <strong>
+                                    Load Flow Analysis for n Bus using Gauss-Siedel Algorithm
+                                </strong>
+                                <p style="text-align: justify;">
+                                    It was our sessional course project for Power System II during L3T2. I utilized Microsoft
+                                    Excel for input and output data and MATLAB to generalize the algorithm and generate the
+                                    output. GitHub Link: <a
+                                        href="https://github.com/syedshubha/load_flow_analysis_gauss_seidel"
+                                        target="_blank"> https://github.com/syedshubha/load_flow_analysis_gauss_seidel</a>
+                                </p>
+                            </li>
+                            <li>
+                                <strong>Image Encryption using XOR operation and Random Permutation Generation from
+                                    password: </strong>
+                                <p style="text-align: justify;"> This was our Numerical Techniques Sessional Course
+                                    project during L2T1. MATLAB was used for this project. GitHub Link: <a
+                                        href="https://github.com/syedshubha/ImageEncryption" target="_blank">
+                                        https://github.com/syedshubha/ImageEncryption</a> </p>
+                            </li>
+                            <li>
+                                <strong>
+                                    Bangla Speech Emotion Detection:
+                                </strong>
+                                <p style="text-align: justify;"> Using Machine Learning, four Bengali speech
+                                    emotions—Happy, Sad, Angry, and Neutral—were classified. This was our course project for
+                                    DSP-I during L3T1. </p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="expandable-section">
+                    <div class="section-header" onclick="toggleSection('about')">
+                        Hobbies and Achievements
+                    </div>
+                    <div class="section-content" id="about">
+                        <div style="display: flex; justify-content: center; align-items: center;">
+                            <div>
+                                <figure>
+                                    <img src="images/Photo.JPG"
+                                        style="display: block; width: 250px; height: auto; margin: 0 auto;" alt="" />
+                                    <figcaption style="text-align: center;"> During my keynote speech at the event “Quantum
+                                        Computing & Mechanics: Technical prospects & Opportunities in Higher Studies”
+                                        organized by IEEE NSU Student Branch. </figcaption>
+                                </figure>
+                            </div>
+                            <div>
+                                <figure>
+                                    <img src="images/Photo1.JPG"
+                                        style="display: block; width: 350px; height: auto; margin: 20px auto 0 auto;"
+                                        alt="" />
+                                    <figcaption style="text-align: center;"> At Niladri Lake, Sunamganj </figcaption>
+                                </figure>
+                            </div>
+                        </div>
+                        <a href="#" class="image featured"><img src="images/pic08.jpg" alt="" /></a>
+                        <p style="text-align: justify;">
+                            In my free time, I enjoy reading and writing about Physics and Mathematics. Despite my
+                            engineering background, I have always been fascinated by these fundamental subjects. I make
+                            an effort to learn physics and mathematics concepts beyond the engineering curriculum by
+                            studying relevant textbooks. I have dedicated significant time to understanding various
+                            topics within these disciplines.
+                        </p>
+                        <p style="text-align: justify;">
+                            During my freshman year of undergraduate studies, I also became involved with several science
+                            organizations. I am passionate about writing about science to foster greater public interest.
+                            I believe that a broader understanding of scientific principles and their real-world
+                            applications can contribute to a better world. Consequently, I write scientific blog posts and
+                            occasionally create YouTube videos explaining interesting concepts. I also hold the conviction
+                            that mathematics is essential for a complete understanding of science. Therefore, I emphasize
+                            the importance of mathematics education at both the high school and university levels and
+                            continuously strive to learn more mathematics myself. I firmly believe in Feynman's principle:
+                            "If you want to master something, teach it," and I actively apply this in my life. </p>
+                        <p style="text-align: justify;">
+                            Beyond Physics and Mathematics, my interests extend to History, Geopolitics, and more. I am a
+                            fan of comics, with The Flash (DC) and Spider-Man (Marvel) being my favorite superheroes. I am
+                            an animal lover and advocate for the philosophy of "Live and let live." In my leisure time, I
+                            enjoy creating memes and playing chess. I value both humor and chess knowledge. Although I am
+                            still a novice at chess (having learned for about a year), I am always open to a game. Feel free
+                            to connect with me on <a href="https://lichess.org/@/emaduddin" target="_blank">Lichess</a> or
+                            <a href="https://www.chess.com/member/shuvo_syed" target="_blank">Chess.com</a>. Here are a few
+                            memes I've created:
+                        </p>
+                        <div style="display: flex; justify-content: center; align-items: center; width: 100%;">
+                            <div style="width: 50%; text-align: center;">
+                                <img src="images/meme1.jpg"
+                                    style="display: block; width: 80%; height: auto; margin: 0 auto;" alt="" />
+                            </div>
+                            <div style="width: 50%; text-align: center;">
+                                <img src="images/meme3.jpg"
+                                    style="display: block; width: 80%; height: auto; margin: 0 auto;" alt="" />
+                            </div>
+                        </div>
+                        <div style="text-align: center; margin-top: 1em;">
+                            <a href="memes.html" class="button">Visit My Memes Page</a>
+                        </div>
+                        <h2>
+                            HONORS AND AWARDS
+                        </h2>
+                        <ol type="i" style="text-align: justify;">
+                            <li>1st position in the Mathematical Olympiad (Varsity Level) at the International Day of
+                                Mathematics 2021, organized by the Bangladesh Mathematical Society.</li>
+                            <li> Second Runner-up in the Varsity level math olympiad by BUET Math Club. </li>
+                            <li> 4th position in the Engineering Olympiad by BUET Career Club.</li>
+                            <li>Keynote Speaker at the event “Quantum Computing & Mechanics: Technical prospects &
+                                Opportunities in Higher Studies” organized by IEEE NSU Student Branch.</li>
+                            <li>Finalist in the Satellite Mission Idea Contest by IEEE BRACU.</li>
+                        </ol>
+                    </div>
+                </div>
+
+                <div class="expandable-section">
+                    <div class="section-header" onclick="toggleSection('blog')">
+                        Writings and Video Tutorials
+                    </div>
+                    <div class="section-content" id="blog">
+                        <h1 style="text-align: justify;">
+                            Here are some science blog articles I've written that you might find interesting:
+                        </h1>
+                        <ul style="list-style-type: square; text-align: justify;">
+                            <li>
+                                <a href="https://bigganblog.org/2021/04/stirlings_approximation/" target="_blank">
+                                    Factorial and Stirling's Approximation </a> - Bigganblog
+                            </li>
+                            <li>
+                                <a href="https://bigganblog.org/2020/04/%e0%a6%95%e0%a7%8d%e0%a6%b2%e0%a6%be%e0%a6%b8%e0%a6%bf%e0%a6%95%e0%a7%8d%e0%a6%af%e0%a6%be%e0%a6%b2-%e0%a6%ae%e0%a7%87%e0%a6%95%e0%a6%be%e0%a6%a8%e0%a6%bf%e0%a6%95%e0%a7%8d%e0%a6%af%e0%a6%be%e0%a6%b2-%e0%a6%ae%e0%a7%87%e0%a6%95%e0%a6%be%e0%a6%a8%e0%a6%bf%e0%a6%95%e0%a7%8d%e0%a6%af%e0%a6%be%e0%a6%b2-%e0%a6%ae%e0%a7%87%e0%a6%95%e0%a6%be%e0%a6%a8%e0%a6%bf%e0%a6%95%e0%a7%8d%e0%a6%af%e0%a6%be%e0%a6%b2-%e0%a6%ae%e0%a7%87%e0%a6%95%e0%a6%be%e0%a6%a8%e0%a6%bf%e0%a6%95%e0%a7%8d%e0%a6%af%e0%a6%be%e0%a6%b2-%e0%a6%ae%e0%a7%87%e0%a6%95%e0%a6%be%e0%a6%a8%e0%a6%bf%e0%a7%8d%e0%a6%95%e0%a7%8d%e0%a6%af%e0%a6%be%e0%a6%b2-%e0%a6%ae%e0%a7%87%e0%a6%95%e0%a6%be%e0%a6%a8%e0%a6%bf%e0%a6%95%e0%a7%8d%e0%a6%b8-%e0%a7%a7/"
+                                    target="_blank"> Classical Mechanics Part-1: History of Newton's Law of Motion </a> -
+                                Bigganblog
+                            </li>
+                            <li>
+                                <a href="https://www.borgomul.com/syed-shubha/5117/" target="_blank"> Which number is smaller?
+                                    m <sup>n</sup> or n <sup>m</sup> </a> - Borgomulblog
+                            </li>
+                        </ul>
+                        <h1 style="text-align: justify;">
+                            I've covered several math topics, including full Complex Analysis and some vector calculus, in
+                            the following playlist:
+                        </h1>
+                        <iframe width="350" height="315" src="https://www.youtube.com/embed/videoseries?list=PLEGgPKRszGn9g1C8Swhib5GtYgHJNb-Iq"
+                            title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            allowfullscreen></iframe>
+                        <h1 style="text-align: justify;">
+                            I also created some short videos on Quantum Computing topics, primarily for my research students
+                            at NSU. Here's an interesting one on the CHSH game:
+                        </h1>
+                        <iframe width="350" height="315" src="https://www.youtube.com/embed/qd_sZDWfmv8"
+                            title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            allowfullscreen></iframe>
+                        <h1 style="text-align: justify;">
+                            Most of my writings are compiled on the following Facebook page:
+                        </h1>
+                        <iframe
+                            src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Ffunofscience.bd%2F&tabs=timeline&width=500&height=500&small_header=false&adapt_container_width=true&hide_cover=true&show_facepile=true&appId"
+                            width="350" height="350" style="border:none;overflow:hidden" scrolling="no"
+                            frameborder="0" allowfullscreen="true"
+                            allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+                    </div>
+                </div>
+
             </div>
         </section>
     </div>
@@ -119,6 +350,19 @@
     <script src="assets/js/breakpoints.min.js"></script>
     <script src="assets/js/util.js"></script>
     <script src="assets/js/main.js"></script>
+    <script>
+        function toggleSection(id) {
+            var section = document.getElementById(id);
+            var header = section.previousElementSibling;
+            if (section.style.display === "block") {
+                section.style.display = "none";
+                header.classList.remove('active');
+            } else {
+                section.style.display = "block";
+                header.classList.add('active');
+            }
+        }
+    </script>
 
 </body>
 
