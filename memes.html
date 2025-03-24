@@ -38,24 +38,106 @@
             font-size: 0.8em;
             color: #666;
         }
+
+        /* Added Styles */
+        body {
+            background-color: #f0f0f0; /* Light grey background */
+            font-family: sans-serif;
+            margin: 0;
+            padding-top: 50px; /* Add some space at the top */
+        }
+
+        .container {
+            width: 80%;
+            max-width: 960px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        #contact-info {
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid #ddd;
+            text-align: center;
+        }
+
+        #top-links {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+            #top-links a {
+                margin: 0 10px;
+                text-decoration: none;
+                color: #333;
+                font-weight: bold;
+            }
     </style>
 </head>
 
 <body class="is-preload">
 
-    <div id="header">
-        <div class="top">
-            <div id="logo">
-                <span class="image avatar48"><img src="images/avatar.JPG" alt="" /></span>
-                <h1 id="title">Shubha</h1>
-                <p>Quantum Researcher</p>
+    <div id="top-links">
+        <h1><a href="index.html">Syed Emad Uddin Shubha</a></h1>
+    </div>
+
+    <div class="container">
+        <div class="meme-slider">
+            <div class="meme-slide">
+                <img src="images/meme1.jpg" alt="Meme 1" style="width: 50%; display: block; margin: 0 auto;">
+                <div class="explanation-toggle" onclick="toggleExplanation('meme1')">Show Explanation</div>
+                <div class="meme-explanation" id="meme1">
+                    <p>Explanation for meme 1 goes here. This could be about the context, the joke, or any relevant
+                        information.</p>
+                </div>
             </div>
 
-            <nav id="nav">
-                <ul>
-                    <li><a href="index.html" id="top-link"><span class="icon solid fa-home">Home</span></a></li>
-                    <li><a href="research.html" id="portfolio-link"><span class="icon solid fa-th">Research and Projects</span></a></li>
-                    <li><a href="about.html" id="about-link"><span class="icon solid fa-user">Hobbies and Achievements</span></a></li>
-                    <li><a href="blog.html" id="about-link"><span class="icon solid fa-user">My Writings and Videos</span></a></li>
-                    <li><a href="memes.html" id="memes-link"><span class="icon solid fa-grin-beam">Memes</span></a></li>
-                    <li><a href="#contact" id="contact-link"><span class="icon solid fa-envelope
+            <div class="meme-slide">
+                <img src="images/meme3.jpg" alt="Meme 2" style="width: 50%; display: block; margin: 0 auto;">
+                <div class="explanation-toggle" onclick="toggleExplanation('meme2')">Show Explanation</div>
+                <div class="meme-explanation" id="meme2">
+                    <p>Explanation for meme 2 goes here.</p>
+                </div>
+            </div>
+
+            </div>
+
+        <div id="contact-info">
+            <h2>Contact Me</h2>
+            <ul class="icons">
+                <li><a href="https://twitter.com/syed_shubha" class="icon brands fa-twitter" target="_blank"><span
+                            class="label">Twitter</span></a></li>
+                <li><a href="https://www.facebook.com/physicist.shubha" class="icon brands fa-facebook-f"
+                        target="_blank"><span class="label">Facebook</span></a></li>
+                <li><a href="https://github.com/syedshubha" class="icon brands fa-github" target="_blank"><span
+                            class="label">Github</span></a></li>
+                <li><a href="https://www.linkedin.com/in/syed-emad-uddin-shubha/" class="icon brands fa-linkedin"
+                        target="_blank"><span class="label">LinkedIn</span></a></li>
+                <li><a href="mailto:shubhabuet16@gmail.com" class="icon solid fa-envelope"><span class="label"
+                            target="_blank">Email</span></a></li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        function toggleExplanation(id) {
+            var explanation = document.getElementById(id);
+            if (explanation.style.display === "none") {
+                explanation.style.display = "block";
+            } else {
+                explanation.style.display = "none";
+            }
+        }
+    </script>
+
+</body>
+
+</html>
