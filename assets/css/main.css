@@ -386,3 +386,43 @@ br.clear {
 
 .row.aln-center {
     justify-content: center;
+}
+
+.row.aln-right {
+    justify-content: flex-end;
+}
+
+.row.aln-top {
+    align-items: flex-start;
+}
+
+.row.aln-middle {
+    align-items: center;
+}
+
+.row.aln-bottom {
+    align-items: flex-end;
+}
+
+.row>.imp {
+    order: -1;
+}
+
+.row>.col-1 {
+    width: 8.33333%;
+}
+
+.row>.off-1 {
+    margin-left: 8.33333%;
+}
+
+.row>.col-2 {
+    width: 16.66667%;
+}
+
+.row>.off-2 {
+    margin-left: 16.66667%;
+}
+
+.row>.col-3 {
+    width
