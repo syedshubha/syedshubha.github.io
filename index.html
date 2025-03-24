@@ -11,29 +11,242 @@
         .expandable-section {
             margin-top: 1em;
             border: 1px solid #ddd;
+            border-radius: 8px; /* Added border-radius for a softer look */
+            background-color: #f8f8f8; /* Added a light background color */
         }
 
         .section-header {
             background-color: #f9f9f9;
-            padding: 0.5em 1em;
+            padding: 0.8em 1em; /* Increased padding for better visual appeal */
             cursor: pointer;
             display: flex;
             justify-content: space-between;
             align-items: center;
+            border-bottom: 1px solid #ddd; /* Added a border for separation */
+            border-top-left-radius: 8px;  /* Rounded top corners */
+            border-top-right-radius: 8px;
         }
 
         .section-content {
             padding: 1em;
             display: none;
+            border-bottom-left-radius: 8px; /* Rounded bottom corners */
+            border-bottom-right-radius: 8px;
         }
 
         .section-header:after {
-            content: '\002B'; /* Plus sign */
+            content: '\002B';
+            /* Plus sign */
             font-size: 1.5em;
+            color: #555; /* Darker color for the plus sign */
         }
 
         .section-header.active:after {
-            content: '\002D'; /* Minus sign */
+            content: '\002D';
+            /* Minus sign */
+        }
+
+        .section-header:hover {
+            background-color: #f0f0f0;
+            /* Slight background change on hover for interactivity */
+        }
+
+        /* Added some basic color to the body and made it responsive */
+        body {
+            background: #f4f4f4;
+            /* Light background for the whole page */
+            color: #333;
+            /* Darker text for better readability */
+            font-size: 16px;
+            /* Responsive font size */
+            line-height: 1.7;
+            font-family: 'Source Sans Pro', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        #main {
+            padding: 2em 0;
+            /* Added padding to the main section */
+            max-width: 100%;
+            /* Ensure main section doesn't overflow on small screens */
+            box-sizing: border-box;
+        }
+
+        .container {
+            max-width: 1200px;
+            /* Increased max-width for larger screens */
+            margin: 0 auto;
+            padding: 0 1em;
+            /* Added horizontal padding for smaller screens */
+        }
+
+        /* Responsive image styling */
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        /* Style for the avatar image */
+        #top img {
+            width: 150px;
+            /* Adjusted size for smaller screens */
+            height: 150px;
+            border-radius: 50%;
+            border: 5px solid #ddd;
+            /* Added a border */
+            margin-bottom: 1em;
+        }
+
+        #top h2 {
+            font-size: 2.2em;
+            /* Larger heading */
+            color: #2c3e50;
+            /* Darker heading color */
+            margin-bottom: 0.5em;
+        }
+
+        #top h2.alt {
+            font-size: 1.5em;
+            color: #7f8c8d;
+            /* Slightly darker secondary heading */
+            margin-bottom: 1em;
+        }
+
+        #top p {
+            font-size: 1.1em;
+            /* Increased font size of paragraph*/
+            line-height: 1.7;
+            color: #555;
+            /* Slightly darker paragraph text */
+            text-align: justify;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 0.8em 1.8em;
+            /* Adjusted button padding */
+            background-color: #3498db;
+            /* A brighter button color */
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            /* More rounded corners */
+            font-size: 1.1em;
+            /* Increased font size */
+            transition: background-color 0.3s ease;
+            /* Smooth transition */
+            margin-top: 1em;
+            /* Added margin above the button */
+            text-align: center;
+        }
+
+        .button:hover {
+            background-color: #2980b9;
+            /* Darker shade on hover */
+        }
+
+        ul li {
+            margin-bottom: 0.5em;
+            /* Increased spacing between list items */
+            font-size: 1.1em;
+        }
+
+        #footer {
+            background-color: #f0f0f0;
+            /* Light footer background */
+            padding: 2em 0;
+            margin-top: 2em;
+            border-top: 1px solid #ddd;
+        }
+
+        #footer .icons {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 1em;
+        }
+
+        #footer .icons li {
+            margin: 0 1em;
+            /* Increased spacing between icons */
+        }
+
+        #footer .icons li a {
+            color: #7f8c8d;
+            /* Darker icon color */
+            font-size: 1.5em;
+            /* Increased icon size */
+            transition: color 0.3s ease;
+        }
+
+        #footer .icons li a:hover {
+            color: #3498db;
+            /* Highlight color on hover */
+        }
+
+        #footer .copyright {
+            text-align: center;
+            color: #555;
+            /* Darker copyright text */
+            font-size: 0.9em;
+        }
+
+        /* Media query for mobile devices */
+        @media screen and (max-width: 768px) {
+            body {
+                font-size: 14px;
+                /* Smaller font size on mobile */
+                line-height: 1.6;
+            }
+
+            .container {
+                padding: 0 1em;
+                /* Adjusted container padding for mobile */
+            }
+
+            #top img {
+                width: 120px;
+                height: 120px;
+            }
+
+            #top h2 {
+                font-size: 1.8em;
+            }
+
+            #top h2.alt {
+                font-size: 1.2em;
+            }
+
+            #top p {
+                font-size: 1em;
+            }
+
+            .button {
+                font-size: 1em;
+                padding: 0.8em 1.5em;
+            }
+
+            #footer .icons li a {
+                font-size: 1.2em;
+            }
+
+            .expandable-section {
+                margin-top: 1.5em;
+                border-radius: 6px;
+            }
+
+            .section-header {
+                padding: 0.8em 1em;
+                font-size: 1.1em;
+                border-top-left-radius: 6px;
+                border-top-right-radius: 6px;
+            }
+
+            .section-content {
+                padding: 1em;
+                border-bottom-left-radius: 6px;
+                border-bottom-right-radius: 6px;
+            }
         }
     </style>
 </head>
@@ -41,7 +254,7 @@
 <body class="is-preload">
 
     <div id="header">
-       
+
 
     </div>
 
@@ -49,14 +262,19 @@
         <section id="top" class="one dark cover">
             <div class="container">
                 <div style="text-align: center;">
-                    <img src="images/avatar.JPG" alt="Your Photo" style="width: 200px; height: 200px; border-radius: 50%;" />
+                    <img src="images/avatar.JPG" alt="Your Photo" />
                 </div>
                 <header>
                     <h2 class="alt"><strong> Syed Emad Uddin Shubha </strong></h2>
                     <h2>Aspiring Researcher in Quantum Information </h2>
                 </header>
                 <p style="text-align: justify;">
-                    I completed my B.Sc. in Electrical and Electronic Engineering from Bangladesh University of Engineering and Technology in May 2022. Following this, I served as a Research Assistant at North South University and attended lab courses at BRAC University. Currently, I am working as a Graduate Research Assistant at Louisiana State University. My research interests include Quantum Communication, Quantum Computing, and Quantum Information. Outside of academia, I enjoy creating memes on social issues, science, and mathematics, as well as playing chess and reading comics.
+                    I completed my B.Sc. in Electrical and Electronic Engineering from Bangladesh University of Engineering
+                    and Technology in May 2022. Following this, I served as a Research Assistant at North South University
+                    and attended lab courses at BRAC University. Currently, I am working as a Graduate Research Assistant at
+                    Louisiana State University. My research interests include Quantum Communication, Quantum Computing, and
+                    Quantum Information. Outside of academia, I enjoy creating memes on social issues, science, and
+                    mathematics, as well as playing chess and reading comics.
                 </p>
                 <div style="text-align: center; margin-bottom: 1em;">
                     <a href="https://drive.google.com/file/d/1mmDVCgf3C6df7iuY3FPT2_-kMFSptB48/view?usp=sharing"
@@ -178,26 +396,28 @@
                         Hobbies and Achievements
                     </div>
                     <div class="section-content" id="about">
-                        <div style="display: flex; justify-content: center; align-items: center;">
-                            <div>
+                        <div style="display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 20px;">
+                            <div style="flex: 1; min-width: 250px; text-align: center;">
                                 <figure>
                                     <img src="images/Photo.JPG"
-                                        style="display: block; width: 250px; height: auto; margin: 0 auto;" alt="" />
-                                    <figcaption style="text-align: center;"> During my keynote speech at the event “Quantum
+                                        style="display: block; width: 100%; height: auto; max-width: 300px; margin: 0 auto;"
+                                        alt="Keynote Speech" />
+                                    <figcaption style="text-align: center; font-size: 0.9em; margin-top: 0.5em;">
+                                        During my keynote speech at the event “Quantum
                                         Computing & Mechanics: Technical prospects & Opportunities in Higher Studies”
                                         organized by IEEE NSU Student Branch. </figcaption>
                                 </figure>
                             </div>
-                            <div>
+                            <div style="flex: 1; min-width: 250px; text-align: center;">
                                 <figure>
                                     <img src="images/Photo1.JPG"
-                                        style="display: block; width: 350px; height: auto; margin: 20px auto 0 auto;"
-                                        alt="" />
-                                    <figcaption style="text-align: center;"> At Niladri Lake, Sunamganj </figcaption>
+                                        style="display: block; width: 100%; height: auto; max-width: 400px; margin: 0 auto;"
+                                        alt="Niladri Lake" />
+                                    <figcaption style="text-align: center; font-size: 0.9em; margin-top: 0.5em;">
+                                        At Niladri Lake, Sunamganj </figcaption>
                                 </figure>
                             </div>
                         </div>
-                        <a href="#" class="image featured"><img src="images/pic08.jpg" alt="" /></a>
                         <p style="text-align: justify;">
                             In my free time, I enjoy reading and writing about Physics and Mathematics. Despite my
                             engineering background, I have always been fascinated by these fundamental subjects. I make
@@ -225,14 +445,14 @@
                             <a href="https://www.chess.com/member/shuvo_syed" target="_blank">Chess.com</a>. Here are a few
                             memes I've created:
                         </p>
-                        <div style="display: flex; justify-content: center; align-items: center; width: 100%;">
-                            <div style="width: 50%; text-align: center;">
-                                <img src="images/meme1.jpg"
-                                    style="display: block; width: 80%; height: auto; margin: 0 auto;" alt="" />
+                        <div style="display: flex; flex-wrap: wrap; justify-content: center; align-items: center; width: 100%; gap: 20px;">
+                            <div style="flex: 1; min-width: 250px; text-align: center;">
+                                <img src="images/meme1.jpg" style="display: block; width: 80%; height: auto; margin: 0 auto;"
+                                    alt="Meme 1" />
                             </div>
-                            <div style="width: 50%; text-align: center;">
-                                <img src="images/meme3.jpg"
-                                    style="display: block; width: 80%; height: auto; margin: 0 auto;" alt="" />
+                            <div style="flex: 1; min-width: 250px; text-align: center;">
+                                <img src="images/meme3.jpg" style="display: block; width: 80%; height: auto; margin: 0 auto;"
+                                    alt="Meme 2" />
                             </div>
                         </div>
                         <div style="text-align: center; margin-top: 1em;">
@@ -267,7 +487,8 @@
                                     Factorial and Stirling's Approximation </a> - Bigganblog
                             </li>
                             <li>
-                                <a href="https://bigganblog.org/2020/04/%e0%a6%95%e0%a7%8d%e0%a6%b2%e0%a6%be%e0%a6%b8%e0%a6%bf%e0%a6%95%e0%a7%8d%e0%a6%af%e0%a6%be%e0%a6%b2-%e0%a6%ae%e0%a7%87%e0%a6%95%e0%a6%be%e0%a6%a8%e0%a6%bf%e0%a6%95%e0%a7%8d%e0%a6%af%e0%a6%be%e0%a6%b2-%e0%a6%ae%e0%a7%87%e0%a6%95%e0%a6%be%e0%a6%a8%e0%a6%bf%e0%a6%95%e0%a7%8d%e0%a6%af%e0%a6%be%e0%a6%b2-%e0%a6%ae%e0%a7%87%e0%a6%95%e0%a6%be%e0%a6%a8%e0%a6%bf%e0%a6%95%e0%a7%8d%e0%a6%af%e0%a6%be%e0%a6%b2-%e0%a6%ae%e0%a7%87%e0%a6%95%e0%a6%be%e0%a6%a8%e0%a6%bf%e0%a6%95%e0%a7%8d%e0%a6%af%e0%a6%be%e0%a6%b2-%e0%a6%ae%e0%a7%87%e0%a6%95%e0%a6%be%e0%a6%a8%e0%a6%bf%e0%a7%8d%e0%a6%95%e0%a7%8d%e0%a6%af%e0%a6%be%e0%a6%b2-%e0%a6%ae%e0%a7%87%e0%a6%95%e0%a6%be%e0%a6%a8%e0%a6%bf%e0%a6%95%e0%a7%8d%e0%a6%b8-%e0%a7%a7/"
+                                <a
+                                    href="https://bigganblog.org/2020/04/%e0%a6%95%e0%a7%8d%e0%a6%b2%e0%a6%be%e0%a6%b8%e0%a6%bf%e0%a6%95%e0%a7%8d%e0%a6%af%e0%a6%be%e0%a6%b2-%e0%a6%ae%e0%a7%87%e0%a6%95%e0%a6%be%e0%a6%a8%e0%a6%bf%e0%a6%95%e0%a7%8d%e0%a6%af%e0%a6%be%e0%a6%b2-%e0%a6%ae%e0%a7%87%e0%a6%95%e0%a6%be%e0%a6%a8%e0%a6%bf%e0%a6%95%e0%a7%8d%e0%a6%af%e0%a6%be%e0%a6%b2-%e0%a6%ae%e0%a7%87%e0%a6%95%e0%a6%be%e0%a6%a8%e0%a6%bf%e0%a6%95%e0%a7%8d%e0%a6%af%e0%a6%be%e0%a6%b2-%e0%a6%ae%e0%a7%87%e0%a6%95%e0%a6%be%e0%a6%a8%e0%a6%bf%e0%a6%95%e0%a7%8d%e0%a6%b8-%e0%a7%a7/"
                                     target="_blank"> Classical Mechanics Part-1: History of Newton's Law of Motion </a> -
                                 Bigganblog
                             </li>
@@ -280,26 +501,31 @@
                             I've covered several math topics, including full Complex Analysis and some vector calculus, in
                             the following playlist:
                         </h1>
-                        <iframe width="350" height="315" src="https://www.youtube.com/embed/videoseries?list=PLEGgPKRszGn9g1C8Swhib5GtYgHJNb-Iq"
-                            title="YouTube video player" frameborder="0"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                            allowfullscreen></iframe>
+                        <div style="text-align: center;">
+                            <iframe width="100%" height="315" src="https://www.youtube.com/embed/videoseries?list=PLEGgPKRszGn9g1C8Swhib5GtYgHJNb-Iq"
+                                title="YouTube video player" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"allowfullscreen style="max-width: 560px;"></iframe>
+                        </div>
                         <h1 style="text-align: justify;">
                             I also created some short videos on Quantum Computing topics, primarily for my research students
                             at NSU. Here's an interesting one on the CHSH game:
                         </h1>
-                        <iframe width="350" height="315" src="https://www.youtube.com/embed/qd_sZDWfmv8"
-                            title="YouTube video player" frameborder="0"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                            allowfullscreen></iframe>
+                        <div style="text-align: center;">
+                            <iframe width="100%" height="315" src="https://www.youtube.com/embed/qd_sZDWfmv8"
+                                title="YouTube video player" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                allowfullscreen style="max-width: 560px;"></iframe>
+                        </div>
                         <h1 style="text-align: justify;">
                             Most of my writings are compiled on the following Facebook page:
                         </h1>
-                        <iframe
-                            src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Ffunofscience.bd%2F&tabs=timeline&width=500&height=500&small_header=false&adapt_container_width=true&hide_cover=true&show_facepile=true&appId"
-                            width="350" height="350" style="border:none;overflow:hidden" scrolling="no"
-                            frameborder="0" allowfullscreen="true"
-                            allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+                        <div style="display: flex; justify-content: center;">
+                            <iframe
+                                src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Ffunofscience.bd%2F&tabs=timeline&width=100%&height=500&small_header=false&adapt_container_width=true&hide_cover=true&show_facepile=true&appId"
+                                style="border:none;overflow:hidden; max-width: 500px;" scrolling="no" frameborder="0"
+                                allowfullscreen="true"
+                                allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+                        </div>
                     </div>
                 </div>
 
@@ -307,25 +533,26 @@
         </section>
     </div>
 
-   <div id="footer">
-    <ul class="icons" style="display: flex; justify-content: center; align-items: center; margin-bottom: 10px;">
-        <li><a href="https://twitter.com/syed_shubha" class="icon brands fa-twitter" target="_blank"><span
-                    class="label">Twitter</span></a></li>
-        <li><a href="https://www.facebook.com/physicist.shubha" class="icon brands fa-facebook-f" target="_blank"><span
-                    class="label">Facebook</span></a></li>
-        <li><a href="https://github.com/syedshubha" class="icon brands fa-github" target="_blank"><span
-                    class="label">Github</span></a></li>
-        <li><a href="https://www.linkedin.com/in/syed-emad-uddin-shubha/" class="icon brands fa-linkedin" target="_blank"><span
-                    class="label">LinkedIn</span></a></li>
-        <li><a href="mailto:shubhabuet16@gmail.com" class="icon solid fa-envelope" target="_blank"><span class="label">Email</span></a>
-        </li>
-    </ul>
-    <ul class="copyright" style="text-align: center;">
-        <li>© Syed Emad Uddin Shubha.</li>
-    </ul>
-</div>
+    <div id="footer">
+        <ul class="icons"
+            style="display: flex; justify-content: center; align-items: center; margin-bottom: 10px; padding-left: 0;">
+            <li style="margin: 0 1em;"><a href="https://twitter.com/syed_shubha" class="icon brands fa-twitter"
+                    target="_blank"><span class="label">Twitter</span></a></li>
+            <li style="margin: 0 1em;"><a href="https://www.facebook.com/physicist.shubha" class="icon brands fa-facebook-f"
+                    target="_blank"><span class="label">Facebook</span></a></li>
+            <li style="margin: 0 1em;"><a href="https://github.com/syedshubha" class="icon brands fa-github"
+                    target="_blank"><span class="label">Github</span></a></li>
+            <li style="margin: 0 1em;"><a href="https://www.linkedin.com/in/syed-emad-uddin-shubha/"
+                    class="icon brands fa-linkedin" target="_blank"><span class="label">LinkedIn</span></a></li>
+            <li style="margin: 0 1em;"><a href="mailto:shubhabuet16@gmail.com" class="icon solid fa-envelope"
+                    target="_blank"><span class="label">Email</span></a></li>
+        </ul>
+        <ul class="copyright" style="text-align: center; margin-bottom: 0;">
+            <li>© Syed Emad Uddin Shubha.</li>
+        </ul>
+    </div>
 
-    
+
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/js/jquery.scrolly.min.js"></script>
     <script src="assets/js/jquery.scrollex.min.js"></script>
