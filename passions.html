@@ -540,46 +540,146 @@
     <!-- Main Content -->
     <div class="main-content">
         <!-- Memes Section with Horizontal Scroll -->
-        <section class="passion-section" id="memes">
-            <h2 class="section-title">Science Memes Collection</h2>
-            <p style="text-align: center; color: var(--text-secondary); margin-bottom: 2rem;">
-                Scroll horizontally to browse memes. Click "Show Explanation" to learn the science behind the humor!
-            </p>
-            <div class="memes-wrapper">
-                <div class="memes-scroll-container">
-                    <div class="memes-horizontal">
-                        <!-- Meme 1 -->
-                        <div class="meme-card" id="meme1">
-                            <div class="meme-image">
-                                <span>Quantum --<br>Meme Placeholder</span>
-                            </div>
-                            <div class="meme-info">
-                                <h3 class="meme-title">--</h3>
-                                <p class="meme-description"> -- </p>
-                                <button class="meme-expand-btn" onclick="toggleMeme('meme1')">Show Explanation</button>
-                                <div class="meme-explanation">
-                                    This meme plays on the concept of quantum superposition, where particles exist in multiple states simultaneously until observed. Just like Schrödinger's cat, my assignment exists in a superposition of completed and incomplete states until the professor checks it!
-                                </div>
-                            </div>
+       <section class="passion-section" id="memes">
+    <h2 class="section-title">Quantum Memeology</h2>
+    <p style="text-align: center; color: var(--text-secondary); margin-bottom: 2rem;">
+        A curated collection of #OC science memes. Scroll horizontally and click to reveal the physics behind the fun!
+    </p>
+    <div class="memes-wrapper">
+        <div class="memes-scroll-container">
+            <div class="memes-horizontal">
+                <div class="meme-card" id="meme1">
+                    <img src="images/magicstate.jpeg" alt="Magic State Meme" style="width:100%; height: auto; display: block;">
+                    <div class="meme-info">
+                        <h3 class="meme-title">Universal Computation</h3>
+                        <p class="meme-description">The final infinity stone for quantum power.</p>
+                        <button class="meme-expand-btn" onclick="toggleMeme('meme1')">Show Explanation</button>
+                        <div class="meme-explanation">
+                            Clifford gates alone aren't enough for universal quantum computation. You need to add a non-Clifford resource, often prepared via a "magic state," to unlock full computing power.
                         </div>
-
-
-                        <!-- Add more memes here following the same structure -->
                     </div>
                 </div>
-            </div>
-            <div style="text-align: center; margin-top: 3rem;">
-                <a href="https://www.facebook.com/funofscience.bd/" class="hobby-link" target="_blank">
-                    View My Pop Science Posts on Facebook →
-                </a>
-            </div>
-                        <div style="text-align: center; margin-top: 3rem;">
-                <a href="https://www.reddit.com/r/QuantumMemeology/" class="hobby-link" target="_blank">
-                    Join My Subreddit for more Quantum Memes →
-                </a>
-            </div>
-        </section>
 
+                <div class="meme-card" id="meme2">
+                    <img src="images/teleportation.jpeg" alt="Quantum Teleportation Meme" style="width:100%; height: auto; display: block;">
+                    <div class="meme-info">
+                        <h3 class="meme-title">No-Cloning Theorem</h3>
+                        <p class="meme-description">Why quantum states prefer cut & paste.</p>
+                        <button class="meme-expand-btn" onclick="toggleMeme('meme2')">Show Explanation</button>
+                        <div class="meme-explanation">
+                           You can't copy an unknown quantum state (Ctrl+C). Quantum teleportation moves a state by destroying the original, which is analogous to cutting and pasting (Ctrl+X, Ctrl+V).
+                        </div>
+                    </div>
+                </div>
+
+                <div class="meme-card" id="meme3">
+                    <img src="images/bell.jpeg" alt="Bell's Theorem Meme" style="width:100%; height: auto; display: block;">
+                    <div class="meme-info">
+                        <h3 class="meme-title">The Quantum Choice</h3>
+                        <p class="meme-description">Choose your pill: Locality or Realism.</p>
+                        <button class="meme-expand-btn" onclick="toggleMeme('meme3')">Show Explanation</button>
+                        <div class="meme-explanation">
+                            Bell's Theorem proves you can't have both locality (no spooky action) and realism (definite properties) in the classical sense. One must be abandoned.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="meme-card" id="meme4">
+                    <img src="images/nothing.jpeg" alt="Quantum Circuit Meme" style="width:100%; height: auto; display: block;">
+                    <div class="meme-info">
+                        <h3 class="meme-title">Identity Crisis</h3>
+                        <p class="meme-description">This quantum circuit does... absolutely nothing.</p>
+                        <button class="meme-expand-btn" onclick="toggleMeme('meme4')">Show Explanation</button>
+                        <div class="meme-explanation">
+                            This circuit first entangles two qubits and then immediately applies the inverse operation, returning the qubits to their initial state with no net effect.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="meme-card" id="meme5">
+                    <img src="images/doppler.jpeg" alt="Doppler Effect Meme" style="width:100%; height: auto; display: block;">
+                    <div class="meme-info">
+                        <h3 class="meme-title">Relativistic Dating</h3>
+                        <p class="meme-description">When red flags turn green... at 0.235c.</p>
+                        <button class="meme-expand-btn" onclick="toggleMeme('meme5')">Show Explanation</button>
+                        <div class="meme-explanation">
+                            A pun on the relativistic Doppler effect. Light from an object moving toward you is blueshifted, so if you run fast enough, "red flags" could theoretically appear blue (or green).
+                        </div>
+                    </div>
+                </div>
+
+                <div class="meme-card" id="meme6">
+                    <img src="images/stupid.jpeg" alt="Stereographic Projection Meme" style="width:100%; height: auto; display: block;">
+                    <div class="meme-info">
+                        <h3 class="meme-title">A Higher Plane</h3>
+                        <p class="meme-description">A mathematician's point of view.</p>
+                        <button class="meme-expand-btn" onclick="toggleMeme('meme6')">Show Explanation</button>
+                        <div class="meme-explanation">
+                           Using stereographic projection, the mathematician is at the North Pole, the only point not mapped to the "plane of stupidity" where everyone else resides.
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="meme-card" id="meme7">
+                    <img src="images/normal.jpeg" alt="Normal Subgroup Meme" style="width:100%; height: auto; display: block;">
+                    <div class="meme-info">
+                        <h3 class="meme-title">Group Theory Problems</h3>
+                        <p class="meme-description">Some subgroups just can't be normal.</p>
+                        <button class="meme-expand-btn" onclick="toggleMeme('meme7')">Show Explanation</button>
+                        <div class="meme-explanation">
+                            A niche joke from abstract algebra. The S₃ group is yelling at one of its subgroups which famously lacks the mathematical property of being "normal."
+                        </div>
+                    </div>
+                </div>
+
+                <div class="meme-card" id="meme8">
+                    <img src="images/matrix.jpeg" alt="Matrix Meme" style="width:100%; height: auto; display: block;">
+                    <div class="meme-info">
+                        <h3 class="meme-title">Lost in Translation</h3>
+                        <p class="meme-description">Two different kinds of "Matrix" fans.</p>
+                        <button class="meme-expand-btn" onclick="toggleMeme('meme8')">Show Explanation</button>
+                        <div class="meme-explanation">
+                            A play on the double meaning of "matrix": the man is thinking of the movie, while the woman is thinking of a mathematical matrix element in quantum mechanics.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="meme-card" id="meme9">
+                    <img src="images/fluxonium.jpeg" alt="Fluxonium Qubit Meme" style="width:100%; height: auto; display: block;">
+                    <div class="meme-info">
+                        <h3 class="meme-title">A Victim of Success</h3>
+                        <p class="meme-description">This qubit is too well-isolated.</p>
+                        <button class="meme-expand-btn" onclick="toggleMeme('meme9')">Show Explanation</button>
+                        <div class="meme-explanation">
+                            A real engineering trade-off. Making a qubit highly resilient to noise (a success) also makes it harder to measure and control (a new problem).
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="meme-card" id="meme10">
+                    <img src="images/annihilation.jpeg" alt="Annihilation Operator Meme" style="width:100%; height: auto; display: block;">
+                    <div class="meme-info">
+                        <h3 class="meme-title">Ground State Urge</h3>
+                        <p class="meme-description">When you're feeling low, apply â.</p>
+                        <button class="meme-expand-btn" onclick="toggleMeme('meme10')">Show Explanation</button>
+                        <div class="meme-explanation">
+                           Dark humor about the annihilation operator (â). When it acts on the ground state |g⟩ (the lowest energy state), the result is zero.
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div style="text-align: center; margin-top: 3rem; display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap;">
+        <a href="https://www.reddit.com/r/QuantumMemeology/" class="hobby-link" target="_blank">
+            Join My Subreddit →
+        </a>
+                <a href="https://www.facebook.com/funofscience.bd/" class="hobby-link" target="_blank">
+            Pop Science on Facebook →
+        </a>
+    </div>
+</section>
         <!-- Writings Section -->
         <section class="passion-section" id="writings">
             <h2 class="section-title">Science Writing & Blogs</h2>
@@ -812,5 +912,6 @@
     </script>
 </body>
 </html>
+
 
 
