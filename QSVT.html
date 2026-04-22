@@ -1,0 +1,643 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Quantum Singular Value Transformation — Interactive Pedagogical Tool</title>
+<script>
+window.MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  svg: { fontCache: 'global' }
+};
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.min.js"></script>
+<style>
+  :root { --accent:#1f4e79; --accent2:#2e6da4; --soft:#eef5fb; --warn:#fdf6e3; --ink:#1a2330; }
+  * { box-sizing: border-box; }
+  body { font-family: 'Inter','Helvetica Neue',-apple-system,BlinkMacSystemFont,Roboto,sans-serif;
+         max-width: 1180px; margin: 0 auto; padding: 28px; background: #f3f5f8; color: var(--ink); line-height: 1.6; }
+  header.title { border-bottom: 3px solid var(--accent); padding-bottom: 14px; margin-bottom: 18px; }
+  header.title h1 { color: var(--accent); margin: 0 0 6px 0; font-size: 26px; letter-spacing: -0.01em; }
+  header.title .subtitle { color:#475569; font-style: italic; font-size: 15px; }
+  h2 { color: var(--accent); margin-top: 4px; font-size: 20px; letter-spacing: -0.005em; }
+  h3 { color:#34495e; margin-top: 18px; font-size: 16px; }
+  .lead { color:#3b4a5a; }
+  section.step { background:#fff; padding: 22px 28px; margin: 22px 0; border-radius: 8px;
+                 box-shadow: 0 2px 10px rgba(20,40,80,0.07); border-left: 5px solid var(--accent); }
+  .grid2 { display:grid; grid-template-columns: 1fr 1fr; gap: 26px; }
+  @media (max-width: 860px) { .grid2 { grid-template-columns: 1fr; } }
+  .matrix-grid { display:inline-grid; gap:8px; margin: 8px 0; }
+  .matrix-grid input { padding:8px; font-size:15px; text-align:center; border:1px solid #cbd5e1; border-radius:4px; width: 80px; }
+  .controls { display:flex; gap:8px; align-items:center; flex-wrap:wrap; margin:10px 0; }
+  button { background: var(--accent); color:white; border:none; padding:8px 14px;
+           font-size:13px; border-radius:4px; cursor:pointer; font-weight: 500; }
+  button:hover { background: var(--accent2); }
+  select, input[type=number], input[type=text] { padding:6px 10px; font-size:14px; border:1px solid #cbd5e1; border-radius:4px; }
+  .matrix { font-family: 'Cascadia Code','JetBrains Mono','Courier New',monospace; background: var(--soft);
+            padding: 10px 14px; border-radius: 6px; display: inline-block; margin: 6px 0;
+            white-space: pre; font-size: 13px; line-height: 1.45; }
+  .label { font-weight:600; color:#334155; margin-right: 8px; }
+  .note { background: var(--warn); padding: 10px 14px; border-left: 4px solid #b48700;
+          margin: 10px 0; border-radius: 4px; font-size: 14px; color:#5a4500; }
+  .pill { display:inline-block; padding:3px 10px; background:#dbeafe; border-radius:12px;
+          font-family: monospace; margin:3px; font-size: 13px; }
+  table.mini { border-collapse: collapse; margin: 6px 0; font-size:13px; }
+  table.mini td, table.mini th { border:1px solid #d1d5db; padding:5px 12px; text-align:center; }
+  table.mini th { background: var(--accent); color:white; font-weight: 500; }
+  svg.plot { background: #fff; border:1px solid #e2e8f0; border-radius:6px; }
+  details summary { cursor:pointer; color: var(--accent2); margin: 6px 0; font-weight: 500; }
+  footer.byline { text-align: center; margin-top: 36px; padding: 18px; border-top: 1px solid #cbd5e1;
+                  color: #475569; font-size: 14px; }
+  footer.byline strong { color: var(--accent); }
+</style>
+</head>
+<body>
+
+<header class="title">
+  <h1>Quantum Singular Value Transformation</h1>
+  <div class="subtitle">An Interactive Pedagogical Tool. Adjust the matrix $A$ and the polynomial $P$ and observe each computational stage</div>
+</header>
+
+<p class="lead">This document realises, in a single live page, the complete four-stage pipeline of Quantum Singular Value Transformation:
+Singular Value Decomposition, Block Encoding, Quantum Signal Processing, and the QSVT theorem itself.
+All numerical results update in real time as the user edits the input matrix or selects a different polynomial.</p>
+
+<!-- INPUT -->
+<section class="step">
+  <h2>Specification of the Input Matrix $A$</h2>
+  <p>The framework supports any real matrix of dimensions $m\times n$ with $m,n\in\{2,3\}$ — namely $2\times 2$, $2\times 3$, $3\times 2$, and $3\times 3$ — covering both square and rectangular cases.</p>
+
+  <div class="controls">
+    <span class="label">Dimensions:</span>
+    <label>rows <select id="dimM" onchange="rebuildMatrix()">
+      <option value="2">2</option><option value="3" selected>3</option>
+    </select></label>
+    <label>columns <select id="dimN" onchange="rebuildMatrix()">
+      <option value="2" selected>2</option><option value="3">3</option>
+    </select></label>
+    <button onclick="preset('identity')">Identity-like</button>
+    <button onclick="preset('rank1')">Rank-deficient</button>
+    <button onclick="preset('orth')">Orthogonal columns</button>
+    <button onclick="preset('asym')">Asymmetric</button>
+    <button onclick="preset('random')">Randomise</button>
+  </div>
+
+  <div class="grid2">
+    <div>
+      <span class="label">$A =$</span>
+      <div id="matrixInput" class="matrix-grid"></div>
+    </div>
+    <div>
+      <h3>Quantitative Summary of $A$</h3>
+      <div id="quickfacts"></div>
+    </div>
+  </div>
+</section>
+
+<!-- STEP 1 -->
+<section class="step">
+  <h2>Stage I · Singular Value Decomposition: $A = U\,\Sigma\,V^{\dagger}$</h2>
+  <p>The Singular Value Decomposition expresses an arbitrary $m\times n$ matrix as the composition of an input rotation, a diagonal stretch, and an output rotation. QSVT preserves the unitary factors $U$ and $V^{\dagger}$ identically and acts only on the singular values arranged along $\Sigma$; this isolation of the non-unitary content is what makes the entire construction implementable on a quantum register.</p>
+
+  <details>
+    <summary>Computational procedure (click to expand)</summary>
+    <ol>
+      <li>Form the Gram matrix $M = A^{\dagger} A$, which is symmetric positive semidefinite of order $n$.</li>
+      <li>Diagonalise $M$ via the cyclic Jacobi eigenvalue algorithm to obtain orthonormal eigenvectors and non-negative eigenvalues $\lambda_i$.</li>
+      <li>Define the singular values $\sigma_i = \sqrt{\lambda_i}$ and assemble $V$ from the eigenvectors of $M$.</li>
+      <li>Compute the columns of $U$ via $u_i = A v_i / \sigma_i$ for $\sigma_i > 0$, and complete the orthonormal basis by Gram–Schmidt where necessary.</li>
+      <li>If $m < n$ the procedure is applied to $A^{\dagger}$ and the resulting factors are transposed accordingly.</li>
+    </ol>
+  </details>
+
+  <div id="svdOutput"></div>
+</section>
+
+<!-- STEP 2 -->
+<section class="step">
+  <h2>Stage II · Block Encoding of $A$ within a Unitary Dilation</h2>
+  <p>A non-unitary operator cannot be implemented directly on a quantum register. We therefore embed $A$, after sub-normalisation by a constant $\alpha \ge \lVert A\rVert_2$, as the upper-left block of a larger unitary operator $U_A$ acting on the system together with one or more ancillary qubits. The original matrix is recovered by projecting the ancilla onto $|0\rangle$:
+  $$\bigl(\langle 0^{a}|\otimes I\bigr)\,U_A\,\bigl(|0^{a}\rangle\otimes I\bigr) \;=\; A/\alpha.$$
+  For an $m\times n$ block $B = A/\alpha$ with $\lVert B\rVert\le 1$, the canonical cosine–sine dilation is
+  $$U_A=\begin{bmatrix} B & \sqrt{I_m - B B^{\dagger}}\\[2pt] \sqrt{I_n - B^{\dagger} B} & -B^{\dagger}\end{bmatrix}\in\mathbb{R}^{(m+n)\times(m+n)}.$$
+  This construction is exactly unitary whenever $\lVert B\rVert\le 1$.</p>
+
+  <div id="blockOutput"></div>
+  <div class="note">Verification: the upper-left $m\times n$ block of $U_A$ literally equals $B = A/\alpha$, and direct computation confirms $U_A^{\dagger} U_A = I_{m+n}$.</div>
+</section>
+
+<!-- STEP 3 -->
+<section class="step">
+  <h2>Stage III · Quantum Signal Processing and the Selection of $P(x)$</h2>
+  <p>Quantum Signal Processing establishes that an alternating sequence of single-qubit rotations
+  $$U_{\vec\phi}(x)=S(\phi_0)\,W(x)\,S(\phi_1)\,W(x)\cdots W(x)\,S(\phi_d)$$
+  realises any real polynomial $P(x)$ subject to three constraints: $\deg P \le d$, $|P(x)|\le 1$ for $x\in[-1,1]$, and matching parity between $P$ and $d$. The phase angles $\vec\phi$ constitute a classical preprocessing step computed once per polynomial.</p>
+
+  <div class="controls">
+    <span class="label">Polynomial $P(x)$:</span>
+    <select id="polySelect" onchange="update()">
+      <option value="identity">Identity:  $P(x)=x$</option>
+      <option value="cube">Cubic:  $P(x)=x^{3}$</option>
+      <option value="t3">Chebyshev $T_3$:  $P(x)=4x^{3}-3x$</option>
+      <option value="amp" selected>Amplification (degree 3):  $P(x)=(3x-x^{3})/2$</option>
+      <option value="t5">Chebyshev $T_5$:  $P(x)=16x^{5}-20x^{3}+5x$</option>
+      <option value="signApprox">Approximation of $\operatorname{sign}(x)$ (degree 5)</option>
+      <option value="custom">Custom polynomial …</option>
+    </select>
+    <span id="customPolyWrap" style="display:none">
+      coefficients (low → high, comma-separated):
+      <input type="text" id="customCoeffs" value="0,1,0,-0.5" oninput="update()" size="22">
+    </span>
+  </div>
+
+  <div class="grid2">
+    <div>
+      <h3>Selected polynomial</h3>
+      <div id="polyDisplay"></div>
+      <svg class="plot" id="polyPlot" width="400" height="240"></svg>
+      <div style="font-size:13px; color:#64748b;">The dashed lines indicate the admissible bound $|P(x)|\le 1$. Green markers indicate the location of $\sigma_i/\alpha$ for the present $A$.</div>
+    </div>
+    <div>
+      <h3>Underlying QSP rotation skeleton</h3>
+      <div class="matrix">W(x) = [[ x        , i√(1−x²) ],
+       [ i√(1−x²) ,  x        ]]
+S(φ) = [[ e^{iφ},   0     ],
+       [   0   , e^{−iφ} ]]</div>
+      <p>The upper-left entry of $\prod_{k} S(\phi_k)\,W(x)$ equals $P(x)$ for the chosen angle sequence.</p>
+      <div class="note">Determining $\vec\phi$ from $P$ is performed classically using methods such as the Remez algorithm together with root-finding, or the iterative Wilson decomposition. As QSVT inherits $P$ directly from QSP, the visible action of the algorithm is fully characterised by $P$ itself.</div>
+    </div>
+  </div>
+</section>
+
+<!-- STEP 4 -->
+<section class="step">
+  <h2>Stage IV · Quantum Singular Value Transformation</h2>
+  <p>Replacing the scalar oracle $W(x)$ with the block encoding $U_A$, and replacing each $Z$-rotation with a projector-controlled phase that acts only when the ancilla register is in $|0^a\rangle$, yields the QSVT circuit. The fundamental identity satisfied by this circuit is
+  $$\bigl(\langle 0^{a}|\otimes I\bigr)\,U_{\rm QSVT}\,\bigl(|0^{a}\rangle\otimes I\bigr) \;=\; U\,P\!\bigl(\Sigma/\alpha\bigr)\,V^{\dagger}.$$
+  Consequently, the entire pipeline reduces operationally to the application of $P$, entry by entry, to the diagonal of the sub-normalised singular value matrix, followed by re-application of the rotations $U$ and $V^{\dagger}$.</p>
+
+  <div id="qsvtOutput"></div>
+</section>
+
+<!-- VERIFICATION -->
+<section class="step">
+  <h2>Numerical Verification</h2>
+  <p>Three structural invariants are checked on every refresh: orthogonality of $U$ and $V$, non-negativity of $\sigma_i$, and the unitarity of the dilation $U_A$.</p>
+  <div id="verify"></div>
+</section>
+
+<footer class="byline">
+  Prepared by <strong>Syed Emad Uddin Shubha</strong>
+</footer>
+
+<script>
+/* ============================================================
+   Linear algebra utilities (real matrices, arbitrary dimensions
+   restricted to m,n ∈ {2,3} for this presentation).
+   ============================================================ */
+const fmt = x => Math.abs(x) < 1e-10 ? "0.000" : x.toFixed(3);
+const rnd = () => +(Math.random()*1.6 - 0.8).toFixed(2);
+
+function zeros(m, n){ return Array.from({length:m},()=>Array(n).fill(0)); }
+function identity(n){ const I=zeros(n,n); for(let i=0;i<n;i++) I[i][i]=1; return I; }
+function transpose(M){
+  const m=M.length, n=M[0].length;
+  const T=zeros(n,m);
+  for(let i=0;i<m;i++) for(let j=0;j<n;j++) T[j][i]=M[i][j];
+  return T;
+}
+function matmul(A,B){
+  const m=A.length, n=B[0].length, p=B.length;
+  const C=zeros(m,n);
+  for(let i=0;i<m;i++) for(let j=0;j<n;j++) {
+    let s=0; for(let k=0;k<p;k++) s+=A[i][k]*B[k][j]; C[i][j]=s;
+  }
+  return C;
+}
+function matAdd(A,B){
+  const m=A.length, n=A[0].length, C=zeros(m,n);
+  for(let i=0;i<m;i++) for(let j=0;j<n;j++) C[i][j]=A[i][j]+B[i][j];
+  return C;
+}
+function matScale(A,s){
+  return A.map(r=>r.map(v=>v*s));
+}
+function frob(M){ let s=0; M.forEach(r=>r.forEach(v=>s+=v*v)); return Math.sqrt(s); }
+
+/* Cyclic Jacobi eigenvalue method for symmetric matrices */
+function jacobiEig(Min){
+  const n = Min.length;
+  let A = Min.map(r=>r.slice());
+  let V = identity(n);
+  for (let iter=0; iter<200; iter++){
+    let maxVal = 0, p=0, q=1;
+    for (let i=0;i<n;i++) for (let j=i+1;j<n;j++){
+      if (Math.abs(A[i][j])>maxVal){ maxVal=Math.abs(A[i][j]); p=i; q=j; }
+    }
+    if (maxVal < 1e-13) break;
+    const App=A[p][p], Aqq=A[q][q], Apq=A[p][q];
+    let c=1, s=0;
+    if (Math.abs(Apq) > 1e-15){
+      const theta = (Aqq - App)/(2*Apq);
+      const t = Math.sign(theta)/(Math.abs(theta)+Math.sqrt(theta*theta+1));
+      c = 1/Math.sqrt(1+t*t);
+      s = t*c;
+    }
+    const newApp = c*c*App - 2*s*c*Apq + s*s*Aqq;
+    const newAqq = s*s*App + 2*s*c*Apq + c*c*Aqq;
+    A[p][p]=newApp; A[q][q]=newAqq; A[p][q]=0; A[q][p]=0;
+    for (let i=0;i<n;i++){
+      if (i!==p && i!==q){
+        const Aip=A[i][p], Aiq=A[i][q];
+        A[i][p]=c*Aip - s*Aiq; A[p][i]=A[i][p];
+        A[i][q]=s*Aip + c*Aiq; A[q][i]=A[i][q];
+      }
+    }
+    for (let i=0;i<n;i++){
+      const Vip=V[i][p], Viq=V[i][q];
+      V[i][p]=c*Vip - s*Viq;
+      V[i][q]=s*Vip + c*Viq;
+    }
+  }
+  const out = [];
+  for (let i=0;i<n;i++) out.push({lam:A[i][i], vec:V.map(r=>r[i])});
+  out.sort((a,b)=>b.lam-a.lam);
+  return out;
+}
+
+/* Square root of symmetric positive semidefinite matrix */
+function sqrtSPD(M){
+  const eigs = jacobiEig(M);
+  const n = M.length;
+  let R = zeros(n,n);
+  for (let k=0;k<n;k++){
+    const s = Math.sqrt(Math.max(0, eigs[k].lam));
+    const v = eigs[k].vec;
+    for (let i=0;i<n;i++) for (let j=0;j<n;j++) R[i][j] += s*v[i]*v[j];
+  }
+  return R;
+}
+
+/* General SVD via eigendecomposition of A^T A (or A A^T when m<n). */
+function svd(A){
+  const m = A.length, n = A[0].length;
+  if (m >= n){
+    const M = matmul(transpose(A), A); // n x n
+    const eigs = jacobiEig(M);
+    const sigmas = eigs.map(e => Math.sqrt(Math.max(0, e.lam)));
+    const Vcols = eigs.map(e => e.vec); // length n, each is length-n
+    const V = zeros(n,n);
+    for (let i=0;i<n;i++) for (let j=0;j<n;j++) V[i][j] = Vcols[j][i];
+
+    // Build U columns
+    const Ucols = [];
+    for (let j=0;j<n;j++){
+      const v = Vcols[j];
+      // A v
+      const Av = Array(m).fill(0);
+      for (let i=0;i<m;i++) for (let k=0;k<n;k++) Av[i] += A[i][k]*v[k];
+      if (sigmas[j] > 1e-10) Ucols.push(Av.map(x=>x/sigmas[j]));
+    }
+    // Gram-Schmidt completion
+    while (Ucols.length < m){
+      let added = false;
+      for (let trialIdx=0; trialIdx<m && !added; trialIdx++){
+        let v = Array(m).fill(0); v[trialIdx] = 1;
+        for (const u of Ucols){
+          let dot = 0; for (let i=0;i<m;i++) dot += v[i]*u[i];
+          for (let i=0;i<m;i++) v[i] -= dot*u[i];
+        }
+        const norm = Math.hypot(...v);
+        if (norm > 1e-8){ Ucols.push(v.map(x=>x/norm)); added = true; }
+      }
+      if (!added) break;
+    }
+    const U = zeros(m,m);
+    for (let i=0;i<m;i++) for (let j=0;j<Ucols.length;j++) U[i][j] = Ucols[j][i];
+
+    const r = Math.min(m,n);
+    const S = zeros(m,n);
+    for (let i=0;i<r;i++) S[i][i] = sigmas[i];
+    return {U, S, V, sigmas: sigmas.slice(0,r)};
+  } else {
+    const sub = svd(transpose(A));
+    return {U: sub.V, S: transpose(sub.S), V: sub.U, sigmas: sub.sigmas};
+  }
+}
+
+function specNorm(A){
+  const m=A.length, n=A[0].length;
+  if (m===0||n===0) return 0;
+  const M = matmul(transpose(A), A);
+  const eigs = jacobiEig(M);
+  return Math.sqrt(Math.max(0, eigs[0].lam));
+}
+
+/* ============================================================
+   UI: dynamic matrix input
+   ============================================================ */
+function rebuildMatrix(){
+  const m = +document.getElementById('dimM').value;
+  const n = +document.getElementById('dimN').value;
+  const grid = document.getElementById('matrixInput');
+  grid.style.gridTemplateColumns = `repeat(${n}, 80px)`;
+  const defaults = {
+    '2,2': [[0.6,0.2],[0.3,0.8]],
+    '2,3': [[0.6,0.2,0.4],[0.3,0.8,-0.1]],
+    '3,2': [[0.6,0.2],[0.3,0.8],[-0.1,0.4]],
+    '3,3': [[0.6,0.2,0.1],[0.3,0.8,-0.2],[-0.1,0.4,0.5]]
+  };
+  const init = defaults[`${m},${n}`];
+  let html = '';
+  for (let i=0;i<m;i++) for (let j=0;j<n;j++){
+    html += `<input type="number" step="0.1" value="${init[i][j]}" id="a${i}_${j}">`;
+  }
+  grid.innerHTML = html;
+  document.querySelectorAll('#matrixInput input').forEach(el => el.addEventListener('input', update));
+  update();
+}
+
+function readA(){
+  const m = +document.getElementById('dimM').value;
+  const n = +document.getElementById('dimN').value;
+  const A = zeros(m,n);
+  for (let i=0;i<m;i++) for (let j=0;j<n;j++){
+    A[i][j] = +document.getElementById(`a${i}_${j}`).value;
+  }
+  return A;
+}
+function setA(A){
+  const m = A.length, n = A[0].length;
+  document.getElementById('dimM').value = m;
+  document.getElementById('dimN').value = n;
+  rebuildMatrix();
+  for (let i=0;i<m;i++) for (let j=0;j<n;j++){
+    document.getElementById(`a${i}_${j}`).value = A[i][j];
+  }
+  update();
+}
+
+function preset(kind){
+  const m = +document.getElementById('dimM').value;
+  const n = +document.getElementById('dimN').value;
+  const A = zeros(m,n);
+  if (kind === 'identity'){
+    for (let i=0;i<Math.min(m,n);i++) A[i][i]=1;
+  } else if (kind === 'rank1'){
+    const u = Array.from({length:m},(_,i)=>0.5+0.2*i);
+    const v = Array.from({length:n},(_,j)=>0.4+0.3*j);
+    for (let i=0;i<m;i++) for (let j=0;j<n;j++) A[i][j] = +(u[i]*v[j]).toFixed(2);
+  } else if (kind === 'orth'){
+    if (m===2 && n===2){ A[0][0]=Math.cos(Math.PI/6); A[0][1]=-Math.sin(Math.PI/6);
+                         A[1][0]=Math.sin(Math.PI/6); A[1][1]=Math.cos(Math.PI/6); }
+    else if (m===3 && n===3){ A[0][0]=1; A[1][1]=Math.cos(0.4); A[1][2]=-Math.sin(0.4);
+                              A[2][1]=Math.sin(0.4); A[2][2]=Math.cos(0.4); }
+    else { for (let i=0;i<Math.min(m,n);i++) A[i][i]=1; }
+  } else if (kind === 'asym'){
+    const data = [[1.2,0.3,-0.2],[-0.4,0.7,0.5],[0.1,-0.3,0.9]];
+    for (let i=0;i<m;i++) for (let j=0;j<n;j++) A[i][j] = data[i][j];
+  } else { // random
+    for (let i=0;i<m;i++) for (let j=0;j<n;j++) A[i][j] = rnd();
+  }
+  for (let i=0;i<m;i++) for (let j=0;j<n;j++){
+    document.getElementById(`a${i}_${j}`).value = A[i][j];
+  }
+  update();
+}
+
+/* ============================================================
+   Polynomials
+   ============================================================ */
+const POLYS = {
+  identity:    { coeffs:[0,1],            label: 'P(x)=x',                 fn: x => x },
+  cube:        { coeffs:[0,0,0,1],        label: 'P(x)=x^{3}',             fn: x => x*x*x },
+  t3:          { coeffs:[0,-3,0,4],       label: 'P(x)=4x^{3}-3x',         fn: x => 4*x*x*x - 3*x },
+  amp:         { coeffs:[0,1.5,0,-0.5],   label: 'P(x)=\\tfrac{3x-x^{3}}{2}', fn: x => (3*x - x*x*x)/2 },
+  t5:          { coeffs:[0,5,0,-20,0,16], label: 'P(x)=16x^{5}-20x^{3}+5x', fn: x => 16*Math.pow(x,5) - 20*Math.pow(x,3) + 5*x },
+  signApprox:  { coeffs:[0, 35/16, 0, -35/16, 0, 21/16],
+                 label: 'P(x)\\approx \\operatorname{sign}(x)\\;(\\text{degree-5 odd Chebyshev expansion})',
+                 fn: x => 35/16*x - 35/16*Math.pow(x,3) + 21/16*Math.pow(x,5) }
+};
+function getPoly(){
+  const sel = document.getElementById('polySelect').value;
+  document.getElementById('customPolyWrap').style.display = sel==='custom' ? 'inline' : 'none';
+  if (sel === 'custom'){
+    const coeffs = document.getElementById('customCoeffs').value
+      .split(',').map(s => parseFloat(s)||0);
+    return {
+      coeffs,
+      label: 'P(x) = ' + coeffs.map((c,i)=>{
+        if (Math.abs(c)<1e-12) return '';
+        const term = i===0?`${c}`: i===1?`${c}x`:`${c}x^{${i}}`;
+        return (c>=0?'+':'') + term;
+      }).filter(Boolean).join(' '),
+      fn: x => coeffs.reduce((s,c,i) => s + c*Math.pow(x,i), 0)
+    };
+  }
+  return POLYS[sel];
+}
+
+/* ============================================================
+   Rendering helpers
+   ============================================================ */
+function matToTex(M, name){
+  const rows = M.map(r => r.map(fmt).join(' & ')).join(' \\\\ ');
+  return `${name} = \\begin{bmatrix} ${rows} \\end{bmatrix}`;
+}
+function matToBlock(M){
+  const cols = M[0].length;
+  const w = cols >= 5 ? 7 : 8;
+  return M.map(r=>r.map(v=>fmt(v).padStart(w)).join('  ')).join('\n');
+}
+
+/* ============================================================
+   Main update routine
+   ============================================================ */
+function update(){
+  const A = readA();
+  const m = A.length, n = A[0].length;
+  const {U, S, V, sigmas} = svd(A);
+  const Vt = transpose(V);
+
+  /* quick facts */
+  const alpha = Math.max(specNorm(A), 1e-9);
+  const detStr = (m===n) ? `<tr><th>$\\det A$</th><td>${fmt(detSquare(A))}</td></tr>` : '';
+  document.getElementById('quickfacts').innerHTML = `
+    <table class="mini">
+      <tr><th>Dimensions</th><td>${m} × ${n}</td></tr>
+      ${detStr}
+      <tr><th>$\\lVert A\\rVert_F$ (Frobenius)</th><td>${fmt(frob(A))}</td></tr>
+      <tr><th>$\\lVert A\\rVert_2$ (spectral)</th><td>${fmt(specNorm(A))}</td></tr>
+      <tr><th>Singular values</th><td>${sigmas.map((s,i)=>`$\\sigma_{${i+1}}=${fmt(s)}$`).join(',\\;')}</td></tr>
+      <tr><th>Sub-normalisation $\\alpha$</th><td>$\\alpha = \\lVert A\\rVert_2 = ${fmt(alpha)}$</td></tr>
+      <tr><th>Rank (numerical)</th><td>${sigmas.filter(s=>s>1e-8).length}</td></tr>
+    </table>`;
+
+  /* Step 1 SVD */
+  document.getElementById('svdOutput').innerHTML = `
+    <div class="grid2">
+      <div>
+        $$ ${matToTex(U,'U')} $$
+        $$ ${matToTex(S,'\\Sigma')} $$
+        $$ ${matToTex(Vt,'V^{\\dagger}')} $$
+      </div>
+      <div>
+        <h3>Reconstruction $U\\,\\Sigma\\,V^{\\dagger}$</h3>
+        $$ ${matToTex(matmul(matmul(U,S),Vt),'')} $$
+        <p>The reconstruction reproduces $A$ to within machine precision, confirming the validity of the decomposition.</p>
+        <h3>Geometric interpretation</h3>
+        <p>The factor $V^{\\dagger}$ rotates the input subspace into a basis aligned with the principal directions of $A$;
+        $\\Sigma$ then stretches each principal axis by the corresponding $\\sigma_i$
+        (${sigmas.map(s=>`<span class="pill">σ=${fmt(s)}</span>`).join('')}); finally $U$ rotates the result into the output subspace.</p>
+      </div>
+    </div>`;
+
+  /* Step 2 Block encoding */
+  const B = matScale(A, 1/alpha);
+  const Bt = transpose(B);
+  const BBt = matmul(B,Bt);   // m x m
+  const BtB = matmul(Bt,B);   // n x n
+  const Im = identity(m), In = identity(n);
+  const ImBBt = matAdd(Im, matScale(BBt,-1));
+  const ImBtB = matAdd(In, matScale(BtB,-1));
+  const sqM = sqrtSPD(ImBBt); // m x m
+  const sqN = sqrtSPD(ImBtB); // n x n
+  const negBt = matScale(Bt, -1);
+  const dim = m + n;
+  const UA = zeros(dim, dim);
+  for (let i=0;i<m;i++){
+    for (let j=0;j<n;j++) UA[i][j] = B[i][j];
+    for (let j=0;j<m;j++) UA[i][n+j] = sqM[i][j];
+  }
+  for (let i=0;i<n;i++){
+    for (let j=0;j<n;j++) UA[m+i][j] = sqN[i][j];
+    for (let j=0;j<m;j++) UA[m+i][n+j] = negBt[i][j];
+  }
+
+  document.getElementById('blockOutput').innerHTML = `
+    <div class="grid2">
+      <div>
+        <h3>Sub-normalised block $B = A/\\alpha$</h3>
+        $$ ${matToTex(B, 'B')} $$
+        <p>$\\lVert B\\rVert_2 = ${fmt(specNorm(B))}\\;(\\le 1$, as required).</p>
+      </div>
+      <div>
+        <h3>Unitary dilation $U_A \\in \\mathbb{R}^{${dim}\\times${dim}}$</h3>
+        <div class="matrix">${matToBlock(UA)}</div>
+        <p>The upper-left $${m}\\times${n}$ block reproduces $B$; the remaining entries pad $U_A$ into a unitary using the matrix square roots $\\sqrt{I_{${m}} - BB^{\\dagger}}$ and $\\sqrt{I_{${n}} - B^{\\dagger}B}$.</p>
+      </div>
+    </div>`;
+
+  /* Step 3 polynomial */
+  const poly = getPoly();
+  document.getElementById('polyDisplay').innerHTML = `$$ ${poly.label} $$`;
+  drawPoly(poly, sigmas, alpha);
+
+  /* Step 4 QSVT */
+  const sigScaled = sigmas.map(s => s/alpha);
+  const sigTrans  = sigScaled.map(poly.fn);
+  const r = sigmas.length;
+  const Strans = zeros(m, n);
+  for (let i=0;i<r;i++) Strans[i][i] = sigTrans[i];
+  const Atrans = matmul(matmul(U, Strans), Vt);
+
+  const rows = [];
+  for (let i=0;i<r;i++){
+    rows.push(`<tr>
+      <td>${i+1}</td>
+      <td>${fmt(sigmas[i])}</td>
+      <td>${fmt(sigScaled[i])}</td>
+      <td>${fmt(sigTrans[i])}</td>
+    </tr>`);
+  }
+  document.getElementById('qsvtOutput').innerHTML = `
+    <div class="grid2">
+      <div>
+        <h3>Action on the singular spectrum</h3>
+        <table class="mini">
+          <tr><th>$i$</th><th>$\\sigma_i$</th><th>$\\sigma_i/\\alpha$</th><th>$P(\\sigma_i/\\alpha)$</th></tr>
+          ${rows.join('')}
+        </table>
+        <p>The QSVT circuit applies this transformation to every singular value in coherent superposition on the quantum register.</p>
+      </div>
+      <div>
+        <h3>Resulting matrix $\\;U\\,P(\\Sigma/\\alpha)\\,V^{\\dagger}$</h3>
+        $$ ${matToTex(Atrans,'A_{\\rm new}')} $$
+        <p>For $P(x)=x$ the procedure recovers $A/\\alpha$ exactly. Other admissible polynomials yield matrix functions of practical interest, including amplitude amplification, the matrix sign function (for projection), and polynomial approximations of $A^{-1}$ underlying quantum linear-systems algorithms.</p>
+      </div>
+    </div>`;
+
+  /* Verification */
+  const UUt = matmul(U, transpose(U));
+  const VVt = matmul(V, transpose(V));
+  const UAUAt = matmul(transpose(UA), UA);
+  function isI(M, k){
+    let err = 0;
+    for (let i=0;i<k;i++) for (let j=0;j<k;j++) err += Math.abs(M[i][j] - (i===j?1:0));
+    return err;
+  }
+  document.getElementById('verify').innerHTML = `
+    <table class="mini">
+      <tr><th>Invariant</th><th>$\\ell^{1}$ deviation</th><th>Status</th></tr>
+      <tr><td>$U\\,U^{\\dagger} = I_{${m}}$</td><td>${isI(UUt,m).toExponential(2)}</td><td>${isI(UUt,m)<1e-6?'✓':'✗'}</td></tr>
+      <tr><td>$V\\,V^{\\dagger} = I_{${n}}$</td><td>${isI(VVt,n).toExponential(2)}</td><td>${isI(VVt,n)<1e-6?'✓':'✗'}</td></tr>
+      <tr><td>$U_A^{\\dagger}\\,U_A = I_{${dim}}$</td><td>${isI(UAUAt,dim).toExponential(2)}</td><td>${isI(UAUAt,dim)<1e-6?'✓':'✗'}</td></tr>
+      <tr><td>$\\sigma_i \\ge 0$</td><td>${sigmas.every(s=>s>=-1e-9) ? '0' : 'NEG'}</td><td>${sigmas.every(s=>s>=-1e-9)?'✓':'✗'}</td></tr>
+    </table>`;
+
+  if (window.MathJax && MathJax.typesetPromise) MathJax.typesetPromise();
+}
+
+function detSquare(A){
+  const n = A.length;
+  if (n===2) return A[0][0]*A[1][1] - A[0][1]*A[1][0];
+  if (n===3){
+    return A[0][0]*(A[1][1]*A[2][2]-A[1][2]*A[2][1])
+         - A[0][1]*(A[1][0]*A[2][2]-A[1][2]*A[2][0])
+         + A[0][2]*(A[1][0]*A[2][1]-A[1][1]*A[2][0]);
+  }
+  return 0;
+}
+
+/* polynomial plot */
+function drawPoly(poly, sigmas, alpha){
+  const svg = document.getElementById('polyPlot');
+  const W = 400, H = 240, pad = 32;
+  const xs = [], ys = [];
+  for (let i=0;i<=200;i++){
+    const x = -1 + 2*i/200;
+    xs.push(x); ys.push(poly.fn(x));
+  }
+  const yMin = Math.min(-1.2, ...ys), yMax = Math.max(1.2, ...ys);
+  const sx = x => pad + (x+1)/2 * (W-2*pad);
+  const sy = y => H - pad - (y - yMin)/(yMax - yMin) * (H-2*pad);
+  let path = `M ${sx(xs[0])} ${sy(ys[0])}`;
+  for (let i=1;i<xs.length;i++) path += ` L ${sx(xs[i])} ${sy(ys[i])}`;
+  let html = '';
+  html += `<rect x="${pad}" y="${pad}" width="${W-2*pad}" height="${H-2*pad}" fill="white" stroke="#cbd5e1"/>`;
+  html += `<line x1="${pad}" y1="${sy(0)}" x2="${W-pad}" y2="${sy(0)}" stroke="#94a3b8" stroke-dasharray="3,3"/>`;
+  html += `<line x1="${sx(0)}" y1="${pad}" x2="${sx(0)}" y2="${H-pad}" stroke="#94a3b8" stroke-dasharray="3,3"/>`;
+  html += `<line x1="${pad}" y1="${sy(1)}" x2="${W-pad}" y2="${sy(1)}" stroke="#fca5a5" stroke-dasharray="2,4"/>`;
+  html += `<line x1="${pad}" y1="${sy(-1)}" x2="${W-pad}" y2="${sy(-1)}" stroke="#fca5a5" stroke-dasharray="2,4"/>`;
+  html += `<path d="${path}" fill="none" stroke="#1f4e79" stroke-width="2.2"/>`;
+  sigmas.forEach((s,i) => {
+    const xv = s/alpha;
+    if (xv < -1.001 || xv > 1.001) return;
+    const yv = poly.fn(xv);
+    html += `<circle cx="${sx(xv)}" cy="${sy(yv)}" r="5" fill="#16a34a" stroke="white" stroke-width="2"/>`;
+    html += `<text x="${sx(xv)+8}" y="${sy(yv)-8}" font-family="monospace" font-size="11" fill="#15803d">σ${i+1}</text>`;
+  });
+  html += `<text x="${W-pad+4}" y="${sy(0)+4}" font-size="10" fill="#64748b">x</text>`;
+  html += `<text x="${sx(0)+4}" y="${pad-4}" font-size="10" fill="#64748b">P(x)</text>`;
+  html += `<text x="${sx(-1)-4}" y="${H-pad+12}" font-size="10" fill="#64748b">−1</text>`;
+  html += `<text x="${sx(1)-4}" y="${H-pad+12}" font-size="10" fill="#64748b">1</text>`;
+  svg.innerHTML = html;
+}
+
+/* boot */
+document.getElementById('customCoeffs').addEventListener('input', update);
+document.getElementById('polySelect').addEventListener('change', update);
+rebuildMatrix();
+</script>
+
+</body>
+</html>
