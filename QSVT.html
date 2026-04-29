@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Quantum Singular Value Transformation — Interactive Pedagogical Tool</title>
+<title>Interactive Quantum Singular Value Transformation</title>
 <script>
 window.MathJax = {
   tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
@@ -20,6 +20,7 @@ window.MathJax = {
   header.title .subtitle { color:#475569; font-style: italic; font-size: 15px; }
   h2 { color: var(--accent); margin-top: 4px; font-size: 20px; letter-spacing: -0.005em; }
   h3 { color:#34495e; margin-top: 18px; font-size: 16px; }
+  h4 { color:#475569; margin-top: 14px; font-size: 14px; text-transform: uppercase; letter-spacing: 0.04em; }
   .lead { color:#3b4a5a; }
   section.step { background:#fff; padding: 22px 28px; margin: 22px 0; border-radius: 8px;
                  box-shadow: 0 2px 10px rgba(20,40,80,0.07); border-left: 5px solid var(--accent); }
@@ -32,6 +33,7 @@ window.MathJax = {
            font-size:13px; border-radius:4px; cursor:pointer; font-weight: 500; }
   button:hover { background: var(--accent2); }
   select, input[type=number], input[type=text] { padding:6px 10px; font-size:14px; border:1px solid #cbd5e1; border-radius:4px; }
+  input[type=range] { width: 200px; vertical-align: middle; }
   .matrix { font-family: 'Cascadia Code','JetBrains Mono','Courier New',monospace; background: var(--soft);
             padding: 10px 14px; border-radius: 6px; display: inline-block; margin: 6px 0;
             white-space: pre; font-size: 13px; line-height: 1.45; }
@@ -40,31 +42,38 @@ window.MathJax = {
           margin: 10px 0; border-radius: 4px; font-size: 14px; color:#5a4500; }
   .pill { display:inline-block; padding:3px 10px; background:#dbeafe; border-radius:12px;
           font-family: monospace; margin:3px; font-size: 13px; }
+  .pill.angle { background:#fef3c7; color: #78350f; font-weight: 600; }
   table.mini { border-collapse: collapse; margin: 6px 0; font-size:13px; }
   table.mini td, table.mini th { border:1px solid #d1d5db; padding:5px 12px; text-align:center; }
   table.mini th { background: var(--accent); color:white; font-weight: 500; }
+  table.mini tr:nth-child(even) { background: #f8fafc; }
   svg.plot { background: #fff; border:1px solid #e2e8f0; border-radius:6px; }
   details summary { cursor:pointer; color: var(--accent2); margin: 6px 0; font-weight: 500; }
   footer.byline { text-align: center; margin-top: 36px; padding: 18px; border-top: 1px solid #cbd5e1;
                   color: #475569; font-size: 14px; }
   footer.byline strong { color: var(--accent); }
+  .small { font-size: 12px; color: #64748b; }
+  .good { color: #166534; font-weight: 600; }
+  .bad  { color: #991b1b; font-weight: 600; }
+  .progressBar { width: 100%; height: 5px; background: #e2e8f0; border-radius: 3px; overflow: hidden; margin: 6px 0; }
+  .progressBar div { height: 100%; background: var(--accent); transition: width 0.2s; }
 </style>
 </head>
 <body>
 
 <header class="title">
   <h1>Quantum Singular Value Transformation</h1>
-  <div class="subtitle">An Interactive Pedagogical Tool. Adjust the matrix $A$ and the polynomial $P$ and observe each computational stage</div>
+  <div class="subtitle">An Interactive: adjust the matrix $A$ and the polynomial $P$ and observe each computational stage</div>
 </header>
 
 <p class="lead">This document realises, in a single live page, the complete four-stage pipeline of Quantum Singular Value Transformation:
-Singular Value Decomposition, Block Encoding, Quantum Signal Processing, and the QSVT theorem itself.
-All numerical results update in real time as the user edits the input matrix or selects a different polynomial.</p>
+Singular Value Decomposition, Block Encoding, Quantum Signal Processing (including explicit phase-angle determination), and the QSVT theorem.
+Each stage is recomputed in real time as the user edits the input matrix or selects a different polynomial.</p>
 
 <!-- INPUT -->
 <section class="step">
   <h2>Specification of the Input Matrix $A$</h2>
-  <p>The framework supports any real matrix of dimensions $m\times n$ with $m,n\in\{2,3\}$ — namely $2\times 2$, $2\times 3$, $3\times 2$, and $3\times 3$ — covering both square and rectangular cases.</p>
+  <p>The framework supports any real matrix of dimensions $m\times n$ with $m,n\in\{2,3\}$, covering both square and rectangular cases.</p>
 
   <div class="controls">
     <span class="label">Dimensions:</span>
@@ -93,7 +102,7 @@ All numerical results update in real time as the user edits the input matrix or 
   </div>
 </section>
 
-<!-- STEP 1 -->
+<!-- STAGE 1 -->
 <section class="step">
   <h2>Stage I · Singular Value Decomposition: $A = U\,\Sigma\,V^{\dagger}$</h2>
   <p>The Singular Value Decomposition expresses an arbitrary $m\times n$ matrix as the composition of an input rotation, a diagonal stretch, and an output rotation. QSVT preserves the unitary factors $U$ and $V^{\dagger}$ identically and acts only on the singular values arranged along $\Sigma$; this isolation of the non-unitary content is what makes the entire construction implementable on a quantum register.</p>
@@ -112,7 +121,7 @@ All numerical results update in real time as the user edits the input matrix or 
   <div id="svdOutput"></div>
 </section>
 
-<!-- STEP 2 -->
+<!-- STAGE 2 -->
 <section class="step">
   <h2>Stage II · Block Encoding of $A$ within a Unitary Dilation</h2>
   <p>A non-unitary operator cannot be implemented directly on a quantum register. We therefore embed $A$, after sub-normalisation by a constant $\alpha \ge \lVert A\rVert_2$, as the upper-left block of a larger unitary operator $U_A$ acting on the system together with one or more ancillary qubits. The original matrix is recovered by projecting the ancilla onto $|0\rangle$:
@@ -125,55 +134,100 @@ All numerical results update in real time as the user edits the input matrix or 
   <div class="note">Verification: the upper-left $m\times n$ block of $U_A$ literally equals $B = A/\alpha$, and direct computation confirms $U_A^{\dagger} U_A = I_{m+n}$.</div>
 </section>
 
-<!-- STEP 3 -->
+<!-- STAGE 3 -->
 <section class="step">
-  <h2>Stage III · Quantum Signal Processing and the Selection of $P(x)$</h2>
-  <p>Quantum Signal Processing establishes that an alternating sequence of single-qubit rotations
-  $$U_{\vec\phi}(x)=S(\phi_0)\,W(x)\,S(\phi_1)\,W(x)\cdots W(x)\,S(\phi_d)$$
-  realises any real polynomial $P(x)$ subject to three constraints: $\deg P \le d$, $|P(x)|\le 1$ for $x\in[-1,1]$, and matching parity between $P$ and $d$. The phase angles $\vec\phi$ constitute a classical preprocessing step computed once per polynomial.</p>
+  <h2>Stage III · Quantum Signal Processing and the Phase Angles $\vec\phi$</h2>
+  <p>Quantum Signal Processing realises a polynomial transformation of a scalar variable $x\in[-1,1]$ via an alternating sequence of two single-qubit rotations:
+  $$U_{\vec\phi}(x)=S(\phi_0)\,W(x)\,S(\phi_1)\,W(x)\cdots W(x)\,S(\phi_d),$$
+  where</p>
 
+  <div class="grid2">
+    <div>
+      <h4>Signal rotation $W(x)$ — encodes the parameter</h4>
+      <div class="matrix">W(x) = [[ x        , i√(1−x²) ],
+       [ i√(1−x²) ,  x        ]]</div>
+      <p>$W(x) = e^{i\arccos(x)\,\sigma_x}$. The signal $x$ is the only non-tunable input; it will later play the role of a singular value $\sigma_i/\alpha$.</p>
+    </div>
+    <div>
+      <h4>Phase shift $S(\phi)$ — the tunable knob</h4>
+      <div class="matrix">S(φ) = [[ e^{iφ},   0     ],
+       [   0   , e^{−iφ} ]]</div>
+      <p>$S(\phi) = e^{i\phi\sigma_z}$. The angles $\phi_0,\dots,\phi_d$ are the programmable degrees of freedom that determine which polynomial is realised.</p>
+    </div>
+  </div>
+
+  <h3>Selection of the polynomial $P(x)$</h3>
   <div class="controls">
     <span class="label">Polynomial $P(x)$:</span>
-    <select id="polySelect" onchange="update()">
-      <option value="identity">Identity:  $P(x)=x$</option>
-      <option value="cube">Cubic:  $P(x)=x^{3}$</option>
-      <option value="t3">Chebyshev $T_3$:  $P(x)=4x^{3}-3x$</option>
-      <option value="amp" selected>Amplification (degree 3):  $P(x)=(3x-x^{3})/2$</option>
-      <option value="t5">Chebyshev $T_5$:  $P(x)=16x^{5}-20x^{3}+5x$</option>
-      <option value="signApprox">Approximation of $\operatorname{sign}(x)$ (degree 5)</option>
+    <select id="polySelect" onchange="onPolyChange()">
+      <option value="identity">Identity   ·   P(x) = x   ·   degree 1</option>
+      <option value="t3">Chebyshev T₃   ·   P(x) = 4x³ − 3x   ·   degree 3</option>
+      <option value="amp" selected>Amplification   ·   P(x) = (3x − x³) / 2   ·   degree 3</option>
+      <option value="t5">Chebyshev T₅   ·   P(x) = 16x⁵ − 20x³ + 5x   ·   degree 5</option>
+      <option value="signApprox">Sign-function approximation   ·   degree 5</option>
       <option value="custom">Custom polynomial …</option>
     </select>
     <span id="customPolyWrap" style="display:none">
       coefficients (low → high, comma-separated):
-      <input type="text" id="customCoeffs" value="0,1,0,-0.5" oninput="update()" size="22">
+      <input type="text" id="customCoeffs" value="0,1,0,-0.5" oninput="onPolyChange()" size="22">
     </span>
   </div>
 
   <div class="grid2">
     <div>
-      <h3>Selected polynomial</h3>
+      <h4>Selected polynomial</h4>
       <div id="polyDisplay"></div>
       <svg class="plot" id="polyPlot" width="400" height="240"></svg>
-      <div style="font-size:13px; color:#64748b;">The dashed lines indicate the admissible bound $|P(x)|\le 1$. Green markers indicate the location of $\sigma_i/\alpha$ for the present $A$.</div>
+      <div class="small">The dashed lines indicate the admissible bound $|P(x)|\le 1$. Green markers indicate the locations of $\sigma_i/\alpha$ for the present $A$.</div>
     </div>
     <div>
-      <h3>Underlying QSP rotation skeleton</h3>
-      <div class="matrix">W(x) = [[ x        , i√(1−x²) ],
-       [ i√(1−x²) ,  x        ]]
-S(φ) = [[ e^{iφ},   0     ],
-       [   0   , e^{−iφ} ]]</div>
-      <p>The upper-left entry of $\prod_{k} S(\phi_k)\,W(x)$ equals $P(x)$ for the chosen angle sequence.</p>
-      <div class="note">Determining $\vec\phi$ from $P$ is performed classically using methods such as the Remez algorithm together with root-finding, or the iterative Wilson decomposition. As QSVT inherits $P$ directly from QSP, the visible action of the algorithm is fully characterised by $P$ itself.</div>
+      <h4>Theorem (QSP)</h4>
+      <p>For any real polynomial $P$ of degree $d$, parity matching $d$, and $|P(x)|\le 1$ on $[-1,1]$, there exist real phases $\vec\phi=(\phi_0,\dots,\phi_d)$ such that the upper-left entry of the alternating product equals $P(x)$.</p>
+      <p>Determining $\vec\phi$ from $P$ is a classical optimisation problem. In production codes one uses the Wilson decomposition, the algorithm of Haah (2019), or the symmetric solver of Dong–Meng–Whaley–Lin (2021). Below we use a simple gradient-descent (Adam) optimiser to find $\vec\phi$ directly from $P$, sufficient for pedagogical illustration.</p>
+    </div>
+  </div>
+
+  <h3>Phase-Angle Computation</h3>
+  <p>The optimiser minimises the empirical $L^{2}$ loss
+  $$\mathcal{L}(\vec\phi)\;=\;\frac{1}{N}\sum_{k=1}^{N}\Bigl|\;\bigl[U_{\vec\phi}(x_k)\bigr]_{1,1}\;-\;P(x_k)\Bigr|^{2}$$
+  on a uniform grid $\{x_k\}\subset[-1,1]$. The optimisation is performed entirely in the browser; click the button below to (re)run it.</p>
+
+  <div class="controls">
+    <button onclick="runOptimisation()">Compute / Recompute $\vec\phi$</button>
+    <span id="optStatus" class="small"></span>
+  </div>
+  <div class="progressBar"><div id="optProgress" style="width:0%"></div></div>
+
+  <div id="anglesOutput"></div>
+
+  <h3>Verification of the QSP Identity</h3>
+  <p>Having obtained $\vec\phi$, we now construct the matrix $U_{\vec\phi}(x)$ explicitly for a sample value of $x$ and check that its $(1,1)$ entry equals $P(x)$ across the entire interval.</p>
+
+  <div class="controls">
+    <span class="label">Sample point $x$:</span>
+    <input type="range" id="qspX" min="-0.95" max="0.95" step="0.01" value="0.5" oninput="renderQspProduct()">
+    <span id="qspXVal" class="pill">x = 0.50</span>
+  </div>
+
+  <div class="grid2">
+    <div>
+      <h4>Explicit product $U_{\vec\phi}(x)$ at the chosen $x$</h4>
+      <div id="qspProductMatrix"></div>
+      <p class="small">The boxed entry is the $(1,1)$ position; the QSP theorem asserts that this entry equals $P(x)$.</p>
+    </div>
+    <div>
+      <h4>Comparison: $[U_{\vec\phi}(x)]_{1,1}$ vs. $P(x)$ across the interval</h4>
+      <div id="qspVerifyTable"></div>
     </div>
   </div>
 </section>
 
-<!-- STEP 4 -->
+<!-- STAGE 4 -->
 <section class="step">
   <h2>Stage IV · Quantum Singular Value Transformation</h2>
   <p>Replacing the scalar oracle $W(x)$ with the block encoding $U_A$, and replacing each $Z$-rotation with a projector-controlled phase that acts only when the ancilla register is in $|0^a\rangle$, yields the QSVT circuit. The fundamental identity satisfied by this circuit is
   $$\bigl(\langle 0^{a}|\otimes I\bigr)\,U_{\rm QSVT}\,\bigl(|0^{a}\rangle\otimes I\bigr) \;=\; U\,P\!\bigl(\Sigma/\alpha\bigr)\,V^{\dagger}.$$
-  Consequently, the entire pipeline reduces operationally to the application of $P$, entry by entry, to the diagonal of the sub-normalised singular value matrix, followed by re-application of the rotations $U$ and $V^{\dagger}$.</p>
+  Operationally the pipeline reduces to applying $P$ entry by entry to the diagonal of the sub-normalised singular value matrix and re-applying $U$ and $V^{\dagger}$; the same phase angles $\vec\phi$ obtained in Stage III drive the matrix-valued circuit.</p>
 
   <div id="qsvtOutput"></div>
 </section>
@@ -191,10 +245,10 @@ S(φ) = [[ e^{iφ},   0     ],
 
 <script>
 /* ============================================================
-   Linear algebra utilities (real matrices, arbitrary dimensions
-   restricted to m,n ∈ {2,3} for this presentation).
+   Numerical utilities
    ============================================================ */
 const fmt = x => Math.abs(x) < 1e-10 ? "0.000" : x.toFixed(3);
+const fmt4 = x => Math.abs(x) < 1e-10 ? "0.0000" : x.toFixed(4);
 const rnd = () => +(Math.random()*1.6 - 0.8).toFixed(2);
 
 function zeros(m, n){ return Array.from({length:m},()=>Array(n).fill(0)); }
@@ -218,12 +272,9 @@ function matAdd(A,B){
   for(let i=0;i<m;i++) for(let j=0;j<n;j++) C[i][j]=A[i][j]+B[i][j];
   return C;
 }
-function matScale(A,s){
-  return A.map(r=>r.map(v=>v*s));
-}
+function matScale(A,s){ return A.map(r=>r.map(v=>v*s)); }
 function frob(M){ let s=0; M.forEach(r=>r.forEach(v=>s+=v*v)); return Math.sqrt(s); }
 
-/* Cyclic Jacobi eigenvalue method for symmetric matrices */
 function jacobiEig(Min){
   const n = Min.length;
   let A = Min.map(r=>r.slice());
@@ -264,7 +315,6 @@ function jacobiEig(Min){
   return out;
 }
 
-/* Square root of symmetric positive semidefinite matrix */
 function sqrtSPD(M){
   const eigs = jacobiEig(M);
   const n = M.length;
@@ -277,27 +327,23 @@ function sqrtSPD(M){
   return R;
 }
 
-/* General SVD via eigendecomposition of A^T A (or A A^T when m<n). */
 function svd(A){
   const m = A.length, n = A[0].length;
   if (m >= n){
-    const M = matmul(transpose(A), A); // n x n
+    const M = matmul(transpose(A), A);
     const eigs = jacobiEig(M);
     const sigmas = eigs.map(e => Math.sqrt(Math.max(0, e.lam)));
-    const Vcols = eigs.map(e => e.vec); // length n, each is length-n
+    const Vcols = eigs.map(e => e.vec);
     const V = zeros(n,n);
     for (let i=0;i<n;i++) for (let j=0;j<n;j++) V[i][j] = Vcols[j][i];
 
-    // Build U columns
     const Ucols = [];
     for (let j=0;j<n;j++){
       const v = Vcols[j];
-      // A v
       const Av = Array(m).fill(0);
       for (let i=0;i<m;i++) for (let k=0;k<n;k++) Av[i] += A[i][k]*v[k];
       if (sigmas[j] > 1e-10) Ucols.push(Av.map(x=>x/sigmas[j]));
     }
-    // Gram-Schmidt completion
     while (Ucols.length < m){
       let added = false;
       for (let trialIdx=0; trialIdx<m && !added; trialIdx++){
@@ -333,6 +379,179 @@ function specNorm(A){
 }
 
 /* ============================================================
+   Complex numbers and 2x2 matrices for QSP
+   ============================================================ */
+const cZero = { re: 0, im: 0 };
+function cAdd(a, b){ return { re: a.re + b.re, im: a.im + b.im }; }
+function cSub(a, b){ return { re: a.re - b.re, im: a.im - b.im }; }
+function cMul(a, b){ return { re: a.re*b.re - a.im*b.im, im: a.re*b.im + a.im*b.re }; }
+function cExp(theta){ return { re: Math.cos(theta), im: Math.sin(theta) }; }
+function cAbs2(a){ return a.re*a.re + a.im*a.im; }
+function cConj(a){ return { re: a.re, im: -a.im }; }
+
+function mul2x2(A, B){
+  return [
+    [cAdd(cMul(A[0][0], B[0][0]), cMul(A[0][1], B[1][0])),
+     cAdd(cMul(A[0][0], B[0][1]), cMul(A[0][1], B[1][1]))],
+    [cAdd(cMul(A[1][0], B[0][0]), cMul(A[1][1], B[1][0])),
+     cAdd(cMul(A[1][0], B[0][1]), cMul(A[1][1], B[1][1]))]
+  ];
+}
+
+function makeS(phi){
+  return [[ cExp(phi), cZero ], [ cZero, cExp(-phi) ]];
+}
+
+function makeW(x){
+  const sqx = Math.sqrt(Math.max(0, 1 - x*x));
+  return [[ {re:x, im:0}, {re:0, im:sqx} ],
+          [ {re:0, im:sqx}, {re:x, im:0} ]];
+}
+
+function qspProduct(phi, x){
+  const W = makeW(x);
+  let U = makeS(phi[0]);
+  for (let k=1; k<phi.length; k++){
+    U = mul2x2(U, W);
+    U = mul2x2(U, makeS(phi[k]));
+  }
+  return U;
+}
+
+function qspLoss(phi, polyFn, samples){
+  let L = 0;
+  for (const x of samples){
+    const U = qspProduct(phi, x);
+    const top = U[0][0];
+    const target = polyFn(x);
+    const dr = top.re - target;
+    const di = top.im;
+    L += dr*dr + di*di;
+  }
+  return L / samples.length;
+}
+
+/* Gradient descent (Adam) for phase-angle search.
+   Multi-start: zeros + small Chebyshev guess + random.
+   Caches results per polynomial.                              */
+const _angleCache = {};
+
+function findAngles(polyFn, degree, presetAngles){
+  const n = degree + 1;
+  const N = 25;
+  const samples = [];
+  for (let i=0;i<=N;i++) samples.push(-1 + 2*i/N);
+
+  // Quick path: known preset angles
+  if (presetAngles && presetAngles.length === n){
+    const loss = qspLoss(presetAngles, polyFn, samples);
+    if (loss < 1e-4) return { phi: presetAngles.slice(), loss, iters: 0 };
+  }
+
+  const inits = [
+    Array(n).fill(0),
+    Array(n).fill(0).map((_, i) => i % 2 === 0 ? 0 : 0.3),
+    Array(n).fill(0).map(() => (Math.random() - 0.5) * Math.PI),
+  ];
+
+  let bestPhi = null, bestLoss = Infinity, bestIters = 0;
+
+  for (const init of inits){
+    let phi = init.slice();
+    const m = Array(n).fill(0), v = Array(n).fill(0);
+    const beta1 = 0.9, beta2 = 0.999, eps_a = 1e-8;
+    const eps_grad = 1e-5;
+    const lr = 0.05;
+    const maxIter = 500;
+
+    for (let iter=1; iter<=maxIter; iter++){
+      const grad = Array(n).fill(0);
+      for (let k=0; k<n; k++){
+        const phi_p = phi.slice(); phi_p[k] += eps_grad;
+        const phi_m = phi.slice(); phi_m[k] -= eps_grad;
+        grad[k] = (qspLoss(phi_p, polyFn, samples) - qspLoss(phi_m, polyFn, samples)) / (2 * eps_grad);
+      }
+      for (let k=0; k<n; k++){
+        m[k] = beta1 * m[k] + (1 - beta1) * grad[k];
+        v[k] = beta2 * v[k] + (1 - beta2) * grad[k] * grad[k];
+        const m_hat = m[k] / (1 - Math.pow(beta1, iter));
+        const v_hat = v[k] / (1 - Math.pow(beta2, iter));
+        phi[k] -= lr * m_hat / (Math.sqrt(v_hat) + eps_a);
+      }
+      if (iter % 100 === 0){
+        const cur = qspLoss(phi, polyFn, samples);
+        if (cur < 1e-10) { bestIters = iter; break; }
+      }
+    }
+    const L = qspLoss(phi, polyFn, samples);
+    if (L < bestLoss){
+      bestLoss = L;
+      bestPhi = phi.slice();
+      bestIters = maxIter;
+    }
+    if (bestLoss < 1e-8) break;
+  }
+
+  // wrap phases into (-pi, pi]
+  bestPhi = bestPhi.map(a => {
+    let r = a % (2*Math.PI);
+    if (r > Math.PI) r -= 2*Math.PI;
+    if (r <= -Math.PI) r += 2*Math.PI;
+    return r;
+  });
+
+  return { phi: bestPhi, loss: bestLoss, iters: bestIters };
+}
+
+/* ============================================================
+   Polynomials
+   ============================================================ */
+const POLYS = {
+  identity:    { coeffs:[0,1],            label: 'P(x) = x',
+                 fn: x => x, degree: 1, presetAngles: [0,0] },
+  t3:          { coeffs:[0,-3,0,4],       label: 'P(x) = 4x^{3} - 3x',
+                 fn: x => 4*x*x*x - 3*x, degree: 3, presetAngles: [0,0,0,0] },
+  amp:         { coeffs:[0,1.5,0,-0.5],   label: 'P(x) = (3x - x^{3})/2',
+                 fn: x => (3*x - x*x*x)/2, degree: 3 },
+  t5:          { coeffs:[0,5,0,-20,0,16], label: 'P(x) = 16x^{5} - 20x^{3} + 5x',
+                 fn: x => 16*Math.pow(x,5) - 20*Math.pow(x,3) + 5*x, degree: 5,
+                 presetAngles: [0,0,0,0,0,0] },
+  signApprox:  { coeffs:[0, 15/8, 0, -10/8, 0, 3/8],
+                 label: 'P(x) = (15x - 10x^{3} + 3x^{5})/8',
+                 fn: x => (15*x - 10*Math.pow(x,3) + 3*Math.pow(x,5))/8, degree: 5 }
+};
+
+function inferDegree(coeffs){
+  for (let i=coeffs.length-1; i>=0; i--){
+    if (Math.abs(coeffs[i]) > 1e-12) return i;
+  }
+  return 0;
+}
+
+function getPoly(){
+  const sel = document.getElementById('polySelect').value;
+  document.getElementById('customPolyWrap').style.display = sel==='custom' ? 'inline' : 'none';
+  if (sel === 'custom'){
+    const coeffs = document.getElementById('customCoeffs').value
+      .split(',').map(s => parseFloat(s)||0);
+    const deg = inferDegree(coeffs);
+    return {
+      key: 'custom:' + coeffs.join(','),
+      coeffs,
+      label: 'P(x) = ' + coeffs.map((c,i)=>{
+        if (Math.abs(c)<1e-12) return '';
+        const term = i===0?`${c}`: i===1?`${c}x`:`${c}x^{${i}}`;
+        return (c>=0?'+':'') + term;
+      }).filter(Boolean).join(' '),
+      fn: x => coeffs.reduce((s,c,i) => s + c*Math.pow(x,i), 0),
+      degree: deg,
+      presetAngles: null
+    };
+  }
+  return Object.assign({key: sel}, POLYS[sel]);
+}
+
+/* ============================================================
    UI: dynamic matrix input
    ============================================================ */
 function rebuildMatrix(){
@@ -365,16 +584,6 @@ function readA(){
   }
   return A;
 }
-function setA(A){
-  const m = A.length, n = A[0].length;
-  document.getElementById('dimM').value = m;
-  document.getElementById('dimN').value = n;
-  rebuildMatrix();
-  for (let i=0;i<m;i++) for (let j=0;j<n;j++){
-    document.getElementById(`a${i}_${j}`).value = A[i][j];
-  }
-  update();
-}
 
 function preset(kind){
   const m = +document.getElementById('dimM').value;
@@ -395,7 +604,7 @@ function preset(kind){
   } else if (kind === 'asym'){
     const data = [[1.2,0.3,-0.2],[-0.4,0.7,0.5],[0.1,-0.3,0.9]];
     for (let i=0;i<m;i++) for (let j=0;j<n;j++) A[i][j] = data[i][j];
-  } else { // random
+  } else {
     for (let i=0;i<m;i++) for (let j=0;j<n;j++) A[i][j] = rnd();
   }
   for (let i=0;i<m;i++) for (let j=0;j<n;j++){
@@ -405,39 +614,7 @@ function preset(kind){
 }
 
 /* ============================================================
-   Polynomials
-   ============================================================ */
-const POLYS = {
-  identity:    { coeffs:[0,1],            label: 'P(x)=x',                 fn: x => x },
-  cube:        { coeffs:[0,0,0,1],        label: 'P(x)=x^{3}',             fn: x => x*x*x },
-  t3:          { coeffs:[0,-3,0,4],       label: 'P(x)=4x^{3}-3x',         fn: x => 4*x*x*x - 3*x },
-  amp:         { coeffs:[0,1.5,0,-0.5],   label: 'P(x)=\\tfrac{3x-x^{3}}{2}', fn: x => (3*x - x*x*x)/2 },
-  t5:          { coeffs:[0,5,0,-20,0,16], label: 'P(x)=16x^{5}-20x^{3}+5x', fn: x => 16*Math.pow(x,5) - 20*Math.pow(x,3) + 5*x },
-  signApprox:  { coeffs:[0, 35/16, 0, -35/16, 0, 21/16],
-                 label: 'P(x)\\approx \\operatorname{sign}(x)\\;(\\text{degree-5 odd Chebyshev expansion})',
-                 fn: x => 35/16*x - 35/16*Math.pow(x,3) + 21/16*Math.pow(x,5) }
-};
-function getPoly(){
-  const sel = document.getElementById('polySelect').value;
-  document.getElementById('customPolyWrap').style.display = sel==='custom' ? 'inline' : 'none';
-  if (sel === 'custom'){
-    const coeffs = document.getElementById('customCoeffs').value
-      .split(',').map(s => parseFloat(s)||0);
-    return {
-      coeffs,
-      label: 'P(x) = ' + coeffs.map((c,i)=>{
-        if (Math.abs(c)<1e-12) return '';
-        const term = i===0?`${c}`: i===1?`${c}x`:`${c}x^{${i}}`;
-        return (c>=0?'+':'') + term;
-      }).filter(Boolean).join(' '),
-      fn: x => coeffs.reduce((s,c,i) => s + c*Math.pow(x,i), 0)
-    };
-  }
-  return POLYS[sel];
-}
-
-/* ============================================================
-   Rendering helpers
+   Display helpers
    ============================================================ */
 function matToTex(M, name){
   const rows = M.map(r => r.map(fmt).join(' & ')).join(' \\\\ ');
@@ -448,18 +625,141 @@ function matToBlock(M){
   const w = cols >= 5 ? 7 : 8;
   return M.map(r=>r.map(v=>fmt(v).padStart(w)).join('  ')).join('\n');
 }
+function fmtC(c, digits = 4){
+  const re = c.re, im = c.im;
+  if (Math.abs(im) < 1e-5) return re.toFixed(digits);
+  if (Math.abs(re) < 1e-5) return (im>=0 ? im.toFixed(digits) : im.toFixed(digits)) + 'i';
+  const sign = im >= 0 ? ' + ' : ' − ';
+  return re.toFixed(digits) + sign + Math.abs(im).toFixed(digits) + 'i';
+}
+
+function detSquare(A){
+  const n = A.length;
+  if (n===2) return A[0][0]*A[1][1] - A[0][1]*A[1][0];
+  if (n===3){
+    return A[0][0]*(A[1][1]*A[2][2]-A[1][2]*A[2][1])
+         - A[0][1]*(A[1][0]*A[2][2]-A[1][2]*A[2][0])
+         + A[0][2]*(A[1][0]*A[2][1]-A[1][1]*A[2][0]);
+  }
+  return 0;
+}
 
 /* ============================================================
-   Main update routine
+   Main update routine and Stage III orchestration
    ============================================================ */
+let _currentAngles = null;
+let _currentPoly = null;
+
+function onPolyChange(){
+  // invalidate angle cache for poly change
+  _currentAngles = null;
+  update();
+  // automatically run optimisation for the new polynomial
+  setTimeout(runOptimisation, 50);
+}
+
+function runOptimisation(){
+  const poly = getPoly();
+  const status = document.getElementById('optStatus');
+  const bar = document.getElementById('optProgress');
+  status.textContent = 'Running optimisation…';
+  bar.style.width = '15%';
+
+  setTimeout(() => {
+    const t0 = performance.now();
+    const result = findAngles(poly.fn, poly.degree, poly.presetAngles);
+    const t1 = performance.now();
+    bar.style.width = '100%';
+    const lossText = result.loss < 1e-8 ? `< 10^{-8}` : result.loss.toExponential(2);
+    status.innerHTML = `Done in ${(t1-t0).toFixed(0)} ms.&nbsp; Final $\\mathcal{L}=${lossText}$.`;
+    _angleCache[poly.key] = result;
+    _currentAngles = result;
+    _currentPoly = poly;
+    renderAngles();
+    renderQspProduct();
+    if (window.MathJax && MathJax.typesetPromise) MathJax.typesetPromise();
+    setTimeout(() => bar.style.width = '0%', 800);
+  }, 30);
+}
+
+function renderAngles(){
+  if (!_currentAngles || !_currentPoly){
+    document.getElementById('anglesOutput').innerHTML = '<p class="small">Click the button above to compute the phase angles for the selected polynomial.</p>';
+    return;
+  }
+  const phi = _currentAngles.phi;
+  const rows = phi.map((p, k) => `
+    <tr>
+      <td>$\\phi_{${k}}$</td>
+      <td>${p.toFixed(5)}</td>
+      <td>${(p/Math.PI).toFixed(4)}\\,\\pi</td>
+      <td>${(p*180/Math.PI).toFixed(2)}°</td>
+    </tr>`).join('');
+  const lossDisplay = _currentAngles.loss < 1e-8 ? '&lt; 10⁻⁸' : _currentAngles.loss.toExponential(3);
+  const goodBad = _currentAngles.loss < 1e-3 ? 'good' : 'bad';
+  document.getElementById('anglesOutput').innerHTML = `
+    <table class="mini">
+      <tr><th>index</th><th>radians</th><th>multiples of $\\pi$</th><th>degrees</th></tr>
+      ${rows}
+    </table>
+    <p>Number of angles: $d+1 = ${phi.length}$ &nbsp;·&nbsp; Final empirical loss: <span class="${goodBad}">${lossDisplay}</span>.</p>
+    <p class="small">${phi.every(a=>Math.abs(a)<1e-4) ?
+      '<strong>All phases are zero</strong>: this is the signature of a Chebyshev polynomial $T_d$, since $W(x)^d$ already produces $\\cos(d\\arccos x)$ in its $(1,1)$ entry.' :
+      'The non-zero phases steer the alternating product away from a pure Chebyshev response so as to realise the chosen $P$.'}</p>`;
+}
+
+function renderQspProduct(){
+  if (!_currentAngles || !_currentPoly) return;
+  const x = +document.getElementById('qspX').value;
+  document.getElementById('qspXVal').textContent = `x = ${x.toFixed(2)}`;
+
+  const U = qspProduct(_currentAngles.phi, x);
+  const target = _currentPoly.fn(x);
+  const top = U[0][0];
+
+  const matrixHtml =
+`<div class="matrix">U_φ(${x.toFixed(2)}) = [[ <span style="background:#fef3c7;padding:1px 4px;border-radius:3px;">${fmtC(U[0][0])}</span>,   ${fmtC(U[0][1])} ],
+              [ ${fmtC(U[1][0])},   ${fmtC(U[1][1])} ]]</div>
+<table class="mini" style="margin-top:8px">
+<tr><th>Quantity</th><th>Value</th></tr>
+<tr><td>$[U_{\\vec\\phi}(x)]_{1,1}$</td><td>${fmtC(top)}</td></tr>
+<tr><td>$P(x)$</td><td>${target.toFixed(6)}</td></tr>
+<tr><td>$|[U_{\\vec\\phi}(x)]_{1,1}-P(x)|$</td><td>${Math.hypot(top.re-target, top.im).toExponential(2)}</td></tr>
+</table>`;
+  document.getElementById('qspProductMatrix').innerHTML = matrixHtml;
+
+  // verification table across the interval
+  const samples = [-0.9, -0.6, -0.3, 0, 0.3, 0.6, 0.9];
+  const verifyRows = samples.map(xs => {
+    const Us = qspProduct(_currentAngles.phi, xs);
+    const t = Us[0][0];
+    const tg = _currentPoly.fn(xs);
+    const err = Math.hypot(t.re - tg, t.im);
+    const cls = err < 1e-3 ? 'good' : (err < 1e-1 ? '' : 'bad');
+    return `<tr>
+      <td>${xs.toFixed(2)}</td>
+      <td>${fmtC(t)}</td>
+      <td>${tg.toFixed(5)}</td>
+      <td class="${cls}">${err.toExponential(2)}</td>
+    </tr>`;
+  }).join('');
+  document.getElementById('qspVerifyTable').innerHTML = `
+    <table class="mini">
+      <tr><th>$x$</th><th>$[U_{\\vec\\phi}(x)]_{1,1}$</th><th>$P(x)$</th><th>error</th></tr>
+      ${verifyRows}
+    </table>
+    <p class="small">If the chosen $P$ is QSP-realisable to the requested degree, all errors are essentially zero. Polynomials that touch $\\pm 1$ in the interior or violate parity exhibit residual error, which is itself diagnostic.</p>`;
+  if (window.MathJax && MathJax.typesetPromise) MathJax.typesetPromise();
+}
+
 function update(){
   const A = readA();
   const m = A.length, n = A[0].length;
   const {U, S, V, sigmas} = svd(A);
   const Vt = transpose(V);
-
-  /* quick facts */
   const alpha = Math.max(specNorm(A), 1e-9);
+
+  /* Quick facts */
   const detStr = (m===n) ? `<tr><th>$\\det A$</th><td>${fmt(detSquare(A))}</td></tr>` : '';
   document.getElementById('quickfacts').innerHTML = `
     <table class="mini">
@@ -467,12 +767,12 @@ function update(){
       ${detStr}
       <tr><th>$\\lVert A\\rVert_F$ (Frobenius)</th><td>${fmt(frob(A))}</td></tr>
       <tr><th>$\\lVert A\\rVert_2$ (spectral)</th><td>${fmt(specNorm(A))}</td></tr>
-      <tr><th>Singular values</th><td>${sigmas.map((s,i)=>`$\\sigma_{${i+1}}=${fmt(s)}$`).join(',\\;')}</td></tr>
+      <tr><th>Singular values</th><td>${sigmas.map((s,i)=>`$\\sigma_{${i+1}}=${fmt(s)}$`).join(',&nbsp; ')}</td></tr>
       <tr><th>Sub-normalisation $\\alpha$</th><td>$\\alpha = \\lVert A\\rVert_2 = ${fmt(alpha)}$</td></tr>
       <tr><th>Rank (numerical)</th><td>${sigmas.filter(s=>s>1e-8).length}</td></tr>
     </table>`;
 
-  /* Step 1 SVD */
+  /* Stage I */
   document.getElementById('svdOutput').innerHTML = `
     <div class="grid2">
       <div>
@@ -483,24 +783,25 @@ function update(){
       <div>
         <h3>Reconstruction $U\\,\\Sigma\\,V^{\\dagger}$</h3>
         $$ ${matToTex(matmul(matmul(U,S),Vt),'')} $$
-        <p>The reconstruction reproduces $A$ to within machine precision, confirming the validity of the decomposition.</p>
+        <p>The reconstruction reproduces $A$ to machine precision.</p>
         <h3>Geometric interpretation</h3>
-        <p>The factor $V^{\\dagger}$ rotates the input subspace into a basis aligned with the principal directions of $A$;
-        $\\Sigma$ then stretches each principal axis by the corresponding $\\sigma_i$
-        (${sigmas.map(s=>`<span class="pill">σ=${fmt(s)}</span>`).join('')}); finally $U$ rotates the result into the output subspace.</p>
+        <p>$V^{\\dagger}$ aligns the input with the principal directions of $A$;
+        $\\Sigma$ scales each direction by $\\sigma_i$
+        (${sigmas.map(s=>`<span class="pill">σ=${fmt(s)}</span>`).join('')});
+        $U$ rotates the result into the output subspace.</p>
       </div>
     </div>`;
 
-  /* Step 2 Block encoding */
+  /* Stage II */
   const B = matScale(A, 1/alpha);
   const Bt = transpose(B);
-  const BBt = matmul(B,Bt);   // m x m
-  const BtB = matmul(Bt,B);   // n x n
+  const BBt = matmul(B,Bt);
+  const BtB = matmul(Bt,B);
   const Im = identity(m), In = identity(n);
   const ImBBt = matAdd(Im, matScale(BBt,-1));
   const ImBtB = matAdd(In, matScale(BtB,-1));
-  const sqM = sqrtSPD(ImBBt); // m x m
-  const sqN = sqrtSPD(ImBtB); // n x n
+  const sqM = sqrtSPD(ImBBt);
+  const sqN = sqrtSPD(ImBtB);
   const negBt = matScale(Bt, -1);
   const dim = m + n;
   const UA = zeros(dim, dim);
@@ -523,16 +824,38 @@ function update(){
       <div>
         <h3>Unitary dilation $U_A \\in \\mathbb{R}^{${dim}\\times${dim}}$</h3>
         <div class="matrix">${matToBlock(UA)}</div>
-        <p>The upper-left $${m}\\times${n}$ block reproduces $B$; the remaining entries pad $U_A$ into a unitary using the matrix square roots $\\sqrt{I_{${m}} - BB^{\\dagger}}$ and $\\sqrt{I_{${n}} - B^{\\dagger}B}$.</p>
+        <p>The upper-left $${m}\\times${n}$ block reproduces $B$.</p>
       </div>
     </div>`;
 
-  /* Step 3 polynomial */
+  /* Stage III: polynomial display + plot */
   const poly = getPoly();
   document.getElementById('polyDisplay').innerHTML = `$$ ${poly.label} $$`;
   drawPoly(poly, sigmas, alpha);
 
-  /* Step 4 QSVT */
+  // run angle finder if cached or first call
+  if (_angleCache[poly.key]){
+    _currentAngles = _angleCache[poly.key];
+    _currentPoly = poly;
+  } else if (poly.presetAngles){
+    const samples = []; for (let i=0;i<=25;i++) samples.push(-1+2*i/25);
+    const loss = qspLoss(poly.presetAngles, poly.fn, samples);
+    if (loss < 1e-4){
+      _currentAngles = { phi: poly.presetAngles.slice(), loss, iters: 0 };
+      _angleCache[poly.key] = _currentAngles;
+      _currentPoly = poly;
+    }
+  }
+  if (_currentPoly && _currentPoly.key !== poly.key){
+    _currentAngles = _angleCache[poly.key] || null;
+    _currentPoly = poly;
+  } else {
+    _currentPoly = poly;
+  }
+  renderAngles();
+  renderQspProduct();
+
+  /* Stage IV */
   const sigScaled = sigmas.map(s => s/alpha);
   const sigTrans  = sigScaled.map(poly.fn);
   const r = sigmas.length;
@@ -557,12 +880,12 @@ function update(){
           <tr><th>$i$</th><th>$\\sigma_i$</th><th>$\\sigma_i/\\alpha$</th><th>$P(\\sigma_i/\\alpha)$</th></tr>
           ${rows.join('')}
         </table>
-        <p>The QSVT circuit applies this transformation to every singular value in coherent superposition on the quantum register.</p>
+        <p>The QSVT circuit applies this transformation simultaneously and coherently to every singular value.</p>
       </div>
       <div>
         <h3>Resulting matrix $\\;U\\,P(\\Sigma/\\alpha)\\,V^{\\dagger}$</h3>
         $$ ${matToTex(Atrans,'A_{\\rm new}')} $$
-        <p>For $P(x)=x$ the procedure recovers $A/\\alpha$ exactly. Other admissible polynomials yield matrix functions of practical interest, including amplitude amplification, the matrix sign function (for projection), and polynomial approximations of $A^{-1}$ underlying quantum linear-systems algorithms.</p>
+        <p>Choosing $P(x)\\approx 1/x$, $P(x)\\approx e^{-ixt}$, or $P(x)\\approx \\operatorname{sign}(x)$ recovers, respectively, the quantum linear-systems algorithm, Hamiltonian simulation, and spectral filtering.</p>
       </div>
     </div>`;
 
@@ -585,17 +908,6 @@ function update(){
     </table>`;
 
   if (window.MathJax && MathJax.typesetPromise) MathJax.typesetPromise();
-}
-
-function detSquare(A){
-  const n = A.length;
-  if (n===2) return A[0][0]*A[1][1] - A[0][1]*A[1][0];
-  if (n===3){
-    return A[0][0]*(A[1][1]*A[2][2]-A[1][2]*A[2][1])
-         - A[0][1]*(A[1][0]*A[2][2]-A[1][2]*A[2][0])
-         + A[0][2]*(A[1][0]*A[2][1]-A[1][1]*A[2][0]);
-  }
-  return 0;
 }
 
 /* polynomial plot */
@@ -633,10 +945,26 @@ function drawPoly(poly, sigmas, alpha){
   svg.innerHTML = html;
 }
 
-/* boot */
-document.getElementById('customCoeffs').addEventListener('input', update);
-document.getElementById('polySelect').addEventListener('change', update);
-rebuildMatrix();
+/* boot — wait for MathJax to be ready before painting dynamic math content */
+document.getElementById('customCoeffs').addEventListener('input', onPolyChange);
+document.getElementById('polySelect').addEventListener('change', onPolyChange);
+
+function bootApp(){
+  rebuildMatrix();
+  setTimeout(runOptimisation, 200);
+}
+
+let _mjWaitCount = 0;
+(function waitForMathJax(){
+  if (window.MathJax && window.MathJax.startup && window.MathJax.startup.promise){
+    window.MathJax.startup.promise.then(bootApp);
+  } else if (_mjWaitCount < 100){
+    _mjWaitCount++;
+    setTimeout(waitForMathJax, 50);
+  } else {
+    bootApp(); // give up waiting; render anyway
+  }
+})();
 </script>
 
 </body>
