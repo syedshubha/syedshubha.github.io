@@ -511,11 +511,27 @@
         }
 
         @media (max-width: 768px) {
+            .page-hero {
+                padding: 2.5rem 1.15rem 2.25rem;
+            }
+            .page-hero h1 {
+                font-size: 2rem;
+            }
+            .container {
+                padding: 2rem 1.15rem;
+            }
+            .posts-grid {
+                grid-template-columns: 1fr;
+            }
+            .search-box {
+                width: 100%;
+                min-width: 0;
+            }
             .reader-view {
-                padding: 1.75rem 1.35rem;
+                padding: 1.5rem 1.15rem;
             }
             .reader-title {
-                font-size: 1.8rem;
+                font-size: 1.7rem;
             }
         }
     </style>
@@ -633,7 +649,7 @@
         }
 
         function buildCategoryTabs() {
-            const posts = SITE_DATA.posts || [];
+            const posts = (SITE_DATA.posts || []).filter(p => !p.hide_from_main);
             const cats = Array.from(new Set(posts.map(p => p.category).filter(Boolean)));
             const tabsEl = document.getElementById('catTabs');
             tabsEl.innerHTML = `<button class="filter-btn active" data-cat="all">All Articles (${posts.length})</button>` +
@@ -654,6 +670,7 @@
 
         function renderPosts() {
             const posts = (SITE_DATA.posts || []).filter(p => {
+                if (p.hide_from_main) return false;
                 if (activeCategory !== 'all' && p.category !== activeCategory) return false;
                 if (searchQuery) {
                     const hay = `${p.title} ${p.summary} ${p.category} ${(p.tags || []).join(' ')}`.toLowerCase();

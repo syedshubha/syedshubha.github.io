@@ -606,12 +606,34 @@
         }
 
         @media (max-width: 860px) {
+            .page-hero {
+                padding: 2.5rem 1.15rem 2.25rem;
+            }
+            .page-hero h1 {
+                font-size: 2rem;
+            }
+            .container {
+                padding: 2rem 1.15rem;
+            }
+            .meme-grid {
+                grid-template-columns: 1fr;
+            }
+            .outreach-grid {
+                grid-template-columns: 1fr;
+            }
+            .search-box {
+                width: 100%;
+                min-width: 0;
+            }
             .lightbox-card {
                 grid-template-columns: 1fr;
                 overflow-y: auto;
             }
             .lightbox-img-wrap {
                 max-height: 52vh;
+            }
+            .lightbox-info {
+                padding: 1.35rem;
             }
         }
     </style>
@@ -639,7 +661,7 @@
     <header class="page-hero">
         <div class="page-hero-inner">
             <div>
-                <div class="page-eyebrow">r/QuantumMemeology • u/Unlucky-Credit-9619 • Science Communication</div>
+                <div class="page-eyebrow">r/QuantumMemeology • Science Communication</div>
                 <h1>Quantum Memeology & Science Outreach</h1>
                 <p>
                     An original collection of physics, quantum information, pure mathematics, and epistemology memes, each paired with a rigorous technical explanation of the underlying theorem or physical mechanism.
@@ -647,8 +669,7 @@
             </div>
             <div class="hero-links">
                 <a href="https://www.reddit.com/r/QuantumMemeology/" target="_blank" class="hero-btn gold">🤖 r/QuantumMemeology ↗</a>
-                <a href="https://www.reddit.com/user/Unlucky-Credit-9619/" target="_blank" class="hero-btn">👤 u/Unlucky-Credit-9619 ↗</a>
-                <a href="blog.html" class="hero-btn">📖 Substack & Bigganblog Essays →</a>
+                <a href="blog.html" class="hero-btn">📖 Blog & Essays →</a>
             </div>
         </div>
     </header>
@@ -669,7 +690,7 @@
         <!-- Science Outreach, Lectures & Intellectual Passions -->
         <section class="outreach-section">
             <div class="section-eyebrow">Pedagogy, Essays & Recreation</div>
-            <h2 class="section-title">Lectures, Popular Science Writing & Chess</h2>
+            <h2 class="section-title">Lectures, Philosophical Essays & Chess</h2>
             <div class="outreach-grid">
                 <div class="outreach-card">
                     <h3>🎥 Video Lecture Series</h3>
@@ -701,21 +722,6 @@
                         <a href="https://syedshubha.substack.com/p/male-loneliness-epidemic" target="_blank" class="outreach-link">
                             <span>📜 Male Loneliness Epidemic</span>
                             <span>Substack ↗</span>
-                        </a>
-                    </div>
-                </div>
-
-                <div class="outreach-card">
-                    <h3>✍️ Bengali Science Writing (Bigganblog)</h3>
-                    <p>Nine popular mathematics and physics articles written in Bengali for students across Bangladesh and West Bengal.</p>
-                    <div class="outreach-links">
-                        <a href="https://bigganblog.org/author/syed-shubha/" target="_blank" class="outreach-link">
-                            <span>📚 Bigganblog Author Archive</span>
-                            <span>bigganblog.org ↗</span>
-                        </a>
-                        <a href="blog.html" class="outreach-link">
-                            <span>📖 Browse All Articles on Portfolio</span>
-                            <span>View →</span>
                         </a>
                     </div>
                 </div>

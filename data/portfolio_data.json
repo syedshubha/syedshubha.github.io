@@ -2,9 +2,9 @@
   "profile": {
     "name": "Syed Emad Uddin Shubha",
     "short_name": "Syed Shubha",
-    "title": "Ph.D. Student & Graduate Research Assistant in Computer Science",
-    "affiliation": "Division of Computer Science & Engineering, Louisiana State University",
-    "education_short": "Ph.D. in Computer Science, LSU • B.Sc. in EEE, BUET",
+    "title": "Ph.D. Student in Computer Science • Louisiana State University",
+    "affiliation": "",
+    "education_short": "",
     "tagline": "Investigating multi-tenant quantum hardware security, pulse-level superconducting qubit characterization, and correlation-guided quantum communication.",
     "bio": "My doctoral research at Louisiana State University (advised by Dr. Tasnuva Farheen), which I conceived and proposed, spans two complementary directions: (1) Quantum Hardware Security: securing multi-tenant superconducting quantum processors via pulse-level crosstalk characterization, Pauli-transfer-matrix detection that separates malicious interference from benign calibration drift, and cross-layer verification; and (2) Quantum Communication & Quantum Correlations: exploiting quantum correlations to design adaptive error-correction and purification protocols and high-fidelity multi-qubit state transmission over partially entangled GHZ channels with optimal POVMs.",
     "email": "syed.shubha@ieee.org",
@@ -27,16 +27,19 @@
         "value": "3",
         "label": "i10-index (Google Scholar ↗)",
         "url": "https://scholar.google.com/citations?user=8EK8VJMAAAAJ"
+      },
+      {
+        "value": "2026",
+        "label": "Quantum Rising Star Award"
       }
     ],
     "interests": [
-      "Quantum Hardware Security",
+      "Quantum Hardware Security & Pulse Control",
       "Multi-Tenant Superconducting Qubits",
       "Quantum Communication & Correlations",
       "Quantum Error Correction",
       "Quantum Cryptography (QKD)",
-      "Quantum Algorithms & QSVT",
-      "ML for Quantum Characterization"
+      "Quantum Algorithms & QSVT"
     ],
     "links": {
       "scholar": "https://scholar.google.com/citations?user=8EK8VJMAAAAJ",
@@ -54,14 +57,14 @@
   },
   "pillars": [
     {
-      "id": "security",
+      "id": "security-characterization",
       "icon": "🛡️",
-      "title": "Quantum Hardware Security & Crosstalk Detection",
-      "summary": "Securing multi-tenant superconducting quantum processors through pulse-level characterization of crosstalk as an active attack vector, pulse-to-circuit mapping of asymmetric attack mechanisms, and structural Pauli-transfer-matrix detection that separates coherent crosstalk from benign calibration drift.",
+      "title": "Quantum Hardware Security, Pulse Control & Characterization",
+      "summary": "Securing and characterizing multi-tenant superconducting quantum processors through pulse-level Hamiltonian simulation (Qiskit Pulse, QuTiP), pulse-to-circuit mapping of asymmetric crosstalk attack mechanisms, Choi-matrix and Pauli-transfer process analysis, and structural drift separation.",
       "highlights": [
         "Pulse-to-circuit characterization of crosstalk as an active attack vector and Pauli-transfer-matrix drift separation",
-        "Published/Accepted in IEEE HOST 2027 [C7], ACM CCS QSec 2025 [C5], and IEEE QCE 2025 [C4]",
-        "Featured in industry outlet Quantum Zeitgeist"
+        "Multi-qubit pulse calibration (Rabi, Echoed Cross-Resonance) and open-quantum-system process characterization",
+        "Published/Accepted in IEEE HOST 2027 [C7], ACM CCS QSec 2025 [C5], and IEEE QCE 2025 [C4]; featured in Quantum Zeitgeist"
       ]
     },
     {
@@ -73,17 +76,6 @@
         "Correlation-guided adaptive purification protocols for superdense coding and multi-qubit state teleportation",
         "Published in AVS Quantum Science 2025 [J4, Corresponding Author], Heliyon 2023 [J1, 1st Author], and IEEE QCE 2025 [C6]",
         "Co-supervised research on surface-code ensemble decoders [C3] and hybrid QKD security [J2, J3]"
-      ]
-    },
-    {
-      "id": "characterization",
-      "icon": "⚛️",
-      "title": "Quantum Characterization, Pulse Control & Machine Learning",
-      "summary": "Combining pulse-level Hamiltonian simulation (Qiskit Pulse, QuTiP), Choi-matrix and Pauli-transfer process analysis, and classical-shadow machine learning pipelines to classify entanglement phases and benchmark noisy superconducting hardware.",
-      "highlights": [
-        "Neural Shadows: ML pipeline built on sparse classical-shadow representations for Werner state phase classification",
-        "W-State pulse calibration on ibm_sherbrooke using Rabi experiments and Echoed Cross-Resonance (ECR)",
-        "Interactive pedagogical simulators for QSVT and Quantum Key Distribution (BB84, B92, E91)"
       ]
     }
   ],
@@ -333,22 +325,6 @@
       "repo_url": "https://github.com/syedshubha/syedshubha.github.io/blob/main/QSVT.html"
     },
     {
-      "id": "proj-shadows",
-      "title": "Neural Shadows: ML for Entanglement Classification",
-      "category": "Quantum Machine Learning",
-      "badge": "Open Source",
-      "description": "Classified entanglement phases of Werner states with an ML pipeline built on sparse classical-shadow representations; quantified SVM (with Quantum Kernels), FNN, and Random Forest robustness to finite-shot noise via Monte Carlo stability analysis.",
-      "tech": [
-        "Classical Shadows",
-        "Quantum Kernels",
-        "PyTorch / Scikit-Learn",
-        "Tomography"
-      ],
-      "link": "https://github.com/syedshubha/ShadowTomography",
-      "link_label": "View GitHub Repository →",
-      "repo_url": "https://github.com/syedshubha/ShadowTomography"
-    },
-    {
       "id": "proj-wstate",
       "title": "W-State Preparation on Superconducting Qubits with Qiskit Pulse",
       "category": "Pulse-Level Control",
@@ -463,10 +439,10 @@
   ],
   "education": [
     {
-      "degree": "Ph.D. in Computer Science",
+      "degree": "Ph.D. Student in Computer Science",
       "institution": "Louisiana State University, Baton Rouge, LA, USA",
       "period": "January 2025 – Present",
-      "details": "Advisor: Dr. Tasnuva Farheen • Coursework: Quantum Technology, Quantum Algorithms, Machine Learning, Advanced Algorithm Design"
+      "details": "Advisor: Dr. Tasnuva Farheen • Coursework: Quantum Technology, Quantum Algorithms, Advanced Algorithm Design"
     },
     {
       "degree": "B.Sc. in Electrical and Electronic Engineering",
@@ -485,6 +461,26 @@
     "University Admission Test Scholarship: BUET; ranked 47th of ~10,000 candidates in Bangladesh's most competitive engineering admission test (2017)"
   ],
   "posts": [
+    {
+      "id": "post-qsvt-interactive",
+      "slug": "interactive-quantum-singular-value-transformation",
+      "title": "Interactive Quantum Singular Value Transformation (QSVT): Live 4-Stage Pipeline",
+      "date": "2026",
+      "category": "Quantum Computing",
+      "source": "Interactive Lab",
+      "read_time": "6 min read",
+      "cover_image": "",
+      "summary": "An interactive browser-based mathematical laboratory realizing Singular Value Decomposition, Cosine–Sine Unitary Block Encoding, Quantum Signal Processing (with live Adam phase-angle optimization), and the QSVT theorem.",
+      "external_url": "QSVT.html",
+      "pdf_url": "",
+      "tags": [
+        "QSVT",
+        "Quantum Signal Processing",
+        "Block Encoding",
+        "Interactive MathJax"
+      ],
+      "content": "## Overview\n\nQuantum Singular Value Transformation (QSVT) unifies nearly all major quantum algorithms (including Hamiltonian simulation, Grover search, quantum linear systems, and amplitude amplification) into a single polynomial framework.\n\nIn my **[Interactive QSVT Web Laboratory](QSVT.html)**, you can edit any $m \\times n$ real matrix $A$ and target polynomial $P(x)$ and observe all four stages recomputed in real time:\n\n1. **Stage I: Singular Value Decomposition ($A = U \\Sigma V^\\dagger$)**\n2. **Stage II: Unitary Block Encoding ($U_A$ via Cosine–Sine Dilation)**\n3. **Stage III: Quantum Signal Processing & Phase-Angle Optimization ($\\vec{\\phi}$)**\n4. **Stage IV: Full QSVT Circuit Transformation ($U\\, P(\\Sigma/\\alpha)\\, V^\\dagger$)**\n\n👉 **[Launch the Interactive QSVT Simulator →](QSVT.html)**"
+    },
     {
       "id": "post-agrippan-trilemma",
       "slug": "agrippan-trilemma",
@@ -545,27 +541,8 @@
         "Mental Health",
         "Substack"
       ],
-      "content": "![Feminism + Homie Culture vs Patriarchy + Choice Feminism](images/homie_feminism.jpg)\n\n## Evolutionary Self-Domestication vs. Patriarchal Disruption\n\nHistorically, a primary engine of human self-domestication was female mate choice: early human communities systematically favored cooperative, prosocial, and communicative partners over hyper-aggressive phenotypes. The agricultural revolution disrupted this trajectory, the accumulation of property and inheritance birthed patriarchal structures that bypassed female selection and structurally rewarded dominance and control over cooperation.\n\nAs modern feminism dismantles these historical constraints, a sharp cultural divergence has emerged:\n\n1. **The \"Sigma\" Retaliation (Patriarchal Isolation):** Hyper-individualism and emotional stoicism glorify male isolation as strength. Because vulnerability is stigmatized, men become unable to form deep platonic bonds with other men, directly fueling the modern male loneliness epidemic.\n2. **\"Homie Culture\" (The Prosocial Rebellion):** A counter-culture of digital and platonic intimacy (normalizing mental-health check-ins, earnest emotional support, and stigma-free male vulnerability) restores prosocial male bonding.\n\n## The Synthesis\n\nAs long as patriarchal norms reward emotional isolation, male loneliness will persist. Solving it requires a dual cultural shift:\n- **Scaling platonic intimacy and emotional vulnerability among men** (\"homie culture\") as the direct antidote to isolation.\n- **Advancing substantive feminism** that rejects performative tropes and selects for cooperative, respectful partnership.\n\n🔗 **[Read the original essay on Substack →](https://syedshubha.substack.com/p/male-loneliness-epidemic)**"
-    },
-    {
-      "id": "post-qsvt-interactive",
-      "slug": "interactive-quantum-singular-value-transformation",
-      "title": "Interactive Quantum Singular Value Transformation (QSVT): Live 4-Stage Pipeline",
-      "date": "2026",
-      "category": "Quantum Computing",
-      "source": "Interactive Lab",
-      "read_time": "6 min read",
-      "cover_image": "",
-      "summary": "An interactive browser-based mathematical laboratory realizing Singular Value Decomposition, Cosine–Sine Unitary Block Encoding, Quantum Signal Processing (with live Adam phase-angle optimization), and the QSVT theorem.",
-      "external_url": "QSVT.html",
-      "pdf_url": "",
-      "tags": [
-        "QSVT",
-        "Quantum Signal Processing",
-        "Block Encoding",
-        "Interactive MathJax"
-      ],
-      "content": "## Overview\n\nQuantum Singular Value Transformation (QSVT) unifies nearly all major quantum algorithms (including Hamiltonian simulation, Grover search, quantum linear systems, and amplitude amplification) into a single polynomial framework.\n\nIn my **[Interactive QSVT Web Laboratory](QSVT.html)**, you can edit any $m \\times n$ real matrix $A$ and target polynomial $P(x)$ and observe all four stages recomputed in real time:\n\n1. **Stage I: Singular Value Decomposition ($A = U \\Sigma V^\\dagger$)**\n2. **Stage II: Unitary Block Encoding ($U_A$ via Cosine–Sine Dilation)**\n3. **Stage III: Quantum Signal Processing & Phase-Angle Optimization ($\\vec{\\phi}$)**\n4. **Stage IV: Full QSVT Circuit Transformation ($U\\, P(\\Sigma/\\alpha)\\, V^\\dagger$)**\n\n👉 **[Launch the Interactive QSVT Simulator →](QSVT.html)**"
+      "content": "![Feminism + Homie Culture vs Patriarchy + Choice Feminism](images/homie_feminism.jpg)\n\n## Evolutionary Self-Domestication vs. Patriarchal Disruption\n\nHistorically, a primary engine of human self-domestication was female mate choice: early human communities systematically favored cooperative, prosocial, and communicative partners over hyper-aggressive phenotypes. The agricultural revolution disrupted this trajectory, the accumulation of property and inheritance birthed patriarchal structures that bypassed female selection and structurally rewarded dominance and control over cooperation.\n\nAs modern feminism dismantles these historical constraints, a sharp cultural divergence has emerged:\n\n1. **The \"Sigma\" Retaliation (Patriarchal Isolation):** Hyper-individualism and emotional stoicism glorify male isolation as strength. Because vulnerability is stigmatized, men become unable to form deep platonic bonds with other men, directly fueling the modern male loneliness epidemic.\n2. **\"Homie Culture\" (The Prosocial Rebellion):** A counter-culture of digital and platonic intimacy (normalizing mental-health check-ins, earnest emotional support, and stigma-free male vulnerability) restores prosocial male bonding.\n\n## The Synthesis\n\nAs long as patriarchal norms reward emotional isolation, male loneliness will persist. Solving it requires a dual cultural shift:\n- **Scaling platonic intimacy and emotional vulnerability among men** (\"homie culture\") as the direct antidote to isolation.\n- **Advancing substantive feminism** that rejects performative tropes and selects for cooperative, respectful partnership.\n\n🔗 **[Read the original essay on Substack →](https://syedshubha.substack.com/p/male-loneliness-epidemic)**",
+      "hide_from_main": true
     },
     {
       "id": "post-stirling",
@@ -628,26 +605,6 @@
       "content": "Published in **বিজ্ঞান ব্লগ (Bigganblog)**.\n\nExamines Galilean coordinate transformations between inertial frames and introduces spacetime diagrams as a geometric lens on classical kinematics.\n\n🔗 **[Read the full article on Bigganblog →](https://bigganblog.org/2020/04/%e0%a6%95%e0%a7%8d%e0%a6%b2%e0%a6%be%e0%a6%b8%e0%a6%bf%e0%a6%95%e0%a7%8d%e0%a6%af%e0%a6%be%e0%a6%b2-%e0%a6%ae%e0%a7%87%e0%a6%95%e0%a6%be%e0%a6%a8%e0%a6%bf%e0%a6%95%e0%a7%8d%e0%a6%b8-%e0%a7%a8/)**"
     },
     {
-      "id": "post-classical-mechanics-1",
-      "slug": "classical-mechanics-part-1-history-newtons-laws",
-      "title": "Classical Mechanics Part 1: History of Newton's Laws of Motion (ক্লাসিক্যাল মেকানিক্স পর্ব-১: নিউটনের গতিসূত্রের ইতিহাস)",
-      "date": "April 2020",
-      "category": "Mathematics & Physics (Bengali)",
-      "source": "Bigganblog",
-      "read_time": "7 min read",
-      "cover_image": "",
-      "summary": "From Aristotelian physics and Galileo's inclined planes to Newton's Principia: the conceptual evolution of inertia and force.",
-      "external_url": "https://bigganblog.org/2020/04/%e0%a6%95%e0%a7%8d%e0%a6%b2%e0%a6%be%e0%a6%b8%e0%a6%bf%e0%a6%95%e0%a7%8d%e0%a6%af%e0%a6%be%e0%a6%b2-%e0%a6%ae%e0%a7%87%e0%a6%95%e0%a6%be%e0%a6%a8%e0%a6%bf%e0%a6%95%e0%a7%8d%e0%a6%b8-%e0%a7%a7/",
-      "pdf_url": "",
-      "tags": [
-        "Classical Mechanics",
-        "History of Physics",
-        "Bigganblog",
-        "Bengali"
-      ],
-      "content": "Published in **বিজ্ঞান ব্লগ (Bigganblog)**.\n\nTraces the historical and philosophical development of mechanics from Aristotle and Ibn Sina to Galileo Galilei and Isaac Newton.\n\n🔗 **[Read the full article on Bigganblog →](https://bigganblog.org/2020/04/%e0%a6%95%e0%a7%8d%e0%a6%b2%e0%a6%be%e0%a6%b8%e0%a6%bf%e0%a6%95%e0%a7%8d%e0%a6%af%e0%a6%be%e0%a6%b2-%e0%a6%ae%e0%a7%87%e0%a6%95%e0%a6%be%e0%a6%a8%e0%a6%bf%e0%a6%95%e0%a7%8d%e0%a6%b8-%e0%a7%a7/)**"
-    },
-    {
       "id": "post-infinite-series",
       "slug": "story-of-infinite-series",
       "title": "The Story of Infinite Series (অসীম ধারার গল্প)",
@@ -686,66 +643,6 @@
         "Bengali"
       ],
       "content": "Published in **বিজ্ঞান ব্লগ (Bigganblog)**.\n\nDemonstrates how geometric intuition and visual constructions can prove classic identities (from sums of odd integers to the Pythagorean theorem and infinite geometric series) without a single line of algebraic text.\n\n🔗 **[Read the full article on Bigganblog →](https://bigganblog.org/2016/09/%e0%a6%95%e0%a6%a5%e0%a6%be-%e0%a6%9b%e0%a6%be%e0%a7%9c%e0%a6%be-%e0%a6%aa%e0%a7%8d%e0%a6%b0%e0%a6%ae%e0%a6%be%e0%a6%a3-%e0%a6%97%e0%a6%a3%e0%a6%bf%e0%a6%a4%e0%a7%87%e0%a6%b0-%e0%a6%b8%e0%a7%8c/)**"
-    },
-    {
-      "id": "post-bohr-model",
-      "slug": "behind-the-bohr-model",
-      "title": "Behind the Bohr Model (বোর মডেলের অন্তরালে)",
-      "date": "August 2016",
-      "category": "Mathematics & Physics (Bengali)",
-      "source": "Bigganblog",
-      "read_time": "6 min read",
-      "cover_image": "",
-      "summary": "How Niels Bohr quantized angular momentum to explain atomic spectra and bridged classical electrodynamics with early quantum theory.",
-      "external_url": "https://bigganblog.org/2016/08/%e0%a6%ac%e0%a7%8b%e0%a6%b0-%e0%a6%ae%e0%a6%a1%e0%a7%87%e0%a6%b2%e0%a7%87%e0%a6%b0-%e0%a6%85%e0%a6%a8%e0%a7%8d%e0%a6%a4%e0%a6%b0%e0%a6%be%e0%a6%b2%e0%a7%87/",
-      "pdf_url": "",
-      "tags": [
-        "Quantum Physics",
-        "Bohr Model",
-        "Bigganblog",
-        "Bengali"
-      ],
-      "content": "Published in **বিজ্ঞান ব্লগ (Bigganblog)**.\n\nExamines the physical motivation, derivations, and de Broglie matter-wave interpretation behind Bohr's quantization condition $L = n\\hbar$.\n\n🔗 **[Read the full article on Bigganblog →](https://bigganblog.org/2016/08/%e0%a6%ac%e0%a7%8b%e0%a6%b0-%e0%a6%ae%e0%a6%a1%e0%a7%87%e0%a6%b2%e0%a7%87%e0%a6%b0-%e0%a6%85%e0%a6%a8%e0%a7%8d%e0%a6%a4%e0%a6%b0%e0%a6%be%e0%a6%b2%e0%a7%87/)**"
-    },
-    {
-      "id": "post-polynomial-factorization",
-      "slug": "polynomial-factorization-bigganblog",
-      "title": "Factorization of Single-Variable Polynomials (এক চলকবিশিষ্ট বহুপদীর উৎপাদকে বিশ্লেষণ)",
-      "date": "November 2016",
-      "category": "Mathematics & Physics (Bengali)",
-      "source": "Bigganblog",
-      "read_time": "6 min read",
-      "cover_image": "",
-      "summary": "Remainder theorem, rational root theorem, and systematic algebraic techniques for factoring polynomials.",
-      "external_url": "https://bigganblog.org/2016/11/%e0%a6%8f%e0%a6%95-%e0%a6%9a%e0%a6%b2%e0%a6%95%e0%a6%ac%e0%a6%bf%e0%a6%b6%e0%a6%bf%e0%a6%b7%e0%a7%8d%e0%a6%9f-%e0%a6%ac%e0%a6%b9%e0%a7%81%e0%a6%aa%e0%a6%a6%e0%a7%80%e0%a6%b0-%e0%a6%89%e0%a7%8e/",
-      "pdf_url": "",
-      "tags": [
-        "Algebra",
-        "Polynomials",
-        "Bigganblog",
-        "Bengali"
-      ],
-      "content": "Published in **বিজ্ঞান ব্লগ (Bigganblog)**.\n\nA tutorial on polynomial factorization using the factor theorem, rational root test, and cyclotomic symmetries.\n\n🔗 **[Read the full article on Bigganblog →](https://bigganblog.org/2016/11/%e0%a6%8f%e0%a6%95-%e0%a6%9a%e0%a6%b2%e0%a6%95%e0%a6%ac%e0%a6%bf%e0%a6%b6%e0%a6%bf%e0%a6%b7%e0%a7%8d%e0%a6%9f-%e0%a6%ac%e0%a6%b9%e0%a7%81%e0%a6%aa%e0%a6%a6%e0%a7%80%e0%a6%b0-%e0%a6%89%e0%a7%8e/)**"
-    },
-    {
-      "id": "post-3d-geometry",
-      "slug": "preliminary-discussion-3d-geometry",
-      "title": "Preliminary Discussion on 3D Geometry (ত্রিমাত্রিক জ্যামিতির কিছু প্রাথমিক আলোচনা)",
-      "date": "August 2016",
-      "category": "Mathematics & Physics (Bengali)",
-      "source": "Bigganblog",
-      "read_time": "5 min read",
-      "cover_image": "",
-      "summary": "Direction cosines, planes, lines, and vector representations in three-dimensional Euclidean space.",
-      "external_url": "https://bigganblog.org/2016/08/%e0%a6%a4%e0%a7%8d%e0%a6%b0%e0%a6%bf%e0%a6%ae%e0%a6%be%e0%a6%a4%e0%a7%8d%e0%a6%b0%e0%a6%bf%e0%a6%95-%e0%a6%9c%e0%a7%8d%e0%a6%af%e0%a6%be%e0%a6%ae%e0%a6%bf%e0%a6%a4%e0%a6%bf%e0%a6%b0-%e0%a6%95%e0%a6%bf/",
-      "pdf_url": "",
-      "tags": [
-        "3D Geometry",
-        "Vectors",
-        "Bigganblog",
-        "Bengali"
-      ],
-      "content": "Published in **বিজ্ঞান ব্লগ (Bigganblog)**.\n\nAn introduction to three-dimensional analytic geometry, direction ratios/cosines, and spatial coordinate systems.\n\n🔗 **[Read the full article on Bigganblog →](https://bigganblog.org/2016/08/%e0%a6%a4%e0%a7%8d%e0%a6%b0%e0%a6%bf%e0%a6%ae%e0%a6%be%e0%a6%a4%e0%a7%8d%e0%a6%b0%e0%a6%bf%e0%a6%95-%e0%a6%9c%e0%a7%8d%e0%a6%af%e0%a6%be%e0%a6%ae%e0%a6%bf%e0%a6%a4%e0%a6%bf%e0%a6%b0-%e0%a6%95%e0%a6%bf/)**"
     }
   ],
   "memes": [

@@ -617,12 +617,13 @@ STUDIO_HTML = r"""<!DOCTYPE html>
 
     // Posts list
     document.getElementById('postListContainer').innerHTML = (DATA.posts || []).map((p, idx) => `
-      <div class="item-row">
+      <div class="item-row" style="${p.hide_from_main ? 'opacity:0.65;' : ''}">
         <div class="item-info">
-          <h4>${p.title} <span style="font-size:0.74rem; color:#1d4ed8;">[${p.category}]</span></h4>
+          <h4>${p.title} <span style="font-size:0.74rem; color:#1d4ed8;">[${p.category}]</span> ${p.hide_from_main ? '<span style="font-size:0.72rem; color:#b91c1c; font-weight:700;">(Hidden from Main Portfolio)</span>' : ''}</h4>
           <p>${p.date || ''} • ${p.external_url || 'Hosted on Portfolio'}</p>
         </div>
         <div class="item-actions">
+          <button class="btn btn-light" onclick="toggleHidePost('${p.slug || p.id}')">${p.hide_from_main ? '👁️ Show' : '🙈 Hide'}</button>
           <button class="btn btn-light" onclick="editPost('${p.slug || p.id}')">✏️ Edit</button>
           <button class="btn btn-danger" onclick="deletePost('${p.slug || p.id}')">✕</button>
         </div>
@@ -818,6 +819,14 @@ STUDIO_HTML = r"""<!DOCTYPE html>
   function deletePost(slug) {
     if (!confirm('Delete this article?')) return;
     DATA.posts = DATA.posts.filter(p => (p.slug || p.id) !== slug);
+    refreshUI();
+    saveDataOnly();
+  }
+
+  function toggleHidePost(slug) {
+    const p = (DATA.posts || []).find(x => (x.slug || x.id) === slug);
+    if (!p) return;
+    p.hide_from_main = !p.hide_from_main;
     refreshUI();
     saveDataOnly();
   }

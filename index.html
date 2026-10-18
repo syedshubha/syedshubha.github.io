@@ -248,8 +248,8 @@
             margin: 0 auto;
             display: grid;
             grid-template-columns: 1.6fr 1fr;
-            gap: 3.5rem;
-            align-items: center;
+            gap: 3rem;
+            align-items: start;
             position: relative;
             z-index: 1;
         }
@@ -432,8 +432,8 @@
 
         .metrics-grid {
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 0.65rem;
+            grid-template-columns: 1fr 1fr;
+            gap: 0.75rem;
         }
 
         .metric-box {
@@ -442,8 +442,8 @@
             background: rgba(255, 255, 255, 0.06);
             border: 1px solid rgba(255, 255, 255, 0.12);
             border-radius: 8px;
-            padding: 0.85rem 0.75rem;
-            text-align: center;
+            padding: 0.9rem;
+            text-align: left;
             transition: all 0.2s ease;
         }
 
@@ -1228,6 +1228,10 @@
                 grid-template-columns: 1fr;
             }
 
+            .hero-profile-card {
+                order: -1;
+            }
+
             .update-card {
                 grid-template-columns: 1fr;
                 gap: 0.5rem;
@@ -1235,6 +1239,10 @@
         }
 
         @media (max-width: 768px) {
+            .nav-container {
+                padding: 0.75rem 1.15rem;
+            }
+
             .nav-menu {
                 display: none;
                 position: absolute;
@@ -1256,12 +1264,61 @@
                 display: flex;
             }
 
+            .hero {
+                padding: 2.25rem 1.15rem 2.5rem;
+            }
+
+            .hero-container {
+                gap: 1.75rem;
+            }
+
             .hero h1 {
-                font-size: 2.35rem;
+                font-size: 2.15rem;
+            }
+
+            .hero-role {
+                font-size: 1.12rem;
+            }
+
+            .section {
+                padding: 2.75rem 1.15rem;
+            }
+
+            .section-title {
+                font-size: 1.75rem;
+            }
+
+            .pillars-grid,
+            .projects-grid,
+            .blog-preview-grid,
+            #sideBySideExperienceContainer {
+                grid-template-columns: 1fr !important;
+                gap: 1.25rem !important;
+            }
+
+            .pub-search {
+                width: 100%;
+                min-width: 0;
             }
 
             .pub-item {
                 grid-template-columns: 1fr;
+                padding: 1.15rem;
+            }
+
+            .outreach-banner {
+                padding: 1.75rem 1.35rem;
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .profile-photo-wrap {
+                gap: 1rem;
+            }
+
+            .profile-image {
+                width: 96px;
+                height: 96px;
             }
         }
     </style>
@@ -1273,7 +1330,7 @@
         <div class="nav-container">
             <a href="#home" class="nav-brand">
                 <span class="nav-brand-name">Syed Emad Uddin Shubha</span>
-                <span class="nav-brand-sub">Quantum Information • LSU CSE</span>
+                <span class="nav-brand-sub">Quantum Information • LSU</span>
             </a>
             <ul class="nav-menu" id="navMenu">
                 <li><a href="#about">Research</a></li>
@@ -1297,25 +1354,19 @@
     <header class="hero" id="home">
         <div class="hero-container">
             <div>
-                <div class="institution-badge">
-                    <span class="dot"></span>
-                    <span id="heroAffiliation">Division of Computer Science & Engineering • Louisiana State University</span>
-                </div>
                 <h1 id="heroName">Syed Emad Uddin Shubha</h1>
-                <p class="hero-role" id="heroTitle">Doctoral Researcher in Computer Science & Quantum Information</p>
-                <p class="hero-education" id="heroEdu">Ph.D. in Computer Science, LSU • B.Sc. in EEE, BUET</p>
+                <p class="hero-role" id="heroTitle">Ph.D. Student in Computer Science • Louisiana State University</p>
                 <p class="hero-bio" id="heroBio">
                     My doctoral research at Louisiana State University (advised by Dr. Tasnuva Farheen), which I conceived and proposed, spans two complementary directions: (1) Quantum Hardware Security: securing multi-tenant superconducting quantum processors via pulse-level crosstalk characterization, Pauli-transfer-matrix detection that separates malicious interference from benign calibration drift, and cross-layer verification; and (2) Quantum Communication & Quantum Correlations: exploiting quantum correlations to design adaptive error-correction and purification protocols and high-fidelity multi-qubit state transmission over partially entangled GHZ channels with optimal POVMs.
                 </p>
 
                 <div class="interest-tags" id="interestTags">
-                    <span class="interest-tag">Quantum Hardware Security & Verification</span>
-                    <span class="interest-tag">Superconducting Qubits & Pulse Control</span>
+                    <span class="interest-tag">Quantum Hardware Security & Pulse Control</span>
+                    <span class="interest-tag">Multi-Tenant Superconducting Qubits</span>
+                    <span class="interest-tag">Quantum Communication & Correlations</span>
                     <span class="interest-tag">Quantum Error Correction</span>
-                    <span class="interest-tag">Quantum Communication & Networks</span>
-                    <span class="interest-tag">Quantum Algorithms & QSVT</span>
                     <span class="interest-tag">Quantum Cryptography (QKD)</span>
-                    <span class="interest-tag">Classical Shadow Tomography & QML</span>
+                    <span class="interest-tag">Quantum Algorithms & QSVT</span>
                 </div>
 
                 <div class="hero-actions">
@@ -1349,7 +1400,7 @@
                     <img src="images/avatar.JPG" alt="Syed Emad Uddin Shubha" class="profile-image" id="heroAvatar">
                     <div class="profile-caption">
                         <h3>Syed E. U. Shubha</h3>
-                        <p>Graduate Research Assistant & Teaching Assistant<br>School of EECS, LSU<br>Baton Rouge, Louisiana</p>
+                        <p>Graduate Research Assistant & Teaching Assistant<br>Division of Computer Science & Engineering<br>Louisiana State University, Baton Rouge, LA</p>
                     </div>
                 </div>
                 <div class="metrics-grid" id="heroMetrics">
@@ -1365,6 +1416,10 @@
                         <div class="metric-value">3</div>
                         <div class="metric-label">i10-index (Google Scholar ↗)</div>
                     </a>
+                    <div class="metric-box">
+                        <div class="metric-value">2026</div>
+                        <div class="metric-label">Quantum Rising Star Award</div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -1430,7 +1485,7 @@
                 <div class="section-title-group">
                     <div class="section-eyebrow">Open-Source Software & Pedagogical Tools</div>
                     <h2 class="section-title">Research Projects & Interactive Labs</h2>
-                    <p class="section-subtitle">Simulation frameworks, digital twins, machine learning pipelines, and interactive mathematical explorations</p>
+                    <p class="section-subtitle">Simulation frameworks, digital twins, pulse-level hardware models, and interactive mathematical explorations</p>
                 </div>
                 <a href="https://github.com/syedshubha?tab=repositories" target="_blank" class="pub-btn">View All GitHub Repositories →</a>
             </div>
@@ -1479,10 +1534,12 @@
                         </div>
                         <div class="skill-row">
                             <span class="skill-label">Scientific Typesetting & Verification</span>
-                            <span class="skill-val">LaTeX, Rocq / Coq Prover, Git, PyTorch, Scikit-Learn</span>
+                            <span class="skill-val">LaTeX, Rocq / Coq Prover, Git</span>
                         </div>
                     </div>
                 </div>
+
+                <div id="sideBySideExperienceContainer" style="grid-column: 1 / -1; display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 2.5rem;"></div>
             </div>
         </div>
     </section>
@@ -1599,8 +1656,10 @@
             const p = SITE_DATA.profile || {};
             if (p.name) document.getElementById('heroName').textContent = p.name;
             if (p.title) document.getElementById('heroTitle').textContent = p.title;
-            if (p.affiliation) document.getElementById('heroAffiliation').textContent = p.affiliation;
-            if (p.education_short) document.getElementById('heroEdu').textContent = p.education_short;
+            const affEl = document.getElementById('heroAffiliation');
+            if (affEl && p.affiliation) affEl.textContent = p.affiliation;
+            const eduEl = document.getElementById('heroEdu');
+            if (eduEl && p.education_short) eduEl.textContent = p.education_short;
             if (p.bio) document.getElementById('heroBio').textContent = p.bio;
             if (p.cv_url) document.getElementById('cvDownloadBtn').href = p.cv_url;
             if (p.avatar) document.getElementById('heroAvatar').src = p.avatar;
@@ -1701,10 +1760,23 @@
                 `).join('');
             }
 
-            // Experience
+            // Experience (first 3 in left column, remaining side-by-side across both columns)
             const expEl = document.getElementById('experienceContainer');
+            const sideExpEl = document.getElementById('sideBySideExperienceContainer');
             if (expEl && Array.isArray(SITE_DATA.experience)) {
-                expEl.innerHTML = SITE_DATA.experience.map(ex => `
+                const renderExpItem = ex => `
+                    <div class="exp-item" style="margin-bottom:0;">
+                        <div class="exp-header">
+                            <span class="exp-role">${ex.role}</span>
+                            <span class="exp-period">${ex.period}</span>
+                        </div>
+                        <div class="exp-org">${ex.organization}</div>
+                        <ul class="exp-bullets">
+                            ${(ex.bullets || []).map(b => `<li>${b}</li>`).join('')}
+                        </ul>
+                    </div>
+                `;
+                expEl.innerHTML = SITE_DATA.experience.slice(0, 3).map(ex => `
                     <div class="exp-item">
                         <div class="exp-header">
                             <span class="exp-role">${ex.role}</span>
@@ -1716,6 +1788,9 @@
                         </ul>
                     </div>
                 `).join('');
+                if (sideExpEl) {
+                    sideExpEl.innerHTML = SITE_DATA.experience.slice(3).map(renderExpItem).join('');
+                }
             }
 
             // Awards
@@ -1724,10 +1799,10 @@
                 awardsEl.innerHTML = SITE_DATA.awards.map(a => `<li>🏅 ${a}</li>`).join('');
             }
 
-            // Blog Preview (first 3 posts)
+            // Blog Preview (first 3 visible posts)
             const blogEl = document.getElementById('blogPreviewContainer');
             if (blogEl && Array.isArray(SITE_DATA.posts)) {
-                blogEl.innerHTML = SITE_DATA.posts.slice(0, 3).map(post => {
+                blogEl.innerHTML = SITE_DATA.posts.filter(post => !post.hide_from_main).slice(0, 3).map(post => {
                     const readerHref = `blog.html?post=${encodeURIComponent(post.slug || post.id)}`;
                     const hasExternal = post.external_url && post.external_url.startsWith('http');
                     return `
@@ -1823,6 +1898,12 @@
 
         document.getElementById('mobileToggle').addEventListener('click', () => {
             document.getElementById('navMenu').classList.toggle('active');
+        });
+
+        document.querySelectorAll('#navMenu a').forEach(link => {
+            link.addEventListener('click', () => {
+                document.getElementById('navMenu').classList.remove('active');
+            });
         });
 
         initPortfolio();
