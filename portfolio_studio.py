@@ -304,10 +304,8 @@ STUDIO_HTML = r"""<!DOCTYPE html>
             <datalist id="memeTagList">
               <option value="Physics">
               <option value="Quantum Computing">
-              <option value="Mathematics">
+              <option value="Mathematics & Computer Science">
               <option value="Philosophy & Epistemology">
-              <option value="Statistics">
-              <option value="Computer Science">
             </datalist>
           </div>
         </div>

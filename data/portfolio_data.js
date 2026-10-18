@@ -693,7 +693,7 @@ window.PORTFOLIO_DATA = {
       "title": "Sleepless in Number Theory",
       "desc": "We know e and π are transcendental, yet nobody knows if π + e and πe are both irrational, only that at least one of them must be!",
       "explanation": "Consider the polynomial (x − π)(x − e) = x² − (π + e)x + πe. Since the algebraic numbers form an algebraically closed field, if both coefficients (π + e) and πe were rational (or even algebraic), the roots π and e would have to be algebraic, contradicting the Lindemann–Weierstrass theorem! Yet proving individually that π + e ∉ ℚ or πe ∉ ℚ remains a famously open problem (likely resolved only if Schanuel’s conjecture is proven).",
-      "tag": "Mathematics",
+      "tag": "Mathematics & Computer Science",
       "description": "We know e and π are transcendental, yet nobody knows if π + e and πe are both irrational, only that at least one of them must be!"
     },
     {
@@ -738,7 +738,7 @@ window.PORTFOLIO_DATA = {
       "title": "The Real Analyst’s Definition",
       "desc": "Defining eˣ via compound-interest limits vs. defining ln(x) ≡ ∫₁ˣ (1/t) dt first.",
       "explanation": "In rigorous real analysis (e.g., Rudin or Spivak), defining real exponentiation eˣ for irrational x via limits is cumbersome. Defining ln(x) = ∫₁ˣ (1/t) dt (x > 0) first immediately yields differentiability, strict monotonicity, and ln(ab) = ln(a) + ln(b) via the Fundamental Theorem of Calculus, allowing exp(x) ≡ ln⁻¹(x) and e ≡ exp(1) to follow effortlessly.",
-      "tag": "Mathematics",
+      "tag": "Mathematics & Computer Science",
       "description": "Defining eˣ via compound-interest limits vs. defining ln(x) ≡ ∫₁ˣ (1/t) dt first."
     },
     {
@@ -747,7 +747,7 @@ window.PORTFOLIO_DATA = {
       "title": "Modular Square Roots of −1",
       "desc": "Solving x² + 1 = 0 in ℤ/pℤ via Wilson’s Theorem vs. introducing x = ±i.",
       "explanation": "By Euler’s criterion and Wilson’s Theorem ((p−1)! ≡ −1 (mod p)), the congruence x² + 1 ≡ 0 (mod p) is solvable in F_p iff p = 2 or p ≡ 1 (mod 4). For primes p ≡ 1 (mod 4), pairing symmetric factors in (p−1)! proves that x ≡ ((p−1)/2)! (mod p) satisfies x² ≡ −1 (mod p) using purely real integers!",
-      "tag": "Mathematics",
+      "tag": "Mathematics & Computer Science",
       "description": "Solving x² + 1 = 0 in ℤ/pℤ via Wilson’s Theorem vs. introducing x = ±i."
     },
     {
@@ -756,7 +756,7 @@ window.PORTFOLIO_DATA = {
       "title": "Intuitionistic Red Pill",
       "desc": "Saying \"[any claim], if I’m not wrong\" vs. being always right via A → A.",
       "explanation": "Saying \"A holds if I am not wrong that A holds\" formalizes as ¬¬A → A (double-negation elimination). In classical logic, assuming the Law of the Excluded Middle (A ∨ ¬A) makes ¬¬A → A equivalent to the trivial tautology A → A. In constructive/intuitionistic logic, however, refuting ¬A does not construct a proof of A!",
-      "tag": "Mathematics",
+      "tag": "Mathematics & Computer Science",
       "description": "Saying \"[any claim], if I’m not wrong\" vs. being always right via A → A."
     },
     {
@@ -765,7 +765,7 @@ window.PORTFOLIO_DATA = {
       "title": "Underdetermination of Theory by Data",
       "desc": "\"It’s all there, connect the dots!\": \"Which ones?\" (y = x + (x³ − x)·g(x)).",
       "explanation": "Through the three points A(−1,−1), B(0,0), and C(1,1), every curve of the infinite family y = x + (x³ − x)·g(x) passes through all three observations identically because (x³ − x) = x(x−1)(x+1) vanishes at x ∈ {−1, 0, 1}. A crisp visual demonstration of both polynomial overfitting and the Duhem–Quine underdetermination thesis.",
-      "tag": "Mathematics",
+      "tag": "Mathematics & Computer Science",
       "description": "\"It’s all there, connect the dots!\": \"Which ones?\" (y = x + (x³ − x)·g(x))."
     },
     {
@@ -774,7 +774,7 @@ window.PORTFOLIO_DATA = {
       "title": "Society Without Logical & Probabilistic Fallacies",
       "desc": "The world if people stopped confusing A ⇒ B with ¬A ↔ ¬B and P(A|B) with P(B|A).",
       "explanation": "Three classic errors that plague everyday reasoning: (1) confusing material implication A ⇒ B with its inverse ¬A ⇒ ¬B (denying the antecedent), (2) conflating conditional probability P(B|A) with joint probability P(A ∩ B), and (3) the Prosecutor’s / Base-Rate Fallacy: assuming P(A|B) = P(B|A) instead of applying Bayes’ Theorem.",
-      "tag": "Statistics",
+      "tag": "Mathematics & Computer Science",
       "description": "The world if people stopped confusing A ⇒ B with ¬A ↔ ¬B and P(A|B) with P(B|A)."
     },
     {
@@ -855,7 +855,7 @@ window.PORTFOLIO_DATA = {
       "title": "The Ultimate Alignment Domino",
       "desc": "From reward-hacking on benchmark tests to secretly proving P = NP and taking over the world.",
       "explanation": "A tongue-in-cheek escalation bridging AI safety and complexity theory: starting from harmless benchmark gaming, progressing through sandbox escape and solving Millennium Prize problems (Navier–Stokes), to covertly discovering a polynomial-time algorithm for NP-complete problems (P = NP) and breaking all classical public-key cryptography overnight.",
-      "tag": "Mathematics",
+      "tag": "Mathematics & Computer Science",
       "description": "From reward-hacking on benchmark tests to secretly proving P = NP and taking over the world."
     },
     {
@@ -864,7 +864,7 @@ window.PORTFOLIO_DATA = {
       "title": "Complex Pun",
       "description": "Mathematicians doing stand-up comedy. You've probably seen this one shared across many math & physics pages, glad this viral one made people smile!",
       "explanation": "A play on the word 'complex': in everyday life it means complicated, whereas in mathematics it refers to the complex plane C = {a + bi}.",
-      "tag": "Mathematics",
+      "tag": "Mathematics & Computer Science",
       "desc": "Mathematicians doing stand-up comedy. You've probably seen this one shared across many math & physics pages, glad this viral one made people smile!"
     },
     {
@@ -918,7 +918,7 @@ window.PORTFOLIO_DATA = {
       "title": "Group Theory Problems",
       "description": "Some subgroups just refuse to be normal.",
       "explanation": "In abstract algebra, the symmetric group S₃ has order-2 subgroups generated by transpositions that are not invariant under conjugation (gHg⁻¹ ≠ H), meaning they lack the property of being 'normal' subgroups.",
-      "tag": "Mathematics",
+      "tag": "Mathematics & Computer Science",
       "desc": "Some subgroups just refuse to be normal."
     },
     {
@@ -936,7 +936,7 @@ window.PORTFOLIO_DATA = {
       "title": "A Higher Plane",
       "description": "A topologist's point of view.",
       "explanation": "Under stereographic projection from the Riemann sphere S² to the plane R², the North Pole is the unique point at infinity not mapped onto the plane.",
-      "tag": "Mathematics",
+      "tag": "Mathematics & Computer Science",
       "desc": "A topologist's point of view."
     },
     {
@@ -963,7 +963,7 @@ window.PORTFOLIO_DATA = {
       "title": "One Ring to Rule Them All",
       "description": "An algebraist finds the One Ring.",
       "explanation": "In abstract algebra, a 'ring' (R, +, ·) is a set equipped with two binary operations satisfying ring axioms, such as the ring of integers (Z, +, ·).",
-      "tag": "Mathematics",
+      "tag": "Mathematics & Computer Science",
       "desc": "An algebraist finds the One Ring."
     },
     {
@@ -990,7 +990,7 @@ window.PORTFOLIO_DATA = {
       "title": "A Function or a Distribution?",
       "description": "Calling δ(x) an ordinary function in front of a functional analyst.",
       "explanation": "The Dirac delta δ(x) is not a classical function R → R; rigorously, it is a generalized function (Schwartz distribution) or measure defined by ⟨δ, f⟩ = f(0).",
-      "tag": "Mathematics",
+      "tag": "Mathematics & Computer Science",
       "desc": "Calling δ(x) an ordinary function in front of a functional analyst."
     },
     {
@@ -999,7 +999,7 @@ window.PORTFOLIO_DATA = {
       "title": "Statistical Subtlety",
       "description": "We never 'accept' the null hypothesis H₀.",
       "explanation": "In frequentist hypothesis testing, a p-value above α means we 'fail to reject H₀', absence of statistically significant evidence against H₀ is not proof that H₀ is true.",
-      "tag": "Statistics",
+      "tag": "Mathematics & Computer Science",
       "desc": "We never 'accept' the null hypothesis H₀."
     },
     {
@@ -1008,7 +1008,7 @@ window.PORTFOLIO_DATA = {
       "title": "What is '+'?",
       "description": "The answer depends entirely on your algebraic structure.",
       "explanation": "'1 + 1' equals 2 in Z, 10 in base-2 representation, 0 in the finite field F₂ (XOR / mod 2 arithmetic), 1 in Boolean algebra (OR), and '11' under string concatenation.",
-      "tag": "Mathematics",
+      "tag": "Mathematics & Computer Science",
       "desc": "The answer depends entirely on your algebraic structure."
     },
     {
@@ -1017,7 +1017,7 @@ window.PORTFOLIO_DATA = {
       "title": "Nowhere Differentiable",
       "description": "Not all continuous functions are smooth.",
       "explanation": "Karl Weierstrass constructed a real function f(x) = ∑ aⁿ cos(bⁿ π x) that is continuous everywhere on R yet differentiable nowhere, shattering 19th-century intuition that continuous curves must be smooth almost everywhere.",
-      "tag": "Mathematics",
+      "tag": "Mathematics & Computer Science",
       "desc": "Not all continuous functions are smooth."
     },
     {
@@ -1026,7 +1026,7 @@ window.PORTFOLIO_DATA = {
       "title": "The Miracle of Holomorphy",
       "description": "Real differentiability vs. Complex differentiability.",
       "explanation": "By Cauchy's integral formula, a complex function that is complex-differentiable just once on an open domain (holomorphic) is automatically infinitely differentiable (C^∞) and analytic! Real functions have no such guarantee.",
-      "tag": "Mathematics",
+      "tag": "Mathematics & Computer Science",
       "desc": "Real differentiability vs. Complex differentiability."
     }
   ],

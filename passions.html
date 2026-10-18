@@ -856,7 +856,7 @@
 
         function buildFilterTabs() {
             const memes = SITE_DATA.memes || [];
-            const preferredOrder = ['Physics', 'Quantum Computing', 'Mathematics', 'Philosophy & Epistemology', 'Statistics', 'Computer Science'];
+            const preferredOrder = ['Physics', 'Quantum Computing', 'Mathematics & Computer Science', 'Philosophy & Epistemology'];
             const rawTags = Array.from(new Set(memes.map(m => m.tag).filter(Boolean)));
             const tags = rawTags.sort((a, b) => {
                 const ia = preferredOrder.indexOf(a);
