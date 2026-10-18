@@ -1,0 +1,780 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Research Blog, Essays & Science Writing | Syed Emad Uddin Shubha</title>
+    <meta name="description" content="Technical expositions, philosophical essays on Substack, quantum information notes, and Bengali science articles by Syed Emad Uddin Shubha.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <script>
+        window.MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']],
+                displayMath: [['$$', '$$'], ['\\[', '\\]']]
+            },
+            svg: { fontCache: 'global' }
+        };
+    </script>
+    <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+    <style>
+        :root {
+            --navy-950: #0a1120;
+            --navy-900: #0f172a;
+            --navy-800: #1e293b;
+            --navy-700: #334155;
+            --academic-blue: #1d4ed8;
+            --academic-blue-light: #eff6ff;
+            --academic-blue-dark: #1e3a8a;
+            --lsu-purple: #461D7C;
+            --lsu-gold: #d97706;
+            --lsu-gold-bg: #fffbeb;
+            --text-primary: #0f172a;
+            --text-secondary: #475569;
+            --text-muted: #64748b;
+            --bg-page: #f8fafc;
+            --bg-surface: #ffffff;
+            --border-light: #e2e8f0;
+            --border-medium: #cbd5e1;
+            --shadow-sm: 0 1px 3px rgba(15, 23, 42, 0.06);
+            --shadow-md: 0 4px 12px -2px rgba(15, 23, 42, 0.08);
+            --shadow-lg: 0 12px 28px -6px rgba(15, 23, 42, 0.12);
+            --radius-md: 10px;
+            --radius-lg: 14px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            color: var(--text-primary);
+            background-color: var(--bg-page);
+            line-height: 1.65;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        h1, h2, h3, h4 {
+            font-family: 'Crimson Pro', Georgia, serif;
+            color: var(--navy-900);
+            letter-spacing: -0.01em;
+        }
+
+        a {
+            color: var(--academic-blue);
+            text-decoration: none;
+            transition: color 0.2s ease;
+        }
+
+        a:hover {
+            color: var(--academic-blue-dark);
+        }
+
+        /* Navbar */
+        .navbar {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background: rgba(255, 255, 255, 0.96);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--border-light);
+            box-shadow: var(--shadow-sm);
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0.85rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav-brand {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            color: var(--navy-900);
+        }
+
+        .brand-monogram {
+            width: 36px;
+            height: 36px;
+            border-radius: 8px;
+            background: linear-gradient(135deg, var(--navy-900), var(--lsu-purple));
+            color: #fff;
+            font-family: 'Crimson Pro', serif;
+            font-weight: 700;
+            font-size: 1.15rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .brand-text {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .brand-name {
+            font-family: 'Crimson Pro', Georgia, serif;
+            font-size: 1.2rem;
+            font-weight: 700;
+            line-height: 1.1;
+            color: var(--navy-900);
+        }
+
+        .brand-sub {
+            font-size: 0.72rem;
+            color: var(--text-muted);
+            font-weight: 500;
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 0.25rem;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .nav-menu a {
+            color: var(--text-secondary);
+            font-size: 0.88rem;
+            font-weight: 500;
+            padding: 0.45rem 0.75rem;
+            border-radius: 6px;
+        }
+
+        .nav-menu a:hover, .nav-menu a.active {
+            color: var(--navy-900);
+            background: var(--academic-blue-light);
+        }
+
+        .nav-pill-btn {
+            background: var(--navy-900) !important;
+            color: #ffffff !important;
+            padding: 0.45rem 0.9rem !important;
+            border-radius: 6px;
+            font-weight: 600 !important;
+        }
+
+        /* Header Banner */
+        .page-hero {
+            background: linear-gradient(135deg, #0a1120 0%, #172554 55%, #2e1065 100%);
+            color: #f8fafc;
+            padding: 3.75rem 2rem 3.25rem;
+            border-bottom: 4px solid #f59e0b;
+        }
+
+        .page-hero-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            gap: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .page-eyebrow {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.78rem;
+            text-transform: uppercase;
+            letter-spacing: 0.09em;
+            color: #fcd34d;
+            margin-bottom: 0.5rem;
+        }
+
+        .page-hero h1 {
+            color: #ffffff;
+            font-size: 2.75rem;
+            line-height: 1.12;
+            margin-bottom: 0.65rem;
+        }
+
+        .page-hero p {
+            color: #cbd5e1;
+            max-width: 680px;
+            font-size: 1.02rem;
+        }
+
+        .platform-links {
+            display: flex;
+            gap: 0.75rem;
+            flex-wrap: wrap;
+        }
+
+        .platform-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.45rem;
+            padding: 0.6rem 1.1rem;
+            border-radius: 8px;
+            font-size: 0.86rem;
+            font-weight: 600;
+            background: rgba(255, 255, 255, 0.1);
+            color: #ffffff;
+            border: 1px solid rgba(255, 255, 255, 0.22);
+            transition: all 0.2s ease;
+        }
+
+        .platform-btn:hover {
+            background: rgba(255, 255, 255, 0.2);
+            color: #ffffff;
+            transform: translateY(-1px);
+        }
+
+        .platform-btn.gold {
+            background: #f59e0b;
+            color: #0f172a;
+            border-color: #f59e0b;
+        }
+
+        .platform-btn.gold:hover {
+            background: #fbbf24;
+            color: #0f172a;
+        }
+
+        /* Main Container */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 3rem 2rem 5rem;
+        }
+
+        /* Controls Bar */
+        .controls-bar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 2.25rem;
+            flex-wrap: wrap;
+        }
+
+        .filter-tabs {
+            display: flex;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+        }
+
+        .filter-btn {
+            padding: 0.48rem 0.95rem;
+            border-radius: 6px;
+            border: 1px solid var(--border-medium);
+            background: var(--bg-surface);
+            color: var(--text-secondary);
+            font-size: 0.85rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .filter-btn:hover {
+            border-color: var(--academic-blue);
+            color: var(--academic-blue);
+        }
+
+        .filter-btn.active {
+            background: var(--navy-900);
+            color: #ffffff;
+            border-color: var(--navy-900);
+        }
+
+        .search-box {
+            padding: 0.52rem 0.95rem;
+            border: 1px solid var(--border-medium);
+            border-radius: 6px;
+            font-size: 0.88rem;
+            min-width: 260px;
+            background: var(--bg-surface);
+        }
+
+        /* Posts Grid */
+        .posts-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 1.75rem;
+        }
+
+        .post-card {
+            background: var(--bg-surface);
+            border: 1px solid var(--border-light);
+            border-radius: var(--radius-md);
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            box-shadow: var(--shadow-sm);
+            transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+        }
+
+        .post-card:hover {
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-md);
+            border-color: var(--border-medium);
+        }
+
+        .post-cover {
+            width: 100%;
+            height: 195px;
+            object-fit: cover;
+            border-bottom: 1px solid var(--border-light);
+            background: #0f172a;
+        }
+
+        .post-body {
+            padding: 1.5rem;
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+        }
+
+        .post-meta {
+            display: flex;
+            align-items: center;
+            gap: 0.55rem;
+            font-size: 0.77rem;
+            color: var(--text-muted);
+            margin-bottom: 0.65rem;
+            flex-wrap: wrap;
+        }
+
+        .post-cat {
+            background: var(--academic-blue-light);
+            color: var(--academic-blue-dark);
+            padding: 0.15rem 0.55rem;
+            border-radius: 4px;
+            font-weight: 600;
+        }
+
+        .post-card h2 {
+            font-size: 1.32rem;
+            line-height: 1.32;
+            margin-bottom: 0.65rem;
+            color: var(--navy-900);
+        }
+
+        .post-card h2 a {
+            color: inherit;
+        }
+
+        .post-card h2 a:hover {
+            color: var(--academic-blue);
+        }
+
+        .post-summary {
+            font-size: 0.92rem;
+            color: var(--text-secondary);
+            margin-bottom: 1.25rem;
+            flex: 1;
+        }
+
+        .post-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.35rem;
+            margin-bottom: 1.1rem;
+        }
+
+        .tag-pill {
+            font-size: 0.72rem;
+            padding: 0.15rem 0.5rem;
+            background: var(--bg-page);
+            border: 1px solid var(--border-light);
+            border-radius: 4px;
+            color: var(--text-muted);
+            font-family: 'JetBrains Mono', monospace;
+        }
+
+        .post-footer {
+            padding-top: 0.9rem;
+            border-top: 1px solid var(--border-light);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 0.75rem;
+            font-size: 0.85rem;
+            font-weight: 600;
+        }
+
+        /* Reader View */
+        .reader-view {
+            display: none;
+            max-width: 840px;
+            margin: 0 auto;
+            background: var(--bg-surface);
+            border: 1px solid var(--border-light);
+            border-radius: var(--radius-lg);
+            padding: 2.75rem 3rem;
+            box-shadow: var(--shadow-md);
+        }
+
+        .reader-view.active {
+            display: block;
+        }
+
+        .reader-back {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            font-size: 0.88rem;
+            font-weight: 600;
+            color: var(--text-secondary);
+            margin-bottom: 1.5rem;
+            padding: 0.4rem 0.8rem;
+            border-radius: 6px;
+            background: var(--bg-page);
+            border: 1px solid var(--border-light);
+            cursor: pointer;
+        }
+
+        .reader-back:hover {
+            color: var(--navy-900);
+            border-color: var(--border-medium);
+        }
+
+        .reader-title {
+            font-size: 2.35rem;
+            line-height: 1.18;
+            margin-bottom: 1rem;
+            color: var(--navy-900);
+        }
+
+        .reader-cover {
+            width: 100%;
+            max-height: 440px;
+            object-fit: contain;
+            background: #0f172a;
+            border-radius: 10px;
+            margin: 1.25rem 0 1.75rem;
+            border: 1px solid var(--border-light);
+        }
+
+        .reader-content {
+            font-size: 1.05rem;
+            line-height: 1.8;
+            color: #1e293b;
+        }
+
+        .reader-content h2, .reader-content h3 {
+            margin-top: 1.85rem;
+            margin-bottom: 0.75rem;
+            color: var(--navy-900);
+        }
+
+        .reader-content p {
+            margin-bottom: 1.15rem;
+        }
+
+        .reader-content ul, .reader-content ol {
+            margin: 0.85rem 0 1.25rem 1.5rem;
+        }
+
+        .reader-content li {
+            margin-bottom: 0.45rem;
+        }
+
+        .reader-content blockquote {
+            border-left: 4px solid var(--academic-blue);
+            background: var(--academic-blue-light);
+            padding: 1rem 1.25rem;
+            border-radius: 0 8px 8px 0;
+            margin: 1.25rem 0;
+            font-style: italic;
+            color: var(--navy-800);
+        }
+
+        .reader-content code {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.88em;
+            background: #f1f5f9;
+            padding: 0.15rem 0.4rem;
+            border-radius: 4px;
+        }
+
+        .reader-external-box {
+            margin-top: 2rem;
+            padding: 1.25rem 1.5rem;
+            background: var(--bg-page);
+            border: 1px solid var(--border-medium);
+            border-radius: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        @media (max-width: 768px) {
+            .reader-view {
+                padding: 1.75rem 1.35rem;
+            }
+            .reader-title {
+                font-size: 1.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-brand">
+                <div class="brand-monogram">S</div>
+                <div class="brand-text">
+                    <span class="brand-name">Syed Emad Uddin Shubha</span>
+                    <span class="brand-sub">LSU Computer Science • Quantum Information</span>
+                </div>
+            </a>
+            <ul class="nav-menu">
+                <li><a href="index.html">← Main Portfolio</a></li>
+                <li><a href="index.html#publications">Publications</a></li>
+                <li><a href="blog.html" class="active">✍️ Blog & Essays</a></li>
+                <li><a href="QSVT.html">⚛️ QSVT Lab</a></li>
+                <li><a href="passions.html" class="nav-pill-btn">🎭 Quantum Memeology</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="page-hero">
+        <div class="page-hero-inner">
+            <div>
+                <div class="page-eyebrow">Scholarly Expositions • Substack • Bigganblog</div>
+                <h1>Research Blog, Essays & Science Writing</h1>
+                <p>
+                    Technical tutorials on quantum algorithms and open quantum systems, philosophical essays on epistemology and logic on Substack, and popular mathematics & physics articles in Bengali on Bigganblog.
+                </p>
+            </div>
+            <div class="platform-links">
+                <a href="https://syedshubha.substack.com" target="_blank" class="platform-btn gold">📰 Subscribe on Substack ↗</a>
+                <a href="https://bigganblog.org/author/syed-shubha/" target="_blank" class="platform-btn">✍️ Bigganblog Author Page (9 Articles) ↗</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <!-- Single Post Reader View -->
+        <article class="reader-view" id="readerView">
+            <button class="reader-back" onclick="closeReader()">← Back to All Articles</button>
+            <div class="post-meta" id="readerMeta"></div>
+            <h1 class="reader-title" id="readerTitle"></h1>
+            <div class="post-tags" id="readerTags"></div>
+            <img id="readerCover" class="reader-cover" style="display:none;" alt="">
+            <div class="reader-content" id="readerContent"></div>
+            <div class="reader-external-box" id="readerExternalBox" style="display:none;">
+                <div>
+                    <strong style="color:var(--navy-900); display:block;">Original Publication Link</strong>
+                    <span style="font-size:0.86rem; color:var(--text-secondary);" id="readerExternalLabel">Read and comment on the original platform.</span>
+                </div>
+                <a id="readerExternalBtn" href="#" target="_blank" class="platform-btn gold">Open Original Article ↗</a>
+            </div>
+        </article>
+
+        <!-- All Posts Listing View -->
+        <div id="listingView">
+            <div class="controls-bar">
+                <div class="filter-tabs" id="catTabs">
+                    <button class="filter-btn active" data-cat="all">All Articles</button>
+                </div>
+                <input type="search" id="searchInput" class="search-box" placeholder="Search articles by title, topic, tag...">
+            </div>
+            <div class="posts-grid" id="postsGrid"></div>
+        </div>
+    </main>
+
+    <script src="data/portfolio_data.js"></script>
+    <script>
+        let SITE_DATA = window.PORTFOLIO_DATA || { posts: [] };
+        let activeCategory = 'all';
+        let searchQuery = '';
+
+        function renderMarkdown(md) {
+            if (!md) return '';
+            let html = md
+                .replace(/^### (.*$)/gim, '<h3>$1</h3>')
+                .replace(/^## (.*$)/gim, '<h2>$1</h2>')
+                .replace(/^# (.*$)/gim, '<h2>$1</h2>')
+                .replace(/^> (.*$)/gim, '<blockquote>$1</blockquote>')
+                .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
+                .replace(/\*(.*?)\*/g, '<em>$1</em>')
+                .replace(/`([^`]+)`/g, '<code>$1</code>')
+                .replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2" target="_blank">$1</a>');
+
+            const blocks = html.split(/\n\s*\n/);
+            return blocks.map(b => {
+                b = b.trim();
+                if (!b) return '';
+                if (b.startsWith('<h') || b.startsWith('<blockquote')) return b;
+                if (b.split('\n').every(line => line.trim().startsWith('- '))) {
+                    const items = b.split('\n').map(l => `<li>${l.trim().substring(2)}</li>`).join('');
+                    return `<ul>${items}</ul>`;
+                }
+                if (b.split('\n').every(line => /^\d+\.\s/.test(line.trim()))) {
+                    const items = b.split('\n').map(l => `<li>${l.trim().replace(/^\d+\.\s/, '')}</li>`).join('');
+                    return `<ol>${items}</ol>`;
+                }
+                return `<p>${b.replace(/\n/g, '<br>')}</p>`;
+            }).join('\n');
+        }
+
+        async function initBlog() {
+            try {
+                const res = await fetch('data/portfolio_data.json?t=' + Date.now());
+                if (res.ok) SITE_DATA = await res.json();
+            } catch (e) {}
+
+            buildCategoryTabs();
+            checkRoute();
+            window.addEventListener('popstate', checkRoute);
+        }
+
+        function buildCategoryTabs() {
+            const posts = SITE_DATA.posts || [];
+            const cats = Array.from(new Set(posts.map(p => p.category).filter(Boolean)));
+            const tabsEl = document.getElementById('catTabs');
+            tabsEl.innerHTML = `<button class="filter-btn active" data-cat="all">All Articles (${posts.length})</button>` +
+                cats.map(c => {
+                    const count = posts.filter(p => p.category === c).length;
+                    return `<button class="filter-btn" data-cat="${c}">${c} (${count})</button>`;
+                }).join('');
+
+            tabsEl.querySelectorAll('.filter-btn').forEach(btn => {
+                btn.addEventListener('click', () => {
+                    tabsEl.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+                    btn.classList.add('active');
+                    activeCategory = btn.getAttribute('data-cat');
+                    renderPosts();
+                });
+            });
+        }
+
+        function renderPosts() {
+            const posts = (SITE_DATA.posts || []).filter(p => {
+                if (activeCategory !== 'all' && p.category !== activeCategory) return false;
+                if (searchQuery) {
+                    const hay = `${p.title} ${p.summary} ${p.category} ${(p.tags || []).join(' ')}`.toLowerCase();
+                    if (!hay.includes(searchQuery.toLowerCase())) return false;
+                }
+                return true;
+            });
+
+            const grid = document.getElementById('postsGrid');
+            grid.innerHTML = posts.map(p => {
+                const slug = p.slug || p.id;
+                const hasExt = p.external_url && p.external_url.startsWith('http');
+                const extLabel = hasExt
+                    ? (p.external_url.includes('substack') ? 'Substack ↗' : (p.external_url.includes('bigganblog') ? 'Bigganblog ↗' : 'External ↗'))
+                    : (p.external_url ? 'Interactive Lab ↗' : '');
+
+                return `
+                    <article class="post-card">
+                        ${p.cover_image ? `<a href="?post=${encodeURIComponent(slug)}" onclick="openPost('${slug}', event)"><img src="${p.cover_image}" alt="${p.title}" class="post-cover"></a>` : ''}
+                        <div class="post-body">
+                            <div class="post-meta">
+                                <span class="post-cat">${p.category || 'Article'}</span>
+                                <span>•</span>
+                                <span>${p.date || ''}</span>
+                                ${p.read_time ? `<span>• ${p.read_time}</span>` : ''}
+                            </div>
+                            <h2><a href="?post=${encodeURIComponent(slug)}" onclick="openPost('${slug}', event)">${p.title}</a></h2>
+                            <p class="post-summary">${p.summary || ''}</p>
+                            <div class="post-tags">
+                                ${(p.tags || []).map(t => `<span class="tag-pill">${t}</span>`).join('')}
+                            </div>
+                            <div class="post-footer">
+                                <a href="?post=${encodeURIComponent(slug)}" onclick="openPost('${slug}', event)">Read Article →</a>
+                                ${p.external_url ? `<a href="${p.external_url}" ${hasExt ? 'target="_blank"' : ''} style="color:var(--text-secondary);">${extLabel}</a>` : ''}
+                            </div>
+                        </div>
+                    </article>
+                `;
+            }).join('');
+
+            if (window.MathJax && window.MathJax.typesetPromise) {
+                window.MathJax.typesetPromise([grid]);
+            }
+        }
+
+        function openPost(slug, evt) {
+            if (evt) evt.preventDefault();
+            history.pushState({ post: slug }, '', `?post=${encodeURIComponent(slug)}`);
+            checkRoute();
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        function closeReader() {
+            history.pushState({}, '', 'blog.html');
+            checkRoute();
+        }
+
+        function checkRoute() {
+            const params = new URLSearchParams(window.location.search);
+            const slug = params.get('post');
+            const posts = SITE_DATA.posts || [];
+            const found = slug ? posts.find(p => (p.slug || p.id) === slug) : null;
+
+            const readerEl = document.getElementById('readerView');
+            const listingEl = document.getElementById('listingView');
+
+            if (found) {
+                listingEl.style.display = 'none';
+                readerEl.classList.add('active');
+                document.getElementById('readerMeta').innerHTML = `
+                    <span class="post-cat">${found.category || 'Article'}</span>
+                    <span>•</span>
+                    <span>${found.date || ''}</span>
+                    ${found.read_time ? `<span>• ${found.read_time}</span>` : ''}
+                `;
+                document.getElementById('readerTitle').textContent = found.title;
+                document.getElementById('readerTags').innerHTML = (found.tags || [])
+                    .map(t => `<span class="tag-pill">${t}</span>`).join('');
+
+                const coverEl = document.getElementById('readerCover');
+                if (found.cover_image) {
+                    coverEl.src = found.cover_image;
+                    coverEl.style.display = 'block';
+                } else {
+                    coverEl.style.display = 'none';
+                }
+
+                document.getElementById('readerContent').innerHTML = renderMarkdown(found.content || found.summary);
+
+                const extBox = document.getElementById('readerExternalBox');
+                const extBtn = document.getElementById('readerExternalBtn');
+                if (found.external_url) {
+                    extBox.style.display = 'flex';
+                    extBtn.href = found.external_url;
+                    if (found.external_url.includes('substack.com')) {
+                        extBtn.textContent = '📰 Read Original on Substack ↗';
+                    } else if (found.external_url.includes('bigganblog.org')) {
+                        extBtn.textContent = '✍️ Read Full Bengali Article on Bigganblog ↗';
+                    } else {
+                        extBtn.textContent = '⚛️ Open Interactive Simulator ↗';
+                    }
+                } else {
+                    extBox.style.display = 'none';
+                }
+
+                if (window.MathJax && window.MathJax.typesetPromise) {
+                    window.MathJax.typesetPromise([readerEl]);
+                }
+            } else {
+                readerEl.classList.remove('active');
+                listingEl.style.display = 'block';
+                renderPosts();
+            }
+        }
+
+        document.getElementById('searchInput').addEventListener('input', e => {
+            searchQuery = e.target.value;
+            renderPosts();
+        });
+
+        initBlog();
+    </script>
+</body>
+</html>

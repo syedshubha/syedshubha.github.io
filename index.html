@@ -3,62 +3,91 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Syed Emad Uddin Shubha - Quantum Information Researcher</title>
-    <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:wght@400;600;700&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+    <title>Syed Emad Uddin Shubha | Quantum Information & Hardware Security Researcher</title>
+    <meta name="description" content="Academic portfolio of Syed Emad Uddin Shubha, Computer Science Doctoral Researcher at Louisiana State University working on Quantum Hardware Security, Quantum Error Correction, Superconducting Qubits, and Quantum Communication.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 
     <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-E8924GJFV6"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-E8924GJFV6"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-E8924GJFV6');
+    </script>
 
-  gtag('config', 'G-E8924GJFV6');
-</script>
-    
     <style>
-    * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-    }
-
-    .work-card-link {
-    text-decoration: none;
-    color: inherit;
-}
-
         :root {
-            --academic-blue: #1e40af;
-            --academic-purple: #6b21a8;
-            --academic-teal: #0891b2;
-            --gold-accent: #ca8a04;
-            --dark-text: #111827;
-            --light-text: #6b7280;
-            --background: #fafafa;
-            --white: #ffffff;
-            --border: #e5e7eb;
-            --success: #059669;
-            --warning: #d97706;
+            --navy-950: #0a1120;
+            --navy-900: #0f172a;
+            --navy-800: #1e293b;
+            --navy-700: #334155;
+            --academic-blue: #1d4ed8;
+            --academic-blue-dark: #1e3a8a;
+            --academic-blue-light: #eff6ff;
+            --lsu-purple: #461d7c;
+            --gold-accent: #b45309;
+            --gold-soft: #fef3c7;
+            --teal-accent: #0f766e;
+            --teal-soft: #f0fdfa;
+            --text-primary: #0f172a;
+            --text-secondary: #475569;
+            --text-muted: #64748b;
+            --bg-page: #f8fafc;
+            --bg-surface: #ffffff;
+            --bg-subtle: #f1f5f9;
+            --border-light: #e2e8f0;
+            --border-medium: #cbd5e1;
+            --shadow-sm: 0 1px 3px rgba(15, 23, 42, 0.06), 0 1px 2px rgba(15, 23, 42, 0.04);
+            --shadow-md: 0 4px 12px -2px rgba(15, 23, 42, 0.08), 0 2px 6px -1px rgba(15, 23, 42, 0.04);
+            --shadow-lg: 0 12px 28px -4px rgba(15, 23, 42, 0.12), 0 4px 10px -2px rgba(15, 23, 42, 0.05);
+            --radius-sm: 6px;
+            --radius-md: 10px;
+            --radius-lg: 14px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: 84px;
         }
 
         body {
-            font-family: 'Inter', sans-serif;
-            line-height: 1.6;
-            color: var(--dark-text);
-            background: var(--background);
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            line-height: 1.65;
+            color: var(--text-primary);
+            background: var(--bg-page);
+            -webkit-font-smoothing: antialiased;
         }
 
-        /* Typography for academic feel */
-        h1, h2, h3 {
-            font-family: 'Crimson Text', serif;
-            font-weight: 700;
+        h1, h2, h3, .serif-heading {
+            font-family: 'Crimson Pro', Georgia, serif;
+            letter-spacing: -0.01em;
         }
 
-        /* Navigation */
+        a {
+            color: var(--academic-blue);
+            text-decoration: none;
+            transition: color 0.2s ease;
+        }
+
+        a:hover {
+            color: var(--academic-blue-dark);
+        }
+
+        /* Top Navigation */
         .navbar {
-            background: var(--white);
-            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+            background: rgba(255, 255, 255, 0.94);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--border-light);
             position: fixed;
             width: 100%;
             top: 0;
@@ -66,51 +95,69 @@
         }
 
         .nav-container {
-            max-width: 1200px;
+            max-width: 1220px;
             margin: 0 auto;
-            padding: 1rem 2rem;
+            padding: 0.85rem 2rem;
             display: flex;
             justify-content: space-between;
             align-items: center;
+            gap: 1.5rem;
         }
 
         .nav-brand {
-            font-family: 'Crimson Text', serif;
-            font-size: 1.5rem;
-            font-weight: 700;
-            color: var(--academic-blue);
+            display: flex;
+            flex-direction: column;
             text-decoration: none;
+        }
+
+        .nav-brand-name {
+            font-family: 'Crimson Pro', Georgia, serif;
+            font-size: 1.35rem;
+            font-weight: 700;
+            color: var(--navy-900);
+            line-height: 1.1;
+        }
+
+        .nav-brand-sub {
+            font-size: 0.72rem;
+            font-weight: 500;
+            color: var(--text-muted);
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+            margin-top: 2px;
         }
 
         .nav-menu {
             display: flex;
-            gap: 2.5rem;
+            gap: 1.5rem;
             list-style: none;
             align-items: center;
         }
 
         .nav-menu a {
-            color: var(--dark-text);
+            color: var(--text-secondary);
             text-decoration: none;
             font-weight: 500;
-            font-size: 0.95rem;
-            transition: color 0.3s ease;
+            font-size: 0.9rem;
+            padding: 0.35rem 0.15rem;
             position: relative;
+            transition: color 0.2s ease;
         }
 
-        .nav-menu a:hover {
-            color: var(--academic-blue);
+        .nav-menu a:hover,
+        .nav-menu a.active {
+            color: var(--navy-900);
         }
 
         .nav-menu a::after {
             content: '';
             position: absolute;
-            bottom: -4px;
+            bottom: 0;
             left: 0;
             width: 0;
             height: 2px;
             background: var(--academic-blue);
-            transition: width 0.3s ease;
+            transition: width 0.25s ease;
         }
 
         .nav-menu a:hover::after,
@@ -118,489 +165,1065 @@
             width: 100%;
         }
 
-        .passions-link {
-            background: linear-gradient(135deg, var(--academic-purple), var(--academic-teal));
-            color: white !important;
-            padding: 0.5rem 1.2rem;
-            border-radius: 25px;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        .nav-pill-btn {
+            background: var(--navy-900);
+            color: #ffffff !important;
+            padding: 0.45rem 1rem !important;
+            border-radius: 6px;
+            font-size: 0.85rem !important;
+            font-weight: 500 !important;
+            transition: background 0.2s ease, transform 0.2s ease !important;
         }
 
-        .passions-link:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 4px 12px rgba(107, 33, 168, 0.3);
+        .nav-pill-btn::after {
+            display: none !important;
+        }
+
+        .nav-pill-btn:hover {
+            background: var(--academic-blue) !important;
+            transform: translateY(-1px);
+        }
+
+        .nav-pill-outline {
+            border: 1px solid var(--border-medium);
+            background: var(--bg-surface);
+            color: var(--navy-800) !important;
+            padding: 0.4rem 0.9rem !important;
+            border-radius: 6px;
+            font-size: 0.85rem !important;
+        }
+
+        .nav-pill-outline::after {
+            display: none !important;
+        }
+
+        .nav-pill-outline:hover {
+            border-color: var(--academic-blue);
+            color: var(--academic-blue) !important;
+            background: var(--academic-blue-light);
         }
 
         .mobile-toggle {
             display: none;
             flex-direction: column;
-            gap: 4px;
+            gap: 5px;
             cursor: pointer;
+            background: none;
+            border: none;
+            padding: 4px;
         }
 
         .mobile-toggle span {
-            width: 25px;
+            width: 24px;
             height: 2px;
-            background: var(--dark-text);
-            transition: all 0.3s ease;
+            background: var(--navy-900);
+            border-radius: 2px;
         }
 
-        /* Hero Section */
+        /* Hero Section - Distinguished Scholarly Header */
         .hero {
-            margin-top: 70px;
-            padding: 5rem 2rem 4rem;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+            margin-top: 66px;
+            padding: 4.5rem 2rem 3.75rem;
+            background: linear-gradient(180deg, #0f172a 0%, #172554 100%);
+            color: #ffffff;
             position: relative;
             overflow: hidden;
+            border-bottom: 4px solid var(--gold-accent);
         }
 
         .hero::before {
             content: '';
             position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.133 7-7s-3.134-7-7-7-7 3.133-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.133 7-7s-3.134-7-7-7-7 3.133-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%23ffffff' fill-opacity='0.05' fill-rule='evenodd'/%3E%3C/svg%3E");
+            inset: 0;
+            background-image:
+                radial-gradient(rgba(255, 255, 255, 0.06) 1px, transparent 1px),
+                linear-gradient(to right, rgba(255, 255, 255, 0.025) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(255, 255, 255, 0.025) 1px, transparent 1px);
+            background-size: 24px 24px, 72px 72px, 72px 72px;
+            pointer-events: none;
         }
 
         .hero-container {
             max-width: 1200px;
             margin: 0 auto;
-            display: flex;
+            display: grid;
+            grid-template-columns: 1.6fr 1fr;
+            gap: 3.5rem;
             align-items: center;
-            gap: 4rem;
             position: relative;
             z-index: 1;
         }
 
-        .hero-text {
-            flex: 1;
-            color: white;
+        .institution-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.18);
+            color: #e2e8f0;
+            padding: 0.35rem 0.85rem;
+            border-radius: 999px;
+            font-size: 0.82rem;
+            font-weight: 500;
+            letter-spacing: 0.02em;
+            margin-bottom: 1.15rem;
         }
 
-        .hero-image {
-            flex: 0 0 280px;
-        }
-
-        .profile-image {
-            width: 280px;
-            height: 280px;
-            border-radius: 20px;
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
-            border: 4px solid rgba(255, 255, 255, 0.2);
-            object-fit: cover;
-            animation: float 6s ease-in-out infinite;
-        }
-
-        @keyframes float {
-            0%, 100% { transform: translateY(0px); }
-            50% { transform: translateY(-10px); }
+        .institution-badge .dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: #fbbf24;
         }
 
         .hero h1 {
-            font-size: 3.5rem;
-            margin-bottom: 0.5rem;
-            line-height: 1.2;
-            animation: fadeInUp 0.8s ease;
+            font-size: 3.25rem;
+            font-weight: 700;
+            line-height: 1.12;
+            margin-bottom: 0.6rem;
+            color: #ffffff;
         }
 
-        .hero .tagline {
-            font-size: 1.5rem;
-            font-weight: 300;
+        .hero-role {
+            font-size: 1.3rem;
+            font-weight: 400;
+            color: #93c5fd;
+            margin-bottom: 0.65rem;
+            font-family: 'Crimson Pro', Georgia, serif;
+        }
+
+        .hero-education {
+            font-size: 0.92rem;
+            color: #cbd5e1;
+            margin-bottom: 1.25rem;
+            font-family: 'JetBrains Mono', monospace;
+        }
+
+        .hero-bio {
+            font-size: 1.02rem;
+            color: #e2e8f0;
+            line-height: 1.7;
             margin-bottom: 1.5rem;
-            opacity: 0.95;
-            animation: fadeInUp 0.8s ease 0.2s both;
+            max-width: 680px;
         }
 
-        .hero .affiliation {
-            font-size: 1.1rem;
-            margin-bottom: 2rem;
-            opacity: 0.9;
-            animation: fadeInUp 0.8s ease 0.3s both;
-        }
-
-        .hero-buttons {
+        .interest-tags {
             display: flex;
-            gap: 1rem;
-            animation: fadeInUp 0.8s ease 0.4s both;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-bottom: 1.85rem;
+        }
+
+        .interest-tag {
+            background: rgba(30, 58, 138, 0.55);
+            border: 1px solid rgba(147, 197, 253, 0.28);
+            color: #dbeafe;
+            padding: 0.3rem 0.75rem;
+            border-radius: 6px;
+            font-size: 0.8rem;
+            font-weight: 500;
+        }
+
+        .hero-actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.85rem;
+            margin-bottom: 1.75rem;
         }
 
         .btn {
-            padding: 0.75rem 2rem;
-            border-radius: 30px;
-            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.7rem 1.35rem;
+            border-radius: 8px;
+            font-size: 0.92rem;
             font-weight: 600;
-            transition: all 0.3s ease;
-            display: inline-block;
-            text-align: center;
+            text-decoration: none;
+            transition: all 0.2s ease;
+            cursor: pointer;
+            border: 1px solid transparent;
         }
 
-        .btn-primary {
-            background: white;
-            color: var(--academic-purple);
-            box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1);
+        .btn-gold {
+            background: #f59e0b;
+            color: #0f172a;
         }
 
-        .btn-primary:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+        .btn-gold:hover {
+            background: #fbbf24;
+            color: #0f172a;
+            transform: translateY(-1px);
+            box-shadow: 0 6px 16px rgba(245, 158, 11, 0.25);
         }
 
-        .btn-outline {
-            background: transparent;
-            color: white;
-            border: 2px solid white;
+        .btn-light {
+            background: rgba(255, 255, 255, 0.12);
+            color: #ffffff;
+            border-color: rgba(255, 255, 255, 0.25);
         }
 
-        .btn-outline:hover {
-            background: white;
-            color: var(--academic-purple);
+        .btn-light:hover {
+            background: rgba(255, 255, 255, 0.2);
+            color: #ffffff;
+            transform: translateY(-1px);
         }
 
-        /* Main Content Container */
-        .main-content {
+        .hero-QuickLinks {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.25rem;
+            align-items: center;
+            padding-top: 1.1rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.12);
+            font-size: 0.86rem;
+        }
+
+        .hero-QuickLinks a {
+            color: #cbd5e1;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            font-weight: 500;
+        }
+
+        .hero-QuickLinks a:hover {
+            color: #ffffff;
+        }
+
+        /* Hero Right Column: Portrait & Key Metrics */
+        .hero-profile-card {
+            background: rgba(15, 23, 42, 0.65);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            border-radius: var(--radius-lg);
+            padding: 1.5rem;
+            backdrop-filter: blur(8px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .profile-photo-wrap {
+            display: flex;
+            align-items: center;
+            gap: 1.25rem;
+            margin-bottom: 1.35rem;
+        }
+
+        .profile-image {
+            width: 118px;
+            height: 118px;
+            border-radius: 12px;
+            object-fit: cover;
+            border: 2px solid rgba(255, 255, 255, 0.28);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35);
+            flex-shrink: 0;
+        }
+
+        .profile-caption h3 {
+            font-size: 1.2rem;
+            color: #ffffff;
+            margin-bottom: 0.25rem;
+        }
+
+        .profile-caption p {
+            font-size: 0.83rem;
+            color: #cbd5e1;
+            line-height: 1.45;
+        }
+
+        .metrics-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0.75rem;
+        }
+
+        .metric-box {
+            background: rgba(255, 255, 255, 0.06);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 8px;
+            padding: 0.85rem 0.9rem;
+        }
+
+        .metric-value {
+            font-family: 'Crimson Pro', Georgia, serif;
+            font-size: 1.55rem;
+            font-weight: 700;
+            color: #fbbf24;
+            line-height: 1.1;
+            margin-bottom: 0.2rem;
+        }
+
+        .metric-label {
+            font-size: 0.76rem;
+            color: #cbd5e1;
+            line-height: 1.3;
+        }
+
+        /* Common Section Styles */
+        .section {
+            padding: 4.5rem 2rem;
+        }
+
+        .section-alt {
+            background: var(--bg-surface);
+            border-top: 1px solid var(--border-light);
+            border-bottom: 1px solid var(--border-light);
+        }
+
+        .container {
             max-width: 1200px;
             margin: 0 auto;
-            padding: 0 2rem;
-        }
-
-        /* Recent Updates Section */
-        .updates-section {
-            padding: 4rem 0;
-            background: white;
         }
 
         .section-header {
-            text-align: center;
-            margin-bottom: 3rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            margin-bottom: 2.5rem;
+            padding-bottom: 1rem;
+            border-bottom: 2px solid var(--border-light);
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .section-title-group {
+            max-width: 720px;
+        }
+
+        .section-eyebrow {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.76rem;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: var(--academic-blue);
+            font-weight: 600;
+            margin-bottom: 0.3rem;
         }
 
         .section-title {
-            font-size: 2.5rem;
-            color: var(--academic-blue);
-            margin-bottom: 0.5rem;
+            font-size: 2.2rem;
+            color: var(--navy-900);
+            line-height: 1.15;
         }
 
         .section-subtitle {
-            color: var(--light-text);
-            font-size: 1.1rem;
+            color: var(--text-secondary);
+            font-size: 1rem;
+            margin-top: 0.35rem;
         }
 
-        .updates-timeline {
+        /* Research Pillars Grid */
+        .pillars-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+            gap: 1.75rem;
+        }
+
+        .pillar-card {
+            background: var(--bg-surface);
+            border: 1px solid var(--border-light);
+            border-top: 3px solid var(--academic-blue);
+            border-radius: var(--radius-md);
+            padding: 1.85rem;
+            box-shadow: var(--shadow-sm);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .pillar-card:hover {
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .pillar-icon {
+            font-size: 1.75rem;
+            margin-bottom: 0.85rem;
+        }
+
+        .pillar-title {
+            font-size: 1.35rem;
+            color: var(--navy-900);
+            margin-bottom: 0.7rem;
+            line-height: 1.3;
+        }
+
+        .pillar-summary {
+            font-size: 0.94rem;
+            color: var(--text-secondary);
+            margin-bottom: 1.25rem;
+            flex: 1;
+        }
+
+        .pillar-highlights {
+            list-style: none;
+            border-top: 1px solid var(--border-light);
+            padding-top: 1rem;
+            display: flex;
+            flex-direction: column;
+            gap: 0.45rem;
+        }
+
+        .pillar-highlights li {
+            font-size: 0.84rem;
+            color: var(--navy-700);
             position: relative;
-            padding-left: 2rem;
+            padding-left: 1.1rem;
+            line-height: 1.45;
         }
 
-        .updates-timeline::before {
-            content: '';
+        .pillar-highlights li::before {
+            content: '▸';
             position: absolute;
             left: 0;
-            top: 0;
-            bottom: 0;
-            width: 2px;
-            background: linear-gradient(to bottom, var(--academic-blue), var(--academic-teal));
+            color: var(--academic-blue);
+            font-weight: bold;
         }
 
-        .update-item {
-            position: relative;
-            padding: 1.5rem;
-            margin-bottom: 2rem;
-            background: var(--background);
-            border-radius: 12px;
-            transition: all 0.3s ease;
+        /* News & Updates Timeline */
+        .updates-list {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
         }
 
-        .update-item::before {
-            content: '';
-            position: absolute;
-            left: -2.5rem;
-            top: 2rem;
-            width: 12px;
-            height: 12px;
-            border-radius: 50%;
-            background: var(--academic-blue);
-            border: 3px solid white;
+        .update-card {
+            display: grid;
+            grid-template-columns: 170px 1fr;
+            gap: 1.5rem;
+            background: var(--bg-page);
+            border: 1px solid var(--border-light);
+            border-left: 4px solid var(--academic-blue);
+            border-radius: var(--radius-md);
+            padding: 1.35rem 1.6rem;
+            align-items: start;
+            transition: box-shadow 0.2s ease, border-color 0.2s ease;
         }
 
-        .update-item:hover {
-            transform: translateX(10px);
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+        .update-card:hover {
+            box-shadow: var(--shadow-sm);
+            border-left-color: var(--lsu-purple);
+        }
+
+        .update-meta {
+            display: flex;
+            flex-direction: column;
+            gap: 0.35rem;
+        }
+
+        .update-date {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.84rem;
+            font-weight: 600;
+            color: var(--navy-800);
         }
 
         .update-badge {
             display: inline-block;
-            padding: 0.25rem 0.75rem;
-            background: var(--gold-accent);
-            color: white;
-            border-radius: 20px;
-            font-size: 0.85rem;
-            font-weight: 600;
-            margin-bottom: 0.5rem;
-        }
-
-        .update-date {
-            color: var(--light-text);
-            font-size: 0.9rem;
-            margin-bottom: 0.5rem;
-        }
-
-        /* Selected Works Section */
-        .works-section {
-            padding: 4rem 0;
-        }
-
-        .works-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 2rem;
-        }
-
-        .work-card {
-            background: white;
-            border-radius: 16px;
-            padding: 2rem;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-            transition: all 0.3s ease;
-            border-top: 4px solid var(--academic-blue);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .work-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(135deg, var(--academic-blue), var(--academic-purple));
-            opacity: 0;
-            transition: opacity 0.3s ease;
-        }
-
-        .work-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
-        }
-
-        .work-card:hover::before {
-            opacity: 0.03;
-        }
-
-        .work-card h3 {
-            font-size: 1.15rem;
+            align-self: flex-start;
+            font-size: 0.7rem;
             font-weight: 700;
-            margin-bottom: 0.5rem;
-            color: var(--dark-text);
-            line-height: 1.4;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            padding: 0.2rem 0.55rem;
+            border-radius: 4px;
+            background: var(--academic-blue-light);
+            color: var(--academic-blue-dark);
+            border: 1px solid #bfdbfe;
         }
 
-        .work-authors {
-            font-style: italic;
-            color: var(--light-text);
-            margin-bottom: 0.5rem;
-            font-size: 0.95rem;
-        }
-
-        .work-venue {
+        .update-body h3 {
+            font-size: 1.15rem;
+            color: var(--navy-900);
+            margin-bottom: 0.3rem;
+            font-family: 'Inter', sans-serif;
             font-weight: 600;
-            color: var(--academic-blue);
-            margin-bottom: 1rem;
         }
 
-        .work-links {
-            display: flex;
-            gap: 1rem;
-            flex-wrap: wrap;
+        .update-body p {
+            font-size: 0.94rem;
+            color: var(--text-secondary);
         }
 
-        .work-link {
-            color: var(--academic-blue);
-            text-decoration: none;
+        .update-body a {
             font-weight: 500;
-            display: flex;
-            align-items: center;
-            gap: 0.3rem;
-            transition: color 0.3s ease;
-        }
-
-        .work-link:hover {
-            color: var(--academic-purple);
             text-decoration: underline;
+            text-underline-offset: 2px;
         }
 
-        /* Current Works Section */
-        .current-works {
-            padding: 3rem 0;
-            background: white;
-        }
-
-        .expandable-section {
-            max-width: 900px;
-            margin: 0 auto;
-        }
-
-        .expand-header {
-            background: var(--background);
-            padding: 1.5rem 2rem;
-            border-radius: 12px;
-            cursor: pointer;
+        /* Publications Section */
+        .pub-controls {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            transition: all 0.3s ease;
-            border: 2px solid transparent;
+            gap: 1rem;
+            margin-bottom: 1.75rem;
+            flex-wrap: wrap;
         }
 
-        .expand-header:hover {
-            border-color: var(--academic-blue);
-            transform: translateY(-2px);
-        }
-
-        .expand-header h3 {
-            font-size: 1.5rem;
-            color: var(--academic-blue);
-            margin: 0;
-        }
-
-        .expand-icon {
-            font-size: 1.5rem;
-            color: var(--academic-blue);
-            transition: transform 0.3s ease;
-        }
-
-        .expand-header.active .expand-icon {
-            transform: rotate(180deg);
-        }
-
-        .expand-content {
-            max-height: 0;
-            overflow: hidden;
-            transition: max-height 0.5s ease;
-        }
-
-        .expand-content.active {
-            max-height: 1000px;
-        }
-
-        .expand-body {
-            padding: 2rem;
-            background: white;
-            border: 2px solid var(--border);
-            border-top: none;
-            border-radius: 0 0 12px 12px;
-        }
-
-        /* Passion Link Section */
-        .passion-section {
-            padding: 3rem 0;
-            text-align: center;
-        }
-
-        .passion-card {
-            max-width: 600px;
-            margin: 0 auto;
-            padding: 3rem;
-            background: linear-gradient(135deg, var(--academic-purple), var(--academic-teal));
-            border-radius: 20px;
-            color: white;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-            transition: transform 0.3s ease;
-        }
-
-        .passion-card:hover {
-            transform: translateY(-5px);
-        }
-
-        .passion-card h2 {
-            font-size: 2rem;
-            margin-bottom: 1rem;
-            color: white;
-        }
-
-        .passion-card p {
-            margin-bottom: 2rem;
-            opacity: 0.95;
-            font-size: 1.1rem;
-        }
-
-        .passion-btn {
-            background: white;
-            color: var(--academic-purple);
-            padding: 1rem 2.5rem;
-            border-radius: 30px;
-            text-decoration: none;
-            font-weight: 600;
-            display: inline-block;
-            transition: all 0.3s ease;
-        }
-
-        .passion-btn:hover {
-            transform: scale(1.05);
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-        }
-
-        /* Contact Section */
-        .contact-section {
-            padding: 5rem 0;
-            background: #1a2332;
-            color: white;
-            text-align: center;
-        }
-
-        .contact-section h2 {
-            color: #5b7cfd;
-            margin-bottom: 1.5rem;
-            font-size: 3rem;
-            font-weight: 600;
-        }
-
-        .contact-description {
-            max-width: 600px;
-            margin: 0 auto 3rem;
-            font-size: 1.1rem;
-            line-height: 1.6;
-            opacity: 0.9;
-        }
-
-        .social-links {
+        .filter-tabs {
             display: flex;
-            justify-content: center;
-            gap: 3rem;
-            margin-bottom: 3rem;
+            gap: 0.5rem;
+            flex-wrap: wrap;
         }
 
-        .social-link {
-            color: white;
-            transition: transform 0.3s ease, color 0.3s ease;
+        .filter-btn {
+            padding: 0.5rem 1rem;
+            border-radius: 6px;
+            border: 1px solid var(--border-medium);
+            background: var(--bg-surface);
+            color: var(--text-secondary);
+            font-size: 0.86rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .filter-btn:hover {
+            border-color: var(--academic-blue);
+            color: var(--academic-blue);
+        }
+
+        .filter-btn.active {
+            background: var(--navy-900);
+            color: #ffffff;
+            border-color: var(--navy-900);
+        }
+
+        .pub-search {
+            padding: 0.5rem 0.9rem;
+            border: 1px solid var(--border-medium);
+            border-radius: 6px;
+            font-size: 0.88rem;
+            min-width: 250px;
+            background: var(--bg-surface);
+            color: var(--text-primary);
+        }
+
+        .publications-list {
+            display: flex;
+            flex-direction: column;
+            gap: 1.1rem;
+        }
+
+        .pub-item {
+            background: var(--bg-surface);
+            border: 1px solid var(--border-light);
+            border-radius: var(--radius-md);
+            padding: 1.45rem 1.65rem;
+            display: grid;
+            grid-template-columns: 56px 1fr;
+            gap: 1.2rem;
+            box-shadow: var(--shadow-sm);
+            transition: border-color 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .pub-item:hover {
+            border-color: #93c5fd;
+            box-shadow: var(--shadow-md);
+        }
+
+        .pub-code {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.85rem;
+            font-weight: 600;
+            height: 36px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 6px;
+            background: var(--bg-subtle);
+            color: var(--navy-800);
+            border: 1px solid var(--border-medium);
+        }
+
+        .pub-code.journal {
+            background: var(--teal-soft);
+            color: var(--teal-accent);
+            border-color: #99f6e4;
+        }
+
+        .pub-code.conference {
+            background: var(--academic-blue-light);
+            color: var(--academic-blue-dark);
+            border-color: #bfdbfe;
+        }
+
+        .pub-title {
+            font-size: 1.15rem;
+            font-weight: 700;
+            color: var(--navy-900);
+            margin-bottom: 0.35rem;
+            line-height: 1.38;
+            font-family: 'Crimson Pro', Georgia, serif;
+        }
+
+        .pub-authors {
+            font-size: 0.92rem;
+            color: var(--text-secondary);
+            margin-bottom: 0.4rem;
+        }
+
+        .pub-venue-row {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 0.6rem;
+            margin-bottom: 0.85rem;
+            font-size: 0.88rem;
+        }
+
+        .pub-venue {
+            font-weight: 600;
+            color: var(--navy-800);
+            font-style: italic;
+        }
+
+        .pub-badge {
+            font-size: 0.75rem;
+            font-weight: 600;
+            padding: 0.15rem 0.55rem;
+            border-radius: 4px;
+            background: var(--gold-soft);
+            color: var(--gold-accent);
+        }
+
+        .pub-role-badge {
+            font-size: 0.75rem;
+            font-weight: 600;
+            padding: 0.15rem 0.55rem;
+            border-radius: 4px;
+            background: #f3e8ff;
+            color: var(--lsu-purple);
+        }
+
+        .pub-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.6rem;
+        }
+
+        .pub-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.35rem;
+            padding: 0.3rem 0.75rem;
+            border-radius: 5px;
+            font-size: 0.8rem;
+            font-weight: 500;
+            border: 1px solid var(--border-medium);
+            background: var(--bg-page);
+            color: var(--navy-800);
+            cursor: pointer;
+            transition: all 0.18s ease;
             text-decoration: none;
         }
 
-        .social-link svg {
-            width: 28px;
-            height: 28px;
-            fill: currentColor;
+        .pub-btn:hover {
+            background: var(--navy-900);
+            color: #ffffff;
+            border-color: var(--navy-900);
         }
 
-        .social-link:hover {
-            transform: translateY(-5px);
-            color: #5b7cfd;
+        /* Projects & Interactive Labs */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 1.5rem;
         }
 
-        /* Animations */
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
+        .project-card {
+            background: var(--bg-surface);
+            border: 1px solid var(--border-light);
+            border-radius: var(--radius-md);
+            padding: 1.65rem;
+            display: flex;
+            flex-direction: column;
+            box-shadow: var(--shadow-sm);
+            transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+        }
+
+        .project-card:hover {
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-md);
+            border-color: #93c5fd;
+        }
+
+        .project-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 0.5rem;
+            margin-bottom: 0.65rem;
+        }
+
+        .project-category {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.74rem;
+            text-transform: uppercase;
+            color: var(--academic-blue);
+            font-weight: 600;
+        }
+
+        .project-badge {
+            font-size: 0.72rem;
+            font-weight: 600;
+            padding: 0.18rem 0.55rem;
+            border-radius: 999px;
+            background: var(--bg-subtle);
+            color: var(--navy-700);
+        }
+
+        .project-card h3 {
+            font-size: 1.28rem;
+            color: var(--navy-900);
+            margin-bottom: 0.6rem;
+            line-height: 1.3;
+        }
+
+        .project-desc {
+            font-size: 0.91rem;
+            color: var(--text-secondary);
+            margin-bottom: 1.15rem;
+            flex: 1;
+        }
+
+        .project-tech {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.4rem;
+            margin-bottom: 1.2rem;
+        }
+
+        .tech-pill {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.73rem;
+            padding: 0.2rem 0.55rem;
+            background: var(--bg-subtle);
+            color: var(--navy-700);
+            border-radius: 4px;
+        }
+
+        .project-footer {
+            display: flex;
+            gap: 0.85rem;
+            align-items: center;
+            padding-top: 0.9rem;
+            border-top: 1px solid var(--border-light);
+            font-size: 0.86rem;
+            font-weight: 600;
+        }
+
+        /* Academic CV & Experience Two-Column Section */
+        .cv-grid {
+            display: grid;
+            grid-template-columns: 1.25fr 1fr;
+            gap: 2.5rem;
+        }
+
+        .cv-subhead {
+            font-size: 1.35rem;
+            color: var(--navy-900);
+            margin-bottom: 1.2rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 1px solid var(--border-medium);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .exp-item {
+            margin-bottom: 1.5rem;
+            padding-left: 1rem;
+            border-left: 2px solid var(--border-medium);
+        }
+
+        .exp-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-bottom: 0.2rem;
+        }
+
+        .exp-role {
+            font-weight: 700;
+            font-size: 1.02rem;
+            color: var(--navy-900);
+        }
+
+        .exp-period {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.78rem;
+            color: var(--academic-blue);
+            font-weight: 500;
+        }
+
+        .exp-org {
+            font-size: 0.9rem;
+            font-weight: 500;
+            color: var(--text-secondary);
+            margin-bottom: 0.45rem;
+        }
+
+        .exp-bullets {
+            list-style: disc;
+            padding-left: 1.15rem;
+            font-size: 0.88rem;
+            color: var(--text-secondary);
+            display: flex;
+            flex-direction: column;
+            gap: 0.3rem;
+        }
+
+        .awards-list {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 0.65rem;
+            margin-bottom: 2rem;
+        }
+
+        .awards-list li {
+            font-size: 0.89rem;
+            color: var(--text-secondary);
+            padding: 0.65rem 0.9rem;
+            background: var(--bg-page);
+            border: 1px solid var(--border-light);
+            border-radius: 6px;
+            line-height: 1.45;
+        }
+
+        .skills-box {
+            background: var(--bg-page);
+            border: 1px solid var(--border-light);
+            border-radius: var(--radius-md);
+            padding: 1.25rem;
+        }
+
+        .skill-row {
+            margin-bottom: 0.75rem;
+            font-size: 0.88rem;
+        }
+
+        .skill-row:last-child {
+            margin-bottom: 0;
+        }
+
+        .skill-label {
+            font-weight: 600;
+            color: var(--navy-900);
+            display: block;
+            margin-bottom: 0.15rem;
+        }
+
+        .skill-val {
+            color: var(--text-secondary);
+        }
+
+        /* Blog Preview Cards */
+        .blog-preview-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .post-card {
+            background: var(--bg-surface);
+            border: 1px solid var(--border-light);
+            border-radius: var(--radius-md);
+            padding: 1.6rem;
+            display: flex;
+            flex-direction: column;
+            box-shadow: var(--shadow-sm);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .post-card:hover {
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .post-meta {
+            display: flex;
+            gap: 0.65rem;
+            align-items: center;
+            font-size: 0.78rem;
+            color: var(--text-muted);
+            margin-bottom: 0.6rem;
+            font-family: 'JetBrains Mono', monospace;
+        }
+
+        .post-cat {
+            color: var(--academic-blue);
+            font-weight: 600;
+        }
+
+        .post-card h3 {
+            font-size: 1.25rem;
+            color: var(--navy-900);
+            margin-bottom: 0.55rem;
+            line-height: 1.32;
+        }
+
+        .post-card p {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            margin-bottom: 1.15rem;
+            flex: 1;
+        }
+
+        /* Outreach & Memeology Banner */
+        .outreach-banner {
+            background: linear-gradient(135deg, var(--navy-900) 0%, #1e1b4b 100%);
+            border-radius: var(--radius-lg);
+            padding: 2.75rem 3rem;
+            color: #ffffff;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+            box-shadow: var(--shadow-md);
+        }
+
+        .outreach-text {
+            max-width: 680px;
+        }
+
+        .outreach-text h2 {
+            font-size: 2rem;
+            color: #ffffff;
+            margin-bottom: 0.5rem;
+        }
+
+        .outreach-text p {
+            color: #cbd5e1;
+            font-size: 0.98rem;
+        }
+
+        .outreach-actions {
+            display: flex;
+            gap: 0.9rem;
+            flex-wrap: wrap;
+        }
+
+        /* Footer */
+        .footer {
+            background: var(--navy-950);
+            color: #cbd5e1;
+            padding: 4rem 2rem 2.5rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        .footer-grid {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1.5fr 1fr 1fr;
+            gap: 2.5rem;
+            padding-bottom: 2.5rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .footer h3 {
+            color: #ffffff;
+            font-size: 1.25rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .footer p {
+            font-size: 0.9rem;
+            color: #94a3b8;
+            line-height: 1.6;
+        }
+
+        .footer-links {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+            font-size: 0.9rem;
+        }
+
+        .footer-links a {
+            color: #cbd5e1;
+        }
+
+        .footer-links a:hover {
+            color: #ffffff;
+        }
+
+        .footer-bottom {
+            max-width: 1200px;
+            margin: 1.75rem auto 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 0.82rem;
+            color: #64748b;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        /* BibTeX Modal */
+        .modal-backdrop {
+            position: fixed;
+            inset: 0;
+            background: rgba(15, 23, 42, 0.65);
+            display: none;
+            align-items: center;
+            justify-content: center;
+            z-index: 2000;
+            padding: 1.5rem;
+        }
+
+        .modal-backdrop.open {
+            display: flex;
+        }
+
+        .modal-card {
+            background: var(--bg-surface);
+            border-radius: var(--radius-md);
+            max-width: 640px;
+            width: 100%;
+            padding: 1.75rem;
+            box-shadow: var(--shadow-lg);
+        }
+
+        .modal-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+
+        .modal-pre {
+            background: var(--navy-900);
+            color: #e2e8f0;
+            padding: 1.1rem;
+            border-radius: 8px;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.82rem;
+            overflow-x: auto;
+            white-space: pre-wrap;
+            margin-bottom: 1rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 960px) {
+            .hero-container,
+            .cv-grid,
+            .footer-grid {
+                grid-template-columns: 1fr;
             }
-            to {
-                opacity: 1;
-                transform: translateY(0);
+
+            .update-card {
+                grid-template-columns: 1fr;
+                gap: 0.5rem;
             }
         }
 
-        /* Responsive Design */
         @media (max-width: 768px) {
             .nav-menu {
                 display: none;
@@ -608,10 +1231,11 @@
                 top: 100%;
                 left: 0;
                 right: 0;
-                background: white;
+                background: var(--bg-surface);
                 flex-direction: column;
-                padding: 1rem;
-                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+                padding: 1.25rem;
+                border-bottom: 1px solid var(--border-light);
+                box-shadow: var(--shadow-md);
             }
 
             .nav-menu.active {
@@ -622,395 +1246,570 @@
                 display: flex;
             }
 
-            .hero-container {
-                flex-direction: column-reverse;
-                text-align: center;
-                gap: 2rem;
-            }
-
             .hero h1 {
-                font-size: 2.5rem;
+                font-size: 2.35rem;
             }
 
-            .hero-image {
-                flex: 0 0 200px;
-            }
-
-            .profile-image {
-                width: 200px;
-                height: 200px;
-            }
-
-            .hero-buttons {
-                justify-content: center;
-                flex-wrap: wrap;
-            }
-
-            .works-grid {
+            .pub-item {
                 grid-template-columns: 1fr;
-            }
-
-            .social-links {
-                gap: 2rem;
-            }
-
-            .updates-timeline {
-                padding-left: 1rem;
-            }
-
-            .update-item::before {
-                left: -1.5rem;
-            }
-        }
-
-        @media (max-width: 480px) {
-            .hero h1 {
-                font-size: 2rem;
-            }
-
-            .section-title {
-                font-size: 2rem;
-            }
-
-            .social-links {
-                gap: 1.5rem;
             }
         }
     </style>
 </head>
 <body>
+
     <!-- Navigation -->
     <nav class="navbar">
         <div class="nav-container">
-            <a href="#" class="nav-brand">Syed Shubha</a>
+            <a href="#home" class="nav-brand">
+                <span class="nav-brand-name">Syed Emad Uddin Shubha</span>
+                <span class="nav-brand-sub">Quantum Information • LSU CSE</span>
+            </a>
             <ul class="nav-menu" id="navMenu">
-                <li><a href="#home" class="active">Home</a></li>
-                <li><a href="#updates">Updates</a></li>
-                <li><a href="#works">Research</a></li>
-                <li><a href="#current">Current Works</a></li>
-                <li><a href="#contact">Contact</a></li>
-                <li><a href="passions.html" class="passions-link">Quantum Memeology</a></li>
+                <li><a href="#about">Research</a></li>
+                <li><a href="#updates">News</a></li>
+                <li><a href="#publications">Publications</a></li>
+                <li><a href="#projects">Projects & Labs</a></li>
+                <li><a href="#experience">CV & Service</a></li>
+                <li><a href="blog.html" class="nav-pill-outline">✍️ Blog & Notes</a></li>
+                <li><a href="QSVT.html" class="nav-pill-outline">⚛️ QSVT Lab</a></li>
+                <li><a href="passions.html" class="nav-pill-btn">🎭 Quantum Memeology</a></li>
             </ul>
-            <div class="mobile-toggle" id="mobileToggle">
+            <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle Menu">
                 <span></span>
                 <span></span>
                 <span></span>
-            </div>
+            </button>
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section class="hero" id="home">
+    <!-- Scholarly Hero Section -->
+    <header class="hero" id="home">
         <div class="hero-container">
-            <div class="hero-text">
-                <h1>Syed Emad Uddin Shubha</h1>
-                <p class="tagline">Aspiring Researcher in Quantum Information</p>
-                <p class="affiliation">Graduate Research Assistant • Division of Computer Science & Engineering, Louisiana State University<br>
-                B.Sc. in Electrical & Electronic Engineering • Bangladesh University of Engineering and Technology <br>
-                I apply a first-principled approach to tackle key challenges in quantum computing and communication.
-                </p> 
-                <div class="hero-buttons">
-                    <a href="https://drive.google.com/file/d/1gYxboJq6kpHC5Wp-45kJM9SZkSDZo6TR/view?usp=drivesdk" 
-                       class="btn btn-primary" target="_blank">Download CV</a>
-                    <a href="#works" class="btn btn-outline">View Research</a>
+            <div>
+                <div class="institution-badge">
+                    <span class="dot"></span>
+                    <span id="heroAffiliation">Division of Computer Science & Engineering • Louisiana State University</span>
+                </div>
+                <h1 id="heroName">Syed Emad Uddin Shubha</h1>
+                <p class="hero-role" id="heroTitle">Doctoral Researcher in Computer Science & Quantum Information</p>
+                <p class="hero-education" id="heroEdu">Ph.D. Student in Computer Science, LSU (GPA: 3.988/4.00) • B.Sc. in EEE, BUET</p>
+                <p class="hero-bio" id="heroBio">
+                    I am a Doctoral Researcher in the Division of Computer Science & Engineering at Louisiana State University (LSU), working on quantum hardware security, quantum error correction, and quantum communication protocols. Grounded in Electrical & Electronic Engineering (B.Sc., BUET) and Computer Science, my research bridges finite-element electromagnetic extraction, multilevel superconducting transmon dynamics, pulse-to-circuit characterization, and quantum information theory.
+                </p>
+
+                <div class="interest-tags" id="interestTags">
+                    <span class="interest-tag">Quantum Hardware Security & Verification</span>
+                    <span class="interest-tag">Superconducting Qubits & Pulse Control</span>
+                    <span class="interest-tag">Quantum Error Correction</span>
+                    <span class="interest-tag">Quantum Communication & Networks</span>
+                    <span class="interest-tag">Quantum Algorithms & QSVT</span>
+                    <span class="interest-tag">Quantum Cryptography (QKD)</span>
+                    <span class="interest-tag">Classical Shadow Tomography & QML</span>
+                </div>
+
+                <div class="hero-actions">
+                    <a href="assets/Curriculum_Vitae_Syed_Emad_Uddin_Shubha.pdf" id="cvDownloadBtn" class="btn btn-gold" target="_blank">
+                        📄 Curriculum Vitae (PDF)
+                    </a>
+                    <a href="#publications" class="btn btn-light">
+                        📚 Selected Publications
+                    </a>
+                    <a href="blog.html" class="btn btn-light">
+                        ✍️ Research Blog & Notes
+                    </a>
+                    <a href="QSVT.html" class="btn btn-light">
+                        ⚛️ Interactive QSVT Simulator
+                    </a>
+                </div>
+
+                <div class="hero-QuickLinks">
+                    <a href="mailto:syed.shubha@ieee.org">✉️ syed.shubha@ieee.org</a>
+                    <a href="https://scholar.google.com/citations?user=8EK8VJMAAAAJ" target="_blank">🎓 Google Scholar</a>
+                    <a href="https://orcid.org/0009-0005-1435-5958" target="_blank">🆔 ORCID</a>
+                    <a href="https://github.com/syedshubha" target="_blank">💻 GitHub</a>
+                    <a href="https://www.linkedin.com/in/syed-emad-uddin-shubha/" target="_blank">🔗 LinkedIn</a>
+                    <a href="https://syedshubha.substack.com" target="_blank">📰 Substack</a>
+                    <a href="https://bigganblog.org/author/syed-shubha/" target="_blank">✍️ Bigganblog</a>
                 </div>
             </div>
-            <div class="hero-image">
-                <img src="images/avatar.JPG" alt="Syed Emad Uddin Shubha" class="profile-image">
+
+            <div class="hero-profile-card">
+                <div class="profile-photo-wrap">
+                    <img src="images/avatar.JPG" alt="Syed Emad Uddin Shubha" class="profile-image" id="heroAvatar">
+                    <div class="profile-caption">
+                        <h3>Syed E. U. Shubha</h3>
+                        <p>Graduate Research Assistant & Teaching Assistant<br>School of EECS, LSU<br>Baton Rouge, Louisiana</p>
+                    </div>
+                </div>
+                <div class="metrics-grid" id="heroMetrics">
+                    <div class="metric-box">
+                        <div class="metric-value">11</div>
+                        <div class="metric-label">Peer-Reviewed Publications</div>
+                    </div>
+                    <div class="metric-box">
+                        <div class="metric-value">3.988</div>
+                        <div class="metric-label">Ph.D. GPA at LSU (4.00 Scale)</div>
+                    </div>
+                    <div class="metric-box">
+                        <div class="metric-value">$268K+</div>
+                        <div class="metric-label">Awarded Grants Contributed To</div>
+                    </div>
+                    <div class="metric-box">
+                        <div class="metric-value">2026</div>
+                        <div class="metric-label">Quantum Rising Star Award</div>
+                    </div>
+                </div>
             </div>
         </div>
-    </section>
+    </header>
 
-   <!-- Recent Updates -->
-    <section class="updates-section" id="updates">
-        <div class="main-content">
+    <!-- Research Vision & Core Pillars -->
+    <section class="section" id="about">
+        <div class="container">
             <div class="section-header">
-                <h2 class="section-title">Recent Updates</h2>
-                <p class="section-subtitle">Latest achievements and milestones</p>
-            </div>
-            <div class="updates-timeline">
-                <div class="update-item">
-                    <span class="update-badge">NEW</span>
-                    <div class="update-date">September 2026</div>
-                    <p><strong>Award:</strong> My article "Distinguishing Coherent Crosstalk from Calibration Drift via Pauli-Transfer Signatures and Quantum Edge Detection" has been accepted for publication in HOST 2027. Read the <a href="https://arxiv.org/abs/2609.40283">paper</a>. </p>
-                </div>
-                <div class="update-item">
-                    <span class="update-badge">NEW</span>
-                    <div class="update-date">March 2026</div>
-                    <p><strong>Award:</strong> I received the Quantum Rising Star Award at the Inaugural Quantum Student Success Summit (QS3) at Rice University! I presented my work through a lighting talk and a poster. </p>
-                </div>
-                <div class="update-item">
-                    <div class="update-date">October 2025</div>
-                    <p><strong>Paper Presentation:</strong> Presented "Pulse-to-Circuit Characterization of Stealthy Crosstalk Attack on Multi-Tenant Superconducting Quantum Hardware" at ACM Quantum Security Workshop 2025 (co-located with ACM CCS). arXiv preprint: <a href="https://arxiv.org/abs/2509.11407">arXiv:2509.11407</a>. This work has been featured in Quantum Zeitgeist, read the article <a href="https://quantumzeitgeist.com/quantum-pulse-circuit-mapping-reveals-stealthy-crosstalk-attack-three">here</a>. </p>
-                </div>
-                <div class="update-item">
-                    <div class="update-date">September 2025</div>
-                    <p><strong>Paper Published:</strong> "Secure and Efficient n-Qubit Entangled State Teleportation Using Partially Entangled GHZ Channels and Optimal POVM" accepted and published in AVS Quantum Science (Q1-indexed, IF: 3.0). <a href="https://doi.org/10.1116/5.0284072">doi: 10.1116/5.0284072</a>.</p>
-                </div>
-                <div class="update-item">
-                    <div class="update-date">September 2025</div>
-                    <p><strong>IEEE Quantum Week:</strong> Two papers accepted and presented at IEEE International Conference on Quantum Computing and Engineering (QCE 2025):</p>
-                    <ul>
-                        <li>"Testbed Protocol for Adaptive Superdense Coding in Distributed Quantum Networks", arXiv preprint: <a href="https://arxiv.org/abs/2504.12565">arXiv:2504.12565</a>.</li>
-                        <li>"Pulse-Level Simulation of Crosstalk Attacks on Superconducting Quantum Hardware", arXiv preprint: <a href="https://arxiv.org/abs/2507.16181">arXiv:2507.16181</a>.</li>
-                    </ul>
-                    I was awarded the prestigious <b>NSF Student Travel Grant</b> ($1,250) to present my papers and attend the conference. CSE LSU celebrated my research success on <a href="https://www.linkedin.com/posts/lsu-division-of-computer-science-engineering_lsu-quantumcomputing-researchexcellence-activity-7364405533233065984-xWiW" target="_blank">LinkedIn</a>.
+                <div class="section-title-group">
+                    <div class="section-eyebrow">Research Agenda</div>
+                    <h2 class="section-title">Core Research Directions</h2>
+                    <p class="section-subtitle">First-principles investigation spanning physical superconducting hardware, pulse control, and quantum information protocols</p>
                 </div>
             </div>
+            <div class="pillars-grid" id="pillarsContainer"></div>
         </div>
     </section>
 
-    
-
-
-<!-- Selected Works -->
-
-<section class="works-section" id="works">
-    <div class="main-content">
-        <div class="section-header">
-            <h2 class="section-title">Selected Works</h2>
-            <p class="section-subtitle">Key research contributions in quantum information</p>
-        </div>
-        <div class="works-grid">
-            <a href="https://dl.acm.org/doi/full/10.1145/3733825.3765282" class="work-card-link" target="_blank">
-                <div class="work-card">
-                    <h3>Pulse-to-Circuit Characterization of Stealthy Crosstalk Attack on Multi-Tenant Superconducting Quantum Hardware</h3>
-                    <p class="work-authors">by S.E.U. Shubha et al. in ACM Quantum Security Workshop 2025 <br><span style="font-size: larger;">(1st author)</span></p>
-                    <div class="work-links">
-                        📖 Read Paper
-                    </div>
-                </div>
-            </a>
-            <a href="https://ieeexplore.ieee.org/abstract/document/11250001" class="work-card-link" target="_blank">
-                <div class="work-card">
-                    <h3>Testbed Protocol for Adaptive Superdense Coding in Distributed Quantum Networks</h3>
-                    <p class="work-authors">by S.E.U. Shubha et al. in  IEEE Quantum Week 2025<br><span style="font-size: larger;">(1st author)</span></p>
-                    <div class="work-links">
-                        📖 Read Paper
-                    </div>
-                </div>
-            </a>
-            <a href="https://doi.org/10.1116/5.0284072" class="work-card-link" target="_blank">
-                <div class="work-card">
-                    <h3>Secure and efficient n-qubit entangled state teleportation using partially entangled GHZ channels and optimal POVM</h3>
-                    <p class="work-authors">by Animesh Banik et al. in AVS Quantum Science 7.3 (2025) (Q1-indexed, IF: 3.0)<br><span style="font-size: larger;">(corresponding author)</span></p>
-                    <div class="work-links">
-                        📖 Read Paper
-                    </div>
-                </div>
-            </a>
-            <a href="https://www.sciencedirect.com/science/article/pii/S2405844023069086" class="work-card-link" target="_blank">
-                <div class="work-card">
-                    <h3>Significant improvement of fidelity for encoded quantum bell pairs at long and short-distance communication along with a generalized circuit</h3>
-                    <p class="work-authors">by S.E.U. Shubha et al. in Heliyon, 2023 (Q1-indexed, IF: 3.6)<br><span style="font-size: larger;">(1st author)</span></p>
-                    <div class="work-links">
-                        📖 Read Paper
-                    </div>
-                </div>
-            </a>
-            <a href="https://doi.org/10.1016/j.aej.2025.02.056" class="work-card-link" target="_blank">
-                <div class="work-card">
-                    <h3>Multi-Layered Security System: Integrating Quantum Key Distribution with Classical Cryptography to Enhance Steganographic Security</h3>
-                    <p class="work-authors">by Arman Sykot et al. in Alexandria Engineering Journal, 2025 (Q1-indexed, IF=6.8)<br><span style="font-size: larger;">(co-supervised)</span></p>
-                    <div class="work-links">
-                        📖 Read Paper
-                    </div>
-                </div>
-            </a>
-            <a href="https://doi.org/10.1049/qtc2.70016" class="work-card-link" target="_blank">
-                <div class="work-card">
-                    <h3>Enhancing the security of image transmission in Quantum era: a chaos-assisted QKD approach using entanglement</h3>
-                    <p class="work-authors">by Raiyan Rahman et al. in IET Quantum Communication, 2025 (Q2-indexed, IF=2.8)<br><span style="font-size: larger;">(co-supervised)</span></p>
-                    <div class="work-links">
-                        📖 Read Paper
-                    </div>
-                </div>
-            </a>
-        </div>
-    </div>
-</section>
-<!-- Current Works (Expandable) -->
-
-    <section class="current-works" id="current">
-
-        <div class="main-content">
-
+    <!-- Recent News & Milestones -->
+    <section class="section section-alt" id="updates">
+        <div class="container">
             <div class="section-header">
+                <div class="section-title-group">
+                    <div class="section-eyebrow">Milestones & Announcements</div>
+                    <h2 class="section-title">Recent Academic Updates</h2>
+                    <p class="section-subtitle">Latest publications, awards, grants, and invited talks</p>
+                </div>
+            </div>
+            <div class="updates-list" id="updatesContainer"></div>
+        </div>
+    </section>
 
-                <h2 class="section-title">Current Research</h2>
-
-                <p class="section-subtitle">Ongoing projects and investigations</p>
-
+    <!-- Publications -->
+    <section class="section" id="publications">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-title-group">
+                    <div class="section-eyebrow">Scholarly Output</div>
+                    <h2 class="section-title">Peer-Reviewed Publications</h2>
+                    <p class="section-subtitle">Refereed journal articles and conference proceedings in quantum hardware security, quantum communication, and error correction</p>
+                </div>
             </div>
 
-            <div class="expandable-section">
+            <div class="pub-controls">
+                <div class="filter-tabs" id="pubFilterTabs">
+                    <button class="filter-btn active" data-filter="all">All Publications</button>
+                    <button class="filter-btn" data-filter="journal">Journal Articles</button>
+                    <button class="filter-btn" data-filter="conference">Conference Proceedings</button>
+                    <button class="filter-btn" data-filter="first">1st / Corresponding Author</button>
+                </div>
+                <input type="search" id="pubSearchInput" class="pub-search" placeholder="Search papers by title, venue, year...">
+            </div>
 
-                <div class="expand-header" onclick="toggleExpand(this)">
+            <div class="publications-list" id="publicationsContainer"></div>
+        </div>
+    </section>
 
-                    <h3>Click to view current works</h3>
+    <!-- Research Projects, Software & Interactive Labs -->
+    <section class="section section-alt" id="projects">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-title-group">
+                    <div class="section-eyebrow">Open-Source Software & Pedagogical Tools</div>
+                    <h2 class="section-title">Research Projects & Interactive Labs</h2>
+                    <p class="section-subtitle">Simulation frameworks, digital twins, machine learning pipelines, and interactive mathematical explorations</p>
+                </div>
+                <a href="https://github.com/syedshubha?tab=repositories" target="_blank" class="pub-btn">View All 37+ GitHub Repositories →</a>
+            </div>
+            <div class="projects-grid" id="projectsContainer"></div>
+        </div>
+    </section>
 
-                    <span class="expand-icon">▼</span>
+    <!-- Experience, Education, Honors & Service -->
+    <section class="section" id="experience">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-title-group">
+                    <div class="section-eyebrow">Curriculum Vitae Summary</div>
+                    <h2 class="section-title">Appointments, Education & Academic Service</h2>
+                    <p class="section-subtitle">Academic trajectory, teaching experience, honors, and technical competencies</p>
+                </div>
+                <a href="assets/Curriculum_Vitae_Syed_Emad_Uddin_Shubha.pdf" target="_blank" class="btn btn-gold">📄 Download Full CV (PDF)</a>
+            </div>
 
+            <div class="cv-grid">
+                <div>
+                    <h3 class="cv-subhead">🎓 Education</h3>
+                    <div id="educationContainer"></div>
+
+                    <h3 class="cv-subhead" style="margin-top: 2rem;">🔬 Research & Teaching Appointments</h3>
+                    <div id="experienceContainer"></div>
                 </div>
 
-                <div class="expand-content">
+                <div>
+                    <h3 class="cv-subhead">🏆 Honors, Grants & Academic Service</h3>
+                    <ul class="awards-list" id="awardsContainer"></ul>
 
-                    <div class="expand-body">
-
-                        <p>My current research focuses on quantum hardware security vulnerabilities and robust quantum communication protocols.</p>
-
-                        <ul>
-
-                            <li><strong>Quantum Hardware Security Vulnerabilities:</strong> Expanding on pulse-level simulations and characterizations of crosstalk attacks in multi-tenant superconducting quantum hardware, ongoing work involves deeper analysis of stealthy vulnerabilities, development of detection mechanisms, and strategies for mitigating such threats to ensure secure and reliable quantum computing platforms in shared environments.</li>
-
-                            <li><strong>Robust Quantum Communication Protocols:</strong> I am currently working on quantum communication, exploring the roles of quantum correlations to design adaptive error corrections. I have also worked on high-fidelity transmission of a multi-qubit logical state using partially entangled GHZ channels and optimal POVMs for unambiguous state discrimination. These works have potential applications in next-generation quantum repeaters and quantum internet. Additionally, I previously worked on integrating quantum key distribution (QKD) with classical cryptography to create hybrid systems for secure data transmission.
-                            </li>
-
-                        </ul>
-
-
+                    <h3 class="cv-subhead">💻 Technical Competencies</h3>
+                    <div class="skills-box">
+                        <div class="skill-row">
+                            <span class="skill-label">Programming & Hardware Description</span>
+                            <span class="skill-val">Python, Rust, C, C++, MATLAB, OpenQASM 2.0/3.0, Assembly</span>
+                        </div>
+                        <div class="skill-row">
+                            <span class="skill-label">Quantum Computing & Pulse Control</span>
+                            <span class="skill-val">Qiskit, Qiskit Pulse, Qiskit Metal, QuTiP, scqubits, IQM Pulse, Amazon Braket, PennyLane</span>
+                        </div>
+                        <div class="skill-row">
+                            <span class="skill-label">Electromagnetics & Engineering Simulation</span>
+                            <span class="skill-val">AWS Palace (FEM Electrostatics & Eigenmode), Gmsh, SQDMetal, Ansys Q3D/HFSS, Simulink, PSpice, Quartus</span>
+                        </div>
+                        <div class="skill-row">
+                            <span class="skill-label">Scientific Typesetting & Verification</span>
+                            <span class="skill-val">LaTeX, Rocq / Coq Prover, Git, PyTorch, Scikit-Learn</span>
+                        </div>
                     </div>
-
                 </div>
-
-            </div>
-
-        </div>
-
-    </section>
-
-    <!-- Passion Link Section -->
-    <section class="passion-section">
-        <div class="main-content">
-            <div class="passion-card">
-                <h2>Explore My Creative Side</h2>
-                <p>Beyond research, I enjoy creating science memes, writing educational content, playing chess, and sharing my love for physics and mathematics through various creative outlets.</p>
-                <a href="passions.html" class="passion-btn"> My Memes and Writings →</a>
             </div>
         </div>
     </section>
 
-    <!-- Contact Section -->
-    <footer class="contact-section" id="contact">
-        <div class="main-content">
-            <h2>Let's Connect</h2>
-            <p class="contact-description">
-                Feel free to reach out for research collaborations, academic discussions, or just a friendly conversation about quantum information!
-            </p>
-            <div class="social-links">
-                <a href="https://twitter.com/syed_shubha" class="social-link" target="_blank" title="Twitter">
-                    <svg viewBox="0 0 24 24"><path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/></svg>
-                </a>
-                <a href="https://www.linkedin.com/in/syed-emad-uddin-shubha/" class="social-link" target="_blank" title="LinkedIn">
-                    <svg viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
-                </a>
-                <a href="https://github.com/syedshubha" class="social-link" target="_blank" title="GitHub">
-                    <svg viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
-                </a>
-                <a href="mailto:shubhabuet16@gmail.com" class="social-link" title="Email">
-                    <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
-                </a>
-                <a href="https://www.facebook.com/physicist.shubha" class="social-link" target="_blank" title="Facebook">
-                    <svg viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
-                </a>
+    <!-- Research Blog & Notes Preview -->
+    <section class="section section-alt" id="blog-preview">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-title-group">
+                    <div class="section-eyebrow">Technical Expositions & Essays</div>
+                    <h2 class="section-title">Latest Blog Posts & Research Notes</h2>
+                    <p class="section-subtitle">In-depth mathematical notes, quantum information tutorials, and philosophical essays</p>
+                </div>
+                <a href="blog.html" class="pub-btn">View All Articles & Notes →</a>
             </div>
-            <p style="opacity: 0.6; font-size: 0.875rem;">
-                © 2025 Syed Emad Uddin Shubha. All rights reserved.
-            </p>
+            <div class="blog-preview-grid" id="blogPreviewContainer"></div>
+        </div>
+    </section>
+
+    <!-- Outreach & Quantum Memeology -->
+    <section class="section">
+        <div class="container">
+            <div class="outreach-banner">
+                <div class="outreach-text">
+                    <h2>Beyond the Lab: Quantum Memeology & Science Outreach</h2>
+                    <p>
+                        Science communication doesn't have to be dry. Explore my curated collection of original physics & mathematics memes (with full technical explanations), educational lecture playlists on Complex Analysis & CHSH games, and recreational chess.
+                    </p>
+                </div>
+                <div class="outreach-actions">
+                    <a href="passions.html" class="btn btn-gold">🎭 Explore Quantum Memeology →</a>
+                    <a href="blog.html" class="btn btn-light">📖 Read Blog & Essays →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer" id="contact">
+        <div class="footer-grid">
+            <div>
+                <h3>Syed Emad Uddin Shubha</h3>
+                <p>
+                    Doctoral Researcher in Computer Science & Engineering<br>
+                    Louisiana State University, Baton Rouge, LA, USA<br><br>
+                    Open to research collaborations, academic discussions, and peer-review invitations in quantum hardware security, quantum error correction, and quantum communication.
+                </p>
+            </div>
+            <div>
+                <h3>Academic Navigation</h3>
+                <ul class="footer-links">
+                    <li><a href="#about">Research Pillars</a></li>
+                    <li><a href="#publications">Peer-Reviewed Publications</a></li>
+                    <li><a href="#projects">Projects & Software</a></li>
+                    <li><a href="blog.html">Research Blog, Substack & Bigganblog</a></li>
+                    <li><a href="QSVT.html">Interactive QSVT Simulator</a></li>
+                    <li><a href="passions.html">Quantum Memeology (40 Memes)</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3>Contact & Profiles</h3>
+                <ul class="footer-links">
+                    <li><a href="mailto:syed.shubha@ieee.org">✉️ syed.shubha@ieee.org</a></li>
+                    <li><a href="https://scholar.google.com/citations?user=8EK8VJMAAAAJ" target="_blank">🎓 Google Scholar</a></li>
+                    <li><a href="https://orcid.org/0009-0005-1435-5958" target="_blank">🆔 ORCID: 0009-0005-1435-5958</a></li>
+                    <li><a href="https://github.com/syedshubha" target="_blank">💻 GitHub: syedshubha</a></li>
+                    <li><a href="https://www.linkedin.com/in/syed-emad-uddin-shubha/" target="_blank">🔗 LinkedIn: syed-emad-uddin-shubha</a></li>
+                    <li><a href="https://syedshubha.substack.com" target="_blank">📰 Substack: syedshubha</a></li>
+                    <li><a href="https://bigganblog.org/author/syed-shubha/" target="_blank">✍️ Bigganblog Author Page</a></li>
+                    <li><a href="assets/Curriculum_Vitae_Syed_Emad_Uddin_Shubha.pdf" target="_blank">📄 Curriculum Vitae (PDF)</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <span>© 2026 Syed Emad Uddin Shubha. All rights reserved.</span>
+            <span>Hosted on GitHub Pages • Managed via Local Portfolio Studio</span>
         </div>
     </footer>
 
-    <script>
-        // Mobile menu toggle
-        const mobileToggle = document.getElementById('mobileToggle');
-        const navMenu = document.getElementById('navMenu');
-        
-        mobileToggle.addEventListener('click', () => {
-            navMenu.classList.toggle('active');
-        });
+    <!-- BibTeX Modal -->
+    <div class="modal-backdrop" id="bibtexModal" onclick="if(event.target===this)closeBibtex()">
+        <div class="modal-card">
+            <div class="modal-header">
+                <h3>BibTeX Citation</h3>
+                <button class="pub-btn" onclick="closeBibtex()">✕ Close</button>
+            </div>
+            <pre class="modal-pre" id="bibtexContent"></pre>
+            <div style="display:flex; justify-content:flex-end; gap:0.6rem;">
+                <button class="btn btn-gold" style="padding:0.45rem 1rem; font-size:0.85rem;" onclick="copyBibtex()" id="copyBibBtn">📋 Copy BibTeX</button>
+            </div>
+        </div>
+    </div>
 
-        // Expand/Collapse function
-        function toggleExpand(header) {
-            header.classList.toggle('active');
-            const content = header.nextElementSibling;
-            content.classList.toggle('active');
+    <script src="data/portfolio_data.js"></script>
+    <script>
+        let SITE_DATA = window.PORTFOLIO_DATA || null;
+        let currentPubFilter = 'all';
+        let currentPubSearch = '';
+
+        async function initPortfolio() {
+            try {
+                const res = await fetch('data/portfolio_data.json?t=' + Date.now());
+                if (res.ok) {
+                    SITE_DATA = await res.json();
+                }
+            } catch (e) {
+                // Fallback to window.PORTFOLIO_DATA
+            }
+            if (!SITE_DATA) return;
+            renderAll();
         }
 
-        // Smooth scrolling
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                    navMenu.classList.remove('active');
+        function renderAll() {
+            const p = SITE_DATA.profile || {};
+            if (p.name) document.getElementById('heroName').textContent = p.name;
+            if (p.title) document.getElementById('heroTitle').textContent = p.title;
+            if (p.affiliation) document.getElementById('heroAffiliation').textContent = p.affiliation;
+            if (p.education_short) document.getElementById('heroEdu').textContent = p.education_short;
+            if (p.bio) document.getElementById('heroBio').textContent = p.bio;
+            if (p.cv_url) document.getElementById('cvDownloadBtn').href = p.cv_url;
+            if (p.avatar) document.getElementById('heroAvatar').src = p.avatar;
+
+            if (Array.isArray(p.interests)) {
+                document.getElementById('interestTags').innerHTML = p.interests
+                    .map(t => `<span class="interest-tag">${t}</span>`).join('');
+            }
+
+            if (Array.isArray(p.metrics)) {
+                document.getElementById('heroMetrics').innerHTML = p.metrics.map(m => `
+                    <div class="metric-box">
+                        <div class="metric-value">${m.value}</div>
+                        <div class="metric-label">${m.label}</div>
+                    </div>
+                `).join('');
+            }
+
+            // Pillars
+            const pillarsEl = document.getElementById('pillarsContainer');
+            if (pillarsEl && Array.isArray(SITE_DATA.pillars)) {
+                pillarsEl.innerHTML = SITE_DATA.pillars.map(pl => `
+                    <article class="pillar-card">
+                        <div class="pillar-icon">${pl.icon || '⚛️'}</div>
+                        <h3 class="pillar-title">${pl.title}</h3>
+                        <p class="pillar-summary">${pl.summary}</p>
+                        <ul class="pillar-highlights">
+                            ${(pl.highlights || []).map(h => `<li>${h}</li>`).join('')}
+                        </ul>
+                    </article>
+                `).join('');
+            }
+
+            // Updates
+            const updatesEl = document.getElementById('updatesContainer');
+            if (updatesEl && Array.isArray(SITE_DATA.updates)) {
+                updatesEl.innerHTML = SITE_DATA.updates.map(u => `
+                    <div class="update-card">
+                        <div class="update-meta">
+                            <span class="update-date">${u.date}</span>
+                            ${u.badge ? `<span class="update-badge">${u.badge}</span>` : ''}
+                        </div>
+                        <div class="update-body">
+                            ${u.title ? `<h3>${u.title}</h3>` : ''}
+                            <p>${u.content}</p>
+                        </div>
+                    </div>
+                `).join('');
+            }
+
+            // Publications
+            renderPublications();
+
+            // Projects
+            const projEl = document.getElementById('projectsContainer');
+            if (projEl && Array.isArray(SITE_DATA.projects)) {
+                projEl.innerHTML = SITE_DATA.projects.map(pr => `
+                    <article class="project-card">
+                        <div class="project-top">
+                            <span class="project-category">${pr.category || 'Research Project'}</span>
+                            ${pr.badge ? `<span class="project-badge">${pr.badge}</span>` : ''}
+                        </div>
+                        <h3>${pr.title}</h3>
+                        <p class="project-desc">${pr.description}</p>
+                        <div class="project-tech">
+                            ${(pr.tech || []).map(t => `<span class="tech-pill">${t}</span>`).join('')}
+                        </div>
+                        <div class="project-footer">
+                            <a href="${pr.link || '#'}" ${pr.link && pr.link.startsWith('http') ? 'target="_blank"' : ''}>${pr.link_label || 'Explore Project →'}</a>
+                            ${pr.repo_url && pr.repo_url !== pr.link ? `<a href="${pr.repo_url}" target="_blank" style="margin-left:auto; color:var(--text-muted); font-weight:500;">GitHub ↗</a>` : ''}
+                        </div>
+                    </article>
+                `).join('');
+            }
+
+            // Education
+            const eduEl = document.getElementById('educationContainer');
+            if (eduEl && Array.isArray(SITE_DATA.education)) {
+                eduEl.innerHTML = SITE_DATA.education.map(ed => `
+                    <div class="exp-item">
+                        <div class="exp-header">
+                            <span class="exp-role">${ed.degree}</span>
+                            <span class="exp-period">${ed.period}</span>
+                        </div>
+                        <div class="exp-org">${ed.institution}</div>
+                        <p style="font-size:0.86rem; color:var(--text-secondary);">${ed.details}</p>
+                    </div>
+                `).join('');
+            }
+
+            // Experience
+            const expEl = document.getElementById('experienceContainer');
+            if (expEl && Array.isArray(SITE_DATA.experience)) {
+                expEl.innerHTML = SITE_DATA.experience.map(ex => `
+                    <div class="exp-item">
+                        <div class="exp-header">
+                            <span class="exp-role">${ex.role}</span>
+                            <span class="exp-period">${ex.period}</span>
+                        </div>
+                        <div class="exp-org">${ex.organization}</div>
+                        <ul class="exp-bullets">
+                            ${(ex.bullets || []).map(b => `<li>${b}</li>`).join('')}
+                        </ul>
+                    </div>
+                `).join('');
+            }
+
+            // Awards
+            const awardsEl = document.getElementById('awardsContainer');
+            if (awardsEl && Array.isArray(SITE_DATA.awards)) {
+                awardsEl.innerHTML = SITE_DATA.awards.map(a => `<li>🏅 ${a}</li>`).join('');
+            }
+
+            // Blog Preview (first 3 posts)
+            const blogEl = document.getElementById('blogPreviewContainer');
+            if (blogEl && Array.isArray(SITE_DATA.posts)) {
+                blogEl.innerHTML = SITE_DATA.posts.slice(0, 3).map(post => {
+                    const readerHref = `blog.html?post=${encodeURIComponent(post.slug || post.id)}`;
+                    const hasExternal = post.external_url && post.external_url.startsWith('http');
+                    return `
+                        <article class="post-card">
+                            <div class="post-meta">
+                                <span class="post-cat">${post.category || 'Article'}</span>
+                                <span>•</span>
+                                <span>${post.date || ''}</span>
+                                ${post.read_time ? `<span>• ${post.read_time}</span>` : ''}
+                            </div>
+                            <h3><a href="${readerHref}" style="color:inherit;">${post.title}</a></h3>
+                            <p>${post.summary}</p>
+                            <div style="display:flex; gap:0.75rem; align-items:center; padding-top:0.8rem; border-top:1px solid var(--border-light); font-size:0.86rem; font-weight:600; flex-wrap:wrap;">
+                                <a href="${readerHref}">Read on Portfolio →</a>
+                                ${hasExternal ? `<a href="${post.external_url}" target="_blank" style="margin-left:auto; color:var(--text-secondary);">Original Source ↗</a>` : ''}
+                            </div>
+                        </article>
+                    `;
+                }).join('');
+            }
+        }
+
+        function renderPublications() {
+            const pubEl = document.getElementById('publicationsContainer');
+            if (!pubEl || !SITE_DATA || !Array.isArray(SITE_DATA.publications)) return;
+
+            const filtered = SITE_DATA.publications.filter(pub => {
+                if (currentPubFilter === 'journal' && pub.type !== 'journal') return false;
+                if (currentPubFilter === 'conference' && pub.type !== 'conference') return false;
+                if (currentPubFilter === 'first' && !/1st|first|corresponding/i.test(pub.role || '')) return false;
+                if (currentPubSearch) {
+                    const hay = `${pub.title} ${pub.authors} ${pub.venue} ${pub.year} ${pub.role}`.toLowerCase();
+                    if (!hay.includes(currentPubSearch.toLowerCase())) return false;
                 }
+                return true;
+            });
+
+            pubEl.innerHTML = filtered.map((pub, idx) => `
+                <article class="pub-item">
+                    <div class="pub-code ${pub.type === 'journal' ? 'journal' : 'conference'}">${pub.code || (pub.type === 'journal' ? 'J' : 'C') + (idx + 1)}</div>
+                    <div>
+                        <h3 class="pub-title">${pub.title}</h3>
+                        <p class="pub-authors">${pub.authors}</p>
+                        <div class="pub-venue-row">
+                            <span class="pub-venue">${pub.venue} (${pub.year})</span>
+                            ${pub.role ? `<span class="pub-role-badge">${pub.role}</span>` : ''}
+                            ${pub.metrics ? `<span class="pub-badge">${pub.metrics}</span>` : ''}
+                        </div>
+                        <div class="pub-links">
+                            ${pub.doi_url ? `<a href="${pub.doi_url}" target="_blank" class="pub-btn">🔗 Publisher / DOI</a>` : ''}
+                            ${pub.arxiv_url && pub.arxiv_url !== pub.doi_url ? `<a href="${pub.arxiv_url}" target="_blank" class="pub-btn">📄 arXiv</a>` : ''}
+                            ${pub.pdf_url ? `<a href="${pub.pdf_url}" target="_blank" class="pub-btn">📥 PDF</a>` : ''}
+                            ${pub.bibtex ? `<button class="pub-btn" onclick="showBibtex('${pub.id}')">❝ BibTeX</button>` : ''}
+                        </div>
+                    </div>
+                </article>
+            `).join('');
+        }
+
+        function showBibtex(pubId) {
+            const pub = (SITE_DATA.publications || []).find(p => p.id === pubId);
+            if (!pub || !pub.bibtex) return;
+            document.getElementById('bibtexContent').textContent = pub.bibtex;
+            document.getElementById('copyBibBtn').textContent = '📋 Copy BibTeX';
+            document.getElementById('bibtexModal').classList.add('open');
+        }
+
+        function closeBibtex() {
+            document.getElementById('bibtexModal').classList.remove('open');
+        }
+
+        function copyBibtex() {
+            const text = document.getElementById('bibtexContent').textContent;
+            navigator.clipboard.writeText(text).then(() => {
+                document.getElementById('copyBibBtn').textContent = '✓ Copied!';
+            });
+        }
+
+        // Event Listeners
+        document.querySelectorAll('#pubFilterTabs .filter-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                document.querySelectorAll('#pubFilterTabs .filter-btn').forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                currentPubFilter = btn.getAttribute('data-filter');
+                renderPublications();
             });
         });
 
-        // Active nav link on scroll
-        const sections = document.querySelectorAll('section[id]');
-        const navLinks = document.querySelectorAll('.nav-menu a[href^="#"]');
-
-        window.addEventListener('scroll', () => {
-            let current = '';
-            sections.forEach(section => {
-                const sectionTop = section.offsetTop;
-                const sectionHeight = section.clientHeight;
-                if (scrollY >= (sectionTop - 100)) {
-                    current = section.getAttribute('id');
-                }
-            });
-
-            navLinks.forEach(link => {
-                link.classList.remove('active');
-                if (link.getAttribute('href').slice(1) === current) {
-                    link.classList.add('active');
-                }
-            });
+        document.getElementById('pubSearchInput').addEventListener('input', e => {
+            currentPubSearch = e.target.value;
+            renderPublications();
         });
 
-        // Add animation on scroll
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        };
-
-        const observer = new IntersectionObserver(entries => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.style.animation = 'fadeInUp 0.6s ease both';
-                }
-            });
-        }, observerOptions);
-
-        document.querySelectorAll('.update-item, .work-card').forEach(el => {
-            observer.observe(el);
+        document.getElementById('mobileToggle').addEventListener('click', () => {
+            document.getElementById('navMenu').classList.toggle('active');
         });
+
+        initPortfolio();
     </script>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

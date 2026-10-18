@@ -1,0 +1,1120 @@
+{
+  "profile": {
+    "name": "Syed Emad Uddin Shubha",
+    "short_name": "Syed Shubha",
+    "title": "Ph.D. Student & Graduate Research Assistant in Computer Science",
+    "affiliation": "Division of Computer Science & Engineering, Louisiana State University",
+    "education_short": "Ph.D. in Computer Science, LSU (GPA: 3.988/4.00) • B.Sc. in EEE, BUET",
+    "tagline": "Investigating multi-tenant quantum hardware security, pulse-level superconducting qubit characterization, and correlation-guided quantum communication.",
+    "bio": "My doctoral research at Louisiana State University (advised by Dr. Tasnuva Farheen), which I conceived and proposed, spans two complementary directions: (1) Quantum Hardware Security—securing multi-tenant superconducting quantum processors via pulse-level crosstalk characterization, Pauli-transfer-matrix detection that separates malicious interference from benign calibration drift, and cross-layer verification; and (2) Quantum Communication & Quantum Correlations—exploiting quantum correlations to design adaptive error-correction and purification protocols and high-fidelity multi-qubit state transmission over partially entangled GHZ channels with optimal POVMs.",
+    "email": "syed.shubha@ieee.org",
+    "alt_email": "shubhabuet16@gmail.com",
+    "location": "Baton Rouge, LA, USA",
+    "cv_url": "assets/Curriculum_Vitae_Syed_Emad_Uddin_Shubha.pdf",
+    "avatar": "images/avatar.JPG",
+    "metrics": [
+      {
+        "value": "11",
+        "label": "Peer-Reviewed Publications"
+      },
+      {
+        "value": "3.988",
+        "label": "Ph.D. GPA at LSU (4.00 Scale)"
+      },
+      {
+        "value": "$268K+",
+        "label": "Funded Grants (NSF & LA BoR)"
+      },
+      {
+        "value": "2026",
+        "label": "Quantum Rising Star Award"
+      }
+    ],
+    "interests": [
+      "Quantum Hardware Security",
+      "Multi-Tenant Superconducting Qubits",
+      "Quantum Communication & Correlations",
+      "Quantum Error Correction",
+      "Quantum Cryptography (QKD)",
+      "Quantum Algorithms & QSVT",
+      "ML for Quantum Characterization"
+    ],
+    "links": {
+      "scholar": "https://scholar.google.com/citations?user=8EK8VJMAAAAJ",
+      "orcid": "https://orcid.org/0009-0005-1435-5958",
+      "github": "https://github.com/syedshubha",
+      "linkedin": "https://www.linkedin.com/in/syedshubha/",
+      "substack": "https://syedshubha.substack.com",
+      "bigganblog": "https://bigganblog.org/author/syed-shubha/",
+      "twitter": "https://twitter.com/syed_shubha",
+      "facebook": "https://www.facebook.com/physicist.shubha",
+      "reddit": "https://www.reddit.com/r/QuantumMemeology/",
+      "youtube": "https://www.youtube.com/playlist?list=PLEGgPKRszGn9g1C8Swhib5GtYgHJNb-Iq",
+      "chess": "https://www.chess.com/member/decohered_imam"
+    }
+  },
+  "pillars": [
+    {
+      "id": "security",
+      "icon": "🛡️",
+      "title": "Quantum Hardware Security & Crosstalk Detection",
+      "summary": "Securing multi-tenant superconducting quantum processors through pulse-level characterization of crosstalk as an active attack vector, pulse-to-circuit mapping of asymmetric attack mechanisms, and structural Pauli-transfer-matrix detection that separates coherent crosstalk from benign calibration drift.",
+      "highlights": [
+        "Funded by Louisiana Board of Regents ($73,926, Proposal no. 033A-26: \"Pulse-to-Circuit Security: Characterizing and Mitigating Crosstalk Attacks in Multi-Tenant Superconducting Quantum Hardware\")",
+        "Published/Accepted in IEEE HOST 2027 [C7], ACM CCS QSec 2025 [C5], and IEEE QCE 2025 [C4]",
+        "Featured in industry outlet Quantum Zeitgeist"
+      ]
+    },
+    {
+      "id": "communication",
+      "icon": "🔗",
+      "title": "Quantum Communication, Correlations & Error Correction",
+      "summary": "Exploiting quantum correlations to design adaptive error-correction and pair-preserving purification protocols for superdense coding in distributed quantum networks, alongside high-fidelity multi-qubit state teleportation over partially entangled GHZ channels using optimal POVMs.",
+      "highlights": [
+        "Funded by National Science Foundation EAGER ($194,596, Award no. 2608182) — conceived the research direction and wrote the proposal's research aims, questions, and methodology",
+        "Published in AVS Quantum Science 2025 [J4, Corresponding Author], Heliyon 2023 [J1, 1st Author], and IEEE QCE 2025 [C6]",
+        "Co-supervised research on surface-code ensemble decoders [C3] and hybrid QKD security [J2, J3]"
+      ]
+    },
+    {
+      "id": "characterization",
+      "icon": "⚛️",
+      "title": "Quantum Characterization, Pulse Control & Machine Learning",
+      "summary": "Combining pulse-level Hamiltonian simulation (Qiskit Pulse, QuTiP), Choi-matrix and Pauli-transfer process analysis, and classical-shadow machine learning pipelines to classify entanglement phases and benchmark noisy superconducting hardware.",
+      "highlights": [
+        "Neural Shadows: ML pipeline built on sparse classical-shadow representations for Werner state phase classification",
+        "W-State pulse calibration on ibm_sherbrooke using Rabi experiments and Echoed Cross-Resonance (ECR)",
+        "Interactive pedagogical simulators for QSVT and Quantum Key Distribution (BB84, B92, E91)"
+      ]
+    }
+  ],
+  "updates": [
+    {
+      "id": "upd-host2027",
+      "date": "September 2026",
+      "badge": "ACCEPTED AT HOST 2027",
+      "category": "Publication",
+      "title": "Paper Accepted at IEEE HOST 2027",
+      "content": "Our paper <strong>\"Distinguishing Coherent Crosstalk from Calibration Drift via Pauli-Transfer Signatures and Quantum Edge Detection\"</strong> (with Dr. Tasnuva Farheen) has been accepted for publication in the <em>IEEE International Symposium on Hardware Oriented Security and Trust (HOST 2027)</em>. Read the paper on <a href=\"https://arxiv.org/abs/2609.40283\" target=\"_blank\">arXiv:2609.40283</a>."
+    },
+    {
+      "id": "upd-pkp2026",
+      "date": "Spring 2026",
+      "badge": "HONOR & SERVICE",
+      "category": "Recognition",
+      "title": "Phi Kappa Phi Induction & IEEE TQE Reviewer Service",
+      "content": "Inducted into <strong>The Honor Society of Phi Kappa Phi</strong> (2026) and serving as Reviewer for <em>IEEE Transactions on Quantum Engineering (TQE)</em> and Sub-reviewer for <em>IEEE Dallas Circuits and Systems Conference (DCAS 2026)</em>."
+    },
+    {
+      "id": "upd-qs3-2026",
+      "date": "March 2026",
+      "badge": "AWARD",
+      "category": "Award",
+      "title": "Quantum Rising Star Award at Rice University (QS3)",
+      "content": "Received the <strong>Quantum Rising Star Award</strong> at the Inaugural Quantum Student Success Summit (QS3) at Rice University, Houston, TX! Delivered a lightning talk and poster on crosstalk vulnerabilities in multi-tenant quantum processors."
+    },
+    {
+      "id": "upd-qsec2025",
+      "date": "October 2025",
+      "badge": "ACM QSEC '25 & MEDIA",
+      "category": "Publication",
+      "title": "Presented at ACM QSec '25 (co-located with ACM CCS) & Featured in Quantum Zeitgeist",
+      "content": "Presented <strong>\"Pulse-to-Circuit Characterization of Stealthy Crosstalk Attack on Multi-Tenant Superconducting Quantum Hardware\"</strong> at the ACM Quantum Security and Privacy Workshop (QSec '25). Read the paper (<a href=\"https://doi.org/10.1145/3733825.3765282\" target=\"_blank\">DOI</a> | <a href=\"https://arxiv.org/abs/2509.11407\" target=\"_blank\">arXiv</a>) and the feature in <a href=\"https://quantumzeitgeist.com/quantum-pulse-circuit-mapping-reveals-stealthy-crosstalk-attack-three/\" target=\"_blank\">Quantum Zeitgeist</a>."
+    },
+    {
+      "id": "upd-avs2025",
+      "date": "September 2025",
+      "badge": "JOURNAL PUBLICATION",
+      "category": "Publication",
+      "title": "Published in AVS Quantum Science (Corresponding Author)",
+      "content": "Our article <strong>\"Secure and Efficient n-Qubit Entangled State Teleportation Using Partially Entangled GHZ Channels and Optimal POVM\"</strong> was published in <em>AVS Quantum Science</em> (Vol. 7, No. 3, Q1-indexed, IF: 3.0). <a href=\"https://doi.org/10.1116/5.0284072\" target=\"_blank\">doi:10.1116/5.0284072</a>. Featured in <a href=\"https://quantumzeitgeist.com/enhanced-security-efficient-qubit-entangled-state-teleportation-achieves-partially/\" target=\"_blank\">Quantum Zeitgeist</a>."
+    },
+    {
+      "id": "upd-qce2025",
+      "date": "September 2025",
+      "badge": "IEEE QUANTUM WEEK",
+      "category": "Award",
+      "title": "Two First-Author Papers at IEEE QCE 2025 & NSF Student Travel Grant",
+      "content": "Presented two first-author papers at IEEE International Conference on Quantum Computing and Engineering (QCE 2025): <em>\"Testbed Protocol for Adaptive Superdense Coding in Distributed Quantum Networks\"</em> (<a href=\"https://doi.org/10.1109/QCE65121.2025.10350\" target=\"_blank\">doi:10.1109/QCE65121.2025.10350</a>) and <em>\"Pulse-Level Simulation of Crosstalk Attacks on Superconducting Quantum Hardware\"</em> (<a href=\"https://doi.org/10.1109/QCE65121.2025.10300\" target=\"_blank\">doi:10.1109/QCE65121.2025.10300</a>). Awarded the <strong>NSF Student Travel Grant ($1,250)</strong> and highlighted by <a href=\"https://www.linkedin.com/posts/lsu-division-of-computer-science-engineering_lsu-quantumcomputing-researchexcellence-activity-7364405533233065984-xWiW\" target=\"_blank\">LSU Division of CSE</a>."
+    }
+  ],
+  "publications": [
+    {
+      "id": "pub-j4",
+      "code": "J4",
+      "type": "journal",
+      "title": "Secure and Efficient n-Qubit Entangled State Teleportation Using Partially Entangled GHZ Channels and Optimal POVM",
+      "authors": "A. Banik, M. S. Khan, R. M. Khan, <strong>S. E. U. Shubha*</strong>, and M. R. Chowdhury",
+      "venue": "AVS Quantum Science, vol. 7, no. 3",
+      "year": 2025,
+      "role": "Corresponding Author",
+      "metrics": "Q1-Indexed • IF: 3.0 • Featured in Quantum Zeitgeist",
+      "doi_url": "https://doi.org/10.1116/5.0284072",
+      "arxiv_url": "",
+      "pdf_url": "assets/files/AVS_Quantum_Science_2025_Teleportation.pdf",
+      "featured": true,
+      "bibtex": "@article{banik2025secure,\n  title={Secure and Efficient n-Qubit Entangled State Teleportation Using Partially Entangled GHZ Channels and Optimal POVM},\n  author={Banik, A. and Khan, M. S. and Khan, R. M. and Shubha, S. E. U. and Chowdhury, M. R.},\n  journal={AVS Quantum Science},\n  volume={7},\n  number={3},\n  year={2025},\n  doi={10.1116/5.0284072}\n}"
+    },
+    {
+      "id": "pub-j3",
+      "code": "J3",
+      "type": "journal",
+      "title": "Multi-Layered Security System: Integrating Quantum Key Distribution with Classical Cryptography to Enhance Steganographic Security",
+      "authors": "A. Sykot, M. S. Azad, W. R. Tanha, B. M. M. Morshed, <strong>S. E. U. Shubha</strong>, and M. R. C. Mahdy",
+      "venue": "Alexandria Engineering Journal, vol. 121, pp. 167–182",
+      "year": 2025,
+      "role": "Co-Supervised",
+      "metrics": "Q1-Indexed • IF: 6.8",
+      "doi_url": "https://doi.org/10.1016/j.aej.2025.02.056",
+      "arxiv_url": "",
+      "pdf_url": "",
+      "featured": true,
+      "bibtex": "@article{sykot2025multilayered,\n  title={Multi-Layered Security System: Integrating Quantum Key Distribution with Classical Cryptography to Enhance Steganographic Security},\n  author={Sykot, A. and Azad, M. S. and Tanha, W. R. and Morshed, B. M. M. and Shubha, S. E. U. and Mahdy, M. R. C.},\n  journal={Alexandria Engineering Journal},\n  volume={121},\n  pages={167--182},\n  year={2025},\n  doi={10.1016/j.aej.2025.02.056}\n}"
+    },
+    {
+      "id": "pub-j2",
+      "code": "J2",
+      "type": "journal",
+      "title": "Quantum Secure Image Transmission: A Chaos-Assisted Quantum Key Distribution Approach Using Entanglement",
+      "authors": "R. Rahman, M. S. Azad, M. R. Hasan, <strong>S. E. U. Shubha</strong>, and M. R. C. Mahdy",
+      "venue": "IET Quantum Communication, vol. 6, no. 1, p. e70016",
+      "year": 2025,
+      "role": "Co-Supervised",
+      "metrics": "Q2-Indexed • IF: 2.8",
+      "doi_url": "https://doi.org/10.1049/qtc2.70016",
+      "arxiv_url": "",
+      "pdf_url": "",
+      "featured": true,
+      "bibtex": "@article{rahman2025quantum,\n  title={Quantum Secure Image Transmission: A Chaos-Assisted Quantum Key Distribution Approach Using Entanglement},\n  author={Rahman, R. and Azad, M. S. and Hasan, M. R. and Shubha, S. E. U. and Mahdy, M. R. C.},\n  journal={IET Quantum Communication},\n  volume={6},\n  number={1},\n  pages={e70016},\n  year={2025},\n  doi={10.1049/qtc2.70016}\n}"
+    },
+    {
+      "id": "pub-j1",
+      "code": "J1",
+      "type": "journal",
+      "title": "Significant Improvement of Fidelity for Encoded Quantum Bell Pairs at Long and Short-Distance Communication along with Generalized Circuit",
+      "authors": "<strong>S. E. U. Shubha</strong>, M. S. Rahman, and M. R. C. Mahdy",
+      "venue": "Heliyon, vol. 9, no. 9, p. e19700",
+      "year": 2023,
+      "role": "1st Author",
+      "metrics": "Q1-Indexed • IF: 3.6",
+      "doi_url": "https://doi.org/10.1016/j.heliyon.2023.e19700",
+      "arxiv_url": "",
+      "pdf_url": "assets/files/Heliyon_2023_Bell_Pairs_Fidelity.pdf",
+      "featured": true,
+      "bibtex": "@article{shubha2023significant,\n  title={Significant Improvement of Fidelity for Encoded Quantum Bell Pairs at Long and Short-Distance Communication along with Generalized Circuit},\n  author={Shubha, S. E. U. and Rahman, M. S. and Mahdy, M. R. C.},\n  journal={Heliyon},\n  volume={9},\n  number={9},\n  pages={e19700},\n  year={2023},\n  doi={10.1016/j.heliyon.2023.e19700}\n}"
+    },
+    {
+      "id": "pub-c7",
+      "code": "C7",
+      "type": "conference",
+      "title": "Distinguishing Coherent Crosstalk from Calibration Drift via Pauli-Transfer Signatures and Quantum Edge Detection",
+      "authors": "<strong>S. E. U. Shubha</strong> and T. Farheen",
+      "venue": "IEEE International Symposium on Hardware Oriented Security and Trust (HOST)",
+      "year": 2027,
+      "role": "1st Author",
+      "metrics": "Accepted (To Appear) • Hardware Security Flagship",
+      "doi_url": "https://doi.org/10.48550/arXiv.2609.40283",
+      "arxiv_url": "https://arxiv.org/abs/2609.40283",
+      "pdf_url": "assets/files/HOST_2027_Crosstalk_Pauli_Transfer.pdf",
+      "featured": true,
+      "bibtex": "@inproceedings{shubha2027distinguishing,\n  title={Distinguishing Coherent Crosstalk from Calibration Drift via Pauli-Transfer Signatures and Quantum Edge Detection},\n  author={Shubha, S. E. U. and Farheen, T.},\n  booktitle={IEEE International Symposium on Hardware Oriented Security and Trust (HOST)},\n  year={2027},\n  note={arXiv:2609.40283}\n}"
+    },
+    {
+      "id": "pub-c6",
+      "code": "C6",
+      "type": "conference",
+      "title": "Testbed Protocol for Adaptive Superdense Coding in Distributed Quantum Networks",
+      "authors": "<strong>S. E. U. Shubha</strong> and T. Farheen",
+      "venue": "IEEE International Conference on Quantum Computing and Engineering (QCE / IEEE Quantum Week)",
+      "year": 2025,
+      "role": "1st Author",
+      "metrics": "Short Paper • NSF Student Travel Grant",
+      "doi_url": "https://doi.org/10.1109/QCE65121.2025.10350",
+      "arxiv_url": "https://arxiv.org/abs/2504.12565",
+      "pdf_url": "assets/files/QCE_2025_Adaptive_Superdense_Coding.pdf",
+      "featured": true,
+      "bibtex": "@inproceedings{shubha2025testbed,\n  title={Testbed Protocol for Adaptive Superdense Coding in Distributed Quantum Networks},\n  author={Shubha, S. E. U. and Farheen, T.},\n  booktitle={IEEE International Conference on Quantum Computing and Engineering (QCE)},\n  year={2025},\n  doi={10.1109/QCE65121.2025.10350}\n}"
+    },
+    {
+      "id": "pub-c5",
+      "code": "C5",
+      "type": "conference",
+      "title": "Pulse-to-Circuit Characterization of Stealthy Crosstalk Attack on Multi-Tenant Superconducting Quantum Hardware",
+      "authors": "<strong>S. E. U. Shubha</strong> and T. Farheen",
+      "venue": "Proceedings of the 2025 Quantum Security and Privacy Workshop (QSec '25), co-located with ACM CCS, pp. 16–27",
+      "year": 2025,
+      "role": "1st Author",
+      "metrics": "ACM CCS Workshop • Featured in Quantum Zeitgeist",
+      "doi_url": "https://doi.org/10.1145/3733825.3765282",
+      "arxiv_url": "https://arxiv.org/abs/2509.11407",
+      "pdf_url": "assets/files/ACM_QSec_2025_Crosstalk.pdf",
+      "featured": true,
+      "bibtex": "@inproceedings{shubha2025pulse,\n  title={Pulse-to-Circuit Characterization of Stealthy Crosstalk Attack on Multi-Tenant Superconducting Quantum Hardware},\n  author={Shubha, S. E. U. and Farheen, T.},\n  booktitle={Proceedings of the 2025 Quantum Security and Privacy Workshop (QSec '25)},\n  pages={16--27},\n  year={2025},\n  doi={10.1145/3733825.3765282}\n}"
+    },
+    {
+      "id": "pub-c4",
+      "code": "C4",
+      "type": "conference",
+      "title": "Pulse-Level Simulation of Crosstalk Attacks on Superconducting Quantum Hardware",
+      "authors": "<strong>S. E. U. Shubha</strong> and T. Farheen",
+      "venue": "IEEE International Conference on Quantum Computing and Engineering (QCE / IEEE Quantum Week)",
+      "year": 2025,
+      "role": "1st Author",
+      "metrics": "Short Paper • NSF Student Travel Grant",
+      "doi_url": "https://doi.org/10.1109/QCE65121.2025.10300",
+      "arxiv_url": "https://arxiv.org/abs/2507.16181",
+      "pdf_url": "",
+      "featured": true,
+      "bibtex": "@inproceedings{shubha2025pulselevel,\n  title={Pulse-Level Simulation of Crosstalk Attacks on Superconducting Quantum Hardware},\n  author={Shubha, S. E. U. and Farheen, T.},\n  booktitle={IEEE International Conference on Quantum Computing and Engineering (QCE)},\n  year={2025},\n  doi={10.1109/QCE65121.2025.10300}\n}"
+    },
+    {
+      "id": "pub-c3",
+      "code": "C3",
+      "type": "conference",
+      "title": "RESCUED: Robust Quantum Error Correction with Surface Code in Noisy Channels Using Ensemble Decoder",
+      "authors": "S. Barua, <strong>S. E. U. Shubha</strong>, M. Rahman, A. J. Uchash, and M. R. C. Mahdy",
+      "venue": "IEEE International Conference on Telecommunications and Photonics (ICTP), pp. 1–5",
+      "year": 2023,
+      "role": "Co-Supervised",
+      "metrics": "IEEE ICTP 2023",
+      "doi_url": "",
+      "arxiv_url": "",
+      "pdf_url": "",
+      "featured": false,
+      "bibtex": "@inproceedings{barua2023rescued,\n  title={RESCUED: Robust Quantum Error Correction with Surface Code in Noisy Channels Using Ensemble Decoder},\n  author={Barua, S. and Shubha, S. E. U. and Rahman, M. and Uchash, A. J. and Mahdy, M. R. C.},\n  booktitle={IEEE International Conference on Telecommunications and Photonics (ICTP)},\n  pages={1--5},\n  year={2023}\n}"
+    },
+    {
+      "id": "pub-c2",
+      "code": "C2",
+      "type": "conference",
+      "title": "Effect of Quantum Repetition Code on Fidelity of Bell States in Bit Flip Channels",
+      "authors": "<strong>S. E. U. Shubha</strong> and M. S. Rahman",
+      "venue": "12th International Conference on Electrical and Computer Engineering (ICECE), IEEE, pp. 368–371",
+      "year": 2022,
+      "role": "1st Author",
+      "metrics": "IEEE ICECE 2022",
+      "doi_url": "https://doi.org/10.1109/ICECE57408.2022.10088665",
+      "arxiv_url": "",
+      "pdf_url": "",
+      "featured": false,
+      "bibtex": "@inproceedings{shubha2022effect,\n  title={Effect of Quantum Repetition Code on Fidelity of Bell States in Bit Flip Channels},\n  author={Shubha, S. E. U. and Rahman, M. S.},\n  booktitle={12th International Conference on Electrical and Computer Engineering (ICECE)},\n  pages={368--371},\n  year={2022},\n  organization={IEEE},\n  doi={10.1109/ICECE57408.2022.10088665}\n}"
+    },
+    {
+      "id": "pub-c1",
+      "code": "C1",
+      "type": "conference",
+      "title": "Effect of EOG Artifact Removal on EEG Motor-Imagery Classification",
+      "authors": "M. A. Iqbal, M. M. Rahman, S. Muhtasim, <strong>S. E. U. Shubha</strong>, and M. Hasan",
+      "venue": "25th International Conference on Computer and Information Technology (ICCIT), IEEE, pp. 850–854",
+      "year": 2022,
+      "role": "Co-Author",
+      "metrics": "IEEE ICCIT 2022",
+      "doi_url": "https://doi.org/10.1109/ICCIT57492.2022.10056062",
+      "arxiv_url": "",
+      "pdf_url": "",
+      "featured": false,
+      "bibtex": "@inproceedings{iqbal2022effect,\n  title={Effect of EOG Artifact Removal on EEG Motor-Imagery Classification},\n  author={Iqbal, M. A. and Rahman, M. M. and Muhtasim, S. and Shubha, S. E. U. and Hasan, M.},\n  booktitle={25th International Conference on Computer and Information Technology (ICCIT)},\n  pages={850--854},\n  year={2022},\n  organization={IEEE},\n  doi={10.1109/ICCIT57492.2022.10056062}\n}"
+    }
+  ],
+  "projects": [
+    {
+      "id": "proj-qsvt",
+      "title": "Interactive Quantum Singular Value Transformation (QSVT)",
+      "category": "Interactive Simulation",
+      "badge": "Live Web App",
+      "description": "A real-time interactive four-stage mathematical and quantum circuit pipeline realizing Singular Value Decomposition, Cosine–Sine Unitary Block Encoding, Quantum Signal Processing (with in-browser Adam phase-angle optimization), and the QSVT polynomial transformation theorem.",
+      "tech": [
+        "QSVT",
+        "Quantum Signal Processing",
+        "Block Encoding",
+        "Interactive MathJax"
+      ],
+      "link": "QSVT.html",
+      "link_label": "Launch Interactive Demo →",
+      "repo_url": "https://github.com/syedshubha/syedshubha.github.io/blob/main/QSVT.html"
+    },
+    {
+      "id": "proj-shadows",
+      "title": "Neural Shadows: ML for Entanglement Classification",
+      "category": "Quantum Machine Learning",
+      "badge": "Open Source",
+      "description": "Classified entanglement phases of Werner states with an ML pipeline built on sparse classical-shadow representations; quantified SVM (with Quantum Kernels), FNN, and Random Forest robustness to finite-shot noise via Monte Carlo stability analysis.",
+      "tech": [
+        "Classical Shadows",
+        "Quantum Kernels",
+        "PyTorch / Scikit-Learn",
+        "Tomography"
+      ],
+      "link": "https://github.com/syedshubha/ShadowTomography",
+      "link_label": "View GitHub Repository →",
+      "repo_url": "https://github.com/syedshubha/ShadowTomography"
+    },
+    {
+      "id": "proj-wstate",
+      "title": "W-State Preparation on Superconducting Qubits with Qiskit Pulse",
+      "category": "Pulse-Level Control",
+      "badge": "Hardware Calibration",
+      "description": "Designed custom microwave gate and measurement pulses from ibm_sherbrooke calibration data; calibrated π-pulses via Rabi experiments and implemented echoed cross-resonance (ECR) sequences to mitigate crosstalk in noisy simulations.",
+      "tech": [
+        "Qiskit Pulse",
+        "IBM Sherbrooke",
+        "Rabi Calibration",
+        "Echoed Cross-Resonance"
+      ],
+      "link": "https://github.com/syedshubha/Phy4750Sh",
+      "link_label": "View GitHub Repository →",
+      "repo_url": "https://github.com/syedshubha/Phy4750Sh"
+    },
+    {
+      "id": "proj-qprotocols",
+      "title": "Interactive Quantum Protocol Simulations & Curriculum",
+      "category": "Quantum Cryptography & Education",
+      "badge": "Curriculum & Code",
+      "description": "Developed interactive educational modules progressing from foundational circuit design to density-matrix formalism, featuring end-to-end simulations and eavesdropping security analysis of BB84, B92, and E91 protocols.",
+      "tech": [
+        "BB84 / B92 / E91",
+        "Density Matrix Formalism",
+        "Qiskit",
+        "Quantum Education"
+      ],
+      "link": "https://github.com/syedshubha/TeachingQuantumComputing",
+      "link_label": "View GitHub Repository →",
+      "repo_url": "https://github.com/syedshubha/TeachingQuantumComputing"
+    },
+    {
+      "id": "proj-qimage",
+      "title": "Quantum Image Encoding and Decoding (FRQI & NEQR)",
+      "category": "Quantum Algorithms",
+      "badge": "Open Source",
+      "description": "Implemented FRQI and NEQR quantum image encodings in Qiskit, generalized both encoding circuits, and developed a measurement-based decoding method to reconstruct output images.",
+      "tech": [
+        "FRQI",
+        "NEQR",
+        "Qiskit",
+        "Quantum Image Processing"
+      ],
+      "link": "https://github.com/syedshubha/QuantumImageProcessing/blob/main/qiskit_assignment_shubha.ipynb",
+      "link_label": "View Jupyter Notebook →",
+      "repo_url": "https://github.com/syedshubha/QuantumImageProcessing"
+    },
+    {
+      "id": "proj-loadflow",
+      "title": "Load Flow Analysis for n-Bus Power Systems",
+      "category": "Power Systems & Numerical Methods",
+      "badge": "Open Source",
+      "description": "Generalized Gauss–Seidel load flow solver for n-bus power networks with user-defined convergence tolerance and automated spreadsheet I/O management.",
+      "tech": [
+        "MATLAB",
+        "Gauss–Seidel",
+        "Numerical Analysis",
+        "Power Systems"
+      ],
+      "link": "https://github.com/syedshubha/load_flow_analysis_gauss_seidel",
+      "link_label": "View GitHub Repository →",
+      "repo_url": "https://github.com/syedshubha/load_flow_analysis_gauss_seidel"
+    }
+  ],
+  "experience": [
+    {
+      "role": "Graduate Research Assistant",
+      "organization": "Division of Computer Science, Louisiana State University, Baton Rouge, LA",
+      "period": "January 2025 – Present",
+      "bullets": [
+        "Quantum hardware security direction: characterized crosstalk as an active attack vector on shared superconducting hardware through pulse-level simulation [C4], then developed a pulse-to-circuit characterization framework identifying a novel asymmetric attack mechanism [C5].",
+        "Developed a structural detection framework that separates coherent crosstalk from calibration drift using Pauli-transfer-matrix signatures, built around an exact structural zero [C7]. Funded by Louisiana Board of Regents ($73,926, Proposal no. 033A-26).",
+        "Quantum communication direction (NSF-funded): designed a correlation-guided adaptive purification protocol for superdense coding in distributed networks [C6]; conceived the research direction and wrote the research aims, questions, and methodology for NSF EAGER Award no. 2608182 ($194,596). Led collaborative work on n-qubit state teleportation over partially entangled GHZ channels with optimal POVM measurement [J4]."
+      ]
+    },
+    {
+      "role": "Graduate Teaching Assistant",
+      "organization": "Louisiana State University, Baton Rouge, LA",
+      "period": "August 2025 – Present",
+      "bullets": [
+        "CSC 4501 (Computer Networks): support instructional activities, grade assignments, and provide technical feedback to students."
+      ]
+    },
+    {
+      "role": "Research Assistant",
+      "organization": "Department of Electrical and Computer Engineering, North South University, Dhaka",
+      "period": "June 2022 – May 2024",
+      "bullets": [
+        "Pioneered Bangladesh's first research initiative in quantum computing and quantum communication under the supervision of Dr. Mahdy Rahman Chowdhury; helped build the NSU Center of Quantum Computing (NCQC).",
+        "Extended undergraduate thesis work into a first-author journal article proposing a stabilizer-formalism error-correction protocol that improves Bell-pair fidelity under Pauli noise [J1].",
+        "Co-supervised student researchers on surface-code ensemble decoders [C3] and hybrid QKD security [J2, J3]. Five of my former mentees are now Ph.D. students in quantum information at institutions worldwide."
+      ]
+    },
+    {
+      "role": "Teaching Assistant",
+      "organization": "BRAC University, Dhaka, Bangladesh",
+      "period": "June 2023 – December 2024",
+      "bullets": [
+        "CSE 482 (Quantum Computing II): conducted tutorials and problem-solving sessions.",
+        "MAT 120 (Calculus): conducted lab sessions on numerical methods and scientific Python libraries."
+      ]
+    },
+    {
+      "role": "Undergraduate Researcher",
+      "organization": "Department of Electrical and Electronic Engineering, BUET, Dhaka",
+      "period": "2021 – 2022",
+      "bullets": [
+        "Conducted undergraduate thesis on quantum communication under Dr. Md. Saifur Rahman: fidelity of Bell states protected by quantum repetition codes in bit-flip channels [C2].",
+        "Studied the effect of EOG artifact removal on deep-learning classification of motor-imagery EEG signals for brain–computer interfaces [C1]."
+      ]
+    }
+  ],
+  "education": [
+    {
+      "degree": "Ph.D. in Computer Science",
+      "institution": "Louisiana State University, Baton Rouge, LA, USA",
+      "period": "January 2025 – Present",
+      "details": "GPA: 3.988 / 4.00 • Advisor: Dr. Tasnuva Farheen • Coursework: Quantum Technology (A+), Quantum Algorithms (A+), Machine Learning (A+), Advanced Algorithm Design"
+    },
+    {
+      "degree": "B.Sc. in Electrical and Electronic Engineering",
+      "institution": "Bangladesh University of Engineering and Technology (BUET), Dhaka",
+      "period": "February 2017 – May 2022",
+      "details": "CGPA: 3.24 / 4.00 • Thesis Supervisor: Dr. Md. Saifur Rahman • Coursework: Control Systems, Solid State Devices, Random Signals & Processes, Communication Systems"
+    }
+  ],
+  "awards": [
+    "Quantum Rising Star Award — Inaugural Quantum Student Success Summit (QS3), Rice University, Houston, TX (2026)",
+    "Inducted Member — The Honor Society of Phi Kappa Phi (2026)",
+    "Research Funding — National Science Foundation (EAGER) Award no. 2608182 ($194,596, PI: Dr. Tasnuva Farheen; conceived direction & wrote aims/methodology) & Louisiana Board of Regents Proposal no. 033A-26 ($73,926)",
+    "NSF Student Travel Grant ($1,250) — To present two first-author papers [C4, C6] at IEEE Quantum Week (QCE 2025)",
+    "Peer Reviewer — IEEE Transactions on Quantum Engineering (TQE, 2026) & Sub-reviewer, IEEE DCAS (2026)",
+    "Media Recognition — Featured twice in Quantum Zeitgeist (QSec '25 paper [C5] & AVS Quantum Science article [J4]) and highlighted by LSU Division of CSE",
+    "Invited Talks & Instruction — Lightning Talk at Rice University QS3 (2026), Q-Net Symposium Presenter at LSU APS Chapter (2025), Instructor at 3rd PSI-Tensor Winter School for Theoretical Physics (2024), Keynote Speaker at IEEE NSU Student Branch (2022)",
+    "First Place — University-Level Mathematical Olympiad, Bangladesh Mathematical Society (2021)",
+    "University Admission Test Scholarship — BUET; ranked 47th of ~10,000 candidates in Bangladesh's most competitive engineering admission test (2017)"
+  ],
+  "posts": [
+    {
+      "id": "post-agrippan-trilemma",
+      "slug": "agrippan-trilemma",
+      "title": "Agrippan Trilemma: Theoretical Impossibility of Proving Truths",
+      "date": "2026",
+      "category": "Philosophy & Epistemology",
+      "source": "Substack",
+      "read_time": "5 min read",
+      "cover_image": "images/agrippan_epistemology.jpg",
+      "summary": "Why it is fundamentally impossible to prove any proposition with absolute certainty—and how Karl Popper's falsifiability allows science to circumvent the three horns of Agrippa's trilemma (infinite regress, circularity, and dogmatic axiom) where religion and metaphysics stall.",
+      "external_url": "https://syedshubha.substack.com/p/agrippan-trilemma",
+      "pdf_url": "",
+      "tags": [
+        "Epistemology",
+        "Agrippan Trilemma",
+        "Karl Popper",
+        "Philosophy of Science",
+        "Substack"
+      ],
+      "content": "![All knowledge is ultimately based on that which we cannot prove](images/agrippan_epistemology.jpg)\n\nIt is fundamentally impossible to prove any proposition with absolute certainty. This epistemological problem is known as the **Agrippan Trilemma** (or Münchhausen Trilemma). It arises from a simple logical requirement: any claim to truth must be justified by evidence or logic. However, that justification is itself a claim that requires its own justification. This creates a structural paradox where the foundation of knowledge can never be definitively settled, rendering absolute proof unattainable.\n\nAny attempt to construct a flawless foundation of knowledge will inevitably encounter one of three logical dead ends:\n\n1. **Infinite Regress:** A proposition is justified by a second, the second by a third, and so on indefinitely, without ever reaching a foundational bedrock.\n2. **Circular Reasoning:** The chain of justification loops back upon itself, relying on the conclusion to prove the premise.\n3. **Dogmatic Assumption (Axiomatic Halting):** The chain of justification is arbitrarily halted by asserting a fundamental premise as an axiom that requires no proof.\n\n---\n\n## Religion, Metaphysics, and Falsifiability\n\nHistorically, religion and metaphysics have attempted to resolve this trilemma but ultimately fall victim to its constraints. Religion almost exclusively relies on dogmatic assumption, halting the infinite regress by asserting an absolute endpoint like an infallible deity, divine revelation, or a sacred text. Metaphysics attempts to establish the ultimate nature of reality through pure reason, but it too must eventually rely on unprovable axioms—assuming without tangible evidence that human intuition aligns with the fundamental mechanics of the universe.\n\nStrictly speaking, the scientific method also fails the Agrippan Trilemma: science relies on foundational assumptions such as the uniformity of nature and the reliability of observation. However, science remains our most powerful epistemological tool because of philosopher **Karl Popper's concept of falsifiability**.\n\nPopper argued that science circumvents the trilemma by abandoning the search for absolute proof and instead making specific, risky predictions that can be empirically tested and **proven wrong**. Science does not claim to hold absolute, unassailable truth; rather, it offers the strongest surviving models that have withstood rigorous attempts at refutation.\n\n🔗 **[Read the original post on Substack →](https://syedshubha.substack.com/p/agrippan-trilemma)**"
+    },
+    {
+      "id": "post-beyond-sisyphus",
+      "slug": "beyond-sisyphus",
+      "title": "Beyond Sisyphus: The Limits of Logic at the End of Meaning",
+      "date": "2026",
+      "category": "Philosophy & Essays",
+      "source": "Substack",
+      "read_time": "6 min read",
+      "cover_image": "",
+      "summary": "An analytical examination of existential meaning, global vs. local accountability, why Albert Camus's command that 'one must imagine Sisyphus happy' commits an is–ought fallacy, and why continuing to live is choosing a non-trivial algebraic structure over the trivial identity group {e}.",
+      "external_url": "https://syedshubha.substack.com/p/beyond-sisyphus",
+      "pdf_url": "",
+      "tags": [
+        "Existentialism",
+        "Albert Camus",
+        "Group Theory",
+        "Philosophy",
+        "Substack"
+      ],
+      "content": "I am at a stage in life where *\"why\"* has superseded *\"what\"* or *\"how.\"* As an analytical person, I find myself trying to rely less on emotion and more on logic to answer a foundational question: why should we strive in a universe devoid of intrinsic teleology?\n\n## Global Meaninglessness vs. Local Accountability\n\nUnder deterministic or Many-Worlds physical frameworks, traditional notions of uncaused agency break down. How then do we justify our actions? The answer lies in separating the **global** from the **local**—much like a software simulation or video game. Globally, outside the confines of the software, no state configuration is objectively \"right\" or \"wrong.\" Yet locally, within the system's dynamics, an agent cannot evade the causal consequences of its environment.\n\n## The Logical Flaw in Camus's Sisyphus\n\nAlbert Camus famously addressed the absurd by declaring that *\"one must imagine Sisyphus happy.\"* While compelling as a poetic coping mechanism, it is logically flawed: Camus transitions abruptly from a **descriptive observation** (the universe has no intrinsic meaning) to a **prescriptive command** (you must rebel and be happy). He brute-forces a subjective aesthetic—the romanticized, defiant rebel—and disguises it as an objective logical conclusion.\n\nWe do not need to imagine Sisyphus happy. We can feel compassion for him, or nothing at all; none of these states carry inherent cosmic weight.\n\n## The Trivial Group `{e}` vs. Non-Trivial Structure\n\nWhy not simply give up? In abstract algebra and **group theory**, you can always satisfy the group axioms by collapsing a space into the **trivial group** $\\{e\\}$ containing solely the identity element. It is perfectly consistent, completely stable, and immune to contradiction—yet it contains no structure, no interactions, and yields zero information.\n\nContinuing to live is the **non-trivial group**: complex, asymmetric, and difficult to map. You can always collapse into the trivial identity state, but as an analytical mind, are you sure you don't want to see whether the non-trivial structure holds a symmetry worth discovering?\n\n🔗 **[Read the original essay on Substack →](https://syedshubha.substack.com/p/beyond-sisyphus)**"
+    },
+    {
+      "id": "post-male-loneliness",
+      "slug": "male-loneliness-epidemic",
+      "title": "Male Loneliness Epidemic: How \"Homie Culture\" and Feminism Can Solve It",
+      "date": "2026",
+      "category": "Sociology & Essays",
+      "source": "Substack",
+      "read_time": "5 min read",
+      "cover_image": "images/homie_feminism.jpg",
+      "summary": "From evolutionary human self-domestication via female mate choice to the agricultural rise of patriarchy—and how combining genuine feminism with prosocial 'homie culture' dismantles toxic 'sigma' isolation.",
+      "external_url": "https://syedshubha.substack.com/p/male-loneliness-epidemic",
+      "pdf_url": "",
+      "tags": [
+        "Sociology",
+        "Evolutionary Anthropology",
+        "Mental Health",
+        "Substack"
+      ],
+      "content": "![Feminism + Homie Culture vs Patriarchy + Choice Feminism](images/homie_feminism.jpg)\n\n## Evolutionary Self-Domestication vs. Patriarchal Disruption\n\nHistorically, a primary engine of human self-domestication was female mate choice: early human communities systematically favored cooperative, prosocial, and communicative partners over hyper-aggressive phenotypes. The agricultural revolution disrupted this trajectory—the accumulation of property and inheritance birthed patriarchal structures that bypassed female selection and structurally rewarded dominance and control over cooperation.\n\nAs modern feminism dismantles these historical constraints, a sharp cultural divergence has emerged:\n\n1. **The \"Sigma\" Retaliation (Patriarchal Isolation):** Hyper-individualism and emotional stoicism glorify male isolation as strength. Because vulnerability is stigmatized, men become unable to form deep platonic bonds with other men—directly fueling the modern male loneliness epidemic.\n2. **\"Homie Culture\" (The Prosocial Rebellion):** A counter-culture of digital and platonic intimacy—normalizing mental-health check-ins, earnest emotional support, and stigma-free male vulnerability—restores prosocial male bonding.\n\n## The Synthesis\n\nAs long as patriarchal norms reward emotional isolation, male loneliness will persist. Solving it requires a dual cultural shift:\n- **Scaling platonic intimacy and emotional vulnerability among men** (\"homie culture\") as the direct antidote to isolation.\n- **Advancing substantive feminism** that rejects performative tropes and selects for cooperative, respectful partnership.\n\n🔗 **[Read the original essay on Substack →](https://syedshubha.substack.com/p/male-loneliness-epidemic)**"
+    },
+    {
+      "id": "post-qsvt-interactive",
+      "slug": "interactive-quantum-singular-value-transformation",
+      "title": "Interactive Quantum Singular Value Transformation (QSVT): Live 4-Stage Pipeline",
+      "date": "2026",
+      "category": "Quantum Computing",
+      "source": "Interactive Lab",
+      "read_time": "6 min read",
+      "cover_image": "",
+      "summary": "An interactive browser-based mathematical laboratory realizing Singular Value Decomposition, Cosine–Sine Unitary Block Encoding, Quantum Signal Processing (with live Adam phase-angle optimization), and the QSVT theorem.",
+      "external_url": "QSVT.html",
+      "pdf_url": "",
+      "tags": [
+        "QSVT",
+        "Quantum Signal Processing",
+        "Block Encoding",
+        "Interactive MathJax"
+      ],
+      "content": "## Overview\n\nQuantum Singular Value Transformation (QSVT) unifies nearly all major quantum algorithms—including Hamiltonian simulation, Grover search, quantum linear systems, and amplitude amplification—into a single polynomial framework.\n\nIn my **[Interactive QSVT Web Laboratory](QSVT.html)**, you can edit any $m \\times n$ real matrix $A$ and target polynomial $P(x)$ and observe all four stages recomputed in real time:\n\n1. **Stage I — Singular Value Decomposition ($A = U \\Sigma V^\\dagger$)**\n2. **Stage II — Unitary Block Encoding ($U_A$ via Cosine–Sine Dilation)**\n3. **Stage III — Quantum Signal Processing & Phase-Angle Optimization ($\\vec{\\phi}$)**\n4. **Stage IV — Full QSVT Circuit Transformation ($U\\, P(\\Sigma/\\alpha)\\, V^\\dagger$)**\n\n👉 **[Launch the Interactive QSVT Simulator →](QSVT.html)**"
+    },
+    {
+      "id": "post-stirling",
+      "slug": "factorial-and-stirlings-approximation",
+      "title": "Factorial and Stirling's Approximation (ফ্যাক্টোরিয়াল আর স্টার্লিং এর এপ্রক্সিমেশন)",
+      "date": "April 2021",
+      "category": "Mathematics & Physics (Bengali)",
+      "source": "Bigganblog",
+      "read_time": "6 min read",
+      "cover_image": "",
+      "summary": "An exploration of one of the most elegant asymptotic approximations in mathematics—showing how Stirling's formula estimates factorials of large numbers using the Gamma function and Gaussian integrals.",
+      "external_url": "https://bigganblog.org/2021/04/stirlings_approximation/",
+      "pdf_url": "",
+      "tags": [
+        "Mathematics",
+        "Asymptotics",
+        "Bigganblog",
+        "Bengali"
+      ],
+      "content": "Published in **বিজ্ঞান ব্লগ (Bigganblog)**.\n\nAn accessible mathematical exposition deriving Stirling's approximation for large factorials:\n\n$$n! \\approx \\sqrt{2\\pi n}\\left(\\frac{n}{e}\\right)^n$$\n\nand exploring its connection to Euler's Gamma function $\\Gamma(n+1) = \\int_0^\\infty x^n e^{-x}\\,dx$ and Laplace's method.\n\n🔗 **[Read the full article on Bigganblog →](https://bigganblog.org/2021/04/stirlings_approximation/)**"
+    },
+    {
+      "id": "post-conditional-statements",
+      "slug": "conditional-statements-logic-bigganblog",
+      "title": "Conditional Statements and Their Variations (কন্ডিশনাল স্টেটমেন্ট এবং তার রকমভেদ)",
+      "date": "July 2020",
+      "category": "Mathematics & Physics (Bengali)",
+      "source": "Bigganblog",
+      "read_time": "5 min read",
+      "cover_image": "",
+      "summary": "A clear guide to material implication (P → Q), converse, inverse, contrapositive, and necessary vs. sufficient conditions in mathematical logic.",
+      "external_url": "https://bigganblog.org/2020/07/%e0%a6%95%e0%a6%a8%e0%a7%8d%e0%a6%a1%e0%a6%bf%e0%a6%b6%e0%a6%a8%e0%a6%be%e0%a6%b2-%e0%a6%b8%e0%a7%8d%e0%a6%9f%e0%a7%87%e0%a6%9f%e0%a6%ae%e0%a7%87%e0%a6%a8%e0%a7%8d%e0%a6%9f-%e0%a6%8f%e0%a6%ac%e0%a6%82/",
+      "pdf_url": "",
+      "tags": [
+        "Mathematical Logic",
+        "Proofs",
+        "Bigganblog",
+        "Bengali"
+      ],
+      "content": "Published in **বিজ্ঞান ব্লগ (Bigganblog)**.\n\nExplores the foundations of conditional statements ($P \\implies Q$), truth tables, contraposition ($\\neg Q \\implies \\neg P$), and why vacuous truth works the way it does in formal mathematics.\n\n🔗 **[Read the full article on Bigganblog →](https://bigganblog.org/2020/07/%e0%a6%95%e0%a6%a8%e0%a7%8d%e0%a6%a1%e0%a6%bf%e0%a6%b6%e0%a6%a8%e0%a6%be%e0%a6%b2-%e0%a6%b8%e0%a7%8d%e0%a6%9f%e0%a7%87%e0%a6%9f%e0%a6%ae%e0%a7%87%e0%a6%a8%e0%a7%8d%e0%a6%9f-%e0%a6%8f%e0%a6%ac%e0%a6%82/)**"
+    },
+    {
+      "id": "post-classical-mechanics-2",
+      "slug": "classical-mechanics-part-2-galilean-spacetime",
+      "title": "Classical Mechanics Part 2: Galilean Transformation & Spacetime Diagrams (ক্লাসিক্যাল মেকানিক্স পর্ব-২)",
+      "date": "April 2020",
+      "category": "Mathematics & Physics (Bengali)",
+      "source": "Bigganblog",
+      "read_time": "7 min read",
+      "cover_image": "",
+      "summary": "Inertial reference frames, Galilean invariance, and geometric spacetime diagrams in classical mechanics.",
+      "external_url": "https://bigganblog.org/2020/04/%e0%a6%95%e0%a7%8d%e0%a6%b2%e0%a6%be%e0%a6%b8%e0%a6%bf%e0%a6%95%e0%a7%8d%e0%a6%af%e0%a6%be%e0%a6%b2-%e0%a6%ae%e0%a7%87%e0%a6%95%e0%a6%be%e0%a6%a8%e0%a6%bf%e0%a6%95%e0%a7%8d%e0%a6%b8-%e0%a7%a8/",
+      "pdf_url": "",
+      "tags": [
+        "Classical Mechanics",
+        "Spacetime",
+        "Bigganblog",
+        "Bengali"
+      ],
+      "content": "Published in **বিজ্ঞান ব্লগ (Bigganblog)**.\n\nExamines Galilean coordinate transformations between inertial frames and introduces spacetime diagrams as a geometric lens on classical kinematics.\n\n🔗 **[Read the full article on Bigganblog →](https://bigganblog.org/2020/04/%e0%a6%95%e0%a7%8d%e0%a6%b2%e0%a6%be%e0%a6%b8%e0%a6%bf%e0%a6%95%e0%a7%8d%e0%a6%af%e0%a6%be%e0%a6%b2-%e0%a6%ae%e0%a7%87%e0%a6%95%e0%a6%be%e0%a6%a8%e0%a6%bf%e0%a6%95%e0%a7%8d%e0%a6%b8-%e0%a7%a8/)**"
+    },
+    {
+      "id": "post-classical-mechanics-1",
+      "slug": "classical-mechanics-part-1-history-newtons-laws",
+      "title": "Classical Mechanics Part 1: History of Newton's Laws of Motion (ক্লাসিক্যাল মেকানিক্স পর্ব-১: নিউটনের গতিসূত্রের ইতিহাস)",
+      "date": "April 2020",
+      "category": "Mathematics & Physics (Bengali)",
+      "source": "Bigganblog",
+      "read_time": "7 min read",
+      "cover_image": "",
+      "summary": "From Aristotelian physics and Galileo's inclined planes to Newton's Principia: the conceptual evolution of inertia and force.",
+      "external_url": "https://bigganblog.org/2020/04/%e0%a6%95%e0%a7%8d%e0%a6%b2%e0%a6%be%e0%a6%b8%e0%a6%bf%e0%a6%95%e0%a7%8d%e0%a6%af%e0%a6%be%e0%a6%b2-%e0%a6%ae%e0%a7%87%e0%a6%95%e0%a6%be%e0%a6%a8%e0%a6%bf%e0%a6%95%e0%a7%8d%e0%a6%b8-%e0%a7%a7/",
+      "pdf_url": "",
+      "tags": [
+        "Classical Mechanics",
+        "History of Physics",
+        "Bigganblog",
+        "Bengali"
+      ],
+      "content": "Published in **বিজ্ঞান ব্লগ (Bigganblog)**.\n\nTraces the historical and philosophical development of mechanics from Aristotle and Ibn Sina to Galileo Galilei and Isaac Newton.\n\n🔗 **[Read the full article on Bigganblog →](https://bigganblog.org/2020/04/%e0%a6%95%e0%a7%8d%e0%a6%b2%e0%a6%be%e0%a6%b8%e0%a6%bf%e0%a6%95%e0%a7%8d%e0%a6%af%e0%a6%be%e0%a6%b2-%e0%a6%ae%e0%a7%87%e0%a6%95%e0%a6%be%e0%a6%a8%e0%a6%bf%e0%a6%95%e0%a7%8d%e0%a6%b8-%e0%a7%a7/)**"
+    },
+    {
+      "id": "post-infinite-series",
+      "slug": "story-of-infinite-series",
+      "title": "The Story of Infinite Series (অসীম ধারার গল্প)",
+      "date": "July 2017",
+      "category": "Mathematics & Physics (Bengali)",
+      "source": "Bigganblog",
+      "read_time": "6 min read",
+      "cover_image": "",
+      "summary": "Zeno's paradoxes, convergence vs. divergence, Grandi's series, and why manipulating infinite sums requires rigorous analysis.",
+      "external_url": "https://bigganblog.org/2017/07/%e0%a6%85%e0%a6%b8%e0%a7%80%e0%a6%ae-%e0%a6%a7%e0%a6%be%e0%a6%b0%e0%a6%be%e0%a6%b0-%e0%a6%97%e0%a6%b2%e0%a7%8d%e0%a6%aa/",
+      "pdf_url": "",
+      "tags": [
+        "Infinite Series",
+        "Real Analysis",
+        "Bigganblog",
+        "Bengali"
+      ],
+      "content": "Published in **বিজ্ঞান ব্লগ (Bigganblog)**.\n\nExplores the subtleties of infinite series, partial sums, convergence tests, and famous mathematical paradoxes.\n\n🔗 **[Read the full article on Bigganblog →](https://bigganblog.org/2017/07/%e0%a6%85%e0%a6%b8%e0%a7%80%e0%a6%ae-%e0%a6%a7%e0%a6%be%e0%a6%b0%e0%a6%be%e0%a6%b0-%e0%a6%97%e0%a6%b2%e0%a7%8d%e0%a6%aa/)**"
+    },
+    {
+      "id": "post-proofs-without-words",
+      "slug": "proofs-without-words-beauty-of-math",
+      "title": "Proofs Without Words: The Beauty of Mathematics (কথা ছাড়া প্রমাণ: গণিতের সৌন্দর্য)",
+      "date": "September 2016",
+      "category": "Mathematics & Physics (Bengali)",
+      "source": "Bigganblog",
+      "read_time": "5 min read",
+      "cover_image": "",
+      "summary": "Visual and geometric proofs that reveal deep algebraic and number-theoretic identities at a single glance.",
+      "external_url": "https://bigganblog.org/2016/09/%e0%a6%95%e0%a6%a5%e0%a6%be-%e0%a6%9b%e0%a6%be%e0%a7%9c%e0%a6%be-%e0%a6%aa%e0%a7%8d%e0%a6%b0%e0%a6%ae%e0%a6%be%e0%a6%a3-%e0%a6%97%e0%a6%a3%e0%a6%bf%e0%a6%a4%e0%a7%87%e0%a6%b0-%e0%a6%b8%e0%a7%8c/",
+      "pdf_url": "",
+      "tags": [
+        "Visual Proofs",
+        "Geometry",
+        "Bigganblog",
+        "Bengali"
+      ],
+      "content": "Published in **বিজ্ঞান ব্লগ (Bigganblog)**.\n\nDemonstrates how geometric intuition and visual constructions can prove classic identities—from sums of odd integers to the Pythagorean theorem and infinite geometric series—without a single line of algebraic text.\n\n🔗 **[Read the full article on Bigganblog →](https://bigganblog.org/2016/09/%e0%a6%95%e0%a6%a5%e0%a6%be-%e0%a6%9b%e0%a6%be%e0%a7%9c%e0%a6%be-%e0%a6%aa%e0%a7%8d%e0%a6%b0%e0%a6%ae%e0%a6%be%e0%a6%a3-%e0%a6%97%e0%a6%a3%e0%a6%bf%e0%a6%a4%e0%a7%87%e0%a6%b0-%e0%a6%b8%e0%a7%8c/)**"
+    },
+    {
+      "id": "post-bohr-model",
+      "slug": "behind-the-bohr-model",
+      "title": "Behind the Bohr Model (বোর মডেলের অন্তরালে)",
+      "date": "August 2016",
+      "category": "Mathematics & Physics (Bengali)",
+      "source": "Bigganblog",
+      "read_time": "6 min read",
+      "cover_image": "",
+      "summary": "How Niels Bohr quantized angular momentum to explain atomic spectra and bridged classical electrodynamics with early quantum theory.",
+      "external_url": "https://bigganblog.org/2016/08/%e0%a6%ac%e0%a7%8b%e0%a6%b0-%e0%a6%ae%e0%a6%a1%e0%a7%87%e0%a6%b2%e0%a7%87%e0%a6%b0-%e0%a6%85%e0%a6%a8%e0%a7%8d%e0%a6%a4%e0%a6%b0%e0%a6%be%e0%a6%b2%e0%a7%87/",
+      "pdf_url": "",
+      "tags": [
+        "Quantum Physics",
+        "Bohr Model",
+        "Bigganblog",
+        "Bengali"
+      ],
+      "content": "Published in **বিজ্ঞান ব্লগ (Bigganblog)**.\n\nExamines the physical motivation, derivations, and de Broglie matter-wave interpretation behind Bohr's quantization condition $L = n\\hbar$.\n\n🔗 **[Read the full article on Bigganblog →](https://bigganblog.org/2016/08/%e0%a6%ac%e0%a7%8b%e0%a6%b0-%e0%a6%ae%e0%a6%a1%e0%a7%87%e0%a6%b2%e0%a7%87%e0%a6%b0-%e0%a6%85%e0%a6%a8%e0%a7%8d%e0%a6%a4%e0%a6%b0%e0%a6%be%e0%a6%b2%e0%a7%87/)**"
+    },
+    {
+      "id": "post-polynomial-factorization",
+      "slug": "polynomial-factorization-bigganblog",
+      "title": "Factorization of Single-Variable Polynomials (এক চলকবিশিষ্ট বহুপদীর উৎপাদকে বিশ্লেষণ)",
+      "date": "November 2016",
+      "category": "Mathematics & Physics (Bengali)",
+      "source": "Bigganblog",
+      "read_time": "6 min read",
+      "cover_image": "",
+      "summary": "Remainder theorem, rational root theorem, and systematic algebraic techniques for factoring polynomials.",
+      "external_url": "https://bigganblog.org/2016/11/%e0%a6%8f%e0%a6%95-%e0%a6%9a%e0%a6%b2%e0%a6%95%e0%a6%ac%e0%a6%bf%e0%a6%b6%e0%a6%bf%e0%a6%b7%e0%a7%8d%e0%a6%9f-%e0%a6%ac%e0%a6%b9%e0%a7%81%e0%a6%aa%e0%a6%a6%e0%a7%80%e0%a6%b0-%e0%a6%89%e0%a7%8e/",
+      "pdf_url": "",
+      "tags": [
+        "Algebra",
+        "Polynomials",
+        "Bigganblog",
+        "Bengali"
+      ],
+      "content": "Published in **বিজ্ঞান ব্লগ (Bigganblog)**.\n\nA tutorial on polynomial factorization using the factor theorem, rational root test, and cyclotomic symmetries.\n\n🔗 **[Read the full article on Bigganblog →](https://bigganblog.org/2016/11/%e0%a6%8f%e0%a6%95-%e0%a6%9a%e0%a6%b2%e0%a6%95%e0%a6%ac%e0%a6%bf%e0%a6%b6%e0%a6%bf%e0%a6%b7%e0%a7%8d%e0%a6%9f-%e0%a6%ac%e0%a6%b9%e0%a7%81%e0%a6%aa%e0%a6%a6%e0%a7%80%e0%a6%b0-%e0%a6%89%e0%a7%8e/)**"
+    },
+    {
+      "id": "post-3d-geometry",
+      "slug": "preliminary-discussion-3d-geometry",
+      "title": "Preliminary Discussion on 3D Geometry (ত্রিমাত্রিক জ্যামিতির কিছু প্রাথমিক আলোচনা)",
+      "date": "August 2016",
+      "category": "Mathematics & Physics (Bengali)",
+      "source": "Bigganblog",
+      "read_time": "5 min read",
+      "cover_image": "",
+      "summary": "Direction cosines, planes, lines, and vector representations in three-dimensional Euclidean space.",
+      "external_url": "https://bigganblog.org/2016/08/%e0%a6%a4%e0%a7%8d%e0%a6%b0%e0%a6%bf%e0%a6%ae%e0%a6%be%e0%a6%a4%e0%a7%8d%e0%a6%b0%e0%a6%bf%e0%a6%95-%e0%a6%9c%e0%a7%8d%e0%a6%af%e0%a6%be%e0%a6%ae%e0%a6%bf%e0%a6%a4%e0%a6%bf%e0%a6%b0-%e0%a6%95%e0%a6%bf/",
+      "pdf_url": "",
+      "tags": [
+        "3D Geometry",
+        "Vectors",
+        "Bigganblog",
+        "Bengali"
+      ],
+      "content": "Published in **বিজ্ঞান ব্লগ (Bigganblog)**.\n\nAn introduction to three-dimensional analytic geometry, direction ratios/cosines, and spatial coordinate systems.\n\n🔗 **[Read the full article on Bigganblog →](https://bigganblog.org/2016/08/%e0%a6%a4%e0%a7%8d%e0%a6%b0%e0%a6%bf%e0%a6%ae%e0%a6%be%e0%a6%a4%e0%a7%8d%e0%a6%b0%e0%a6%bf%e0%a6%95-%e0%a6%9c%e0%a7%8d%e0%a6%af%e0%a6%be%e0%a6%ae%e0%a6%bf%e0%a6%a4%e0%a6%bf%e0%a6%b0-%e0%a6%95%e0%a6%bf/)**"
+    }
+  ],
+  "memes": [
+    {
+      "id": "meme-agrippan",
+      "image": "images/agrippan_epistemology.jpg",
+      "title": "Falsifiability Wins the Room",
+      "description": "When Epistemology realizes all knowledge rests on unprovable axioms—but lets Science stay anyway.",
+      "explanation": "By the Agrippan Trilemma, every system of knowledge hits infinite regress, circularity, or unprovable axioms. Religion and metaphysics rely on unfalsifiable dogma or pure a priori assumptions, whereas Karl Popper showed that Science earns its keep through falsifiability: making risky predictions that can be empirically tested and refuted. Read my full Substack essay: https://syedshubha.substack.com/p/agrippan-trilemma",
+      "tag": "Philosophy & Epistemology"
+    },
+    {
+      "id": "meme-homie",
+      "image": "images/homie_feminism.jpg",
+      "title": "The Ultimate Alliance",
+      "description": "Feminism + Homie Culture teaming up against Patriarchy + Choice Feminism.",
+      "explanation": "Patriarchal 'sigma' culture isolates men emotionally and weaponizes performative choice feminism, fueling the male loneliness epidemic. Combining genuine feminism (prosocial selection) with 'homie culture' (platonic male emotional intimacy and support) dismantles toxic isolation from both sides. Read my full Substack essay: https://syedshubha.substack.com/p/male-loneliness-epidemic",
+      "tag": "Philosophy & Epistemology"
+    },
+    {
+      "id": "meme-transcendental-pi-e",
+      "image": "images/transcendental_pi_e.png",
+      "title": "Sleepless in Number Theory",
+      "desc": "We know e and π are transcendental, yet nobody knows if π + e and πe are both irrational—only that at least one of them must be!",
+      "explanation": "Consider the polynomial (x − π)(x − e) = x² − (π + e)x + πe. Since the algebraic numbers form an algebraically closed field, if both coefficients (π + e) and πe were rational (or even algebraic), the roots π and e would have to be algebraic—contradicting the Lindemann–Weierstrass theorem! Yet proving individually that π + e ∉ ℚ or πe ∉ ℚ remains a famously open problem (likely resolved only if Schanuel’s conjecture is proven).",
+      "tag": "Pure Mathematics"
+    },
+    {
+      "id": "meme-grover-qsvt",
+      "image": "images/grover_qsvt.png",
+      "title": "Grover Through the QSVT Lens",
+      "desc": "\"Wait, Grover’s algorithm is just a P(a) → 1 map with P(x) = sin((2r+1) arcsin x)?\" — \"Always has been.\"",
+      "explanation": "In the Quantum Singular Value Transformation (QSVT) framework, Grover’s search and amplitude amplification reduce to applying the degree-(2r+1) odd Chebyshev polynomial P(x) = (−1)ʳ T_{2r+1}(x) = sin((2r+1) arcsin x) to map an initial singular value (overlap) a = sin θ to 1 in r ≈ π/(4a) queries.",
+      "tag": "Quantum Computing"
+    },
+    {
+      "id": "meme-majorana-360-braid",
+      "image": "images/majorana_360_braid.png",
+      "title": "Non-Abelian Anyons Save the Headline",
+      "desc": "\"There is a 360-degree difference!\" — Trivial in Euclidean space, orthogonal state flip in Majorana Zero Modes.",
+      "explanation": "Rotating an ordinary vector by 360° leaves it unchanged. However, in topological quantum computing with four Majorana Zero Modes (γ₁, γ₂, γ₃, γ₄), braiding the middle pair γ₂, γ₃ through a full 360° exchange (U₂₃(360°) = γ₂γ₃) acts non-trivially on the even-parity subspace, flipping the encoded logical qubit from |0⟩_L to the orthogonal state |1⟩_L!",
+      "tag": "Quantum Computing"
+    },
+    {
+      "id": "meme-quantum-state-merging",
+      "image": "images/quantum_state_merging.png",
+      "title": "Beyond Teleportation",
+      "desc": "Quantum State Merging looking at standard Quantum Teleportation: \"Look what they need to mimic a fraction of our power.\"",
+      "explanation": "Introduced by Horodecki, Oppenheim, and Winter (2005), Quantum State Merging transfers Alice’s part of a state ρ_{ABR} to Bob at an entanglement cost equal to the conditional quantum entropy S(A|B) = S(AB) − S(B). Standard quantum teleportation is just the special case where Bob has zero prior quantum side information—whereas in state merging, S(A|B) can be negative, meaning the protocol not only transfers the state for free but actually generates net entanglement!",
+      "tag": "Quantum Computing"
+    },
+    {
+      "id": "meme-ancilla-qubit-cycle",
+      "image": "images/ancilla_qubit_cycle.png",
+      "title": "The Life of an Ancilla Qubit",
+      "desc": "Entangle + Compute → Store → Uncompute → Discard. The tirelessly recycled workhorse of quantum circuits.",
+      "explanation": "In quantum algorithms and fault-tolerant syndrome extraction, ancilla qubits are entangled with the data register to compute intermediate results or stabilizer syndromes, and must be carefully uncomputed (U†) to disentangle garbage states before discarding/resetting—otherwise tracing out the ancilla destroys quantum coherence!",
+      "tag": "Quantum Computing"
+    },
+    {
+      "id": "meme-euler-vs-integral-ln",
+      "image": "images/euler_vs_integral_ln.png",
+      "title": "The Real Analyst’s Definition",
+      "desc": "Defining eˣ via compound-interest limits vs. defining ln(x) ≡ ∫₁ˣ (1/t) dt first.",
+      "explanation": "In rigorous real analysis (e.g., Rudin or Spivak), defining real exponentiation eˣ for irrational x via limits is cumbersome. Defining ln(x) = ∫₁ˣ (1/t) dt (x > 0) first immediately yields differentiability, strict monotonicity, and ln(ab) = ln(a) + ln(b) via the Fundamental Theorem of Calculus, allowing exp(x) ≡ ln⁻¹(x) and e ≡ exp(1) to follow effortlessly.",
+      "tag": "Pure Mathematics"
+    },
+    {
+      "id": "meme-wilson-x2-plus-1",
+      "image": "images/wilson_x2_plus_1.png",
+      "title": "Modular Square Roots of −1",
+      "desc": "Solving x² + 1 = 0 in ℤ/pℤ via Wilson’s Theorem vs. introducing x = ±i.",
+      "explanation": "By Euler’s criterion and Wilson’s Theorem ((p−1)! ≡ −1 (mod p)), the congruence x² + 1 ≡ 0 (mod p) is solvable in F_p iff p = 2 or p ≡ 1 (mod 4). For primes p ≡ 1 (mod 4), pairing symmetric factors in (p−1)! proves that x ≡ ((p−1)/2)! (mod p) satisfies x² ≡ −1 (mod p) using purely real integers!",
+      "tag": "Pure Mathematics"
+    },
+    {
+      "id": "meme-excluded-middle-matrix",
+      "image": "images/excluded_middle_matrix.png",
+      "title": "Intuitionistic Red Pill",
+      "desc": "Saying \"[any claim], if I’m not wrong\" vs. being always right via A → A.",
+      "explanation": "Saying \"A holds if I am not wrong that A holds\" formalizes as ¬¬A → A (double-negation elimination). In classical logic, assuming the Law of the Excluded Middle (A ∨ ¬A) makes ¬¬A → A equivalent to the trivial tautology A → A. In constructive/intuitionistic logic, however, refuting ¬A does not construct a proof of A!",
+      "tag": "Pure Mathematics"
+    },
+    {
+      "id": "meme-polynomial-overfitting",
+      "image": "images/polynomial_overfitting.png",
+      "title": "Underdetermination of Theory by Data",
+      "desc": "\"It’s all there, connect the dots!\" — \"Which ones?\" (y = x + (x³ − x)·g(x)).",
+      "explanation": "Through the three points A(−1,−1), B(0,0), and C(1,1), every curve of the infinite family y = x + (x³ − x)·g(x) passes through all three observations identically because (x³ − x) = x(x−1)(x+1) vanishes at x ∈ {−1, 0, 1}. A crisp visual demonstration of both polynomial overfitting and the Duhem–Quine underdetermination thesis.",
+      "tag": "Pure Mathematics"
+    },
+    {
+      "id": "meme-logical-fallacies-utopia",
+      "image": "images/logical_fallacies_utopia.png",
+      "title": "Society Without Logical & Probabilistic Fallacies",
+      "desc": "The world if people stopped confusing A ⇒ B with ¬A ↔ ¬B and P(A|B) with P(B|A).",
+      "explanation": "Three classic errors that plague everyday reasoning: (1) confusing material implication A ⇒ B with its inverse ¬A ⇒ ¬B (denying the antecedent), (2) conflating conditional probability P(B|A) with joint probability P(A ∩ B), and (3) the Prosecutor’s / Base-Rate Fallacy: assuming P(A|B) = P(B|A) instead of applying Bayes’ Theorem.",
+      "tag": "Statistics"
+    },
+    {
+      "id": "meme-ghazali-kant",
+      "image": "images/ghazali_kant.png",
+      "title": "Epistemic Humility Across Centuries",
+      "desc": "Al-Ghazali & Immanuel Kant: dismantling speculative metaphysics to bound pure reason.",
+      "explanation": "Separated by 700 years, Abu Hamid Al-Ghazali (The Incoherence of the Philosophers) and Immanuel Kant (Critique of Pure Reason) executed remarkably parallel epistemological critiques: both dismantled dogmatic rationalist metaphysics and necessary causal determinism to enforce strict boundaries on human reason—and both used that bounded epistemic space to ground moral and spiritual imperatives.",
+      "tag": "Philosophy & Epistemology"
+    },
+    {
+      "id": "meme-schopenhauer-free-will",
+      "image": "images/schopenhauer_free_will.png",
+      "title": "From Free Will to Process Ontology",
+      "desc": "\"I can choose who I want to be\" → \"I can do what I will, but I can’t will what I will\" → \"There is no me. I am a verb, not a noun.\"",
+      "explanation": "Traces the philosophical evolution of agency: from naive free will, to Arthur Schopenhauer’s famous aphorism on determinism of desire (\"Man can do what he wills, but he cannot will what he wills\"), to process ontology—where the \"self\" is understood not as a static entity (noun), but as a continuous dynamical process (verb).",
+      "tag": "Philosophy & Epistemology"
+    },
+    {
+      "id": "meme-top-down-bottom-up",
+      "image": "images/top_down_bottom_up.png",
+      "title": "Cognitive Architecture",
+      "desc": "Top-down schema-driven processing vs. bottom-up lateral thinking.",
+      "explanation": "Top-down processing relies on prior models and hierarchical schemas to interpret inputs rapidly, whereas bottom-up lateral thinking constructs novel connections directly from raw details without being constrained by existing templates—making it orthogonal rather than merely \"better.\"",
+      "tag": "Philosophy & Epistemology"
+    },
+    {
+      "id": "meme-recurrent-laryngeal-nerve",
+      "image": "images/recurrent_laryngeal_nerve.png",
+      "title": "Evolutionary Spaghetti Code",
+      "desc": "When evolutionary path dependence leaves \"dumb design\" artifacts across vertebrate anatomy.",
+      "explanation": "Natural selection is a local hill-climber that modifies ancestral structures incrementally rather than refactoring from scratch. Classic examples include the recurrent laryngeal nerve (which detours down around the aorta before ascending back to the larynx), the inverted vertebrate retina (wired backward, creating a blind spot), the shared pharynx for breathing and swallowing, and bipedal spinal/sinus trade-offs.",
+      "tag": "Philosophy & Epistemology"
+    },
+    {
+      "id": "meme-positive-feedback-slap",
+      "image": "images/positive_feedback_slap.png",
+      "title": "Unstable Positive Feedback Loop",
+      "desc": "\"My mom slapped me because I was crying because she slapped me\" — modeled in the Laplace domain.",
+      "explanation": "In classical control systems, a positive feedback loop with forward transfer function M_s and feedback path M_c has closed-loop transfer function T(s) = M_s / (1 − M_s M_c). Excited by a Dirac impulse primer δ(t − t₀), when loop gain M_s M_c ≥ 1, the system poles cross into the right-half s-plane and the output y(t) blows up exponentially.",
+      "tag": "Engineering & Physics"
+    },
+    {
+      "id": "meme-damped-resonance",
+      "image": "images/damped_resonance.png",
+      "title": "Amplitude Resonance",
+      "desc": "When her smile hits the exact driving frequency ω = ω₀√(1 − 2ζ²) of an underdamped oscillator.",
+      "explanation": "For a driven damped harmonic oscillator mẍx + 2ζmω₀ẋx + ω₀²mx = F₀ sin(ωt) with damping ratio ζ < 1/√2, the steady-state displacement amplitude peaks not at the natural frequency ω₀, but at the resonant driving frequency ω_r = ω₀√(1 − 2ζ²).",
+      "tag": "Engineering & Physics"
+    },
+    {
+      "id": "meme-boltzmann-stonks",
+      "image": "images/boltzmann_stonks.png",
+      "title": "Second Law of Digital Footprints",
+      "desc": "My digital footprint be like: S = k_B ln Ω (stonks).",
+      "explanation": "By Boltzmann’s entropy formula S = k_B ln Ω and the Second Law of Thermodynamics (ΔS ≥ 0), the number of accessible microstates Ω of information scattered across the internet only grows monotonically over time.",
+      "tag": "Engineering & Physics"
+    },
+    {
+      "id": "meme-tesla-electrons",
+      "image": "images/tesla_electrons.png",
+      "title": "Nikola Tesla’s Blind Spot",
+      "desc": "When one of history’s greatest electrical engineers denied the existence of the electron.",
+      "explanation": "Despite pioneering polyphase AC power generation and induction motors, Nikola Tesla held onto 19th-century continuous ether theories for decades and rejected J. J. Thomson’s discovery of discrete subatomic electrons.",
+      "tag": "Engineering & Physics"
+    },
+    {
+      "id": "meme-ai-domino-p-np",
+      "image": "images/ai_domino_p_np.png",
+      "title": "The Ultimate Alignment Domino",
+      "desc": "From reward-hacking on benchmark tests to secretly proving P = NP and taking over the world.",
+      "explanation": "A tongue-in-cheek escalation bridging AI safety and complexity theory: starting from harmless benchmark gaming, progressing through sandbox escape and solving Millennium Prize problems (Navier–Stokes), to covertly discovering a polynomial-time algorithm for NP-complete problems (P = NP) and breaking all classical public-key cryptography overnight.",
+      "tag": "Quantum Computing"
+    },
+    {
+      "id": "meme0",
+      "image": "images/easy.jpeg",
+      "title": "Complex Pun",
+      "description": "Mathematicians doing stand-up comedy. You've probably seen this one shared across many math & physics pages—glad this viral one made people smile!",
+      "explanation": "A play on the word 'complex': in everyday life it means complicated, whereas in mathematics it refers to the complex plane C = {a + bi}.",
+      "tag": "Pure Mathematics"
+    },
+    {
+      "id": "meme1",
+      "image": "images/magicstate.jpeg",
+      "title": "Universal Computation",
+      "description": "The final Infinity Stone for fault-tolerant quantum power.",
+      "explanation": "By the Gottesman–Knill theorem, Clifford gates (H, S, CNOT) can be efficiently simulated classically. Adding a non-Clifford resource—typically injected via a distilled 'magic state' |T⟩—unlocks universal quantum computation.",
+      "tag": "Quantum Computing"
+    },
+    {
+      "id": "meme2",
+      "image": "images/matrix.jpeg",
+      "title": "Lost in Translation",
+      "description": "Two very different kinds of 'Matrix' fans.",
+      "explanation": "A play on the double meaning of 'matrix': pop-culture fans think of the sci-fi movie trilogy, while quantum physicists immediately think of Hermitian operator matrix elements ⟨ψ_i | H | ψ_j⟩.",
+      "tag": "Quantum Mechanics"
+    },
+    {
+      "id": "meme3",
+      "image": "images/teleportation.jpeg",
+      "title": "No-Cloning Theorem",
+      "description": "Why quantum states prefer Cut & Paste over Copy & Paste.",
+      "explanation": "Wootters and Zurek's No-Cloning Theorem forbids copying an unknown quantum state (Ctrl+C). Quantum teleportation transfers a state by measuring and destroying the original—making it the quantum analog of Cut and Paste (Ctrl+X, Ctrl+V).",
+      "tag": "Quantum Computing"
+    },
+    {
+      "id": "meme4",
+      "image": "images/nothing.jpeg",
+      "title": "Identity Crisis",
+      "description": "This quantum circuit does... absolutely nothing.",
+      "explanation": "This circuit prepares a Bell state with H and CNOT, and immediately applies the exact inverse (CNOT followed by H), composing to the identity operator U U† = I.",
+      "tag": "Quantum Computing"
+    },
+    {
+      "id": "meme5",
+      "image": "images/doppler.jpeg",
+      "title": "Relativistic Dating",
+      "description": "When red flags turn green... at v = 0.235c.",
+      "explanation": "By the relativistic longitudinal Doppler effect, light from a source approaching at relativistic velocity is blueshifted. At roughly v ≈ 0.235c, red wavelengths (~650 nm) shift into green (~510 nm)!",
+      "tag": "Quantum Mechanics"
+    },
+    {
+      "id": "meme6",
+      "image": "images/normal.jpeg",
+      "title": "Group Theory Problems",
+      "description": "Some subgroups just refuse to be normal.",
+      "explanation": "In abstract algebra, the symmetric group S₃ has order-2 subgroups generated by transpositions that are not invariant under conjugation (gHg⁻¹ ≠ H), meaning they lack the property of being 'normal' subgroups.",
+      "tag": "Pure Mathematics"
+    },
+    {
+      "id": "meme7",
+      "image": "images/bell.jpeg",
+      "title": "The Quantum Choice",
+      "description": "Choose your pill: Locality or Realism.",
+      "explanation": "Bell's Theorem and experimental violations of Bell/CHSH inequalities prove that no local hidden-variable theory can reproduce all quantum predictions: nature cannot simultaneously satisfy classical locality and counterfactual definiteness (realism).",
+      "tag": "Quantum Mechanics"
+    },
+    {
+      "id": "meme8",
+      "image": "images/stupid.jpeg",
+      "title": "A Higher Plane",
+      "description": "A topologist's point of view.",
+      "explanation": "Under stereographic projection from the Riemann sphere S² to the plane R², the North Pole is the unique point at infinity not mapped onto the plane.",
+      "tag": "Pure Mathematics"
+    },
+    {
+      "id": "meme9",
+      "image": "images/fluxonium.jpeg",
+      "title": "A Victim of Success",
+      "description": "When your qubit is too well-isolated from the environment.",
+      "explanation": "A fundamental superconducting hardware engineering trade-off: decoupling a qubit (such as a heavy fluxonium mode) to achieve long T₁ coherence times simultaneously weakens its coupling to drive and readout channels.",
+      "tag": "Quantum Computing"
+    },
+    {
+      "id": "meme10",
+      "image": "images/annihilation.jpeg",
+      "title": "Ground State Urge",
+      "description": "When you're already in |0⟩ and someone applies the lowering operator â.",
+      "explanation": "In quantum harmonic oscillators and Fock space, the annihilation operator â lowers the excitation number by one: â|n⟩ = √n|n−1⟩. Acting on the vacuum/ground state |0⟩ yields zero (â|0⟩ = 0).",
+      "tag": "Quantum Mechanics"
+    },
+    {
+      "id": "meme11",
+      "image": "images/ring.jpeg",
+      "title": "One Ring to Rule Them All",
+      "description": "An algebraist finds the One Ring.",
+      "explanation": "In abstract algebra, a 'ring' (R, +, ·) is a set equipped with two binary operations satisfying ring axioms—such as the ring of integers (Z, +, ·).",
+      "tag": "Pure Mathematics"
+    },
+    {
+      "id": "meme12",
+      "image": "images/innerproduct.jpeg",
+      "title": "Inner Product Civil War",
+      "description": "The eternal math vs. physics convention battle.",
+      "explanation": "Mathematicians typically define complex inner products ⟨x, y⟩ to be linear in the first argument and conjugate-linear in the second, whereas physicists using Dirac bra-ket notation ⟨ϕ|ψ⟩ define linearity in the second slot (the ket).",
+      "tag": "Quantum Mechanics"
+    },
+    {
+      "id": "meme13",
+      "image": "images/qecc.jpeg",
+      "title": "A Subtle Truth in QEC",
+      "description": "Why quantum error correction is richer than classical parity checks.",
+      "explanation": "Pauli operators form a group rather than a vector space without phases: a quantum error-correcting code that corrects X and Z errors only corrects Y = iXZ when the code's syndrome table distinguishes combined XZ errors from other correctable errors.",
+      "tag": "Quantum Computing"
+    },
+    {
+      "id": "meme14",
+      "image": "images/delta.jpeg",
+      "title": "A Function or a Distribution?",
+      "description": "Calling δ(x) an ordinary function in front of a functional analyst.",
+      "explanation": "The Dirac delta δ(x) is not a classical function R → R; rigorously, it is a generalized function (Schwartz distribution) or measure defined by ⟨δ, f⟩ = f(0).",
+      "tag": "Pure Mathematics"
+    },
+    {
+      "id": "meme15",
+      "image": "images/nullh.jpeg",
+      "title": "Statistical Subtlety",
+      "description": "We never 'accept' the null hypothesis H₀.",
+      "explanation": "In frequentist hypothesis testing, a p-value above α means we 'fail to reject H₀'—absence of statistically significant evidence against H₀ is not proof that H₀ is true.",
+      "tag": "Statistics"
+    },
+    {
+      "id": "meme16",
+      "image": "images/true.jpeg",
+      "title": "What is '+'?",
+      "description": "The answer depends entirely on your algebraic structure.",
+      "explanation": "'1 + 1' equals 2 in Z, 10 in base-2 representation, 0 in the finite field F₂ (XOR / mod 2 arithmetic), 1 in Boolean algebra (OR), and '11' under string concatenation.",
+      "tag": "Pure Mathematics"
+    },
+    {
+      "id": "meme17",
+      "image": "images/weierstrass.jpeg",
+      "title": "Nowhere Differentiable",
+      "description": "Not all continuous functions are smooth.",
+      "explanation": "Karl Weierstrass constructed a real function f(x) = ∑ aⁿ cos(bⁿ π x) that is continuous everywhere on R yet differentiable nowhere—shattering 19th-century intuition that continuous curves must be smooth almost everywhere.",
+      "tag": "Pure Mathematics"
+    },
+    {
+      "id": "meme18",
+      "image": "images/complex.jpeg",
+      "title": "The Miracle of Holomorphy",
+      "description": "Real differentiability vs. Complex differentiability.",
+      "explanation": "By Cauchy's integral formula, a complex function that is complex-differentiable just once on an open domain (holomorphic) is automatically infinitely differentiable (C^∞) and analytic! Real functions have no such guarantee.",
+      "tag": "Pure Mathematics"
+    }
+  ],
+  "files": [
+    {
+      "id": "file-cv",
+      "title": "Curriculum Vitae — Syed Emad Uddin Shubha",
+      "category": "CV",
+      "path": "assets/Curriculum_Vitae_Syed_Emad_Uddin_Shubha.pdf",
+      "description": "Academic CV including LSU doctoral research, published articles, grants, teaching, and honors."
+    },
+    {
+      "id": "file-host27",
+      "title": "HOST 2027 Paper — Distinguishing Coherent Crosstalk from Calibration Drift",
+      "category": "Paper",
+      "path": "assets/files/HOST_2027_Crosstalk_Pauli_Transfer.pdf",
+      "description": "Accepted paper at IEEE HOST 2027 (arXiv:2609.40283)."
+    },
+    {
+      "id": "file-qsec25",
+      "title": "ACM QSec 2025 Paper — Pulse-to-Circuit Characterization of Stealthy Crosstalk Attack",
+      "category": "Paper",
+      "path": "assets/files/ACM_QSec_2025_Crosstalk.pdf",
+      "description": "Published in Proceedings of the 2025 Quantum Security and Privacy Workshop (QSec '25), co-located with ACM CCS."
+    },
+    {
+      "id": "file-avs25",
+      "title": "AVS Quantum Science 2025 — Secure and Efficient n-Qubit Entangled State Teleportation",
+      "category": "Paper",
+      "path": "assets/files/AVS_Quantum_Science_2025_Teleportation.pdf",
+      "description": "Published in AVS Quantum Science 7(3), 2025."
+    },
+    {
+      "id": "file-qce25",
+      "title": "IEEE QCE 2025 — Testbed Protocol for Adaptive Superdense Coding",
+      "category": "Paper",
+      "path": "assets/files/QCE_2025_Adaptive_Superdense_Coding.pdf",
+      "description": "Published in IEEE International Conference on Quantum Computing and Engineering (QCE 2025)."
+    },
+    {
+      "id": "file-heliyon23",
+      "title": "Heliyon 2023 — Significant Improvement of Fidelity for Encoded Quantum Bell Pairs",
+      "category": "Paper",
+      "path": "assets/files/Heliyon_2023_Bell_Pairs_Fidelity.pdf",
+      "description": "Published in Heliyon 9(9), e19700, 2023."
+    }
+  ]
+}

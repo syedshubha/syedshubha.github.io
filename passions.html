@@ -3,1007 +3,877 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quantum Memeology</title>
-    <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:wght@400;600;700&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
-    
-    <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-E8924GJFV6"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-E8924GJFV6');
-</script>
-    
+    <title>Quantum Memeology, Science Outreach & Creative Corner | Syed Emad Uddin Shubha</title>
+    <meta name="description" content="Original physics, quantum computing, pure mathematics, and philosophy memes with rigorous technical explanations, plus science outreach and lectures by Syed Emad Uddin Shubha.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
     <style>
+        :root {
+            --navy-950: #0a1120;
+            --navy-900: #0f172a;
+            --navy-800: #1e293b;
+            --navy-700: #334155;
+            --academic-blue: #1d4ed8;
+            --academic-blue-light: #eff6ff;
+            --academic-blue-dark: #1e3a8a;
+            --lsu-purple: #461D7C;
+            --lsu-gold: #d97706;
+            --text-primary: #0f172a;
+            --text-secondary: #475569;
+            --text-muted: #64748b;
+            --bg-page: #f8fafc;
+            --bg-surface: #ffffff;
+            --border-light: #e2e8f0;
+            --border-medium: #cbd5e1;
+            --shadow-sm: 0 1px 3px rgba(15, 23, 42, 0.06);
+            --shadow-md: 0 4px 12px -2px rgba(15, 23, 42, 0.08);
+            --shadow-lg: 0 12px 28px -6px rgba(15, 23, 42, 0.14);
+            --radius-md: 10px;
+            --radius-lg: 14px;
+        }
+
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
 
-        :root {
-            --creative-purple: #8b5cf6;
-            --creative-pink: #ec4899;
-            --creative-blue: #3b82f6;
-            --creative-teal: #14b8a6;
-            --creative-orange: #f97316;
-            --dark: #18181b;
-            --light-gray: #f4f4f5;
-            --white: #ffffff;
-            --text-primary: #27272a;
-            --text-secondary: #71717a;
-        }
-
         body {
-            font-family: 'Inter', sans-serif;
-            line-height: 1.6;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
             color: var(--text-primary);
-            background: var(--light-gray);
+            background-color: var(--bg-page);
+            line-height: 1.65;
+            -webkit-font-smoothing: antialiased;
         }
 
-        /* Navigation */
+        h1, h2, h3, h4 {
+            font-family: 'Crimson Pro', Georgia, serif;
+            color: var(--navy-900);
+            letter-spacing: -0.01em;
+        }
+
+        a {
+            color: var(--academic-blue);
+            text-decoration: none;
+            transition: color 0.2s ease;
+        }
+
+        a:hover {
+            color: var(--academic-blue-dark);
+        }
+
+        /* Navbar */
         .navbar {
-            background: var(--white);
-            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
-            position: fixed;
-            width: 100%;
+            position: sticky;
             top: 0;
             z-index: 1000;
+            background: rgba(255, 255, 255, 0.96);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--border-light);
+            box-shadow: var(--shadow-sm);
         }
 
         .nav-container {
-            max-width: 1200px;
+            max-width: 1240px;
             margin: 0 auto;
-            padding: 1rem 2rem;
+            padding: 0.85rem 2rem;
             display: flex;
             justify-content: space-between;
             align-items: center;
         }
 
         .nav-brand {
-            font-family: 'Crimson Text', serif;
-            font-size: 1.5rem;
-            font-weight: 700;
-            background: linear-gradient(135deg, var(--creative-purple), var(--creative-pink));
-            -webkit-background-clip: text;
-            background-clip: text;
-            -webkit-text-fill-color: transparent;
-            text-decoration: none;
-        }
-
-        .back-btn {
-            background: linear-gradient(135deg, var(--creative-purple), var(--creative-blue));
-            color: white;
-            padding: 0.5rem 1.5rem;
-            border-radius: 25px;
-            text-decoration: none;
-            font-weight: 500;
-            transition: transform 0.3s ease;
-        }
-
-        .back-btn:hover {
-            transform: translateY(-2px);
-        }
-
-        /* Hero Banner */
-        .hero-banner {
-            margin-top: 70px;
-            padding: 4rem 2rem;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 25%, #f093fb 50%, #feca57 75%, #ff6b6b 100%);
-            text-align: center;
-            color: white;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .hero-banner::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
-        }
-
-        .hero-content {
-            position: relative;
-            z-index: 1;
-            max-width: 800px;
-            margin: 0 auto;
-        }
-
-        .hero-banner h1 {
-            font-size: 3rem;
-            font-family: 'Crimson Text', serif;
-            margin-bottom: 1rem;
-            animation: bounce 2s ease-in-out infinite;
-        }
-
-        @keyframes bounce {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-10px); }
-        }
-
-        .hero-banner p {
-            font-size: 1.2rem;
-            opacity: 0.95;
-        }
-
-        /* Quick Links */
-        .quick-links {
             display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            color: var(--navy-900);
+        }
+
+        .brand-monogram {
+            width: 36px;
+            height: 36px;
+            border-radius: 8px;
+            background: linear-gradient(135deg, var(--navy-900), var(--lsu-purple));
+            color: #fff;
+            font-family: 'Crimson Pro', serif;
+            font-weight: 700;
+            font-size: 1.15rem;
+            display: flex;
+            align-items: center;
             justify-content: center;
-            gap: 1rem;
-            margin-top: 2rem;
+        }
+
+        .brand-text {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .brand-name {
+            font-family: 'Crimson Pro', Georgia, serif;
+            font-size: 1.2rem;
+            font-weight: 700;
+            line-height: 1.1;
+            color: var(--navy-900);
+        }
+
+        .brand-sub {
+            font-size: 0.72rem;
+            color: var(--text-muted);
+            font-weight: 500;
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 0.25rem;
+            align-items: center;
             flex-wrap: wrap;
         }
 
-        .quick-link {
-            background: white;
-            color: var(--creative-purple);
-            padding: 0.5rem 1.5rem;
-            border-radius: 25px;
-            text-decoration: none;
+        .nav-menu a {
+            color: var(--text-secondary);
+            font-size: 0.88rem;
             font-weight: 500;
-            transition: all 0.3s ease;
+            padding: 0.45rem 0.75rem;
+            border-radius: 6px;
         }
 
-        .quick-link:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+        .nav-menu a:hover, .nav-menu a.active {
+            color: var(--navy-900);
+            background: var(--academic-blue-light);
         }
 
-        /* Main Content */
-        .main-content {
-            max-width: 1200px;
+        .nav-pill-btn {
+            background: var(--navy-900) !important;
+            color: #ffffff !important;
+            padding: 0.45rem 0.9rem !important;
+            border-radius: 6px;
+            font-weight: 600 !important;
+        }
+
+        /* Hero */
+        .page-hero {
+            background: linear-gradient(135deg, #0a1120 0%, #172554 55%, #3b0764 100%);
+            color: #f8fafc;
+            padding: 3.75rem 2rem 3.25rem;
+            border-bottom: 4px solid #f59e0b;
+        }
+
+        .page-hero-inner {
+            max-width: 1240px;
             margin: 0 auto;
-            padding: 4rem 2rem;
-        }
-
-        /* Section Styles */
-        .passion-section {
-            margin-bottom: 5rem;
-        }
-
-        .section-title {
-            font-size: 2.5rem;
-            font-family: 'Crimson Text', serif;
-            margin-bottom: 2rem;
-            background: linear-gradient(135deg, var(--creative-purple), var(--creative-pink));
-            -webkit-background-clip: text;
-            background-clip: text;
-            -webkit-text-fill-color: transparent;
-            text-align: center;
-        }
-
-        /* Horizontal Scrollable Memes */
-        .memes-wrapper {
-            background: white;
-            border-radius: 20px;
-            padding: 2rem;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.07);
-        }
-
-        .memes-scroll-container {
-            overflow-x: auto;
-            overflow-y: hidden;
-            padding-bottom: 1rem;
-        }
-
-        .memes-scroll-container::-webkit-scrollbar {
-            height: 10px;
-        }
-
-        .memes-scroll-container::-webkit-scrollbar-track {
-            background: #f1f1f1;
-            border-radius: 10px;
-        }
-
-        .memes-scroll-container::-webkit-scrollbar-thumb {
-            background: linear-gradient(135deg, var(--creative-purple), var(--creative-pink));
-            border-radius: 10px;
-        }
-
-        .memes-horizontal {
             display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
             gap: 2rem;
-            padding: 1rem 0;
+            flex-wrap: wrap;
+        }
+
+        .page-eyebrow {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.78rem;
+            text-transform: uppercase;
+            letter-spacing: 0.09em;
+            color: #fcd34d;
+            margin-bottom: 0.5rem;
+        }
+
+        .page-hero h1 {
+            color: #ffffff;
+            font-size: 2.75rem;
+            line-height: 1.12;
+            margin-bottom: 0.65rem;
+        }
+
+        .page-hero p {
+            color: #cbd5e1;
+            max-width: 720px;
+            font-size: 1.02rem;
+        }
+
+        .hero-links {
+            display: flex;
+            gap: 0.65rem;
+            flex-wrap: wrap;
+        }
+
+        .hero-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.45rem;
+            padding: 0.58rem 1.05rem;
+            border-radius: 8px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            background: rgba(255, 255, 255, 0.1);
+            color: #ffffff;
+            border: 1px solid rgba(255, 255, 255, 0.22);
+            transition: all 0.2s ease;
+        }
+
+        .hero-btn:hover {
+            background: rgba(255, 255, 255, 0.2);
+            color: #ffffff;
+            transform: translateY(-1px);
+        }
+
+        .hero-btn.gold {
+            background: #f59e0b;
+            color: #0f172a;
+            border-color: #f59e0b;
+        }
+
+        .hero-btn.gold:hover {
+            background: #fbbf24;
+            color: #0f172a;
+        }
+
+        .container {
+            max-width: 1240px;
+            margin: 0 auto;
+            padding: 2.75rem 2rem 4.5rem;
+        }
+
+        /* Controls Bar */
+        .controls-wrapper {
+            background: var(--bg-surface);
+            border: 1px solid var(--border-light);
+            border-radius: var(--radius-md);
+            padding: 1.25rem 1.5rem;
+            margin-bottom: 2rem;
+            box-shadow: var(--shadow-sm);
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .controls-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .filter-tabs {
+            display: flex;
+            gap: 0.45rem;
+            flex-wrap: wrap;
+        }
+
+        .filter-btn {
+            padding: 0.42rem 0.85rem;
+            border-radius: 6px;
+            border: 1px solid var(--border-medium);
+            background: var(--bg-page);
+            color: var(--text-secondary);
+            font-size: 0.82rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.18s ease;
+        }
+
+        .filter-btn:hover {
+            border-color: var(--academic-blue);
+            color: var(--academic-blue);
+        }
+
+        .filter-btn.active {
+            background: var(--navy-900);
+            color: #ffffff;
+            border-color: var(--navy-900);
+        }
+
+        .controls-right {
+            display: flex;
+            gap: 0.6rem;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .search-box {
+            padding: 0.48rem 0.9rem;
+            border: 1px solid var(--border-medium);
+            border-radius: 6px;
+            font-size: 0.85rem;
+            min-width: 240px;
+            background: var(--bg-page);
+        }
+
+        .action-btn {
+            padding: 0.48rem 0.85rem;
+            border-radius: 6px;
+            border: 1px solid var(--border-medium);
+            background: var(--bg-surface);
+            color: var(--navy-800);
+            font-size: 0.82rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .action-btn:hover, .action-btn.active {
+            background: var(--academic-blue-light);
+            border-color: var(--academic-blue);
+            color: var(--academic-blue-dark);
+        }
+
+        /* Meme Grid */
+        .meme-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(355px, 1fr));
+            gap: 1.75rem;
         }
 
         .meme-card {
-            flex: 0 0 300px;
-            background: var(--light-gray);
-            border-radius: 16px;
+            background: var(--bg-surface);
+            border: 1px solid var(--border-light);
+            border-radius: var(--radius-md);
             overflow: hidden;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.07);
-            transition: all 0.3s ease;
-            cursor: pointer;
+            box-shadow: var(--shadow-sm);
+            display: flex;
+            flex-direction: column;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
         }
 
         .meme-card:hover {
-            transform: translateY(-5px) scale(1.02);
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-md);
         }
 
-        .meme-image {
+        .meme-img-frame {
+            position: relative;
             width: 100%;
-            height: 200px;
-            background: linear-gradient(135deg, #667eea, #764ba2);
+            height: 310px;
+            background: #0f172a;
             display: flex;
             align-items: center;
             justify-content: center;
-            color: white;
-            font-size: 1.1rem;
-            text-align: center;
-            padding: 1rem;
+            overflow: hidden;
+            cursor: zoom-in;
+            border-bottom: 1px solid var(--border-light);
         }
 
-        .meme-info {
-            padding: 1.5rem;
+        .meme-img-frame img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+            transition: transform 0.25s ease;
+        }
+
+        .meme-img-frame:hover img {
+            transform: scale(1.03);
+        }
+
+        .zoom-hint {
+            position: absolute;
+            bottom: 8px;
+            right: 10px;
+            background: rgba(15, 23, 42, 0.78);
+            color: #f8fafc;
+            font-size: 0.7rem;
+            padding: 0.2rem 0.55rem;
+            border-radius: 4px;
+            pointer-events: none;
+            border: 1px solid rgba(255,255,255,0.18);
+        }
+
+        .meme-body {
+            padding: 1.35rem 1.45rem;
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+        }
+
+        .meme-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 0.5rem;
+        }
+
+        .meme-tag {
+            font-size: 0.72rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.04em;
+            padding: 0.18rem 0.55rem;
+            border-radius: 4px;
+            background: var(--academic-blue-light);
+            color: var(--academic-blue-dark);
+        }
+
+        .meme-index {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.75rem;
+            color: var(--text-muted);
         }
 
         .meme-title {
-            font-weight: 600;
-            margin-bottom: 0.5rem;
-            color: var(--text-primary);
+            font-size: 1.28rem;
+            color: var(--navy-900);
+            margin-bottom: 0.45rem;
+            line-height: 1.3;
         }
 
-        .meme-description {
+        .meme-desc {
+            font-size: 0.91rem;
             color: var(--text-secondary);
-            font-size: 0.9rem;
+            margin-bottom: 1rem;
+            flex: 1;
         }
 
-        .meme-expand-btn {
-            margin-top: 1rem;
-            padding: 0.5rem 1rem;
-            background: linear-gradient(135deg, var(--creative-purple), var(--creative-blue));
-            color: white;
-            border: none;
-            border-radius: 8px;
+        .meme-actions {
+            display: flex;
+            gap: 0.5rem;
+            padding-top: 0.85rem;
+            border-top: 1px solid var(--border-light);
+        }
+
+        .explain-btn {
+            flex: 1;
+            padding: 0.48rem 0.85rem;
+            border-radius: 6px;
+            border: 1px solid var(--border-medium);
+            background: var(--bg-page);
+            color: var(--navy-800);
+            font-size: 0.82rem;
+            font-weight: 600;
             cursor: pointer;
-            font-weight: 500;
-            width: 100%;
-            transition: all 0.3s ease;
+            transition: all 0.18s ease;
         }
 
-        .meme-expand-btn:hover {
-            transform: translateY(-2px);
+        .explain-btn:hover, .explain-btn.open {
+            background: var(--navy-900);
+            color: #ffffff;
+            border-color: var(--navy-900);
         }
 
         .meme-explanation {
-            margin-top: 1rem;
-            padding: 1rem;
-            background: white;
-            border-radius: 8px;
             display: none;
-            border-top: 2px solid var(--creative-purple);
+            margin-top: 0.9rem;
+            padding: 0.95rem 1.05rem;
+            background: #f8fafc;
+            border-left: 3px solid var(--academic-blue);
+            border-radius: 0 6px 6px 0;
+            font-size: 0.86rem;
+            color: var(--navy-800);
+            line-height: 1.6;
         }
 
-        .meme-card.expanded .meme-explanation {
+        .meme-explanation.open {
             display: block;
-            animation: slideDown 0.3s ease;
         }
 
-        @keyframes slideDown {
-            from { opacity: 0; transform: translateY(-10px); }
-            to { opacity: 1; transform: translateY(0); }
+        /* Outreach & Lectures Section */
+        .outreach-section {
+            margin-top: 4rem;
+            padding-top: 3rem;
+            border-top: 2px solid var(--border-light);
         }
 
-        /* Writing Section */
-        .writings-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 2rem;
-        }
-
-        .writing-card {
-            background: white;
-            padding: 2rem;
-            border-radius: 16px;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-            transition: all 0.3s ease;
-            border-left: 4px solid var(--creative-blue);
-        }
-
-        .writing-card:hover {
-            transform: translateX(10px);
-            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
-        }
-
-        .writing-title {
-            font-size: 1.3rem;
+        .section-eyebrow {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.76rem;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: var(--academic-blue);
             font-weight: 600;
-            margin-bottom: 1rem;
-            color: var(--text-primary);
+            margin-bottom: 0.3rem;
         }
 
-        .writing-source {
-            color: var(--creative-blue);
-            font-weight: 500;
+        .section-title {
+            font-size: 2rem;
+            margin-bottom: 0.4rem;
+        }
+
+        .outreach-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1.75rem;
+        }
+
+        .outreach-card {
+            background: var(--bg-surface);
+            border: 1px solid var(--border-light);
+            border-top: 3px solid var(--academic-blue);
+            border-radius: var(--radius-md);
+            padding: 1.6rem;
+            box-shadow: var(--shadow-sm);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .outreach-card h3 {
+            font-size: 1.3rem;
             margin-bottom: 0.5rem;
         }
 
-        .writing-description {
+        .outreach-card p {
+            font-size: 0.9rem;
             color: var(--text-secondary);
-            line-height: 1.7;
+            margin-bottom: 1.15rem;
+            flex: 1;
         }
 
-        .writing-link {
-            display: inline-block;
-            margin-top: 1rem;
-            color: var(--creative-purple);
-            text-decoration: none;
-            font-weight: 500;
-        }
-
-        .writing-link:hover {
-            text-decoration: underline;
-        }
-
-        /* YouTube Section */
-        .videos-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 2rem;
-        }
-
-        .video-card {
-            background: white;
-            border-radius: 16px;
-            overflow: hidden;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.07);
-        }
-
-        .video-placeholder {
-            aspect-ratio: 16/9;
-            background: linear-gradient(135deg, var(--creative-orange), var(--creative-pink));
+        .outreach-links {
             display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        .outreach-link {
+            display: inline-flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0.55rem 0.85rem;
+            background: var(--bg-page);
+            border: 1px solid var(--border-light);
+            border-radius: 6px;
+            font-size: 0.84rem;
+            font-weight: 600;
+            color: var(--navy-800);
+        }
+
+        .outreach-link:hover {
+            border-color: var(--academic-blue);
+            background: var(--academic-blue-light);
+            color: var(--academic-blue-dark);
+        }
+
+        /* Lightbox Modal */
+        .lightbox {
+            position: fixed;
+            inset: 0;
+            background: rgba(10, 17, 32, 0.88);
+            backdrop-filter: blur(6px);
+            z-index: 2000;
+            display: none;
             align-items: center;
             justify-content: center;
-            color: white;
-            font-size: 3rem;
-        }
-
-        .video-info {
             padding: 1.5rem;
         }
 
-        .video-title {
-            font-weight: 600;
-            margin-bottom: 0.5rem;
-        }
-
-        .video-description {
-            color: var(--text-secondary);
-            font-size: 0.9rem;
-        }
-
-        /* Hobbies Grid */
-        .hobbies-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-        }
-
-        .hobby-card {
-            background: white;
-            padding: 2rem;
-            border-radius: 16px;
-            text-align: center;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-            transition: all 0.3s ease;
-        }
-
-        .hobby-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
-        }
-
-        .hobby-icon {
-            font-size: 3rem;
-            margin-bottom: 1rem;
-        }
-
-        .hobby-title {
-            font-size: 1.2rem;
-            font-weight: 600;
-            margin-bottom: 0.5rem;
-            color: var(--text-primary);
-        }
-
-        .hobby-description {
-            color: var(--text-secondary);
-            font-size: 0.9rem;
-            line-height: 1.6;
-        }
-
-        .hobby-link {
-            display: inline-block;
-            margin-top: 1rem;
-            padding: 0.5rem 1.5rem;
-            background: linear-gradient(135deg, var(--creative-purple), var(--creative-blue));
-            color: white;
-            border-radius: 25px;
-            text-decoration: none;
-            font-weight: 500;
-            transition: transform 0.3s ease;
-        }
-
-        .hobby-link:hover {
-            transform: translateY(-2px);
-        }
-
-        /* Contact Section (Same as main page) */
-        .contact-section {
-            padding: 5rem 0;
-            background: #1a2332;
-            color: white;
-            text-align: center;
-        }
-
-        .contact-section h2 {
-            color: #5b7cfd;
-            margin-bottom: 1.5rem;
-            font-size: 3rem;
-            font-weight: 600;
-            font-family: 'Inter', sans-serif;
-        }
-
-        .contact-description {
-            max-width: 600px;
-            margin: 0 auto 3rem;
-            font-size: 1.1rem;
-            line-height: 1.6;
-            opacity: 0.9;
-        }
-
-        .social-links {
+        .lightbox.open {
             display: flex;
+        }
+
+        .lightbox-card {
+            background: var(--bg-surface);
+            border-radius: var(--radius-lg);
+            max-width: 1020px;
+            width: 100%;
+            max-height: 92vh;
+            overflow: hidden;
+            display: grid;
+            grid-template-columns: 1.35fr 1fr;
+            box-shadow: var(--shadow-lg);
+        }
+
+        .lightbox-img-wrap {
+            background: #0a1120;
+            display: flex;
+            align-items: center;
             justify-content: center;
-            gap: 3rem;
-            margin-bottom: 3rem;
+            padding: 1rem;
+            max-height: 92vh;
         }
 
-        .social-link {
-            color: white;
-            transition: transform 0.3s ease, color 0.3s ease;
-            text-decoration: none;
+        .lightbox-img-wrap img {
+            max-width: 100%;
+            max-height: 85vh;
+            object-fit: contain;
         }
 
-        .social-link svg {
-            width: 28px;
-            height: 28px;
-            fill: currentColor;
+        .lightbox-info {
+            padding: 2rem;
+            overflow-y: auto;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
         }
 
-        .social-link:hover {
-            transform: translateY(-5px);
-            color: #5b7cfd;
+        .lightbox-close {
+            align-self: flex-end;
+            padding: 0.35rem 0.75rem;
+            border-radius: 6px;
+            border: 1px solid var(--border-medium);
+            background: var(--bg-page);
+            cursor: pointer;
+            font-weight: 600;
         }
 
-        /* Responsive */
-        @media (max-width: 768px) {
-            .hero-banner h1 {
-                font-size: 2rem;
-            }
-
-            .section-title {
-                font-size: 2rem;
-            }
-
-            .writings-grid,
-            .videos-container,
-            .hobbies-grid {
+        @media (max-width: 860px) {
+            .lightbox-card {
                 grid-template-columns: 1fr;
+                overflow-y: auto;
             }
-
-            .quick-links {
-                flex-direction: column;
-                align-items: center;
-            }
-
-            .meme-card {
-                flex: 0 0 250px;
-            }
-
-            .social-links {
-                gap: 2rem;
-            }
-        }
-
-        @media (max-width: 480px) {
-            .meme-card {
-                flex: 0 0 200px;
-            }
-
-            .social-links {
-                gap: 1.5rem;
+            .lightbox-img-wrap {
+                max-height: 52vh;
             }
         }
     </style>
 </head>
 <body>
-    <!-- Navigation -->
     <nav class="navbar">
         <div class="nav-container">
-            <a href="index.html" class="nav-brand">Quantum Memeology</a>
-            <a href="index.html" class="back-btn">← Back to Portfolio</a>
+            <a href="index.html" class="nav-brand">
+                <div class="brand-monogram">S</div>
+                <div class="brand-text">
+                    <span class="brand-name">Syed Emad Uddin Shubha</span>
+                    <span class="brand-sub">LSU Computer Science • Quantum Information</span>
+                </div>
+            </a>
+            <ul class="nav-menu">
+                <li><a href="index.html">← Main Portfolio</a></li>
+                <li><a href="index.html#publications">Publications</a></li>
+                <li><a href="blog.html">✍️ Blog & Essays</a></li>
+                <li><a href="QSVT.html">⚛️ QSVT Lab</a></li>
+                <li><a href="passions.html" class="nav-pill-btn">🎭 Quantum Memeology</a></li>
+            </ul>
         </div>
     </nav>
 
-    <!-- Hero Banner -->
-    <section class="hero-banner">
-        <div class="hero-content">
-            <h1>Beyond the Lab 🚀</h1>
-            <p>Where Science Meets Creativity: Memes, Mathematics, Chess, and More!</p>
-            <div class="quick-links">
-                <a href="#memes" class="quick-link">🎭 Memes</a>
-                <a href="#writings" class="quick-link">✍️ Writings</a>
-                <a href="#videos" class="quick-link">📹 Videos</a>
-                <a href="#hobbies" class="quick-link">♟️ Hobbies</a>
+    <header class="page-hero">
+        <div class="page-hero-inner">
+            <div>
+                <div class="page-eyebrow">r/QuantumMemeology • u/Unlucky-Credit-9619 • Science Communication</div>
+                <h1>Quantum Memeology & Science Outreach</h1>
+                <p>
+                    An original collection of 40 physics, quantum information, pure mathematics, and epistemology memes—each paired with a rigorous technical explanation of the underlying theorem or physical mechanism.
+                </p>
+            </div>
+            <div class="hero-links">
+                <a href="https://www.reddit.com/r/QuantumMemeology/" target="_blank" class="hero-btn gold">🤖 r/QuantumMemeology ↗</a>
+                <a href="https://www.reddit.com/user/Unlucky-Credit-9619/" target="_blank" class="hero-btn">👤 u/Unlucky-Credit-9619 ↗</a>
+                <a href="blog.html" class="hero-btn">📖 Substack & Bigganblog Essays →</a>
             </div>
         </div>
-    </section>
+    </header>
 
-    <!-- Main Content -->
-    <div class="main-content">
-        <!-- Memes Section with Horizontal Scroll -->
- <section class="passion-section" id="memes">
-    <h2 class="section-title">Quantum Memeology</h2>
-    <p style="text-align: center; color: var(--text-secondary); margin-bottom: 2rem;">
-        A curated collection of my original science memes. Scroll horizontally and click to reveal the physics behind the fun!
-    </p>
-    <div class="memes-wrapper">
-        <div class="memes-scroll-container">
-            <div class="memes-horizontal">
-
-                 <div class="meme-card" id="meme0">
-                    <img src="images/easy.jpeg" alt="Stand up comedy" style="width:100%; height: auto; display: block;">
-                    <div class="meme-info">
-                        <h3 class="meme-title">Complex Pun</h3>
-                        <p class="meme-description">Mathematicians doing stand up comedy. You've probably seen this one in many meme pages. This was an easy one and I am glad it got viral. </p>
-                        
-                </div>
-                 </div>
-
-
-                
-                <div class="meme-card" id="meme1">
-                    <img src="images/magicstate.jpeg" alt="Magic State Meme" style="width:100%; height: auto; display: block;">
-                    <div class="meme-info">
-                        <h3 class="meme-title">Universal Computation</h3>
-                        <p class="meme-description">The final infinity stone for quantum power.</p>
-                        <button class="meme-expand-btn" onclick="toggleMeme('meme1')">Show Explanation</button>
-                        <div class="meme-explanation">
-                            Clifford gates alone aren't enough for universal quantum computation. You need to add a non-Clifford resource, often prepared via a "magic state," to unlock full computing power.
-                        </div>
-                    </div>
-                </div>
-
-                <div class="meme-card" id="meme2">
-                    <img src="images/matrix.jpeg" alt="Matrix Meme" style="width:100%; height: auto; display: block;">
-                    <div class="meme-info">
-                        <h3 class="meme-title">Lost in Translation</h3>
-                        <p class="meme-description">Two different kinds of "Matrix" fans.</p>
-                        <button class="meme-expand-btn" onclick="toggleMeme('meme3')">Show Explanation</button>
-                        <div class="meme-explanation">
-                            A play on the double meaning of "matrix": the man is thinking of the movie, while the woman is thinking of a mathematical matrix element in quantum mechanics.
-                        </div>
-                    </div>
-                </div>
-                                <div class="meme-card" id="meme3">
-                    <img src="images/teleportation.jpeg" alt="Quantum Teleportation Meme" style="width:100%; height: auto; display: block;">
-                    <div class="meme-info">
-                        <h3 class="meme-title">No-Cloning Theorem</h3>
-                        <p class="meme-description">Why quantum states prefer cut & paste.</p>
-                        <button class="meme-expand-btn" onclick="toggleMeme('meme2')">Show Explanation</button>
-                        <div class="meme-explanation">
-                           You can't copy an unknown quantum state (Ctrl+C). Quantum teleportation moves a state by destroying the original, which is analogous to cutting and pasting (Ctrl+X, Ctrl+V).
-                        </div>
-                    </div>
-                </div>
-                <div class="meme-card" id="meme4">
-                    <img src="images/nothing.jpeg" alt="Quantum Circuit Meme" style="width:100%; height: auto; display: block;">
-                    <div class="meme-info">
-                        <h3 class="meme-title">Identity Crisis</h3>
-                        <p class="meme-description">This quantum circuit does... absolutely nothing.</p>
-                        <button class="meme-expand-btn" onclick="toggleMeme('meme4')">Show Explanation</button>
-                        <div class="meme-explanation">
-                            This circuit first entangles two qubits and then immediately applies the inverse operation, returning the qubits to their initial state with no net effect.
-                        </div>
-                    </div>
-                </div>
-                <div class="meme-card" id="meme5">
-                    <img src="images/doppler.jpeg" alt="Doppler Effect Meme" style="width:100%; height: auto; display: block;">
-                    <div class="meme-info">
-                        <h3 class="meme-title">Relativistic Dating</h3>
-                        <p class="meme-description">When red flags turn green... at 0.235c.</p>
-                        <button class="meme-expand-btn" onclick="toggleMeme('meme5')">Show Explanation</button>
-                        <div class="meme-explanation">
-                            A pun on the relativistic Doppler effect. Light from an object moving toward you is blueshifted, so if you run fast enough, "red flags" could theoretically appear blue (or green).
-                        </div>
-                    </div>
-                </div>
-                <div class="meme-card" id="meme6">
-                    <img src="images/normal.jpeg" alt="Normal Subgroup Meme" style="width:100%; height: auto; display: block;">
-                    <div class="meme-info">
-                        <h3 class="meme-title">Group Theory Problems</h3>
-                        <p class="meme-description">Some subgroups just can't be normal.</p>
-                        <button class="meme-expand-btn" onclick="toggleMeme('meme6')">Show Explanation</button>
-                        <div class="meme-explanation">
-                            A niche joke from abstract algebra. The S₃ group is yelling at one of its subgroups which famously lacks the mathematical property of being "normal."
-                        </div>
-                    </div>
-                </div>
-               <div class="meme-card" id="meme7">
-                    <img src="images/bell.jpeg" alt="Bell's Theorem Meme" style="width:100%; height: auto; display: block;">
-                    <div class="meme-info">
-                        <h3 class="meme-title">The Quantum Choice</h3>
-                        <p class="meme-description">Choose your pill: Locality or Realism.</p>
-                        <button class="meme-expand-btn" onclick="toggleMeme('meme7')">Show Explanation</button>
-                        <div class="meme-explanation">
-                            Bell's Theorem proves you can't have both locality (no spooky action) and realism (definite properties) in the classical sense. One must be abandoned.
-                        </div>
-                    </div>
-                </div>
-                 <div class="meme-card" id="meme8">
-                    <img src="images/stupid.jpeg" alt="Stereographic Projection Meme" style="width:100%; height: auto; display: block;">
-                    <div class="meme-info">
-                        <h3 class="meme-title">A Higher Plane</h3>
-                        <p class="meme-description">A mathematician's point of view.</p>
-                        <button class="meme-expand-btn" onclick="toggleMeme('meme8')">Show Explanation</button>
-                        <div class="meme-explanation">
-                           Using stereographic projection, the mathematician is at the North Pole, the only point not mapped to the "plane of stupidity" where everyone else resides.
-                        </div>
-                    </div>
-                </div>               
-                <div class="meme-card" id="meme9">
-                    <img src="images/fluxonium.jpeg" alt="Fluxonium Qubit Meme" style="width:100%; height: auto; display: block;">
-                    <div class="meme-info">
-                        <h3 class="meme-title">A Victim of Success</h3>
-                        <p class="meme-description">This qubit is too well-isolated.</p>
-                        <button class="meme-expand-btn" onclick="toggleMeme('meme9')">Show Explanation</button>
-                        <div class="meme-explanation">
-                            A real engineering trade-off. Making a qubit highly resilient to noise (a success) also makes it harder to measure and control (a new problem).
-                        </div>
-                    </div>
-                </div>
-                <div class="meme-card" id="meme10">
-                    <img src="images/annihilation.jpeg" alt="Annihilation Operator Meme" style="width:100%; height: auto; display: block;">
-                    <div class="meme-info">
-                        <h3 class="meme-title">Ground State Urge</h3>
-                        <p class="meme-description">When you're feeling low, apply â.</p>
-                        <button class="meme-expand-btn" onclick="toggleMeme('meme10')">Show Explanation</button>
-                        <div class="meme-explanation">
-                           Dark humor about the annihilation operator (â). When it acts on the ground state |g⟩, the lowest energy state, the result is zero.
-                        </div>
-                    </div>
-                </div>
-
-                <div class="meme-card" id="meme11">
-                    <img src="images/ring.jpeg" alt="Ring Theory Meme" style="width:100%; height: auto; display: block;">
-                    <div class="meme-info">
-                        <h3 class="meme-title">One Ring to Rule Them All</h3>
-                        <p class="meme-description">An algebraist finds the One Ring.</p>
-                        <button class="meme-expand-btn" onclick="toggleMeme('meme11')">Show Explanation</button>
-                        <div class="meme-explanation">
-                           A pun from abstract algebra. A "ring" is a set with two operations, like the integers (Z, +, .). To a mathematician, that's the inscription on the ring, but to Frodo, it's "just a ring."
-                        </div>
-                    </div>
-                </div>
-                <div class="meme-card" id="meme12">
-                    <img src="images/innerproduct.jpeg" alt="Inner Product Meme" style="width:100%; height: auto; display: block;">
-                    <div class="meme-info">
-                        <h3 class="meme-title">Civil War</h3>
-                        <p class="meme-description">A classic math vs. physics debate.</p>
-                        <button class="meme-expand-btn" onclick="toggleMeme('meme12')">Show Explanation</button>
-                        <div class="meme-explanation">
-                           Mathematicians define the inner product to be linear in the first slot, while physicists using Dirac notation define it to be linear in the second slot. This leads to minor "wars" over convention.
-                        </div>
-                    </div>
-                </div>
-                <div class="meme-card" id="meme13">
-                    <img src="images/qecc.jpeg" alt="QECC Meme" style="width:100%; height: auto; display: block;">
-                    <div class="meme-info">
-                        <h3 class="meme-title">A Hard Truth</h3>
-                        <p class="meme-description">Quantum error correction is subtle.</p>
-                        <button class="meme-expand-btn" onclick="toggleMeme('meme13')">Show Explanation</button>
-                        <div class="meme-explanation">
-                           Pauli operators form a vector space, not an algebra. A quantum error correcting code that can fix X and Z errors is not guaranteed to fix combined Y=iXZ errors, a counter-intuitive but crucial fact.
-                        </div>
-                    </div>
-                </div>
-                <div class="meme-card" id="meme14">
-                    <img src="images/delta.jpeg" alt="Dirac Delta Meme" style="width:100%; height: auto; display: block;">
-                    <div class="meme-info">
-                        <h3 class="meme-title">A Function or Not?</h3>
-                        <p class="meme-description">To the boiler room of hell!</p>
-                        <button class="meme-expand-btn" onclick="toggleMeme('meme14')">Show Explanation</button>
-                        <div class="meme-explanation">
-                           The Dirac Delta isn't a true function; it's a "distribution." Calling it a function is a common physicist shortcut that annoys mathematicians, who might consider it a sin worthy of hell.
-                        </div>
-                    </div>
-                </div>
-                <div class="meme-card" id="meme15">
-                    <img src="images/nullh.jpeg" alt="Null Hypothesis Meme" style="width:100%; height: auto; display: block;">
-                    <div class="meme-info">
-                        <h3 class="meme-title">Statistical Subtlety</h3>
-                        <p class="meme-description">We don't "accept" the null hypothesis.</p>
-                        <button class="meme-expand-btn" onclick="toggleMeme('meme15')">Show Explanation</button>
-                        <div class="meme-explanation">
-                           In statistics, failing to reject the null hypothesis doesn't mean you've proven it's true. It simply means you lack sufficient evidence to say it's false.
-                        </div>
-                    </div>
-                </div>
-                <div class="meme-card" id="meme16">
-                    <img src="images/true.jpeg" alt="1+1 Meme" style="width:100%; height: auto; display: block;">
-                    <div class="meme-info">
-                        <h3 class="meme-title">What is "+" ?</h3>
-                        <p class="meme-description">The answer depends on your axioms.</p>
-                        <button class="meme-expand-btn" onclick="toggleMeme('meme16')">Show Explanation</button>
-                        <div class="meme-explanation">
-                           This "1+1" question is tricky because the definition of "+" isn't given. The answer is 10 in binary, 0 in mod 2 arithmetic, 1 with a boolean OR operation, and 11 via string concatenation.
-                        </div>
-                    </div>
-                </div>
-                <div class="meme-card" id="meme17">
-                    <img src="images/weierstrass.jpeg" alt="Weierstrass Function Meme" style="width:100%; height: auto; display: block;">
-                    <div class="meme-info">
-                        <h3 class="meme-title">Nowhere Differentiable</h3>
-                        <p class="meme-description">Not all continuous functions are smooth.</p>
-                        <button class="meme-expand-btn" onclick="toggleMeme('meme17')">Show Explanation</button>
-                        <div class="meme-explanation">
-                           The Weierstrass function is a famous example of a function that is continuous everywhere but has no derivative at any point, lurking to horrify unsuspecting math students.
-                        </div>
-                    </div>
-                </div>
-                <div class="meme-card" id="meme18">
-                    <img src="images/complex.jpeg" alt="Complex Analysis Meme" style="width:100%; height: auto; display: block;">
-                    <div class="meme-info">
-                        <h3 class="meme-title">The Power of Holomorphy</h3>
-                        <p class="meme-description">Real vs. Complex analysis.</p>
-                        <button class="meme-expand-btn" onclick="toggleMeme('meme18')">Show Explanation</button>
-                        <div class="meme-explanation">
-                           For complex functions, being differentiable just once implies the function is infinitely differentiable and perfectly smooth (analytic). Real functions are far less well-behaved.
-                        </div>
-                    </div>
+    <main class="container">
+        <div class="controls-wrapper">
+            <div class="controls-top">
+                <div class="filter-tabs" id="memeFilterTabs"></div>
+                <div class="controls-right">
+                    <input type="search" id="memeSearchInput" class="search-box" placeholder="Search 40 memes by theorem, topic...">
+                    <button class="action-btn" id="expandAllBtn" onclick="toggleAllExplanations()">💡 Expand All Explanations</button>
                 </div>
             </div>
         </div>
-    </div>
-    <div style="text-align: center; margin-top: 3rem; display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap;">
-        <a href="https://www.reddit.com/r/QuantumMemeology/" class="hobby-link" target="_blank">
-            Join my subreddit for more quantum memes →
-        </a>
-        <a href="https://www.facebook.com/funofscience.bd/" class="hobby-link" target="_blank">
-            My bangla science posts on facebook →
-        </a>
-    </div>
-</section>
-        <!-- Writings Section -->
-        <section class="passion-section" id="writings">
-            <h2 class="section-title">Science Writing & Blogs</h2>
-            <div class="writings-grid">
-                <div class="writing-card">
-                    <h3 class="writing-title">Factorial and Stirling's Approximation</h3>
-                    <p class="writing-source">Bigganblog</p>
-                    <p class="writing-description">
-                        An exploration of one of the most elegant approximations in mathematics, showing how we can estimate factorials of large numbers with surprising accuracy.
-                    </p>
-                    <a href="https://bigganblog.org/2021/04/stirlings_approximation/" class="writing-link" target="_blank">
-                        Read Article →
-                    </a>
+
+        <div class="meme-grid" id="memeGrid"></div>
+
+        <!-- Science Outreach, Lectures & Intellectual Passions -->
+        <section class="outreach-section">
+            <div class="section-eyebrow">Pedagogy, Essays & Recreation</div>
+            <h2 class="section-title">Lectures, Popular Science Writing & Chess</h2>
+            <div class="outreach-grid">
+                <div class="outreach-card">
+                    <h3>🎥 Video Lecture Series</h3>
+                    <p>Self-recorded university-level mathematics and quantum information tutorials exploring complex variables, contour integration, and nonlocal games.</p>
+                    <div class="outreach-links">
+                        <a href="https://www.youtube.com/playlist?list=PLEGgPKRszGn9g1C8Swhib5GtYgHJNb-Iq" target="_blank" class="outreach-link">
+                            <span>▶️ Complex Analysis Lecture Playlist</span>
+                            <span>YouTube ↗</span>
+                        </a>
+                        <a href="https://www.youtube.com/playlist?list=PLEGgPKRszGn_i2yX9ba3-s_c_rU4fA_hE" target="_blank" class="outreach-link">
+                            <span>▶️ CHSH Game & Bell's Inequality</span>
+                            <span>YouTube ↗</span>
+                        </a>
+                    </div>
                 </div>
 
-                <div class="writing-card">
-                    <h3 class="writing-title">Which number is smaller? m^n or n^m</h3>
-                    <p class="writing-source">Borgomulblog</p>
-                    <p class="writing-description">
-                        A mathematical puzzle that explores exponential comparisons and reveals surprising patterns in number theory through elegant proofs and examples.
-                    </p>
-                    <a href="https://www.borgomul.com/syed-shubha/5117/" class="writing-link" target="_blank">
-                        Read Article →
-                    </a>
+                <div class="outreach-card">
+                    <h3>📰 Substack Philosophical Essays</h3>
+                    <p>Long-form explorations of formal epistemology, the Agrippan Trilemma, modal logic, Schopenhauer, and contemporary sociology.</p>
+                    <div class="outreach-links">
+                        <a href="https://syedshubha.substack.com/p/agrippan-trilemma" target="_blank" class="outreach-link">
+                            <span>📜 Agrippan Trilemma: Proving Truths</span>
+                            <span>Substack ↗</span>
+                        </a>
+                        <a href="https://syedshubha.substack.com/p/beyond-sisyphus" target="_blank" class="outreach-link">
+                            <span>📜 Beyond Sisyphus: Limits of Logic</span>
+                            <span>Substack ↗</span>
+                        </a>
+                        <a href="https://syedshubha.substack.com/p/male-loneliness-epidemic" target="_blank" class="outreach-link">
+                            <span>📜 Male Loneliness Epidemic</span>
+                            <span>Substack ↗</span>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="outreach-card">
+                    <h3>✍️ Bengali Science Writing (Bigganblog)</h3>
+                    <p>Nine popular mathematics and physics articles written in Bengali for students across Bangladesh and West Bengal.</p>
+                    <div class="outreach-links">
+                        <a href="https://bigganblog.org/author/syed-shubha/" target="_blank" class="outreach-link">
+                            <span>📚 Bigganblog Author Archive (9 Articles)</span>
+                            <span>bigganblog.org ↗</span>
+                        </a>
+                        <a href="blog.html" class="outreach-link">
+                            <span>📖 Browse All Articles on Portfolio</span>
+                            <span>View →</span>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="outreach-card">
+                    <h3>♟️ Recreational Chess</h3>
+                    <p>Avid tactical chess player. Always happy to play a friendly rapid or blitz game with fellow researchers and students.</p>
+                    <div class="outreach-links">
+                        <a href="https://www.chess.com/member/syed_shubha" target="_blank" class="outreach-link">
+                            <span>♟️ Chess.com: @syed_shubha</span>
+                            <span>Challenge ↗</span>
+                        </a>
+                        <a href="https://lichess.org/@/Shubha16" target="_blank" class="outreach-link">
+                            <span>♞ Lichess: @Shubha16</span>
+                            <span>Challenge ↗</span>
+                        </a>
+                    </div>
                 </div>
             </div>
         </section>
+    </main>
 
-        <!-- YouTube Section -->
- <section class="passion-section" id="videos">
-
-    <h2 class="section-title">Educational Videos</h2>
-
-    <div class="videos-container">
-
-        <div class="video-card">
-
-            <div class="video-info">
-
-                <h3 class="video-title">Complex Analysis & Vector Calculus Series</h3>
-
-                <p class="video-description">
-
-                    Complete course covering complex analysis fundamentals and vector calculus concepts with detailed explanations and solved problems.
-
-                </p>
-
-                <a href="https://www.youtube.com/playlist?list=PLEGgPKRszGn9g1C8Swhib5GtYgHJNb-Iq" class="writing-link" target="_blank">
-
-                    Watch Playlist →
-
-                </a>
-
+    <!-- Fullscreen Lightbox Modal -->
+    <div class="lightbox" id="lightboxModal" onclick="if(event.target===this)closeLightbox()">
+        <div class="lightbox-card">
+            <div class="lightbox-img-wrap">
+                <img id="lightboxImg" src="" alt="">
             </div>
-
-        </div>
-
-        <div class="video-card">
-
-            <div class="video-info">
-
-                <h3 class="video-title">The CHSH Game Explained</h3>
-
-                <p class="video-description">
-
-                    An introduction to the CHSH game, demonstrating quantum advantage and Bell inequality violations in an accessible way.
-
-                </p>
-
-                <a href="https://www.youtube.com/watch?v=qd_sZDWfmv8" class="writing-link" target="_blank">
-
-                    Watch Video →
-
-                </a>
-
+            <div class="lightbox-info">
+                <button class="lightbox-close" onclick="closeLightbox()">✕ Close</button>
+                <div>
+                    <span class="meme-tag" id="lightboxTag"></span>
+                </div>
+                <h2 id="lightboxTitle" style="font-size:1.65rem;"></h2>
+                <p id="lightboxDesc" style="color:var(--text-secondary); font-size:0.96rem;"></p>
+                <div style="background:#f8fafc; border-left:4px solid var(--academic-blue); padding:1rem 1.15rem; border-radius:0 8px 8px 0;">
+                    <strong style="display:block; font-size:0.8rem; text-transform:uppercase; letter-spacing:0.05em; color:var(--academic-blue-dark); margin-bottom:0.35rem;">💡 Technical Explanation</strong>
+                    <p id="lightboxExp" style="font-size:0.92rem; color:var(--navy-800); line-height:1.65;"></p>
+                </div>
             </div>
-
         </div>
-
     </div>
 
-</section>
-
-        <!-- Hobbies Section -->
-        <section class="passion-section" id="hobbies">
-            <h2 class="section-title">Other Interests</h2>
-            <div class="hobbies-grid">
-                <div class="hobby-card">
-                    <div class="hobby-icon">♟️</div>
-                    <h3 class="hobby-title">Chess</h3>
-                    <p class="hobby-description">
-                        Passionate chess player, always learning and improving. You can watch some of my chess content on <a href="https://www.youtube.com/@SchrodingersDankKnight/shorts">YouTube</a>, or watch my games at <a href="https://www.chess.com/member/decohered_imam"> chess.com</a>.
-                    </p>
-                </div>
-
-                <div class="hobby-card">
-                    <div class="hobby-icon">📚</div>
-                    <h3 class="hobby-title">Comics & Superheroes</h3>
-                    <p class="hobby-description">
-                        Big fan of The Flash (DC) and Spider-Man (Marvel). Love how comics blend science fiction with storytelling!
-                    </p>
-                </div>
-
-                <div class="hobby-card">
-                    <div class="hobby-icon">🎯</div>
-                    <h3 class="hobby-title">Science Communication</h3>
-                    <p class="hobby-description">
-                        Dedicated to making science accessible through creative content, from memes to detailed explanations.
-                    </p>
-                </div>
-
-
-        </section>
-    </div>
-
-    <!-- Contact Section (Same as main page) -->
-    <footer class="contact-section" id="contact">
-        <div class="main-content">
-            <h2>Let's Connect</h2>
-            <p class="contact-description">
-                Feel free to reach out for research collaborations, academic discussions, or just a friendly conversation about quantum physics!
-            </p>
-            <div class="social-links">
-                <a href="https://twitter.com/syed_shubha" class="social-link" target="_blank" title="Twitter">
-                    <svg viewBox="0 0 24 24"><path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/></svg>
-                </a>
-                <a href="https://www.linkedin.com/in/syed-emad-uddin-shubha/" class="social-link" target="_blank" title="LinkedIn">
-                    <svg viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
-                </a>
-                <a href="https://github.com/syedshubha" class="social-link" target="_blank" title="GitHub">
-                    <svg viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
-                </a>
-                <a href="mailto:shubhabuet16@gmail.com" class="social-link" title="Email">
-                    <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
-                </a>
-                <a href="https://www.facebook.com/physicist.shubha" class="social-link" target="_blank" title="Facebook">
-                    <svg viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
-                </a>
-            </div>
-            <p style="opacity: 0.6; font-size: 0.875rem;">
-                © 2025 Syed Emad Uddin Shubha. All rights reserved.
-            </p>
-        </div>
-    </footer>
-
+    <script src="data/portfolio_data.js"></script>
     <script>
-        // Toggle meme explanation
-        function toggleMeme(id) {
-            const card = document.getElementById(id);
-            const btn = card.querySelector('.meme-expand-btn');
-            
-            card.classList.toggle('expanded');
-            
-            if (card.classList.contains('expanded')) {
-                btn.textContent = 'Hide Explanation';
-            } else {
-                btn.textContent = 'Show Explanation';
-            }
+        let SITE_DATA = window.PORTFOLIO_DATA || { memes: [] };
+        let activeTag = 'all';
+        let searchQuery = '';
+        let allExpanded = false;
+
+        async function initMemes() {
+            try {
+                const res = await fetch('data/portfolio_data.json?t=' + Date.now());
+                if (res.ok) SITE_DATA = await res.json();
+            } catch (e) {}
+            buildFilterTabs();
+            renderMemes();
         }
 
-        // Smooth scrolling
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                }
+        function buildFilterTabs() {
+            const memes = SITE_DATA.memes || [];
+            const tags = Array.from(new Set(memes.map(m => m.tag).filter(Boolean)));
+            const tabsEl = document.getElementById('memeFilterTabs');
+            tabsEl.innerHTML = `<button class="filter-btn active" data-tag="all">All Memes (${memes.length})</button>` +
+                tags.map(t => {
+                    const count = memes.filter(m => m.tag === t).length;
+                    return `<button class="filter-btn" data-tag="${t}">${t} (${count})</button>`;
+                }).join('');
+
+            tabsEl.querySelectorAll('.filter-btn').forEach(btn => {
+                btn.addEventListener('click', () => {
+                    tabsEl.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+                    btn.classList.add('active');
+                    activeTag = btn.getAttribute('data-tag');
+                    renderMemes();
+                });
             });
+        }
+
+        function renderMemes() {
+            const memes = (SITE_DATA.memes || []).filter(m => {
+                if (activeTag !== 'all' && m.tag !== activeTag) return false;
+                if (searchQuery) {
+                    const hay = `${m.title} ${m.desc} ${m.explanation} ${m.tag}`.toLowerCase();
+                    if (!hay.includes(searchQuery.toLowerCase())) return false;
+                }
+                return true;
+            });
+
+            const grid = document.getElementById('memeGrid');
+            grid.innerHTML = memes.map((m, idx) => `
+                <article class="meme-card">
+                    <div class="meme-img-frame" onclick="openLightbox('${m.id}')">
+                        <img src="${m.image}" alt="${m.title}" loading="lazy">
+                        <span class="zoom-hint">🔍 Click to Enlarge</span>
+                    </div>
+                    <div class="meme-body">
+                        <div class="meme-meta">
+                            <span class="meme-tag">${m.tag || 'Physics & Math'}</span>
+                            <span class="meme-index">#${idx + 1}</span>
+                        </div>
+                        <h3 class="meme-title">${m.title}</h3>
+                        <p class="meme-desc">${m.desc || ''}</p>
+                        <div class="meme-actions">
+                            <button class="explain-btn ${allExpanded ? 'open' : ''}" id="btn-${m.id}" onclick="toggleExplain('${m.id}')">
+                                ${allExpanded ? '🔼 Hide Technical Explanation' : '💡 Show Technical Explanation'}
+                            </button>
+                        </div>
+                        <div class="meme-explanation ${allExpanded ? 'open' : ''}" id="exp-${m.id}">
+                            <strong>Why it works:</strong> ${m.explanation || ''}
+                        </div>
+                    </div>
+                </article>
+            `).join('');
+        }
+
+        function toggleExplain(id) {
+            const expEl = document.getElementById('exp-' + id);
+            const btnEl = document.getElementById('btn-' + id);
+            if (!expEl || !btnEl) return;
+            const isOpen = expEl.classList.toggle('open');
+            btnEl.classList.toggle('open', isOpen);
+            btnEl.textContent = isOpen ? '🔼 Hide Technical Explanation' : '💡 Show Technical Explanation';
+        }
+
+        function toggleAllExplanations() {
+            allExpanded = !allExpanded;
+            const btn = document.getElementById('expandAllBtn');
+            btn.classList.toggle('active', allExpanded);
+            btn.textContent = allExpanded ? '🔼 Collapse All Explanations' : '💡 Expand All Explanations';
+            renderMemes();
+        }
+
+        function openLightbox(id) {
+            const m = (SITE_DATA.memes || []).find(x => x.id === id);
+            if (!m) return;
+            document.getElementById('lightboxImg').src = m.image;
+            document.getElementById('lightboxTag').textContent = m.tag || 'Science Meme';
+            document.getElementById('lightboxTitle').textContent = m.title;
+            document.getElementById('lightboxDesc').textContent = m.desc || '';
+            document.getElementById('lightboxExp').textContent = m.explanation || '';
+            document.getElementById('lightboxModal').classList.add('open');
+        }
+
+        function closeLightbox() {
+            document.getElementById('lightboxModal').classList.remove('open');
+        }
+
+        document.getElementById('memeSearchInput').addEventListener('input', e => {
+            searchQuery = e.target.value;
+            renderMemes();
         });
 
-        // Add animation on scroll
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        };
-
-        const observer = new IntersectionObserver(entries => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.style.animation = 'fadeInUp 0.6s ease both';
-                }
-            });
-        }, observerOptions);
-
-        // Add fadeInUp animation
-        const style = document.createElement('style');
-        style.textContent = `
-            @keyframes fadeInUp {
-                from {
-                    opacity: 0;
-                    transform: translateY(30px);
-                }
-                to {
-                    opacity: 1;
-                    transform: translateY(0);
-                }
-            }
-        `;
-        document.head.appendChild(style);
-
-        // Observe elements
-        document.querySelectorAll('.writing-card, .video-card, .hobby-card').forEach(el => {
-            observer.observe(el);
+        document.addEventListener('keydown', e => {
+            if (e.key === 'Escape') closeLightbox();
         });
+
+        initMemes();
     </script>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
