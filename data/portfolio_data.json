@@ -871,163 +871,163 @@
       "id": "meme1",
       "image": "images/magicstate.jpeg",
       "title": "Universal Computation",
-      "description": "The final Infinity Stone for fault-tolerant quantum power.",
-      "explanation": "By the Gottesman–Knill theorem, Clifford gates (H, S, CNOT) can be efficiently simulated classically. Adding a non-Clifford resource (typically injected via a distilled 'magic state' |T⟩) unlocks universal quantum computation.",
+      "description": "Clifford Gates {H, S, CNOT} + Non-Clifford T gate = Universal Quantum Computation.",
+      "explanation": "By the Gottesman–Knill theorem, quantum circuits composed solely of Clifford gates {H, S, CNOT} are not universal and can be simulated efficiently in polynomial time on a classical computer. Inserting the non-Clifford T = diag(1, e^(iπ/4)) gate into the gate set completes the Clifford+T universal gate set, unlocking dense coverage of SU(2ⁿ) and full fault-tolerant universal quantum computation (typically implemented via magic state distillation and injection).",
       "tag": "Quantum Computing",
-      "desc": "The final Infinity Stone for fault-tolerant quantum power."
+      "desc": "Clifford Gates {H, S, CNOT} + Non-Clifford T gate = Universal Quantum Computation."
     },
     {
       "id": "meme2",
       "image": "images/matrix.jpeg",
       "title": "Lost in Translation",
-      "description": "Two very different kinds of 'Matrix' fans.",
-      "explanation": "A play on the double meaning of 'matrix': pop-culture fans think of the sci-fi movie trilogy, while quantum physicists immediately think of Hermitian operator matrix elements ⟨ψ_i | H | ψ_j⟩.",
+      "description": "Expectation when wearing \"The Matrix\" merch vs. Reality: \"Oh look, it’s the representation of a linear operator with respect to a chosen basis!\"",
+      "explanation": "While pop-culture fans think of the 1999 sci-fi film trilogy, mathematicians and physicists immediately define a matrix as the coordinate array A_ij = ⟨e_i | T | e_j⟩ representing a linear operator T: V → W with respect to a chosen basis.",
       "tag": "Physics",
-      "desc": "Two very different kinds of 'Matrix' fans."
+      "desc": "Expectation when wearing \"The Matrix\" merch vs. Reality: \"Oh look, it’s the representation of a linear operator with respect to a chosen basis!\""
     },
     {
       "id": "meme3",
       "image": "images/teleportation.jpeg",
       "title": "No-Cloning Theorem",
-      "description": "Why quantum states prefer Cut & Paste over Copy & Paste.",
-      "explanation": "Wootters and Zurek's No-Cloning Theorem forbids copying an unknown quantum state (Ctrl+C). Quantum teleportation transfers a state by measuring and destroying the original, making it the quantum analog of Cut and Paste (Ctrl+X, Ctrl+V).",
+      "description": "Classical vs. Quantum Info: Copy-Paste (forbidden by No-Cloning) vs. Cut-Paste (Quantum Teleportation).",
+      "explanation": "By the Wootters–Zurek No-Cloning Theorem, no unitary operation can duplicate an unknown arbitrary quantum state |ψ⟩ ⊗ |0⟩ → |ψ⟩ ⊗ |ψ⟩, making \"Copy-Paste\" (Ctrl+C, Ctrl+V) impossible for quantum information. Quantum Teleportation transfers a quantum state by measuring Alice’s qubit in the Bell basis (which destroys the original state at Alice’s side) and reconstructing |ψ⟩ on Bob’s entangled qubit via Pauli corrections, making it the exact quantum analog of \"Cut-Paste\" (Ctrl+X, Ctrl+V).",
       "tag": "Quantum Computing",
-      "desc": "Why quantum states prefer Cut & Paste over Copy & Paste."
+      "desc": "Classical vs. Quantum Info: Copy-Paste (forbidden by No-Cloning) vs. Cut-Paste (Quantum Teleportation)."
     },
     {
       "id": "meme4",
       "image": "images/nothing.jpeg",
       "title": "Identity Crisis",
-      "description": "This quantum circuit does... absolutely nothing.",
-      "explanation": "This circuit prepares a Bell state with H and CNOT, and immediately applies the exact inverse (CNOT followed by H), composing to the identity operator U U† = I.",
+      "description": "A CX gate followed by a Hadamard-conjugated CZ gate: doing nothing with extra steps.",
+      "explanation": "In this two-qubit circuit on q₀ and q₁, a CNOT (CX) gate is followed by a Controlled-Z (CZ) gate whose target qubit q₁ is sandwiched between two Hadamard (H) gates. Because conjugating the Pauli Z operator by Hadamards transforms the Z basis into the X basis (H Z H = X), the subcircuit (I ⊗ H)·CZ·(I ⊗ H) is an exact circuit identity for a CX gate! Applying CX followed immediately by (I ⊗ H)·CZ·(I ⊗ H) = CX yields CX² = I, the two-qubit identity operator, so the entire circuit literally does nothing.",
       "tag": "Quantum Computing",
-      "desc": "This quantum circuit does... absolutely nothing."
+      "desc": "A CX gate followed by a Hadamard-conjugated CZ gate: doing nothing with extra steps."
     },
     {
       "id": "meme5",
       "image": "images/doppler.jpeg",
       "title": "Relativistic Dating",
-      "description": "When red flags turn green... at v = 0.235c.",
-      "explanation": "By the relativistic longitudinal Doppler effect, light from a source approaching at relativistic velocity is blueshifted. At roughly v ≈ 0.235c, red wavelengths (~650 nm) shift into green (~510 nm)!",
+      "description": "Her red flags when I approach her at v = 0.235c.",
+      "explanation": "By the special-relativistic longitudinal Doppler formula f_obs = f_src √((1 + β)/(1 − β)) with β = v/c, approaching a red light source (λ_src ≈ 650 nm) at v = 0.235c blueshifts the observed wavelength by √((1 − 0.235)/(1 + 0.235)) ≈ 0.787 down to λ_obs ≈ 512 nm, turning every \"red flag\" into a \"green flag\"!",
       "tag": "Physics",
-      "desc": "When red flags turn green... at v = 0.235c."
+      "desc": "Her red flags when I approach her at v = 0.235c."
     },
     {
       "id": "meme6",
       "image": "images/normal.jpeg",
       "title": "Group Theory Problems",
-      "description": "Some subgroups just refuse to be normal.",
-      "explanation": "In abstract algebra, the symmetric group S₃ has order-2 subgroups generated by transpositions that are not invariant under conjugation (gHg⁻¹ ≠ H), meaning they lack the property of being 'normal' subgroups.",
+      "description": "S₃ group to the subgroup {(), (12)}: \"Why can’t you just be normal?!\"",
+      "explanation": "In the symmetric group S₃ of permutations on 3 elements, the order-2 subgroup H = {(), (12)} generated by a single transposition is not a normal subgroup (H ⋪ S₃) because it is not invariant under conjugation: for g = (13) ∈ S₃, g(12)g⁻¹ = (13)(12)(13)⁻¹ = (23) ∉ H, so its left and right cosets do not coincide.",
       "tag": "Mathematics & Computer Science",
-      "desc": "Some subgroups just refuse to be normal."
+      "desc": "S₃ group to the subgroup {(), (12)}: \"Why can’t you just be normal?!\""
     },
     {
       "id": "meme7",
       "image": "images/bell.jpeg",
       "title": "The Quantum Choice",
-      "description": "Choose your pill: Locality or Realism.",
-      "explanation": "Bell's Theorem and experimental violations of Bell/CHSH inequalities prove that no local hidden-variable theory can reproduce all quantum predictions: nature cannot simultaneously satisfy classical locality and counterfactual definiteness (realism).",
+      "description": "Bell’s Theorem offering you the ultimate Red Pill / Blue Pill choice: Locality or Realism.",
+      "explanation": "John Stewart Bell proved in 1964 that any physical theory satisfying both Locality (no superluminal causal influences) and Realism (physical observables possess pre-existing definite values prior to measurement, i.e., local hidden variables) must obey Bell’s inequalities. Because quantum mechanics and loophole-free Bell test experiments violate these inequalities up to the Tsirelson bound 2√2 > 2, nature forces us to give up at least one: Locality or Realism.",
       "tag": "Physics",
-      "desc": "Choose your pill: Locality or Realism."
+      "desc": "Bell’s Theorem offering you the ultimate Red Pill / Blue Pill choice: Locality or Realism."
     },
     {
       "id": "meme8",
       "image": "images/stupid.jpeg",
       "title": "A Higher Plane",
-      "description": "A topologist's point of view.",
-      "explanation": "Under stereographic projection from the Riemann sphere S² to the plane R², the North Pole is the unique point at infinity not mapped onto the plane.",
+      "description": "Normal people: \"Everyone is stupid except me.\" Mathematician: Stereographic projection from the North Pole onto the \"Plane of Stupidity.\"",
+      "explanation": "Under stereographic projection of the sphere S² onto the flat plane ℝ² (labeled the \"plane of stupidity\"), rays drawn from the North Pole N (\"Me\") map every other point A, B, C, D ∈ S² \\ {N} (\"Everyone else\") bijectively onto points A’, B’, C’, D’ on the plane below, whereas the North Pole itself is the unique point at infinity that escapes projection onto the plane.",
       "tag": "Mathematics & Computer Science",
-      "desc": "A topologist's point of view."
+      "desc": "Normal people: \"Everyone is stupid except me.\" Mathematician: Stereographic projection from the North Pole onto the \"Plane of Stupidity.\""
     },
     {
       "id": "meme9",
       "image": "images/fluxonium.jpeg",
       "title": "A Victim of Success",
-      "description": "When your qubit is too well-isolated from the environment.",
-      "explanation": "A fundamental superconducting hardware engineering trade-off: decoupling a qubit (such as a heavy fluxonium mode) to achieve long T₁ coherence times simultaneously weakens its coupling to drive and readout channels.",
+      "description": "Fluxonium and 0–π qubits when intrinsic noise resilience makes them hard to measure: \"I am a victim of my own success.\"",
+      "explanation": "In superconducting circuit QED, protected qubits such as heavy fluxonium and the 0–π qubit achieve long relaxation (T₁) and dephasing (T₂) coherence times by localizing the |0⟩ and |1⟩ wavefunctions in disjoint valleys of phase space with exponentially suppressed transition matrix elements. However, decoupling the qubit from environmental noise channels simultaneously weakens its dipole coupling to external microwave drive lines and dispersive readout resonators, creating a fundamental hardware trade-off between intrinsic noise protection and fast, high-fidelity measurement.",
       "tag": "Quantum Computing",
-      "desc": "When your qubit is too well-isolated from the environment."
+      "desc": "Fluxonium and 0–π qubits when intrinsic noise resilience makes them hard to measure: \"I am a victim of my own success.\""
     },
     {
       "id": "meme10",
       "image": "images/annihilation.jpeg",
       "title": "Ground State Urge",
-      "description": "When you're already in |0⟩ and someone applies the lowering operator â.",
-      "explanation": "In quantum harmonic oscillators and Fock space, the annihilation operator â lowers the excitation number by one: â|n⟩ = √n|n−1⟩. Acting on the vacuum/ground state |0⟩ yields zero (â|0⟩ = 0).",
+      "description": "Midnight urge when I feel low: applying the annihilation operator â = (q̂ + ip̂)/√2 to the ground state |g⟩.",
+      "explanation": "In the quantum harmonic oscillator, the bosonic annihilation (lowering) operator â = (q̂ + ip̂)/√2 lowers any excited energy eigenstate |n⟩ by one quantum via â|n⟩ = √n|n−1⟩. When the system is already at rock bottom in its ground state |g⟩ ≡ |0⟩, acting with â does not produce a lower energy state; it annihilates the state vector completely into the zero vector: â|g⟩ = 0.",
       "tag": "Physics",
-      "desc": "When you're already in |0⟩ and someone applies the lowering operator â."
+      "desc": "Midnight urge when I feel low: applying the annihilation operator â = (q̂ + ip̂)/√2 to the ground state |g⟩."
     },
     {
       "id": "meme11",
       "image": "images/ring.jpeg",
       "title": "One Ring to Rule Them All",
-      "description": "An algebraist finds the One Ring.",
-      "explanation": "In abstract algebra, a 'ring' (R, +, ·) is a set equipped with two binary operations satisfying ring axioms, such as the ring of integers (Z, +, ·).",
+      "description": "Gandalf: \"What can you see?\" The One Ring inscribed with (ℤ, +, ·). Frodo: \"just a ring.\"",
+      "explanation": "When Gandalf pulls the ring from the hearth expecting the fiery Black Speech of Mordor, the glowing inscription instead reads (ℤ, +, ·): the set of integers equipped with standard addition and multiplication, which is the canonical textbook archetype of a commutative ring in abstract algebra. Hence Frodo’s literal algebraic reply: \"just a ring.\"",
       "tag": "Mathematics & Computer Science",
-      "desc": "An algebraist finds the One Ring."
+      "desc": "Gandalf: \"What can you see?\" The One Ring inscribed with (ℤ, +, ·). Frodo: \"just a ring.\""
     },
     {
       "id": "meme12",
       "image": "images/innerproduct.jpeg",
       "title": "Inner Product Civil War",
-      "description": "The eternal math vs. physics convention battle.",
-      "explanation": "Mathematicians typically define complex inner products ⟨x, y⟩ to be linear in the first argument and conjugate-linear in the second, whereas physicists using Dirac bra-ket notation ⟨ϕ|ψ⟩ define linearity in the second slot (the ket).",
+      "description": "⟨x, αy + βz⟩ = α⟨x, y⟩ + β⟨x, z⟩ vs. ⟨αx + βy, z⟩ = α⟨x, z⟩ + β⟨y, z⟩: The eternal Physics vs. Math inner-product civil war.",
+      "explanation": "On a complex Hilbert space, a sesquilinear inner product must be linear in one argument and conjugate-linear (antilinear) in the other so that ⟨x, x⟩ > 0. Physicists follow Paul Dirac’s bra-ket convention ⟨x | αy + βz⟩ = α⟨x|y⟩ + β⟨x|z⟩ (linear in the second slot, the ket, and conjugate-linear in the first slot, the bra), whereas pure mathematicians define ⟨αx + βy, z⟩ = α⟨x, z⟩ + β⟨y, z⟩ (linear in the first slot).",
       "tag": "Physics",
-      "desc": "The eternal math vs. physics convention battle."
+      "desc": "⟨x, αy + βz⟩ = α⟨x, y⟩ + β⟨x, z⟩ vs. ⟨αx + βy, z⟩ = α⟨x, z⟩ + β⟨y, z⟩: The eternal Physics vs. Math inner-product civil war."
     },
     {
       "id": "meme13",
       "image": "images/qecc.jpeg",
       "title": "A Subtle Truth in QEC",
-      "description": "Why quantum error correction is richer than classical parity checks.",
-      "explanation": "Pauli operators form a group rather than a vector space without phases: a quantum error-correcting code that corrects X and Z errors only corrects Y = iXZ when the code's syndrome table distinguishes combined XZ errors from other correctable errors.",
+      "description": "\"If a QECC can correct X and Z errors, it may not correct ZX error.\" Why linearity alone does not automatically guarantee Y-error correction.",
+      "explanation": "A classic subtlety in Quantum Error Correction (QEC): by the error-discretization theorem, if a QECC corrects an error set E, linearity guarantees it corrects any linear combination αE₁ + βE₂ of operators in E. However, a simultaneous bit-and-phase flip ZX = −iY is a multiplicative matrix product of Z and X, not a linear combination! While CSS codes decode X-type and Z-type syndromes independently (and therefore do correct ZX whenever they correct X and Z), a general QECC whose syndrome space or Knill–Laflamme conditions ⟨ψ_a|E_α† E_β|ψ_b⟩ = C_αβ δ_ab only distinguish {I, X, Z} can have the syndrome of ZX alias with another error, failing to correct ZX.",
       "tag": "Quantum Computing",
-      "desc": "Why quantum error correction is richer than classical parity checks."
+      "desc": "\"If a QECC can correct X and Z errors, it may not correct ZX error.\" Why linearity alone does not automatically guarantee Y-error correction."
     },
     {
       "id": "meme14",
       "image": "images/delta.jpeg",
       "title": "A Function or a Distribution?",
-      "description": "Calling δ(x) an ordinary function in front of a functional analyst.",
-      "explanation": "The Dirac delta δ(x) is not a classical function R → R; rigorously, it is a generalized function (Schwartz distribution) or measure defined by ⟨δ, f⟩ = f(0).",
+      "description": "\"How about people who call Dirac Delta a function?\" \"Straight to hell. To the boiler room of hell.\"",
+      "explanation": "No pointwise function δ: ℝ → ℝ can vanish everywhere for x ≠ 0 and still have Lebesgue integral ∫_{−∞}^∞ δ(x) dx = 1 (its integral would be identically 0). Rigorously, the Dirac delta δ is not a function at all, but a continuous linear functional (a Schwartz distribution or Radon measure) acting on smooth test functions φ ∈ C_c^∞(ℝ) via the evaluation pairing ⟨δ, φ⟩ = φ(0).",
       "tag": "Mathematics & Computer Science",
-      "desc": "Calling δ(x) an ordinary function in front of a functional analyst."
+      "desc": "\"How about people who call Dirac Delta a function?\" \"Straight to hell. To the boiler room of hell.\""
     },
     {
       "id": "meme15",
       "image": "images/nullh.jpeg",
       "title": "Statistical Subtlety",
-      "description": "We never 'accept' the null hypothesis H₀.",
-      "explanation": "In frequentist hypothesis testing, a p-value above α means we 'fail to reject H₀', absence of statistically significant evidence against H₀ is not proof that H₀ is true.",
+      "description": "\"If p-value is greater than significance level, you can’t reject the null hypothesis.\" \"So you accept it?\" \"No.\"",
+      "explanation": "In Neyman–Pearson and Fisherian frequentist hypothesis testing, a p-value exceeding the significance threshold α (p > α) only means the observed data lack sufficient statistical power or evidence to reject H₀ (\"fail to reject H₀\"). Because absence of evidence is not evidence of absence (especially under high Type II error β), failing to reject H₀ never proves that H₀ is true.",
       "tag": "Mathematics & Computer Science",
-      "desc": "We never 'accept' the null hypothesis H₀."
+      "desc": "\"If p-value is greater than significance level, you can’t reject the null hypothesis.\" \"So you accept it?\" \"No.\""
     },
     {
       "id": "meme16",
       "image": "images/true.jpeg",
       "title": "What is '+'?",
-      "description": "The answer depends entirely on your algebraic structure.",
-      "explanation": "'1 + 1' equals 2 in Z, 10 in base-2 representation, 0 in the finite field F₂ (XOR / mod 2 arithmetic), 1 in Boolean algebra (OR), and '11' under string concatenation.",
+      "description": "1 + 1 = ? When \"2\" isn’t on the board, and A: 0, B: 1, C: 11, D: 10 are all simultaneously right.",
+      "explanation": "Every single multiple-choice option is valid in a different algebraic or numeral system: A (1 + 1 = 0) holds in the finite field 𝔽₂ = ℤ/2ℤ (modulo-2 / XOR arithmetic); B (1 + 1 = 1) holds in Boolean algebra (logical OR, 1 ∨ 1 = 1); C (1 + 1 = 11) holds in unary representation or string concatenation (\"1\" + \"1\"); and D (1 + 1 = 10) holds in binary (base-2) arithmetic.",
       "tag": "Mathematics & Computer Science",
-      "desc": "The answer depends entirely on your algebraic structure."
+      "desc": "1 + 1 = ? When \"2\" isn’t on the board, and A: 0, B: 1, C: 11, D: 10 are all simultaneously right."
     },
     {
       "id": "meme17",
       "image": "images/weierstrass.jpeg",
       "title": "Nowhere Differentiable",
-      "description": "Not all continuous functions are smooth.",
-      "explanation": "Karl Weierstrass constructed a real function f(x) = ∑ aⁿ cos(bⁿ π x) that is continuous everywhere on R yet differentiable nowhere, shattering 19th-century intuition that continuous curves must be smooth almost everywhere.",
+      "description": "\"Me chilling because I can differentiate any continuous function\" vs. Weierstrass’s monster f(x) = ∑ cos(13ⁿπx)/2ⁿ.",
+      "explanation": "In 1872, Karl Weierstrass shattered 19th-century mathematical intuition by constructing the pathological function f(x) = ∑_{n=0}^∞ cos(13ⁿπx)/2ⁿ. Because the geometric weights 1/2ⁿ converge absolutely by the Weierstrass M-test, f(x) is uniformly continuous everywhere on ℝ; yet because the frequency-amplitude product ab = 13/2 > 1 + 3π/2, its difference quotients oscillate wildly at every scale, making f(x) differentiable nowhere!",
       "tag": "Mathematics & Computer Science",
-      "desc": "Not all continuous functions are smooth."
+      "desc": "\"Me chilling because I can differentiate any continuous function\" vs. Weierstrass’s monster f(x) = ∑ cos(13ⁿπx)/2ⁿ."
     },
     {
       "id": "meme18",
       "image": "images/complex.jpeg",
       "title": "The Miracle of Holomorphy",
-      "description": "Real differentiability vs. Complex differentiability.",
-      "explanation": "By Cauchy's integral formula, a complex function that is complex-differentiable just once on an open domain (holomorphic) is automatically infinitely differentiable (C^∞) and analytic! Real functions have no such guarantee.",
+      "description": "f: ℝ → ℝ (C¹ ⇏ C^∞ ⇏ C^ω) vs. f: ℂ → ℂ (C¹ ⇔ C^∞ ⇔ C^ω).",
+      "explanation": "For real functions f: ℝ → ℝ, being once continuously differentiable (C¹) does not imply smoothness (C^∞), and even being infinitely differentiable (C^∞, such as Cauchy’s flat bump function e^(−1/x²) for x > 0) does not imply analyticity (C^ω, locally equal to a convergent Taylor series). In complex analysis (f: ℂ → ℂ), however, the Cauchy–Riemann equations and Cauchy’s Integral Formula work a miracle: any function that is complex-differentiable just once on an open domain is automatically infinitely differentiable (C^∞) and analytic (C^ω), so C¹ ⇔ C^∞ ⇔ C^ω!",
       "tag": "Mathematics & Computer Science",
-      "desc": "Real differentiability vs. Complex differentiability."
+      "desc": "f: ℝ → ℝ (C¹ ⇏ C^∞ ⇏ C^ω) vs. f: ℂ → ℂ (C¹ ⇔ C^∞ ⇔ C^ω)."
     }
   ],
   "files": [
