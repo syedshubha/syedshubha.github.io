@@ -371,22 +371,6 @@ window.PORTFOLIO_DATA = {
       "link": "https://github.com/syedshubha/QuantumImageProcessing/blob/main/qiskit_assignment_shubha.ipynb",
       "link_label": "View Jupyter Notebook →",
       "repo_url": "https://github.com/syedshubha/QuantumImageProcessing"
-    },
-    {
-      "id": "proj-loadflow",
-      "title": "Load Flow Analysis for n-Bus Power Systems",
-      "category": "Power Systems & Numerical Methods",
-      "badge": "Open Source",
-      "description": "Generalized Gauss–Seidel load flow solver for n-bus power networks with user-defined convergence tolerance and automated spreadsheet I/O management.",
-      "tech": [
-        "MATLAB",
-        "Gauss–Seidel",
-        "Numerical Analysis",
-        "Power Systems"
-      ],
-      "link": "https://github.com/syedshubha/load_flow_analysis_gauss_seidel",
-      "link_label": "View GitHub Repository →",
-      "repo_url": "https://github.com/syedshubha/load_flow_analysis_gauss_seidel"
     }
   ],
   "experience": [
@@ -521,7 +505,8 @@ window.PORTFOLIO_DATA = {
         "Philosophy",
         "Substack"
       ],
-      "content": "I am at a stage in life where *\"why\"* has superseded *\"what\"* or *\"how.\"* As an analytical person, I find myself trying to rely less on emotion and more on logic to answer a foundational question: why should we strive in a universe devoid of intrinsic teleology?\n\n## Global Meaninglessness vs. Local Accountability\n\nUnder deterministic or Many-Worlds physical frameworks, traditional notions of uncaused agency break down. How then do we justify our actions? The answer lies in separating the **global** from the **local**, much like a software simulation or video game. Globally, outside the confines of the software, no state configuration is objectively \"right\" or \"wrong.\" Yet locally, within the system's dynamics, an agent cannot evade the causal consequences of its environment.\n\n## The Logical Flaw in Camus's Sisyphus\n\nAlbert Camus famously addressed the absurd by declaring that *\"one must imagine Sisyphus happy.\"* While compelling as a poetic coping mechanism, it is logically flawed: Camus transitions abruptly from a **descriptive observation** (the universe has no intrinsic meaning) to a **prescriptive command** (you must rebel and be happy). He brute-forces a subjective aesthetic (the romanticized, defiant rebel) and disguises it as an objective logical conclusion.\n\nWe do not need to imagine Sisyphus happy. We can feel compassion for him, or nothing at all; none of these states carry inherent cosmic weight.\n\n## The Trivial Group `{e}` vs. Non-Trivial Structure\n\nWhy not simply give up? In abstract algebra and **group theory**, you can always satisfy the group axioms by collapsing a space into the **trivial group** $\\{e\\}$ containing solely the identity element. It is perfectly consistent, completely stable, and immune to contradiction, yet it contains no structure, no interactions, and yields zero information.\n\nContinuing to live is the **non-trivial group**: complex, asymmetric, and difficult to map. You can always collapse into the trivial identity state, but as an analytical mind, are you sure you don't want to see whether the non-trivial structure holds a symmetry worth discovering?\n\n🔗 **[Read the original essay on Substack →](https://syedshubha.substack.com/p/beyond-sisyphus)**"
+      "content": "I am at a stage in life where *\"why\"* has superseded *\"what\"* or *\"how.\"* As an analytical person, I find myself trying to rely less on emotion and more on logic to answer a foundational question: why should we strive in a universe devoid of intrinsic teleology?\n\n## Global Meaninglessness vs. Local Accountability\n\nUnder deterministic or Many-Worlds physical frameworks, traditional notions of uncaused agency break down. How then do we justify our actions? The answer lies in separating the **global** from the **local**, much like a software simulation or video game. Globally, outside the confines of the software, no state configuration is objectively \"right\" or \"wrong.\" Yet locally, within the system's dynamics, an agent cannot evade the causal consequences of its environment.\n\n## The Logical Flaw in Camus's Sisyphus\n\nAlbert Camus famously addressed the absurd by declaring that *\"one must imagine Sisyphus happy.\"* While compelling as a poetic coping mechanism, it is logically flawed: Camus transitions abruptly from a **descriptive observation** (the universe has no intrinsic meaning) to a **prescriptive command** (you must rebel and be happy). He brute-forces a subjective aesthetic (the romanticized, defiant rebel) and disguises it as an objective logical conclusion.\n\nWe do not need to imagine Sisyphus happy. We can feel compassion for him, or nothing at all; none of these states carry inherent cosmic weight.\n\n## The Trivial Group `{e}` vs. Non-Trivial Structure\n\nWhy not simply give up? In abstract algebra and **group theory**, you can always satisfy the group axioms by collapsing a space into the **trivial group** $\\{e\\}$ containing solely the identity element. It is perfectly consistent, completely stable, and immune to contradiction, yet it contains no structure, no interactions, and yields zero information.\n\nContinuing to live is the **non-trivial group**: complex, asymmetric, and difficult to map. You can always collapse into the trivial identity state, but as an analytical mind, are you sure you don't want to see whether the non-trivial structure holds a symmetry worth discovering?\n\n🔗 **[Read the original essay on Substack →](https://syedshubha.substack.com/p/beyond-sisyphus)**",
+      "hide_from_main": true
     },
     {
       "id": "post-male-loneliness",
