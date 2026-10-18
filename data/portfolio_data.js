@@ -570,6 +570,26 @@ window.PORTFOLIO_DATA = {
       "content": "Published in **বিজ্ঞান ব্লগ (Bigganblog)**.\n\nExplores the foundations of conditional statements ($P \\implies Q$), truth tables, contraposition ($\\neg Q \\implies \\neg P$), and why vacuous truth works the way it does in formal mathematics.\n\n🔗 **[Read the full article on Bigganblog →](https://bigganblog.org/2020/07/%e0%a6%95%e0%a6%a8%e0%a7%8d%e0%a6%a1%e0%a6%bf%e0%a6%b6%e0%a6%a8%e0%a6%be%e0%a6%b2-%e0%a6%b8%e0%a7%8d%e0%a6%9f%e0%a7%87%e0%a6%9f%e0%a6%ae%e0%a7%87%e0%a6%a8%e0%a7%8d%e0%a6%9f-%e0%a6%8f%e0%a6%ac%e0%a6%82/)**"
     },
     {
+      "id": "post-classical-mechanics-1",
+      "slug": "classical-mechanics-part-1-history-newtons-laws",
+      "title": "Classical Mechanics Part 1: Historical Foundations & Newton's Laws (ক্লাসিক্যাল মেকানিক্স পর্ব-১)",
+      "date": "April 2020",
+      "category": "Mathematics & Physics (Bengali)",
+      "source": "Bigganblog",
+      "read_time": "6 min read",
+      "cover_image": "",
+      "summary": "From Aristotelian teleology and Galileo's principle of inertia to the axiomatic structure of Newton's three laws of motion.",
+      "external_url": "https://bigganblog.org/2020/04/%e0%a6%95%e0%a7%8d%e0%a6%b2%e0%a6%be%e0%a6%b8%e0%a6%bf%e0%a6%95%e0%a7%8d%e0%a6%af%e0%a6%be%e0%a6%b2-%e0%a6%ae%e0%a7%87%e0%a6%95%e0%a6%be%e0%a6%a8%e0%a6%bf%e0%a6%95%e0%a7%8d%e0%a6%b8-%e0%a7%a7/",
+      "pdf_url": "",
+      "tags": [
+        "Classical Mechanics",
+        "Newtonian Physics",
+        "Bigganblog",
+        "Bengali"
+      ],
+      "content": "Published in **বিজ্ঞান ব্লগ (Bigganblog)**.\n\nTraces the historical evolution of mechanics from antiquity to Galileo and Newton, examining the conceptual foundations and physical assumptions underlying Newton's three laws of motion.\n\n🔗 **[Read the full article on Bigganblog →](https://bigganblog.org/2020/04/%e0%a6%95%e0%a7%8d%e0%a6%b2%e0%a6%be%e0%a6%b8%e0%a6%bf%e0%a6%95%e0%a7%8d%e0%a6%af%e0%a6%be%e0%a6%b2-%e0%a6%ae%e0%a7%87%e0%a6%95%e0%a6%be%e0%a6%a8%e0%a6%bf%e0%a6%95%e0%a7%8d%e0%a6%b8-%e0%a7%a7/)**"
+    },
+    {
       "id": "post-classical-mechanics-2",
       "slug": "classical-mechanics-part-2-galilean-spacetime",
       "title": "Classical Mechanics Part 2: Galilean Transformation & Spacetime Diagrams (ক্লাসিক্যাল মেকানিক্স পর্ব-২)",
