@@ -1799,10 +1799,10 @@
                 awardsEl.innerHTML = SITE_DATA.awards.map(a => `<li>🏅 ${a}</li>`).join('');
             }
 
-            // Blog Preview (first 3 visible posts)
+            // Blog Preview (first 4 visible posts to fill 2x2 grid)
             const blogEl = document.getElementById('blogPreviewContainer');
             if (blogEl && Array.isArray(SITE_DATA.posts)) {
-                blogEl.innerHTML = SITE_DATA.posts.filter(post => !post.hide_from_main).slice(0, 3).map(post => {
+                blogEl.innerHTML = SITE_DATA.posts.filter(post => !post.hide_from_main).slice(0, 4).map(post => {
                     const readerHref = `blog.html?post=${encodeURIComponent(post.slug || post.id)}`;
                     const hasExternal = post.external_url && post.external_url.startsWith('http');
                     return `
