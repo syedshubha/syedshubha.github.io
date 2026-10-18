@@ -1658,8 +1658,8 @@
             if (p.title) document.getElementById('heroTitle').textContent = p.title;
             const affEl = document.getElementById('heroAffiliation');
             if (affEl && p.affiliation) affEl.textContent = p.affiliation;
-            const eduEl = document.getElementById('heroEdu');
-            if (eduEl && p.education_short) eduEl.textContent = p.education_short;
+            const heroEduEl = document.getElementById('heroEdu');
+            if (heroEduEl && p.education_short) heroEduEl.textContent = p.education_short;
             if (p.bio) document.getElementById('heroBio').textContent = p.bio;
             if (p.cv_url) document.getElementById('cvDownloadBtn').href = p.cv_url;
             if (p.avatar) document.getElementById('heroAvatar').src = p.avatar;
