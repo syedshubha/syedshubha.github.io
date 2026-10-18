@@ -300,14 +300,14 @@ STUDIO_HTML = r"""<!DOCTYPE html>
           </div>
           <div class="form-group">
             <label>Category Tag</label>
-            <input type="text" id="memeTag" list="memeTagList" placeholder="Select or type category" value="Quantum Computing">
+            <input type="text" id="memeTag" list="memeTagList" placeholder="Select or type category" value="Physics">
             <datalist id="memeTagList">
+              <option value="Physics">
               <option value="Quantum Computing">
-              <option value="Quantum Mechanics">
-              <option value="Pure Mathematics">
+              <option value="Mathematics">
               <option value="Philosophy & Epistemology">
-              <option value="Engineering & Physics">
               <option value="Statistics">
+              <option value="Computer Science">
             </datalist>
           </div>
         </div>

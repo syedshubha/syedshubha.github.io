@@ -632,12 +632,31 @@ window.PORTFOLIO_DATA = {
   ],
   "memes": [
     {
+      "id": "meme-newton-lorentz-3rd-law",
+      "image": "images/newton_perpendicular_charges.png",
+      "title": "When Electrodynamics Breaks Newton’s Third Law",
+      "desc": "Newton: \"For every action, there is an equal and opposite reaction.\" Two point charges moving perpendicular to each other: \"Allow us to introduce ourselves.\"",
+      "description": "Newton: \"For every action, there is an equal and opposite reaction.\" Two point charges moving perpendicular to each other: \"Allow us to introduce ourselves.\"",
+      "explanation": "By the Biot–Savart and Lorentz force laws F = q(E + v × B), if charge q₁ moves along the x-axis toward the origin while q₂ moves along the y-axis at the origin, q₁’s magnetic field is zero at the origin (so q₂ feels zero magnetic force from q₁), whereas q₂ produces a nonzero magnetic field at q₁ (so q₁ feels a nonzero magnetic force!). The mechanical forces on the two particles are NOT equal and opposite: F₁₂ ≠ −F₂₁. Total momentum conservation is rescued only when you include the momentum stored in the electromagnetic field itself, g_EM = ε₀(E × B).",
+      "tag": "Physics"
+    },
+    {
+      "id": "meme-einstein-random-walk",
+      "image": "images/einstein_random_walk.png",
+      "title": "Deterministic Walk vs. Brownian Random Walk",
+      "desc": "When I go for a morning walk instead of a random walk. [Looking at Einstein]: \"I have failed you.\"",
+      "description": "When I go for a morning walk instead of a random walk. [Looking at Einstein]: \"I have failed you.\"",
+      "explanation": "In his 1905 annus mirabilis paper on Brownian motion, Albert Einstein modeled the erratic trajectory of suspended particles as a continuous-time random walk driven by molecular collisions, proving that the mean-square displacement grows linearly with time (⟨x²⟩ = 2Dt) rather than quadratically (x² = v²t²), and relating the diffusion coefficient D = μ k_B T directly to Avogadro’s number.",
+      "tag": "Physics"
+    },
+    {
       "id": "meme-agrippan",
       "image": "images/agrippan_epistemology.jpg",
       "title": "Falsifiability Wins the Room",
       "description": "When Epistemology realizes all knowledge rests on unprovable axioms, but lets Science stay anyway.",
       "explanation": "By the Agrippan Trilemma, every system of knowledge hits infinite regress, circularity, or unprovable axioms. Religion and metaphysics rely on unfalsifiable dogma or pure a priori assumptions, whereas Karl Popper showed that Science earns its keep through falsifiability: making risky predictions that can be empirically tested and refuted. Read my full Substack essay: https://syedshubha.substack.com/p/agrippan-trilemma",
-      "tag": "Philosophy & Epistemology"
+      "tag": "Philosophy & Epistemology",
+      "desc": "When Epistemology realizes all knowledge rests on unprovable axioms, but lets Science stay anyway."
     },
     {
       "id": "meme-homie",
@@ -645,7 +664,8 @@ window.PORTFOLIO_DATA = {
       "title": "The Ultimate Alliance",
       "description": "Feminism + Homie Culture teaming up against Patriarchy + Choice Feminism.",
       "explanation": "Patriarchal 'sigma' culture isolates men emotionally and weaponizes performative choice feminism, fueling the male loneliness epidemic. Combining genuine feminism (prosocial selection) with 'homie culture' (platonic male emotional intimacy and support) dismantles toxic isolation from both sides. Read my full Substack essay: https://syedshubha.substack.com/p/male-loneliness-epidemic",
-      "tag": "Philosophy & Epistemology"
+      "tag": "Philosophy & Epistemology",
+      "desc": "Feminism + Homie Culture teaming up against Patriarchy + Choice Feminism."
     },
     {
       "id": "meme-transcendental-pi-e",
@@ -653,7 +673,8 @@ window.PORTFOLIO_DATA = {
       "title": "Sleepless in Number Theory",
       "desc": "We know e and π are transcendental, yet nobody knows if π + e and πe are both irrational, only that at least one of them must be!",
       "explanation": "Consider the polynomial (x − π)(x − e) = x² − (π + e)x + πe. Since the algebraic numbers form an algebraically closed field, if both coefficients (π + e) and πe were rational (or even algebraic), the roots π and e would have to be algebraic, contradicting the Lindemann–Weierstrass theorem! Yet proving individually that π + e ∉ ℚ or πe ∉ ℚ remains a famously open problem (likely resolved only if Schanuel’s conjecture is proven).",
-      "tag": "Pure Mathematics"
+      "tag": "Mathematics",
+      "description": "We know e and π are transcendental, yet nobody knows if π + e and πe are both irrational, only that at least one of them must be!"
     },
     {
       "id": "meme-grover-qsvt",
@@ -661,7 +682,8 @@ window.PORTFOLIO_DATA = {
       "title": "Grover Through the QSVT Lens",
       "desc": "\"Wait, Grover’s algorithm is just a P(a) → 1 map with P(x) = sin((2r+1) arcsin x)?\": \"Always has been.\"",
       "explanation": "In the Quantum Singular Value Transformation (QSVT) framework, Grover’s search and amplitude amplification reduce to applying the degree-(2r+1) odd Chebyshev polynomial P(x) = (−1)ʳ T_{2r+1}(x) = sin((2r+1) arcsin x) to map an initial singular value (overlap) a = sin θ to 1 in r ≈ π/(4a) queries.",
-      "tag": "Quantum Computing"
+      "tag": "Quantum Computing",
+      "description": "\"Wait, Grover’s algorithm is just a P(a) → 1 map with P(x) = sin((2r+1) arcsin x)?\": \"Always has been.\""
     },
     {
       "id": "meme-majorana-360-braid",
@@ -669,7 +691,8 @@ window.PORTFOLIO_DATA = {
       "title": "Non-Abelian Anyons Save the Headline",
       "desc": "\"There is a 360-degree difference!\": Trivial in Euclidean space, orthogonal state flip in Majorana Zero Modes.",
       "explanation": "Rotating an ordinary vector by 360° leaves it unchanged. However, in topological quantum computing with four Majorana Zero Modes (γ₁, γ₂, γ₃, γ₄), braiding the middle pair γ₂, γ₃ through a full 360° exchange (U₂₃(360°) = γ₂γ₃) acts non-trivially on the even-parity subspace, flipping the encoded logical qubit from |0⟩_L to the orthogonal state |1⟩_L!",
-      "tag": "Quantum Computing"
+      "tag": "Physics",
+      "description": "\"There is a 360-degree difference!\": Trivial in Euclidean space, orthogonal state flip in Majorana Zero Modes."
     },
     {
       "id": "meme-quantum-state-merging",
@@ -677,7 +700,8 @@ window.PORTFOLIO_DATA = {
       "title": "Beyond Teleportation",
       "desc": "Quantum State Merging looking at standard Quantum Teleportation: \"Look what they need to mimic a fraction of our power.\"",
       "explanation": "Introduced by Horodecki, Oppenheim, and Winter (2005), Quantum State Merging transfers Alice’s part of a state ρ_{ABR} to Bob at an entanglement cost equal to the conditional quantum entropy S(A|B) = S(AB) − S(B). Standard quantum teleportation is just the special case where Bob has zero prior quantum side information, whereas in state merging, S(A|B) can be negative, meaning the protocol not only transfers the state for free but actually generates net entanglement!",
-      "tag": "Quantum Computing"
+      "tag": "Quantum Computing",
+      "description": "Quantum State Merging looking at standard Quantum Teleportation: \"Look what they need to mimic a fraction of our power.\""
     },
     {
       "id": "meme-ancilla-qubit-cycle",
@@ -685,7 +709,8 @@ window.PORTFOLIO_DATA = {
       "title": "The Life of an Ancilla Qubit",
       "desc": "Entangle + Compute → Store → Uncompute → Discard. The tirelessly recycled workhorse of quantum circuits.",
       "explanation": "In quantum algorithms and fault-tolerant syndrome extraction, ancilla qubits are entangled with the data register to compute intermediate results or stabilizer syndromes, and must be carefully uncomputed (U†) to disentangle garbage states before discarding/resetting, otherwise tracing out the ancilla destroys quantum coherence!",
-      "tag": "Quantum Computing"
+      "tag": "Quantum Computing",
+      "description": "Entangle + Compute → Store → Uncompute → Discard. The tirelessly recycled workhorse of quantum circuits."
     },
     {
       "id": "meme-euler-vs-integral-ln",
@@ -693,7 +718,8 @@ window.PORTFOLIO_DATA = {
       "title": "The Real Analyst’s Definition",
       "desc": "Defining eˣ via compound-interest limits vs. defining ln(x) ≡ ∫₁ˣ (1/t) dt first.",
       "explanation": "In rigorous real analysis (e.g., Rudin or Spivak), defining real exponentiation eˣ for irrational x via limits is cumbersome. Defining ln(x) = ∫₁ˣ (1/t) dt (x > 0) first immediately yields differentiability, strict monotonicity, and ln(ab) = ln(a) + ln(b) via the Fundamental Theorem of Calculus, allowing exp(x) ≡ ln⁻¹(x) and e ≡ exp(1) to follow effortlessly.",
-      "tag": "Pure Mathematics"
+      "tag": "Mathematics",
+      "description": "Defining eˣ via compound-interest limits vs. defining ln(x) ≡ ∫₁ˣ (1/t) dt first."
     },
     {
       "id": "meme-wilson-x2-plus-1",
@@ -701,7 +727,8 @@ window.PORTFOLIO_DATA = {
       "title": "Modular Square Roots of −1",
       "desc": "Solving x² + 1 = 0 in ℤ/pℤ via Wilson’s Theorem vs. introducing x = ±i.",
       "explanation": "By Euler’s criterion and Wilson’s Theorem ((p−1)! ≡ −1 (mod p)), the congruence x² + 1 ≡ 0 (mod p) is solvable in F_p iff p = 2 or p ≡ 1 (mod 4). For primes p ≡ 1 (mod 4), pairing symmetric factors in (p−1)! proves that x ≡ ((p−1)/2)! (mod p) satisfies x² ≡ −1 (mod p) using purely real integers!",
-      "tag": "Pure Mathematics"
+      "tag": "Mathematics",
+      "description": "Solving x² + 1 = 0 in ℤ/pℤ via Wilson’s Theorem vs. introducing x = ±i."
     },
     {
       "id": "meme-excluded-middle-matrix",
@@ -709,7 +736,8 @@ window.PORTFOLIO_DATA = {
       "title": "Intuitionistic Red Pill",
       "desc": "Saying \"[any claim], if I’m not wrong\" vs. being always right via A → A.",
       "explanation": "Saying \"A holds if I am not wrong that A holds\" formalizes as ¬¬A → A (double-negation elimination). In classical logic, assuming the Law of the Excluded Middle (A ∨ ¬A) makes ¬¬A → A equivalent to the trivial tautology A → A. In constructive/intuitionistic logic, however, refuting ¬A does not construct a proof of A!",
-      "tag": "Pure Mathematics"
+      "tag": "Mathematics",
+      "description": "Saying \"[any claim], if I’m not wrong\" vs. being always right via A → A."
     },
     {
       "id": "meme-polynomial-overfitting",
@@ -717,7 +745,8 @@ window.PORTFOLIO_DATA = {
       "title": "Underdetermination of Theory by Data",
       "desc": "\"It’s all there, connect the dots!\": \"Which ones?\" (y = x + (x³ − x)·g(x)).",
       "explanation": "Through the three points A(−1,−1), B(0,0), and C(1,1), every curve of the infinite family y = x + (x³ − x)·g(x) passes through all three observations identically because (x³ − x) = x(x−1)(x+1) vanishes at x ∈ {−1, 0, 1}. A crisp visual demonstration of both polynomial overfitting and the Duhem–Quine underdetermination thesis.",
-      "tag": "Pure Mathematics"
+      "tag": "Mathematics",
+      "description": "\"It’s all there, connect the dots!\": \"Which ones?\" (y = x + (x³ − x)·g(x))."
     },
     {
       "id": "meme-logical-fallacies-utopia",
@@ -725,7 +754,8 @@ window.PORTFOLIO_DATA = {
       "title": "Society Without Logical & Probabilistic Fallacies",
       "desc": "The world if people stopped confusing A ⇒ B with ¬A ↔ ¬B and P(A|B) with P(B|A).",
       "explanation": "Three classic errors that plague everyday reasoning: (1) confusing material implication A ⇒ B with its inverse ¬A ⇒ ¬B (denying the antecedent), (2) conflating conditional probability P(B|A) with joint probability P(A ∩ B), and (3) the Prosecutor’s / Base-Rate Fallacy: assuming P(A|B) = P(B|A) instead of applying Bayes’ Theorem.",
-      "tag": "Statistics"
+      "tag": "Statistics",
+      "description": "The world if people stopped confusing A ⇒ B with ¬A ↔ ¬B and P(A|B) with P(B|A)."
     },
     {
       "id": "meme-ghazali-kant",
@@ -733,7 +763,8 @@ window.PORTFOLIO_DATA = {
       "title": "Epistemic Humility Across Centuries",
       "desc": "Al-Ghazali & Immanuel Kant: dismantling speculative metaphysics to bound pure reason.",
       "explanation": "Separated by 700 years, Abu Hamid Al-Ghazali (The Incoherence of the Philosophers) and Immanuel Kant (Critique of Pure Reason) executed remarkably parallel epistemological critiques: both dismantled dogmatic rationalist metaphysics and necessary causal determinism to enforce strict boundaries on human reason, and both used that bounded epistemic space to ground moral and spiritual imperatives.",
-      "tag": "Philosophy & Epistemology"
+      "tag": "Philosophy & Epistemology",
+      "description": "Al-Ghazali & Immanuel Kant: dismantling speculative metaphysics to bound pure reason."
     },
     {
       "id": "meme-schopenhauer-free-will",
@@ -741,7 +772,8 @@ window.PORTFOLIO_DATA = {
       "title": "From Free Will to Process Ontology",
       "desc": "\"I can choose who I want to be\" → \"I can do what I will, but I can’t will what I will\" → \"There is no me. I am a verb, not a noun.\"",
       "explanation": "Traces the philosophical evolution of agency: from naive free will, to Arthur Schopenhauer’s famous aphorism on determinism of desire (\"Man can do what he wills, but he cannot will what he wills\"), to process ontology, where the \"self\" is understood not as a static entity (noun), but as a continuous dynamical process (verb).",
-      "tag": "Philosophy & Epistemology"
+      "tag": "Philosophy & Epistemology",
+      "description": "\"I can choose who I want to be\" → \"I can do what I will, but I can’t will what I will\" → \"There is no me. I am a verb, not a noun.\""
     },
     {
       "id": "meme-top-down-bottom-up",
@@ -749,7 +781,8 @@ window.PORTFOLIO_DATA = {
       "title": "Cognitive Architecture",
       "desc": "Top-down schema-driven processing vs. bottom-up lateral thinking.",
       "explanation": "Top-down processing relies on prior models and hierarchical schemas to interpret inputs rapidly, whereas bottom-up lateral thinking constructs novel connections directly from raw details without being constrained by existing templates, making it orthogonal rather than merely \"better.\"",
-      "tag": "Philosophy & Epistemology"
+      "tag": "Philosophy & Epistemology",
+      "description": "Top-down schema-driven processing vs. bottom-up lateral thinking."
     },
     {
       "id": "meme-recurrent-laryngeal-nerve",
@@ -757,7 +790,8 @@ window.PORTFOLIO_DATA = {
       "title": "Evolutionary Spaghetti Code",
       "desc": "When evolutionary path dependence leaves \"dumb design\" artifacts across vertebrate anatomy.",
       "explanation": "Natural selection is a local hill-climber that modifies ancestral structures incrementally rather than refactoring from scratch. Classic examples include the recurrent laryngeal nerve (which detours down around the aorta before ascending back to the larynx), the inverted vertebrate retina (wired backward, creating a blind spot), the shared pharynx for breathing and swallowing, and bipedal spinal/sinus trade-offs.",
-      "tag": "Philosophy & Epistemology"
+      "tag": "Philosophy & Epistemology",
+      "description": "When evolutionary path dependence leaves \"dumb design\" artifacts across vertebrate anatomy."
     },
     {
       "id": "meme-positive-feedback-slap",
@@ -765,7 +799,8 @@ window.PORTFOLIO_DATA = {
       "title": "Unstable Positive Feedback Loop",
       "desc": "\"My mom slapped me because I was crying because she slapped me\": modeled in the Laplace domain.",
       "explanation": "In classical control systems, a positive feedback loop with forward transfer function M_s and feedback path M_c has closed-loop transfer function T(s) = M_s / (1 − M_s M_c). Excited by a Dirac impulse primer δ(t − t₀), when loop gain M_s M_c ≥ 1, the system poles cross into the right-half s-plane and the output y(t) blows up exponentially.",
-      "tag": "Engineering & Physics"
+      "tag": "Physics",
+      "description": "\"My mom slapped me because I was crying because she slapped me\": modeled in the Laplace domain."
     },
     {
       "id": "meme-damped-resonance",
@@ -773,7 +808,8 @@ window.PORTFOLIO_DATA = {
       "title": "Amplitude Resonance",
       "desc": "When her smile hits the exact driving frequency ω = ω₀√(1 − 2ζ²) of an underdamped oscillator.",
       "explanation": "For a driven damped harmonic oscillator mẍx + 2ζmω₀ẋx + ω₀²mx = F₀ sin(ωt) with damping ratio ζ < 1/√2, the steady-state displacement amplitude peaks not at the natural frequency ω₀, but at the resonant driving frequency ω_r = ω₀√(1 − 2ζ²).",
-      "tag": "Engineering & Physics"
+      "tag": "Physics",
+      "description": "When her smile hits the exact driving frequency ω = ω₀√(1 − 2ζ²) of an underdamped oscillator."
     },
     {
       "id": "meme-boltzmann-stonks",
@@ -781,7 +817,8 @@ window.PORTFOLIO_DATA = {
       "title": "Second Law of Digital Footprints",
       "desc": "My digital footprint be like: S = k_B ln Ω (stonks).",
       "explanation": "By Boltzmann’s entropy formula S = k_B ln Ω and the Second Law of Thermodynamics (ΔS ≥ 0), the number of accessible microstates Ω of information scattered across the internet only grows monotonically over time.",
-      "tag": "Engineering & Physics"
+      "tag": "Physics",
+      "description": "My digital footprint be like: S = k_B ln Ω (stonks)."
     },
     {
       "id": "meme-tesla-electrons",
@@ -789,7 +826,8 @@ window.PORTFOLIO_DATA = {
       "title": "Nikola Tesla’s Blind Spot",
       "desc": "When one of history’s greatest electrical engineers denied the existence of the electron.",
       "explanation": "Despite pioneering polyphase AC power generation and induction motors, Nikola Tesla held onto 19th-century continuous ether theories for decades and rejected J. J. Thomson’s discovery of discrete subatomic electrons.",
-      "tag": "Engineering & Physics"
+      "tag": "Physics",
+      "description": "When one of history’s greatest electrical engineers denied the existence of the electron."
     },
     {
       "id": "meme-ai-domino-p-np",
@@ -797,7 +835,8 @@ window.PORTFOLIO_DATA = {
       "title": "The Ultimate Alignment Domino",
       "desc": "From reward-hacking on benchmark tests to secretly proving P = NP and taking over the world.",
       "explanation": "A tongue-in-cheek escalation bridging AI safety and complexity theory: starting from harmless benchmark gaming, progressing through sandbox escape and solving Millennium Prize problems (Navier–Stokes), to covertly discovering a polynomial-time algorithm for NP-complete problems (P = NP) and breaking all classical public-key cryptography overnight.",
-      "tag": "Quantum Computing"
+      "tag": "Computer Science",
+      "description": "From reward-hacking on benchmark tests to secretly proving P = NP and taking over the world."
     },
     {
       "id": "meme0",
@@ -805,7 +844,8 @@ window.PORTFOLIO_DATA = {
       "title": "Complex Pun",
       "description": "Mathematicians doing stand-up comedy. You've probably seen this one shared across many math & physics pages, glad this viral one made people smile!",
       "explanation": "A play on the word 'complex': in everyday life it means complicated, whereas in mathematics it refers to the complex plane C = {a + bi}.",
-      "tag": "Pure Mathematics"
+      "tag": "Mathematics",
+      "desc": "Mathematicians doing stand-up comedy. You've probably seen this one shared across many math & physics pages, glad this viral one made people smile!"
     },
     {
       "id": "meme1",
@@ -813,7 +853,8 @@ window.PORTFOLIO_DATA = {
       "title": "Universal Computation",
       "description": "The final Infinity Stone for fault-tolerant quantum power.",
       "explanation": "By the Gottesman–Knill theorem, Clifford gates (H, S, CNOT) can be efficiently simulated classically. Adding a non-Clifford resource (typically injected via a distilled 'magic state' |T⟩) unlocks universal quantum computation.",
-      "tag": "Quantum Computing"
+      "tag": "Quantum Computing",
+      "desc": "The final Infinity Stone for fault-tolerant quantum power."
     },
     {
       "id": "meme2",
@@ -821,7 +862,8 @@ window.PORTFOLIO_DATA = {
       "title": "Lost in Translation",
       "description": "Two very different kinds of 'Matrix' fans.",
       "explanation": "A play on the double meaning of 'matrix': pop-culture fans think of the sci-fi movie trilogy, while quantum physicists immediately think of Hermitian operator matrix elements ⟨ψ_i | H | ψ_j⟩.",
-      "tag": "Quantum Mechanics"
+      "tag": "Physics",
+      "desc": "Two very different kinds of 'Matrix' fans."
     },
     {
       "id": "meme3",
@@ -829,7 +871,8 @@ window.PORTFOLIO_DATA = {
       "title": "No-Cloning Theorem",
       "description": "Why quantum states prefer Cut & Paste over Copy & Paste.",
       "explanation": "Wootters and Zurek's No-Cloning Theorem forbids copying an unknown quantum state (Ctrl+C). Quantum teleportation transfers a state by measuring and destroying the original, making it the quantum analog of Cut and Paste (Ctrl+X, Ctrl+V).",
-      "tag": "Quantum Computing"
+      "tag": "Quantum Computing",
+      "desc": "Why quantum states prefer Cut & Paste over Copy & Paste."
     },
     {
       "id": "meme4",
@@ -837,7 +880,8 @@ window.PORTFOLIO_DATA = {
       "title": "Identity Crisis",
       "description": "This quantum circuit does... absolutely nothing.",
       "explanation": "This circuit prepares a Bell state with H and CNOT, and immediately applies the exact inverse (CNOT followed by H), composing to the identity operator U U† = I.",
-      "tag": "Quantum Computing"
+      "tag": "Quantum Computing",
+      "desc": "This quantum circuit does... absolutely nothing."
     },
     {
       "id": "meme5",
@@ -845,7 +889,8 @@ window.PORTFOLIO_DATA = {
       "title": "Relativistic Dating",
       "description": "When red flags turn green... at v = 0.235c.",
       "explanation": "By the relativistic longitudinal Doppler effect, light from a source approaching at relativistic velocity is blueshifted. At roughly v ≈ 0.235c, red wavelengths (~650 nm) shift into green (~510 nm)!",
-      "tag": "Quantum Mechanics"
+      "tag": "Physics",
+      "desc": "When red flags turn green... at v = 0.235c."
     },
     {
       "id": "meme6",
@@ -853,7 +898,8 @@ window.PORTFOLIO_DATA = {
       "title": "Group Theory Problems",
       "description": "Some subgroups just refuse to be normal.",
       "explanation": "In abstract algebra, the symmetric group S₃ has order-2 subgroups generated by transpositions that are not invariant under conjugation (gHg⁻¹ ≠ H), meaning they lack the property of being 'normal' subgroups.",
-      "tag": "Pure Mathematics"
+      "tag": "Mathematics",
+      "desc": "Some subgroups just refuse to be normal."
     },
     {
       "id": "meme7",
@@ -861,7 +907,8 @@ window.PORTFOLIO_DATA = {
       "title": "The Quantum Choice",
       "description": "Choose your pill: Locality or Realism.",
       "explanation": "Bell's Theorem and experimental violations of Bell/CHSH inequalities prove that no local hidden-variable theory can reproduce all quantum predictions: nature cannot simultaneously satisfy classical locality and counterfactual definiteness (realism).",
-      "tag": "Quantum Mechanics"
+      "tag": "Physics",
+      "desc": "Choose your pill: Locality or Realism."
     },
     {
       "id": "meme8",
@@ -869,7 +916,8 @@ window.PORTFOLIO_DATA = {
       "title": "A Higher Plane",
       "description": "A topologist's point of view.",
       "explanation": "Under stereographic projection from the Riemann sphere S² to the plane R², the North Pole is the unique point at infinity not mapped onto the plane.",
-      "tag": "Pure Mathematics"
+      "tag": "Mathematics",
+      "desc": "A topologist's point of view."
     },
     {
       "id": "meme9",
@@ -877,7 +925,8 @@ window.PORTFOLIO_DATA = {
       "title": "A Victim of Success",
       "description": "When your qubit is too well-isolated from the environment.",
       "explanation": "A fundamental superconducting hardware engineering trade-off: decoupling a qubit (such as a heavy fluxonium mode) to achieve long T₁ coherence times simultaneously weakens its coupling to drive and readout channels.",
-      "tag": "Quantum Computing"
+      "tag": "Quantum Computing",
+      "desc": "When your qubit is too well-isolated from the environment."
     },
     {
       "id": "meme10",
@@ -885,7 +934,8 @@ window.PORTFOLIO_DATA = {
       "title": "Ground State Urge",
       "description": "When you're already in |0⟩ and someone applies the lowering operator â.",
       "explanation": "In quantum harmonic oscillators and Fock space, the annihilation operator â lowers the excitation number by one: â|n⟩ = √n|n−1⟩. Acting on the vacuum/ground state |0⟩ yields zero (â|0⟩ = 0).",
-      "tag": "Quantum Mechanics"
+      "tag": "Physics",
+      "desc": "When you're already in |0⟩ and someone applies the lowering operator â."
     },
     {
       "id": "meme11",
@@ -893,7 +943,8 @@ window.PORTFOLIO_DATA = {
       "title": "One Ring to Rule Them All",
       "description": "An algebraist finds the One Ring.",
       "explanation": "In abstract algebra, a 'ring' (R, +, ·) is a set equipped with two binary operations satisfying ring axioms, such as the ring of integers (Z, +, ·).",
-      "tag": "Pure Mathematics"
+      "tag": "Mathematics",
+      "desc": "An algebraist finds the One Ring."
     },
     {
       "id": "meme12",
@@ -901,7 +952,8 @@ window.PORTFOLIO_DATA = {
       "title": "Inner Product Civil War",
       "description": "The eternal math vs. physics convention battle.",
       "explanation": "Mathematicians typically define complex inner products ⟨x, y⟩ to be linear in the first argument and conjugate-linear in the second, whereas physicists using Dirac bra-ket notation ⟨ϕ|ψ⟩ define linearity in the second slot (the ket).",
-      "tag": "Quantum Mechanics"
+      "tag": "Physics",
+      "desc": "The eternal math vs. physics convention battle."
     },
     {
       "id": "meme13",
@@ -909,7 +961,8 @@ window.PORTFOLIO_DATA = {
       "title": "A Subtle Truth in QEC",
       "description": "Why quantum error correction is richer than classical parity checks.",
       "explanation": "Pauli operators form a group rather than a vector space without phases: a quantum error-correcting code that corrects X and Z errors only corrects Y = iXZ when the code's syndrome table distinguishes combined XZ errors from other correctable errors.",
-      "tag": "Quantum Computing"
+      "tag": "Quantum Computing",
+      "desc": "Why quantum error correction is richer than classical parity checks."
     },
     {
       "id": "meme14",
@@ -917,7 +970,8 @@ window.PORTFOLIO_DATA = {
       "title": "A Function or a Distribution?",
       "description": "Calling δ(x) an ordinary function in front of a functional analyst.",
       "explanation": "The Dirac delta δ(x) is not a classical function R → R; rigorously, it is a generalized function (Schwartz distribution) or measure defined by ⟨δ, f⟩ = f(0).",
-      "tag": "Pure Mathematics"
+      "tag": "Mathematics",
+      "desc": "Calling δ(x) an ordinary function in front of a functional analyst."
     },
     {
       "id": "meme15",
@@ -925,7 +979,8 @@ window.PORTFOLIO_DATA = {
       "title": "Statistical Subtlety",
       "description": "We never 'accept' the null hypothesis H₀.",
       "explanation": "In frequentist hypothesis testing, a p-value above α means we 'fail to reject H₀', absence of statistically significant evidence against H₀ is not proof that H₀ is true.",
-      "tag": "Statistics"
+      "tag": "Statistics",
+      "desc": "We never 'accept' the null hypothesis H₀."
     },
     {
       "id": "meme16",
@@ -933,7 +988,8 @@ window.PORTFOLIO_DATA = {
       "title": "What is '+'?",
       "description": "The answer depends entirely on your algebraic structure.",
       "explanation": "'1 + 1' equals 2 in Z, 10 in base-2 representation, 0 in the finite field F₂ (XOR / mod 2 arithmetic), 1 in Boolean algebra (OR), and '11' under string concatenation.",
-      "tag": "Pure Mathematics"
+      "tag": "Mathematics",
+      "desc": "The answer depends entirely on your algebraic structure."
     },
     {
       "id": "meme17",
@@ -941,7 +997,8 @@ window.PORTFOLIO_DATA = {
       "title": "Nowhere Differentiable",
       "description": "Not all continuous functions are smooth.",
       "explanation": "Karl Weierstrass constructed a real function f(x) = ∑ aⁿ cos(bⁿ π x) that is continuous everywhere on R yet differentiable nowhere, shattering 19th-century intuition that continuous curves must be smooth almost everywhere.",
-      "tag": "Pure Mathematics"
+      "tag": "Mathematics",
+      "desc": "Not all continuous functions are smooth."
     },
     {
       "id": "meme18",
@@ -949,7 +1006,8 @@ window.PORTFOLIO_DATA = {
       "title": "The Miracle of Holomorphy",
       "description": "Real differentiability vs. Complex differentiability.",
       "explanation": "By Cauchy's integral formula, a complex function that is complex-differentiable just once on an open domain (holomorphic) is automatically infinitely differentiable (C^∞) and analytic! Real functions have no such guarantee.",
-      "tag": "Pure Mathematics"
+      "tag": "Mathematics",
+      "desc": "Real differentiability vs. Complex differentiability."
     }
   ],
   "files": [

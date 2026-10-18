@@ -18,28 +18,29 @@
         };
     </script>
     <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%2310233a'/%3E%3Crect x='3' y='3' width='58' height='58' rx='10' fill='none' stroke='%23c59b27' stroke-width='2' stroke-opacity='0.65'/%3E%3Ctext x='30' y='43' font-family='Georgia,serif' font-size='28' font-weight='bold' fill='%23ffffff' text-anchor='middle'%3E%7CS%E2%9F%A9%3C/text%3E%3C/svg%3E">
     <style>
         :root {
-            --navy-950: #0a1120;
-            --navy-900: #0f172a;
-            --navy-800: #1e293b;
-            --navy-700: #334155;
-            --academic-blue: #1d4ed8;
-            --academic-blue-light: #eff6ff;
-            --academic-blue-dark: #1e3a8a;
-            --lsu-purple: #461D7C;
-            --lsu-gold: #d97706;
-            --lsu-gold-bg: #fffbeb;
-            --text-primary: #0f172a;
-            --text-secondary: #475569;
-            --text-muted: #64748b;
-            --bg-page: #f8fafc;
+            --navy-950: #0b1829;
+            --navy-900: #10233a;
+            --navy-800: #1b3554;
+            --navy-700: #2c4a6f;
+            --academic-blue: #1a4b7c;
+            --academic-blue-light: #eef3f8;
+            --academic-blue-dark: #113458;
+            --lsu-purple: #3b235a;
+            --lsu-gold: #9a6f1a;
+            --lsu-gold-bg: #faf4e4;
+            --text-primary: #10233a;
+            --text-secondary: #3e5268;
+            --text-muted: #5c7087;
+            --bg-page: #f8f9fa;
             --bg-surface: #ffffff;
-            --border-light: #e2e8f0;
-            --border-medium: #cbd5e1;
-            --shadow-sm: 0 1px 3px rgba(15, 23, 42, 0.06);
-            --shadow-md: 0 4px 12px -2px rgba(15, 23, 42, 0.08);
-            --shadow-lg: 0 12px 28px -6px rgba(15, 23, 42, 0.12);
+            --border-light: #e2e7ed;
+            --border-medium: #cbd4df;
+            --shadow-sm: 0 1px 3px rgba(16, 35, 58, 0.06);
+            --shadow-md: 0 4px 12px -2px rgba(16, 35, 58, 0.08);
+            --shadow-lg: 0 12px 28px -6px rgba(16, 35, 58, 0.12);
             --radius-md: 10px;
             --radius-lg: 14px;
         }
@@ -88,10 +89,11 @@
         .nav-container {
             max-width: 1200px;
             margin: 0 auto;
-            padding: 0.85rem 2rem;
+            padding: 0.75rem 2rem;
             display: flex;
             justify-content: space-between;
             align-items: center;
+            gap: 1.25rem;
         }
 
         .nav-brand {
@@ -99,47 +101,61 @@
             align-items: center;
             gap: 0.75rem;
             color: var(--navy-900);
+            min-width: 0;
         }
 
         .brand-monogram {
-            width: 36px;
-            height: 36px;
+            width: 38px;
+            height: 38px;
+            flex-shrink: 0;
             border-radius: 8px;
-            background: linear-gradient(135deg, var(--navy-900), var(--lsu-purple));
+            background: var(--navy-900);
+            border: 1.5px solid rgba(212, 175, 55, 0.65);
             color: #fff;
-            font-family: 'Crimson Pro', serif;
+            font-family: 'Crimson Pro', Georgia, serif;
             font-weight: 700;
-            font-size: 1.15rem;
+            font-size: 1.05rem;
+            letter-spacing: -0.02em;
             display: flex;
             align-items: center;
             justify-content: center;
+            box-shadow: 0 2px 6px rgba(16, 35, 58, 0.14);
         }
 
         .brand-text {
             display: flex;
             flex-direction: column;
+            min-width: 0;
         }
 
         .brand-name {
             font-family: 'Crimson Pro', Georgia, serif;
-            font-size: 1.2rem;
+            font-size: 1.25rem;
             font-weight: 700;
-            line-height: 1.1;
+            line-height: 1.15;
             color: var(--navy-900);
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
         }
 
         .brand-sub {
-            font-size: 0.72rem;
+            font-size: 0.7rem;
             color: var(--text-muted);
             font-weight: 500;
+            letter-spacing: 0.03em;
+            text-transform: uppercase;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
         }
 
         .nav-menu {
             display: flex;
             list-style: none;
-            gap: 0.25rem;
+            gap: 0.35rem;
             align-items: center;
-            flex-wrap: wrap;
+            flex-shrink: 0;
         }
 
         .nav-menu a {
@@ -158,17 +174,36 @@
         .nav-pill-btn {
             background: var(--navy-900) !important;
             color: #ffffff !important;
-            padding: 0.45rem 0.9rem !important;
+            padding: 0.42rem 0.9rem !important;
             border-radius: 6px;
-            font-weight: 600 !important;
+            font-weight: 500 !important;
+            border: 1px solid rgba(212, 175, 55, 0.35);
+        }
+
+        .mobile-toggle {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            cursor: pointer;
+            background: none;
+            border: none;
+            padding: 6px;
+            flex-shrink: 0;
+        }
+
+        .mobile-toggle span {
+            width: 22px;
+            height: 2px;
+            background: var(--navy-900);
+            border-radius: 2px;
         }
 
         /* Header Banner */
         .page-hero {
-            background: linear-gradient(135deg, #0a1120 0%, #172554 55%, #2e1065 100%);
+            background: linear-gradient(160deg, #0b1829 0%, #10233a 55%, #183456 100%);
             color: #f8fafc;
             padding: 3.75rem 2rem 3.25rem;
-            border-bottom: 4px solid #f59e0b;
+            border-bottom: 3px solid #c59b27;
         }
 
         .page-hero-inner {
@@ -186,7 +221,7 @@
             font-size: 0.78rem;
             text-transform: uppercase;
             letter-spacing: 0.09em;
-            color: #fcd34d;
+            color: #d4af37;
             margin-bottom: 0.5rem;
         }
 
@@ -214,7 +249,7 @@
             align-items: center;
             gap: 0.45rem;
             padding: 0.6rem 1.1rem;
-            border-radius: 8px;
+            border-radius: 7px;
             font-size: 0.86rem;
             font-weight: 600;
             background: rgba(255, 255, 255, 0.1);
@@ -223,21 +258,27 @@
             transition: all 0.2s ease;
         }
 
+        .platform-btn svg {
+            width: 15px;
+            height: 15px;
+            flex-shrink: 0;
+        }
+
         .platform-btn:hover {
-            background: rgba(255, 255, 255, 0.2);
+            background: rgba(255, 255, 255, 0.18);
             color: #ffffff;
             transform: translateY(-1px);
         }
 
         .platform-btn.gold {
-            background: #f59e0b;
-            color: #0f172a;
-            border-color: #f59e0b;
+            background: #c59b27;
+            color: #0b1829;
+            border-color: #c59b27;
         }
 
         .platform-btn.gold:hover {
-            background: #fbbf24;
-            color: #0f172a;
+            background: #d4af37;
+            color: #0b1829;
         }
 
         /* Main Container */
@@ -510,6 +551,36 @@
             flex-wrap: wrap;
         }
 
+        @media (max-width: 960px) {
+            .nav-container {
+                padding: 0.7rem 1.15rem;
+            }
+            .nav-menu {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: var(--bg-surface);
+                flex-direction: column;
+                align-items: stretch;
+                padding: 1.15rem 1.25rem;
+                gap: 0.45rem;
+                border-bottom: 1px solid var(--border-light);
+                box-shadow: var(--shadow-md);
+            }
+            .nav-menu.active {
+                display: flex;
+            }
+            .nav-menu li, .nav-menu a {
+                width: 100%;
+                display: block;
+            }
+            .mobile-toggle {
+                display: flex;
+            }
+        }
+
         @media (max-width: 768px) {
             .page-hero {
                 padding: 2.5rem 1.15rem 2.25rem;
@@ -540,19 +611,24 @@
     <nav class="navbar">
         <div class="nav-container">
             <a href="index.html" class="nav-brand">
-                <div class="brand-monogram">S</div>
+                <div class="brand-monogram">|S⟩</div>
                 <div class="brand-text">
                     <span class="brand-name">Syed Emad Uddin Shubha</span>
-                    <span class="brand-sub">LSU Computer Science • Quantum Information</span>
+                    <span class="brand-sub">Quantum Information • LSU</span>
                 </div>
             </a>
-            <ul class="nav-menu">
+            <ul class="nav-menu" id="navMenu">
                 <li><a href="index.html">← Main Portfolio</a></li>
                 <li><a href="index.html#publications">Publications</a></li>
-                <li><a href="blog.html" class="active">✍️ Blog & Essays</a></li>
-                <li><a href="QSVT.html">⚛️ QSVT Lab</a></li>
-                <li><a href="passions.html" class="nav-pill-btn">🎭 Quantum Memeology</a></li>
+                <li><a href="blog.html" class="active">Blog & Essays</a></li>
+                <li><a href="QSVT.html">QSVT Lab</a></li>
+                <li><a href="passions.html" class="nav-pill-btn">Quantum Memeology</a></li>
             </ul>
+            <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
         </div>
     </nav>
 
@@ -566,8 +642,14 @@
                 </p>
             </div>
             <div class="platform-links">
-                <a href="https://syedshubha.substack.com" target="_blank" class="platform-btn gold">📰 Subscribe on Substack ↗</a>
-                <a href="https://bigganblog.org/author/syed-shubha/" target="_blank" class="platform-btn">✍️ Bigganblog Author Page ↗</a>
+                <a href="https://syedshubha.substack.com" target="_blank" class="platform-btn gold">
+                    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M4 3h16v2.5H4V3zm0 4.5h16V10H4V7.5zm0 4.5h16v9l-8-4.2L4 21v-9z"/></svg>
+                    Subscribe on Substack ↗
+                </a>
+                <a href="https://bigganblog.org/author/syed-shubha/" target="_blank" class="platform-btn">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 3a2.85 2.83 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5Z"/></svg>
+                    Bigganblog Author Page ↗
+                </a>
             </div>
         </div>
     </header>
@@ -789,6 +871,10 @@
         document.getElementById('searchInput').addEventListener('input', e => {
             searchQuery = e.target.value;
             renderPosts();
+        });
+
+        document.getElementById('mobileToggle').addEventListener('click', () => {
+            document.getElementById('navMenu').classList.toggle('active');
         });
 
         initBlog();
