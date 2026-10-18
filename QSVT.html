@@ -152,13 +152,13 @@ Each stage is recomputed in real time as the user edits the input matrix or sele
 
   <div class="grid2">
     <div>
-      <h4>Signal rotation $W(x)$ — encodes the parameter</h4>
+      <h4>Signal rotation $W(x)$: encodes the parameter</h4>
       <div class="matrix">W(x) = [[ x        , i√(1−x²) ],
        [ i√(1−x²) ,  x        ]]</div>
       <p>$W(x) = e^{i\arccos(x)\,\sigma_x}$. The signal $x$ is the only non-tunable input; it will later play the role of a singular value $\sigma_i/\alpha$.</p>
     </div>
     <div>
-      <h4>Phase shift $S(\phi)$ — the tunable knob</h4>
+      <h4>Phase shift $S(\phi)$: the tunable knob</h4>
       <div class="matrix">S(φ) = [[ e^{iφ},   0     ],
        [   0   , e^{−iφ} ]]</div>
       <p>$S(\phi) = e^{i\phi\sigma_z}$. The angles $\phi_0,\dots,\phi_d$ are the programmable degrees of freedom that determine which polynomial is realised.</p>
@@ -954,7 +954,7 @@ function drawPoly(poly, sigmas, alpha){
   svg.innerHTML = html;
 }
 
-/* boot — wait for MathJax to be ready before painting dynamic math content */
+/* boot: wait for MathJax to be ready before painting dynamic math content */
 document.getElementById('customCoeffs').addEventListener('input', onPolyChange);
 document.getElementById('polySelect').addEventListener('change', onPolyChange);
 

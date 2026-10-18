@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Portfolio Studio — Local Content Management & GitHub Pages Publisher
+Portfolio Studio: Local Content Management & GitHub Pages Publisher
 for Syed Emad Uddin Shubha (https://syedshubha.github.io)
 
 Zero-dependency Python 3 application serving:
@@ -66,7 +66,7 @@ STUDIO_HTML = r"""<!DOCTYPE html>
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Portfolio Studio — Local Manager | Syed Emad Uddin Shubha</title>
+<title>Portfolio Studio: Local Manager | Syed Emad Uddin Shubha</title>
 <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
   :root {
@@ -248,7 +248,7 @@ STUDIO_HTML = r"""<!DOCTYPE html>
 
 <header>
   <div>
-    <h1>🎓 Portfolio Studio — Syed Emad Uddin Shubha</h1>
+    <h1>🎓 Portfolio Studio: Syed Emad Uddin Shubha</h1>
     <p>Local Desktop Manager for Memes, Blog Posts, Publications, News & One-Click GitHub Pages Sync</p>
   </div>
   <div class="top-actions">
@@ -391,7 +391,7 @@ STUDIO_HTML = r"""<!DOCTYPE html>
             </div>
           </div>
           <div class="form-group">
-            <label>External Link (optional — Substack / Bigganblog URL)</label>
+            <label>External Link (optional: Substack / Bigganblog URL)</label>
             <input type="url" id="postExternal" placeholder="https://syedshubha.substack.com/p/...">
           </div>
         </div>
@@ -936,7 +936,7 @@ STUDIO_HTML = r"""<!DOCTYPE html>
     const out = await res.json();
     document.getElementById('gitLogOutput').textContent = out.log || '';
     if (out.ok) notify('🚀 Published live to https://syedshubha.github.io!');
-    else notify('Git push warning — check GitHub Sync tab.', true);
+    else notify('Git push warning: check GitHub Sync tab.', true);
   }
 
   async function checkGitStatus() {

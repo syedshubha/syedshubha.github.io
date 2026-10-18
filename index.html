@@ -432,20 +432,30 @@
 
         .metrics-grid {
             display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 0.75rem;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 0.65rem;
         }
 
         .metric-box {
+            display: block;
+            text-decoration: none;
             background: rgba(255, 255, 255, 0.06);
-            border: 1px solid rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.12);
             border-radius: 8px;
-            padding: 0.85rem 0.9rem;
+            padding: 0.85rem 0.75rem;
+            text-align: center;
+            transition: all 0.2s ease;
+        }
+
+        a.metric-box:hover {
+            background: rgba(255, 255, 255, 0.14);
+            border-color: rgba(251, 191, 36, 0.55);
+            transform: translateY(-2px);
         }
 
         .metric-value {
             font-family: 'Crimson Pro', Georgia, serif;
-            font-size: 1.55rem;
+            font-size: 1.6rem;
             font-weight: 700;
             color: #fbbf24;
             line-height: 1.1;
@@ -453,7 +463,7 @@
         }
 
         .metric-label {
-            font-size: 0.76rem;
+            font-size: 0.73rem;
             color: #cbd5e1;
             line-height: 1.3;
         }
@@ -1293,9 +1303,9 @@
                 </div>
                 <h1 id="heroName">Syed Emad Uddin Shubha</h1>
                 <p class="hero-role" id="heroTitle">Doctoral Researcher in Computer Science & Quantum Information</p>
-                <p class="hero-education" id="heroEdu">Ph.D. Student in Computer Science, LSU (GPA: 3.988/4.00) • B.Sc. in EEE, BUET</p>
+                <p class="hero-education" id="heroEdu">Ph.D. in Computer Science, LSU • B.Sc. in EEE, BUET</p>
                 <p class="hero-bio" id="heroBio">
-                    I am a Doctoral Researcher in the Division of Computer Science & Engineering at Louisiana State University (LSU), working on quantum hardware security, quantum error correction, and quantum communication protocols. Grounded in Electrical & Electronic Engineering (B.Sc., BUET) and Computer Science, my research bridges finite-element electromagnetic extraction, multilevel superconducting transmon dynamics, pulse-to-circuit characterization, and quantum information theory.
+                    My doctoral research at Louisiana State University (advised by Dr. Tasnuva Farheen), which I conceived and proposed, spans two complementary directions: (1) Quantum Hardware Security: securing multi-tenant superconducting quantum processors via pulse-level crosstalk characterization, Pauli-transfer-matrix detection that separates malicious interference from benign calibration drift, and cross-layer verification; and (2) Quantum Communication & Quantum Correlations: exploiting quantum correlations to design adaptive error-correction and purification protocols and high-fidelity multi-qubit state transmission over partially entangled GHZ channels with optimal POVMs.
                 </p>
 
                 <div class="interest-tags" id="interestTags">
@@ -1343,22 +1353,18 @@
                     </div>
                 </div>
                 <div class="metrics-grid" id="heroMetrics">
-                    <div class="metric-box">
-                        <div class="metric-value">11</div>
-                        <div class="metric-label">Peer-Reviewed Publications</div>
-                    </div>
-                    <div class="metric-box">
-                        <div class="metric-value">3.988</div>
-                        <div class="metric-label">Ph.D. GPA at LSU (4.00 Scale)</div>
-                    </div>
-                    <div class="metric-box">
-                        <div class="metric-value">$268K+</div>
-                        <div class="metric-label">Awarded Grants Contributed To</div>
-                    </div>
-                    <div class="metric-box">
-                        <div class="metric-value">2026</div>
-                        <div class="metric-label">Quantum Rising Star Award</div>
-                    </div>
+                    <a href="https://scholar.google.com/citations?user=8EK8VJMAAAAJ" target="_blank" class="metric-box">
+                        <div class="metric-value">71</div>
+                        <div class="metric-label">Citations (Google Scholar ↗)</div>
+                    </a>
+                    <a href="https://scholar.google.com/citations?user=8EK8VJMAAAAJ" target="_blank" class="metric-box">
+                        <div class="metric-value">4</div>
+                        <div class="metric-label">h-index (Google Scholar ↗)</div>
+                    </a>
+                    <a href="https://scholar.google.com/citations?user=8EK8VJMAAAAJ" target="_blank" class="metric-box">
+                        <div class="metric-value">3</div>
+                        <div class="metric-label">i10-index (Google Scholar ↗)</div>
+                    </a>
                 </div>
             </div>
         </div>
@@ -1385,7 +1391,7 @@
                 <div class="section-title-group">
                     <div class="section-eyebrow">Milestones & Announcements</div>
                     <h2 class="section-title">Recent Academic Updates</h2>
-                    <p class="section-subtitle">Latest publications, awards, grants, and invited talks</p>
+                    <p class="section-subtitle">Latest publications, honors, and invited talks</p>
                 </div>
             </div>
             <div class="updates-list" id="updatesContainer"></div>
@@ -1426,7 +1432,7 @@
                     <h2 class="section-title">Research Projects & Interactive Labs</h2>
                     <p class="section-subtitle">Simulation frameworks, digital twins, machine learning pipelines, and interactive mathematical explorations</p>
                 </div>
-                <a href="https://github.com/syedshubha?tab=repositories" target="_blank" class="pub-btn">View All 37+ GitHub Repositories →</a>
+                <a href="https://github.com/syedshubha?tab=repositories" target="_blank" class="pub-btn">View All GitHub Repositories →</a>
             </div>
             <div class="projects-grid" id="projectsContainer"></div>
         </div>
@@ -1454,7 +1460,7 @@
                 </div>
 
                 <div>
-                    <h3 class="cv-subhead">🏆 Honors, Grants & Academic Service</h3>
+                    <h3 class="cv-subhead">🏆 Honors & Academic Service</h3>
                     <ul class="awards-list" id="awardsContainer"></ul>
 
                     <h3 class="cv-subhead">💻 Technical Competencies</h3>
@@ -1533,7 +1539,7 @@
                     <li><a href="#projects">Projects & Software</a></li>
                     <li><a href="blog.html">Research Blog, Substack & Bigganblog</a></li>
                     <li><a href="QSVT.html">Interactive QSVT Simulator</a></li>
-                    <li><a href="passions.html">Quantum Memeology (40 Memes)</a></li>
+                    <li><a href="passions.html">Quantum Memeology & Outreach</a></li>
                 </ul>
             </div>
             <div>
@@ -1605,12 +1611,22 @@
             }
 
             if (Array.isArray(p.metrics)) {
-                document.getElementById('heroMetrics').innerHTML = p.metrics.map(m => `
-                    <div class="metric-box">
-                        <div class="metric-value">${m.value}</div>
-                        <div class="metric-label">${m.label}</div>
-                    </div>
-                `).join('');
+                document.getElementById('heroMetrics').innerHTML = p.metrics.map(m => {
+                    if (m.url) {
+                        return `
+                            <a href="${m.url}" target="_blank" class="metric-box">
+                                <div class="metric-value">${m.value}</div>
+                                <div class="metric-label">${m.label}</div>
+                            </a>
+                        `;
+                    }
+                    return `
+                        <div class="metric-box">
+                            <div class="metric-value">${m.value}</div>
+                            <div class="metric-label">${m.label}</div>
+                        </div>
+                    `;
+                }).join('');
             }
 
             // Pillars
