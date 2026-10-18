@@ -101,7 +101,7 @@
             align-items: center;
             gap: 0.75rem;
             color: var(--navy-900);
-            min-width: 0;
+            flex-shrink: 0;
         }
 
         .brand-monogram {
@@ -125,29 +125,25 @@
         .brand-text {
             display: flex;
             flex-direction: column;
-            min-width: 0;
+            flex-shrink: 0;
         }
 
         .brand-name {
             font-family: 'Crimson Pro', Georgia, serif;
-            font-size: 1.25rem;
+            font-size: 1.3rem;
             font-weight: 700;
             line-height: 1.15;
             color: var(--navy-900);
             white-space: nowrap;
-            overflow: hidden;
-            text-overflow: ellipsis;
         }
 
         .brand-sub {
-            font-size: 0.7rem;
+            font-size: 0.72rem;
             color: var(--text-muted);
             font-weight: 500;
-            letter-spacing: 0.03em;
+            letter-spacing: 0.04em;
             text-transform: uppercase;
             white-space: nowrap;
-            overflow: hidden;
-            text-overflow: ellipsis;
         }
 
         .nav-menu {
@@ -613,15 +609,14 @@
             <a href="index.html" class="nav-brand">
                 <div class="brand-monogram">|S⟩</div>
                 <div class="brand-text">
-                    <span class="brand-name">Syed Emad Uddin Shubha</span>
-                    <span class="brand-sub">Quantum Information • LSU</span>
+                    <span class="brand-name">Syed Shubha</span>
+                    <span class="brand-sub">QI Researcher</span>
                 </div>
             </a>
             <ul class="nav-menu" id="navMenu">
                 <li><a href="index.html">← Main Portfolio</a></li>
                 <li><a href="index.html#publications">Publications</a></li>
                 <li><a href="blog.html" class="active">Blog & Essays</a></li>
-                <li><a href="QSVT.html">QSVT Lab</a></li>
                 <li><a href="passions.html" class="nav-pill-btn">Quantum Memeology</a></li>
             </ul>
             <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle Menu">

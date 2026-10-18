@@ -111,7 +111,7 @@
             align-items: center;
             gap: 0.75rem;
             text-decoration: none;
-            min-width: 0;
+            flex-shrink: 0;
         }
 
         .brand-monogram {
@@ -135,30 +135,26 @@
         .brand-text {
             display: flex;
             flex-direction: column;
-            min-width: 0;
+            flex-shrink: 0;
         }
 
         .nav-brand-name {
             font-family: 'Crimson Pro', Georgia, serif;
-            font-size: 1.28rem;
+            font-size: 1.3rem;
             font-weight: 700;
             color: var(--navy-900);
             line-height: 1.15;
             white-space: nowrap;
-            overflow: hidden;
-            text-overflow: ellipsis;
         }
 
         .nav-brand-sub {
-            font-size: 0.7rem;
+            font-size: 0.72rem;
             font-weight: 500;
             color: var(--text-muted);
             letter-spacing: 0.04em;
             text-transform: uppercase;
             margin-top: 1px;
             white-space: nowrap;
-            overflow: hidden;
-            text-overflow: ellipsis;
         }
 
         .nav-menu {
@@ -1398,18 +1394,17 @@
             <a href="#home" class="nav-brand">
                 <div class="brand-monogram">|S⟩</div>
                 <div class="brand-text">
-                    <span class="nav-brand-name">Syed Emad Uddin Shubha</span>
-                    <span class="nav-brand-sub">Quantum Information • LSU</span>
+                    <span class="nav-brand-name">Syed Shubha</span>
+                    <span class="nav-brand-sub">QI Researcher</span>
                 </div>
             </a>
             <ul class="nav-menu" id="navMenu">
                 <li><a href="#about">Research</a></li>
-                <li><a href="#updates">News</a></li>
+                <li><a href="#updates">Updates</a></li>
                 <li><a href="#publications">Publications</a></li>
-                <li><a href="#projects">Projects & Labs</a></li>
-                <li><a href="#experience">CV & Service</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#experience">About</a></li>
                 <li><a href="blog.html" class="nav-pill-outline">Blog & Notes</a></li>
-                <li><a href="QSVT.html" class="nav-pill-outline">QSVT Lab</a></li>
                 <li><a href="passions.html" class="nav-pill-btn">Quantum Memeology</a></li>
             </ul>
             <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle Menu">
