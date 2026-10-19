@@ -1420,9 +1420,10 @@
         <div class="hero-container">
             <div>
                 <h1 id="heroName">Syed Emad Uddin Shubha</h1>
-                <p class="hero-role" id="heroTitle">Ph.D. Student in Computer Science • Louisiana State University</p>
+                <p class="hero-role" id="heroTitle">Ph.D. Researcher in Quantum Information & Hardware Security • Louisiana State University</p>
                 <p class="hero-bio" id="heroBio">
-                    My doctoral research at Louisiana State University (advised by Dr. Tasnuva Farheen), which I conceived and proposed, spans two complementary directions: (1) Quantum Hardware Security: securing multi-tenant superconducting quantum processors via pulse-level crosstalk characterization, Pauli-transfer-matrix detection that separates malicious interference from benign calibration drift, and cross-layer verification; and (2) Quantum Communication & Quantum Correlations: exploiting quantum correlations to design adaptive error-correction and purification protocols and high-fidelity multi-qubit state transmission over partially entangled GHZ channels with optimal POVMs.
+                    I am a Computer Science Ph.D. researcher and the founding doctoral student in Dr. Tasnuva Farheen's group at Louisiana State University, recipient of the 2026 Quantum Rising Star Award at Rice University (QS3). My research bridges physical superconducting hardware and quantum information theory across two core directions: (1) <strong>Quantum Hardware Security & Pulse Control</strong>, securing multi-tenant superconducting processors via pulse-to-circuit crosstalk characterization and Pauli-transfer-matrix drift separation (<em>IEEE HOST '27, ACM CCS QSec '25, IEEE QCE '25</em>); and (2) <strong>Quantum Communication & Error Correction</strong>, designing correlation-guided adaptive purification, surface-code decoding, and high-fidelity state teleportation over noisy channels (<em>AVS Quantum Science '25, IEEE QCE '25, Heliyon '23</em>).<br><br>
+                    Prior to LSU, after earning my B.Sc. in Electrical and Electronic Engineering (EEE) from BUET, I helped establish Bangladesh's first quantum computing research group under Dr. Mahdy Rahman Chowdhury (which evolved into the NSU Center of Quantum Computing, NCQC), where I co-supervised research and mentored five students into Quantum Information Ph.D. programs worldwide.
                 </p>
 
                 <div class="interest-tags" id="interestTags">
@@ -1750,7 +1751,7 @@
             if (affEl && p.affiliation) affEl.textContent = p.affiliation;
             const heroEduEl = document.getElementById('heroEdu');
             if (heroEduEl && p.education_short) heroEduEl.textContent = p.education_short;
-            if (p.bio) document.getElementById('heroBio').textContent = p.bio;
+            if (p.bio) document.getElementById('heroBio').innerHTML = p.bio;
             if (p.cv_url) document.getElementById('cvDownloadBtn').href = p.cv_url;
             if (p.avatar) document.getElementById('heroAvatar').src = p.avatar;
 
