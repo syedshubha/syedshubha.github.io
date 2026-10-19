@@ -17,6 +17,8 @@ const REFILL_INTERVAL_MS = 8 * 60 * 60 * 1000;
 const POOL_KEY = 'pool';
 const ALLOWED_ORIGINS = [
     'https://syedshubha.github.io',
+    'https://syedshubha.com',
+    'https://www.syedshubha.com',
     'http://localhost:8000',
     'http://127.0.0.1:8000',
 ];
