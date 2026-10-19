@@ -1,0 +1,144 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 420" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f081d"/>
+      <stop offset="55%" stop-color="#1a0e33"/>
+      <stop offset="100%" stop-color="#110922"/>
+    </linearGradient>
+    <linearGradient id="purpleBox" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#3b1968"/>
+      <stop offset="100%" stop-color="#250f46"/>
+    </linearGradient>
+    <linearGradient id="goldBox" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#422c0c"/>
+      <stop offset="100%" stop-color="#291a05"/>
+    </linearGradient>
+    <linearGradient id="outBox" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2e1557"/>
+      <stop offset="100%" stop-color="#461d7c"/>
+    </linearGradient>
+    <pattern id="grid" width="24" height="24" patternUnits="userSpaceOnUse">
+      <path d="M 24 0 L 0 0 0 24" fill="none" stroke="rgba(196, 181, 253, 0.05)" stroke-width="1"/>
+    </pattern>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="420" rx="12" fill="url(#bgGrad)"/>
+  <rect width="800" height="420" rx="12" fill="url(#grid)"/>
+  <rect x="1" y="1" width="798" height="418" rx="11" fill="none" stroke="rgba(212, 175, 55, 0.28)" stroke-width="1.5"/>
+
+  <!-- Top Header Banner -->
+  <text x="32" y="34" fill="#fde047" font-family="'JetBrains Mono', monospace" font-size="11.5" font-weight="700" letter-spacing="1.4">QUANTUM SINGULAR VALUE TRANSFORMATION (QSVT) ARCHITECTURE</text>
+  <text x="768" y="34" text-anchor="end" fill="#c4b5fd" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="500">U_Φ = Π_φ0 · U_A · Π_φ1 · U_A† ···</text>
+  <line x1="32" y1="45" x2="768" y2="45" stroke="rgba(196, 181, 253, 0.16)" stroke-width="1"/>
+
+  <!-- Quantum Circuit Diagram Box -->
+  <rect x="32" y="58" width="736" height="178" rx="10" fill="rgba(13, 8, 24, 0.65)" stroke="rgba(196, 181, 253, 0.18)" stroke-width="1"/>
+
+  <!-- Input Ket Labels -->
+  <text x="50" y="114" fill="#f8fafc" font-family="'JetBrains Mono', monospace" font-size="13.5" font-weight="600">|0⟩_a</text>
+  <text x="50" y="182" fill="#f8fafc" font-family="'JetBrains Mono', monospace" font-size="13.5" font-weight="600">|ψ⟩_s</text>
+  <text x="50" y="131" fill="#94a3b8" font-family="'Plus Jakarta Sans', sans-serif" font-size="9.5">Ancilla</text>
+  <text x="50" y="199" fill="#94a3b8" font-family="'Plus Jakarta Sans', sans-serif" font-size="9.5">Signal</text>
+
+  <!-- Quantum Wires -->
+  <line x1="98" y1="110" x2="575" y2="110" stroke="#c4b5fd" stroke-width="2" stroke-opacity="0.75"/>
+  <line x1="98" y1="178" x2="575" y2="178" stroke="#c4b5fd" stroke-width="2" stroke-opacity="0.75"/>
+  <!-- Multi-qubit slash on signal wire -->
+  <line x1="106" y1="171" x2="114" y2="185" stroke="#fde047" stroke-width="1.8"/>
+
+  <!-- Gate 1: e^{i φ_0 Z_Π} -->
+  <rect x="126" y="84" width="66" height="52" rx="7" fill="url(#goldBox)" stroke="#fde047" stroke-width="1.5"/>
+  <text x="159" y="106" text-anchor="middle" fill="#fde047" font-family="'JetBrains Mono', monospace" font-size="11.5" font-weight="700">e^{iφ₀Z}</text>
+  <text x="159" y="123" text-anchor="middle" fill="#fef08a" font-family="'Plus Jakarta Sans', sans-serif" font-size="9.5">Π-Phase</text>
+  <line x1="159" y1="136" x2="159" y2="178" stroke="#fde047" stroke-width="1.4" stroke-dasharray="3,3"/>
+  <circle cx="159" cy="178" r="4" fill="#fde047"/>
+
+  <!-- Gate 2: Block Encoding U_A -->
+  <rect x="208" y="82" width="84" height="118" rx="8" fill="url(#purpleBox)" stroke="#a78bfa" stroke-width="1.8"/>
+  <text x="250" y="125" text-anchor="middle" fill="#ffffff" font-family="'Newsreader', Georgia, serif" font-size="18" font-weight="700" font-style="italic">U_A</text>
+  <text x="250" y="146" text-anchor="middle" fill="#ddd6fe" font-family="'JetBrains Mono', monospace" font-size="10">[A/α  · ]</text>
+  <text x="250" y="160" text-anchor="middle" fill="#ddd6fe" font-family="'JetBrains Mono', monospace" font-size="10">[ ·   · ]</text>
+  <text x="250" y="184" text-anchor="middle" fill="#c4b5fd" font-family="'Plus Jakarta Sans', sans-serif" font-size="9">Block Encode</text>
+
+  <!-- Gate 3: e^{i φ_1 Z_Π~} -->
+  <rect x="308" y="84" width="66" height="52" rx="7" fill="url(#goldBox)" stroke="#fde047" stroke-width="1.5"/>
+  <text x="341" y="106" text-anchor="middle" fill="#fde047" font-family="'JetBrains Mono', monospace" font-size="11.5" font-weight="700">e^{iφ₁Z}</text>
+  <text x="341" y="123" text-anchor="middle" fill="#fef08a" font-family="'Plus Jakarta Sans', sans-serif" font-size="9.5">Π̃-Phase</text>
+  <line x1="341" y1="136" x2="341" y2="178" stroke="#fde047" stroke-width="1.4" stroke-dasharray="3,3"/>
+  <circle cx="341" cy="178" r="4" fill="#fde047"/>
+
+  <!-- Gate 4: Adjoint Block Encoding U_A^† -->
+  <rect x="390" y="82" width="84" height="118" rx="8" fill="url(#purpleBox)" stroke="#a78bfa" stroke-width="1.8"/>
+  <text x="432" y="125" text-anchor="middle" fill="#ffffff" font-family="'Newsreader', Georgia, serif" font-size="18" font-weight="700" font-style="italic">U_A†</text>
+  <text x="432" y="148" text-anchor="middle" fill="#ddd6fe" font-family="'JetBrains Mono', monospace" font-size="10">V Σ/α U†</text>
+  <text x="432" y="184" text-anchor="middle" fill="#c4b5fd" font-family="'Plus Jakarta Sans', sans-serif" font-size="9">Adjoint Step</text>
+
+  <!-- Dots -->
+  <circle cx="491" cy="144" r="2.5" fill="#fde047"/>
+  <circle cx="501" cy="144" r="2.5" fill="#fde047"/>
+  <circle cx="511" cy="144" r="2.5" fill="#fde047"/>
+
+  <!-- Gate 5: Final Phase e^{i φ_d Z_Π} -->
+  <rect x="525" y="84" width="66" height="52" rx="7" fill="url(#goldBox)" stroke="#fde047" stroke-width="1.5"/>
+  <text x="558" y="106" text-anchor="middle" fill="#fde047" font-family="'JetBrains Mono', monospace" font-size="11.5" font-weight="700">e^{iφ_dZ}</text>
+  <text x="558" y="123" text-anchor="middle" fill="#fef08a" font-family="'Plus Jakarta Sans', sans-serif" font-size="9.5">Final φ_d</text>
+  <line x1="558" y1="136" x2="558" y2="178" stroke="#fde047" stroke-width="1.4" stroke-dasharray="3,3"/>
+  <circle cx="558" cy="178" r="4" fill="#fde047"/>
+
+  <!-- Output Synthesized Operator Card -->
+  <rect x="610" y="76" width="142" height="136" rx="9" fill="url(#outBox)" stroke="#fde047" stroke-width="1.6"/>
+  <text x="681" y="99" text-anchor="middle" fill="#fde047" font-family="'JetBrains Mono', monospace" font-size="10" font-weight="700" letter-spacing="0.8">POST-SELECTED ⟨0|_a</text>
+  <text x="681" y="126" text-anchor="middle" fill="#ffffff" font-family="'Newsreader', Georgia, serif" font-size="16" font-weight="700">P^(SV)(A/α)</text>
+  <line x1="626" y1="138" x2="736" y2="138" stroke="rgba(253, 224, 71, 0.3)" stroke-width="1"/>
+  <text x="681" y="158" text-anchor="middle" fill="#fef08a" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="600">U · P(Σ/α) · V†</text>
+  <!-- Mini polynomial wave inside output box -->
+  <path d="M 628 192 Q 645 165, 665 186 T 702 174 T 734 166" fill="none" stroke="#fde047" stroke-width="2"/>
+  <circle cx="648" cy="177" r="3" fill="#ffffff"/>
+  <circle cx="684" cy="180" r="3" fill="#ffffff"/>
+  <circle cx="718" cy="170" r="3" fill="#ffffff"/>
+
+  <!-- Bottom 4-Stage Interactive Pipeline Cards -->
+  <text x="32" y="264" fill="#c4b5fd" font-family="'JetBrains Mono', monospace" font-size="10.5" font-weight="700" letter-spacing="1.2">4-STAGE INTERACTIVE BROWSER COMPUTATION PIPELINE</text>
+
+  <!-- Stage 1 -->
+  <rect x="32" y="278" width="172" height="114" rx="9" fill="rgba(35, 17, 61, 0.85)" stroke="rgba(196, 181, 253, 0.28)" stroke-width="1.2"/>
+  <text x="46" y="301" fill="#fde047" font-family="'JetBrains Mono', monospace" font-size="10.5" font-weight="700">STAGE I • SVD</text>
+  <text x="46" y="325" fill="#ffffff" font-family="'Newsreader', Georgia, serif" font-size="15.5" font-weight="700">A = U Σ V†</text>
+  <text x="46" y="347" fill="#cbd5e1" font-family="'Plus Jakarta Sans', sans-serif" font-size="10.5">Spectral decomposition</text>
+  <text x="46" y="363" fill="#cbd5e1" font-family="'Plus Jakarta Sans', sans-serif" font-size="10.5">&amp; singular values σ_k</text>
+  <text x="46" y="381" fill="#a78bfa" font-family="'JetBrains Mono', monospace" font-size="9.5">α ≥ ‖A‖₂</text>
+
+  <!-- Arrow 1->2 -->
+  <path d="M 207 335 L 217 335" stroke="#fde047" stroke-width="1.8"/>
+
+  <!-- Stage 2 -->
+  <rect x="220" y="278" width="172" height="114" rx="9" fill="rgba(35, 17, 61, 0.85)" stroke="rgba(196, 181, 253, 0.28)" stroke-width="1.2"/>
+  <text x="234" y="301" fill="#fde047" font-family="'JetBrains Mono', monospace" font-size="10.5" font-weight="700">STAGE II • DILATION</text>
+  <text x="234" y="325" fill="#ffffff" font-family="'Newsreader', Georgia, serif" font-size="15.5" font-weight="700">Cosine-Sine U_A</text>
+  <text x="234" y="347" fill="#cbd5e1" font-family="'Plus Jakarta Sans', sans-serif" font-size="10.5">Unitary block encoding</text>
+  <text x="234" y="363" fill="#cbd5e1" font-family="'Plus Jakarta Sans', sans-serif" font-size="10.5">√(I − (Σ/α)²) defect</text>
+  <text x="234" y="381" fill="#a78bfa" font-family="'JetBrains Mono', monospace" font-size="9.5">‖U_A† U_A − I‖ ≈ 0</text>
+
+  <!-- Arrow 2->3 -->
+  <path d="M 395 335 L 405 335" stroke="#fde047" stroke-width="1.8"/>
+
+  <!-- Stage 3 -->
+  <rect x="408" y="278" width="172" height="114" rx="9" fill="rgba(35, 17, 61, 0.85)" stroke="rgba(196, 181, 253, 0.28)" stroke-width="1.2"/>
+  <text x="422" y="301" fill="#fde047" font-family="'JetBrains Mono', monospace" font-size="10.5" font-weight="700">STAGE III • QSP</text>
+  <text x="422" y="325" fill="#ffffff" font-family="'Newsreader', Georgia, serif" font-size="15.5" font-weight="700">Phase Angles φ⃗*</text>
+  <text x="422" y="347" fill="#cbd5e1" font-family="'Plus Jakarta Sans', sans-serif" font-size="10.5">Live Adam optimizer</text>
+  <text x="422" y="363" fill="#cbd5e1" font-family="'Plus Jakarta Sans', sans-serif" font-size="10.5">fitting target P(x)</text>
+  <text x="422" y="381" fill="#a78bfa" font-family="'JetBrains Mono', monospace" font-size="9.5">|P(x)| ≤ 1, definite parity</text>
+
+  <!-- Arrow 3->4 -->
+  <path d="M 583 335 L 593 335" stroke="#fde047" stroke-width="1.8"/>
+
+  <!-- Stage 4 -->
+  <rect x="596" y="278" width="172" height="114" rx="9" fill="rgba(35, 17, 61, 0.85)" stroke="rgba(253, 224, 71, 0.45)" stroke-width="1.4"/>
+  <text x="610" y="301" fill="#fde047" font-family="'JetBrains Mono', monospace" font-size="10.5" font-weight="700">STAGE IV • QSVT</text>
+  <text x="610" y="325" fill="#ffffff" font-family="'Newsreader', Georgia, serif" font-size="15.5" font-weight="700">U P(Σ/α) V†</text>
+  <text x="610" y="347" fill="#cbd5e1" font-family="'Plus Jakarta Sans', sans-serif" font-size="10.5">Exact vs. QSVT circuit</text>
+  <text x="610" y="363" fill="#cbd5e1" font-family="'Plus Jakarta Sans', sans-serif" font-size="10.5">reconstruction check</text>
+  <text x="610" y="381" fill="#fde047" font-family="'JetBrains Mono', monospace" font-size="9.5">Frobenius Error &lt; 10⁻⁶</text>
+</svg>

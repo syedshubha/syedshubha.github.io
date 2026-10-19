@@ -444,10 +444,12 @@
 
         .post-cover {
             width: 100%;
-            height: 195px;
-            object-fit: cover;
+            height: 235px;
+            object-fit: contain;
+            padding: 0.45rem;
             border-bottom: 1px solid var(--border-light);
-            background: #0f172a;
+            background: #0d0818;
+            display: block;
         }
 
         .post-body {
@@ -787,6 +789,7 @@
                 .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
                 .replace(/\*(.*?)\*/g, '<em>$1</em>')
                 .replace(/`([^`]+)`/g, '<code>$1</code>')
+                .replace(/!\[([^\]]*)\]\(([^)]+)\)/g, '<img src="$2" alt="$1" style="max-width:100%; border-radius:8px; margin:1rem 0;">')
                 .replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2" target="_blank">$1</a>');
 
             const blocks = html.split(/\n\s*\n/);
