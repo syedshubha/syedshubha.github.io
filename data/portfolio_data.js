@@ -52,7 +52,8 @@ window.PORTFOLIO_DATA = {
       "facebook": "https://www.facebook.com/physicist.shubha",
       "reddit": "https://www.reddit.com/r/QuantumMemeology/",
       "youtube": "https://www.youtube.com/playlist?list=PLEGgPKRszGn9g1C8Swhib5GtYgHJNb-Iq",
-      "chess": "https://www.chess.com/member/decohered_imam"
+      "chess": "https://www.chess.com/member/decohered_imam",
+      "chess_shorts": "https://www.youtube.com/@SchrodingersDankKnight/shorts"
     }
   },
   "pillars": [
