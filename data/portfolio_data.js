@@ -61,6 +61,11 @@ window.PORTFOLIO_DATA = {
       "id": "security-characterization",
       "icon": "🛡️",
       "title": "Quantum Hardware Security, Pulse Control & Characterization",
+      "core_interests": [
+        "⚡ Quantum Hardware Security & Pulse Control",
+        "🔬 Multi-Tenant Superconducting Qubits",
+        "⚛️ Quantum Algorithms & QSVT"
+      ],
       "summary": "Securing and characterizing multi-tenant superconducting quantum processors through pulse-level Hamiltonian simulation (Qiskit Pulse, QuTiP), pulse-to-circuit mapping of asymmetric crosstalk attack mechanisms, Choi-matrix and Pauli-transfer process analysis, and structural drift separation.",
       "highlights": [
         "Pulse-to-circuit characterization of crosstalk as an active attack vector and Pauli-transfer-matrix drift separation",
@@ -72,6 +77,11 @@ window.PORTFOLIO_DATA = {
       "id": "communication",
       "icon": "🔗",
       "title": "Quantum Communication, Correlations & Error Correction",
+      "core_interests": [
+        "🌐 Quantum Communication & Correlations",
+        "🛡️ Quantum Error Correction",
+        "🔐 Quantum Cryptography (QKD)"
+      ],
       "summary": "Exploiting quantum correlations to design adaptive error-correction and pair-preserving purification protocols for superdense coding in distributed quantum networks, alongside high-fidelity multi-qubit state teleportation over partially entangled GHZ channels using optimal POVMs.",
       "highlights": [
         "Correlation-guided adaptive purification protocols for superdense coding and multi-qubit state teleportation",
