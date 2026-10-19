@@ -510,6 +510,49 @@
             margin-left: auto;
         }
 
+        .btn-reshuffle-glow {
+            position: relative;
+            background: linear-gradient(135deg, rgba(70, 29, 124, 0.12), rgba(212, 175, 55, 0.14));
+            border: 1px solid rgba(212, 175, 55, 0.65);
+            color: var(--navy-800);
+            box-shadow: 0 0 12px rgba(212, 175, 55, 0.22), 0 0 20px rgba(112, 26, 179, 0.15);
+            animation: reshuffleQuantumPulse 3.5s ease-in-out infinite alternate;
+            transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .btn-reshuffle-glow:hover {
+            background: linear-gradient(135deg, rgba(70, 29, 124, 0.25), rgba(212, 175, 55, 0.28));
+            border-color: #d4af37;
+            color: var(--academic-blue-dark);
+            transform: translateY(-1px) scale(1.02);
+            box-shadow: 0 0 18px rgba(212, 175, 55, 0.45), 0 0 28px rgba(183, 148, 244, 0.35);
+        }
+
+        html[data-theme="dark"] .btn-reshuffle-glow {
+            background: linear-gradient(135deg, rgba(139, 92, 246, 0.22), rgba(212, 175, 55, 0.18));
+            border-color: rgba(212, 175, 55, 0.7);
+            color: #ffffff;
+            box-shadow: 0 0 12px rgba(212, 175, 55, 0.25), 0 0 22px rgba(147, 51, 234, 0.25);
+        }
+
+        html[data-theme="dark"] .btn-reshuffle-glow:hover {
+            background: linear-gradient(135deg, rgba(139, 92, 246, 0.4), rgba(212, 175, 55, 0.32));
+            border-color: #fde047;
+            color: #ffffff;
+            box-shadow: 0 0 20px rgba(212, 175, 55, 0.5), 0 0 32px rgba(183, 148, 244, 0.4);
+        }
+
+        @keyframes reshuffleQuantumPulse {
+            0% {
+                box-shadow: 0 0 8px rgba(212, 175, 55, 0.18), 0 0 14px rgba(70, 29, 124, 0.15);
+                border-color: rgba(212, 175, 55, 0.45);
+            }
+            100% {
+                box-shadow: 0 0 18px rgba(212, 175, 55, 0.4), 0 0 26px rgba(147, 51, 234, 0.3);
+                border-color: rgba(253, 224, 71, 0.85);
+            }
+        }
+
         /* Meme Grid */
         .meme-grid {
             display: grid;
@@ -940,8 +983,7 @@
             </p>
             <div class="prng-meta">
                 <span>Seed source: <code id="prngSource">classical PRNG</code> • Shuffle: <code>mulberry32</code> Fisher–Yates • Seed: <code id="prngSeed">…</code></span>
-                <a href="#" id="prngReproduceLink" title="Same seed, same order. That is the whole point.">🔁 Reproduce this order</a>
-                <button type="button" class="action-btn" onclick="reshuffleMemes()">🎲 Reshuffle</button>
+                <button type="button" class="action-btn btn-reshuffle-glow" id="reshuffleBtn" onclick="reshuffleMemes()">🎲 Reshuffle</button>
             </div>
         </div>
 
@@ -1080,7 +1122,8 @@
             SITE_DATA.memes = seededShuffle(ORIGINAL_MEMES, seed);
             const hex = '0x' + seed.toString(16).toUpperCase().padStart(8, '0');
             document.getElementById('prngSeed').textContent = hex;
-            document.getElementById('prngReproduceLink').href = `memes.html?seed=${hex}`;
+            const repLink = document.getElementById('prngReproduceLink');
+            if (repLink) repLink.href = `memes.html?seed=${hex}`;
             const sourceEl = document.getElementById('prngSource');
             const textEl = document.getElementById('prngText');
             if (source === 'quantum') {
@@ -1095,7 +1138,7 @@
         // Cloudflare Worker proxying the ANU QRNG (see qrng-worker/). Empty = classical mode only.
         const QRNG_ENDPOINT = 'https://qrng-seed.small-surf-f6bc.workers.dev';
         const CLASSICAL_TEXT = document.getElementById('prngText').textContent.trim();
-        const QUANTUM_TEXT = '🎲 This arrangement was shuffled using a seed measured from quantum vacuum fluctuations by the ANU Quantum Random Number Generator. True non-deterministic collapse achieved, at least for the seed: given the seed, the shuffle itself is still a deterministic algorithm, as the reproduce link below demonstrates.';
+        const QUANTUM_TEXT = '🎲 This arrangement was shuffled using a seed measured from quantum vacuum fluctuations by the ANU Quantum Random Number Generator (true non-deterministic quantum collapse).';
 
         async function fetchQuantumSeed(timeoutMs = 1500) {
             if (!QRNG_ENDPOINT) return null;
