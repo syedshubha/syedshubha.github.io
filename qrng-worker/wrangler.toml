@@ -1,10 +1,12 @@
 name = "qrng-seed"
 main = "src/index.js"
 compatibility_date = "2026-10-01"
+workers_dev = true
+preview_urls = false
 
 # Created with: npx wrangler kv namespace create QRNG_POOL
 [[kv_namespaces]]
 binding = "QRNG_POOL"
-id = "REPLACE_WITH_KV_NAMESPACE_ID"
+id = "09183d882e044671b0bbf25fa5d9a8e0"
 
 # Secret (never committed): npx wrangler secret put ANU_API_KEY

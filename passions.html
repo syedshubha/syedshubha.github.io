@@ -1048,7 +1048,7 @@
         }
 
         // Cloudflare Worker proxying the ANU QRNG (see qrng-worker/). Empty = classical mode only.
-        const QRNG_ENDPOINT = '';
+        const QRNG_ENDPOINT = 'https://qrng-seed.small-surf-f6bc.workers.dev';
         const CLASSICAL_TEXT = document.getElementById('prngText').textContent.trim();
         const QUANTUM_TEXT = '🎲 This arrangement was shuffled using a seed measured from quantum vacuum fluctuations by the ANU Quantum Random Number Generator. True non-deterministic collapse achieved, at least for the seed: given the seed, the shuffle itself is still a deterministic algorithm, as the reproduce link below demonstrates.';
 

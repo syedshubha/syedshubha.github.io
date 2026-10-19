@@ -50,6 +50,9 @@ export default {
         if (request.method === 'OPTIONS') return new Response(null, { headers: cors });
         if (request.method !== 'GET') return json({ error: 'method not allowed' }, 405, cors);
 
+        // Not configured yet: fail fast without consuming the refill window.
+        if (!env.ANU_API_KEY) return json({ source: 'not-configured' }, 503, cors);
+
         const state = (await env.QRNG_POOL.get(POOL_KEY, 'json')) || { pool: [], cursor: 0, lastAttempt: 0 };
         const now = Date.now();
         const exhausted = () => state.cursor + 1 >= state.pool.length;
