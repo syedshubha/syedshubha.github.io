@@ -309,22 +309,6 @@
   ],
   "projects": [
     {
-      "id": "proj-qsvt",
-      "title": "Interactive Quantum Singular Value Transformation (QSVT)",
-      "category": "Interactive Simulation",
-      "badge": "Live Web App",
-      "description": "A real-time interactive four-stage mathematical and quantum circuit pipeline realizing Singular Value Decomposition, Cosine–Sine Unitary Block Encoding, Quantum Signal Processing (with in-browser Adam phase-angle optimization), and the QSVT polynomial transformation theorem.",
-      "tech": [
-        "QSVT",
-        "Quantum Signal Processing",
-        "Block Encoding",
-        "Interactive MathJax"
-      ],
-      "link": "QSVT.html",
-      "link_label": "Launch Interactive Demo →",
-      "repo_url": "https://github.com/syedshubha/syedshubha.github.io/blob/main/QSVT.html"
-    },
-    {
       "id": "proj-wstate",
       "title": "W-State Preparation on Superconducting Qubits with Qiskit Pulse",
       "category": "Pulse-Level Control",
@@ -463,7 +447,10 @@
         "Block Encoding",
         "Interactive MathJax"
       ],
-      "content": "## Overview\n\nQuantum Singular Value Transformation (QSVT) unifies nearly all major quantum algorithms (including Hamiltonian simulation, Grover search, quantum linear systems, and amplitude amplification) into a single polynomial framework.\n\nIn my **[Interactive QSVT Web Laboratory](QSVT.html)**, you can edit any $m \\times n$ real matrix $A$ and target polynomial $P(x)$ and observe all four stages recomputed in real time:\n\n1. **Stage I: Singular Value Decomposition ($A = U \\Sigma V^\\dagger$)**\n2. **Stage II: Unitary Block Encoding ($U_A$ via Cosine–Sine Dilation)**\n3. **Stage III: Quantum Signal Processing & Phase-Angle Optimization ($\\vec{\\phi}$)**\n4. **Stage IV: Full QSVT Circuit Transformation ($U\\, P(\\Sigma/\\alpha)\\, V^\\dagger$)**\n\n👉 **[Launch the Interactive QSVT Simulator →](QSVT.html)**"
+      "content": "## Overview\n\nQuantum Singular Value Transformation (QSVT) unifies nearly all major quantum algorithms (including Hamiltonian simulation, Grover search, quantum linear systems, and amplitude amplification) into a single polynomial framework.\n\nIn my **[Interactive QSVT Web Laboratory](QSVT.html)**, you can edit any $m \\times n$ real matrix $A$ and target polynomial $P(x)$ and observe all four stages recomputed in real time:\n\n1. **Stage I: Singular Value Decomposition ($A = U \\Sigma V^\\dagger$)**\n2. **Stage II: Unitary Block Encoding ($U_A$ via Cosine–Sine Dilation)**\n3. **Stage III: Quantum Signal Processing & Phase-Angle Optimization ($\\vec{\\phi}$)**\n4. **Stage IV: Full QSVT Circuit Transformation ($U\\, P(\\Sigma/\\alpha)\\, V^\\dagger$)**\n\n👉 **[Launch the Interactive QSVT Simulator →](QSVT.html)**",
+      "featured_on_main": true,
+      "hide_from_main": false,
+      "hide_from_blog": false
     },
     {
       "id": "post-agrippan-trilemma",
@@ -484,7 +471,35 @@
         "Philosophy of Science",
         "Substack"
       ],
-      "content": "![All knowledge is ultimately based on that which we cannot prove](images/agrippan_epistemology.jpg)\n\nIt is fundamentally impossible to prove any proposition with absolute certainty. This epistemological problem is known as the **Agrippan Trilemma** (or Münchhausen Trilemma). It arises from a simple logical requirement: any claim to truth must be justified by evidence or logic. However, that justification is itself a claim that requires its own justification. This creates a structural paradox where the foundation of knowledge can never be definitively settled, rendering absolute proof unattainable.\n\nAny attempt to construct a flawless foundation of knowledge will inevitably encounter one of three logical dead ends:\n\n1. **Infinite Regress:** A proposition is justified by a second, the second by a third, and so on indefinitely, without ever reaching a foundational bedrock.\n2. **Circular Reasoning:** The chain of justification loops back upon itself, relying on the conclusion to prove the premise.\n3. **Dogmatic Assumption (Axiomatic Halting):** The chain of justification is arbitrarily halted by asserting a fundamental premise as an axiom that requires no proof.\n\n---\n\n## Religion, Metaphysics, and Falsifiability\n\nHistorically, religion and metaphysics have attempted to resolve this trilemma but ultimately fall victim to its constraints. Religion almost exclusively relies on dogmatic assumption, halting the infinite regress by asserting an absolute endpoint like an infallible deity, divine revelation, or a sacred text. Metaphysics attempts to establish the ultimate nature of reality through pure reason, but it too must eventually rely on unprovable axioms, assuming without tangible evidence that human intuition aligns with the fundamental mechanics of the universe.\n\nStrictly speaking, the scientific method also fails the Agrippan Trilemma: science relies on foundational assumptions such as the uniformity of nature and the reliability of observation. However, science remains our most powerful epistemological tool because of philosopher **Karl Popper's concept of falsifiability**.\n\nPopper argued that science circumvents the trilemma by abandoning the search for absolute proof and instead making specific, risky predictions that can be empirically tested and **proven wrong**. Science does not claim to hold absolute, unassailable truth; rather, it offers the strongest surviving models that have withstood rigorous attempts at refutation.\n\n🔗 **[Read the original post on Substack →](https://syedshubha.substack.com/p/agrippan-trilemma)**"
+      "content": "![All knowledge is ultimately based on that which we cannot prove](images/agrippan_epistemology.jpg)\n\nIt is fundamentally impossible to prove any proposition with absolute certainty. This epistemological problem is known as the **Agrippan Trilemma** (or Münchhausen Trilemma). It arises from a simple logical requirement: any claim to truth must be justified by evidence or logic. However, that justification is itself a claim that requires its own justification. This creates a structural paradox where the foundation of knowledge can never be definitively settled, rendering absolute proof unattainable.\n\nAny attempt to construct a flawless foundation of knowledge will inevitably encounter one of three logical dead ends:\n\n1. **Infinite Regress:** A proposition is justified by a second, the second by a third, and so on indefinitely, without ever reaching a foundational bedrock.\n2. **Circular Reasoning:** The chain of justification loops back upon itself, relying on the conclusion to prove the premise.\n3. **Dogmatic Assumption (Axiomatic Halting):** The chain of justification is arbitrarily halted by asserting a fundamental premise as an axiom that requires no proof.\n\n---\n\n## Religion, Metaphysics, and Falsifiability\n\nHistorically, religion and metaphysics have attempted to resolve this trilemma but ultimately fall victim to its constraints. Religion almost exclusively relies on dogmatic assumption, halting the infinite regress by asserting an absolute endpoint like an infallible deity, divine revelation, or a sacred text. Metaphysics attempts to establish the ultimate nature of reality through pure reason, but it too must eventually rely on unprovable axioms, assuming without tangible evidence that human intuition aligns with the fundamental mechanics of the universe.\n\nStrictly speaking, the scientific method also fails the Agrippan Trilemma: science relies on foundational assumptions such as the uniformity of nature and the reliability of observation. However, science remains our most powerful epistemological tool because of philosopher **Karl Popper's concept of falsifiability**.\n\nPopper argued that science circumvents the trilemma by abandoning the search for absolute proof and instead making specific, risky predictions that can be empirically tested and **proven wrong**. Science does not claim to hold absolute, unassailable truth; rather, it offers the strongest surviving models that have withstood rigorous attempts at refutation.\n\n🔗 **[Read the original post on Substack →](https://syedshubha.substack.com/p/agrippan-trilemma)**",
+      "featured_on_main": true,
+      "hide_from_main": false,
+      "hide_from_blog": false
+    },
+    {
+      "id": "post-godel-ontological",
+      "slug": "godels-ontological-argument",
+      "title": "Gödel’s Ontological Argument: Scott’s God and the Case for Tyranny",
+      "date": "October 2026",
+      "category": "Philosophy & Essays",
+      "source": "Substack",
+      "read_time": "7 min read",
+      "cover_image": "",
+      "summary": "A formal critique of Dana Scott’s variant of Gödel’s higher-order modal ontological argument (□∃x G(x)): why computational verification in Lean 4 entails modal collapse (p → □p), eliminating alternative possibilities (◇¬p), and why combining modal collapse with retributive punishment renders divine governance tyrannical rather than omnibenevolent.",
+      "external_url": "https://syedshubha.substack.com/p/godels-ontological-argument",
+      "pdf_url": "",
+      "tags": [
+        "Modal Logic",
+        "Gödel",
+        "Lean 4",
+        "Epistemology",
+        "Moral Philosophy",
+        "Substack"
+      ],
+      "content": "Proving that a being necessarily exists does not establish that it deserves our admiration. That distinction is central when evaluating Dana Scott’s formulation of Kurt Gödel’s higher-order modal ontological argument.\n\n## 1. Positive Properties and the Formal Gap to Benevolence\n\nGödel’s argument treats *\"positive\"* as a technical classification of properties constrained by Scott’s axioms: exactly one of a property and its negation is positive; necessary consequences of positive properties are positive; Godlikeness $G(x)$ (possessing all positive properties) and necessary existence are positive; and positivity persists across possible worlds. From these axioms, the system derives:\n\n$$\\Box \\exists x \\, G(x)$$\n\nYet calling a formal predicate \"positive\" does not automatically confer moral goodness. A simple one-world, one-individual countermodel satisfies all of Scott’s axioms while leaving an unconstrained moral predicate $B(x)$ (\"$x$ is benevolent\") completely unsettled.\n\n## 2. Modal Collapse ($p \\to \\Box p$) and the Elimination of Alternatives\n\nAs verified in computer-checked formalizations in **Lean 4** and **TPTP THF** (Benzmüller & Paleo, 2016; Benzmüller, 2026), Scott’s axioms entail **modal collapse**:\n\n$$p \\to \\Box p$$\n\nEvery true proposition is necessarily true. If $p$ denotes a person committing a wrongful act, $p \\to \\Box p$ entails $\\neg \\Diamond \\neg p$: there is no accessible possible world in which the agent refrained from the act.\n\n## 3. Why Retribution Under Modal Collapse Is Tyrannical\n\nLet $C$ denote culpability required for basic punitive desert, and $A$ denote having a genuine opportunity to avoid wrongdoing:\n\n- Moral fairness requirement: $C \\to A$\n- Consequence of modal collapse: $\\neg A$\n- Therefore: $\\neg C$\n\nIf a ruler systematically inflicts severe retributive suffering on agents who never possessed an accessible alternative ($\\neg \\Diamond \\neg p$), the punishment lacks the very desert invoked to justify it. Existence alone establishes no entitlement to worship, and a formal proof cannot make an unearned punishment deserved.\n\n🔗 **[Read the full essay on Substack →](https://syedshubha.substack.com/p/godels-ontological-argument)**",
+      "featured_on_main": false,
+      "hide_from_main": true,
+      "hide_from_blog": false
     },
     {
       "id": "post-beyond-sisyphus",
@@ -506,7 +521,9 @@
         "Substack"
       ],
       "content": "I am at a stage in life where *\"why\"* has superseded *\"what\"* or *\"how.\"* As an analytical person, I find myself trying to rely less on emotion and more on logic to answer a foundational question: why should we strive in a universe devoid of intrinsic teleology?\n\n## Global Meaninglessness vs. Local Accountability\n\nUnder deterministic or Many-Worlds physical frameworks, traditional notions of uncaused agency break down. How then do we justify our actions? The answer lies in separating the **global** from the **local**, much like a software simulation or video game. Globally, outside the confines of the software, no state configuration is objectively \"right\" or \"wrong.\" Yet locally, within the system's dynamics, an agent cannot evade the causal consequences of its environment.\n\n## The Logical Flaw in Camus's Sisyphus\n\nAlbert Camus famously addressed the absurd by declaring that *\"one must imagine Sisyphus happy.\"* While compelling as a poetic coping mechanism, it is logically flawed: Camus transitions abruptly from a **descriptive observation** (the universe has no intrinsic meaning) to a **prescriptive command** (you must rebel and be happy). He brute-forces a subjective aesthetic (the romanticized, defiant rebel) and disguises it as an objective logical conclusion.\n\nWe do not need to imagine Sisyphus happy. We can feel compassion for him, or nothing at all; none of these states carry inherent cosmic weight.\n\n## The Trivial Group `{e}` vs. Non-Trivial Structure\n\nWhy not simply give up? In abstract algebra and **group theory**, you can always satisfy the group axioms by collapsing a space into the **trivial group** $\\{e\\}$ containing solely the identity element. It is perfectly consistent, completely stable, and immune to contradiction, yet it contains no structure, no interactions, and yields zero information.\n\nContinuing to live is the **non-trivial group**: complex, asymmetric, and difficult to map. You can always collapse into the trivial identity state, but as an analytical mind, are you sure you don't want to see whether the non-trivial structure holds a symmetry worth discovering?\n\n🔗 **[Read the original essay on Substack →](https://syedshubha.substack.com/p/beyond-sisyphus)**",
-      "hide_from_main": true
+      "hide_from_main": true,
+      "featured_on_main": false,
+      "hide_from_blog": false
     },
     {
       "id": "post-male-loneliness",
@@ -527,7 +544,9 @@
         "Substack"
       ],
       "content": "![Feminism + Homie Culture vs Patriarchy + Choice Feminism](images/homie_feminism.jpg)\n\n## Evolutionary Self-Domestication vs. Patriarchal Disruption\n\nHistorically, a primary engine of human self-domestication was female mate choice: early human communities systematically favored cooperative, prosocial, and communicative partners over hyper-aggressive phenotypes. The agricultural revolution disrupted this trajectory, the accumulation of property and inheritance birthed patriarchal structures that bypassed female selection and structurally rewarded dominance and control over cooperation.\n\nAs modern feminism dismantles these historical constraints, a sharp cultural divergence has emerged:\n\n1. **The \"Sigma\" Retaliation (Patriarchal Isolation):** Hyper-individualism and emotional stoicism glorify male isolation as strength. Because vulnerability is stigmatized, men become unable to form deep platonic bonds with other men, directly fueling the modern male loneliness epidemic.\n2. **\"Homie Culture\" (The Prosocial Rebellion):** A counter-culture of digital and platonic intimacy (normalizing mental-health check-ins, earnest emotional support, and stigma-free male vulnerability) restores prosocial male bonding.\n\n## The Synthesis\n\nAs long as patriarchal norms reward emotional isolation, male loneliness will persist. Solving it requires a dual cultural shift:\n- **Scaling platonic intimacy and emotional vulnerability among men** (\"homie culture\") as the direct antidote to isolation.\n- **Advancing substantive feminism** that rejects performative tropes and selects for cooperative, respectful partnership.\n\n🔗 **[Read the original essay on Substack →](https://syedshubha.substack.com/p/male-loneliness-epidemic)**",
-      "hide_from_main": true
+      "hide_from_main": true,
+      "featured_on_main": false,
+      "hide_from_blog": true
     },
     {
       "id": "post-stirling",
@@ -547,7 +566,10 @@
         "Bigganblog",
         "Bengali"
       ],
-      "content": "Published in **বিজ্ঞান ব্লগ (Bigganblog)**.\n\nAn accessible mathematical exposition deriving Stirling's approximation for large factorials:\n\n$$n! \\approx \\sqrt{2\\pi n}\\left(\\frac{n}{e}\\right)^n$$\n\nand exploring its connection to Euler's Gamma function $\\Gamma(n+1) = \\int_0^\\infty x^n e^{-x}\\,dx$ and Laplace's method.\n\n🔗 **[Read the full article on Bigganblog →](https://bigganblog.org/2021/04/stirlings_approximation/)**"
+      "content": "Published in **বিজ্ঞান ব্লগ (Bigganblog)**.\n\nAn accessible mathematical exposition deriving Stirling's approximation for large factorials:\n\n$$n! \\approx \\sqrt{2\\pi n}\\left(\\frac{n}{e}\\right)^n$$\n\nand exploring its connection to Euler's Gamma function $\\Gamma(n+1) = \\int_0^\\infty x^n e^{-x}\\,dx$ and Laplace's method.\n\n🔗 **[Read the full article on Bigganblog →](https://bigganblog.org/2021/04/stirlings_approximation/)**",
+      "featured_on_main": false,
+      "hide_from_main": true,
+      "hide_from_blog": false
     },
     {
       "id": "post-conditional-statements",
@@ -567,7 +589,10 @@
         "Bigganblog",
         "Bengali"
       ],
-      "content": "Published in **বিজ্ঞান ব্লগ (Bigganblog)**.\n\nExplores the foundations of conditional statements ($P \\implies Q$), truth tables, contraposition ($\\neg Q \\implies \\neg P$), and why vacuous truth works the way it does in formal mathematics.\n\n🔗 **[Read the full article on Bigganblog →](https://bigganblog.org/2020/07/%e0%a6%95%e0%a6%a8%e0%a7%8d%e0%a6%a1%e0%a6%bf%e0%a6%b6%e0%a6%a8%e0%a6%be%e0%a6%b2-%e0%a6%b8%e0%a7%8d%e0%a6%9f%e0%a7%87%e0%a6%9f%e0%a6%ae%e0%a7%87%e0%a6%a8%e0%a7%8d%e0%a6%9f-%e0%a6%8f%e0%a6%ac%e0%a6%82/)**"
+      "content": "Published in **বিজ্ঞান ব্লগ (Bigganblog)**.\n\nExplores the foundations of conditional statements ($P \\implies Q$), truth tables, contraposition ($\\neg Q \\implies \\neg P$), and why vacuous truth works the way it does in formal mathematics.\n\n🔗 **[Read the full article on Bigganblog →](https://bigganblog.org/2020/07/%e0%a6%95%e0%a6%a8%e0%a7%8d%e0%a6%a1%e0%a6%bf%e0%a6%b6%e0%a6%a8%e0%a6%be%e0%a6%b2-%e0%a6%b8%e0%a7%8d%e0%a6%9f%e0%a7%87%e0%a6%9f%e0%a6%ae%e0%a7%87%e0%a6%a8%e0%a7%8d%e0%a6%9f-%e0%a6%8f%e0%a6%ac%e0%a6%82/)**",
+      "featured_on_main": false,
+      "hide_from_main": true,
+      "hide_from_blog": false
     },
     {
       "id": "post-classical-mechanics-1",
@@ -587,7 +612,10 @@
         "Bigganblog",
         "Bengali"
       ],
-      "content": "Published in **বিজ্ঞান ব্লগ (Bigganblog)**.\n\nTraces the historical evolution of mechanics from antiquity to Galileo and Newton, examining the conceptual foundations and physical assumptions underlying Newton's three laws of motion.\n\n🔗 **[Read the full article on Bigganblog →](https://bigganblog.org/2020/04/%e0%a6%95%e0%a7%8d%e0%a6%b2%e0%a6%be%e0%a6%b8%e0%a6%bf%e0%a6%95%e0%a7%8d%e0%a6%af%e0%a6%be%e0%a6%b2-%e0%a6%ae%e0%a7%87%e0%a6%95%e0%a6%be%e0%a6%a8%e0%a6%bf%e0%a6%95%e0%a7%8d%e0%a6%b8-%e0%a7%a7/)**"
+      "content": "Published in **বিজ্ঞান ব্লগ (Bigganblog)**.\n\nTraces the historical evolution of mechanics from antiquity to Galileo and Newton, examining the conceptual foundations and physical assumptions underlying Newton's three laws of motion.\n\n🔗 **[Read the full article on Bigganblog →](https://bigganblog.org/2020/04/%e0%a6%95%e0%a7%8d%e0%a6%b2%e0%a6%be%e0%a6%b8%e0%a6%bf%e0%a6%95%e0%a7%8d%e0%a6%af%e0%a6%be%e0%a6%b2-%e0%a6%ae%e0%a7%87%e0%a6%95%e0%a6%be%e0%a6%a8%e0%a6%bf%e0%a6%95%e0%a7%8d%e0%a6%b8-%e0%a7%a7/)**",
+      "featured_on_main": false,
+      "hide_from_main": true,
+      "hide_from_blog": false
     },
     {
       "id": "post-classical-mechanics-2",
@@ -607,7 +635,10 @@
         "Bigganblog",
         "Bengali"
       ],
-      "content": "Published in **বিজ্ঞান ব্লগ (Bigganblog)**.\n\nExamines Galilean coordinate transformations between inertial frames and introduces spacetime diagrams as a geometric lens on classical kinematics.\n\n🔗 **[Read the full article on Bigganblog →](https://bigganblog.org/2020/04/%e0%a6%95%e0%a7%8d%e0%a6%b2%e0%a6%be%e0%a6%b8%e0%a6%bf%e0%a6%95%e0%a7%8d%e0%a6%af%e0%a6%be%e0%a6%b2-%e0%a6%ae%e0%a7%87%e0%a6%95%e0%a6%be%e0%a6%a8%e0%a6%bf%e0%a6%95%e0%a7%8d%e0%a6%b8-%e0%a7%a8/)**"
+      "content": "Published in **বিজ্ঞান ব্লগ (Bigganblog)**.\n\nExamines Galilean coordinate transformations between inertial frames and introduces spacetime diagrams as a geometric lens on classical kinematics.\n\n🔗 **[Read the full article on Bigganblog →](https://bigganblog.org/2020/04/%e0%a6%95%e0%a7%8d%e0%a6%b2%e0%a6%be%e0%a6%b8%e0%a6%bf%e0%a6%95%e0%a7%8d%e0%a6%af%e0%a6%be%e0%a6%b2-%e0%a6%ae%e0%a7%87%e0%a6%95%e0%a6%be%e0%a6%a8%e0%a6%bf%e0%a6%95%e0%a7%8d%e0%a6%b8-%e0%a7%a8/)**",
+      "featured_on_main": false,
+      "hide_from_main": true,
+      "hide_from_blog": false
     },
     {
       "id": "post-infinite-series",
@@ -627,7 +658,10 @@
         "Bigganblog",
         "Bengali"
       ],
-      "content": "Published in **বিজ্ঞান ব্লগ (Bigganblog)**.\n\nExplores the subtleties of infinite series, partial sums, convergence tests, and famous mathematical paradoxes.\n\n🔗 **[Read the full article on Bigganblog →](https://bigganblog.org/2017/07/%e0%a6%85%e0%a6%b8%e0%a7%80%e0%a6%ae-%e0%a6%a7%e0%a6%be%e0%a6%b0%e0%a6%be%e0%a6%b0-%e0%a6%97%e0%a6%b2%e0%a7%8d%e0%a6%aa/)**"
+      "content": "Published in **বিজ্ঞান ব্লগ (Bigganblog)**.\n\nExplores the subtleties of infinite series, partial sums, convergence tests, and famous mathematical paradoxes.\n\n🔗 **[Read the full article on Bigganblog →](https://bigganblog.org/2017/07/%e0%a6%85%e0%a6%b8%e0%a7%80%e0%a6%ae-%e0%a6%a7%e0%a6%be%e0%a6%b0%e0%a6%be%e0%a6%b0-%e0%a6%97%e0%a6%b2%e0%a7%8d%e0%a6%aa/)**",
+      "featured_on_main": false,
+      "hide_from_main": true,
+      "hide_from_blog": false
     },
     {
       "id": "post-proofs-without-words",
@@ -647,7 +681,10 @@
         "Bigganblog",
         "Bengali"
       ],
-      "content": "Published in **বিজ্ঞান ব্লগ (Bigganblog)**.\n\nDemonstrates how geometric intuition and visual constructions can prove classic identities (from sums of odd integers to the Pythagorean theorem and infinite geometric series) without a single line of algebraic text.\n\n🔗 **[Read the full article on Bigganblog →](https://bigganblog.org/2016/09/%e0%a6%95%e0%a6%a5%e0%a6%be-%e0%a6%9b%e0%a6%be%e0%a7%9c%e0%a6%be-%e0%a6%aa%e0%a7%8d%e0%a6%b0%e0%a6%ae%e0%a6%be%e0%a6%a3-%e0%a6%97%e0%a6%a3%e0%a6%bf%e0%a6%a4%e0%a7%87%e0%a6%b0-%e0%a6%b8%e0%a7%8c/)**"
+      "content": "Published in **বিজ্ঞান ব্লগ (Bigganblog)**.\n\nDemonstrates how geometric intuition and visual constructions can prove classic identities (from sums of odd integers to the Pythagorean theorem and infinite geometric series) without a single line of algebraic text.\n\n🔗 **[Read the full article on Bigganblog →](https://bigganblog.org/2016/09/%e0%a6%95%e0%a6%a5%e0%a6%be-%e0%a6%9b%e0%a6%be%e0%a7%9c%e0%a6%be-%e0%a6%aa%e0%a7%8d%e0%a6%b0%e0%a6%ae%e0%a6%be%e0%a6%a3-%e0%a6%97%e0%a6%a3%e0%a6%bf%e0%a6%a4%e0%a7%87%e0%a6%b0-%e0%a6%b8%e0%a7%8c/)**",
+      "featured_on_main": false,
+      "hide_from_main": true,
+      "hide_from_blog": false
     }
   ],
   "memes": [

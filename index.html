@@ -1007,10 +1007,10 @@
             border-color: var(--navy-900);
         }
 
-        /* Projects & Interactive Labs */
+        /* Research Projects */
         .projects-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
             gap: 1.5rem;
         }
 
@@ -1697,14 +1697,14 @@
         </div>
     </section>
 
-    <!-- Research Projects, Software & Interactive Labs -->
+    <!-- Research Projects -->
     <section class="section section-alt" id="projects">
         <div class="container">
             <div class="section-header">
                 <div class="section-title-group">
-                    <div class="section-eyebrow">Open-Source Software & Pedagogical Tools</div>
-                    <h2 class="section-title">Research Projects & Interactive Labs</h2>
-                    <p class="section-subtitle">Simulation frameworks, digital twins, pulse-level hardware models, and interactive mathematical explorations</p>
+                    <div class="section-eyebrow">Open-Source Software & Hardware Calibration</div>
+                    <h2 class="section-title">Research Projects</h2>
+                    <p class="section-subtitle">Pulse-level superconducting qubit calibration, quantum cryptography simulations, and quantum image processing</p>
                 </div>
                 <a href="https://github.com/syedshubha?tab=repositories" target="_blank" class="pub-btn">View All GitHub Repositories →</a>
             </div>
@@ -2018,10 +2018,10 @@
                 awardsEl.innerHTML = SITE_DATA.awards.map(a => `<li>🏅 ${a}</li>`).join('');
             }
 
-            // Blog Preview (first 4 visible posts to fill 2x2 grid)
+            // Blog Preview (keep QSVT and Agrippan Trilemma only on main page)
             const blogEl = document.getElementById('blogPreviewContainer');
             if (blogEl && Array.isArray(SITE_DATA.posts)) {
-                blogEl.innerHTML = SITE_DATA.posts.filter(post => !post.hide_from_main).slice(0, 4).map(post => {
+                blogEl.innerHTML = SITE_DATA.posts.filter(post => !post.hide_from_main).slice(0, 2).map(post => {
                     const readerHref = `blog.html?post=${encodeURIComponent(post.slug || post.id)}`;
                     const hasExternal = post.external_url && post.external_url.startsWith('http');
                     return `

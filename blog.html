@@ -421,7 +421,7 @@
         /* Posts Grid */
         .posts-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            grid-template-columns: repeat(2, 1fr);
             gap: 1.75rem;
         }
 
@@ -818,7 +818,7 @@
         }
 
         function buildCategoryTabs() {
-            const posts = (SITE_DATA.posts || []).filter(p => !p.hide_from_main);
+            const posts = (SITE_DATA.posts || []).filter(p => !p.hide_from_blog);
             const cats = Array.from(new Set(posts.map(p => p.category).filter(Boolean)));
             const tabsEl = document.getElementById('catTabs');
             tabsEl.innerHTML = `<button class="filter-btn active" data-cat="all">All Articles (${posts.length})</button>` +
@@ -839,7 +839,7 @@
 
         function renderPosts() {
             const posts = (SITE_DATA.posts || []).filter(p => {
-                if (p.hide_from_main) return false;
+                if (p.hide_from_blog) return false;
                 if (activeCategory !== 'all' && p.category !== activeCategory) return false;
                 if (searchQuery) {
                     const hay = `${p.title} ${p.summary} ${p.category} ${(p.tags || []).join(' ')}`.toLowerCase();
