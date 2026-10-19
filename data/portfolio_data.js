@@ -63,19 +63,19 @@ window.PORTFOLIO_DATA = {
     {
       "id": "security-characterization",
       "icon": "🛡️",
-      "title": "Quantum Hardware Security, Pulse Control & Characterization",
+      "title": "Quantum Hardware Security, Pulse Control & QCVV",
       "core_interests": [
         "⚡ Quantum Hardware Security & Pulse Control",
-        "🔬 Multi-Tenant Superconducting Qubits",
         "📊 QCVV",
+        "🔬 Multi-Tenant Superconducting Qubits",
         "⚛️ Quantum Algorithms"
       ],
       "funding": "Louisiana Board of Regents (BoR, Proposal no. 033A-26)",
-      "summary": "Securing and characterizing multi-tenant superconducting quantum processors through pulse-level Hamiltonian simulation (Qiskit Pulse, QuTiP), pulse-to-circuit mapping of asymmetric crosstalk attack mechanisms, Choi-matrix and Pauli-transfer process analysis, and structural drift separation.",
+      "summary": "Investigating how adversarial pulses exploit interqubit coupling to induce logical errors in shared superconducting quantum processors. My work combines pulse-level simulation, quantum process tomography, and isometry-based circuit extraction to reconstruct induced error channels and characterize an asymmetric crosstalk attack mechanism. I also develop methods for quantum characterization, verification, and validation (QCVV) using residual Pauli transfer matrices, including calibrated detection of weak coherent two-qubit crosstalk versus local calibration drift at matched average gate infidelity.",
       "highlights": [
-        "Pulse-to-circuit characterization of crosstalk as an active attack vector and Pauli-transfer-matrix drift separation",
-        "Multi-qubit pulse calibration (Rabi, Echoed Cross-Resonance) and open-quantum-system process characterization",
-        "Published/Accepted in IEEE HOST 2027 [C7], ACM CCS QSec 2025 [C5], and IEEE QCE 2025 [C4]; featured in Quantum Zeitgeist"
+        "Pulse-level simulation of crosstalk attacks and pulse-to-circuit characterization of their induced error channels [C4, C5].",
+        "Multiqubit pulse calibration, including Rabi calibration and echoed cross-resonance gates, alongside open-system dynamics and process characterization.",
+        "Published at IEEE QCE 2025 [C4] and ACM QSec 2025 [C5]; accepted at IEEE HOST 2027 [C7]."
       ]
     },
     {
@@ -89,11 +89,11 @@ window.PORTFOLIO_DATA = {
         "🔐 Quantum Cryptography (QKD)"
       ],
       "funding": "NSF EAGER (Award no. 2608182) & NSF Student Travel Grant",
-      "summary": "Exploiting quantum correlations to design adaptive error-correction and pair-preserving purification protocols for superdense coding in distributed quantum networks, alongside high-fidelity multi-qubit state teleportation over partially entangled GHZ channels using optimal POVMs.",
+      "summary": "Developing quantum communication protocols using entanglement, quantum error correction, and information-theoretic measures of quantum correlations. My work includes improving the fidelity of encoded Bell pairs, designing an adaptive superdense-coding testbed, and probabilistic teleportation of repetition-encoded logical states through partially entangled GHZ channels using optimal positive operator-valued measurements (POVMs). Current research investigates how quantum discord and entanglement of formation can guide pair-preserving recovery and message decoding when joint operations on the received qubit pair are available.",
       "highlights": [
-        "Correlation-guided adaptive purification protocols for superdense coding and multi-qubit state teleportation",
-        "Published in AVS Quantum Science 2025 [J4, Corresponding Author], Heliyon 2023 [J1, 1st Author], and IEEE QCE 2025 [C6]",
-        "Co-supervised research on surface-code ensemble decoders [C3] and hybrid QKD security [J2, J3]"
+        "Error correction for encoded Bell pairs [J1], adaptive superdense coding [C6], and POVM-based teleportation of encoded logical states [J4].",
+        "Published in Heliyon 2023 [J1, first author], AVS Quantum Science 2025 [J4, corresponding author], and IEEE QCE 2025 [C6].",
+        "Co-supervised research on surface-code ensemble decoding [C3] and quantum key distribution integrated with classical cryptography and steganography [J2, J3]."
       ]
     }
   ],
@@ -381,8 +381,8 @@ window.PORTFOLIO_DATA = {
       "organization": "Division of Computer Science, Louisiana State University, Baton Rouge, LA",
       "period": "January 2025 – Present",
       "bullets": [
-        "Founding Ph.D. researcher in Dr. Tasnuva Farheen’s group (sole doctoral researcher in 2025), establishing the lab’s experimental quantum hardware security, QCVV, and distributed quantum communication tracks.",
-        "Quantum hardware security & QCVV direction: characterized crosstalk as an active attack vector on shared superconducting hardware through pulse-level simulation [C4], developed a pulse-to-circuit characterization framework identifying a novel asymmetric attack mechanism [C5], and built a Pauli-transfer-matrix (PTM) structural drift-detection framework for Quantum Characterization, Verification, and Validation (QCVV) separating coherent crosstalk from calibration drift [C7].",
+        "Founding Ph.D. researcher in Dr. Tasnuva Farheen’s group, establishing the lab’s experimental quantum hardware security, QCVV, and distributed quantum communication tracks.",
+        "Quantum hardware security & QCVV direction: Demonstrated through pulse-level simulations how adversarial pulses on neighboring superconducting qubits exploit interqubit coupling to induce logical errors in a victim’s computation [C4]. Developed a pulse-to-circuit framework combining density-matrix simulation, quantum process tomography, and isometry-based circuit extraction to reconstruct the induced error channel, revealing an asymmetric mechanism [C5]. Established a structural criterion for quantum characterization, verification, and validation (QCVV) using residual Pauli transfer matrix (PTM), and developed a calibrated detector that distinguishes weak coherent two-qubit crosstalk from local calibration drift even when their average gate infidelities are matched [C7].",
         "Quantum communication & non-classical correlations direction: designed correlation-guided adaptive purification protocols for superdense coding in distributed networks [C6] and led collaborative research on n-qubit state teleportation over partially entangled GHZ channels using optimal POVM measurements [J4]."
       ]
     },
