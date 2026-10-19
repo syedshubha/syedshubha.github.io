@@ -455,7 +455,7 @@ window.PORTFOLIO_DATA = {
       "category": "Quantum Computing",
       "source": "Interactive Lab",
       "read_time": "6 min read",
-      "cover_image": "images/qsvt_pipeline_diagram.svg",
+      "cover_image": "images/qsvt_circuit_cover.png",
       "summary": "An interactive browser-based mathematical laboratory realizing Singular Value Decomposition, Cosine–Sine Unitary Block Encoding, Quantum Signal Processing (with live Adam phase-angle optimization), and the QSVT theorem.",
       "external_url": "QSVT.html",
       "pdf_url": "",
