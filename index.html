@@ -464,152 +464,73 @@
             max-width: 680px;
         }
 
-        /* Research Architecture Diagram (Hero Section) */
-        .research-architecture-card {
-            background: rgba(14, 8, 26, 0.72);
+        /* Hero Right Column: Research Interests Card */
+        .hero-interests-card {
+            background: rgba(18, 10, 33, 0.72);
             border: 1px solid rgba(212, 175, 55, 0.32);
-            border-radius: var(--radius-md);
-            padding: 1.2rem 1.35rem;
-            margin-bottom: 1.65rem;
-            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
-            backdrop-filter: blur(8px);
-        }
-
-        .architecture-header {
+            border-radius: var(--radius-lg);
+            padding: 1.75rem;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 12px 32px rgba(0, 0, 0, 0.35);
             display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 0.85rem;
-            padding-bottom: 0.55rem;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-            flex-wrap: wrap;
-            gap: 0.5rem;
+            flex-direction: column;
+            gap: 1.15rem;
         }
 
-        .architecture-eyebrow {
+        .interests-card-header {
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            padding-bottom: 0.85rem;
+        }
+
+        .interests-eyebrow {
             font-size: 0.76rem;
             font-weight: 700;
             color: var(--gold-accent);
             text-transform: uppercase;
             letter-spacing: 0.08em;
             font-family: 'JetBrains Mono', monospace;
-            display: flex;
-            align-items: center;
-            gap: 0.45rem;
+            display: block;
+            margin-bottom: 0.25rem;
         }
 
-        .architecture-tagline {
-            font-size: 0.73rem;
-            color: #c4b5fd;
-            font-family: 'JetBrains Mono', monospace;
-        }
-
-        .architecture-pillars {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 0.85rem;
-            margin-bottom: 0.75rem;
-        }
-
-        @media (max-width: 680px) {
-            .architecture-pillars {
-                grid-template-columns: 1fr;
-            }
-        }
-
-        .arch-pillar-box {
-            background: rgba(255, 255, 255, 0.04);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            border-radius: 8px;
-            padding: 0.85rem 0.95rem;
-            transition: all 0.2s ease;
-        }
-
-        .arch-pillar-box:hover {
-            border-color: rgba(212, 175, 55, 0.45);
-            background: rgba(255, 255, 255, 0.07);
-            transform: translateY(-2px);
-        }
-
-        .arch-pillar-title {
-            font-size: 0.84rem;
-            font-weight: 700;
+        .interests-card-header h3 {
+            font-size: 1.35rem;
             color: #ffffff;
-            margin-bottom: 0.45rem;
-            display: flex;
-            align-items: center;
-            gap: 0.4rem;
+            font-family: 'Newsreader', Georgia, serif;
+            margin-bottom: 0.3rem;
         }
 
-        .arch-pillar-list {
-            list-style: none;
-            padding: 0;
-            margin: 0;
+        .interests-card-header p {
+            font-size: 0.82rem;
+            color: #cbd5e1;
+            line-height: 1.45;
+        }
+
+        .hero-interests-list {
             display: flex;
             flex-direction: column;
-            gap: 0.3rem;
+            gap: 0.6rem;
         }
 
-        .arch-pillar-list li {
-            font-size: 0.77rem;
-            color: #cbd5e1;
-            line-height: 1.38;
-            display: flex;
-            align-items: flex-start;
-            gap: 0.35rem;
-        }
-
-        .arch-pillar-list li::before {
-            content: "▹";
-            color: var(--gold-accent);
-            font-size: 0.8rem;
-            flex-shrink: 0;
-        }
-
-        .architecture-bridge {
-            background: linear-gradient(135deg, rgba(70, 29, 124, 0.38) 0%, rgba(35, 17, 61, 0.48) 100%);
-            border: 1px dashed rgba(212, 175, 55, 0.35);
-            border-radius: 7px;
-            padding: 0.6rem 0.85rem;
+        .hero-interest-pill {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            border-left: 3px solid var(--gold-accent);
+            color: #f1f5f9;
+            padding: 0.6rem 0.9rem;
+            border-radius: 6px;
+            font-size: 0.84rem;
+            font-weight: 500;
+            transition: all 0.2s ease;
             display: flex;
             align-items: center;
-            justify-content: space-between;
-            gap: 0.65rem;
-            flex-wrap: wrap;
         }
 
-        .bridge-label {
-            font-size: 0.75rem;
-            font-weight: 700;
-            color: var(--gold-accent);
-            font-family: 'JetBrains Mono', monospace;
-            display: flex;
-            align-items: center;
-            gap: 0.35rem;
-        }
-
-        .bridge-items {
-            font-size: 0.75rem;
-            color: #e2e8f0;
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-            flex-wrap: wrap;
-        }
-
-        .bridge-item {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.3rem;
-            background: rgba(255, 255, 255, 0.08);
-            padding: 0.18rem 0.5rem;
-            border-radius: 4px;
-            font-size: 0.73rem;
-            border: 1px solid rgba(255, 255, 255, 0.1);
-        }
-
-        .interest-tags {
-            display: none;
+        .hero-interest-pill:hover {
+            background: rgba(255, 255, 255, 0.1);
+            border-color: rgba(212, 175, 55, 0.55);
+            transform: translateX(3px);
+            color: #ffffff;
         }
 
         .hero-actions {
@@ -693,52 +614,6 @@
             width: 15px;
             height: 15px;
             flex-shrink: 0;
-        }
-
-        /* Hero Right Column: Academic Portrait Card */
-        .hero-profile-card {
-            background: rgba(18, 10, 33, 0.72);
-            border: 1px solid rgba(212, 175, 55, 0.28);
-            border-radius: var(--radius-lg);
-            padding: 2rem 1.75rem;
-            backdrop-filter: blur(10px);
-            box-shadow: 0 12px 32px rgba(0, 0, 0, 0.35);
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            text-align: center;
-        }
-
-        .profile-photo-wrap {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 1.15rem;
-            margin-bottom: 0;
-            width: 100%;
-        }
-
-        .profile-image {
-            width: 180px;
-            height: 180px;
-            border-radius: 16px;
-            object-fit: cover;
-            border: 2.5px solid rgba(212, 175, 55, 0.65);
-            box-shadow: 0 10px 28px rgba(0, 0, 0, 0.5);
-            flex-shrink: 0;
-        }
-
-        .profile-caption h3 {
-            font-size: 1.4rem;
-            color: #ffffff;
-            margin-bottom: 0.35rem;
-            font-family: 'Newsreader', Georgia, serif;
-        }
-
-        .profile-caption p {
-            font-size: 0.88rem;
-            color: #cbd5e1;
-            line-height: 1.5;
         }
 
         /* Research Impact & Honors Strip (Shifted after Research) */
@@ -1599,9 +1474,6 @@
                 grid-template-columns: 1fr;
             }
 
-            .hero-profile-card {
-                order: -1;
-            }
 
             .update-card {
                 grid-template-columns: 1fr;
@@ -1694,14 +1566,6 @@
                 align-items: flex-start;
             }
 
-            .profile-photo-wrap {
-                gap: 1rem;
-            }
-
-            .profile-image {
-                width: 96px;
-                height: 96px;
-            }
         }
     </style>
 </head>
@@ -1749,54 +1613,6 @@
                 <p class="hero-bio" id="heroBio">
                     I am a Computer Science Ph.D. researcher and the founding doctoral student in Dr. Tasnuva Farheen's group at Louisiana State University, recipient of the 2026 Quantum Rising Star Award at Rice University (QS3). My research bridges physical superconducting processor hardware and quantum information theory across two core directions: (1) <strong>Quantum Hardware Security & Pulse Control</strong>, securing multi-tenant superconducting processors via pulse-to-circuit crosstalk characterization and Pauli-transfer-matrix drift separation (<em>IEEE HOST '27, ACM CCS QSec '25, IEEE QCE '25</em>); and (2) <strong>Quantum Communication & Error Correction</strong>, designing correlation-guided adaptive purification, surface-code decoding, and high-fidelity state teleportation over noisy channels (<em>AVS Quantum Science '25, IEEE QCE '25, Heliyon '23</em>).
                 </p>
-
-                <!-- Research Architecture & Focus Areas Diagram -->
-                <div class="research-architecture-card" id="researchArchitecture">
-                    <div class="architecture-header">
-                        <div class="architecture-eyebrow">
-                            <span>⚛️</span>
-                            <span>Research Architecture & Dual Pillars</span>
-                        </div>
-                        <span class="architecture-tagline">Physical Hardware ⟷ Quantum Information</span>
-                    </div>
-                    <div class="architecture-pillars">
-                        <div class="arch-pillar-box">
-                            <div class="arch-pillar-title">
-                                <span>⚡</span>
-                                <span>Hardware Security & Pulse Control</span>
-                            </div>
-                            <ul class="arch-pillar-list">
-                                <li>Multi-tenant superconducting processor security</li>
-                                <li>Pulse-to-circuit crosstalk characterization</li>
-                                <li>Pauli-transfer-matrix drift separation</li>
-                                <li>Qiskit Pulse microwave gate calibration</li>
-                            </ul>
-                        </div>
-                        <div class="arch-pillar-box">
-                            <div class="arch-pillar-title">
-                                <span>🌐</span>
-                                <span>Quantum Communication & QEC</span>
-                            </div>
-                            <ul class="arch-pillar-list">
-                                <li>Adaptive purification in distributed networks</li>
-                                <li>Surface-code ensemble decoders (RESCUED)</li>
-                                <li>Entanglement teleportation over noisy channels</li>
-                                <li>Chaos-assisted & hybrid QKD protocols</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="architecture-bridge">
-                        <div class="bridge-label">
-                            <span>🔬</span>
-                            <span>Unifying Algorithms:</span>
-                        </div>
-                        <div class="bridge-items">
-                            <span class="bridge-item">QSVT 4-Stage Pipeline</span>
-                            <span class="bridge-item">Cosine-Sine Block Encoding</span>
-                            <span class="bridge-item">FRQI / NEQR Image Processing</span>
-                        </div>
-                    </div>
-                </div>
 
                 <div class="hero-actions">
                     <a href="assets/Curriculum_Vitae_Syed_Emad_Uddin_Shubha.pdf" id="cvDownloadBtn" class="btn btn-gold" target="_blank">
@@ -1849,13 +1665,19 @@
                 </div>
             </div>
 
-            <div class="hero-profile-card">
-                <div class="profile-photo-wrap">
-                    <img src="images/avatar.JPG" alt="Syed Emad Uddin Shubha" class="profile-image" id="heroAvatar">
-                    <div class="profile-caption">
-                        <h3>Syed Shubha</h3>
-                        <p>Graduate Research & Teaching Assistant<br>Division of Computer Science & Engineering<br>Louisiana State University, Baton Rouge, LA</p>
-                    </div>
+            <div class="hero-interests-card">
+                <div class="interests-card-header">
+                    <span class="interests-eyebrow">Research Focus</span>
+                    <h3>Core Research Interests</h3>
+                    <p>First-principles investigation from physical superconducting hardware to quantum communication protocols</p>
+                </div>
+                <div class="hero-interests-list" id="interestTags">
+                    <div class="hero-interest-pill">⚡ Quantum Hardware Security & Pulse Control</div>
+                    <div class="hero-interest-pill">🔬 Multi-Tenant Superconducting Qubits</div>
+                    <div class="hero-interest-pill">🌐 Quantum Communication & Correlations</div>
+                    <div class="hero-interest-pill">🛡️ Quantum Error Correction</div>
+                    <div class="hero-interest-pill">🔐 Quantum Cryptography (QKD)</div>
+                    <div class="hero-interest-pill">⚛️ Quantum Algorithms & QSVT</div>
                 </div>
             </div>
         </div>
@@ -2131,12 +1953,13 @@
             if (heroEduEl && p.education_short) heroEduEl.textContent = p.education_short;
             if (p.bio) document.getElementById('heroBio').innerHTML = p.bio;
             if (p.cv_url) document.getElementById('cvDownloadBtn').href = p.cv_url;
-            if (p.avatar) document.getElementById('heroAvatar').src = p.avatar;
+            const avatarEl = document.getElementById('heroAvatar');
+            if (avatarEl && p.avatar) avatarEl.src = p.avatar;
 
             const tagsEl = document.getElementById('interestTags');
             if (tagsEl && Array.isArray(p.interests)) {
                 tagsEl.innerHTML = p.interests
-                    .map(t => `<span class="interest-tag">${t}</span>`).join('');
+                    .map(t => `<div class="hero-interest-pill">${t}</div>`).join('');
             }
 
             if (Array.isArray(p.metrics)) {
