@@ -464,21 +464,152 @@
             max-width: 680px;
         }
 
-        .interest-tags {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.5rem;
-            margin-bottom: 1.85rem;
+        /* Research Architecture Diagram (Hero Section) */
+        .research-architecture-card {
+            background: rgba(14, 8, 26, 0.72);
+            border: 1px solid rgba(212, 175, 55, 0.32);
+            border-radius: var(--radius-md);
+            padding: 1.2rem 1.35rem;
+            margin-bottom: 1.65rem;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+            backdrop-filter: blur(8px);
         }
 
-        .interest-tag {
-            background: rgba(255, 255, 255, 0.08);
-            border: 1px solid rgba(212, 175, 55, 0.32);
-            color: #f1f5f9;
-            padding: 0.3rem 0.75rem;
-            border-radius: 6px;
+        .architecture-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 0.85rem;
+            padding-bottom: 0.55rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .architecture-eyebrow {
+            font-size: 0.76rem;
+            font-weight: 700;
+            color: var(--gold-accent);
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            font-family: 'JetBrains Mono', monospace;
+            display: flex;
+            align-items: center;
+            gap: 0.45rem;
+        }
+
+        .architecture-tagline {
+            font-size: 0.73rem;
+            color: #c4b5fd;
+            font-family: 'JetBrains Mono', monospace;
+        }
+
+        .architecture-pillars {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0.85rem;
+            margin-bottom: 0.75rem;
+        }
+
+        @media (max-width: 680px) {
+            .architecture-pillars {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .arch-pillar-box {
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 8px;
+            padding: 0.85rem 0.95rem;
+            transition: all 0.2s ease;
+        }
+
+        .arch-pillar-box:hover {
+            border-color: rgba(212, 175, 55, 0.45);
+            background: rgba(255, 255, 255, 0.07);
+            transform: translateY(-2px);
+        }
+
+        .arch-pillar-title {
+            font-size: 0.84rem;
+            font-weight: 700;
+            color: #ffffff;
+            margin-bottom: 0.45rem;
+            display: flex;
+            align-items: center;
+            gap: 0.4rem;
+        }
+
+        .arch-pillar-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            gap: 0.3rem;
+        }
+
+        .arch-pillar-list li {
+            font-size: 0.77rem;
+            color: #cbd5e1;
+            line-height: 1.38;
+            display: flex;
+            align-items: flex-start;
+            gap: 0.35rem;
+        }
+
+        .arch-pillar-list li::before {
+            content: "▹";
+            color: var(--gold-accent);
             font-size: 0.8rem;
-            font-weight: 500;
+            flex-shrink: 0;
+        }
+
+        .architecture-bridge {
+            background: linear-gradient(135deg, rgba(70, 29, 124, 0.38) 0%, rgba(35, 17, 61, 0.48) 100%);
+            border: 1px dashed rgba(212, 175, 55, 0.35);
+            border-radius: 7px;
+            padding: 0.6rem 0.85rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 0.65rem;
+            flex-wrap: wrap;
+        }
+
+        .bridge-label {
+            font-size: 0.75rem;
+            font-weight: 700;
+            color: var(--gold-accent);
+            font-family: 'JetBrains Mono', monospace;
+            display: flex;
+            align-items: center;
+            gap: 0.35rem;
+        }
+
+        .bridge-items {
+            font-size: 0.75rem;
+            color: #e2e8f0;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+        }
+
+        .bridge-item {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.3rem;
+            background: rgba(255, 255, 255, 0.08);
+            padding: 0.18rem 0.5rem;
+            border-radius: 4px;
+            font-size: 0.73rem;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .interest-tags {
+            display: none;
         }
 
         .hero-actions {
@@ -1616,17 +1747,55 @@
                 <h1 id="heroName">Syed Emad Uddin Shubha</h1>
                 <p class="hero-role" id="heroTitle">Ph.D. Researcher in Quantum Information & Hardware Security • Louisiana State University</p>
                 <p class="hero-bio" id="heroBio">
-                    I am a Computer Science Ph.D. researcher and the founding doctoral student in Dr. Tasnuva Farheen's group at Louisiana State University, recipient of the 2026 Quantum Rising Star Award at Rice University (QS3). My research bridges physical superconducting hardware and quantum information theory across two core directions: (1) <strong>Quantum Hardware Security & Pulse Control</strong>, securing multi-tenant superconducting processors via pulse-to-circuit crosstalk characterization and Pauli-transfer-matrix drift separation (<em>IEEE HOST '27, ACM CCS QSec '25, IEEE QCE '25</em>); and (2) <strong>Quantum Communication & Error Correction</strong>, designing correlation-guided adaptive purification, surface-code decoding, and high-fidelity state teleportation over noisy channels (<em>AVS Quantum Science '25, IEEE QCE '25, Heliyon '23</em>).<br><br>
-                    Prior to LSU, after earning my B.Sc. in Electrical and Electronic Engineering (EEE) from BUET, I helped establish Bangladesh's first quantum computing research group under Dr. Mahdy Rahman Chowdhury (which evolved into the NSU Center of Quantum Computing, NCQC), where I co-supervised research and mentored five students into Quantum Information Ph.D. programs worldwide.
+                    I am a Computer Science Ph.D. researcher and the founding doctoral student in Dr. Tasnuva Farheen's group at Louisiana State University, recipient of the 2026 Quantum Rising Star Award at Rice University (QS3). My research bridges physical superconducting processor hardware and quantum information theory across two core directions: (1) <strong>Quantum Hardware Security & Pulse Control</strong>, securing multi-tenant superconducting processors via pulse-to-circuit crosstalk characterization and Pauli-transfer-matrix drift separation (<em>IEEE HOST '27, ACM CCS QSec '25, IEEE QCE '25</em>); and (2) <strong>Quantum Communication & Error Correction</strong>, designing correlation-guided adaptive purification, surface-code decoding, and high-fidelity state teleportation over noisy channels (<em>AVS Quantum Science '25, IEEE QCE '25, Heliyon '23</em>).
                 </p>
 
-                <div class="interest-tags" id="interestTags">
-                    <span class="interest-tag">Quantum Hardware Security & Pulse Control</span>
-                    <span class="interest-tag">Multi-Tenant Superconducting Qubits</span>
-                    <span class="interest-tag">Quantum Communication & Correlations</span>
-                    <span class="interest-tag">Quantum Error Correction</span>
-                    <span class="interest-tag">Quantum Cryptography (QKD)</span>
-                    <span class="interest-tag">Quantum Algorithms & QSVT</span>
+                <!-- Research Architecture & Focus Areas Diagram -->
+                <div class="research-architecture-card" id="researchArchitecture">
+                    <div class="architecture-header">
+                        <div class="architecture-eyebrow">
+                            <span>⚛️</span>
+                            <span>Research Architecture & Dual Pillars</span>
+                        </div>
+                        <span class="architecture-tagline">Physical Hardware ⟷ Quantum Information</span>
+                    </div>
+                    <div class="architecture-pillars">
+                        <div class="arch-pillar-box">
+                            <div class="arch-pillar-title">
+                                <span>⚡</span>
+                                <span>Hardware Security & Pulse Control</span>
+                            </div>
+                            <ul class="arch-pillar-list">
+                                <li>Multi-tenant superconducting processor security</li>
+                                <li>Pulse-to-circuit crosstalk characterization</li>
+                                <li>Pauli-transfer-matrix drift separation</li>
+                                <li>Qiskit Pulse microwave gate calibration</li>
+                            </ul>
+                        </div>
+                        <div class="arch-pillar-box">
+                            <div class="arch-pillar-title">
+                                <span>🌐</span>
+                                <span>Quantum Communication & QEC</span>
+                            </div>
+                            <ul class="arch-pillar-list">
+                                <li>Adaptive purification in distributed networks</li>
+                                <li>Surface-code ensemble decoders (RESCUED)</li>
+                                <li>Entanglement teleportation over noisy channels</li>
+                                <li>Chaos-assisted & hybrid QKD protocols</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="architecture-bridge">
+                        <div class="bridge-label">
+                            <span>🔬</span>
+                            <span>Unifying Algorithms:</span>
+                        </div>
+                        <div class="bridge-items">
+                            <span class="bridge-item">QSVT 4-Stage Pipeline</span>
+                            <span class="bridge-item">Cosine-Sine Block Encoding</span>
+                            <span class="bridge-item">FRQI / NEQR Image Processing</span>
+                        </div>
+                    </div>
                 </div>
 
                 <div class="hero-actions">
@@ -1964,8 +2133,9 @@
             if (p.cv_url) document.getElementById('cvDownloadBtn').href = p.cv_url;
             if (p.avatar) document.getElementById('heroAvatar').src = p.avatar;
 
-            if (Array.isArray(p.interests)) {
-                document.getElementById('interestTags').innerHTML = p.interests
+            const tagsEl = document.getElementById('interestTags');
+            if (tagsEl && Array.isArray(p.interests)) {
+                tagsEl.innerHTML = p.interests
                     .map(t => `<span class="interest-tag">${t}</span>`).join('');
             }
 
