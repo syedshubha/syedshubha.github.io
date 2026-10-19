@@ -564,81 +564,148 @@
             flex-shrink: 0;
         }
 
-        /* Hero Right Column: Portrait & Key Metrics */
+        /* Hero Right Column: Academic Portrait Card */
         .hero-profile-card {
-            background: rgba(11, 24, 41, 0.68);
-            border: 1px solid rgba(255, 255, 255, 0.15);
+            background: rgba(18, 10, 33, 0.72);
+            border: 1px solid rgba(212, 175, 55, 0.28);
             border-radius: var(--radius-lg);
-            padding: 1.5rem;
-            backdrop-filter: blur(8px);
-            box-shadow: var(--shadow-lg);
+            padding: 2rem 1.75rem;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 12px 32px rgba(0, 0, 0, 0.35);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
         }
 
         .profile-photo-wrap {
             display: flex;
+            flex-direction: column;
             align-items: center;
-            gap: 1.25rem;
-            margin-bottom: 1.35rem;
+            gap: 1.15rem;
+            margin-bottom: 0;
+            width: 100%;
         }
 
         .profile-image {
-            width: 118px;
-            height: 118px;
-            border-radius: 12px;
+            width: 180px;
+            height: 180px;
+            border-radius: 16px;
             object-fit: cover;
-            border: 2px solid rgba(212, 175, 55, 0.45);
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35);
+            border: 2.5px solid rgba(212, 175, 55, 0.65);
+            box-shadow: 0 10px 28px rgba(0, 0, 0, 0.5);
             flex-shrink: 0;
         }
 
         .profile-caption h3 {
-            font-size: 1.2rem;
+            font-size: 1.4rem;
             color: #ffffff;
-            margin-bottom: 0.25rem;
+            margin-bottom: 0.35rem;
+            font-family: 'Newsreader', Georgia, serif;
         }
 
         .profile-caption p {
-            font-size: 0.83rem;
+            font-size: 0.88rem;
             color: #cbd5e1;
-            line-height: 1.45;
+            line-height: 1.5;
         }
 
-        .metrics-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 0.75rem;
+        /* Research Impact & Honors Strip (Shifted after Research) */
+        .research-impact-strip {
+            margin-top: 3.25rem;
+            padding-top: 2.25rem;
+            border-top: 1px solid var(--border-light);
         }
 
-        .metric-box {
-            display: block;
-            text-decoration: none;
-            background: rgba(255, 255, 255, 0.05);
-            border: 1px solid rgba(255, 255, 255, 0.12);
-            border-radius: 8px;
-            padding: 0.9rem;
-            text-align: left;
+        .impact-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            margin-bottom: 1.35rem;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .impact-title {
+            font-size: 1.45rem;
+            color: var(--navy-900);
+            margin-top: 0.2rem;
+        }
+
+        .scholar-pill-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.45rem;
+            padding: 0.42rem 0.85rem;
+            border-radius: 999px;
+            font-size: 0.82rem;
+            font-weight: 600;
+            background: var(--academic-blue-light);
+            color: var(--academic-blue-dark);
+            border: 1px solid rgba(70, 29, 124, 0.2);
             transition: all 0.2s ease;
         }
 
-        a.metric-box:hover {
-            background: rgba(255, 255, 255, 0.12);
-            border-color: rgba(212, 175, 55, 0.55);
-            transform: translateY(-2px);
+        .scholar-pill-btn:hover {
+            background: var(--academic-blue);
+            color: #ffffff;
+            transform: translateY(-1px);
         }
 
-        .metric-value {
+        .impact-metrics-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1.25rem;
+        }
+
+        @media (max-width: 900px) {
+            .impact-metrics-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 520px) {
+            .impact-metrics-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .impact-metric-card {
+            display: block;
+            text-decoration: none;
+            background: var(--bg-surface);
+            border: 1px solid var(--border-light);
+            border-radius: var(--radius-md);
+            padding: 1.35rem 1.25rem;
+            transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .impact-metric-card:hover {
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-md);
+            border-color: var(--border-medium);
+        }
+
+        .impact-metric-card.award-card {
+            border-color: rgba(212, 175, 55, 0.45);
+            background: linear-gradient(135deg, var(--bg-surface) 0%, rgba(212, 175, 55, 0.06) 100%);
+        }
+
+        .impact-metric-val {
             font-family: 'Newsreader', Georgia, serif;
-            font-size: 1.6rem;
+            font-size: 2.1rem;
             font-weight: 700;
-            color: #d4af37;
+            color: var(--gold-accent);
             line-height: 1.1;
-            margin-bottom: 0.2rem;
+            margin-bottom: 0.35rem;
         }
 
-        .metric-label {
-            font-size: 0.73rem;
-            color: #cbd5e1;
-            line-height: 1.3;
+        .impact-metric-lbl {
+            font-size: 0.88rem;
+            color: var(--text-secondary);
+            font-weight: 600;
+            line-height: 1.35;
         }
 
         /* Common Section Styles */
@@ -1618,25 +1685,7 @@
                     <img src="images/avatar.JPG" alt="Syed Emad Uddin Shubha" class="profile-image" id="heroAvatar">
                     <div class="profile-caption">
                         <h3>Syed Shubha</h3>
-                        <p>Graduate Research Assistant & Teaching Assistant<br>Division of Computer Science & Engineering<br>Louisiana State University, Baton Rouge, LA</p>
-                    </div>
-                </div>
-                <div class="metrics-grid" id="heroMetrics">
-                    <a href="https://scholar.google.com/citations?user=8EK8VJMAAAAJ" target="_blank" class="metric-box">
-                        <div class="metric-value">71</div>
-                        <div class="metric-label">Citations (Google Scholar ↗)</div>
-                    </a>
-                    <a href="https://scholar.google.com/citations?user=8EK8VJMAAAAJ" target="_blank" class="metric-box">
-                        <div class="metric-value">4</div>
-                        <div class="metric-label">h-index (Google Scholar ↗)</div>
-                    </a>
-                    <a href="https://scholar.google.com/citations?user=8EK8VJMAAAAJ" target="_blank" class="metric-box">
-                        <div class="metric-value">3</div>
-                        <div class="metric-label">i10-index (Google Scholar ↗)</div>
-                    </a>
-                    <div class="metric-box">
-                        <div class="metric-value">2026</div>
-                        <div class="metric-label">Quantum Rising Star Award</div>
+                        <p>Graduate Research & Teaching Assistant<br>Division of Computer Science & Engineering<br>Louisiana State University, Baton Rouge, LA</p>
                     </div>
                 </div>
             </div>
@@ -1654,6 +1703,38 @@
                 </div>
             </div>
             <div class="pillars-grid" id="pillarsContainer"></div>
+
+            <!-- Scholarly Impact & Recognition (Shifted after Research) -->
+            <div class="research-impact-strip">
+                <div class="impact-header">
+                    <div class="impact-title-group">
+                        <div class="section-eyebrow">Scholarly Impact & Recognition</div>
+                        <h3 class="impact-title">Citations & Academic Honors</h3>
+                    </div>
+                    <a href="https://scholar.google.com/citations?user=8EK8VJMAAAAJ" target="_blank" class="scholar-pill-btn">
+                        <span>Google Scholar Profile</span>
+                        <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                    </a>
+                </div>
+                <div class="impact-metrics-grid" id="heroMetrics">
+                    <a href="https://scholar.google.com/citations?user=8EK8VJMAAAAJ" target="_blank" class="impact-metric-card">
+                        <div class="impact-metric-val">71</div>
+                        <div class="impact-metric-lbl">Citations (Google Scholar ↗)</div>
+                    </a>
+                    <a href="https://scholar.google.com/citations?user=8EK8VJMAAAAJ" target="_blank" class="impact-metric-card">
+                        <div class="impact-metric-val">4</div>
+                        <div class="impact-metric-lbl">h-index (Google Scholar ↗)</div>
+                    </a>
+                    <a href="https://scholar.google.com/citations?user=8EK8VJMAAAAJ" target="_blank" class="impact-metric-card">
+                        <div class="impact-metric-val">3</div>
+                        <div class="impact-metric-lbl">i10-index (Google Scholar ↗)</div>
+                    </a>
+                    <div class="impact-metric-card award-card">
+                        <div class="impact-metric-val">2026</div>
+                        <div class="impact-metric-lbl">Quantum Rising Star Award</div>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -1890,18 +1971,20 @@
 
             if (Array.isArray(p.metrics)) {
                 document.getElementById('heroMetrics').innerHTML = p.metrics.map(m => {
+                    const content = `
+                        <div class="impact-metric-val">${m.value}</div>
+                        <div class="impact-metric-lbl">${m.label}</div>
+                    `;
                     if (m.url) {
                         return `
-                            <a href="${m.url}" target="_blank" class="metric-box">
-                                <div class="metric-value">${m.value}</div>
-                                <div class="metric-label">${m.label}</div>
+                            <a href="${m.url}" target="_blank" class="impact-metric-card">
+                                ${content}
                             </a>
                         `;
                     }
                     return `
-                        <div class="metric-box">
-                            <div class="metric-value">${m.value}</div>
-                            <div class="metric-label">${m.label}</div>
+                        <div class="impact-metric-card award-card">
+                            ${content}
                         </div>
                     `;
                 }).join('');
