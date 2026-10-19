@@ -88,7 +88,7 @@ window.PORTFOLIO_DATA = {
         "🛡️ Quantum Error Correction",
         "🔐 Quantum Cryptography (QKD)"
       ],
-      "funding": "NSF EAGER (Award no. 2608182) & NSF Student Travel Grant",
+      "funding": "NSF EAGER (Award no. 2608182)",
       "summary": "Developing quantum communication protocols using entanglement, quantum error correction, and information-theoretic measures of quantum correlations. My work includes improving the fidelity of encoded Bell pairs, designing an adaptive superdense-coding testbed, and probabilistic teleportation of repetition-encoded logical states through partially entangled GHZ channels using optimal positive operator-valued measurements (POVMs). Current research investigates how quantum discord and entanglement of formation can guide pair-preserving recovery and message decoding when joint operations on the received qubit pair are available.",
       "highlights": [
         "Error correction for encoded Bell pairs [J1], adaptive superdense coding [C6], and POVM-based teleportation of encoded logical states [J4].",
@@ -237,7 +237,7 @@ window.PORTFOLIO_DATA = {
       "venue": "IEEE International Conference on Quantum Computing and Engineering (QCE / IEEE Quantum Week)",
       "year": 2025,
       "role": "1st Author",
-      "metrics": "Short Paper • Supported by NSF EAGER (Award no. 2608182) & NSF Student Travel Grant",
+      "metrics": "Short Paper • Supported by NSF EAGER (Award no. 2608182)",
       "doi_url": "https://doi.org/10.1109/QCE65121.2025.10350",
       "arxiv_url": "https://arxiv.org/abs/2504.12565",
       "pdf_url": "assets/files/QCE_2025_Adaptive_Superdense_Coding.pdf",
