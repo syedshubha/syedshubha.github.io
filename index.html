@@ -1,10 +1,16 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Syed Emad Uddin Shubha | Quantum Information & Hardware Security Researcher</title>
     <meta name="description" content="Academic portfolio of Syed Emad Uddin Shubha, Computer Science Doctoral Researcher at Louisiana State University working on Quantum Hardware Security, Quantum Error Correction, Superconducting Qubits, and Quantum Communication.">
+    <script>
+        (function() {
+            const saved = localStorage.getItem('syed_theme') || 'dark';
+            document.documentElement.setAttribute('data-theme', saved);
+        })();
+    </script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;0,6..72,700;1,6..72,400&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -48,6 +54,121 @@
             --radius-sm: 6px;
             --radius-md: 10px;
             --radius-lg: 14px;
+        }
+
+        html[data-theme="dark"] {
+            --navy-950: #0d0818;
+            --navy-900: #f3effa;
+            --navy-800: #dcd2f0;
+            --navy-700: #b794f4;
+            --academic-blue: #c4a1ff;
+            --academic-blue-dark: #e2ceff;
+            --academic-blue-light: rgba(139, 92, 246, 0.16);
+            --lsu-purple: #d8b4fe;
+            --gold-accent: #e5c158;
+            --gold-bright: #d4af37;
+            --gold-soft: rgba(212, 175, 55, 0.16);
+            --teal-accent: #5eead4;
+            --teal-soft: rgba(20, 184, 166, 0.15);
+            --text-primary: #f1ecf9;
+            --text-secondary: #c5b8de;
+            --text-muted: #9685b5;
+            --bg-page: #0d0818;
+            --bg-surface: #160e29;
+            --bg-subtle: #1d1336;
+            --border-light: #2a1d47;
+            --border-medium: #3e2b66;
+            --shadow-sm: 0 2px 6px rgba(0, 0, 0, 0.35);
+            --shadow-md: 0 8px 20px -2px rgba(0, 0, 0, 0.48);
+            --shadow-lg: 0 16px 36px -4px rgba(0, 0, 0, 0.65);
+        }
+
+        html[data-theme="dark"] .navbar {
+            background: rgba(15, 9, 28, 0.92);
+        }
+
+        html[data-theme="dark"] .brand-monogram {
+            background: #2b144d;
+            color: #ffffff;
+            border-color: rgba(212, 175, 55, 0.75);
+        }
+
+        html[data-theme="dark"] .nav-pill-btn {
+            background: #461d7c !important;
+            color: #ffffff !important;
+            border-color: rgba(212, 175, 55, 0.5) !important;
+        }
+
+        html[data-theme="dark"] .nav-pill-btn:hover {
+            background: #5b259f !important;
+        }
+
+        html[data-theme="dark"] .filter-btn.active,
+        html[data-theme="dark"] .pub-btn:hover {
+            background: #461d7c;
+            color: #ffffff;
+            border-color: #d4af37;
+        }
+
+        html[data-theme="dark"] .pub-role-badge {
+            background: rgba(168, 85, 247, 0.18);
+            color: #e9d5ff;
+        }
+
+        html[data-theme="dark"] .pub-code.journal {
+            border-color: rgba(94, 234, 212, 0.35);
+        }
+
+        html[data-theme="dark"] .pub-code.conference,
+        html[data-theme="dark"] .update-badge {
+            border-color: rgba(196, 161, 255, 0.35);
+        }
+
+        html[data-theme="dark"] .pub-search {
+            background: #120b22;
+            color: var(--text-primary);
+        }
+
+        html[data-theme="dark"] .modal-pre {
+            background: #0d0818;
+            border: 1px solid #3e2b66;
+            color: #e2e8f0;
+        }
+
+        html[data-theme="dark"] .pub-item:hover,
+        html[data-theme="dark"] .project-card:hover {
+            border-color: #7c4dff;
+        }
+
+        html[data-theme="dark"] .outreach-banner {
+            background: linear-gradient(135deg, #1b0e33 0%, #2e1557 100%);
+            border: 1px solid #3e2b66;
+        }
+
+        html[data-theme="dark"] .footer {
+            background: #08040f;
+            border-top: 1px solid #2a1d47;
+        }
+
+        .theme-toggle-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.35rem;
+            padding: 0.38rem 0.72rem;
+            border-radius: 6px;
+            border: 1px solid var(--border-medium);
+            background: var(--bg-surface);
+            color: var(--text-primary);
+            font-size: 0.8rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.18s ease;
+            flex-shrink: 0;
+        }
+
+        .theme-toggle-btn:hover {
+            border-color: var(--academic-blue);
+            color: var(--academic-blue);
         }
 
         * {
@@ -1407,11 +1528,17 @@
                 <li><a href="blog.html" class="nav-pill-outline">Blog & Notes</a></li>
                 <li><a href="passions.html" class="nav-pill-btn">Quantum Memeology</a></li>
             </ul>
-            <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle Menu">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
+            <div style="display:flex; align-items:center; gap:0.55rem; flex-shrink:0;">
+                <button class="theme-toggle-btn" id="themeToggleBtn" onclick="toggleTheme()" aria-label="Toggle Dark/Light Mode" title="Toggle Dark/Light Mode">
+                    <span id="themeToggleIcon">☀️</span>
+                    <span id="themeToggleLabel">Light</span>
+                </button>
+                <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle Menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
         </div>
     </nav>
 
@@ -1557,10 +1684,11 @@
 
             <div class="pub-controls">
                 <div class="filter-tabs" id="pubFilterTabs">
-                    <button class="filter-btn active" data-filter="all">All Publications</button>
-                    <button class="filter-btn" data-filter="journal">Journal Articles</button>
-                    <button class="filter-btn" data-filter="conference">Conference Proceedings</button>
-                    <button class="filter-btn" data-filter="first">1st / Corresponding Author</button>
+                    <button class="filter-btn active" data-filter="all">All Publications (11)</button>
+                    <button class="filter-btn" data-filter="journal">Journal Articles (4)</button>
+                    <button class="filter-btn" data-filter="conference">Conference Proceedings (7)</button>
+                    <button class="filter-btn" data-filter="first">1st / Corresponding Author (7)</button>
+                    <button class="filter-btn" data-filter="cosupervised">Co-Supervised (4)</button>
                 </div>
                 <input type="search" id="pubSearchInput" class="pub-search" placeholder="Search papers by title, venue, year...">
             </div>
@@ -1924,6 +2052,7 @@
                 if (currentPubFilter === 'journal' && pub.type !== 'journal') return false;
                 if (currentPubFilter === 'conference' && pub.type !== 'conference') return false;
                 if (currentPubFilter === 'first' && !/1st|first|corresponding/i.test(pub.role || '')) return false;
+                if (currentPubFilter === 'cosupervised' && !/co-supervised/i.test(pub.role || '')) return false;
                 if (currentPubSearch) {
                     const hay = `${pub.title} ${pub.authors} ${pub.venue} ${pub.year} ${pub.role}`.toLowerCase();
                     if (!hay.includes(currentPubSearch.toLowerCase())) return false;
@@ -1997,6 +2126,23 @@
             });
         });
 
+        function syncThemeBtn() {
+            const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+            const icon = document.getElementById('themeToggleIcon');
+            const label = document.getElementById('themeToggleLabel');
+            if (icon) icon.textContent = isDark ? '☀️' : '🌙';
+            if (label) label.textContent = isDark ? 'Light' : 'Dark';
+        }
+
+        function toggleTheme() {
+            const current = document.documentElement.getAttribute('data-theme') || 'dark';
+            const next = current === 'dark' ? 'light' : 'dark';
+            document.documentElement.setAttribute('data-theme', next);
+            localStorage.setItem('syed_theme', next);
+            syncThemeBtn();
+        }
+
+        syncThemeBtn();
         initPortfolio();
     </script>
 </body>

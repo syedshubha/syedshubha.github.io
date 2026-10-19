@@ -1,10 +1,16 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Quantum Memeology, Science Outreach & Creative Corner | Syed Emad Uddin Shubha</title>
     <meta name="description" content="Original physics, quantum computing, pure mathematics, and philosophy memes with rigorous technical explanations, plus science outreach and lectures by Syed Emad Uddin Shubha.">
+    <script>
+        (function() {
+            const saved = localStorage.getItem('syed_theme') || 'dark';
+            document.documentElement.setAttribute('data-theme', saved);
+        })();
+    </script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;0,6..72,700;1,6..72,400&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -32,6 +38,86 @@
             --shadow-lg: 0 12px 28px -6px rgba(35, 17, 61, 0.15);
             --radius-md: 10px;
             --radius-lg: 14px;
+        }
+
+        html[data-theme="dark"] {
+            --navy-950: #0d0818;
+            --navy-900: #f3effa;
+            --navy-800: #dcd2f0;
+            --navy-700: #b794f4;
+            --academic-blue: #c4a1ff;
+            --academic-blue-light: rgba(139, 92, 246, 0.16);
+            --academic-blue-dark: #e2ceff;
+            --lsu-purple: #d8b4fe;
+            --lsu-gold: #e5c158;
+            --text-primary: #f1ecf9;
+            --text-secondary: #c5b8de;
+            --text-muted: #9685b5;
+            --bg-page: #0d0818;
+            --bg-surface: #160e29;
+            --border-light: #2a1d47;
+            --border-medium: #3e2b66;
+            --shadow-sm: 0 2px 6px rgba(0, 0, 0, 0.35);
+            --shadow-md: 0 8px 20px -2px rgba(0, 0, 0, 0.48);
+            --shadow-lg: 0 16px 36px -6px rgba(0, 0, 0, 0.65);
+        }
+
+        html[data-theme="dark"] .navbar {
+            background: rgba(15, 9, 28, 0.92);
+        }
+
+        html[data-theme="dark"] .brand-monogram {
+            background: #2b144d;
+            color: #ffffff;
+            border-color: rgba(212, 175, 55, 0.75);
+        }
+
+        html[data-theme="dark"] .nav-pill-btn {
+            background: #461d7c !important;
+            color: #ffffff !important;
+            border-color: rgba(212, 175, 55, 0.5) !important;
+        }
+
+        html[data-theme="dark"] .filter-btn.active,
+        html[data-theme="dark"] .action-btn.active,
+        html[data-theme="dark"] .explain-btn:hover,
+        html[data-theme="dark"] .explain-btn.open {
+            background: #461d7c;
+            color: #ffffff;
+            border-color: #d4af37;
+        }
+
+        html[data-theme="dark"] .meme-explanation,
+        html[data-theme="dark"] .lightbox-exp-box {
+            background: #1d1336 !important;
+            color: #ece4fc !important;
+            border-left-color: #d4af37 !important;
+        }
+
+        html[data-theme="dark"] .search-box {
+            color: var(--text-primary);
+            background: #120b22;
+        }
+
+        .theme-toggle-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.35rem;
+            padding: 0.38rem 0.72rem;
+            border-radius: 6px;
+            border: 1px solid var(--border-medium);
+            background: var(--bg-surface);
+            color: var(--text-primary);
+            font-size: 0.8rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.18s ease;
+            flex-shrink: 0;
+        }
+
+        .theme-toggle-btn:hover {
+            border-color: var(--academic-blue);
+            color: var(--academic-blue);
         }
 
         * {
@@ -732,11 +818,17 @@
                 <li><a href="blog.html">Blog & Essays</a></li>
                 <li><a href="passions.html" class="nav-pill-btn">Quantum Memeology</a></li>
             </ul>
-            <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle Menu">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
+            <div style="display:flex; align-items:center; gap:0.55rem; flex-shrink:0;">
+                <button class="theme-toggle-btn" id="themeToggleBtn" onclick="toggleTheme()" aria-label="Toggle Dark/Light Mode" title="Toggle Dark/Light Mode">
+                    <span id="themeToggleIcon">☀️</span>
+                    <span id="themeToggleLabel">Light</span>
+                </button>
+                <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle Menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
         </div>
     </nav>
 
@@ -840,7 +932,7 @@
                 </div>
                 <h2 id="lightboxTitle" style="font-size:1.65rem;"></h2>
                 <p id="lightboxDesc" style="color:var(--text-secondary); font-size:0.96rem;"></p>
-                <div style="background:#f8fafc; border-left:4px solid var(--academic-blue); padding:1rem 1.15rem; border-radius:0 8px 8px 0;">
+                <div class="lightbox-exp-box" style="background:#f8fafc; border-left:4px solid var(--academic-blue); padding:1rem 1.15rem; border-radius:0 8px 8px 0;">
                     <strong style="display:block; font-size:0.8rem; text-transform:uppercase; letter-spacing:0.05em; color:var(--academic-blue-dark); margin-bottom:0.35rem;">💡 Technical Explanation</strong>
                     <p id="lightboxExp" style="font-size:0.92rem; color:var(--navy-800); line-height:1.65;"></p>
                 </div>
@@ -975,6 +1067,23 @@
             if (e.key === 'Escape') closeLightbox();
         });
 
+        function syncThemeBtn() {
+            const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+            const icon = document.getElementById('themeToggleIcon');
+            const label = document.getElementById('themeToggleLabel');
+            if (icon) icon.textContent = isDark ? '☀️' : '🌙';
+            if (label) label.textContent = isDark ? 'Light' : 'Dark';
+        }
+
+        function toggleTheme() {
+            const current = document.documentElement.getAttribute('data-theme') || 'dark';
+            const next = current === 'dark' ? 'light' : 'dark';
+            document.documentElement.setAttribute('data-theme', next);
+            localStorage.setItem('syed_theme', next);
+            syncThemeBtn();
+        }
+
+        syncThemeBtn();
         initMemes();
     </script>
 </body>

@@ -138,7 +138,7 @@ window.PORTFOLIO_DATA = {
       "authors": "A. Banik, M. S. Khan, R. M. Khan, <strong>Syed Shubha*</strong>, and M. R. Chowdhury",
       "venue": "AVS Quantum Science, vol. 7, no. 3",
       "year": 2025,
-      "role": "Corresponding Author",
+      "role": "Corresponding Author & Co-Supervised",
       "metrics": "Q1-Indexed • IF: 3.0 • Featured in Quantum Zeitgeist",
       "doi_url": "https://doi.org/10.1116/5.0284072",
       "arxiv_url": "",
