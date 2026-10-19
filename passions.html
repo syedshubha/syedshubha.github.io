@@ -906,11 +906,11 @@
         </div>
 
         <div class="prng-notice" id="prngNotice">
-            <p>
+            <p id="prngText">
                 🎲 The arrangement of this page is shuffled upon each load as an interactive demonstration of pseudorandomness. This chaotic layout will remain mathematically predictable until I secure API access to a genuine Quantum Random Number Generator (QRNG) to achieve true non-deterministic collapse.
             </p>
             <div class="prng-meta">
-                <span>PRNG: <code>mulberry32</code> • Seed: <code id="prngSeed">…</code></span>
+                <span>Seed source: <code id="prngSource">classical PRNG</code> • Shuffle: <code>mulberry32</code> Fisher–Yates • Seed: <code id="prngSeed">…</code></span>
                 <a href="#" id="prngReproduceLink" title="Same seed, same order. That is the whole point.">🔁 Reproduce this order</a>
                 <button type="button" class="action-btn" onclick="reshuffleMemes()">🎲 Reshuffle</button>
             </div>
@@ -1031,29 +1031,65 @@
             return out;
         }
 
-        function applyShuffle(seed) {
+        function applyShuffle(seed, source = 'classical') {
             SITE_DATA.memes = seededShuffle(ORIGINAL_MEMES, seed);
             const hex = '0x' + seed.toString(16).toUpperCase().padStart(8, '0');
             document.getElementById('prngSeed').textContent = hex;
             document.getElementById('prngReproduceLink').href = `passions.html?seed=${hex}`;
+            const sourceEl = document.getElementById('prngSource');
+            const textEl = document.getElementById('prngText');
+            if (source === 'quantum') {
+                sourceEl.textContent = 'ANU QRNG (quantum vacuum fluctuations)';
+                textEl.textContent = QUANTUM_TEXT;
+            } else {
+                sourceEl.textContent = source === 'url' ? 'URL parameter' : (QRNG_ENDPOINT ? 'classical PRNG (quantum pool recharging)' : 'classical PRNG');
+                textEl.textContent = CLASSICAL_TEXT;
+            }
         }
 
-        function reshuffleMemes() {
-            const seed = timeSeed();
+        // Cloudflare Worker proxying the ANU QRNG (see qrng-worker/). Empty = classical mode only.
+        const QRNG_ENDPOINT = '';
+        const CLASSICAL_TEXT = document.getElementById('prngText').textContent.trim();
+        const QUANTUM_TEXT = '🎲 This arrangement was shuffled using a seed measured from quantum vacuum fluctuations by the ANU Quantum Random Number Generator. True non-deterministic collapse achieved, at least for the seed: given the seed, the shuffle itself is still a deterministic algorithm, as the reproduce link below demonstrates.';
+
+        async function fetchQuantumSeed(timeoutMs = 1500) {
+            if (!QRNG_ENDPOINT) return null;
+            const ctrl = new AbortController();
+            const timer = setTimeout(() => ctrl.abort(), timeoutMs);
+            try {
+                const res = await fetch(QRNG_ENDPOINT, { signal: ctrl.signal, cache: 'no-store' });
+                if (!res.ok) return null;
+                const body = await res.json();
+                return Number.isInteger(body.seed) ? (body.seed >>> 0) : null;
+            } catch (e) {
+                return null;
+            } finally {
+                clearTimeout(timer);
+            }
+        }
+
+        async function reshuffleMemes() {
             history.replaceState({}, '', 'passions.html');
-            applyShuffle(seed);
+            const q = await fetchQuantumSeed();
+            applyShuffle(q !== null ? q : timeSeed(), q !== null ? 'quantum' : 'classical');
             renderMemes();
         }
 
         async function initMemes() {
-            try {
-                const res = await fetch('data/portfolio_data.json?t=' + Date.now());
-                if (res.ok) SITE_DATA = await res.json();
-            } catch (e) {}
-            ORIGINAL_MEMES = (SITE_DATA.memes || []).slice();
             const param = new URLSearchParams(window.location.search).get('seed');
             const parsed = param ? Number(param) : NaN;
-            applyShuffle(Number.isFinite(parsed) ? (parsed >>> 0) : timeSeed());
+            const hasUrlSeed = Number.isFinite(parsed);
+            const [, q] = await Promise.all([
+                fetch('data/portfolio_data.json?t=' + Date.now())
+                    .then(res => res.ok ? res.json() : null)
+                    .then(data => { if (data) SITE_DATA = data; })
+                    .catch(() => {}),
+                hasUrlSeed ? Promise.resolve(null) : fetchQuantumSeed(),
+            ]);
+            ORIGINAL_MEMES = (SITE_DATA.memes || []).slice();
+            if (hasUrlSeed) applyShuffle(parsed >>> 0, 'url');
+            else if (q !== null) applyShuffle(q, 'quantum');
+            else applyShuffle(timeSeed(), 'classical');
             buildFilterTabs();
             renderMemes();
         }
