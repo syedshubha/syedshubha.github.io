@@ -96,6 +96,17 @@ This launches a lightweight local HTTP server at `http://localhost:8000` with an
 
 ---
 
+## 📈 Automated Daily Citation Sync (`.github/workflows/update_citations.yml`)
+
+The portfolio automatically stays in sync with your public Google Scholar profile:
+
+- **Schedule**: Runs daily at 06:00 UTC via GitHub Actions (or on-demand via manual trigger).
+- **Execution Script**: [`scripts/update_scholar_citations.py`](file:///Users/syedshubha/.gemini/antigravity/scratch/syedshubha.github.io/scripts/update_scholar_citations.py).
+- **Automated Sync**: When citations, h-index, or i10-index change, it automatically commits and pushes updates to `data/portfolio_data.json`, `data/portfolio_data.js`, `index.html`, and `README.md`.
+- **Fail-Safe**: If Google temporarily rate-limits or serves a CAPTCHA to cloud runner IPs, the run exits gracefully without failing, retrying automatically on the next cycle.
+
+---
+
 ## 🎲 Quantum Seed Worker (`qrng-worker/`)
 
 The meme gallery is dynamically shuffled using real quantum vacuum fluctuations:
