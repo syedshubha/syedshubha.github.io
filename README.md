@@ -6,7 +6,7 @@
 [![Award](https://img.shields.io/badge/Award-Quantum_Rising_Star_2026-d4af37?style=flat)](https://syedshubha.github.io/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 
-Source repository and content for the personal academic website of **Syed Shubha** (Syed Emad Uddin Shubha), Ph.D. Researcher in Quantum Computing, Hardware Security, and Quantum Information Theory in the Division of Computer Science and Engineering at Louisiana State University (LSU).
+Source repository and content for the personal academic website of **Syed Shubha** (Syed Emad Uddin Shubha), Ph.D. Researcher in Quantum Information & Security in the Division of Computer Science and Engineering at Louisiana State University (LSU).
 
 ---
 

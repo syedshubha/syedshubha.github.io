@@ -2,11 +2,11 @@ window.PORTFOLIO_DATA = {
   "profile": {
     "name": "Syed Emad Uddin Shubha",
     "short_name": "Syed Shubha",
-    "title": "Ph.D. Researcher in Quantum Information & Hardware Security • Louisiana State University",
+    "title": "Ph.D. Researcher in Quantum Information & Security • Louisiana State University",
     "affiliation": "",
     "education_short": "",
     "tagline": "Investigating multi-tenant quantum hardware security, pulse-level superconducting qubit characterization, and correlation-guided quantum communication.",
-    "bio": "I am a Computer Science Ph.D. researcher and the founding doctoral student in Dr. Tasnuva Farheen’s group at Louisiana State University, recipient of the 2026 Quantum Rising Star Award at Rice University (QS3). My research bridges physical superconducting processor hardware and quantum information theory across two core directions: (1) <strong>Quantum Hardware Security & Pulse Control</strong>, securing multi-tenant superconducting processors via pulse-to-circuit crosstalk characterization and Pauli-transfer-matrix drift separation (<em>IEEE HOST ’27, ACM CCS QSec ’25, IEEE QCE ’25</em>); and (2) <strong>Quantum Communication & Error Correction</strong>, designing correlation-guided adaptive purification, surface-code decoding, and high-fidelity state teleportation over noisy channels (<em>AVS Quantum Science ’25, IEEE QCE ’25, Heliyon ’23</em>).",
+    "bio": "I am a Computer Science Ph.D. researcher and the founding doctoral student in Dr. Tasnuva Farheen’s group at Louisiana State University, recipient of the 2026 Quantum Rising Star Award at Rice University (QS3). My research bridges physical superconducting processor hardware and quantum information theory across two core directions: (1) <strong>Quantum Hardware Security & Pulse Control</strong> and (2) <strong>Quantum Communication & Error Correction</strong>. My research also focuses on quantum characterization, verification, and validation (QCVV) and the analysis of non-classical correlations from an information-theoretic perspective.",
     "email": "syed.shubha@ieee.org",
     "alt_email": "shubhabuet16@gmail.com",
     "location": "Baton Rouge, LA, USA",
@@ -375,9 +375,9 @@ window.PORTFOLIO_DATA = {
       "organization": "Division of Computer Science, Louisiana State University, Baton Rouge, LA",
       "period": "January 2025 – Present",
       "bullets": [
-        "Founding Ph.D. researcher in Dr. Tasnuva Farheen’s group (sole doctoral researcher in 2025), establishing the lab’s superconducting quantum hardware security and quantum communication tracks.",
-        "Quantum hardware security direction: characterized crosstalk as an active attack vector on shared superconducting hardware through pulse-level simulation [C4], developed a pulse-to-circuit characterization framework identifying a novel asymmetric attack mechanism [C5], and built a Pauli-transfer-matrix structural detection framework separating coherent crosstalk from calibration drift [C7].",
-        "Quantum communication direction: designed a correlation-guided adaptive purification protocol for superdense coding in distributed networks [C6] and led collaborative work on n-qubit state teleportation over partially entangled GHZ channels with optimal POVM measurement [J4]."
+        "Founding Ph.D. researcher in Dr. Tasnuva Farheen’s group (sole doctoral researcher in 2025), establishing the lab’s experimental quantum hardware security, QCVV, and distributed quantum communication tracks.",
+        "Quantum hardware security & QCVV direction (supported by NSF EAGER Award #2608182): characterized crosstalk as an active attack vector on shared superconducting hardware through pulse-level simulation [C4], developed a pulse-to-circuit characterization framework identifying a novel asymmetric attack mechanism [C5], and built a Pauli-transfer-matrix (PTM) structural drift-detection framework for Quantum Characterization, Verification, and Validation (QCVV) separating coherent crosstalk from calibration drift [C7].",
+        "Quantum communication & non-classical correlations direction (supported in part by NSF Student Travel Grant & LSU Graduate Assistantship): designed correlation-guided adaptive purification protocols for superdense coding in distributed networks [C6] and led collaborative research on n-qubit state teleportation over partially entangled GHZ channels using optimal POVM measurements [J4]."
       ]
     },
     {
