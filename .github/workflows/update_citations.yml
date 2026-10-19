@@ -1,0 +1,39 @@
+name: Update Google Scholar Citations
+
+on:
+  schedule:
+    # Run once daily at 06:00 UTC (1:00 AM Central Time)
+    - cron: '0 6 * * *'
+  workflow_dispatch: # Allows manual trigger from GitHub Actions tab
+
+permissions:
+  contents: write
+
+jobs:
+  update-citations:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Fetch and update citation metrics
+        run: |
+          python scripts/update_scholar_citations.py
+
+      - name: Commit and push changes
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          if [ -n "$(git status --porcelain)" ]; then
+            git add data/portfolio_data.json data/portfolio_data.js index.html README.md
+            git commit -m "Auto-update Google Scholar citation metrics [skip ci]"
+            git push
+          else
+            echo "No changes detected. Repository is up to date."
+          fi
