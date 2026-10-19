@@ -6,7 +6,7 @@ window.PORTFOLIO_DATA = {
     "affiliation": "",
     "education_short": "",
     "tagline": "Investigating multi-tenant quantum hardware security, pulse-level superconducting qubit characterization, and correlation-guided quantum communication.",
-    "bio": "I am a Computer Science Ph.D. researcher and the founding doctoral student in Dr. Tasnuva Farheen’s group at Louisiana State University, recipient of the 2026 Quantum Rising Star Award at Rice University (QS3). My research bridges physical superconducting processor hardware and quantum information theory across two core directions: (1) <strong>Quantum Hardware Security & Pulse Control</strong> and (2) <strong>Quantum Communication & Error Correction</strong>. My research also focuses on quantum characterization, verification, and validation (QCVV) and the analysis of non-classical correlations from an information-theoretic perspective.",
+    "bio": "I am a Computer Science Ph.D. researcher and the founding doctoral student in Dr. Tasnuva Farheen's group at Louisiana State University, recipient of the 2026 Quantum Rising Star Award at Rice University (QS3). My research focuses primarily on <strong>Quantum Hardware Security</strong> and <strong>Quantum Communication</strong>. My work also extends to quantum characterization, verification, and validation (QCVV) and the analysis of non-classical correlations from an information-theoretic perspective.",
     "email": "syed.shubha@ieee.org",
     "alt_email": "shubhabuet16@gmail.com",
     "location": "Baton Rouge, LA, USA",
