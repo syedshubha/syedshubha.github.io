@@ -254,7 +254,7 @@ STUDIO_HTML = r"""<!DOCTYPE html>
   <div class="top-actions">
     <a href="/index.html" target="_blank" class="btn btn-outline">🌐 Preview Main Site ↗</a>
     <a href="/blog.html" target="_blank" class="btn btn-outline">✍️ Preview Blog ↗</a>
-    <a href="/passions.html" target="_blank" class="btn btn-outline">🎭 Preview Memes ↗</a>
+    <a href="/memes.html" target="_blank" class="btn btn-outline">🎭 Preview Memes ↗</a>
     <button class="btn btn-primary" onclick="saveDataOnly()">💾 Save Local</button>
     <button class="btn btn-gold" onclick="saveAndPushGitHub()">🚀 Save & Publish to GitHub</button>
   </div>

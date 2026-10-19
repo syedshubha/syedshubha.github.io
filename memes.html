@@ -1,0 +1,1257 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quantum Memeology, Science Outreach & Creative Corner | Syed Emad Uddin Shubha</title>
+    <meta name="description" content="Original physics, quantum computing, pure mathematics, and philosophy memes with rigorous technical explanations, plus science outreach and lectures by Syed Emad Uddin Shubha.">
+    <script>
+        (function() {
+            const saved = localStorage.getItem('syed_theme') || 'dark';
+            document.documentElement.setAttribute('data-theme', saved);
+        })();
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;0,6..72,700;1,6..72,400&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%2323113d'/%3E%3Crect x='3' y='3' width='58' height='58' rx='10' fill='none' stroke='%23d4af37' stroke-width='2' stroke-opacity='0.75'/%3E%3Ctext x='30' y='43' font-family='Georgia,serif' font-size='28' font-weight='bold' fill='%23ffffff' text-anchor='middle'%3E%7CS%E2%9F%A9%3C/text%3E%3C/svg%3E">
+    <style>
+        :root {
+            --navy-950: #160b28;
+            --navy-900: #23113d;
+            --navy-800: #331857;
+            --navy-700: #461d7c;
+            --academic-blue: #461d7c;
+            --academic-blue-light: #f4effa;
+            --academic-blue-dark: #2f1157;
+            --lsu-purple: #461d7c;
+            --lsu-gold: #c59b27;
+            --text-primary: #1c1030;
+            --text-secondary: #43355b;
+            --text-muted: #66587d;
+            --bg-page: #f9f8fb;
+            --bg-surface: #ffffff;
+            --border-light: #e6e1ef;
+            --border-medium: #d1c9e0;
+            --shadow-sm: 0 1px 3px rgba(35, 17, 61, 0.06);
+            --shadow-md: 0 4px 12px -2px rgba(35, 17, 61, 0.09);
+            --shadow-lg: 0 12px 28px -6px rgba(35, 17, 61, 0.15);
+            --radius-md: 10px;
+            --radius-lg: 14px;
+        }
+
+        html[data-theme="dark"] {
+            --navy-950: #0d0818;
+            --navy-900: #f3effa;
+            --navy-800: #dcd2f0;
+            --navy-700: #b794f4;
+            --academic-blue: #c4a1ff;
+            --academic-blue-light: rgba(139, 92, 246, 0.16);
+            --academic-blue-dark: #e2ceff;
+            --lsu-purple: #d8b4fe;
+            --lsu-gold: #e5c158;
+            --text-primary: #f1ecf9;
+            --text-secondary: #c5b8de;
+            --text-muted: #9685b5;
+            --bg-page: #0d0818;
+            --bg-surface: #160e29;
+            --border-light: #2a1d47;
+            --border-medium: #3e2b66;
+            --shadow-sm: 0 2px 6px rgba(0, 0, 0, 0.35);
+            --shadow-md: 0 8px 20px -2px rgba(0, 0, 0, 0.48);
+            --shadow-lg: 0 16px 36px -6px rgba(0, 0, 0, 0.65);
+        }
+
+        html[data-theme="dark"] .navbar {
+            background: rgba(15, 9, 28, 0.92);
+        }
+
+        html[data-theme="dark"] .brand-monogram {
+            background: #2b144d;
+            color: #ffffff;
+            border-color: rgba(212, 175, 55, 0.75);
+        }
+
+        html[data-theme="dark"] .nav-pill-btn {
+            background: #461d7c !important;
+            color: #ffffff !important;
+            border-color: rgba(212, 175, 55, 0.5) !important;
+        }
+
+        html[data-theme="dark"] .filter-btn.active,
+        html[data-theme="dark"] .action-btn.active,
+        html[data-theme="dark"] .explain-btn:hover,
+        html[data-theme="dark"] .explain-btn.open {
+            background: #461d7c;
+            color: #ffffff;
+            border-color: #d4af37;
+        }
+
+        html[data-theme="dark"] .meme-explanation,
+        html[data-theme="dark"] .lightbox-exp-box {
+            background: #1d1336 !important;
+            color: #ece4fc !important;
+            border-left-color: #d4af37 !important;
+        }
+
+        html[data-theme="dark"] .search-box {
+            color: var(--text-primary);
+            background: #120b22;
+        }
+
+        .theme-toggle-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.35rem;
+            padding: 0.38rem 0.72rem;
+            border-radius: 6px;
+            border: 1px solid var(--border-medium);
+            background: var(--bg-surface);
+            color: var(--text-primary);
+            font-size: 0.8rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.18s ease;
+            flex-shrink: 0;
+        }
+
+        .theme-toggle-btn:hover {
+            border-color: var(--academic-blue);
+            color: var(--academic-blue);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+            color: var(--text-primary);
+            background-color: var(--bg-page);
+            line-height: 1.65;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        h1, h2, h3, h4 {
+            font-family: 'Newsreader', Georgia, serif;
+            color: var(--navy-900);
+            letter-spacing: -0.015em;
+        }
+
+        a {
+            color: var(--academic-blue);
+            text-decoration: none;
+            transition: color 0.2s ease;
+        }
+
+        a:hover {
+            color: var(--academic-blue-dark);
+        }
+
+        /* Navbar */
+        .navbar {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background: rgba(255, 255, 255, 0.96);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--border-light);
+            box-shadow: var(--shadow-sm);
+        }
+
+        .nav-container {
+            max-width: 1240px;
+            margin: 0 auto;
+            padding: 0.75rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 1.25rem;
+        }
+
+        .nav-brand {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            color: var(--navy-900);
+            flex-shrink: 0;
+        }
+
+        .brand-monogram {
+            width: 38px;
+            height: 38px;
+            flex-shrink: 0;
+            border-radius: 8px;
+            background: var(--navy-900);
+            border: 1.5px solid rgba(212, 175, 55, 0.7);
+            color: #fff;
+            font-family: 'Newsreader', Georgia, serif;
+            font-weight: 700;
+            font-size: 1.05rem;
+            letter-spacing: -0.02em;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 2px 6px rgba(35, 17, 61, 0.16);
+        }
+
+        .brand-text {
+            display: flex;
+            flex-direction: column;
+            flex-shrink: 0;
+        }
+
+        .brand-name {
+            font-family: 'Newsreader', Georgia, serif;
+            font-size: 1.3rem;
+            font-weight: 700;
+            line-height: 1.15;
+            color: var(--navy-900);
+            white-space: nowrap;
+        }
+
+        .brand-sub {
+            font-size: 0.72rem;
+            color: var(--text-muted);
+            font-weight: 600;
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+            white-space: nowrap;
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 0.35rem;
+            align-items: center;
+            flex-shrink: 0;
+        }
+
+        .nav-menu a {
+            color: var(--text-secondary);
+            font-size: 0.88rem;
+            font-weight: 500;
+            padding: 0.45rem 0.75rem;
+            border-radius: 6px;
+        }
+
+        .nav-menu a:hover, .nav-menu a.active {
+            color: var(--navy-900);
+            background: var(--academic-blue-light);
+        }
+
+        .nav-pill-btn {
+            background: var(--navy-900) !important;
+            color: #ffffff !important;
+            padding: 0.42rem 0.9rem !important;
+            border-radius: 6px;
+            font-weight: 500 !important;
+            border: 1px solid rgba(212, 175, 55, 0.4);
+        }
+
+        .mobile-toggle {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            cursor: pointer;
+            background: none;
+            border: none;
+            padding: 6px;
+            flex-shrink: 0;
+        }
+
+        .mobile-toggle span {
+            width: 22px;
+            height: 2px;
+            background: var(--navy-900);
+            border-radius: 2px;
+        }
+
+        /* Hero */
+        .page-hero {
+            background: linear-gradient(160deg, #160b28 0%, #24113f 55%, #3b1968 100%);
+            color: #f8fafc;
+            padding: 3.5rem 2rem 3.1rem;
+            border-bottom: 3px solid #c59b27;
+        }
+
+        .page-hero-inner {
+            max-width: 1240px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            gap: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .page-hero h1 {
+            color: #ffffff;
+            font-size: 2.75rem;
+            line-height: 1.12;
+            margin-bottom: 0.65rem;
+        }
+
+        .page-hero p {
+            color: #dcd4ea;
+            max-width: 720px;
+            font-size: 1.02rem;
+        }
+
+        .hero-links {
+            display: flex;
+            gap: 0.65rem;
+            flex-wrap: wrap;
+        }
+
+        .hero-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.58rem 1.1rem;
+            border-radius: 7px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            background: rgba(255, 255, 255, 0.1);
+            color: #ffffff;
+            border: 1px solid rgba(255, 255, 255, 0.24);
+            transition: all 0.2s ease;
+        }
+
+        .hero-btn svg {
+            width: 17px;
+            height: 17px;
+            flex-shrink: 0;
+        }
+
+        .hero-btn:hover {
+            background: rgba(255, 255, 255, 0.18);
+            color: #ffffff;
+            transform: translateY(-1px);
+        }
+
+        .hero-btn.gold {
+            background: #d4af37;
+            color: #160b28;
+            border-color: #d4af37;
+        }
+
+        .hero-btn.gold:hover {
+            background: #e3c14d;
+            color: #160b28;
+        }
+
+        .hero-btn.reddit {
+            background: rgba(255, 255, 255, 0.12);
+            color: #ffffff;
+            border: 1px solid rgba(212, 175, 55, 0.55);
+        }
+
+        .hero-btn.reddit svg {
+            color: #ff5700;
+            background: #ffffff;
+            border-radius: 50%;
+            width: 19px;
+            height: 19px;
+        }
+
+        .hero-btn.reddit:hover {
+            background: rgba(255, 255, 255, 0.2);
+            border-color: #d4af37;
+            color: #ffffff;
+        }
+
+        .container {
+            max-width: 1240px;
+            margin: 0 auto;
+            padding: 2.75rem 2rem 4.5rem;
+        }
+
+        /* Controls Bar */
+        .controls-wrapper {
+            background: var(--bg-surface);
+            border: 1px solid var(--border-light);
+            border-radius: var(--radius-md);
+            padding: 1.25rem 1.5rem;
+            margin-bottom: 2rem;
+            box-shadow: var(--shadow-sm);
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .controls-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .filter-tabs {
+            display: flex;
+            gap: 0.45rem;
+            flex-wrap: wrap;
+        }
+
+        .filter-btn {
+            padding: 0.42rem 0.85rem;
+            border-radius: 6px;
+            border: 1px solid var(--border-medium);
+            background: var(--bg-page);
+            color: var(--text-secondary);
+            font-size: 0.82rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.18s ease;
+        }
+
+        .filter-btn:hover {
+            border-color: var(--academic-blue);
+            color: var(--academic-blue);
+        }
+
+        .filter-btn.active {
+            background: var(--navy-900);
+            color: #ffffff;
+            border-color: var(--navy-900);
+        }
+
+        .controls-right {
+            display: flex;
+            gap: 0.6rem;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .search-box {
+            padding: 0.48rem 0.9rem;
+            border: 1px solid var(--border-medium);
+            border-radius: 6px;
+            font-size: 0.85rem;
+            min-width: 240px;
+            background: var(--bg-page);
+        }
+
+        .action-btn {
+            padding: 0.48rem 0.85rem;
+            border-radius: 6px;
+            border: 1px solid var(--border-medium);
+            background: var(--bg-surface);
+            color: var(--navy-800);
+            font-size: 0.82rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .action-btn:hover, .action-btn.active {
+            background: var(--academic-blue-light);
+            border-color: var(--academic-blue);
+            color: var(--academic-blue-dark);
+        }
+
+        /* Pseudorandom Shuffle Notice */
+        .prng-notice {
+            border: 1px dashed var(--border-medium);
+            border-left: 4px solid var(--academic-blue);
+            border-radius: var(--radius-md);
+            background: var(--bg-surface);
+            padding: 0.95rem 1.25rem;
+            margin: -0.75rem 0 1.75rem;
+        }
+
+        .prng-notice p {
+            font-size: 0.88rem;
+            color: var(--text-secondary);
+            font-style: italic;
+            line-height: 1.6;
+            margin-bottom: 0.65rem;
+        }
+
+        .prng-meta {
+            display: flex;
+            align-items: center;
+            gap: 0.9rem;
+            flex-wrap: wrap;
+            font-size: 0.8rem;
+            color: var(--text-muted);
+        }
+
+        .prng-meta code {
+            font-family: 'JetBrains Mono', monospace;
+            color: var(--academic-blue);
+            font-weight: 600;
+        }
+
+        .prng-meta a {
+            font-weight: 600;
+        }
+
+        .prng-meta .action-btn {
+            margin-left: auto;
+        }
+
+        /* Meme Grid */
+        .meme-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(355px, 1fr));
+            gap: 1.75rem;
+        }
+
+        .meme-card {
+            background: var(--bg-surface);
+            border: 1px solid var(--border-light);
+            border-radius: var(--radius-md);
+            overflow: hidden;
+            box-shadow: var(--shadow-sm);
+            display: flex;
+            flex-direction: column;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .meme-card:hover {
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .meme-img-frame {
+            position: relative;
+            width: 100%;
+            height: 310px;
+            background: #0f172a;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            cursor: zoom-in;
+            border-bottom: 1px solid var(--border-light);
+        }
+
+        .meme-img-frame img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+            transition: transform 0.25s ease;
+        }
+
+        .meme-img-frame:hover img {
+            transform: scale(1.03);
+        }
+
+        .zoom-hint {
+            position: absolute;
+            bottom: 8px;
+            right: 10px;
+            background: rgba(15, 23, 42, 0.78);
+            color: #f8fafc;
+            font-size: 0.7rem;
+            padding: 0.2rem 0.55rem;
+            border-radius: 4px;
+            pointer-events: none;
+            border: 1px solid rgba(255,255,255,0.18);
+        }
+
+        .meme-body {
+            padding: 1.35rem 1.45rem;
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+        }
+
+        .meme-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 0.5rem;
+        }
+
+        .meme-tag {
+            font-size: 0.72rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.04em;
+            padding: 0.18rem 0.55rem;
+            border-radius: 4px;
+            background: var(--academic-blue-light);
+            color: var(--academic-blue-dark);
+        }
+
+        .meme-index {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.75rem;
+            color: var(--text-muted);
+        }
+
+        .meme-title {
+            font-size: 1.28rem;
+            color: var(--navy-900);
+            margin-bottom: 0.45rem;
+            line-height: 1.3;
+        }
+
+        .meme-desc {
+            font-size: 0.91rem;
+            color: var(--text-secondary);
+            margin-bottom: 1rem;
+            flex: 1;
+        }
+
+        .meme-actions {
+            display: flex;
+            gap: 0.5rem;
+            padding-top: 0.85rem;
+            border-top: 1px solid var(--border-light);
+        }
+
+        .explain-btn {
+            flex: 1;
+            padding: 0.48rem 0.85rem;
+            border-radius: 6px;
+            border: 1px solid var(--border-medium);
+            background: var(--bg-page);
+            color: var(--navy-800);
+            font-size: 0.82rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.18s ease;
+        }
+
+        .explain-btn:hover, .explain-btn.open {
+            background: var(--navy-900);
+            color: #ffffff;
+            border-color: var(--navy-900);
+        }
+
+        .meme-explanation {
+            display: none;
+            margin-top: 0.9rem;
+            padding: 0.95rem 1.05rem;
+            background: #f8fafc;
+            border-left: 3px solid var(--academic-blue);
+            border-radius: 0 6px 6px 0;
+            font-size: 0.86rem;
+            color: var(--navy-800);
+            line-height: 1.6;
+        }
+
+        .meme-explanation.open {
+            display: block;
+        }
+
+        /* Outreach & Lectures Section */
+        .outreach-section {
+            margin-top: 4rem;
+            padding-top: 3rem;
+            border-top: 2px solid var(--border-light);
+        }
+
+        .section-eyebrow {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.76rem;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: var(--academic-blue);
+            font-weight: 600;
+            margin-bottom: 0.3rem;
+        }
+
+        .section-title {
+            font-size: 2rem;
+            margin-bottom: 0.4rem;
+        }
+
+        .outreach-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1.75rem;
+        }
+
+        .outreach-card {
+            background: var(--bg-surface);
+            border: 1px solid var(--border-light);
+            border-top: 3px solid var(--academic-blue);
+            border-radius: var(--radius-md);
+            padding: 1.6rem;
+            box-shadow: var(--shadow-sm);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .outreach-card h3 {
+            font-size: 1.3rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .outreach-card p {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            margin-bottom: 1.15rem;
+            flex: 1;
+        }
+
+        .outreach-links {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        .outreach-link {
+            display: inline-flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0.55rem 0.85rem;
+            background: var(--bg-page);
+            border: 1px solid var(--border-light);
+            border-radius: 6px;
+            font-size: 0.84rem;
+            font-weight: 600;
+            color: var(--navy-800);
+        }
+
+        .outreach-link:hover {
+            border-color: var(--academic-blue);
+            background: var(--academic-blue-light);
+            color: var(--academic-blue-dark);
+        }
+
+        .outreach-link-label {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .outreach-link-label svg {
+            width: 17px;
+            height: 17px;
+            flex-shrink: 0;
+            vertical-align: middle;
+        }
+
+        /* Lightbox Modal */
+        .lightbox {
+            position: fixed;
+            inset: 0;
+            background: rgba(10, 17, 32, 0.88);
+            backdrop-filter: blur(6px);
+            z-index: 2000;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            padding: 1.5rem;
+        }
+
+        .lightbox.open {
+            display: flex;
+        }
+
+        .lightbox-card {
+            background: var(--bg-surface);
+            border-radius: var(--radius-lg);
+            max-width: 1020px;
+            width: 100%;
+            max-height: 92vh;
+            overflow: hidden;
+            display: grid;
+            grid-template-columns: 1.35fr 1fr;
+            box-shadow: var(--shadow-lg);
+        }
+
+        .lightbox-img-wrap {
+            background: #0a1120;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 1rem;
+            max-height: 92vh;
+        }
+
+        .lightbox-img-wrap img {
+            max-width: 100%;
+            max-height: 85vh;
+            object-fit: contain;
+        }
+
+        .lightbox-info {
+            padding: 2rem;
+            overflow-y: auto;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .lightbox-close {
+            align-self: flex-end;
+            padding: 0.35rem 0.75rem;
+            border-radius: 6px;
+            border: 1px solid var(--border-medium);
+            background: var(--bg-page);
+            cursor: pointer;
+            font-weight: 600;
+        }
+
+        @media (max-width: 960px) {
+            .nav-container {
+                padding: 0.7rem 1.15rem;
+            }
+            .nav-menu {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: var(--bg-surface);
+                flex-direction: column;
+                align-items: stretch;
+                padding: 1.15rem 1.25rem;
+                gap: 0.45rem;
+                border-bottom: 1px solid var(--border-light);
+                box-shadow: var(--shadow-md);
+            }
+            .nav-menu.active {
+                display: flex;
+            }
+            .nav-menu li, .nav-menu a {
+                width: 100%;
+                display: block;
+            }
+            .mobile-toggle {
+                display: flex;
+            }
+        }
+
+        @media (max-width: 860px) {
+            .page-hero {
+                padding: 2.5rem 1.15rem 2.25rem;
+            }
+            .page-hero h1 {
+                font-size: 2rem;
+            }
+            .container {
+                padding: 2rem 1.15rem;
+            }
+            .meme-grid {
+                grid-template-columns: 1fr;
+            }
+            .outreach-grid {
+                grid-template-columns: 1fr;
+            }
+            .search-box {
+                width: 100%;
+                min-width: 0;
+            }
+            .lightbox-card {
+                grid-template-columns: 1fr;
+                overflow-y: auto;
+            }
+            .lightbox-img-wrap {
+                max-height: 52vh;
+            }
+            .lightbox-info {
+                padding: 1.35rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-brand">
+                <div class="brand-monogram">|S⟩</div>
+                <div class="brand-text">
+                    <span class="brand-name">Syed Shubha</span>
+                    <span class="brand-sub">QI Researcher</span>
+                </div>
+            </a>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html">← Main Portfolio</a></li>
+                <li><a href="index.html#publications">Publications</a></li>
+                <li><a href="blog.html">Blog & Essays</a></li>
+                <li><a href="memes.html" class="nav-pill-btn">Quantum Memeology</a></li>
+            </ul>
+            <div style="display:flex; align-items:center; gap:0.55rem; flex-shrink:0;">
+                <button class="theme-toggle-btn" id="themeToggleBtn" onclick="toggleTheme()" aria-label="Toggle Dark/Light Mode" title="Toggle Dark/Light Mode">
+                    <span id="themeToggleIcon">☀️</span>
+                    <span id="themeToggleLabel">Light</span>
+                </button>
+                <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle Menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <header class="page-hero">
+        <div class="page-hero-inner">
+            <div>
+                <h1>Quantum Memeology & Science Outreach</h1>
+                <p>
+                    An original collection of physics, quantum computing, mathematics, and epistemology memes, each paired with a rigorous technical explanation of the underlying theorem or physical mechanism.
+                </p>
+            </div>
+            <div class="hero-links">
+                <a href="https://www.reddit.com/r/QuantumMemeology/" target="_blank" class="hero-btn reddit">
+                    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0zm5.01 4.744c.688 0 1.25.561 1.25 1.249a1.25 1.25 0 0 1-2.498.056l-2.597-.547-.8 3.747c1.824.07 3.48.632 4.674 1.488.308-.309.73-.491 1.207-.491.968 0 1.754.786 1.754 1.754 0 .716-.435 1.333-1.01 1.614a3.111 3.111 0 0 1 .042.52c0 2.694-3.13 4.87-7.004 4.87-3.874 0-7.004-2.176-7.004-4.87 0-.183.015-.366.043-.534A1.748 1.748 0 0 1 4.028 12c0-.968.786-1.754 1.754-1.754.463 0 .898.196 1.207.49 1.207-.883 2.878-1.43 4.744-1.487l.885-4.182a.342.342 0 0 1 .14-.197.35.35 0 0 1 .238-.042l2.906.617a1.214 1.214 0 0 1 1.108-.701zM9.25 12C8.561 12 8 12.562 8 13.25c0 .687.561 1.248 1.25 1.248.687 0 1.248-.561 1.248-1.249 0-.688-.561-1.249-1.249-1.249zm5.5 0c-.687 0-1.248.561-1.248 1.25 0 .687.561 1.248 1.249 1.248.688 0 1.249-.561 1.249-1.249 0-.687-.562-1.249-1.25-1.249zm-5.466 3.99a.327.327 0 0 0-.231.094.33.33 0 0 0 0 .463c.842.842 2.484.913 2.961.913.477 0 2.105-.056 2.961-.913a.361.361 0 0 0 .029-.463.33.33 0 0 0-.464 0c-.547.533-1.684.73-2.512.73-.828 0-1.979-.196-2.512-.73a.326.326 0 0 0-.232-.095z"/></svg>
+                    r/QuantumMemeology ↗
+                </a>
+                <a href="blog.html" class="hero-btn gold">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+                    Blog & Essays →
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="controls-wrapper">
+            <div class="controls-top">
+                <div class="filter-tabs" id="memeFilterTabs"></div>
+                <div class="controls-right">
+                    <input type="search" id="memeSearchInput" class="search-box" placeholder="Search memes by theorem, topic...">
+                    <button class="action-btn" id="expandAllBtn" onclick="toggleAllExplanations()">💡 Expand All Explanations</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="prng-notice" id="prngNotice">
+            <p id="prngText">
+                🎲 The arrangement of this page is shuffled upon each load as an interactive demonstration of pseudorandomness. This chaotic layout will remain mathematically predictable until I secure API access to a genuine Quantum Random Number Generator (QRNG) to achieve true non-deterministic collapse.
+            </p>
+            <div class="prng-meta">
+                <span>Seed source: <code id="prngSource">classical PRNG</code> • Shuffle: <code>mulberry32</code> Fisher–Yates • Seed: <code id="prngSeed">…</code></span>
+                <a href="#" id="prngReproduceLink" title="Same seed, same order. That is the whole point.">🔁 Reproduce this order</a>
+                <button type="button" class="action-btn" onclick="reshuffleMemes()">🎲 Reshuffle</button>
+            </div>
+        </div>
+
+        <div class="meme-grid" id="memeGrid"></div>
+
+        <!-- Science Outreach, Lectures & Intellectual Passions -->
+        <section class="outreach-section">
+            <div class="section-eyebrow">Pedagogy, Essays & Recreation</div>
+            <h2 class="section-title">Lectures, Philosophical Essays & Chess</h2>
+            <div class="outreach-grid">
+                <div class="outreach-card">
+                    <h3>🎥 Video Lecture Series</h3>
+                    <p>Self-recorded university-level mathematics and quantum information tutorials exploring complex variables, contour integration, and nonlocal games.</p>
+                    <div class="outreach-links">
+                        <a href="https://www.youtube.com/playlist?list=PLEGgPKRszGn9g1C8Swhib5GtYgHJNb-Iq" target="_blank" class="outreach-link">
+                            <span class="outreach-link-label">
+                                <svg viewBox="0 0 24 24" width="17" height="17"><path fill="#FF0000" d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814z"/><path fill="#FFFFFF" d="M9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+                                <span>Complex Analysis Lecture Playlist</span>
+                            </span>
+                            <span>YouTube ↗</span>
+                        </a>
+                        <a href="https://www.youtube.com/playlist?list=PLEGgPKRszGn_i2yX9ba3-s_c_rU4fA_hE" target="_blank" class="outreach-link">
+                            <span class="outreach-link-label">
+                                <svg viewBox="0 0 24 24" width="17" height="17"><path fill="#FF0000" d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814z"/><path fill="#FFFFFF" d="M9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+                                <span>CHSH Game & Bell's Inequality</span>
+                            </span>
+                            <span>YouTube ↗</span>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="outreach-card">
+                    <h3>📰 Substack Philosophical Essays</h3>
+                    <p>Long-form explorations of formal epistemology, the Agrippan Trilemma, Gödel's modal logic, Schopenhauer, and contemporary sociology.</p>
+                    <div class="outreach-links">
+                        <a href="https://syedshubha.substack.com/p/agrippan-trilemma" target="_blank" class="outreach-link">
+                            <span>📜 Agrippan Trilemma: Proving Truths</span>
+                            <span>Substack ↗</span>
+                        </a>
+                        <a href="https://syedshubha.substack.com/p/godels-ontological-argument" target="_blank" class="outreach-link">
+                            <span>📜 Gödel’s Ontological Argument</span>
+                            <span>Substack ↗</span>
+                        </a>
+                        <a href="https://syedshubha.substack.com/p/beyond-sisyphus" target="_blank" class="outreach-link">
+                            <span>📜 Beyond Sisyphus: Limits of Logic</span>
+                            <span>Substack ↗</span>
+                        </a>
+                        <a href="https://syedshubha.substack.com/p/male-loneliness-epidemic" target="_blank" class="outreach-link">
+                            <span>📜 Male Loneliness Epidemic</span>
+                            <span>Substack ↗</span>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="outreach-card">
+                    <h3>♟️ Recreational Chess</h3>
+                    <p>Avid tactical chess player. Always happy to play a friendly rapid or blitz game with fellow researchers and students. I also upload short-form chess content, puzzles, and blitz tactics on YouTube.</p>
+                    <div class="outreach-links">
+                        <a href="https://www.youtube.com/@SchrodingersDankKnight/shorts" target="_blank" class="outreach-link">
+                            <span class="outreach-link-label">
+                                <svg viewBox="0 0 24 24" width="17" height="17"><path fill="#FF0000" d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814z"/><path fill="#FFFFFF" d="M9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+                                <span>Chess Content: @SchrodingersDankKnight</span>
+                            </span>
+                            <span>YouTube ↗</span>
+                        </a>
+                        <a href="https://www.chess.com/member/decohered_imam" target="_blank" class="outreach-link">
+                            <span class="outreach-link-label">
+                                <span>♟️</span>
+                                <span>Chess.com: @decohered_imam</span>
+                            </span>
+                            <span>Challenge ↗</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Fullscreen Lightbox Modal -->
+    <div class="lightbox" id="lightboxModal" onclick="if(event.target===this)closeLightbox()">
+        <div class="lightbox-card">
+            <div class="lightbox-img-wrap">
+                <img id="lightboxImg" src="" alt="">
+            </div>
+            <div class="lightbox-info">
+                <button class="lightbox-close" onclick="closeLightbox()">✕ Close</button>
+                <div>
+                    <span class="meme-tag" id="lightboxTag"></span>
+                </div>
+                <h2 id="lightboxTitle" style="font-size:1.65rem;"></h2>
+                <p id="lightboxDesc" style="color:var(--text-secondary); font-size:0.96rem;"></p>
+                <div class="lightbox-exp-box" style="background:#f8fafc; border-left:4px solid var(--academic-blue); padding:1rem 1.15rem; border-radius:0 8px 8px 0;">
+                    <strong style="display:block; font-size:0.8rem; text-transform:uppercase; letter-spacing:0.05em; color:var(--academic-blue-dark); margin-bottom:0.35rem;">💡 Technical Explanation</strong>
+                    <p id="lightboxExp" style="font-size:0.92rem; color:var(--navy-800); line-height:1.65;"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="data/portfolio_data.js"></script>
+    <script>
+        let SITE_DATA = window.PORTFOLIO_DATA || { memes: [] };
+        let activeTag = 'all';
+        let searchQuery = '';
+        let allExpanded = false;
+        let ORIGINAL_MEMES = [];
+
+        // Deterministic 32-bit PRNG: identical seed => identical sequence.
+        function mulberry32(seed) {
+            let a = seed >>> 0;
+            return function () {
+                a = (a + 0x6D2B79F5) >>> 0;
+                let t = a;
+                t = Math.imul(t ^ (t >>> 15), t | 1);
+                t ^= t + Math.imul(t ^ (t >>> 7), t | 61);
+                return ((t ^ (t >>> 14)) >>> 0) / 4294967296;
+            };
+        }
+
+        function timeSeed() {
+            // Wall-clock milliseconds mixed with sub-millisecond performance timer.
+            return (Date.now() ^ Math.floor(performance.now() * 1000)) >>> 0;
+        }
+
+        function seededShuffle(arr, seed) {
+            const rand = mulberry32(seed);
+            const out = arr.slice();
+            for (let i = out.length - 1; i > 0; i--) {
+                const j = Math.floor(rand() * (i + 1));
+                [out[i], out[j]] = [out[j], out[i]];
+            }
+            return out;
+        }
+
+        function applyShuffle(seed, source = 'classical') {
+            SITE_DATA.memes = seededShuffle(ORIGINAL_MEMES, seed);
+            const hex = '0x' + seed.toString(16).toUpperCase().padStart(8, '0');
+            document.getElementById('prngSeed').textContent = hex;
+            document.getElementById('prngReproduceLink').href = `memes.html?seed=${hex}`;
+            const sourceEl = document.getElementById('prngSource');
+            const textEl = document.getElementById('prngText');
+            if (source === 'quantum') {
+                sourceEl.textContent = 'ANU QRNG (quantum vacuum fluctuations)';
+                textEl.textContent = QUANTUM_TEXT;
+            } else {
+                sourceEl.textContent = source === 'url' ? 'URL parameter' : (QRNG_ENDPOINT ? 'classical PRNG (quantum pool recharging)' : 'classical PRNG');
+                textEl.textContent = CLASSICAL_TEXT;
+            }
+        }
+
+        // Cloudflare Worker proxying the ANU QRNG (see qrng-worker/). Empty = classical mode only.
+        const QRNG_ENDPOINT = 'https://qrng-seed.small-surf-f6bc.workers.dev';
+        const CLASSICAL_TEXT = document.getElementById('prngText').textContent.trim();
+        const QUANTUM_TEXT = '🎲 This arrangement was shuffled using a seed measured from quantum vacuum fluctuations by the ANU Quantum Random Number Generator. True non-deterministic collapse achieved, at least for the seed: given the seed, the shuffle itself is still a deterministic algorithm, as the reproduce link below demonstrates.';
+
+        async function fetchQuantumSeed(timeoutMs = 1500) {
+            if (!QRNG_ENDPOINT) return null;
+            const ctrl = new AbortController();
+            const timer = setTimeout(() => ctrl.abort(), timeoutMs);
+            try {
+                const res = await fetch(QRNG_ENDPOINT, { signal: ctrl.signal, cache: 'no-store' });
+                if (!res.ok) return null;
+                const body = await res.json();
+                return Number.isInteger(body.seed) ? (body.seed >>> 0) : null;
+            } catch (e) {
+                return null;
+            } finally {
+                clearTimeout(timer);
+            }
+        }
+
+        async function reshuffleMemes() {
+            history.replaceState({}, '', 'memes.html');
+            const q = await fetchQuantumSeed();
+            applyShuffle(q !== null ? q : timeSeed(), q !== null ? 'quantum' : 'classical');
+            renderMemes();
+        }
+
+        async function initMemes() {
+            const param = new URLSearchParams(window.location.search).get('seed');
+            const parsed = param ? Number(param) : NaN;
+            const hasUrlSeed = Number.isFinite(parsed);
+            const [, q] = await Promise.all([
+                fetch('data/portfolio_data.json?t=' + Date.now())
+                    .then(res => res.ok ? res.json() : null)
+                    .then(data => { if (data) SITE_DATA = data; })
+                    .catch(() => {}),
+                hasUrlSeed ? Promise.resolve(null) : fetchQuantumSeed(),
+            ]);
+            ORIGINAL_MEMES = (SITE_DATA.memes || []).slice();
+            if (hasUrlSeed) applyShuffle(parsed >>> 0, 'url');
+            else if (q !== null) applyShuffle(q, 'quantum');
+            else applyShuffle(timeSeed(), 'classical');
+            buildFilterTabs();
+            renderMemes();
+        }
+
+        function buildFilterTabs() {
+            const memes = SITE_DATA.memes || [];
+            const preferredOrder = ['Physics', 'Quantum Computing', 'Mathematics & Computer Science', 'Philosophy & Epistemology'];
+            const rawTags = Array.from(new Set(memes.map(m => m.tag).filter(Boolean)));
+            const tags = rawTags.sort((a, b) => {
+                const ia = preferredOrder.indexOf(a);
+                const ib = preferredOrder.indexOf(b);
+                if (ia === -1 && ib === -1) return a.localeCompare(b);
+                if (ia === -1) return 1;
+                if (ib === -1) return -1;
+                return ia - ib;
+            });
+            const tabsEl = document.getElementById('memeFilterTabs');
+            tabsEl.innerHTML = `<button class="filter-btn active" data-tag="all">All Memes (${memes.length})</button>` +
+                tags.map(t => {
+                    const count = memes.filter(m => m.tag === t).length;
+                    return `<button class="filter-btn" data-tag="${t}">${t} (${count})</button>`;
+                }).join('');
+
+            tabsEl.querySelectorAll('.filter-btn').forEach(btn => {
+                btn.addEventListener('click', () => {
+                    tabsEl.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+                    btn.classList.add('active');
+                    activeTag = btn.getAttribute('data-tag');
+                    renderMemes();
+                });
+            });
+        }
+
+        function renderMemes() {
+            const memes = (SITE_DATA.memes || []).filter(m => {
+                if (activeTag !== 'all' && m.tag !== activeTag) return false;
+                if (searchQuery) {
+                    const hay = `${m.title} ${m.desc || m.description || ''} ${m.explanation} ${m.tag}`.toLowerCase();
+                    if (!hay.includes(searchQuery.toLowerCase())) return false;
+                }
+                return true;
+            });
+
+            const grid = document.getElementById('memeGrid');
+            grid.innerHTML = memes.map((m, idx) => `
+                <article class="meme-card">
+                    <div class="meme-img-frame" onclick="openLightbox('${m.id}')">
+                        <img src="${m.image}" alt="${m.title}" loading="lazy">
+                        <span class="zoom-hint">🔍 Click to Enlarge</span>
+                    </div>
+                    <div class="meme-body">
+                        <div class="meme-meta">
+                            <span class="meme-tag">${m.tag || 'Physics & Math'}</span>
+                            <span class="meme-index">#${idx + 1}</span>
+                        </div>
+                        <h3 class="meme-title">${m.title}</h3>
+                        <p class="meme-desc">${m.desc || m.description || ''}</p>
+                        <div class="meme-actions">
+                            <button class="explain-btn ${allExpanded ? 'open' : ''}" id="btn-${m.id}" onclick="toggleExplain('${m.id}')">
+                                ${allExpanded ? '🔼 Hide Technical Explanation' : '💡 Show Technical Explanation'}
+                            </button>
+                        </div>
+                        <div class="meme-explanation ${allExpanded ? 'open' : ''}" id="exp-${m.id}">
+                            <strong>Why it works:</strong> ${m.explanation || ''}
+                        </div>
+                    </div>
+                </article>
+            `).join('');
+        }
+
+        function toggleExplain(id) {
+            const expEl = document.getElementById('exp-' + id);
+            const btnEl = document.getElementById('btn-' + id);
+            if (!expEl || !btnEl) return;
+            const isOpen = expEl.classList.toggle('open');
+            btnEl.classList.toggle('open', isOpen);
+            btnEl.textContent = isOpen ? '🔼 Hide Technical Explanation' : '💡 Show Technical Explanation';
+        }
+
+        function toggleAllExplanations() {
+            allExpanded = !allExpanded;
+            const btn = document.getElementById('expandAllBtn');
+            btn.classList.toggle('active', allExpanded);
+            btn.textContent = allExpanded ? '🔼 Collapse All Explanations' : '💡 Expand All Explanations';
+            renderMemes();
+        }
+
+        function openLightbox(id) {
+            const m = (SITE_DATA.memes || []).find(x => x.id === id);
+            if (!m) return;
+            document.getElementById('lightboxImg').src = m.image;
+            document.getElementById('lightboxTag').textContent = m.tag || 'Science Meme';
+            document.getElementById('lightboxTitle').textContent = m.title;
+            document.getElementById('lightboxDesc').textContent = m.desc || m.description || '';
+            document.getElementById('lightboxExp').textContent = m.explanation || '';
+            document.getElementById('lightboxModal').classList.add('open');
+        }
+
+        function closeLightbox() {
+            document.getElementById('lightboxModal').classList.remove('open');
+        }
+
+        document.getElementById('memeSearchInput').addEventListener('input', e => {
+            searchQuery = e.target.value;
+            renderMemes();
+        });
+
+        document.getElementById('mobileToggle').addEventListener('click', () => {
+            document.getElementById('navMenu').classList.toggle('active');
+        });
+
+        document.addEventListener('keydown', e => {
+            if (e.key === 'Escape') closeLightbox();
+        });
+
+        function syncThemeBtn() {
+            const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+            const icon = document.getElementById('themeToggleIcon');
+            const label = document.getElementById('themeToggleLabel');
+            if (icon) icon.textContent = isDark ? '☀️' : '🌙';
+            if (label) label.textContent = isDark ? 'Light' : 'Dark';
+        }
+
+        function toggleTheme() {
+            const current = document.documentElement.getAttribute('data-theme') || 'dark';
+            const next = current === 'dark' ? 'light' : 'dark';
+            document.documentElement.setAttribute('data-theme', next);
+            localStorage.setItem('syed_theme', next);
+            syncThemeBtn();
+        }
+
+        syncThemeBtn();
+        initMemes();
+    </script>
+</body>
+</html>
