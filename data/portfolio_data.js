@@ -14,7 +14,7 @@ window.PORTFOLIO_DATA = {
     "avatar": "images/avatar.JPG",
     "metrics": [
       {
-        "value": "71",
+        "value": "73",
         "label": "Citations (Google Scholar ↗)",
         "url": "https://scholar.google.com/citations?user=8EK8VJMAAAAJ"
       },
