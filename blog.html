@@ -563,6 +563,15 @@
             display: block;
         }
 
+        .reader-topbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 0.75rem;
+            margin-bottom: 1.5rem;
+            flex-wrap: wrap;
+        }
+
         .reader-back {
             display: inline-flex;
             align-items: center;
@@ -570,12 +579,25 @@
             font-size: 0.88rem;
             font-weight: 600;
             color: var(--text-secondary);
-            margin-bottom: 1.5rem;
             padding: 0.4rem 0.8rem;
             border-radius: 6px;
             background: var(--bg-page);
             border: 1px solid var(--border-light);
             cursor: pointer;
+        }
+
+        .share-link-btn {
+            background: none;
+            border: none;
+            padding: 0;
+            font: inherit;
+            color: var(--text-secondary);
+            cursor: pointer;
+            transition: color 0.15s ease;
+        }
+
+        .share-link-btn:hover {
+            color: var(--academic-blue);
         }
 
         .reader-back:hover {
@@ -766,7 +788,10 @@
     <main class="container">
         <!-- Single Post Reader View -->
         <article class="reader-view" id="readerView">
-            <button class="reader-back" onclick="closeReader()">← Back to All Articles</button>
+            <div class="reader-topbar">
+                <button class="reader-back" onclick="closeReader()">← Back to All Articles</button>
+                <button class="reader-back" id="readerShareBtn" type="button">🔗 Copy Share Link</button>
+            </div>
             <div class="post-meta" id="readerMeta"></div>
             <h1 class="reader-title" id="readerTitle"></h1>
             <div class="post-tags" id="readerTags"></div>
@@ -917,7 +942,10 @@
                             </div>
                             <div class="post-footer">
                                 <a href="?post=${encodeURIComponent(slug)}" onclick="openPost('${slug}', event)">Read Article →</a>
-                                ${p.external_url ? `<a href="${p.external_url}" ${hasExt ? 'target="_blank"' : ''} style="color:var(--text-secondary);">${extLabel}</a>` : ''}
+                                <div style="display:flex; align-items:center; gap:0.85rem;">
+                                    <button type="button" class="share-link-btn" onclick="copyPostShareLink('${slug}', ${Boolean(p.cover_image)}, this)" title="Copy link with social preview">🔗 Share</button>
+                                    ${p.external_url ? `<a href="${p.external_url}" ${hasExt ? 'target="_blank"' : ''} style="color:var(--text-secondary);">${extLabel}</a>` : ''}
+                                </div>
                             </div>
                         </div>
                     </article>
@@ -927,6 +955,18 @@
             if (window.MathJax && window.MathJax.typesetPromise) {
                 window.MathJax.typesetPromise([grid]);
             }
+        }
+
+        function copyPostShareLink(slug, hasCover, btnEl) {
+            const url = hasCover
+                ? `https://syedshubha.com/p/${encodeURIComponent(slug)}`
+                : `https://syedshubha.com/blog.html?post=${encodeURIComponent(slug)}`;
+            navigator.clipboard.writeText(url).then(() => {
+                if (!btnEl) return;
+                const orig = btnEl.textContent;
+                btnEl.textContent = '✓ Link Copied!';
+                setTimeout(() => { btnEl.textContent = orig; }, 1800);
+            });
         }
 
         function openPost(slug, evt) {
@@ -953,6 +993,12 @@
             if (found) {
                 listingEl.style.display = 'none';
                 readerEl.classList.add('active');
+                const foundSlug = found.slug || found.id;
+                const shareBtn = document.getElementById('readerShareBtn');
+                if (shareBtn) {
+                    shareBtn.textContent = '🔗 Copy Share Link';
+                    shareBtn.onclick = () => copyPostShareLink(foundSlug, Boolean(found.cover_image), shareBtn);
+                }
                 document.getElementById('readerMeta').innerHTML = `
                     <span class="post-cat">${found.category || 'Article'}</span>
                     <span>•</span>
