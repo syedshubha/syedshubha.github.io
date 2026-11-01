@@ -440,15 +440,21 @@
             border-radius: 2px;
         }
 
-        /* Hero Section - Distinguished Scholarly Header */
+        /* Hero Section - Distinguished Scholarly Header (Light Mode Default, Dark Mode Override) */
         .hero {
             margin-top: 66px;
             padding: 4.25rem 2rem 3.75rem;
-            background: linear-gradient(160deg, #160b28 0%, #24113f 55%, #3b1968 100%);
-            color: #ffffff;
+            background: linear-gradient(160deg, #faf7ff 0%, #f1e9fe 55%, #fcf5e3 100%);
+            color: #160b28;
             position: relative;
             overflow: hidden;
             border-bottom: 3px solid #c59b27;
+            transition: background 0.25s ease, color 0.25s ease;
+        }
+
+        html[data-theme="dark"] .hero {
+            background: linear-gradient(160deg, #160b28 0%, #24113f 55%, #3b1968 100%);
+            color: #ffffff;
         }
 
         .hero::before {
@@ -456,11 +462,18 @@
             position: absolute;
             inset: 0;
             background-image:
+                radial-gradient(rgba(70, 29, 124, 0.08) 1px, transparent 1px),
+                linear-gradient(to right, rgba(70, 29, 124, 0.03) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(70, 29, 124, 0.03) 1px, transparent 1px);
+            background-size: 24px 24px, 72px 72px, 72px 72px;
+            pointer-events: none;
+        }
+
+        html[data-theme="dark"] .hero::before {
+            background-image:
                 radial-gradient(rgba(255, 255, 255, 0.06) 1px, transparent 1px),
                 linear-gradient(to right, rgba(255, 255, 255, 0.025) 1px, transparent 1px),
                 linear-gradient(to bottom, rgba(255, 255, 255, 0.025) 1px, transparent 1px);
-            background-size: 24px 24px, 72px 72px, 72px 72px;
-            pointer-events: none;
         }
 
         .hero-container {
@@ -478,15 +491,21 @@
             display: inline-flex;
             align-items: center;
             gap: 0.5rem;
-            background: rgba(255, 255, 255, 0.1);
-            border: 1px solid rgba(255, 255, 255, 0.18);
-            color: #e2e8f0;
+            background: rgba(70, 29, 124, 0.08);
+            border: 1px solid rgba(70, 29, 124, 0.2);
+            color: #2b144d;
             padding: 0.35rem 0.85rem;
             border-radius: 999px;
             font-size: 0.82rem;
             font-weight: 500;
             letter-spacing: 0.02em;
             margin-bottom: 1.15rem;
+        }
+
+        html[data-theme="dark"] .institution-badge {
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.18);
+            color: #e2e8f0;
         }
 
         .institution-badge .dot {
@@ -501,44 +520,67 @@
             font-weight: 700;
             line-height: 1.12;
             margin-bottom: 0.6rem;
+            color: #160b28;
+        }
+
+        html[data-theme="dark"] .hero h1 {
             color: #ffffff;
         }
 
         .hero-role {
             font-size: 1.3rem;
-            font-weight: 400;
-            color: #d8c27a;
+            font-weight: 500;
+            color: #5b259f;
             margin-bottom: 0.65rem;
             font-family: 'Newsreader', Georgia, serif;
         }
 
+        html[data-theme="dark"] .hero-role {
+            font-weight: 400;
+            color: #d8c27a;
+        }
+
         .hero-education {
             font-size: 0.92rem;
-            color: #cbd5e1;
+            color: #4a3869;
             margin-bottom: 1.25rem;
             font-family: 'JetBrains Mono', monospace;
         }
 
+        html[data-theme="dark"] .hero-education {
+            color: #cbd5e1;
+        }
+
         .hero-bio {
             font-size: 1.02rem;
-            color: #e2e8f0;
+            color: #2d1f47;
             line-height: 1.7;
             margin-bottom: 1.5rem;
             max-width: 680px;
         }
 
+        html[data-theme="dark"] .hero-bio {
+            color: #e2e8f0;
+        }
+
         /* Hero Right Column: Profile Photo Card */
         .hero-profile-card {
-            background: rgba(18, 10, 33, 0.72);
-            border: 1px solid rgba(212, 175, 55, 0.28);
+            background: rgba(255, 255, 255, 0.88);
+            border: 1px solid rgba(197, 155, 39, 0.45);
             border-radius: var(--radius-lg);
             padding: 2rem 1.75rem;
             backdrop-filter: blur(10px);
-            box-shadow: 0 12px 32px rgba(0, 0, 0, 0.35);
+            box-shadow: 0 12px 32px rgba(43, 20, 77, 0.1);
             display: flex;
             flex-direction: column;
             align-items: center;
             text-align: center;
+        }
+
+        html[data-theme="dark"] .hero-profile-card {
+            background: rgba(18, 10, 33, 0.72);
+            border: 1px solid rgba(212, 175, 55, 0.28);
+            box-shadow: 0 12px 32px rgba(0, 0, 0, 0.35);
         }
 
         .profile-photo-wrap {
@@ -556,36 +598,56 @@
             border-radius: 16px;
             object-fit: cover;
             border: 2.5px solid rgba(212, 175, 55, 0.65);
-            box-shadow: 0 10px 28px rgba(0, 0, 0, 0.5);
+            box-shadow: 0 10px 28px rgba(0, 0, 0, 0.25);
             flex-shrink: 0;
+        }
+
+        html[data-theme="dark"] .profile-image {
+            box-shadow: 0 10px 28px rgba(0, 0, 0, 0.5);
         }
 
         .profile-caption h3 {
             font-size: 1.4rem;
-            color: #ffffff;
+            color: #160b28;
             margin-bottom: 0.35rem;
             font-family: 'Newsreader', Georgia, serif;
+        }
+
+        html[data-theme="dark"] .profile-caption h3 {
+            color: #ffffff;
         }
 
         .profile-caption-role {
             font-size: 1.05rem;
             font-weight: 600;
-            color: #ffffff;
+            color: #160b28;
             margin-bottom: 0.35rem;
             font-family: 'Newsreader', Georgia, serif;
             letter-spacing: 0.01em;
         }
 
+        html[data-theme="dark"] .profile-caption-role {
+            color: #ffffff;
+        }
+
         .profile-caption-dept {
             font-size: 0.86rem;
-            color: #cbd5e1;
+            color: #4a3869;
             line-height: 1.45;
+        }
+
+        html[data-theme="dark"] .profile-caption-dept {
+            color: #cbd5e1;
         }
 
         .profile-caption p {
             font-size: 0.88rem;
-            color: #cbd5e1;
+            color: #4a3869;
             line-height: 1.5;
+        }
+
+        html[data-theme="dark"] .profile-caption p {
+            color: #cbd5e1;
         }
 
         .hero-actions {
@@ -622,25 +684,44 @@
         }
 
         .btn-light {
-            background: rgba(255, 255, 255, 0.1);
-            color: #ffffff;
-            border-color: rgba(255, 255, 255, 0.22);
+            background: rgba(255, 255, 255, 0.9);
+            color: #2b144d;
+            border-color: rgba(70, 29, 124, 0.25);
+            box-shadow: 0 2px 8px rgba(22, 11, 40, 0.06);
         }
 
         .btn-light:hover {
+            background: #461d7c;
+            color: #ffffff;
+            border-color: #461d7c;
+            transform: translateY(-1px);
+        }
+
+        html[data-theme="dark"] .btn-light {
+            background: rgba(255, 255, 255, 0.1);
+            color: #ffffff;
+            border-color: rgba(255, 255, 255, 0.22);
+            box-shadow: none;
+        }
+
+        html[data-theme="dark"] .btn-light:hover {
             background: rgba(255, 255, 255, 0.18);
             color: #ffffff;
-            transform: translateY(-1px);
+            border-color: rgba(255, 255, 255, 0.35);
         }
 
         .btn-qsvt-glow {
             position: relative;
-            background: linear-gradient(135deg, rgba(70, 29, 124, 0.55), rgba(212, 175, 55, 0.22));
-            color: #ffffff;
-            border: 1px solid rgba(212, 175, 55, 0.65);
+            background: linear-gradient(135deg, #461d7c, #5f27a6) !important;
+            color: #ffffff !important;
+            border: 1px solid rgba(212, 175, 55, 0.75) !important;
             box-shadow: 0 0 16px rgba(212, 175, 55, 0.22), 0 0 28px rgba(112, 26, 179, 0.25);
             transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
             animation: qsvtQuantumGlow 4s ease-in-out infinite alternate;
+        }
+
+        html[data-theme="dark"] .btn-qsvt-glow {
+            background: linear-gradient(135deg, rgba(70, 29, 124, 0.55), rgba(212, 175, 55, 0.22)) !important;
         }
 
         .btn-qsvt-glow svg {
@@ -649,9 +730,9 @@
         }
 
         .btn-qsvt-glow:hover {
-            background: linear-gradient(135deg, rgba(70, 29, 124, 0.78), rgba(212, 175, 55, 0.35));
-            border-color: #fde047;
-            color: #ffffff;
+            background: linear-gradient(135deg, rgba(70, 29, 124, 0.92), rgba(212, 175, 55, 0.55)) !important;
+            border-color: #fde047 !important;
+            color: #ffffff !important;
             transform: translateY(-2px);
             box-shadow: 0 0 24px rgba(212, 175, 55, 0.45), 0 0 36px rgba(183, 148, 244, 0.4);
         }
@@ -673,28 +754,44 @@
             gap: 0.65rem;
             align-items: center;
             padding-top: 1.15rem;
-            border-top: 1px solid rgba(255, 255, 255, 0.12);
+            border-top: 1px solid rgba(70, 29, 124, 0.15);
             font-size: 0.84rem;
         }
 
+        html[data-theme="dark"] .hero-QuickLinks {
+            border-top: 1px solid rgba(255, 255, 255, 0.12);
+        }
+
         .hero-QuickLinks a {
-            color: #e2e8f0;
+            color: #2b144d;
             display: inline-flex;
             align-items: center;
             gap: 0.45rem;
             font-weight: 500;
             padding: 0.35rem 0.7rem;
             border-radius: 6px;
-            background: rgba(255, 255, 255, 0.06);
-            border: 1px solid rgba(255, 255, 255, 0.12);
+            background: rgba(255, 255, 255, 0.82);
+            border: 1px solid rgba(70, 29, 124, 0.2);
             transition: all 0.2s ease;
         }
 
         .hero-QuickLinks a:hover {
             color: #ffffff;
+            background: #461d7c;
+            border-color: #461d7c;
+            transform: translateY(-1px);
+        }
+
+        html[data-theme="dark"] .hero-QuickLinks a {
+            color: #e2e8f0;
+            background: rgba(255, 255, 255, 0.06);
+            border: 1px solid rgba(255, 255, 255, 0.12);
+        }
+
+        html[data-theme="dark"] .hero-QuickLinks a:hover {
+            color: #ffffff;
             background: rgba(255, 255, 255, 0.14);
             border-color: rgba(212, 175, 55, 0.5);
-            transform: translateY(-1px);
         }
 
         .hero-QuickLinks svg,
@@ -1479,10 +1576,11 @@
 
         /* Outreach & Memeology Banner */
         .outreach-banner {
-            background: linear-gradient(135deg, var(--navy-900) 0%, #1e1b4b 100%);
+            background: linear-gradient(135deg, #f6f0ff 0%, #fcf5e3 100%);
+            border: 1.5px solid rgba(197, 155, 39, 0.45);
             border-radius: var(--radius-lg);
             padding: 2.75rem 3rem;
-            color: #ffffff;
+            color: #160b28;
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -1497,13 +1595,21 @@
 
         .outreach-text h2 {
             font-size: 2rem;
-            color: #ffffff;
+            color: #160b28;
             margin-bottom: 0.5rem;
         }
 
+        html[data-theme="dark"] .outreach-text h2 {
+            color: #ffffff;
+        }
+
         .outreach-text p {
-            color: #cbd5e1;
+            color: #3d2c5e;
             font-size: 0.98rem;
+        }
+
+        html[data-theme="dark"] .outreach-text p {
+            color: #cbd5e1;
         }
 
         .outreach-actions {
@@ -1514,10 +1620,10 @@
 
         /* Footer */
         .footer {
-            background: var(--navy-950);
-            color: #cbd5e1;
+            background: #f3ecff;
+            color: #3d2c5e;
             padding: 4rem 2rem 2.5rem;
-            border-top: 1px solid rgba(255, 255, 255, 0.08);
+            border-top: 2px solid rgba(197, 155, 39, 0.35);
         }
 
         .footer-grid {
@@ -1527,19 +1633,31 @@
             grid-template-columns: 1.5fr 1fr 1fr;
             gap: 2.5rem;
             padding-bottom: 2.5rem;
+            border-bottom: 1px solid rgba(70, 29, 124, 0.15);
+        }
+
+        html[data-theme="dark"] .footer-grid {
             border-bottom: 1px solid rgba(255, 255, 255, 0.1);
         }
 
         .footer h3 {
-            color: #ffffff;
+            color: #160b28;
             font-size: 1.25rem;
             margin-bottom: 0.75rem;
         }
 
+        html[data-theme="dark"] .footer h3 {
+            color: #ffffff;
+        }
+
         .footer p {
             font-size: 0.9rem;
-            color: #94a3b8;
+            color: #4a3869;
             line-height: 1.6;
+        }
+
+        html[data-theme="dark"] .footer p {
+            color: #94a3b8;
         }
 
         .footer-links {
@@ -1551,10 +1669,18 @@
         }
 
         .footer-links a {
-            color: #cbd5e1;
+            color: #2b144d;
         }
 
         .footer-links a:hover {
+            color: #5b259f;
+        }
+
+        html[data-theme="dark"] .footer-links a {
+            color: #cbd5e1;
+        }
+
+        html[data-theme="dark"] .footer-links a:hover {
             color: #ffffff;
         }
 
@@ -1565,9 +1691,13 @@
             justify-content: space-between;
             align-items: center;
             font-size: 0.82rem;
-            color: #64748b;
+            color: #5d4a7e;
             flex-wrap: wrap;
             gap: 1rem;
+        }
+
+        html[data-theme="dark"] .footer-bottom {
+            color: #64748b;
         }
 
         /* BibTeX Modal */
@@ -1766,7 +1896,7 @@
         <div class="hero-container">
             <div>
                 <h1 id="heroName">Syed Emad Uddin Shubha</h1>
-                <p class="hero-role" id="heroTitle">Ph.D. Researcher in Quantum Information & Security • Louisiana State University</p>
+                <p class="hero-role" id="heroTitle">Ph.D. Researcher in Quantum Information & Security</p>
                 <p class="hero-bio" id="heroBio">
                     I am a Computer Science Ph.D. researcher and the founding doctoral student in Dr. Tasnuva Farheen's group at Louisiana State University, recipient of the 2026 Quantum Rising Star Award at Rice University (QS3). My research focuses primarily on <strong>Quantum Hardware Security</strong> and <strong>Quantum Communication</strong>. My work also extends to quantum characterization, verification, and validation (QCVV) and the analysis of non-classical correlations from an information-theoretic perspective.
                 </p>
