@@ -1,7 +1,7 @@
 # Syed Shubha - Academic Portfolio & Quantum Information Hub
 
 [![Live Site](https://img.shields.io/badge/Live_Site-syedshubha.github.io-461d7c?style=flat&logo=github)](https://syedshubha.github.io/)
-[![Google Scholar](https://img.shields.io/badge/Google_Scholar-73_Citations-4285F4?style=flat&logo=google-scholar)](https://scholar.google.com/citations?user=8EK8VJMAAAAJ)
+[![Google Scholar](https://img.shields.io/badge/Google_Scholar-75_Citations-4285F4?style=flat&logo=google-scholar)](https://scholar.google.com/citations?user=8EK8VJMAAAAJ)
 [![ORCID](https://img.shields.io/badge/ORCID-0009--0005--1435--5958-A6CE39?style=flat&logo=orcid)](https://orcid.org/0009-0005-1435-5958)
 [![Award](https://img.shields.io/badge/Award-Quantum_Rising_Star_2026-d4af37?style=flat)](https://syedshubha.github.io/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
@@ -35,7 +35,7 @@ The website is engineered with pure vanilla web technologies (HTML5, modern CSS3
 ### 1. Main Portfolio (`index.html`)
 - **Scholarly Profile**: Compact academic bio, research appointments, education history, and downloadable Curriculum Vitae.
 - **Dual Research Pillars**: Interactive cards breaking down primary focus areas, methodology, and key accepted papers.
-- **Scholarly Impact Strip**: Live citation metrics (73 citations, h-index 4, i10-index 3) and academic honors including the 2026 Quantum Rising Star Award (Rice University / QS3).
+- **Scholarly Impact Strip**: Live citation metrics (75 citations, h-index 4, i10-index 3) and academic honors including the 2026 Quantum Rising Star Award (Rice University / QS3).
 - **Searchable Publication Repository**: Real-time filtering (Selected, First-Author, Hardware Security, Communication & QEC, Co-Supervised), live search query, modal abstracts, one-click BibTeX downloads, and citation copying.
 - **Academic Ecosystem**: Tracked updates timeline, invited talks, service/reviewing duties, teaching assistantships, and co-supervised Ph.D. mentee roster.
 - **LSU Academic Theme**: Custom Royal Purple (`#461D7C`) and Gold (`#D4AF37`) palette with persistent dark/light theme switching.
