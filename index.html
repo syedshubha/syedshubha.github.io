@@ -23,6 +23,11 @@
     <meta name="twitter:creator" content="@syed_shubha">
     <script>
         (function() {
+            if (window.location.protocol !== 'file:' && !document.querySelector('base')) {
+                const base = document.createElement('base');
+                base.href = '/';
+                document.head.insertBefore(base, document.head.firstChild);
+            }
             const saved = localStorage.getItem('syed_theme') || 'dark';
             document.documentElement.setAttribute('data-theme', saved);
         })();
@@ -2266,7 +2271,7 @@
             if (p.bio) document.getElementById('heroBio').innerHTML = p.bio;
             if (p.cv_url) document.getElementById('cvDownloadBtn').href = p.cv_url;
             const avatarEl = document.getElementById('heroAvatar');
-            if (avatarEl && p.avatar) avatarEl.src = p.avatar;
+            if (avatarEl && p.avatar) avatarEl.src = window.location.protocol !== 'file:' ? '/' + p.avatar.replace(/^\.?\//, '') : p.avatar;
 
             const tagsEl = document.getElementById('interestTags');
             if (tagsEl && Array.isArray(p.interests)) {

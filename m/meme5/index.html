@@ -30,6 +30,11 @@
     <script>window.__INITIAL_MEME_ID__ = "meme5";</script>
     <script>
         (function() {
+            if (window.location.protocol !== 'file:' && !document.querySelector('base')) {
+                const base = document.createElement('base');
+                base.href = '/';
+                document.head.insertBefore(base, document.head.firstChild);
+            }
             const saved = localStorage.getItem('syed_theme') || 'dark';
             document.documentElement.setAttribute('data-theme', saved);
         })();
@@ -1405,6 +1410,12 @@
             return text.replace(/(https?:\/\/[^\s<)]+)/g, '<a href="$1" target="_blank" rel="noopener">$1 ↗</a>');
         }
 
+        function resolveAsset(url) {
+            if (!url) return '';
+            if (/^(https?:|data:|\/)/i.test(url)) return url;
+            return window.location.protocol !== 'file:' ? '/' + url.replace(/^\.?\//, '') : url;
+        }
+
         function buildSocialShareButtons(shareUrl, titleText) {
             const u = encodeURIComponent(shareUrl);
             const t = encodeURIComponent(titleText);
@@ -1489,7 +1500,7 @@
             grid.innerHTML = memes.map((m, idx) => `
                 <article class="meme-card">
                     <div class="meme-img-frame" onclick="openLightbox('${m.id}')">
-                        <img src="${m.image}" alt="${m.title}" loading="lazy">
+                        <img src="${resolveAsset(m.image)}" alt="${m.title}" decoding="async">
                         <span class="zoom-hint">🔍 Click to Enlarge</span>
                     </div>
                     <div class="meme-body">
@@ -1544,7 +1555,7 @@
                     history.pushState({ meme: m.id }, '', cleanMemePath);
                 }
             }
-            document.getElementById('lightboxImg').src = m.image;
+            document.getElementById('lightboxImg').src = resolveAsset(m.image);
             document.getElementById('lightboxTag').textContent = m.tag || 'Science Meme';
             document.getElementById('lightboxTitle').textContent = m.title;
             document.getElementById('lightboxDesc').textContent = m.desc || m.description || '';

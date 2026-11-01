@@ -28,6 +28,11 @@
     <meta name="twitter:creator" content="@syed_shubha">
     <script>
         (function() {
+            if (window.location.protocol !== 'file:' && !document.querySelector('base')) {
+                const base = document.createElement('base');
+                base.href = '/';
+                document.head.insertBefore(base, document.head.firstChild);
+            }
             const saved = localStorage.getItem('syed_theme') || 'dark';
             document.documentElement.setAttribute('data-theme', saved);
         })();
@@ -1103,6 +1108,12 @@
         let activeCategory = 'all';
         let searchQuery = '';
 
+        function resolveAsset(url) {
+            if (!url) return '';
+            if (/^(https?:|data:|\/)/i.test(url)) return url;
+            return window.location.protocol !== 'file:' ? '/' + url.replace(/^\.?\//, '') : url;
+        }
+
         function renderMarkdown(md) {
             if (!md) return '';
             const mathBlocks = [];
@@ -1120,7 +1131,7 @@
                 .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
                 .replace(/\*(.*?)\*/g, '<em>$1</em>')
                 .replace(/`([^`]+)`/g, '<code>$1</code>')
-                .replace(/!\[([^\]]*)\]\(([^)]+)\)/g, '<img src="$2" alt="$1" style="max-width:420px; width:100%; display:block; border-radius:8px; margin:1.5rem auto;">')
+                .replace(/!\[([^\]]*)\]\(([^)]+)\)/g, (_, alt, src) => `<img src="${resolveAsset(src)}" alt="${alt}" style="max-width:420px; width:100%; display:block; border-radius:8px; margin:1.5rem auto;">`)
                 .replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2" target="_blank">$1</a>');
 
             const blocks = html.split(/\n\s*\n/);
@@ -1268,7 +1279,7 @@
 
                 return `
                     <article class="post-card">
-                        ${p.cover_image ? `<a href="${postHref}" onclick="openPost('${slug}', event)"><img src="${p.cover_image}" alt="${p.title}" class="post-cover"></a>` : ''}
+                        ${p.cover_image ? `<a href="${postHref}" onclick="openPost('${slug}', event)"><img src="${resolveAsset(p.cover_image)}" alt="${p.title}" class="post-cover"></a>` : ''}
                         <div class="post-body">
                             <div class="post-meta">
                                 <span class="post-cat" style="cursor:pointer;" title="Filter by ${p.category}" onclick="selectCategory('${(p.category || '').replace(/'/g, "\\'")}')">${p.category || 'Article'}</span>
@@ -1376,7 +1387,7 @@
 
                 const coverEl = document.getElementById('readerCover');
                 if (found.cover_image) {
-                    coverEl.src = found.cover_image;
+                    coverEl.src = resolveAsset(found.cover_image);
                     coverEl.style.display = 'block';
                 } else {
                     coverEl.style.display = 'none';
