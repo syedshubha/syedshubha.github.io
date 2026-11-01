@@ -146,12 +146,29 @@
             box-sizing: border-box;
         }
 
+        html, body {
+            max-width: 100%;
+            overflow-x: hidden;
+        }
+
         body {
             font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
             color: var(--text-primary);
             background-color: var(--bg-page);
             line-height: 1.65;
             -webkit-font-smoothing: antialiased;
+        }
+
+        .meme-card, .outreach-card, .prng-notice {
+            min-width: 0;
+            max-width: 100%;
+            overflow-wrap: anywhere;
+            word-break: break-word;
+        }
+
+        .meme-title, .meme-desc, .meme-explanation, .lightbox-exp-box, .prng-meta {
+            overflow-wrap: anywhere;
+            word-break: break-word;
         }
 
         h1, h2, h3, h4 {
@@ -688,6 +705,60 @@
             border-color: var(--navy-900);
         }
 
+        .share-meme-btn {
+            padding: 0.48rem 0.75rem;
+            border-radius: 6px;
+            border: 1px solid var(--border-medium);
+            background: var(--bg-page);
+            color: var(--navy-800);
+            font-size: 0.82rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.18s ease;
+            flex-shrink: 0;
+        }
+
+        .share-meme-btn:hover {
+            border-color: var(--academic-blue);
+            color: var(--academic-blue);
+            background: var(--academic-blue-light);
+        }
+
+        .social-share-drawer {
+            display: none;
+            flex-wrap: wrap;
+            gap: 0.4rem;
+            margin-top: 0.75rem;
+            padding-top: 0.7rem;
+            border-top: 1px dashed var(--border-light);
+        }
+
+        .social-share-drawer.open {
+            display: flex;
+        }
+
+        .social-pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.3rem;
+            font-size: 0.74rem;
+            font-weight: 600;
+            padding: 0.28rem 0.6rem;
+            border-radius: 5px;
+            border: 1px solid var(--border-medium);
+            background: var(--bg-page);
+            color: var(--text-primary);
+            cursor: pointer;
+            text-decoration: none;
+            transition: all 0.15s ease;
+        }
+
+        .social-pill:hover {
+            border-color: var(--academic-blue);
+            color: var(--academic-blue);
+            background: var(--academic-blue-light);
+        }
+
         .meme-explanation {
             display: none;
             margin-top: 0.9rem;
@@ -1083,6 +1154,7 @@
                     <strong style="display:block; font-size:0.8rem; text-transform:uppercase; letter-spacing:0.05em; color:var(--academic-blue-dark); margin-bottom:0.35rem;">💡 Technical Explanation</strong>
                     <p id="lightboxExp" style="font-size:0.92rem; color:var(--navy-800); line-height:1.65;"></p>
                 </div>
+                <div class="social-share-drawer open" id="lightboxShareBar" style="margin-top:0.25rem;"></div>
             </div>
         </div>
     </div>
@@ -1184,6 +1256,40 @@
             else applyShuffle(timeSeed(), 'classical');
             buildFilterTabs();
             renderMemes();
+            const memeParam = new URLSearchParams(window.location.search).get('meme');
+            if (memeParam) {
+                openLightbox(memeParam);
+            }
+        }
+
+        function buildSocialShareButtons(shareUrl, titleText) {
+            const u = encodeURIComponent(shareUrl);
+            const t = encodeURIComponent(titleText);
+            const wa = encodeURIComponent(`${titleText} — ${shareUrl}`);
+            return `
+                <button type="button" class="social-pill" onclick="copyMemeUrl('${shareUrl}', this)">📋 Copy Link</button>
+                <a class="social-pill" href="https://api.whatsapp.com/send?text=${wa}" target="_blank" rel="noopener">💬 WhatsApp</a>
+                <a class="social-pill" href="https://twitter.com/intent/tweet?url=${u}&text=${t}" target="_blank" rel="noopener">𝕏 Post</a>
+                <a class="social-pill" href="https://www.linkedin.com/sharing/share-offsite/?url=${u}" target="_blank" rel="noopener">in LinkedIn</a>
+                <a class="social-pill" href="https://www.facebook.com/sharer/sharer.php?u=${u}" target="_blank" rel="noopener">f Facebook</a>
+                <a class="social-pill" href="https://www.reddit.com/submit?url=${u}&title=${t}" target="_blank" rel="noopener">r/ Reddit</a>
+            `;
+        }
+
+        function copyMemeUrl(url, btnEl) {
+            navigator.clipboard.writeText(url).then(() => {
+                if (!btnEl) return;
+                const orig = btnEl.textContent;
+                btnEl.textContent = '✓ Copied!';
+                setTimeout(() => { btnEl.textContent = orig; }, 1600);
+            });
+        }
+
+        function toggleMemeShare(id, btnEl) {
+            const url = `https://syedshubha.com/m/${encodeURIComponent(id)}`;
+            copyMemeUrl(url, btnEl);
+            const drawer = document.getElementById('meme-share-' + id);
+            if (drawer) drawer.classList.toggle('open');
         }
 
         function buildFilterTabs() {
@@ -1243,6 +1349,10 @@
                             <button class="explain-btn ${allExpanded ? 'open' : ''}" id="btn-${m.id}" onclick="toggleExplain('${m.id}')">
                                 ${allExpanded ? '🔼 Hide Technical Explanation' : '💡 Show Technical Explanation'}
                             </button>
+                            <button type="button" class="share-meme-btn" onclick="toggleMemeShare('${m.id}', this)" title="Share meme with preview">🔗 Share</button>
+                        </div>
+                        <div class="social-share-drawer" id="meme-share-${m.id}">
+                            ${buildSocialShareButtons('https://syedshubha.com/m/' + encodeURIComponent(m.id), m.title)}
                         </div>
                         <div class="meme-explanation ${allExpanded ? 'open' : ''}" id="exp-${m.id}">
                             <strong>Why it works:</strong> ${m.explanation || ''}
@@ -1277,6 +1387,10 @@
             document.getElementById('lightboxTitle').textContent = m.title;
             document.getElementById('lightboxDesc').textContent = m.desc || m.description || '';
             document.getElementById('lightboxExp').textContent = m.explanation || '';
+            const lbShare = document.getElementById('lightboxShareBar');
+            if (lbShare) {
+                lbShare.innerHTML = buildSocialShareButtons('https://syedshubha.com/m/' + encodeURIComponent(m.id), m.title);
+            }
             document.getElementById('lightboxModal').classList.add('open');
         }
 

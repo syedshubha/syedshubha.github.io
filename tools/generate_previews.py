@@ -76,7 +76,9 @@ PAGE = """<!DOCTYPE html>
 def main():
     data = json.load(open(os.path.join(ROOT, 'data', 'portfolio_data.json')))
     os.makedirs(os.path.join(ROOT, 'images', 'og'), exist_ok=True)
+    os.makedirs(os.path.join(ROOT, 'images', 'og', 'memes'), exist_ok=True)
     os.makedirs(os.path.join(ROOT, 'p'), exist_ok=True)
+    os.makedirs(os.path.join(ROOT, 'm'), exist_ok=True)
     made = []
     for p in data['posts']:
         if p.get('hide_from_blog') or not p.get('cover_image'):
@@ -92,9 +94,29 @@ def main():
             target=f'/blog.html?post={slug}',
         )
         open(os.path.join(ROOT, 'p', f'{slug}.html'), 'w').write(page)
-        made.append((slug, size))
-    for slug, size in made:
-        print(f'{SITE}/p/{slug}   (og image {size // 1024} KB)')
+        made.append((f'/p/{slug}', size))
+
+    meme_made = []
+    for m in data.get('memes', []):
+        if not m.get('image'):
+            continue
+        mid = m['id']
+        size = make_og_image(os.path.join(ROOT, m['image']), os.path.join(ROOT, 'images', 'og', 'memes', f'{mid}.jpg'))
+        desc_raw = m.get('desc') or m.get('description') or m.get('explanation') or ''
+        page = PAGE.format(
+            title=html.escape(f"{m['title']} | Quantum Memeology", quote=True),
+            desc=html.escape(desc_raw, quote=True),
+            url=f'{SITE}/m/{mid}',
+            img=f'{SITE}/images/og/memes/{mid}.jpg',
+            w=W, h=H,
+            target=f'/memes.html?meme={mid}',
+        )
+        open(os.path.join(ROOT, 'm', f'{mid}.html'), 'w').write(page)
+        meme_made.append((f'/m/{mid}', size))
+
+    for path, size in made:
+        print(f'{SITE}{path}   (og image {size // 1024} KB)')
+    print(f'Generated {len(meme_made)} meme preview pages under {SITE}/m/<id> (max og image {max(s for _, s in meme_made) // 1024} KB)')
 
 if __name__ == '__main__':
     main()
