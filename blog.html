@@ -831,6 +831,54 @@
             border: 1px solid var(--border-light);
         }
 
+        .reader-toc {
+            background: var(--bg-page);
+            border: 1px solid var(--border-medium);
+            border-left: 4px solid var(--academic-blue);
+            border-radius: 0 8px 8px 0;
+            padding: 0.95rem 1.25rem;
+            margin: 0.5rem 0 1.75rem;
+            display: none;
+        }
+
+        .reader-toc-title {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+            color: var(--academic-blue);
+            margin-bottom: 0.55rem;
+            display: block;
+        }
+
+        .reader-toc-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.45rem;
+            list-style: none;
+            margin: 0 !important;
+            padding: 0;
+        }
+
+        .reader-toc-btn {
+            font-size: 0.8rem;
+            font-weight: 600;
+            padding: 0.3rem 0.65rem;
+            border-radius: 6px;
+            background: var(--bg-surface);
+            border: 1px solid var(--border-light);
+            color: var(--text-primary);
+            cursor: pointer;
+            transition: all 0.15s ease;
+        }
+
+        .reader-toc-btn:hover {
+            border-color: var(--academic-blue);
+            color: var(--academic-blue);
+            background: var(--academic-blue-light);
+        }
+
         .reader-content {
             font-size: 1.05rem;
             line-height: 1.8;
@@ -1009,13 +1057,20 @@
         <article class="reader-view" id="readerView">
             <div class="reader-topbar">
                 <button class="reader-back" onclick="closeReader()">← Back to All Articles</button>
-                <button class="reader-back" id="readerShareBtn" type="button">🔗 Share Article</button>
+                <div style="display:flex; gap:0.5rem; flex-wrap:wrap;">
+                    <button class="reader-back" id="readerCiteBtn" type="button" title="Copy BibTeX citation for this article">❝ Cite (BibTeX)</button>
+                    <button class="reader-back" id="readerShareBtn" type="button">🔗 Share Article</button>
+                </div>
             </div>
             <div class="social-share-drawer" id="readerShareDrawer" style="margin-top:0; margin-bottom:1.25rem; padding-top:0; border-top:none;"></div>
             <div class="post-meta" id="readerMeta"></div>
             <h1 class="reader-title" id="readerTitle"></h1>
             <div class="post-tags" id="readerTags"></div>
             <img id="readerCover" class="reader-cover" style="display:none;" alt="">
+            <nav class="reader-toc" id="readerToc" aria-label="Table of Contents">
+                <span class="reader-toc-title">📑 On This Page — Quick Jump</span>
+                <div class="reader-toc-list" id="readerTocList"></div>
+            </nav>
             <div class="reader-content" id="readerContent"></div>
             <div class="reader-external-box" id="readerExternalBox" style="display:none;">
                 <div>
@@ -1207,10 +1262,12 @@
                     : (p.external_url ? 'Interactive Lab ↗' : '');
 
                 const shareUrl = `https://syedshubha.com/p/${encodeURIComponent(slug)}`;
+                const isWeb = window.location.protocol !== 'file:';
+                const postHref = isWeb ? `/p/${encodeURIComponent(slug)}` : `?post=${encodeURIComponent(slug)}`;
 
                 return `
                     <article class="post-card">
-                        ${p.cover_image ? `<a href="?post=${encodeURIComponent(slug)}" onclick="openPost('${slug}', event)"><img src="${p.cover_image}" alt="${p.title}" class="post-cover"></a>` : ''}
+                        ${p.cover_image ? `<a href="${postHref}" onclick="openPost('${slug}', event)"><img src="${p.cover_image}" alt="${p.title}" class="post-cover"></a>` : ''}
                         <div class="post-body">
                             <div class="post-meta">
                                 <span class="post-cat" style="cursor:pointer;" title="Filter by ${p.category}" onclick="selectCategory('${(p.category || '').replace(/'/g, "\\'")}')">${p.category || 'Article'}</span>
@@ -1218,13 +1275,13 @@
                                 <span>${p.date || ''}</span>
                                 ${p.read_time ? `<span>• ${p.read_time}</span>` : ''}
                             </div>
-                            <h2><a href="?post=${encodeURIComponent(slug)}" onclick="openPost('${slug}', event)">${p.title}</a></h2>
+                            <h2><a href="${postHref}" onclick="openPost('${slug}', event)">${p.title}</a></h2>
                             <p class="post-summary">${p.summary || ''}</p>
                             <div class="post-tags">
                                 ${(p.tags || []).map(t => `<span class="tag-pill">${t}</span>`).join('')}
                             </div>
                             <div class="post-footer">
-                                <a href="?post=${encodeURIComponent(slug)}" onclick="openPost('${slug}', event)">Read Article →</a>
+                                <a href="${postHref}" onclick="openPost('${slug}', event)">Read Article →</a>
                                 <div style="display:flex; align-items:center; gap:0.85rem;">
                                     <button type="button" class="share-link-btn" onclick="togglePostShareDrawer('${slug}', this)" title="Share with social preview">🔗 Share</button>
                                     ${p.external_url ? `<a href="${p.external_url}" ${hasExt ? 'target="_blank"' : ''} style="color:var(--text-secondary);">${extLabel}</a>` : ''}
@@ -1245,19 +1302,23 @@
 
         function openPost(slug, evt) {
             if (evt) evt.preventDefault();
-            history.pushState({ post: slug }, '', `?post=${encodeURIComponent(slug)}`);
+            const isWeb = window.location.protocol !== 'file:';
+            history.pushState({ post: slug }, '', isWeb ? `/p/${encodeURIComponent(slug)}` : `?post=${encodeURIComponent(slug)}`);
             checkRoute();
             window.scrollTo({ top: 0, behavior: 'smooth' });
         }
 
         function closeReader() {
-            history.pushState({}, '', 'blog.html');
+            const isWeb = window.location.protocol !== 'file:';
+            history.pushState({}, '', isWeb ? '/blog/' : 'blog.html');
             checkRoute();
         }
 
         function checkRoute() {
             const params = new URLSearchParams(window.location.search);
-            const slug = params.get('post') || params.get('slug') || params.get('id');
+            const pathMatch = window.location.pathname.match(/^\/(?:p|blog)\/([^\/]+?)(?:\.html)?\/?$/);
+            const pathSlug = (pathMatch && pathMatch[1] !== 'index') ? decodeURIComponent(pathMatch[1]) : null;
+            const slug = pathSlug || (history.state && history.state.post) || params.get('post') || params.get('slug') || params.get('id') || window.__INITIAL_POST_SLUG__ || null;
             const orderedPosts = getOrderedVisiblePosts();
             const allPosts = SITE_DATA.posts || [];
             const found = slug ? allPosts.find(p => (p.slug || p.id) === slug) : null;
@@ -1270,8 +1331,16 @@
                 listingEl.style.display = 'none';
                 readerEl.classList.add('active');
                 const foundSlug = found.slug || found.id;
+                if (window.location.protocol !== 'file:') {
+                    const cleanPostPath = `/p/${encodeURIComponent(foundSlug)}`;
+                    if (window.location.pathname !== cleanPostPath || window.location.search) {
+                        history.replaceState({ post: foundSlug }, '', cleanPostPath);
+                    }
+                }
+                document.title = `${found.title} | Syed Emad Uddin Shubha`;
                 const readerShareUrl = `https://syedshubha.com/p/${encodeURIComponent(foundSlug)}`;
                 const shareBtn = document.getElementById('readerShareBtn');
+                const citeBtn = document.getElementById('readerCiteBtn');
                 const readerDrawer = document.getElementById('readerShareDrawer');
                 if (readerDrawer) {
                     readerDrawer.innerHTML = buildSocialShareButtons(readerShareUrl, found.title);
@@ -1282,6 +1351,16 @@
                     shareBtn.onclick = () => {
                         copyRawUrl(readerShareUrl, shareBtn);
                         if (readerDrawer) readerDrawer.classList.toggle('open');
+                    };
+                }
+                if (citeBtn) {
+                    citeBtn.textContent = '❝ Cite (BibTeX)';
+                    citeBtn.onclick = () => {
+                        const yearMatch = (found.date || '2026').match(/\b(20\d{2})\b/);
+                        const yr = yearMatch ? yearMatch[1] : '2026';
+                        const key = 'shubha' + yr + foundSlug.split('-')[0].replace(/[^a-z0-9]/gi, '').toLowerCase();
+                        const bib = `@misc{${key},\n  author = {Shubha, Syed Emad Uddin},\n  title = {{${found.title}}},\n  year = {${yr}},\n  url = {${readerShareUrl}},\n  note = {Syed Shubha Research Blog}\n}`;
+                        copyRawUrl(bib, citeBtn);
                     };
                 }
                 document.getElementById('readerMeta').innerHTML = `
@@ -1302,7 +1381,25 @@
                     coverEl.style.display = 'none';
                 }
 
-                document.getElementById('readerContent').innerHTML = renderMarkdown(found.content || found.summary);
+                const contentEl = document.getElementById('readerContent');
+                contentEl.innerHTML = renderMarkdown(found.content || found.summary);
+
+                // Build automatic Table of Contents for articles with 2+ headings
+                const tocEl = document.getElementById('readerToc');
+                const tocListEl = document.getElementById('readerTocList');
+                if (tocEl && tocListEl) {
+                    const headings = Array.from(contentEl.querySelectorAll('h2'));
+                    if (headings.length >= 2) {
+                        tocListEl.innerHTML = headings.map((h, idx) => {
+                            const secId = 'reader-sec-' + idx;
+                            h.id = secId;
+                            return `<button type="button" class="reader-toc-btn" onclick="document.getElementById('${secId}').scrollIntoView({behavior:'smooth'})">${h.textContent}</button>`;
+                        }).join('');
+                        tocEl.style.display = 'block';
+                    } else {
+                        tocEl.style.display = 'none';
+                    }
+                }
 
                 const extBox = document.getElementById('readerExternalBox');
                 const extBtn = document.getElementById('readerExternalBtn');
@@ -1323,15 +1420,18 @@
                 // Prev / Next article pager
                 const pagerEl = document.getElementById('readerPager');
                 if (pagerEl) {
+                    const isWeb = window.location.protocol !== 'file:';
                     const curIdx = orderedPosts.findIndex(p => (p.slug || p.id) === foundSlug);
                     const prevPost = curIdx > 0 ? orderedPosts[curIdx - 1] : null;
                     const nextPost = (curIdx !== -1 && curIdx < orderedPosts.length - 1) ? orderedPosts[curIdx + 1] : null;
+                    const prevSlug = prevPost ? (prevPost.slug || prevPost.id) : '';
+                    const nextSlug = nextPost ? (nextPost.slug || nextPost.id) : '';
                     pagerEl.innerHTML = `
-                        ${prevPost ? `<a class="reader-pager-card" href="?post=${encodeURIComponent(prevPost.slug || prevPost.id)}" onclick="openPost('${prevPost.slug || prevPost.id}', event)">
+                        ${prevPost ? `<a class="reader-pager-card" href="${isWeb ? '/p/' + encodeURIComponent(prevSlug) : '?post=' + encodeURIComponent(prevSlug)}" onclick="openPost('${prevSlug}', event)">
                             <span class="reader-pager-label">← Previous Article</span>
                             <span class="reader-pager-title">${prevPost.title}</span>
                         </a>` : `<div></div>`}
-                        ${nextPost ? `<a class="reader-pager-card" style="text-align:right;" href="?post=${encodeURIComponent(nextPost.slug || nextPost.id)}" onclick="openPost('${nextPost.slug || nextPost.id}', event)">
+                        ${nextPost ? `<a class="reader-pager-card" style="text-align:right;" href="${isWeb ? '/p/' + encodeURIComponent(nextSlug) : '?post=' + encodeURIComponent(nextSlug)}" onclick="openPost('${nextSlug}', event)">
                             <span class="reader-pager-label">Next Article →</span>
                             <span class="reader-pager-title">${nextPost.title}</span>
                         </a>` : `<div></div>`}
@@ -1342,6 +1442,11 @@
                     window.MathJax.typesetPromise([readerEl]);
                 }
             } else {
+                window.__INITIAL_POST_SLUG__ = null;
+                document.title = 'Research Blog, Essays & Notes | Syed Emad Uddin Shubha';
+                if (window.location.protocol !== 'file:' && window.location.pathname !== '/blog/') {
+                    history.replaceState({}, '', '/blog/' + window.location.search + window.location.hash);
+                }
                 readerEl.classList.remove('active');
                 listingEl.style.display = 'block';
                 if (progEl) progEl.style.width = '0%';

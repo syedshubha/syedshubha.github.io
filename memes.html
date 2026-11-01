@@ -1347,10 +1347,18 @@
         }
 
         async function reshuffleMemes() {
-            history.replaceState({}, '', 'memes.html');
+            const isWeb = window.location.protocol !== 'file:';
+            history.replaceState({}, '', isWeb ? '/memes/' : 'memes.html');
             const q = await fetchQuantumSeed();
             applyShuffle(q !== null ? q : timeSeed(), q !== null ? 'quantum' : 'classical');
             renderMemes();
+        }
+
+        function getRouteMemeId() {
+            const params = new URLSearchParams(window.location.search);
+            const pathMatch = window.location.pathname.match(/^\/(?:m|memes)\/([^\/]+?)(?:\.html)?\/?$/);
+            const pathMeme = (pathMatch && pathMatch[1] !== 'index') ? decodeURIComponent(pathMatch[1]) : null;
+            return pathMeme || (history.state && history.state.meme) || params.get('meme') || params.get('id') || window.__INITIAL_MEME_ID__ || null;
         }
 
         async function initMemes() {
@@ -1358,7 +1366,7 @@
             const param = params.get('seed');
             const parsed = param ? Number(param) : NaN;
             const hasUrlSeed = Number.isFinite(parsed);
-            const memeParam = params.get('meme') || params.get('id');
+            const memeParam = getRouteMemeId();
 
             // Render immediately from bundled window.PORTFOLIO_DATA with zero network delay
             ORIGINAL_MEMES = (SITE_DATA.memes || []).slice();
@@ -1366,8 +1374,17 @@
             buildFilterTabs();
             renderMemes();
             if (memeParam) {
-                openLightbox(memeParam);
+                openLightbox(memeParam, true);
+            } else if (window.location.protocol !== 'file:' && window.location.pathname !== '/memes/') {
+                history.replaceState({}, '', '/memes/' + window.location.search + window.location.hash);
             }
+
+            window.addEventListener('popstate', () => {
+                window.__INITIAL_MEME_ID__ = null;
+                const mid = getRouteMemeId();
+                if (mid) openLightbox(mid, false);
+                else closeLightbox(false);
+            });
 
             // Refresh JSON and quantum seed asynchronously if no URL seed was locked
             if (!hasUrlSeed && !memeParam) {
@@ -1513,10 +1530,17 @@
             renderMemes();
         }
 
-        function openLightbox(id) {
+        function openLightbox(id, updateHistory = true) {
             const m = (SITE_DATA.memes || []).find(x => x.id === id);
             if (!m) return;
             currentLightboxId = m.id;
+            document.title = `${m.title} — Quantum Memeology | Syed Shubha`;
+            if (window.location.protocol !== 'file:' && updateHistory) {
+                const cleanMemePath = `/m/${encodeURIComponent(m.id)}`;
+                if (window.location.pathname !== cleanMemePath || window.location.search) {
+                    history.pushState({ meme: m.id }, '', cleanMemePath);
+                }
+            }
             document.getElementById('lightboxImg').src = m.image;
             document.getElementById('lightboxTag').textContent = m.tag || 'Science Meme';
             document.getElementById('lightboxTitle').textContent = m.title;
@@ -1534,12 +1558,19 @@
             if (!list.length || !currentLightboxId) return;
             const idx = list.findIndex(x => x.id === currentLightboxId);
             const nextIdx = idx === -1 ? 0 : (idx + delta + list.length) % list.length;
-            openLightbox(list[nextIdx].id);
+            openLightbox(list[nextIdx].id, true);
         }
 
-        function closeLightbox() {
+        function closeLightbox(updateHistory = true) {
             document.getElementById('lightboxModal').classList.remove('open');
             currentLightboxId = null;
+            window.__INITIAL_MEME_ID__ = null;
+            document.title = 'Quantum Memeology & Science Outreach | Syed Emad Uddin Shubha';
+            if (window.location.protocol !== 'file:' && updateHistory) {
+                if (window.location.pathname !== '/memes/') {
+                    history.pushState({}, '', '/memes/');
+                }
+            }
         }
 
         document.getElementById('memeSearchInput').addEventListener('input', e => {

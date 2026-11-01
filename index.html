@@ -2068,10 +2068,10 @@
 
             <div class="pub-controls">
                 <div class="filter-tabs" id="pubFilterTabs">
-                    <button class="filter-btn active" data-filter="all">All Publications (11)</button>
-                    <button class="filter-btn" data-filter="journal">Journal Articles (4)</button>
+                    <button class="filter-btn active" data-filter="all">All Publications (12)</button>
+                    <button class="filter-btn" data-filter="journal">Journal Articles (5)</button>
                     <button class="filter-btn" data-filter="conference">Conference Proceedings (7)</button>
-                    <button class="filter-btn" data-filter="first">1st / Corresponding Author (7)</button>
+                    <button class="filter-btn" data-filter="first">1st / Corresponding Author (8)</button>
                     <button class="filter-btn" data-filter="cosupervised">Co-Supervised (4)</button>
                 </div>
                 <input type="search" id="pubSearchInput" class="pub-search" placeholder="Search papers by title, venue, year...">
@@ -2419,8 +2419,10 @@
             // Blog Preview (keep QSVT and Agrippan Trilemma only on main page)
             const blogEl = document.getElementById('blogPreviewContainer');
             if (blogEl && Array.isArray(SITE_DATA.posts)) {
+                const isWeb = window.location.protocol !== 'file:';
                 blogEl.innerHTML = SITE_DATA.posts.filter(post => !post.hide_from_main).slice(0, 2).map(post => {
-                    const readerHref = `blog.html?post=${encodeURIComponent(post.slug || post.id)}`;
+                    const slug = post.slug || post.id;
+                    const readerHref = isWeb ? `/p/${encodeURIComponent(slug)}` : `blog.html?post=${encodeURIComponent(slug)}`;
                     const hasExternal = post.external_url && post.external_url.startsWith('http');
                     return `
                         <article class="post-card">
@@ -2445,6 +2447,26 @@
         function renderPublications() {
             const pubEl = document.getElementById('publicationsContainer');
             if (!pubEl || !SITE_DATA || !Array.isArray(SITE_DATA.publications)) return;
+
+            const allPubs = SITE_DATA.publications;
+            const countMap = {
+                all: allPubs.length,
+                journal: allPubs.filter(p => p.type === 'journal').length,
+                conference: allPubs.filter(p => p.type === 'conference').length,
+                first: allPubs.filter(p => /1st|first|corresponding/i.test(p.role || '')).length,
+                cosupervised: allPubs.filter(p => /co-supervised/i.test(p.role || '')).length
+            };
+            const labelMap = {
+                all: `All Publications (${countMap.all})`,
+                journal: `Journal Articles (${countMap.journal})`,
+                conference: `Conference Proceedings (${countMap.conference})`,
+                first: `1st / Corresponding Author (${countMap.first})`,
+                cosupervised: `Co-Supervised (${countMap.cosupervised})`
+            };
+            document.querySelectorAll('#pubFilterTabs .filter-btn').forEach(btn => {
+                const f = btn.getAttribute('data-filter');
+                if (labelMap[f]) btn.textContent = labelMap[f];
+            });
 
             const filtered = SITE_DATA.publications.filter(pub => {
                 if (currentPubFilter === 'journal' && pub.type !== 'journal') return false;
@@ -2545,6 +2567,9 @@
             if (btt) btt.classList.toggle('visible', window.scrollY > 450);
         }, { passive: true });
 
+        if (window.location.protocol !== 'file:' && window.location.pathname.endsWith('/index.html')) {
+            history.replaceState({}, '', window.location.pathname.replace(/\/index\.html$/, '/') + window.location.search + window.location.hash);
+        }
         syncThemeBtn();
         initPortfolio();
     </script>

@@ -981,6 +981,9 @@ document.getElementById('customCoeffs').addEventListener('input', onPolyChange);
 document.getElementById('polySelect').addEventListener('change', onPolyChange);
 
 function bootApp(){
+  if (window.location.protocol !== 'file:' && window.location.pathname !== '/qsvt/') {
+    history.replaceState({}, '', '/qsvt/' + window.location.search + window.location.hash);
+  }
   rebuildMatrix();
   setTimeout(runOptimisation, 200);
 }

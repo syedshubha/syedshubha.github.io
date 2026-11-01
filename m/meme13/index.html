@@ -1,35 +1,1621 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>A Subtle Truth in QEC | Quantum Memeology | Syed Emad Uddin Shubha</title>
-<meta name="description" content="&quot;If a QECC can correct X and Z errors, it may not correct ZX error.&quot; Why linearity alone does not automatically guarantee Y-error correction.">
-<link rel="canonical" href="https://syedshubha.com/m/meme13">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <base href="/">
+    <title>A Subtle Truth in QEC | Quantum Memeology | Syed Emad Uddin Shubha</title>
+    <meta name="description" content="&quot;If a QECC can correct X and Z errors, it may not correct ZX error.&quot; Why linearity alone does not automatically guarantee Y-error correction.">
+    <link rel="canonical" href="https://syedshubha.com/m/meme13">
 
-<meta property="og:type" content="article">
-<meta property="og:site_name" content="Syed Emad Uddin Shubha">
-<meta property="og:url" content="https://syedshubha.com/m/meme13">
-<meta property="og:title" content="A Subtle Truth in QEC | Quantum Memeology">
-<meta property="og:description" content="&quot;If a QECC can correct X and Z errors, it may not correct ZX error.&quot; Why linearity alone does not automatically guarantee Y-error correction.">
-<meta property="og:image" content="https://syedshubha.com/images/og/memes/meme13.jpg">
-<meta property="og:image:secure_url" content="https://syedshubha.com/images/og/memes/meme13.jpg">
-<meta property="og:image:type" content="image/jpeg">
-<meta property="og:image:width" content="1200">
-<meta property="og:image:height" content="630">
+    <!-- Open Graph / LinkedIn / Facebook -->
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="Syed Emad Uddin Shubha">
+    <meta property="og:url" content="https://syedshubha.com/m/meme13">
+    <meta property="og:title" content="A Subtle Truth in QEC | Quantum Memeology">
+    <meta property="og:description" content="&quot;If a QECC can correct X and Z errors, it may not correct ZX error.&quot; Why linearity alone does not automatically guarantee Y-error correction.">
+    <meta property="og:image" content="https://syedshubha.com/images/og/memes/meme13.jpg">
+    <meta property="og:image:secure_url" content="https://syedshubha.com/images/og/memes/meme13.jpg">
+    <meta property="og:image:type" content="image/jpeg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
 
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="A Subtle Truth in QEC | Quantum Memeology">
-<meta name="twitter:description" content="&quot;If a QECC can correct X and Z errors, it may not correct ZX error.&quot; Why linearity alone does not automatically guarantee Y-error correction.">
-<meta name="twitter:image" content="https://syedshubha.com/images/og/memes/meme13.jpg">
-<meta name="twitter:creator" content="@syed_shubha">
+    <!-- Twitter / X -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://syedshubha.com/m/meme13">
+    <meta name="twitter:title" content="A Subtle Truth in QEC | Quantum Memeology">
+    <meta name="twitter:description" content="&quot;If a QECC can correct X and Z errors, it may not correct ZX error.&quot; Why linearity alone does not automatically guarantee Y-error correction.">
+    <meta name="twitter:image" content="https://syedshubha.com/images/og/memes/meme13.jpg">
+    <meta name="twitter:creator" content="@syed_shubha">
+    <script>window.__INITIAL_MEME_ID__ = "meme13";</script>
+    <script>
+        (function() {
+            const saved = localStorage.getItem('syed_theme') || 'dark';
+            document.documentElement.setAttribute('data-theme', saved);
+        })();
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;0,6..72,700;1,6..72,400&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%2323113d'/%3E%3Crect x='3' y='3' width='58' height='58' rx='10' fill='none' stroke='%23d4af37' stroke-width='2' stroke-opacity='0.75'/%3E%3Ctext x='30' y='43' font-family='Georgia,serif' font-size='28' font-weight='bold' fill='%23ffffff' text-anchor='middle'%3E%7CS%E2%9F%A9%3C/text%3E%3C/svg%3E">
+    <style>
+        :root {
+            --navy-950: #160b28;
+            --navy-900: #23113d;
+            --navy-800: #331857;
+            --navy-700: #461d7c;
+            --academic-blue: #461d7c;
+            --academic-blue-light: #f4effa;
+            --academic-blue-dark: #2f1157;
+            --lsu-purple: #461d7c;
+            --lsu-gold: #c59b27;
+            --text-primary: #1c1030;
+            --text-secondary: #43355b;
+            --text-muted: #66587d;
+            --bg-page: #f9f8fb;
+            --bg-surface: #ffffff;
+            --border-light: #e6e1ef;
+            --border-medium: #d1c9e0;
+            --shadow-sm: 0 1px 3px rgba(35, 17, 61, 0.06);
+            --shadow-md: 0 4px 12px -2px rgba(35, 17, 61, 0.09);
+            --shadow-lg: 0 12px 28px -6px rgba(35, 17, 61, 0.15);
+            --radius-md: 10px;
+            --radius-lg: 14px;
+        }
 
-<meta http-equiv="refresh" content="0; url=/memes.html?meme=meme13">
-<script>window.location.replace("/memes.html?meme=meme13");</script>
+        html[data-theme="dark"] {
+            --navy-950: #0d0818;
+            --navy-900: #f3effa;
+            --navy-800: #dcd2f0;
+            --navy-700: #b794f4;
+            --academic-blue: #c4a1ff;
+            --academic-blue-light: rgba(139, 92, 246, 0.16);
+            --academic-blue-dark: #e2ceff;
+            --lsu-purple: #d8b4fe;
+            --lsu-gold: #e5c158;
+            --text-primary: #f1ecf9;
+            --text-secondary: #c5b8de;
+            --text-muted: #9685b5;
+            --bg-page: #0d0818;
+            --bg-surface: #160e29;
+            --border-light: #2a1d47;
+            --border-medium: #3e2b66;
+            --shadow-sm: 0 2px 6px rgba(0, 0, 0, 0.35);
+            --shadow-md: 0 8px 20px -2px rgba(0, 0, 0, 0.48);
+            --shadow-lg: 0 16px 36px -6px rgba(0, 0, 0, 0.65);
+        }
+
+        html[data-theme="dark"] .navbar {
+            background: rgba(15, 9, 28, 0.92);
+        }
+
+        html[data-theme="dark"] .brand-monogram {
+            background: #2b144d;
+            color: #ffffff;
+            border-color: rgba(212, 175, 55, 0.75);
+        }
+
+        html[data-theme="dark"] .nav-pill-btn {
+            background: #461d7c !important;
+            color: #ffffff !important;
+            border-color: rgba(212, 175, 55, 0.5) !important;
+        }
+
+        html[data-theme="dark"] .filter-btn.active,
+        html[data-theme="dark"] .action-btn.active,
+        html[data-theme="dark"] .explain-btn:hover,
+        html[data-theme="dark"] .explain-btn.open {
+            background: #461d7c;
+            color: #ffffff;
+            border-color: #d4af37;
+        }
+
+        html[data-theme="dark"] .meme-explanation,
+        html[data-theme="dark"] .lightbox-exp-box {
+            background: #1d1336 !important;
+            color: #ece4fc !important;
+            border-left-color: #d4af37 !important;
+        }
+
+        html[data-theme="dark"] .search-box {
+            color: var(--text-primary);
+            background: #120b22;
+        }
+
+        .theme-toggle-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.42rem;
+            padding: 0.42rem 0.9rem;
+            border-radius: 999px;
+            border: 1.5px solid #d4af37;
+            background: linear-gradient(135deg, #23113d 0%, #3b1968 100%);
+            color: #fde68a;
+            font-size: 0.82rem;
+            font-weight: 700;
+            letter-spacing: 0.01em;
+            cursor: pointer;
+            box-shadow: 0 2px 10px rgba(35, 17, 61, 0.22);
+            transition: all 0.2s ease;
+            flex-shrink: 0;
+        }
+
+        .theme-toggle-btn:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 4px 14px rgba(212, 175, 55, 0.38);
+            border-color: #fde047;
+            color: #ffffff;
+        }
+
+        html[data-theme="dark"] .theme-toggle-btn {
+            background: linear-gradient(135deg, rgba(212, 175, 55, 0.26) 0%, rgba(139, 92, 246, 0.34) 100%);
+            color: #fef08a;
+            border: 1.5px solid #e5c158;
+            box-shadow: 0 0 14px rgba(212, 175, 55, 0.32), inset 0 0 8px rgba(212, 175, 55, 0.12);
+        }
+
+        html[data-theme="dark"] .theme-toggle-btn:hover {
+            background: linear-gradient(135deg, rgba(212, 175, 55, 0.38) 0%, rgba(139, 92, 246, 0.48) 100%);
+            border-color: #fde047;
+            color: #ffffff;
+            box-shadow: 0 0 20px rgba(212, 175, 55, 0.5);
+        }
+
+        .meme-explanation a, .lightbox-exp-box a {
+            color: var(--academic-blue);
+            font-weight: 700;
+            text-decoration: underline;
+            text-underline-offset: 2px;
+        }
+
+        html[data-theme="dark"] .meme-explanation a,
+        html[data-theme="dark"] .lightbox-exp-box a {
+            color: #fde047;
+        }
+
+        .back-to-top-btn {
+            position: fixed;
+            bottom: 1.6rem;
+            right: 1.6rem;
+            z-index: 1500;
+            padding: 0.55rem 0.9rem;
+            border-radius: 999px;
+            background: var(--navy-900);
+            color: #ffffff;
+            border: 1.5px solid #d4af37;
+            font-size: 0.8rem;
+            font-weight: 700;
+            cursor: pointer;
+            box-shadow: var(--shadow-md);
+            opacity: 0;
+            pointer-events: none;
+            transform: translateY(10px);
+            transition: all 0.22s ease;
+        }
+
+        html[data-theme="dark"] .back-to-top-btn {
+            background: #2b144d;
+            color: #fde68a;
+        }
+
+        .back-to-top-btn.visible {
+            opacity: 1;
+            pointer-events: auto;
+            transform: translateY(0);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html, body {
+            max-width: 100%;
+            overflow-x: hidden;
+        }
+
+        body {
+            font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+            color: var(--text-primary);
+            background-color: var(--bg-page);
+            line-height: 1.65;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .meme-card, .outreach-card, .prng-notice {
+            min-width: 0;
+            max-width: 100%;
+            overflow-wrap: anywhere;
+            word-break: break-word;
+        }
+
+        .meme-title, .meme-desc, .meme-explanation, .lightbox-exp-box, .prng-meta {
+            overflow-wrap: anywhere;
+            word-break: break-word;
+        }
+
+        h1, h2, h3, h4 {
+            font-family: 'Newsreader', Georgia, serif;
+            color: var(--navy-900);
+            letter-spacing: -0.015em;
+        }
+
+        a {
+            color: var(--academic-blue);
+            text-decoration: none;
+            transition: color 0.2s ease;
+        }
+
+        a:hover {
+            color: var(--academic-blue-dark);
+        }
+
+        /* Navbar */
+        .navbar {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background: rgba(255, 255, 255, 0.96);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--border-light);
+            box-shadow: var(--shadow-sm);
+        }
+
+        .nav-container {
+            max-width: 1240px;
+            margin: 0 auto;
+            padding: 0.75rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 1.25rem;
+        }
+
+        .nav-brand {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            color: var(--navy-900);
+            flex-shrink: 0;
+        }
+
+        .brand-monogram {
+            width: 38px;
+            height: 38px;
+            flex-shrink: 0;
+            border-radius: 8px;
+            background: var(--navy-900);
+            border: 1.5px solid rgba(212, 175, 55, 0.7);
+            color: #fff;
+            font-family: 'Newsreader', Georgia, serif;
+            font-weight: 700;
+            font-size: 1.05rem;
+            letter-spacing: -0.02em;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 2px 6px rgba(35, 17, 61, 0.16);
+        }
+
+        .brand-text {
+            display: flex;
+            flex-direction: column;
+            flex-shrink: 0;
+        }
+
+        .brand-name {
+            font-family: 'Newsreader', Georgia, serif;
+            font-size: 1.3rem;
+            font-weight: 700;
+            line-height: 1.15;
+            color: var(--navy-900);
+            white-space: nowrap;
+        }
+
+        .brand-sub {
+            font-size: 0.72rem;
+            color: var(--text-muted);
+            font-weight: 600;
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+            white-space: nowrap;
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 0.35rem;
+            align-items: center;
+            flex-shrink: 0;
+        }
+
+        .nav-menu a {
+            color: var(--text-secondary);
+            font-size: 0.88rem;
+            font-weight: 500;
+            padding: 0.45rem 0.75rem;
+            border-radius: 6px;
+        }
+
+        .nav-menu a:hover, .nav-menu a.active {
+            color: var(--navy-900);
+            background: var(--academic-blue-light);
+        }
+
+        .nav-pill-btn {
+            background: var(--navy-900) !important;
+            color: #ffffff !important;
+            padding: 0.42rem 0.9rem !important;
+            border-radius: 6px;
+            font-weight: 500 !important;
+            border: 1px solid rgba(212, 175, 55, 0.4);
+        }
+
+        .mobile-toggle {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            cursor: pointer;
+            background: none;
+            border: none;
+            padding: 6px;
+            flex-shrink: 0;
+        }
+
+        .mobile-toggle span {
+            width: 22px;
+            height: 2px;
+            background: var(--navy-900);
+            border-radius: 2px;
+        }
+
+        /* Hero */
+        .page-hero {
+            background: linear-gradient(160deg, #faf7ff 0%, #f1e9fe 55%, #fcf5e3 100%);
+            color: #160b28;
+            padding: 3.5rem 2rem 3.1rem;
+            border-bottom: 3px solid #c59b27;
+            transition: background 0.25s ease, color 0.25s ease;
+        }
+
+        html[data-theme="dark"] .page-hero {
+            background: linear-gradient(160deg, #160b28 0%, #24113f 55%, #3b1968 100%);
+            color: #f8fafc;
+        }
+
+        .page-hero-inner {
+            max-width: 1240px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            gap: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .page-hero h1 {
+            color: #160b28;
+            font-size: 2.75rem;
+            line-height: 1.12;
+            margin-bottom: 0.65rem;
+        }
+
+        html[data-theme="dark"] .page-hero h1 {
+            color: #ffffff;
+        }
+
+        .page-hero p {
+            color: #3d2c5e;
+            max-width: 720px;
+            font-size: 1.02rem;
+        }
+
+        html[data-theme="dark"] .page-hero p {
+            color: #dcd4ea;
+        }
+
+        .hero-links {
+            display: flex;
+            gap: 0.65rem;
+            flex-wrap: wrap;
+        }
+
+        .hero-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.58rem 1.1rem;
+            border-radius: 7px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            background: rgba(255, 255, 255, 0.9);
+            color: #2b144d;
+            border: 1px solid rgba(70, 29, 124, 0.25);
+            box-shadow: 0 2px 8px rgba(22, 11, 40, 0.06);
+            transition: all 0.2s ease;
+        }
+
+        .hero-btn svg {
+            width: 17px;
+            height: 17px;
+            flex-shrink: 0;
+        }
+
+        .hero-btn:hover {
+            background: #461d7c;
+            color: #ffffff;
+            border-color: #461d7c;
+            transform: translateY(-1px);
+        }
+
+        html[data-theme="dark"] .hero-btn {
+            background: rgba(255, 255, 255, 0.1);
+            color: #ffffff;
+            border: 1px solid rgba(255, 255, 255, 0.24);
+            box-shadow: none;
+        }
+
+        html[data-theme="dark"] .hero-btn:hover {
+            background: rgba(255, 255, 255, 0.18);
+            color: #ffffff;
+            border-color: rgba(255, 255, 255, 0.35);
+        }
+
+        .hero-btn.gold,
+        html[data-theme="dark"] .hero-btn.gold {
+            background: #d4af37;
+            color: #160b28;
+            border-color: #d4af37;
+        }
+
+        .hero-btn.gold:hover,
+        html[data-theme="dark"] .hero-btn.gold:hover {
+            background: #e3c14d;
+            color: #160b28;
+            border-color: #e3c14d;
+        }
+
+        .hero-btn.reddit {
+            background: rgba(255, 255, 255, 0.92);
+            color: #2b144d;
+            border: 1.5px solid rgba(212, 175, 55, 0.75);
+        }
+
+        html[data-theme="dark"] .hero-btn.reddit {
+            background: rgba(255, 255, 255, 0.12);
+            color: #ffffff;
+            border: 1px solid rgba(212, 175, 55, 0.55);
+        }
+
+        .hero-btn.reddit svg {
+            color: #ff5700;
+            background: #ffffff;
+            border-radius: 50%;
+            width: 19px;
+            height: 19px;
+        }
+
+        .hero-btn.reddit:hover {
+            background: #461d7c;
+            border-color: #d4af37;
+            color: #ffffff;
+        }
+
+        html[data-theme="dark"] .hero-btn.reddit:hover {
+            background: rgba(255, 255, 255, 0.2);
+            border-color: #d4af37;
+            color: #ffffff;
+        }
+
+        .container {
+            max-width: 1240px;
+            margin: 0 auto;
+            padding: 2.75rem 2rem 4.5rem;
+        }
+
+        /* Controls Bar */
+        .controls-wrapper {
+            background: var(--bg-surface);
+            border: 1px solid var(--border-light);
+            border-radius: var(--radius-md);
+            padding: 1.25rem 1.5rem;
+            margin-bottom: 2rem;
+            box-shadow: var(--shadow-sm);
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .controls-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .filter-tabs {
+            display: flex;
+            gap: 0.45rem;
+            flex-wrap: wrap;
+        }
+
+        .filter-btn {
+            padding: 0.42rem 0.85rem;
+            border-radius: 6px;
+            border: 1px solid var(--border-medium);
+            background: var(--bg-page);
+            color: var(--text-secondary);
+            font-size: 0.82rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.18s ease;
+        }
+
+        .filter-btn:hover {
+            border-color: var(--academic-blue);
+            color: var(--academic-blue);
+        }
+
+        .filter-btn.active {
+            background: var(--navy-900);
+            color: #ffffff;
+            border-color: var(--navy-900);
+        }
+
+        .controls-right {
+            display: flex;
+            gap: 0.6rem;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .search-box {
+            padding: 0.48rem 0.9rem;
+            border: 1px solid var(--border-medium);
+            border-radius: 6px;
+            font-size: 0.85rem;
+            min-width: 240px;
+            background: var(--bg-page);
+        }
+
+        .action-btn {
+            padding: 0.48rem 0.85rem;
+            border-radius: 6px;
+            border: 1px solid var(--border-medium);
+            background: var(--bg-surface);
+            color: var(--navy-800);
+            font-size: 0.82rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .action-btn:hover, .action-btn.active {
+            background: var(--academic-blue-light);
+            border-color: var(--academic-blue);
+            color: var(--academic-blue-dark);
+        }
+
+        /* Pseudorandom Shuffle Notice */
+        .prng-notice {
+            border: 1px dashed var(--border-medium);
+            border-left: 4px solid var(--academic-blue);
+            border-radius: var(--radius-md);
+            background: var(--bg-surface);
+            padding: 0.95rem 1.25rem;
+            margin: -0.75rem 0 1.75rem;
+        }
+
+        .prng-notice p {
+            font-size: 0.88rem;
+            color: var(--text-secondary);
+            font-style: italic;
+            line-height: 1.6;
+            margin-bottom: 0.65rem;
+        }
+
+        .prng-meta {
+            display: flex;
+            align-items: center;
+            gap: 0.9rem;
+            flex-wrap: wrap;
+            font-size: 0.8rem;
+            color: var(--text-muted);
+        }
+
+        .prng-meta code {
+            font-family: 'JetBrains Mono', monospace;
+            color: var(--academic-blue);
+            font-weight: 600;
+        }
+
+        .prng-meta a {
+            font-weight: 600;
+        }
+
+        .prng-meta .action-btn {
+            margin-left: auto;
+        }
+
+        .btn-reshuffle-glow {
+            position: relative;
+            background: linear-gradient(135deg, rgba(70, 29, 124, 0.12), rgba(212, 175, 55, 0.14));
+            border: 1px solid rgba(212, 175, 55, 0.65);
+            color: var(--navy-800);
+            box-shadow: 0 0 12px rgba(212, 175, 55, 0.22), 0 0 20px rgba(112, 26, 179, 0.15);
+            animation: reshuffleQuantumPulse 3.5s ease-in-out infinite alternate;
+            transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .btn-reshuffle-glow:hover {
+            background: linear-gradient(135deg, rgba(70, 29, 124, 0.25), rgba(212, 175, 55, 0.28));
+            border-color: #d4af37;
+            color: var(--academic-blue-dark);
+            transform: translateY(-1px) scale(1.02);
+            box-shadow: 0 0 18px rgba(212, 175, 55, 0.45), 0 0 28px rgba(183, 148, 244, 0.35);
+        }
+
+        html[data-theme="dark"] .btn-reshuffle-glow {
+            background: linear-gradient(135deg, rgba(139, 92, 246, 0.22), rgba(212, 175, 55, 0.18));
+            border-color: rgba(212, 175, 55, 0.7);
+            color: #ffffff;
+            box-shadow: 0 0 12px rgba(212, 175, 55, 0.25), 0 0 22px rgba(147, 51, 234, 0.25);
+        }
+
+        html[data-theme="dark"] .btn-reshuffle-glow:hover {
+            background: linear-gradient(135deg, rgba(139, 92, 246, 0.4), rgba(212, 175, 55, 0.32));
+            border-color: #fde047;
+            color: #ffffff;
+            box-shadow: 0 0 20px rgba(212, 175, 55, 0.5), 0 0 32px rgba(183, 148, 244, 0.4);
+        }
+
+        @keyframes reshuffleQuantumPulse {
+            0% {
+                box-shadow: 0 0 8px rgba(212, 175, 55, 0.18), 0 0 14px rgba(70, 29, 124, 0.15);
+                border-color: rgba(212, 175, 55, 0.45);
+            }
+            100% {
+                box-shadow: 0 0 18px rgba(212, 175, 55, 0.4), 0 0 26px rgba(147, 51, 234, 0.3);
+                border-color: rgba(253, 224, 71, 0.85);
+            }
+        }
+
+        /* Meme Grid */
+        .meme-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(355px, 1fr));
+            gap: 1.75rem;
+        }
+
+        .meme-card {
+            background: var(--bg-surface);
+            border: 1px solid var(--border-light);
+            border-radius: var(--radius-md);
+            overflow: hidden;
+            box-shadow: var(--shadow-sm);
+            display: flex;
+            flex-direction: column;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .meme-card:hover {
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .meme-img-frame {
+            position: relative;
+            width: 100%;
+            height: 310px;
+            background: #0f172a;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            cursor: zoom-in;
+            border-bottom: 1px solid var(--border-light);
+        }
+
+        .meme-img-frame img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+            transition: transform 0.25s ease;
+        }
+
+        .meme-img-frame:hover img {
+            transform: scale(1.03);
+        }
+
+        .zoom-hint {
+            position: absolute;
+            bottom: 8px;
+            right: 10px;
+            background: rgba(15, 23, 42, 0.78);
+            color: #f8fafc;
+            font-size: 0.7rem;
+            padding: 0.2rem 0.55rem;
+            border-radius: 4px;
+            pointer-events: none;
+            border: 1px solid rgba(255,255,255,0.18);
+        }
+
+        .meme-body {
+            padding: 1.35rem 1.45rem;
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+        }
+
+        .meme-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 0.5rem;
+        }
+
+        .meme-tag {
+            font-size: 0.72rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.04em;
+            padding: 0.18rem 0.55rem;
+            border-radius: 4px;
+            background: var(--academic-blue-light);
+            color: var(--academic-blue-dark);
+        }
+
+        .meme-index {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.75rem;
+            color: var(--text-muted);
+        }
+
+        .meme-title {
+            font-size: 1.28rem;
+            color: var(--navy-900);
+            margin-bottom: 0.45rem;
+            line-height: 1.3;
+        }
+
+        .meme-desc {
+            font-size: 0.91rem;
+            color: var(--text-secondary);
+            margin-bottom: 1rem;
+            flex: 1;
+        }
+
+        .meme-actions {
+            display: flex;
+            gap: 0.5rem;
+            padding-top: 0.85rem;
+            border-top: 1px solid var(--border-light);
+        }
+
+        .explain-btn {
+            flex: 1;
+            padding: 0.48rem 0.85rem;
+            border-radius: 6px;
+            border: 1px solid var(--border-medium);
+            background: var(--bg-page);
+            color: var(--navy-800);
+            font-size: 0.82rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.18s ease;
+        }
+
+        .explain-btn:hover, .explain-btn.open {
+            background: var(--navy-900);
+            color: #ffffff;
+            border-color: var(--navy-900);
+        }
+
+        .share-meme-btn {
+            padding: 0.48rem 0.75rem;
+            border-radius: 6px;
+            border: 1px solid var(--border-medium);
+            background: var(--bg-page);
+            color: var(--navy-800);
+            font-size: 0.82rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.18s ease;
+            flex-shrink: 0;
+        }
+
+        .share-meme-btn:hover {
+            border-color: var(--academic-blue);
+            color: var(--academic-blue);
+            background: var(--academic-blue-light);
+        }
+
+        .social-share-drawer {
+            display: none;
+            flex-wrap: wrap;
+            gap: 0.4rem;
+            margin-top: 0.75rem;
+            padding-top: 0.7rem;
+            border-top: 1px dashed var(--border-light);
+        }
+
+        .social-share-drawer.open {
+            display: flex;
+        }
+
+        .social-pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.3rem;
+            font-size: 0.74rem;
+            font-weight: 600;
+            padding: 0.28rem 0.6rem;
+            border-radius: 5px;
+            border: 1px solid var(--border-medium);
+            background: var(--bg-page);
+            color: var(--text-primary);
+            cursor: pointer;
+            text-decoration: none;
+            transition: all 0.15s ease;
+        }
+
+        .social-pill:hover {
+            border-color: var(--academic-blue);
+            color: var(--academic-blue);
+            background: var(--academic-blue-light);
+        }
+
+        .meme-explanation {
+            display: none;
+            margin-top: 0.9rem;
+            padding: 0.95rem 1.05rem;
+            background: #f8fafc;
+            border-left: 3px solid var(--academic-blue);
+            border-radius: 0 6px 6px 0;
+            font-size: 0.86rem;
+            color: var(--navy-800);
+            line-height: 1.6;
+        }
+
+        .meme-explanation.open {
+            display: block;
+        }
+
+        /* Outreach & Lectures Section */
+        .outreach-section {
+            margin-top: 4rem;
+            padding-top: 3rem;
+            border-top: 2px solid var(--border-light);
+        }
+
+        .section-eyebrow {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.76rem;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: var(--academic-blue);
+            font-weight: 600;
+            margin-bottom: 0.3rem;
+        }
+
+        .section-title {
+            font-size: 2rem;
+            margin-bottom: 0.4rem;
+        }
+
+        .outreach-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1.75rem;
+        }
+
+        .outreach-card {
+            background: var(--bg-surface);
+            border: 1px solid var(--border-light);
+            border-top: 3px solid var(--academic-blue);
+            border-radius: var(--radius-md);
+            padding: 1.6rem;
+            box-shadow: var(--shadow-sm);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .outreach-card h3 {
+            font-size: 1.3rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .outreach-card p {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            margin-bottom: 1.15rem;
+            flex: 1;
+        }
+
+        .outreach-links {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        .outreach-link {
+            display: inline-flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0.55rem 0.85rem;
+            background: var(--bg-page);
+            border: 1px solid var(--border-light);
+            border-radius: 6px;
+            font-size: 0.84rem;
+            font-weight: 600;
+            color: var(--navy-800);
+        }
+
+        .outreach-link:hover {
+            border-color: var(--academic-blue);
+            background: var(--academic-blue-light);
+            color: var(--academic-blue-dark);
+        }
+
+        .outreach-link-label {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .outreach-link-label svg {
+            width: 17px;
+            height: 17px;
+            flex-shrink: 0;
+            vertical-align: middle;
+        }
+
+        /* Lightbox Modal */
+        .lightbox {
+            position: fixed;
+            inset: 0;
+            background: rgba(10, 17, 32, 0.88);
+            backdrop-filter: blur(6px);
+            z-index: 2000;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            padding: 1.5rem;
+        }
+
+        .lightbox.open {
+            display: flex;
+        }
+
+        .lightbox-card {
+            background: var(--bg-surface);
+            border-radius: var(--radius-lg);
+            max-width: 1020px;
+            width: 100%;
+            max-height: 92vh;
+            overflow: hidden;
+            display: grid;
+            grid-template-columns: 1.35fr 1fr;
+            box-shadow: var(--shadow-lg);
+        }
+
+        .lightbox-img-wrap {
+            background: #0a1120;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 1rem;
+            max-height: 92vh;
+        }
+
+        .lightbox-img-wrap img {
+            max-width: 100%;
+            max-height: 85vh;
+            object-fit: contain;
+        }
+
+        .lightbox-info {
+            padding: 2rem;
+            overflow-y: auto;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .lightbox-close {
+            align-self: flex-end;
+            padding: 0.35rem 0.75rem;
+            border-radius: 6px;
+            border: 1px solid var(--border-medium);
+            background: var(--bg-page);
+            cursor: pointer;
+            font-weight: 600;
+        }
+
+        @media (max-width: 960px) {
+            .nav-container {
+                padding: 0.7rem 1.15rem;
+            }
+            .nav-menu {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: var(--bg-surface);
+                flex-direction: column;
+                align-items: stretch;
+                padding: 1.15rem 1.25rem;
+                gap: 0.45rem;
+                border-bottom: 1px solid var(--border-light);
+                box-shadow: var(--shadow-md);
+            }
+            .nav-menu.active {
+                display: flex;
+            }
+            .nav-menu li, .nav-menu a {
+                width: 100%;
+                display: block;
+            }
+            .mobile-toggle {
+                display: flex;
+            }
+        }
+
+        @media (max-width: 860px) {
+            .page-hero {
+                padding: 2.5rem 1.15rem 2.25rem;
+            }
+            .page-hero h1 {
+                font-size: 2rem;
+            }
+            .container {
+                padding: 2rem 1.15rem;
+            }
+            .meme-grid {
+                grid-template-columns: 1fr;
+            }
+            .outreach-grid {
+                grid-template-columns: 1fr;
+            }
+            .search-box {
+                width: 100%;
+                min-width: 0;
+            }
+            .lightbox-card {
+                grid-template-columns: 1fr;
+                overflow-y: auto;
+            }
+            .lightbox-img-wrap {
+                max-height: 52vh;
+            }
+            .lightbox-info {
+                padding: 1.35rem;
+            }
+        }
+    </style>
 </head>
-<body style="font-family:Georgia,serif;background:#160b28;color:#f4effa;padding:2rem">
-<h1>A Subtle Truth in QEC | Quantum Memeology</h1>
-<p>&quot;If a QECC can correct X and Z errors, it may not correct ZX error.&quot; Why linearity alone does not automatically guarantee Y-error correction.</p>
-<p><a style="color:#d4af37" href="/memes.html?meme=meme13">Continue to page &rarr;</a></p>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-brand">
+                <div class="brand-monogram">|S⟩</div>
+                <div class="brand-text">
+                    <span class="brand-name">Syed Shubha</span>
+                    <span class="brand-sub">QI Researcher</span>
+                </div>
+            </a>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html">← Main Portfolio</a></li>
+                <li><a href="index.html#publications">Publications</a></li>
+                <li><a href="blog.html">Blog & Essays</a></li>
+                <li><a href="memes.html" class="nav-pill-btn">Quantum Memeology</a></li>
+            </ul>
+            <div style="display:flex; align-items:center; gap:0.55rem; flex-shrink:0;">
+                <button class="theme-toggle-btn" id="themeToggleBtn" onclick="toggleTheme()" aria-label="Switch between Light and Dark Mode" title="Switch between Light and Dark Mode">
+                    <span id="themeToggleIcon">☀️</span>
+                    <span id="themeToggleLabel">Light Mode</span>
+                </button>
+                <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle Menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <header class="page-hero">
+        <div class="page-hero-inner">
+            <div>
+                <h1>Quantum Memeology & Science Outreach</h1>
+                <p>
+                    An original collection of physics, quantum computing, mathematics, and epistemology memes, each paired with a rigorous technical explanation of the underlying theorem or physical mechanism.
+                </p>
+            </div>
+            <div class="hero-links">
+                <a href="https://www.reddit.com/r/quantumcomputingmemes/" target="_blank" class="hero-btn reddit" title="r/quantumcomputingmemes">
+                    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0zm5.01 4.744c.688 0 1.25.561 1.25 1.249a1.25 1.25 0 0 1-2.498.056l-2.597-.547-.8 3.747c1.824.07 3.48.632 4.674 1.488.308-.309.73-.491 1.207-.491.968 0 1.754.786 1.754 1.754 0 .716-.435 1.333-1.01 1.614a3.111 3.111 0 0 1 .042.52c0 2.694-3.13 4.87-7.004 4.87-3.874 0-7.004-2.176-7.004-4.87 0-.183.015-.366.043-.534A1.748 1.748 0 0 1 4.028 12c0-.968.786-1.754 1.754-1.754.463 0 .898.196 1.207.49 1.207-.883 2.878-1.43 4.744-1.487l.885-4.182a.342.342 0 0 1 .14-.197.35.35 0 0 1 .238-.042l2.906.617a1.214 1.214 0 0 1 1.108-.701zM9.25 12C8.561 12 8 12.562 8 13.25c0 .687.561 1.248 1.25 1.248.687 0 1.248-.561 1.248-1.249 0-.688-.561-1.249-1.249-1.249zm5.5 0c-.687 0-1.248.561-1.248 1.25 0 .687.561 1.248 1.249 1.248.688 0 1.249-.561 1.249-1.249 0-.687-.562-1.249-1.25-1.249zm-5.466 3.99a.327.327 0 0 0-.231.094.33.33 0 0 0 0 .463c.842.842 2.484.913 2.961.913.477 0 2.105-.056 2.961-.913a.361.361 0 0 0 .029-.463.33.33 0 0 0-.464 0c-.547.533-1.684.73-2.512.73-.828 0-1.979-.196-2.512-.73a.326.326 0 0 0-.232-.095z"/></svg>
+                    r/QuantumMemeology ↗
+                </a>
+                <a href="blog.html" class="hero-btn gold">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+                    Blog & Essays →
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="controls-wrapper">
+            <div class="controls-top">
+                <div class="filter-tabs" id="memeFilterTabs"></div>
+                <div class="controls-right">
+                    <input type="search" id="memeSearchInput" class="search-box" placeholder="Search memes by theorem, topic...">
+                    <button class="action-btn" id="expandAllBtn" onclick="toggleAllExplanations()">💡 Expand All Explanations</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="prng-notice" id="prngNotice">
+            <p id="prngText">
+                🎲 This arrangement was shuffled using a seed measured from quantum vacuum fluctuations by the ANU Quantum Random Number Generator (true random).
+            </p>
+            <div class="prng-meta">
+                <span>Seed source: <code id="prngSource">ANU QRNG (quantum vacuum fluctuations)</code> • Shuffle: <code>mulberry32</code> Fisher–Yates • Seed: <code id="prngSeed">…</code></span>
+                <button type="button" class="action-btn btn-reshuffle-glow" id="reshuffleBtn" onclick="reshuffleMemes()">🎲 Reshuffle</button>
+            </div>
+        </div>
+
+        <div class="meme-grid" id="memeGrid"></div>
+
+        <!-- Science Outreach, Lectures & Intellectual Passions -->
+        <section class="outreach-section">
+            <div class="section-eyebrow">Pedagogy, Essays & Recreation</div>
+            <h2 class="section-title">Lectures, Philosophical Essays & Chess</h2>
+            <div class="outreach-grid">
+                <div class="outreach-card">
+                    <h3>🎥 Video Lecture Series</h3>
+                    <p>Self-recorded university-level mathematics and quantum information tutorials exploring complex variables, contour integration, and nonlocal games.</p>
+                    <div class="outreach-links">
+                        <a href="https://www.youtube.com/playlist?list=PLEGgPKRszGn9g1C8Swhib5GtYgHJNb-Iq" target="_blank" class="outreach-link">
+                            <span class="outreach-link-label">
+                                <svg viewBox="0 0 24 24" width="17" height="17"><path fill="#FF0000" d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814z"/><path fill="#FFFFFF" d="M9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+                                <span>Complex Analysis Lecture Playlist</span>
+                            </span>
+                            <span>YouTube ↗</span>
+                        </a>
+                        <a href="https://www.youtube.com/playlist?list=PLEGgPKRszGn_i2yX9ba3-s_c_rU4fA_hE" target="_blank" class="outreach-link">
+                            <span class="outreach-link-label">
+                                <svg viewBox="0 0 24 24" width="17" height="17"><path fill="#FF0000" d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814z"/><path fill="#FFFFFF" d="M9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+                                <span>CHSH Game & Bell's Inequality</span>
+                            </span>
+                            <span>YouTube ↗</span>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="outreach-card">
+                    <h3>📰 Substack Philosophical Essays</h3>
+                    <p>Long-form explorations of formal epistemology, the Agrippan Trilemma, Gödel's modal logic, Schopenhauer, and contemporary sociology.</p>
+                    <div class="outreach-links">
+                        <a href="https://syedshubha.substack.com/p/agrippan-trilemma" target="_blank" class="outreach-link">
+                            <span>📜 Agrippan Trilemma: Proving Truths</span>
+                            <span>Substack ↗</span>
+                        </a>
+                        <a href="https://syedshubha.substack.com/p/godels-ontological-argument" target="_blank" class="outreach-link">
+                            <span>📜 Gödel’s Ontological Argument</span>
+                            <span>Substack ↗</span>
+                        </a>
+                        <a href="https://syedshubha.substack.com/p/beyond-sisyphus" target="_blank" class="outreach-link">
+                            <span>📜 Beyond Sisyphus: Limits of Logic</span>
+                            <span>Substack ↗</span>
+                        </a>
+                        <a href="https://syedshubha.substack.com/p/male-loneliness-epidemic" target="_blank" class="outreach-link">
+                            <span>📜 Male Loneliness Epidemic</span>
+                            <span>Substack ↗</span>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="outreach-card">
+                    <h3>♟️ Recreational Chess</h3>
+                    <p>Avid tactical chess player. Always happy to play a friendly rapid or blitz game with fellow researchers and students. I also upload short-form chess content, puzzles, and blitz tactics on YouTube.</p>
+                    <div class="outreach-links">
+                        <a href="https://www.youtube.com/@SchrodingersDankKnight/shorts" target="_blank" class="outreach-link">
+                            <span class="outreach-link-label">
+                                <svg viewBox="0 0 24 24" width="17" height="17"><path fill="#FF0000" d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814z"/><path fill="#FFFFFF" d="M9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+                                <span>Chess Content: @SchrodingersDankKnight</span>
+                            </span>
+                            <span>YouTube ↗</span>
+                        </a>
+                        <a href="https://www.chess.com/member/decohered_imam" target="_blank" class="outreach-link">
+                            <span class="outreach-link-label">
+                                <span>♟️</span>
+                                <span>Chess.com: @decohered_imam</span>
+                            </span>
+                            <span>Challenge ↗</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Fullscreen Lightbox Modal -->
+    <div class="lightbox" id="lightboxModal" onclick="if(event.target===this)closeLightbox()">
+        <div class="lightbox-card">
+            <div class="lightbox-img-wrap">
+                <img id="lightboxImg" src="" alt="">
+            </div>
+            <div class="lightbox-info">
+                <div style="display:flex; justify-content:space-between; align-items:center; gap:0.5rem; flex-wrap:wrap;">
+                    <div style="display:flex; gap:0.4rem;">
+                        <button class="lightbox-close" onclick="stepLightbox(-1)" title="Previous meme (←)">← Prev</button>
+                        <button class="lightbox-close" onclick="stepLightbox(1)" title="Next meme (→)">Next →</button>
+                    </div>
+                    <button class="lightbox-close" onclick="closeLightbox()">✕ Close</button>
+                </div>
+                <div>
+                    <span class="meme-tag" id="lightboxTag"></span>
+                </div>
+                <h2 id="lightboxTitle" style="font-size:1.65rem;"></h2>
+                <p id="lightboxDesc" style="color:var(--text-secondary); font-size:0.96rem;"></p>
+                <div class="lightbox-exp-box" style="background:#f8fafc; border-left:4px solid var(--academic-blue); padding:1rem 1.15rem; border-radius:0 8px 8px 0;">
+                    <strong style="display:block; font-size:0.8rem; text-transform:uppercase; letter-spacing:0.05em; color:var(--academic-blue-dark); margin-bottom:0.35rem;">💡 Technical Explanation</strong>
+                    <p id="lightboxExp" style="font-size:0.92rem; color:var(--navy-800); line-height:1.65;"></p>
+                </div>
+                <div class="social-share-drawer open" id="lightboxShareBar" style="margin-top:0.25rem;"></div>
+            </div>
+        </div>
+    </div>
+
+    <button class="back-to-top-btn" id="backToTopBtn" onclick="window.scrollTo({top:0, behavior:'smooth'})" aria-label="Back to top">↑ Top</button>
+
+    <script src="data/portfolio_data.js"></script>
+    <script>
+        let SITE_DATA = window.PORTFOLIO_DATA || { memes: [] };
+        let activeTag = 'all';
+        let searchQuery = '';
+        let allExpanded = false;
+        let currentLightboxId = null;
+        let ORIGINAL_MEMES = (SITE_DATA.memes || []).slice();
+
+        // Deterministic 32-bit PRNG: identical seed => identical sequence.
+        function mulberry32(seed) {
+            let a = seed >>> 0;
+            return function () {
+                a = (a + 0x6D2B79F5) >>> 0;
+                let t = a;
+                t = Math.imul(t ^ (t >>> 15), t | 1);
+                t ^= t + Math.imul(t ^ (t >>> 7), t | 61);
+                return ((t ^ (t >>> 14)) >>> 0) / 4294967296;
+            };
+        }
+
+        function timeSeed() {
+            // Wall-clock milliseconds mixed with sub-millisecond performance timer.
+            return (Date.now() ^ Math.floor(performance.now() * 1000)) >>> 0;
+        }
+
+        function seededShuffle(arr, seed) {
+            const rand = mulberry32(seed);
+            const out = arr.slice();
+            for (let i = out.length - 1; i > 0; i--) {
+                const j = Math.floor(rand() * (i + 1));
+                [out[i], out[j]] = [out[j], out[i]];
+            }
+            return out;
+        }
+
+        function applyShuffle(seed, source = 'classical') {
+            SITE_DATA.memes = seededShuffle(ORIGINAL_MEMES, seed);
+            const hex = '0x' + seed.toString(16).toUpperCase().padStart(8, '0');
+            document.getElementById('prngSeed').textContent = hex;
+            const repLink = document.getElementById('prngReproduceLink');
+            if (repLink) repLink.href = `memes.html?seed=${hex}`;
+            const sourceEl = document.getElementById('prngSource');
+            const textEl = document.getElementById('prngText');
+            if (source === 'quantum') {
+                sourceEl.textContent = 'ANU QRNG (quantum vacuum fluctuations)';
+                textEl.textContent = QUANTUM_TEXT;
+            } else {
+                sourceEl.textContent = source === 'url' ? 'URL parameter' : 'ANU QRNG / quantum-seeded shuffle';
+                textEl.textContent = QUANTUM_TEXT;
+            }
+        }
+
+        // Cloudflare Worker proxying the ANU QRNG (see qrng-worker/).
+        const QRNG_ENDPOINT = 'https://qrng-seed.small-surf-f6bc.workers.dev';
+        const QUANTUM_TEXT = '🎲 This arrangement was shuffled using a seed measured from quantum vacuum fluctuations by the ANU Quantum Random Number Generator (true random).';
+        const CLASSICAL_TEXT = QUANTUM_TEXT;
+
+        async function fetchQuantumSeed(timeoutMs = 1500) {
+            if (!QRNG_ENDPOINT) return null;
+            const ctrl = new AbortController();
+            const timer = setTimeout(() => ctrl.abort(), timeoutMs);
+            try {
+                const res = await fetch(QRNG_ENDPOINT, { signal: ctrl.signal, cache: 'no-store' });
+                if (!res.ok) return null;
+                const body = await res.json();
+                return Number.isInteger(body.seed) ? (body.seed >>> 0) : null;
+            } catch (e) {
+                return null;
+            } finally {
+                clearTimeout(timer);
+            }
+        }
+
+        async function reshuffleMemes() {
+            const isWeb = window.location.protocol !== 'file:';
+            history.replaceState({}, '', isWeb ? '/memes/' : 'memes.html');
+            const q = await fetchQuantumSeed();
+            applyShuffle(q !== null ? q : timeSeed(), q !== null ? 'quantum' : 'classical');
+            renderMemes();
+        }
+
+        function getRouteMemeId() {
+            const params = new URLSearchParams(window.location.search);
+            const pathMatch = window.location.pathname.match(/^\/(?:m|memes)\/([^\/]+?)(?:\.html)?\/?$/);
+            const pathMeme = (pathMatch && pathMatch[1] !== 'index') ? decodeURIComponent(pathMatch[1]) : null;
+            return pathMeme || (history.state && history.state.meme) || params.get('meme') || params.get('id') || window.__INITIAL_MEME_ID__ || null;
+        }
+
+        async function initMemes() {
+            const params = new URLSearchParams(window.location.search);
+            const param = params.get('seed');
+            const parsed = param ? Number(param) : NaN;
+            const hasUrlSeed = Number.isFinite(parsed);
+            const memeParam = getRouteMemeId();
+
+            // Render immediately from bundled window.PORTFOLIO_DATA with zero network delay
+            ORIGINAL_MEMES = (SITE_DATA.memes || []).slice();
+            applyShuffle(hasUrlSeed ? (parsed >>> 0) : timeSeed(), hasUrlSeed ? 'url' : 'quantum');
+            buildFilterTabs();
+            renderMemes();
+            if (memeParam) {
+                openLightbox(memeParam, true);
+            } else if (window.location.protocol !== 'file:' && window.location.pathname !== '/memes/') {
+                history.replaceState({}, '', '/memes/' + window.location.search + window.location.hash);
+            }
+
+            window.addEventListener('popstate', () => {
+                window.__INITIAL_MEME_ID__ = null;
+                const mid = getRouteMemeId();
+                if (mid) openLightbox(mid, false);
+                else closeLightbox(false);
+            });
+
+            // Refresh JSON and quantum seed asynchronously if no URL seed was locked
+            if (!hasUrlSeed && !memeParam) {
+                const q = await fetchQuantumSeed(1200);
+                if (q !== null) {
+                    applyShuffle(q, 'quantum');
+                    renderMemes();
+                }
+            }
+        }
+
+        function formatExplanation(text) {
+            if (!text) return '';
+            if (text.includes('<a ')) return text;
+            return text.replace(/(https?:\/\/[^\s<)]+)/g, '<a href="$1" target="_blank" rel="noopener">$1 ↗</a>');
+        }
+
+        function buildSocialShareButtons(shareUrl, titleText) {
+            const u = encodeURIComponent(shareUrl);
+            const t = encodeURIComponent(titleText);
+            const wa = encodeURIComponent(`${titleText} — ${shareUrl}`);
+            return `
+                <button type="button" class="social-pill" onclick="copyMemeUrl('${shareUrl}', this)">📋 Copy Link</button>
+                <a class="social-pill" href="https://api.whatsapp.com/send?text=${wa}" target="_blank" rel="noopener">💬 WhatsApp</a>
+                <a class="social-pill" href="https://twitter.com/intent/tweet?url=${u}&text=${t}" target="_blank" rel="noopener">𝕏 Post</a>
+                <a class="social-pill" href="https://www.linkedin.com/sharing/share-offsite/?url=${u}" target="_blank" rel="noopener">in LinkedIn</a>
+                <a class="social-pill" href="https://www.facebook.com/sharer/sharer.php?u=${u}" target="_blank" rel="noopener">f Facebook</a>
+                <a class="social-pill" href="https://www.reddit.com/submit?url=${u}&title=${t}" target="_blank" rel="noopener">r/ Reddit</a>
+            `;
+        }
+
+        function copyMemeUrl(url, btnEl) {
+            navigator.clipboard.writeText(url).then(() => {
+                if (!btnEl) return;
+                const orig = btnEl.textContent;
+                btnEl.textContent = '✓ Copied!';
+                setTimeout(() => { btnEl.textContent = orig; }, 1600);
+            });
+        }
+
+        function toggleMemeShare(id, btnEl) {
+            const url = `https://syedshubha.com/m/${encodeURIComponent(id)}`;
+            copyMemeUrl(url, btnEl);
+            const drawer = document.getElementById('meme-share-' + id);
+            if (drawer) drawer.classList.toggle('open');
+        }
+
+        function selectCategoryTag(tag) {
+            activeTag = tag;
+            const tabsEl = document.getElementById('memeFilterTabs');
+            if (tabsEl) {
+                tabsEl.querySelectorAll('.filter-btn').forEach(b => {
+                    b.classList.toggle('active', b.getAttribute('data-tag') === tag);
+                });
+            }
+            renderMemes();
+        }
+
+        function buildFilterTabs() {
+            const memes = SITE_DATA.memes || [];
+            const preferredOrder = ['Quantum Computing', 'Physics', 'Mathematics', 'Science & Engineering', 'Epistemology & Philosophy', 'Miscellaneous'];
+            const rawTags = Array.from(new Set(memes.map(m => m.tag).filter(Boolean)));
+            const tags = rawTags.sort((a, b) => {
+                const ia = preferredOrder.indexOf(a);
+                const ib = preferredOrder.indexOf(b);
+                if (ia === -1 && ib === -1) return a.localeCompare(b);
+                if (ia === -1) return 1;
+                if (ib === -1) return -1;
+                return ia - ib;
+            });
+            const tabsEl = document.getElementById('memeFilterTabs');
+            tabsEl.innerHTML = `<button class="filter-btn active" data-tag="all">All Memes (${memes.length})</button>` +
+                tags.map(t => {
+                    const count = memes.filter(m => m.tag === t).length;
+                    return `<button class="filter-btn" data-tag="${t}">${t} (${count})</button>`;
+                }).join('');
+
+            tabsEl.querySelectorAll('.filter-btn').forEach(btn => {
+                btn.addEventListener('click', () => {
+                    selectCategoryTag(btn.getAttribute('data-tag'));
+                });
+            });
+        }
+
+        function getFilteredMemes() {
+            return (SITE_DATA.memes || []).filter(m => {
+                if (activeTag !== 'all' && m.tag !== activeTag) return false;
+                if (searchQuery) {
+                    const hay = `${m.title} ${m.desc || m.description || ''} ${m.explanation} ${m.tag}`.toLowerCase();
+                    if (!hay.includes(searchQuery.toLowerCase())) return false;
+                }
+                return true;
+            });
+        }
+
+        function renderMemes() {
+            const memes = getFilteredMemes();
+            const grid = document.getElementById('memeGrid');
+            grid.innerHTML = memes.map((m, idx) => `
+                <article class="meme-card">
+                    <div class="meme-img-frame" onclick="openLightbox('${m.id}')">
+                        <img src="${m.image}" alt="${m.title}" loading="lazy">
+                        <span class="zoom-hint">🔍 Click to Enlarge</span>
+                    </div>
+                    <div class="meme-body">
+                        <div class="meme-meta">
+                            <span class="meme-tag" style="cursor:pointer;" title="Filter by ${m.tag}" onclick="selectCategoryTag('${(m.tag || '').replace(/'/g, "\\'")}')">${m.tag || 'Physics & Math'}</span>
+                            <span class="meme-index">#${idx + 1}</span>
+                        </div>
+                        <h3 class="meme-title">${m.title}</h3>
+                        <p class="meme-desc">${m.desc || m.description || ''}</p>
+                        <div class="meme-actions">
+                            <button class="explain-btn ${allExpanded ? 'open' : ''}" id="btn-${m.id}" onclick="toggleExplain('${m.id}')">
+                                ${allExpanded ? '🔼 Hide Technical Explanation' : '💡 Show Technical Explanation'}
+                            </button>
+                            <button type="button" class="share-meme-btn" onclick="toggleMemeShare('${m.id}', this)" title="Share meme with preview">🔗 Share</button>
+                        </div>
+                        <div class="social-share-drawer" id="meme-share-${m.id}">
+                            ${buildSocialShareButtons('https://syedshubha.com/m/' + encodeURIComponent(m.id), m.title)}
+                        </div>
+                        <div class="meme-explanation ${allExpanded ? 'open' : ''}" id="exp-${m.id}">
+                            <strong>Why it works:</strong> ${formatExplanation(m.explanation || '')}
+                        </div>
+                    </div>
+                </article>
+            `).join('');
+        }
+
+        function toggleExplain(id) {
+            const expEl = document.getElementById('exp-' + id);
+            const btnEl = document.getElementById('btn-' + id);
+            if (!expEl || !btnEl) return;
+            const isOpen = expEl.classList.toggle('open');
+            btnEl.classList.toggle('open', isOpen);
+            btnEl.textContent = isOpen ? '🔼 Hide Technical Explanation' : '💡 Show Technical Explanation';
+        }
+
+        function toggleAllExplanations() {
+            allExpanded = !allExpanded;
+            const btn = document.getElementById('expandAllBtn');
+            btn.classList.toggle('active', allExpanded);
+            btn.textContent = allExpanded ? '🔼 Collapse All Explanations' : '💡 Expand All Explanations';
+            renderMemes();
+        }
+
+        function openLightbox(id, updateHistory = true) {
+            const m = (SITE_DATA.memes || []).find(x => x.id === id);
+            if (!m) return;
+            currentLightboxId = m.id;
+            document.title = `${m.title} — Quantum Memeology | Syed Shubha`;
+            if (window.location.protocol !== 'file:' && updateHistory) {
+                const cleanMemePath = `/m/${encodeURIComponent(m.id)}`;
+                if (window.location.pathname !== cleanMemePath || window.location.search) {
+                    history.pushState({ meme: m.id }, '', cleanMemePath);
+                }
+            }
+            document.getElementById('lightboxImg').src = m.image;
+            document.getElementById('lightboxTag').textContent = m.tag || 'Science Meme';
+            document.getElementById('lightboxTitle').textContent = m.title;
+            document.getElementById('lightboxDesc').textContent = m.desc || m.description || '';
+            document.getElementById('lightboxExp').innerHTML = formatExplanation(m.explanation || '');
+            const lbShare = document.getElementById('lightboxShareBar');
+            if (lbShare) {
+                lbShare.innerHTML = buildSocialShareButtons('https://syedshubha.com/m/' + encodeURIComponent(m.id), m.title);
+            }
+            document.getElementById('lightboxModal').classList.add('open');
+        }
+
+        function stepLightbox(delta) {
+            const list = getFilteredMemes();
+            if (!list.length || !currentLightboxId) return;
+            const idx = list.findIndex(x => x.id === currentLightboxId);
+            const nextIdx = idx === -1 ? 0 : (idx + delta + list.length) % list.length;
+            openLightbox(list[nextIdx].id, true);
+        }
+
+        function closeLightbox(updateHistory = true) {
+            document.getElementById('lightboxModal').classList.remove('open');
+            currentLightboxId = null;
+            window.__INITIAL_MEME_ID__ = null;
+            document.title = 'Quantum Memeology & Science Outreach | Syed Emad Uddin Shubha';
+            if (window.location.protocol !== 'file:' && updateHistory) {
+                if (window.location.pathname !== '/memes/') {
+                    history.pushState({}, '', '/memes/');
+                }
+            }
+        }
+
+        document.getElementById('memeSearchInput').addEventListener('input', e => {
+            searchQuery = e.target.value;
+            renderMemes();
+        });
+
+        document.getElementById('mobileToggle').addEventListener('click', () => {
+            document.getElementById('navMenu').classList.toggle('active');
+        });
+
+        document.addEventListener('keydown', e => {
+            const isOpen = document.getElementById('lightboxModal').classList.contains('open');
+            if (!isOpen) return;
+            if (e.key === 'Escape') closeLightbox();
+            else if (e.key === 'ArrowRight') stepLightbox(1);
+            else if (e.key === 'ArrowLeft') stepLightbox(-1);
+        });
+
+        window.addEventListener('scroll', () => {
+            const btn = document.getElementById('backToTopBtn');
+            if (btn) btn.classList.toggle('visible', window.scrollY > 420);
+        }, { passive: true });
+
+        function syncThemeBtn() {
+            const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+            const icon = document.getElementById('themeToggleIcon');
+            const label = document.getElementById('themeToggleLabel');
+            if (icon) icon.textContent = isDark ? '☀️' : '🌙';
+            if (label) label.textContent = isDark ? 'Light Mode' : 'Dark Mode';
+        }
+
+        function toggleTheme() {
+            const current = document.documentElement.getAttribute('data-theme') || 'dark';
+            const next = current === 'dark' ? 'light' : 'dark';
+            document.documentElement.setAttribute('data-theme', next);
+            localStorage.setItem('syed_theme', next);
+            syncThemeBtn();
+        }
+
+        syncThemeBtn();
+        initMemes();
+    </script>
 </body>
 </html>

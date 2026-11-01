@@ -8,31 +8,31 @@
         (function() {
             const path = window.location.pathname || '';
             const search = window.location.search || '';
-            // Auto-recover /p/<slug> or /p/<slug>/ -> /blog.html?post=<slug>
-            const pMatch = path.match(/^\/p\/([^\/]+)\/?$/i);
-            if (pMatch) {
+            // Auto-recover /p/<slug> or /blog/<slug> -> /blog/?post=<slug>
+            const pMatch = path.match(/^\/(?:p|blog)\/([^\/]+)\/?$/i);
+            if (pMatch && pMatch[1].toLowerCase() !== 'index.html') {
                 const slug = pMatch[1].replace(/\.html$/i, '');
-                window.location.replace('/blog.html?post=' + encodeURIComponent(slug));
+                window.location.replace('/blog/?post=' + encodeURIComponent(slug));
                 return;
             }
-            // Auto-recover /m/<id> or /m/<id>/ -> /memes.html?meme=<id>
-            const mMatch = path.match(/^\/m\/([^\/]+)\/?$/i);
-            if (mMatch) {
+            // Auto-recover /m/<id> or /memes/<id> -> /memes/?meme=<id>
+            const mMatch = path.match(/^\/(?:m|memes)\/([^\/]+)\/?$/i);
+            if (mMatch && mMatch[1].toLowerCase() !== 'index.html') {
                 const mid = mMatch[1].replace(/\.html$/i, '');
-                window.location.replace('/memes.html?meme=' + encodeURIComponent(mid));
+                window.location.replace('/memes/?meme=' + encodeURIComponent(mid));
                 return;
             }
-            // Auto-recover /blog/ or /memes/ or /qsvt/ with trailing slashes or case variations
-            if (/^\/blog\/?$/i.test(path)) {
-                window.location.replace('/blog.html' + search);
+            // Auto-recover /blog, /blogs, /bog, /memes, /meme, /qsvt
+            if (/^\/(blog|blogs|bog)\/?$/i.test(path)) {
+                window.location.replace('/blog/' + search);
                 return;
             }
-            if (/^\/memes\/?$/i.test(path)) {
-                window.location.replace('/memes.html' + search);
+            if (/^\/(memes|meme)\/?$/i.test(path)) {
+                window.location.replace('/memes/' + search);
                 return;
             }
             if (/^\/qsvt(\.html)?\/?$/i.test(path)) {
-                window.location.replace('/QSVT.html' + search);
+                window.location.replace('/qsvt/' + search);
                 return;
             }
         })();

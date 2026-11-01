@@ -1,13 +1,16 @@
 #!/usr/bin/env python3
-"""Generate per-post and per-meme link-preview pages and Open Graph images.
+"""Generate per-post and per-meme pages, clean directory routes (/blog/, /memes/, /qsvt/), and Open Graph images.
 
 For every blog post and meme, this writes:
   images/og/<slug>.jpg          1200x630 preview image (< 280 KB for WhatsApp/X/LinkedIn)
-  p/<slug>.html                 static page with og:/twitter: tags that redirects humans to blog.html?post=<slug>
-  p/<slug>/index.html           directory index fallback so trailing-slash /p/<slug>/ never 404s
+  p/<slug>.html                 full zero-redirect blog reader page with custom og:/twitter: tags
+  p/<slug>/index.html           directory index so /p/<slug> and /p/<slug>/ render in-place with zero redirect
   images/og/memes/<id>.jpg      1200x630 meme preview image
-  m/<id>.html                   static meme page that redirects humans to memes.html?meme=<id>
-  m/<id>/index.html             directory index fallback so trailing-slash /m/<id>/ never 404s
+  m/<id>.html                   full zero-redirect meme page with custom og:/twitter: tags
+  m/<id>/index.html             directory index so /m/<id> and /m/<id>/ render in-place with zero redirect
+  blog/index.html               clean /blog/ route
+  memes/index.html              clean /memes/ route
+  qsvt/index.html               clean /qsvt/ route
 
 Run from anywhere:     python3 tools/generate_previews.py
 """
@@ -42,45 +45,41 @@ def make_og_image(cover_path, out_path):
             break
     return os.path.getsize(out_path)
 
-PAGE = """<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>{title} | Syed Emad Uddin Shubha</title>
-<meta name="description" content="{desc}">
-<link rel="canonical" href="{url}">
+META_BLOCK = """    <base href="/">
+    <title>{title} | Syed Emad Uddin Shubha</title>
+    <meta name="description" content="{desc}">
+    <link rel="canonical" href="{url}">
 
-<meta property="og:type" content="article">
-<meta property="og:site_name" content="Syed Emad Uddin Shubha">
-<meta property="og:url" content="{url}">
-<meta property="og:title" content="{title}">
-<meta property="og:description" content="{desc}">
-<meta property="og:image" content="{img}">
-<meta property="og:image:secure_url" content="{img}">
-<meta property="og:image:type" content="image/jpeg">
-<meta property="og:image:width" content="{w}">
-<meta property="og:image:height" content="{h}">
+    <!-- Open Graph / LinkedIn / Facebook -->
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="Syed Emad Uddin Shubha">
+    <meta property="og:url" content="{url}">
+    <meta property="og:title" content="{title}">
+    <meta property="og:description" content="{desc}">
+    <meta property="og:image" content="{img}">
+    <meta property="og:image:secure_url" content="{img}">
+    <meta property="og:image:type" content="image/jpeg">
+    <meta property="og:image:width" content="{w}">
+    <meta property="og:image:height" content="{h}">
 
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="{title}">
-<meta name="twitter:description" content="{desc}">
-<meta name="twitter:image" content="{img}">
-<meta name="twitter:creator" content="@syed_shubha">
+    <!-- Twitter / X -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="{url}">
+    <meta name="twitter:title" content="{title}">
+    <meta name="twitter:description" content="{desc}">
+    <meta name="twitter:image" content="{img}">
+    <meta name="twitter:creator" content="@syed_shubha">
+    <script>{init_js}</script>"""
 
-<meta http-equiv="refresh" content="0; url={target}">
-<script>window.location.replace("{target}");</script>
-</head>
-<body style="font-family:Georgia,serif;background:#160b28;color:#f4effa;padding:2rem">
-<h1>{title}</h1>
-<p>{desc}</p>
-<p><a style="color:#d4af37" href="{target}">Continue to page &rarr;</a></p>
-</body>
-</html>
-"""
+def inject_meta(template_html, meta_block):
+    pattern = re.compile(r'<title>.*?</title>.*?<meta name="twitter:creator"[^>]*>', re.DOTALL)
+    return pattern.sub(lambda _: meta_block, template_html, count=1)
 
 def main():
-    data = json.load(open(os.path.join(ROOT, 'data', 'portfolio_data.json')))
+    data = json.load(open(os.path.join(ROOT, 'data', 'portfolio_data.json'), encoding='utf-8'))
+    blog_tpl = open(os.path.join(ROOT, 'blog.html'), encoding='utf-8').read()
+    memes_tpl = open(os.path.join(ROOT, 'memes.html'), encoding='utf-8').read()
+
     os.makedirs(os.path.join(ROOT, 'images', 'og'), exist_ok=True)
     os.makedirs(os.path.join(ROOT, 'images', 'og', 'memes'), exist_ok=True)
     os.makedirs(os.path.join(ROOT, 'p'), exist_ok=True)
@@ -94,18 +93,19 @@ def main():
         cover_rel = p.get('cover_image')
         cover_abs = os.path.join(ROOT, cover_rel) if cover_rel else fallback_cover
         size = make_og_image(cover_abs, os.path.join(ROOT, 'images', 'og', f'{slug}.jpg'))
-        page = PAGE.format(
+        meta = META_BLOCK.format(
             title=html.escape(strip_tags(p['title']), quote=True),
             desc=html.escape(strip_tags(p.get('summary', '')), quote=True),
             url=f'{SITE}/p/{slug}',
             img=f'{SITE}/images/og/{slug}.jpg',
             w=W, h=H,
-            target=f'/blog.html?post={slug}',
+            init_js=f'window.__INITIAL_POST_SLUG__ = {json.dumps(slug)};',
         )
-        open(os.path.join(ROOT, 'p', f'{slug}.html'), 'w').write(page)
+        page = inject_meta(blog_tpl, meta)
+        open(os.path.join(ROOT, 'p', f'{slug}.html'), 'w', encoding='utf-8').write(page)
         slug_dir = os.path.join(ROOT, 'p', slug)
         os.makedirs(slug_dir, exist_ok=True)
-        open(os.path.join(slug_dir, 'index.html'), 'w').write(page)
+        open(os.path.join(slug_dir, 'index.html'), 'w', encoding='utf-8').write(page)
         made.append((f'/p/{slug}', size))
 
     meme_made = []
@@ -115,19 +115,32 @@ def main():
         mid = m['id']
         size = make_og_image(os.path.join(ROOT, m['image']), os.path.join(ROOT, 'images', 'og', 'memes', f'{mid}.jpg'))
         desc_raw = strip_tags(m.get('desc') or m.get('description') or m.get('explanation') or '')
-        page = PAGE.format(
+        meta = META_BLOCK.format(
             title=html.escape(f"{strip_tags(m['title'])} | Quantum Memeology", quote=True),
             desc=html.escape(desc_raw, quote=True),
             url=f'{SITE}/m/{mid}',
             img=f'{SITE}/images/og/memes/{mid}.jpg',
             w=W, h=H,
-            target=f'/memes.html?meme={mid}',
+            init_js=f'window.__INITIAL_MEME_ID__ = {json.dumps(mid)};',
         )
-        open(os.path.join(ROOT, 'm', f'{mid}.html'), 'w').write(page)
+        page = inject_meta(memes_tpl, meta)
+        open(os.path.join(ROOT, 'm', f'{mid}.html'), 'w', encoding='utf-8').write(page)
         mid_dir = os.path.join(ROOT, 'm', mid)
         os.makedirs(mid_dir, exist_ok=True)
-        open(os.path.join(mid_dir, 'index.html'), 'w').write(page)
+        open(os.path.join(mid_dir, 'index.html'), 'w', encoding='utf-8').write(page)
         meme_made.append((f'/m/{mid}', size))
+
+    # Generate clean directory index pages: /blog/, /memes/, /qsvt/
+    for src_file, dest_dir in [('blog.html', 'blog'), ('memes.html', 'memes'), ('QSVT.html', 'qsvt')]:
+        src_path = os.path.join(ROOT, src_file)
+        if not os.path.exists(src_path):
+            continue
+        raw_html = open(src_path, 'r', encoding='utf-8').read()
+        if '<base ' not in raw_html:
+            raw_html = raw_html.replace('<head>', '<head>\n    <base href="/">', 1)
+        out_dir = os.path.join(ROOT, dest_dir)
+        os.makedirs(out_dir, exist_ok=True)
+        open(os.path.join(out_dir, 'index.html'), 'w', encoding='utf-8').write(raw_html)
 
     for path, size in made:
         print(f'{SITE}{path}   (og image {size // 1024} KB)')
