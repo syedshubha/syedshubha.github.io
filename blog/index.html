@@ -1138,7 +1138,7 @@
             const rendered = blocks.map(b => {
                 b = b.trim();
                 if (!b) return '';
-                if (b.startsWith('<h') || b.startsWith('<blockquote') || b.startsWith('<hr') || b.startsWith('<img')) return b;
+                if (b.startsWith('<h') || b.startsWith('<blockquote') || b.startsWith('<hr') || b.startsWith('<img') || b.startsWith('<div')) return b;
                 if (b.split('\n').every(line => line.trim().startsWith('- '))) {
                     const items = b.split('\n').map(l => `<li>${l.trim().substring(2)}</li>`).join('');
                     return `<ul>${items}</ul>`;
