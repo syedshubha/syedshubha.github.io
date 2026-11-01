@@ -169,22 +169,69 @@
         .theme-toggle-btn {
             display: inline-flex;
             align-items: center;
-            gap: 0.35rem;
-            padding: 0.38rem 0.72rem;
-            border-radius: 6px;
-            border: 1px solid var(--border-medium);
-            background: var(--bg-surface);
+            gap: 0.45rem;
+            padding: 0.42rem 0.9rem;
+            border-radius: 999px;
+            border: 1.5px solid var(--lsu-gold-dark);
+            background: var(--lsu-gold-tint);
             color: var(--text-primary);
-            font-size: 0.8rem;
-            font-weight: 600;
+            font-size: 0.82rem;
+            font-weight: 700;
             cursor: pointer;
-            transition: all 0.18s ease;
+            transition: all 0.2s ease;
             flex-shrink: 0;
+            box-shadow: 0 2px 10px rgba(210, 159, 19, 0.2);
+        }
+
+        html[data-theme="dark"] .theme-toggle-btn {
+            border-color: #FDD023;
+            background: rgba(253, 208, 35, 0.16);
+            color: #FFFDF7;
+            box-shadow: 0 0 14px rgba(253, 208, 35, 0.28);
         }
 
         .theme-toggle-btn:hover {
-            border-color: var(--academic-blue);
-            color: var(--academic-blue);
+            transform: translateY(-1px);
+            background: var(--lsu-gold);
+            color: #1A0D2E !important;
+            border-color: var(--lsu-gold);
+            box-shadow: 0 4px 14px rgba(253, 208, 35, 0.45);
+        }
+
+        /* Back to top floating button */
+        .back-to-top {
+            position: fixed;
+            bottom: 1.8rem;
+            right: 1.8rem;
+            z-index: 950;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.35rem;
+            padding: 0.6rem 1rem;
+            border-radius: 999px;
+            background: var(--lsu-purple);
+            color: #ffffff;
+            border: 1.5px solid var(--lsu-gold);
+            font-size: 0.82rem;
+            font-weight: 700;
+            cursor: pointer;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(12px);
+            transition: all 0.25s ease;
+        }
+
+        .back-to-top.visible {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        .back-to-top:hover {
+            background: var(--lsu-gold);
+            color: #1A0D2E;
+            transform: translateY(-2px);
         }
 
         * {
@@ -1701,9 +1748,9 @@
                 <li><a href="memes.html" class="nav-pill-btn">Quantum Memeology</a></li>
             </ul>
             <div style="display:flex; align-items:center; gap:0.55rem; flex-shrink:0;">
-                <button class="theme-toggle-btn" id="themeToggleBtn" onclick="toggleTheme()" aria-label="Toggle Dark/Light Mode" title="Toggle Dark/Light Mode">
+                <button class="theme-toggle-btn" id="themeToggleBtn" onclick="toggleTheme()" aria-label="Switch between Light and Dark theme" title="Switch between Light and Dark theme">
                     <span id="themeToggleIcon">☀️</span>
-                    <span id="themeToggleLabel">Light</span>
+                    <span id="themeToggleLabel">Light Mode</span>
                 </button>
                 <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle Menu">
                     <span></span>
@@ -2066,16 +2113,16 @@
         let currentPubSearch = '';
 
         async function initPortfolio() {
+            if (SITE_DATA) renderAll();
             try {
                 const res = await fetch('data/portfolio_data.json?t=' + Date.now());
                 if (res.ok) {
                     SITE_DATA = await res.json();
+                    renderAll();
                 }
             } catch (e) {
                 // Fallback to window.PORTFOLIO_DATA
             }
-            if (!SITE_DATA) return;
-            renderAll();
         }
 
         function renderAll() {
@@ -2352,7 +2399,7 @@
             const icon = document.getElementById('themeToggleIcon');
             const label = document.getElementById('themeToggleLabel');
             if (icon) icon.textContent = isDark ? '☀️' : '🌙';
-            if (label) label.textContent = isDark ? 'Light' : 'Dark';
+            if (label) label.textContent = isDark ? 'Light Mode' : 'Dark Mode';
         }
 
         function toggleTheme() {
@@ -2363,8 +2410,14 @@
             syncThemeBtn();
         }
 
+        window.addEventListener('scroll', () => {
+            const btt = document.getElementById('backToTopBtn');
+            if (btt) btt.classList.toggle('visible', window.scrollY > 450);
+        }, { passive: true });
+
         syncThemeBtn();
         initPortfolio();
     </script>
+    <button class="back-to-top" id="backToTopBtn" onclick="window.scrollTo({top: 0, behavior: 'smooth'})" aria-label="Back to top">↑ Top</button>
 </body>
 </html>

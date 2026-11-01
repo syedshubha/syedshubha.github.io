@@ -133,22 +133,125 @@
         .theme-toggle-btn {
             display: inline-flex;
             align-items: center;
-            gap: 0.35rem;
-            padding: 0.38rem 0.72rem;
-            border-radius: 6px;
-            border: 1px solid var(--border-medium);
-            background: var(--bg-surface);
-            color: var(--text-primary);
-            font-size: 0.8rem;
-            font-weight: 600;
+            gap: 0.42rem;
+            padding: 0.42rem 0.9rem;
+            border-radius: 999px;
+            border: 1.5px solid #d4af37;
+            background: linear-gradient(135deg, #23113d 0%, #3b1968 100%);
+            color: #fde68a;
+            font-size: 0.82rem;
+            font-weight: 700;
+            letter-spacing: 0.01em;
             cursor: pointer;
-            transition: all 0.18s ease;
+            box-shadow: 0 2px 10px rgba(35, 17, 61, 0.22);
+            transition: all 0.2s ease;
             flex-shrink: 0;
         }
 
         .theme-toggle-btn:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 4px 14px rgba(212, 175, 55, 0.38);
+            border-color: #fde047;
+            color: #ffffff;
+        }
+
+        html[data-theme="dark"] .theme-toggle-btn {
+            background: linear-gradient(135deg, rgba(212, 175, 55, 0.26) 0%, rgba(139, 92, 246, 0.34) 100%);
+            color: #fef08a;
+            border: 1.5px solid #e5c158;
+            box-shadow: 0 0 14px rgba(212, 175, 55, 0.32), inset 0 0 8px rgba(212, 175, 55, 0.12);
+        }
+
+        html[data-theme="dark"] .theme-toggle-btn:hover {
+            background: linear-gradient(135deg, rgba(212, 175, 55, 0.38) 0%, rgba(139, 92, 246, 0.48) 100%);
+            border-color: #fde047;
+            color: #ffffff;
+            box-shadow: 0 0 20px rgba(212, 175, 55, 0.5);
+        }
+
+        .reading-progress-bar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 3px;
+            width: 0%;
+            background: linear-gradient(90deg, #9a6f1a, #fde047);
+            z-index: 2000;
+            transition: width 0.08s linear;
+        }
+
+        .reader-pager {
+            margin-top: 2.25rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid var(--border-light);
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+        }
+
+        .reader-pager-card {
+            display: flex;
+            flex-direction: column;
+            gap: 0.25rem;
+            padding: 1rem 1.15rem;
+            border-radius: 10px;
+            background: var(--bg-page);
+            border: 1px solid var(--border-light);
+            color: var(--text-primary);
+            transition: all 0.2s ease;
+        }
+
+        .reader-pager-card:hover {
             border-color: var(--academic-blue);
-            color: var(--academic-blue);
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-sm);
+        }
+
+        .reader-pager-label {
+            font-size: 0.74rem;
+            font-family: 'JetBrains Mono', monospace;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: var(--text-muted);
+        }
+
+        .reader-pager-title {
+            font-family: 'Newsreader', Georgia, serif;
+            font-size: 1.02rem;
+            font-weight: 600;
+            color: var(--navy-900);
+            line-height: 1.3;
+        }
+
+        .back-to-top-btn {
+            position: fixed;
+            bottom: 1.6rem;
+            right: 1.6rem;
+            z-index: 1500;
+            padding: 0.55rem 0.9rem;
+            border-radius: 999px;
+            background: var(--navy-900);
+            color: #ffffff;
+            border: 1.5px solid #d4af37;
+            font-size: 0.8rem;
+            font-weight: 700;
+            cursor: pointer;
+            box-shadow: var(--shadow-md);
+            opacity: 0;
+            pointer-events: none;
+            transform: translateY(10px);
+            transition: all 0.22s ease;
+        }
+
+        html[data-theme="dark"] .back-to-top-btn {
+            background: #2b144d;
+            color: #fde68a;
+        }
+
+        .back-to-top-btn.visible {
+            opacity: 1;
+            pointer-events: auto;
+            transform: translateY(0);
         }
 
         * {
@@ -811,6 +914,7 @@
     </style>
 </head>
 <body>
+    <div class="reading-progress-bar" id="readingProgressBar"></div>
     <nav class="navbar">
         <div class="nav-container">
             <a href="index.html" class="nav-brand">
@@ -827,9 +931,9 @@
                 <li><a href="memes.html" class="nav-pill-btn">Quantum Memeology</a></li>
             </ul>
             <div style="display:flex; align-items:center; gap:0.55rem; flex-shrink:0;">
-                <button class="theme-toggle-btn" id="themeToggleBtn" onclick="toggleTheme()" aria-label="Toggle Dark/Light Mode" title="Toggle Dark/Light Mode">
+                <button class="theme-toggle-btn" id="themeToggleBtn" onclick="toggleTheme()" aria-label="Switch between Light and Dark Mode" title="Switch between Light and Dark Mode">
                     <span id="themeToggleIcon">☀️</span>
-                    <span id="themeToggleLabel">Light</span>
+                    <span id="themeToggleLabel">Light Mode</span>
                 </button>
                 <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle Menu">
                     <span></span>
@@ -882,6 +986,7 @@
                 </div>
                 <a id="readerExternalBtn" href="#" target="_blank" class="platform-btn gold">Open Original Article ↗</a>
             </div>
+            <div class="reader-pager" id="readerPager"></div>
         </article>
 
         <!-- All Posts Listing View -->
@@ -895,6 +1000,8 @@
             <div class="posts-grid" id="postsGrid"></div>
         </div>
     </main>
+
+    <button class="back-to-top-btn" id="backToTopBtn" onclick="window.scrollTo({top:0, behavior:'smooth'})" aria-label="Back to top">↑ Top</button>
 
     <script src="data/portfolio_data.js"></script>
     <script>
@@ -941,20 +1048,35 @@
             return rendered.replace(/@@MATH_(\d+)@@/g, (_, idx) => mathBlocks[Number(idx)]);
         }
 
-        async function initBlog() {
-            try {
-                const res = await fetch('data/portfolio_data.json?t=' + Date.now());
-                if (res.ok) SITE_DATA = await res.json();
-            } catch (e) {}
-
+        function initBlog() {
             buildCategoryTabs();
             checkRoute();
             window.addEventListener('popstate', checkRoute);
         }
 
+        function selectCategory(cat) {
+            activeCategory = cat;
+            const tabsEl = document.getElementById('catTabs');
+            if (tabsEl) {
+                tabsEl.querySelectorAll('.filter-btn').forEach(b => {
+                    b.classList.toggle('active', b.getAttribute('data-cat') === cat);
+                });
+            }
+            renderPosts();
+        }
+
         function buildCategoryTabs() {
             const posts = (SITE_DATA.posts || []).filter(p => !p.hide_from_blog);
-            const cats = Array.from(new Set(posts.map(p => p.category).filter(Boolean)));
+            const preferredCats = ['Quantum Computing', 'Epistemology', 'Mathematics & Physics', 'Mathematics & Physics (Bengali)'];
+            const rawCats = Array.from(new Set(posts.map(p => p.category).filter(Boolean)));
+            const cats = rawCats.sort((a, b) => {
+                const ia = preferredCats.indexOf(a);
+                const ib = preferredCats.indexOf(b);
+                if (ia === -1 && ib === -1) return a.localeCompare(b);
+                if (ia === -1) return 1;
+                if (ib === -1) return -1;
+                return ia - ib;
+            });
             const tabsEl = document.getElementById('catTabs');
             tabsEl.innerHTML = `<button class="filter-btn active" data-cat="all">All Articles (${posts.length})</button>` +
                 cats.map(c => {
@@ -964,10 +1086,7 @@
 
             tabsEl.querySelectorAll('.filter-btn').forEach(btn => {
                 btn.addEventListener('click', () => {
-                    tabsEl.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
-                    btn.classList.add('active');
-                    activeCategory = btn.getAttribute('data-cat');
-                    renderPosts();
+                    selectCategory(btn.getAttribute('data-cat'));
                 });
             });
         }
@@ -1014,30 +1133,31 @@
             });
         }
 
-        function togglePostShareDrawer(slug, hasCover, btnEl) {
-            const url = hasCover
-                ? `https://syedshubha.com/p/${encodeURIComponent(slug)}`
-                : `https://syedshubha.com/blog.html?post=${encodeURIComponent(slug)}`;
+        function togglePostShareDrawer(slug, btnEl) {
+            const url = `https://syedshubha.com/p/${encodeURIComponent(slug)}`;
             copyRawUrl(url, btnEl);
             const drawer = document.getElementById('share-drawer-' + slug);
             if (drawer) drawer.classList.toggle('open');
         }
 
+        function getOrderedVisiblePosts() {
+            const posts = (SITE_DATA.posts || []).filter(p => !p.hide_from_blog);
+            posts.sort((a, b) => {
+                const ia = BLOG_POST_ORDER.indexOf(a.id);
+                const ib = BLOG_POST_ORDER.indexOf(b.id);
+                return (ia === -1 ? 999 : ia) - (ib === -1 ? 999 : ib);
+            });
+            return posts;
+        }
+
         function renderPosts() {
-            const posts = (SITE_DATA.posts || []).filter(p => {
-                if (p.hide_from_blog) return false;
+            const posts = getOrderedVisiblePosts().filter(p => {
                 if (activeCategory !== 'all' && p.category !== activeCategory) return false;
                 if (searchQuery) {
                     const hay = `${p.title} ${p.summary} ${p.category} ${(p.tags || []).join(' ')}`.toLowerCase();
                     if (!hay.includes(searchQuery.toLowerCase())) return false;
                 }
                 return true;
-            });
-
-            posts.sort((a, b) => {
-                const ia = BLOG_POST_ORDER.indexOf(a.id);
-                const ib = BLOG_POST_ORDER.indexOf(b.id);
-                return (ia === -1 ? 999 : ia) - (ib === -1 ? 999 : ib);
             });
 
             const grid = document.getElementById('postsGrid');
@@ -1048,16 +1168,14 @@
                     ? (p.external_url.includes('substack') ? 'Substack ↗' : (p.external_url.includes('bigganblog') ? 'Bigganblog ↗' : 'External ↗'))
                     : (p.external_url ? 'Interactive Lab ↗' : '');
 
-                const shareUrl = p.cover_image
-                    ? `https://syedshubha.com/p/${encodeURIComponent(slug)}`
-                    : `https://syedshubha.com/blog.html?post=${encodeURIComponent(slug)}`;
+                const shareUrl = `https://syedshubha.com/p/${encodeURIComponent(slug)}`;
 
                 return `
                     <article class="post-card">
                         ${p.cover_image ? `<a href="?post=${encodeURIComponent(slug)}" onclick="openPost('${slug}', event)"><img src="${p.cover_image}" alt="${p.title}" class="post-cover"></a>` : ''}
                         <div class="post-body">
                             <div class="post-meta">
-                                <span class="post-cat">${p.category || 'Article'}</span>
+                                <span class="post-cat" style="cursor:pointer;" title="Filter by ${p.category}" onclick="selectCategory('${(p.category || '').replace(/'/g, "\\'")}')">${p.category || 'Article'}</span>
                                 <span>•</span>
                                 <span>${p.date || ''}</span>
                                 ${p.read_time ? `<span>• ${p.read_time}</span>` : ''}
@@ -1070,7 +1188,7 @@
                             <div class="post-footer">
                                 <a href="?post=${encodeURIComponent(slug)}" onclick="openPost('${slug}', event)">Read Article →</a>
                                 <div style="display:flex; align-items:center; gap:0.85rem;">
-                                    <button type="button" class="share-link-btn" onclick="togglePostShareDrawer('${slug}', ${Boolean(p.cover_image)}, this)" title="Share with social preview">🔗 Share</button>
+                                    <button type="button" class="share-link-btn" onclick="togglePostShareDrawer('${slug}', this)" title="Share with social preview">🔗 Share</button>
                                     ${p.external_url ? `<a href="${p.external_url}" ${hasExt ? 'target="_blank"' : ''} style="color:var(--text-secondary);">${extLabel}</a>` : ''}
                                 </div>
                             </div>
@@ -1087,18 +1205,6 @@
             }
         }
 
-        function copyPostShareLink(slug, hasCover, btnEl) {
-            const url = hasCover
-                ? `https://syedshubha.com/p/${encodeURIComponent(slug)}`
-                : `https://syedshubha.com/blog.html?post=${encodeURIComponent(slug)}`;
-            navigator.clipboard.writeText(url).then(() => {
-                if (!btnEl) return;
-                const orig = btnEl.textContent;
-                btnEl.textContent = '✓ Link Copied!';
-                setTimeout(() => { btnEl.textContent = orig; }, 1800);
-            });
-        }
-
         function openPost(slug, evt) {
             if (evt) evt.preventDefault();
             history.pushState({ post: slug }, '', `?post=${encodeURIComponent(slug)}`);
@@ -1113,20 +1219,20 @@
 
         function checkRoute() {
             const params = new URLSearchParams(window.location.search);
-            const slug = params.get('post');
-            const posts = SITE_DATA.posts || [];
-            const found = slug ? posts.find(p => (p.slug || p.id) === slug) : null;
+            const slug = params.get('post') || params.get('slug') || params.get('id');
+            const orderedPosts = getOrderedVisiblePosts();
+            const allPosts = SITE_DATA.posts || [];
+            const found = slug ? allPosts.find(p => (p.slug || p.id) === slug) : null;
 
             const readerEl = document.getElementById('readerView');
             const listingEl = document.getElementById('listingView');
+            const progEl = document.getElementById('readingProgressBar');
 
             if (found) {
                 listingEl.style.display = 'none';
                 readerEl.classList.add('active');
                 const foundSlug = found.slug || found.id;
-                const readerShareUrl = found.cover_image
-                    ? `https://syedshubha.com/p/${encodeURIComponent(foundSlug)}`
-                    : `https://syedshubha.com/blog.html?post=${encodeURIComponent(foundSlug)}`;
+                const readerShareUrl = `https://syedshubha.com/p/${encodeURIComponent(foundSlug)}`;
                 const shareBtn = document.getElementById('readerShareBtn');
                 const readerDrawer = document.getElementById('readerShareDrawer');
                 if (readerDrawer) {
@@ -1176,12 +1282,31 @@
                     extBox.style.display = 'none';
                 }
 
+                // Prev / Next article pager
+                const pagerEl = document.getElementById('readerPager');
+                if (pagerEl) {
+                    const curIdx = orderedPosts.findIndex(p => (p.slug || p.id) === foundSlug);
+                    const prevPost = curIdx > 0 ? orderedPosts[curIdx - 1] : null;
+                    const nextPost = (curIdx !== -1 && curIdx < orderedPosts.length - 1) ? orderedPosts[curIdx + 1] : null;
+                    pagerEl.innerHTML = `
+                        ${prevPost ? `<a class="reader-pager-card" href="?post=${encodeURIComponent(prevPost.slug || prevPost.id)}" onclick="openPost('${prevPost.slug || prevPost.id}', event)">
+                            <span class="reader-pager-label">← Previous Article</span>
+                            <span class="reader-pager-title">${prevPost.title}</span>
+                        </a>` : `<div></div>`}
+                        ${nextPost ? `<a class="reader-pager-card" style="text-align:right;" href="?post=${encodeURIComponent(nextPost.slug || nextPost.id)}" onclick="openPost('${nextPost.slug || nextPost.id}', event)">
+                            <span class="reader-pager-label">Next Article →</span>
+                            <span class="reader-pager-title">${nextPost.title}</span>
+                        </a>` : `<div></div>`}
+                    `;
+                }
+
                 if (window.MathJax && window.MathJax.typesetPromise) {
                     window.MathJax.typesetPromise([readerEl]);
                 }
             } else {
                 readerEl.classList.remove('active');
                 listingEl.style.display = 'block';
+                if (progEl) progEl.style.width = '0%';
                 renderPosts();
             }
         }
@@ -1195,12 +1320,24 @@
             document.getElementById('navMenu').classList.toggle('active');
         });
 
+        window.addEventListener('scroll', () => {
+            const btn = document.getElementById('backToTopBtn');
+            if (btn) btn.classList.toggle('visible', window.scrollY > 420);
+            const readerEl = document.getElementById('readerView');
+            const progEl = document.getElementById('readingProgressBar');
+            if (progEl && readerEl && readerEl.classList.contains('active')) {
+                const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+                const pct = docHeight > 0 ? Math.min(100, Math.max(0, (window.scrollY / docHeight) * 100)) : 0;
+                progEl.style.width = pct + '%';
+            }
+        }, { passive: true });
+
         function syncThemeBtn() {
             const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
             const icon = document.getElementById('themeToggleIcon');
             const label = document.getElementById('themeToggleLabel');
             if (icon) icon.textContent = isDark ? '☀️' : '🌙';
-            if (label) label.textContent = isDark ? 'Light' : 'Dark';
+            if (label) label.textContent = isDark ? 'Light Mode' : 'Dark Mode';
         }
 
         function toggleTheme() {

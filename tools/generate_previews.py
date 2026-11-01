@@ -1,14 +1,17 @@
 #!/usr/bin/env python3
-"""Generate per-post link-preview pages and Open Graph images.
+"""Generate per-post and per-meme link-preview pages and Open Graph images.
 
-For every blog post that has a cover image, this writes:
-  images/og/<slug>.jpg   1200x630 preview image (cover centered on navy, < 300 KB for WhatsApp)
-  p/<slug>.html          static page with og:/twitter: tags that redirects humans to blog.html?post=<slug>
+For every blog post and meme, this writes:
+  images/og/<slug>.jpg          1200x630 preview image (< 280 KB for WhatsApp/X/LinkedIn)
+  p/<slug>.html                 static page with og:/twitter: tags that redirects humans to blog.html?post=<slug>
+  p/<slug>/index.html           directory index fallback so trailing-slash /p/<slug>/ never 404s
+  images/og/memes/<id>.jpg      1200x630 meme preview image
+  m/<id>.html                   static meme page that redirects humans to memes.html?meme=<id>
+  m/<id>/index.html             directory index fallback so trailing-slash /m/<id>/ never 404s
 
-Share URL for a post:  https://syedshubha.com/p/<slug>
 Run from anywhere:     python3 tools/generate_previews.py
 """
-import json, os, html
+import json, os, html, re
 from PIL import Image
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -16,6 +19,9 @@ SITE = 'https://syedshubha.com'
 W, H = 1200, 630
 BG = (22, 11, 40)  # site navy
 PAD = 36
+
+def strip_tags(s):
+    return re.sub(r'<[^>]+>', '', s or '')
 
 def make_og_image(cover_path, out_path):
     im = Image.open(cover_path)
@@ -68,7 +74,7 @@ PAGE = """<!DOCTYPE html>
 <body style="font-family:Georgia,serif;background:#160b28;color:#f4effa;padding:2rem">
 <h1>{title}</h1>
 <p>{desc}</p>
-<p><a style="color:#d4af37" href="{target}">Read the article &rarr;</a></p>
+<p><a style="color:#d4af37" href="{target}">Continue to page &rarr;</a></p>
 </body>
 </html>
 """
@@ -79,21 +85,27 @@ def main():
     os.makedirs(os.path.join(ROOT, 'images', 'og', 'memes'), exist_ok=True)
     os.makedirs(os.path.join(ROOT, 'p'), exist_ok=True)
     os.makedirs(os.path.join(ROOT, 'm'), exist_ok=True)
+    fallback_cover = os.path.join(ROOT, 'images', 'peano_and_dedekind_gap.png')
     made = []
     for p in data['posts']:
-        if p.get('hide_from_blog') or not p.get('cover_image'):
+        if p.get('hide_from_blog'):
             continue
         slug = p.get('slug') or p['id']
-        size = make_og_image(os.path.join(ROOT, p['cover_image']), os.path.join(ROOT, 'images', 'og', f'{slug}.jpg'))
+        cover_rel = p.get('cover_image')
+        cover_abs = os.path.join(ROOT, cover_rel) if cover_rel else fallback_cover
+        size = make_og_image(cover_abs, os.path.join(ROOT, 'images', 'og', f'{slug}.jpg'))
         page = PAGE.format(
-            title=html.escape(p['title'], quote=True),
-            desc=html.escape(p.get('summary', ''), quote=True),
+            title=html.escape(strip_tags(p['title']), quote=True),
+            desc=html.escape(strip_tags(p.get('summary', '')), quote=True),
             url=f'{SITE}/p/{slug}',
             img=f'{SITE}/images/og/{slug}.jpg',
             w=W, h=H,
             target=f'/blog.html?post={slug}',
         )
         open(os.path.join(ROOT, 'p', f'{slug}.html'), 'w').write(page)
+        slug_dir = os.path.join(ROOT, 'p', slug)
+        os.makedirs(slug_dir, exist_ok=True)
+        open(os.path.join(slug_dir, 'index.html'), 'w').write(page)
         made.append((f'/p/{slug}', size))
 
     meme_made = []
@@ -102,9 +114,9 @@ def main():
             continue
         mid = m['id']
         size = make_og_image(os.path.join(ROOT, m['image']), os.path.join(ROOT, 'images', 'og', 'memes', f'{mid}.jpg'))
-        desc_raw = m.get('desc') or m.get('description') or m.get('explanation') or ''
+        desc_raw = strip_tags(m.get('desc') or m.get('description') or m.get('explanation') or '')
         page = PAGE.format(
-            title=html.escape(f"{m['title']} | Quantum Memeology", quote=True),
+            title=html.escape(f"{strip_tags(m['title'])} | Quantum Memeology", quote=True),
             desc=html.escape(desc_raw, quote=True),
             url=f'{SITE}/m/{mid}',
             img=f'{SITE}/images/og/memes/{mid}.jpg',
@@ -112,6 +124,9 @@ def main():
             target=f'/memes.html?meme={mid}',
         )
         open(os.path.join(ROOT, 'm', f'{mid}.html'), 'w').write(page)
+        mid_dir = os.path.join(ROOT, 'm', mid)
+        os.makedirs(mid_dir, exist_ok=True)
+        open(os.path.join(mid_dir, 'index.html'), 'w').write(page)
         meme_made.append((f'/m/{mid}', size))
 
     for path, size in made:

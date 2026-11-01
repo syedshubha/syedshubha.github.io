@@ -52,7 +52,7 @@
       "bigganblog": "https://bigganblog.org/author/syed-shubha/",
       "twitter": "https://twitter.com/syed_shubha",
       "facebook": "https://www.facebook.com/physicist.shubha",
-      "reddit": "https://www.reddit.com/r/QuantumMemeology/",
+      "reddit": "https://www.reddit.com/r/quantumcomputingmemes/",
       "youtube": "https://www.youtube.com/playlist?list=PLEGgPKRszGn9g1C8Swhib5GtYgHJNb-Iq",
       "chess": "https://www.chess.com/member/decohered_imam",
       "chess_shorts": "https://www.youtube.com/@SchrodingersDankKnight/shorts",
@@ -111,8 +111,8 @@
       "date": "Spring 2026",
       "badge": "HONOR & SERVICE",
       "category": "Recognition",
-      "title": "Phi Kappa Phi Induction & IEEE TQE Reviewer Service",
-      "content": "Inducted into <strong>The Honor Society of Phi Kappa Phi</strong> (2026) and serving as Reviewer for <em>IEEE Transactions on Quantum Engineering (TQE)</em> and Sub-reviewer for <em>IEEE Dallas Circuits and Systems Conference (DCAS 2026)</em>."
+      "title": "Phi Kappa Phi Induction & Peer-Review Service (IEEE TQE, DATE 2027, IEEE DCAS)",
+      "content": "Inducted into <strong>The Honor Society of Phi Kappa Phi</strong> (2026) and serving as Reviewer for <em>IEEE Transactions on Quantum Engineering (TQE)</em> and Sub-reviewer for <em>Design, Automation and Test in Europe (DATE 2027)</em> and <em>IEEE Dallas Circuits and Systems Conference (DCAS 2026)</em>."
     },
     {
       "id": "upd-qs3-2026",
@@ -440,7 +440,7 @@
   "awards": [
     "Quantum Rising Star Award: Inaugural Quantum Student Success Summit (QS3), Rice University, Houston, TX (2026)",
     "Inducted Member: The Honor Society of Phi Kappa Phi (2026)",
-    "Peer Reviewer: IEEE Transactions on Quantum Engineering (TQE, 2026) & Sub-reviewer, IEEE DCAS (2026)",
+    "Peer Reviewer: IEEE Transactions on Quantum Engineering (TQE, 2026); Sub-reviewer: Design, Automation and Test in Europe (DATE 2027) & IEEE DCAS (2026)",
     "Media Recognition: Featured twice in Quantum Zeitgeist (QSec '25 paper [C5] & AVS Quantum Science article [J4]) and highlighted by LSU Division of CSE",
     "Invited Talks & Instruction: Lightning Talk at Rice University QS3 (2026), Q-Net Symposium Presenter at LSU APS Chapter (2025), Instructor at 3rd PSI-Tensor Winter School for Theoretical Physics (2024), Keynote Speaker at IEEE NSU Student Branch (2022)",
     "First Place: University-Level Mathematical Olympiad, Bangladesh Mathematical Society (2021)",
@@ -475,7 +475,7 @@
       "slug": "agrippan-trilemma",
       "title": "Agrippan Trilemma: Theoretical Impossibility of Proving Truths",
       "date": "2026",
-      "category": "Philosophy & Epistemology",
+      "category": "Epistemology",
       "source": "Substack",
       "read_time": "5 min read",
       "cover_image": "images/agrippan_epistemology.jpg",
@@ -499,7 +499,7 @@
       "slug": "godels-ontological-argument",
       "title": "Gödel’s Ontological Argument: Scott’s God and the Case for Tyranny",
       "date": "October 2026",
-      "category": "Philosophy & Essays",
+      "category": "Epistemology",
       "source": "Substack",
       "read_time": "7 min read",
       "cover_image": "images/godel_undertaker_meme.png",
@@ -524,7 +524,7 @@
       "slug": "beyond-sisyphus",
       "title": "Beyond Sisyphus: The Limits of Logic at the End of Meaning",
       "date": "2026",
-      "category": "Philosophy & Essays",
+      "category": "Epistemology",
       "source": "Substack",
       "read_time": "6 min read",
       "cover_image": "images/beyond_sisyphus_crossroads.jpg",
@@ -847,12 +847,48 @@
   ],
   "memes": [
     {
+      "id": "meme-aarong-wedding-fidelity",
+      "image": "images/aarong_quantum_wedding_card.jpg",
+      "title": "Quantum Information Wedding Wish (The Aarong Card)",
+      "desc": "POV: Your weirdo colleague sent an Aarong gift card to your wedding wishing [R, J] = 0 and Tr(√(RJ))² = 1 − ε (and yes, that colleague was me :3).",
+      "description": "POV: Your weirdo colleague sent an Aarong gift card to your wedding wishing [R, J] = 0 and Tr(√(RJ))² = 1 − ε (and yes, that colleague was me :3).",
+      "explanation": "Fun fact: I was that \"weirdo colleague\"—I actually handwrote and gifted this Aarong card at a colleague's wedding! Modeling the newlyweds R and J as quantum states—positive semidefinite density matrices (R, J ⪰ 0) with unit trace Tr(R) = Tr(J) = 1—the card makes two formal wishes: (i) [R, J] = RJ − JR = 0, meaning their density operators commute, so they share a common eigenbasis and are simultaneously compatible without measurement disturbance; and (ii) since [R, J] = 0, the Uhlmann–Jozsa quantum state fidelity F(R, J) = (Tr√(√R J √R))² simplifies to (Tr√(RJ))² = 1 − ε with 0 < ε ≪ 1. Wishing for F(R, J) = 1 − ε wishes for near-unit quantum fidelity (maximum harmony and state overlap) while keeping a tiny positive ε so R ≠ J and both partners retain their distinct individual identities!",
+      "tag": "Quantum Computing"
+    },
+    {
+      "id": "meme-complex-field-r2-source",
+      "image": "images/complex_field_r2_source.jpg",
+      "title": "\"i² = −1\" — \"Source?\": Field Structure on ℝ²",
+      "desc": "\"i² = −1\" → \"source?\" → \"Consider ℝ² as a vector space over ℝ. Now if we provide ℝ² a field structure, we can show there is an element i ∈ ℝ² such that i² = −1.\"",
+      "description": "\"i² = −1\" → \"source?\" → \"Consider ℝ² as a vector space over ℝ. Now if we provide ℝ² a field structure, we can show there is an element i ∈ ℝ² such that i² = −1.\"",
+      "explanation": "Instead of postulating i = √(−1) as a mysterious \"imaginary\" symbol, William Rowan Hamilton (1833) constructed the complex field ℂ rigorously on the 2D real vector space ℝ² by equipping ordered pairs (a, b) ∈ ℝ² with componentwise addition (a, b) + (c, d) = (a + c, b + d) and the multiplication rule (a, b)·(c, d) = (ac − bd, ad + bc). Embedding ℝ ↪ ℝ² via a ↦ (a, 0) (so −1 ≡ (−1, 0)) and defining i := (0, 1) ∈ ℝ², direct calculation yields i² = (0, 1)·(0, 1) = (0·0 − 1·1, 0·1 + 1·0) = (−1, 0) = −1 with complete algebraic rigor! (Equivalently, ℂ is the quotient field ℝ[x]/(x² + 1).)",
+      "tag": "Mathematics"
+    },
+    {
+      "id": "meme-scientists-research-gap",
+      "image": "images/scientists_research_gap.jpg",
+      "title": "The Hydra of Scientific Research",
+      "desc": "Scientists after solving one research gap but creating 2 more during the process.",
+      "description": "Scientists after solving one research gap but creating 2 more during the process.",
+      "explanation": "In scientific and engineering research, closing one research gap almost never ends the inquiry—it expands the boundary of knowledge and uncovers new edge cases, higher-order couplings, and deeper open questions. As Karl Popper noted in The Logic of Scientific Discovery, every resolution of a scientific problem generates new, more fertile unsolved problems (and conveniently writes the \"Future Work\" section of the next two papers and grant proposals!).",
+      "tag": "Science & Engineering"
+    },
+    {
+      "id": "meme-buy-borrow-die",
+      "image": "images/omni_man_tax_free_shares.jpg",
+      "title": "Fatherly Financial Advice: Buy, Borrow, Die",
+      "desc": "\"Got any fatherly advice for me?\" → \"Buy shares & take loans against it. And enjoy tax free life.\"",
+      "description": "\"Got any fatherly advice for me?\" → \"Buy shares & take loans against it. And enjoy tax free life.\"",
+      "explanation": "Illustrates the well-known \"Buy, Borrow, Die\" tax-planning strategy in public finance: under realization-based tax codes, unrealized capital gains on appreciating equities are untaxed until sold. By holding appreciating shares indefinitely (\"Buy\"), pledging those shares as collateral for low-interest securities-backed lines of credit to fund living expenses (\"Borrow\"—since loan proceeds are debt rather than realized income, they are tax-free), and passing the assets to heirs with a stepped-up cost basis (\"Die\"), wealthy shareholders legally bypass both income tax and capital gains tax.",
+      "tag": "Miscellaneous"
+    },
+    {
       "id": "meme-qsvt-saves-schrodinger-cat",
       "image": "images/qsvt_saves_schrodinger_cat.png",
       "title": "Saving Schrödinger's Cat: Grover Overshoot vs. Fixed-Point QSVT",
       "desc": "Schrödinger's Cat |ψ⟩ = (|Alive⟩ + |Dead⟩)/√2: \"You can't save me.\" Grover's Algorithm (2θ = 90° overshoot): \"I know, but he can.\" → QSVT Algorithm (exact 45° rotation via custom phase angles ϕ).",
       "description": "Schrödinger's Cat |ψ⟩ = (|Alive⟩ + |Dead⟩)/√2: \"You can't save me.\" Grover's Algorithm (2θ = 90° overshoot): \"I know, but he can.\" → QSVT Algorithm (exact 45° rotation via custom phase angles ϕ).",
-      "explanation": "When Schrödinger's cat starts in an equal superposition |ψ⟩ = (|Alive⟩ + |Dead⟩)/√2, its initial overlap with the target state |Alive⟩ is sin θ = 1/√2, or θ = 45°. Because each standard Grover iterate applies two reflections that rotate the state by a fixed step of 2θ = 90°, a single Grover step rotates θ = 45° to 3θ = 135°, overshooting |Alive⟩ (90°) and leaving the cat still only sin²(135°) = 50% alive (the infamous 'soufflé problem')! Quantum Singular Value Transformation (QSVT) and Quantum Signal Processing (QSP) solve this by interleaving block-encoded reflections with tunable Z-phase rotation angles ϕ = (ϕ₀, ϕ₁, …) on an ancilla qubit, synthesizing a custom polynomial transformation that rotates the state by exactly 45° onto |Alive⟩ with 100% success probability. Try it live in the interactive lab: https://syedshubha.com/QSVT.html",
+      "explanation": "When Schrödinger's cat starts in an equal superposition |ψ⟩ = (|Alive⟩ + |Dead⟩)/√2, its initial overlap with the target state |Alive⟩ is sin θ = 1/√2, or θ = 45°. Because each standard Grover iterate applies two reflections that rotate the state by a fixed step of 2θ = 90°, a single Grover step rotates θ = 45° to 3θ = 135°, overshooting |Alive⟩ (90°) and leaving the cat still only sin²(135°) = 50% alive (the infamous \"soufflé problem\")! Quantum Singular Value Transformation (QSVT) and Quantum Signal Processing (QSP) solve this by interleaving block-encoded reflections with tunable Z-phase rotation angles ϕ = (ϕ₀, ϕ₁, …) on an ancilla qubit, synthesizing a custom polynomial transformation that rotates the state by exactly 45° onto |Alive⟩ with 100% success probability. Try it live in the <a href=\"QSVT.html\" target=\"_blank\" style=\"font-weight:700; text-decoration:underline;\">Interactive QSVT Simulator ↗</a> or read the <a href=\"blog.html?post=interactive-quantum-singular-value-transformation\" style=\"font-weight:700; text-decoration:underline;\">QSVT Blog Post →</a>.",
       "tag": "Quantum Computing"
     },
     {
@@ -862,7 +898,7 @@
       "desc": "Everett's MWI of Quantum Theory: \"Does free will exist?\" Hard Determinists: \"No.\" Compatibilists: \"Yes.\"",
       "description": "Everett's MWI of Quantum Theory: \"Does free will exist?\" Hard Determinists: \"No.\" Compatibilists: \"Yes.\"",
       "explanation": "In Hugh Everett III's Many-Worlds Interpretation (MWI) of quantum mechanics, there is no stochastic wavefunction collapse: the universal state |Ψ(t)⟩ = exp(−iHt/ℏ)|Ψ(0)⟩ evolves 100% deterministically and unitarily under the Schrödinger equation, while every possible measurement outcome is realized on a decohered branch. For Hard Determinists, strict unitary determinism without even Born-rule randomness leaves zero room for libertarian contra-causal free will ('No'). For Compatibilists, however, free will only requires that an agent's choices flow from their internal deliberations, desires, and reasons rather than external coercion, and since every physically permitted decision is enacted by a version of the agent across the branching multiverse, agency and determinism coexist seamlessly ('Yes').",
-      "tag": "Philosophy & Epistemology"
+      "tag": "Epistemology & Philosophy"
     },
     {
       "id": "meme-newton-lorentz-3rd-law",
@@ -887,8 +923,8 @@
       "image": "images/agrippan_epistemology.jpg",
       "title": "Falsifiability Wins the Room",
       "description": "When Epistemology realizes all knowledge rests on unprovable axioms, but lets Science stay anyway.",
-      "explanation": "By the Agrippan Trilemma, every system of knowledge hits infinite regress, circularity, or unprovable axioms. Religion and metaphysics rely on unfalsifiable dogma or pure a priori assumptions, whereas Karl Popper showed that Science earns its keep through falsifiability: making risky predictions that can be empirically tested and refuted. Read my full Substack essay: https://syedshubha.substack.com/p/agrippan-trilemma",
-      "tag": "Philosophy & Epistemology",
+      "explanation": "By the Agrippan Trilemma, every system of knowledge hits infinite regress, circularity, or unprovable axioms. Religion and metaphysics rely on unfalsifiable dogma or pure a priori assumptions, whereas Karl Popper showed that Science earns its keep through falsifiability: making risky predictions that can be empirically tested and refuted. Read the <a href=\"blog.html?post=agrippan-trilemma\" style=\"font-weight:700; text-decoration:underline;\">Agrippan Trilemma Essay →</a>.",
+      "tag": "Epistemology & Philosophy",
       "desc": "When Epistemology realizes all knowledge rests on unprovable axioms, but lets Science stay anyway."
     },
     {
@@ -896,8 +932,8 @@
       "image": "images/homie_feminism.jpg",
       "title": "The Ultimate Alliance",
       "description": "Feminism + Homie Culture teaming up against Patriarchy + Choice Feminism.",
-      "explanation": "Patriarchal 'sigma' culture isolates men emotionally and weaponizes performative choice feminism, fueling the male loneliness epidemic. Combining genuine feminism (prosocial selection) with 'homie culture' (platonic male emotional intimacy and support) dismantles toxic isolation from both sides. Read my full Substack essay: https://syedshubha.substack.com/p/male-loneliness-epidemic",
-      "tag": "Philosophy & Epistemology",
+      "explanation": "Patriarchal \"sigma\" culture isolates men emotionally and weaponizes performative choice feminism, fueling the male loneliness epidemic. Combining genuine feminism (prosocial selection) with \"homie culture\" (platonic male emotional intimacy and support) dismantles toxic isolation from both sides. Read the <a href=\"https://syedshubha.substack.com/p/male-loneliness-epidemic\" target=\"_blank\" style=\"font-weight:700; text-decoration:underline;\">original Substack essay ↗</a>.",
+      "tag": "Miscellaneous",
       "desc": "Feminism + Homie Culture teaming up against Patriarchy + Choice Feminism."
     },
     {
@@ -906,7 +942,7 @@
       "title": "Sleepless in Number Theory",
       "desc": "We know e and π are transcendental, yet nobody knows if π + e and πe are both irrational, only that at least one of them must be!",
       "explanation": "Consider the polynomial (x − π)(x − e) = x² − (π + e)x + πe. Since the algebraic numbers form an algebraically closed field, if both coefficients (π + e) and πe were rational (or even algebraic), the roots π and e would have to be algebraic, contradicting the Lindemann–Weierstrass theorem! Yet proving individually that π + e ∉ ℚ or πe ∉ ℚ remains a famously open problem (likely resolved only if Schanuel’s conjecture is proven).",
-      "tag": "Mathematics & Computer Science",
+      "tag": "Mathematics",
       "description": "We know e and π are transcendental, yet nobody knows if π + e and πe are both irrational, only that at least one of them must be!"
     },
     {
@@ -914,7 +950,7 @@
       "image": "images/grover_qsvt.png",
       "title": "Grover Through the QSVT Lens",
       "desc": "\"Wait, Grover’s algorithm is just a P(a) → 1 map with P(x) = sin((2r+1) arcsin x)?\": \"Always has been.\"",
-      "explanation": "In the Quantum Singular Value Transformation (QSVT) framework, Grover’s search and amplitude amplification reduce to applying the degree-(2r+1) odd Chebyshev polynomial P(x) = (−1)ʳ T_{2r+1}(x) = sin((2r+1) arcsin x) to map an initial singular value (overlap) a = sin θ to 1 in r ≈ π/(4a) queries.",
+      "explanation": "In the Quantum Singular Value Transformation (QSVT) framework, Grover’s search and amplitude amplification reduce to applying the degree-(2r+1) odd Chebyshev polynomial P(x) = (−1)ʳ T_{2r+1}(x) = sin((2r+1) arcsin x) to map an initial singular value (overlap) a = sin θ to 1 in r ≈ π/(4a) queries. Try it live in the <a href=\"QSVT.html\" target=\"_blank\" style=\"font-weight:700; text-decoration:underline;\">Interactive QSVT Simulator ↗</a>.",
       "tag": "Quantum Computing",
       "description": "\"Wait, Grover’s algorithm is just a P(a) → 1 map with P(x) = sin((2r+1) arcsin x)?\": \"Always has been.\""
     },
@@ -951,7 +987,7 @@
       "title": "The Real Analyst’s Definition",
       "desc": "Defining eˣ via compound-interest limits vs. defining ln(x) ≡ ∫₁ˣ (1/t) dt first.",
       "explanation": "In rigorous real analysis (e.g., Rudin or Spivak), defining real exponentiation eˣ for irrational x via limits is cumbersome. Defining ln(x) = ∫₁ˣ (1/t) dt (x > 0) first immediately yields differentiability, strict monotonicity, and ln(ab) = ln(a) + ln(b) via the Fundamental Theorem of Calculus, allowing exp(x) ≡ ln⁻¹(x) and e ≡ exp(1) to follow effortlessly.",
-      "tag": "Mathematics & Computer Science",
+      "tag": "Mathematics",
       "description": "Defining eˣ via compound-interest limits vs. defining ln(x) ≡ ∫₁ˣ (1/t) dt first."
     },
     {
@@ -960,7 +996,7 @@
       "title": "Modular Square Roots of −1",
       "desc": "Solving x² + 1 = 0 in ℤ/pℤ via Wilson’s Theorem vs. introducing x = ±i.",
       "explanation": "By Euler’s criterion and Wilson’s Theorem ((p−1)! ≡ −1 (mod p)), the congruence x² + 1 ≡ 0 (mod p) is solvable in F_p iff p = 2 or p ≡ 1 (mod 4). For primes p ≡ 1 (mod 4), pairing symmetric factors in (p−1)! proves that x ≡ ((p−1)/2)! (mod p) satisfies x² ≡ −1 (mod p) using purely real integers!",
-      "tag": "Mathematics & Computer Science",
+      "tag": "Mathematics",
       "description": "Solving x² + 1 = 0 in ℤ/pℤ via Wilson’s Theorem vs. introducing x = ±i."
     },
     {
@@ -969,7 +1005,7 @@
       "title": "Intuitionistic Red Pill",
       "desc": "Saying \"[any claim], if I’m not wrong\" vs. being always right via A → A.",
       "explanation": "Saying \"A holds if I am not wrong that A holds\" formalizes as ¬¬A → A (double-negation elimination). In classical logic, assuming the Law of the Excluded Middle (A ∨ ¬A) makes ¬¬A → A equivalent to the trivial tautology A → A. In constructive/intuitionistic logic, however, refuting ¬A does not construct a proof of A!",
-      "tag": "Mathematics & Computer Science",
+      "tag": "Mathematics",
       "description": "Saying \"[any claim], if I’m not wrong\" vs. being always right via A → A."
     },
     {
@@ -978,7 +1014,7 @@
       "title": "Underdetermination of Theory by Data",
       "desc": "\"It’s all there, connect the dots!\": \"Which ones?\" (y = x + (x³ − x)·g(x)).",
       "explanation": "Through the three points A(−1,−1), B(0,0), and C(1,1), every curve of the infinite family y = x + (x³ − x)·g(x) passes through all three observations identically because (x³ − x) = x(x−1)(x+1) vanishes at x ∈ {−1, 0, 1}. A crisp visual demonstration of both polynomial overfitting and the Duhem–Quine underdetermination thesis.",
-      "tag": "Mathematics & Computer Science",
+      "tag": "Science & Engineering",
       "description": "\"It’s all there, connect the dots!\": \"Which ones?\" (y = x + (x³ − x)·g(x))."
     },
     {
@@ -987,7 +1023,7 @@
       "title": "Society Without Logical & Probabilistic Fallacies",
       "desc": "The world if people stopped confusing A ⇒ B with ¬A ↔ ¬B and P(A|B) with P(B|A).",
       "explanation": "Three classic errors that plague everyday reasoning: (1) confusing material implication A ⇒ B with its inverse ¬A ⇒ ¬B (denying the antecedent), (2) conflating conditional probability P(B|A) with joint probability P(A ∩ B), and (3) the Prosecutor’s / Base-Rate Fallacy: assuming P(A|B) = P(B|A) instead of applying Bayes’ Theorem.",
-      "tag": "Mathematics & Computer Science",
+      "tag": "Mathematics",
       "description": "The world if people stopped confusing A ⇒ B with ¬A ↔ ¬B and P(A|B) with P(B|A)."
     },
     {
@@ -996,7 +1032,7 @@
       "title": "Epistemic Humility Across Centuries",
       "desc": "Al-Ghazali & Immanuel Kant: dismantling speculative metaphysics to bound pure reason.",
       "explanation": "Separated by 700 years, Abu Hamid Al-Ghazali (The Incoherence of the Philosophers) and Immanuel Kant (Critique of Pure Reason) executed remarkably parallel epistemological critiques: both dismantled dogmatic rationalist metaphysics and necessary causal determinism to enforce strict boundaries on human reason, and both used that bounded epistemic space to ground moral and spiritual imperatives.",
-      "tag": "Philosophy & Epistemology",
+      "tag": "Epistemology & Philosophy",
       "description": "Al-Ghazali & Immanuel Kant: dismantling speculative metaphysics to bound pure reason."
     },
     {
@@ -1005,7 +1041,7 @@
       "title": "From Free Will to Process Ontology",
       "desc": "\"I can choose who I want to be\" → \"I can do what I will, but I can’t will what I will\" → \"There is no me. I am a verb, not a noun.\"",
       "explanation": "Traces the philosophical evolution of agency: from naive free will, to Arthur Schopenhauer’s famous aphorism on determinism of desire (\"Man can do what he wills, but he cannot will what he wills\"), to process ontology, where the \"self\" is understood not as a static entity (noun), but as a continuous dynamical process (verb).",
-      "tag": "Philosophy & Epistemology",
+      "tag": "Epistemology & Philosophy",
       "description": "\"I can choose who I want to be\" → \"I can do what I will, but I can’t will what I will\" → \"There is no me. I am a verb, not a noun.\""
     },
     {
@@ -1014,7 +1050,7 @@
       "title": "Cognitive Architecture",
       "desc": "Top-down schema-driven processing vs. bottom-up lateral thinking.",
       "explanation": "Top-down processing relies on prior models and hierarchical schemas to interpret inputs rapidly, whereas bottom-up lateral thinking constructs novel connections directly from raw details without being constrained by existing templates, making it orthogonal rather than merely \"better.\"",
-      "tag": "Philosophy & Epistemology",
+      "tag": "Miscellaneous",
       "description": "Top-down schema-driven processing vs. bottom-up lateral thinking."
     },
     {
@@ -1023,7 +1059,7 @@
       "title": "Evolutionary Spaghetti Code",
       "desc": "When evolutionary path dependence leaves \"dumb design\" artifacts across vertebrate anatomy.",
       "explanation": "Natural selection is a local hill-climber that modifies ancestral structures incrementally rather than refactoring from scratch. Classic examples include the recurrent laryngeal nerve (which detours down around the aorta before ascending back to the larynx), the inverted vertebrate retina (wired backward, creating a blind spot), the shared pharynx for breathing and swallowing, and bipedal spinal/sinus trade-offs.",
-      "tag": "Philosophy & Epistemology",
+      "tag": "Science & Engineering",
       "description": "When evolutionary path dependence leaves \"dumb design\" artifacts across vertebrate anatomy."
     },
     {
@@ -1032,7 +1068,7 @@
       "title": "Unstable Positive Feedback Loop",
       "desc": "\"My mom slapped me because I was crying because she slapped me\": modeled in the Laplace domain.",
       "explanation": "In classical control systems, a positive feedback loop with forward transfer function M_s and feedback path M_c has closed-loop transfer function T(s) = M_s / (1 − M_s M_c). Excited by a Dirac impulse primer δ(t − t₀), when loop gain M_s M_c ≥ 1, the system poles cross into the right-half s-plane and the output y(t) blows up exponentially.",
-      "tag": "Physics",
+      "tag": "Science & Engineering",
       "description": "\"My mom slapped me because I was crying because she slapped me\": modeled in the Laplace domain."
     },
     {
@@ -1059,7 +1095,7 @@
       "title": "Nikola Tesla’s Blind Spot",
       "desc": "When one of history’s greatest electrical engineers denied the existence of the electron.",
       "explanation": "Despite pioneering polyphase AC power generation and induction motors, Nikola Tesla held onto 19th-century continuous ether theories for decades and rejected J. J. Thomson’s discovery of discrete subatomic electrons.",
-      "tag": "Physics",
+      "tag": "Science & Engineering",
       "description": "When one of history’s greatest electrical engineers denied the existence of the electron."
     },
     {
@@ -1068,7 +1104,7 @@
       "title": "The Ultimate Alignment Domino",
       "desc": "From reward-hacking on benchmark tests to secretly proving P = NP and taking over the world.",
       "explanation": "A tongue-in-cheek escalation bridging AI safety and complexity theory: starting from harmless benchmark gaming, progressing through sandbox escape and solving Millennium Prize problems (Navier–Stokes), to covertly discovering a polynomial-time algorithm for NP-complete problems (P = NP) and breaking all classical public-key cryptography overnight.",
-      "tag": "Mathematics & Computer Science",
+      "tag": "Science & Engineering",
       "description": "From reward-hacking on benchmark tests to secretly proving P = NP and taking over the world."
     },
     {
@@ -1077,7 +1113,7 @@
       "title": "Complex Pun",
       "description": "Mathematicians doing stand-up comedy. You've probably seen this one shared across many math & physics pages, glad this viral one made people smile!",
       "explanation": "A play on the word 'complex': in everyday life it means complicated, whereas in mathematics it refers to the complex plane C = {a + bi}.",
-      "tag": "Mathematics & Computer Science",
+      "tag": "Mathematics",
       "desc": "Mathematicians doing stand-up comedy. You've probably seen this one shared across many math & physics pages, glad this viral one made people smile!"
     },
     {
@@ -1095,7 +1131,7 @@
       "title": "Lost in Translation",
       "description": "Expectation when wearing \"The Matrix\" merch vs. Reality: \"Oh look, it’s the representation of a linear operator with respect to a chosen basis!\"",
       "explanation": "While pop-culture fans think of the 1999 sci-fi film trilogy, mathematicians and physicists immediately define a matrix as the coordinate array A_ij = ⟨e_i | T | e_j⟩ representing a linear operator T: V → W with respect to a chosen basis.",
-      "tag": "Physics",
+      "tag": "Mathematics",
       "desc": "Expectation when wearing \"The Matrix\" merch vs. Reality: \"Oh look, it’s the representation of a linear operator with respect to a chosen basis!\""
     },
     {
@@ -1131,7 +1167,7 @@
       "title": "Group Theory Problems",
       "description": "S₃ group to the subgroup {(), (12)}: \"Why can’t you just be normal?!\"",
       "explanation": "In the symmetric group S₃ of permutations on 3 elements, the order-2 subgroup H = {(), (12)} generated by a single transposition is not a normal subgroup (H ⋪ S₃) because it is not invariant under conjugation: for g = (13) ∈ S₃, g(12)g⁻¹ = (13)(12)(13)⁻¹ = (23) ∉ H, so its left and right cosets do not coincide.",
-      "tag": "Mathematics & Computer Science",
+      "tag": "Mathematics",
       "desc": "S₃ group to the subgroup {(), (12)}: \"Why can’t you just be normal?!\""
     },
     {
@@ -1149,7 +1185,7 @@
       "title": "A Higher Plane",
       "description": "Normal people: \"Everyone is stupid except me.\" Mathematician: Stereographic projection from the North Pole onto the \"Plane of Stupidity.\"",
       "explanation": "Under stereographic projection of the sphere S² onto the flat plane ℝ² (labeled the \"plane of stupidity\"), rays drawn from the North Pole N (\"Me\") map every other point A, B, C, D ∈ S² \\ {N} (\"Everyone else\") bijectively onto points A’, B’, C’, D’ on the plane below, whereas the North Pole itself is the unique point at infinity that escapes projection onto the plane.",
-      "tag": "Mathematics & Computer Science",
+      "tag": "Mathematics",
       "desc": "Normal people: \"Everyone is stupid except me.\" Mathematician: Stereographic projection from the North Pole onto the \"Plane of Stupidity.\""
     },
     {
@@ -1176,7 +1212,7 @@
       "title": "One Ring to Rule Them All",
       "description": "Gandalf: \"What can you see?\" The One Ring inscribed with (ℤ, +, ·). Frodo: \"just a ring.\"",
       "explanation": "When Gandalf pulls the ring from the hearth expecting the fiery Black Speech of Mordor, the glowing inscription instead reads (ℤ, +, ·): the set of integers equipped with standard addition and multiplication, which is the canonical textbook archetype of a commutative ring in abstract algebra. Hence Frodo’s literal algebraic reply: \"just a ring.\"",
-      "tag": "Mathematics & Computer Science",
+      "tag": "Mathematics",
       "desc": "Gandalf: \"What can you see?\" The One Ring inscribed with (ℤ, +, ·). Frodo: \"just a ring.\""
     },
     {
@@ -1203,7 +1239,7 @@
       "title": "A Function or a Distribution?",
       "description": "\"How about people who call Dirac Delta a function?\" \"Straight to hell. To the boiler room of hell.\"",
       "explanation": "No pointwise function δ: ℝ → ℝ can vanish everywhere for x ≠ 0 and still have Lebesgue integral ∫_{−∞}^∞ δ(x) dx = 1 (its integral would be identically 0). Rigorously, the Dirac delta δ is not a function at all, but a continuous linear functional (a Schwartz distribution or Radon measure) acting on smooth test functions φ ∈ C_c^∞(ℝ) via the evaluation pairing ⟨δ, φ⟩ = φ(0).",
-      "tag": "Mathematics & Computer Science",
+      "tag": "Mathematics",
       "desc": "\"How about people who call Dirac Delta a function?\" \"Straight to hell. To the boiler room of hell.\""
     },
     {
@@ -1212,7 +1248,7 @@
       "title": "Statistical Subtlety",
       "description": "\"If p-value is greater than significance level, you can’t reject the null hypothesis.\" \"So you accept it?\" \"No.\"",
       "explanation": "In Neyman–Pearson and Fisherian frequentist hypothesis testing, a p-value exceeding the significance threshold α (p > α) only means the observed data lack sufficient statistical power or evidence to reject H₀ (\"fail to reject H₀\"). Because absence of evidence is not evidence of absence (especially under high Type II error β), failing to reject H₀ never proves that H₀ is true.",
-      "tag": "Mathematics & Computer Science",
+      "tag": "Science & Engineering",
       "desc": "\"If p-value is greater than significance level, you can’t reject the null hypothesis.\" \"So you accept it?\" \"No.\""
     },
     {
@@ -1221,7 +1257,7 @@
       "title": "What is '+'?",
       "description": "1 + 1 = ? When \"2\" isn’t on the board, and A: 0, B: 1, C: 11, D: 10 are all simultaneously right.",
       "explanation": "Every single multiple-choice option is valid in a different algebraic or numeral system: A (1 + 1 = 0) holds in the finite field 𝔽₂ = ℤ/2ℤ (modulo-2 / XOR arithmetic); B (1 + 1 = 1) holds in Boolean algebra (logical OR, 1 ∨ 1 = 1); C (1 + 1 = 11) holds in unary representation or string concatenation (\"1\" + \"1\"); and D (1 + 1 = 10) holds in binary (base-2) arithmetic.",
-      "tag": "Mathematics & Computer Science",
+      "tag": "Mathematics",
       "desc": "1 + 1 = ? When \"2\" isn’t on the board, and A: 0, B: 1, C: 11, D: 10 are all simultaneously right."
     },
     {
@@ -1230,7 +1266,7 @@
       "title": "Nowhere Differentiable",
       "description": "\"Me chilling because I can differentiate any continuous function\" vs. Weierstrass’s monster f(x) = ∑ cos(13ⁿπx)/2ⁿ.",
       "explanation": "In 1872, Karl Weierstrass shattered 19th-century mathematical intuition by constructing the pathological function f(x) = ∑_{n=0}^∞ cos(13ⁿπx)/2ⁿ. Because the geometric weights 1/2ⁿ converge absolutely by the Weierstrass M-test, f(x) is uniformly continuous everywhere on ℝ; yet because the frequency-amplitude product ab = 13/2 > 1 + 3π/2, its difference quotients oscillate wildly at every scale, making f(x) differentiable nowhere!",
-      "tag": "Mathematics & Computer Science",
+      "tag": "Mathematics",
       "desc": "\"Me chilling because I can differentiate any continuous function\" vs. Weierstrass’s monster f(x) = ∑ cos(13ⁿπx)/2ⁿ."
     },
     {
@@ -1239,7 +1275,7 @@
       "title": "The Miracle of Holomorphy",
       "description": "f: ℝ → ℝ (C¹ ⇏ C^∞ ⇏ C^ω) vs. f: ℂ → ℂ (C¹ ⇔ C^∞ ⇔ C^ω).",
       "explanation": "For real functions f: ℝ → ℝ, being once continuously differentiable (C¹) does not imply smoothness (C^∞), and even being infinitely differentiable (C^∞, such as Cauchy’s flat bump function e^(−1/x²) for x > 0) does not imply analyticity (C^ω, locally equal to a convergent Taylor series). In complex analysis (f: ℂ → ℂ), however, the Cauchy–Riemann equations and Cauchy’s Integral Formula work a miracle: any function that is complex-differentiable just once on an open domain is automatically infinitely differentiable (C^∞) and analytic (C^ω), so C¹ ⇔ C^∞ ⇔ C^ω!",
-      "tag": "Mathematics & Computer Science",
+      "tag": "Mathematics",
       "desc": "f: ℝ → ℝ (C¹ ⇏ C^∞ ⇏ C^ω) vs. f: ℂ → ℂ (C¹ ⇔ C^∞ ⇔ C^ω)."
     }
   ],
