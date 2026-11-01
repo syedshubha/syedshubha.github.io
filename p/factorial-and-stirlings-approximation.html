@@ -1011,7 +1011,7 @@
     <div class="reading-progress-bar" id="readingProgressBar"></div>
     <nav class="navbar">
         <div class="nav-container">
-            <a href="index.html" class="nav-brand">
+            <a href="/" class="nav-brand">
                 <div class="brand-monogram">|S⟩</div>
                 <div class="brand-text">
                     <span class="brand-name">Syed Shubha</span>
@@ -1019,10 +1019,10 @@
                 </div>
             </a>
             <ul class="nav-menu" id="navMenu">
-                <li><a href="index.html">← Main Portfolio</a></li>
-                <li><a href="index.html#publications">Publications</a></li>
-                <li><a href="blog.html" class="active">Blog & Essays</a></li>
-                <li><a href="memes.html" class="nav-pill-btn">Quantum Memeology</a></li>
+                <li><a href="/">← Main Portfolio</a></li>
+                <li><a href="/#publications">Publications</a></li>
+                <li><a href="/blog/" class="active">Blog & Essays</a></li>
+                <li><a href="/memes/" class="nav-pill-btn">Quantum Memeology</a></li>
             </ul>
             <div style="display:flex; align-items:center; gap:0.55rem; flex-shrink:0;">
                 <button class="theme-toggle-btn" id="themeToggleBtn" onclick="toggleTheme()" aria-label="Switch between Light and Dark Mode" title="Switch between Light and Dark Mode">
@@ -1104,7 +1104,7 @@
 
     <button class="back-to-top-btn" id="backToTopBtn" onclick="window.scrollTo({top:0, behavior:'smooth'})" aria-label="Back to top">↑ Top</button>
 
-    <script src="data/portfolio_data.js"></script>
+    <script src="/data/portfolio_data.js?v=20261101"></script>
     <script>
         let SITE_DATA = window.PORTFOLIO_DATA || { posts: [] };
         let activeCategory = 'all';

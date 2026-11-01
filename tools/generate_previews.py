@@ -90,7 +90,7 @@ def main():
         if p.get('hide_from_blog'):
             continue
         slug = p.get('slug') or p['id']
-        cover_rel = p.get('cover_image')
+        cover_rel = (p.get('cover_image') or '').lstrip('/')
         cover_abs = os.path.join(ROOT, cover_rel) if cover_rel else fallback_cover
         size = make_og_image(cover_abs, os.path.join(ROOT, 'images', 'og', f'{slug}.jpg'))
         meta = META_BLOCK.format(
@@ -113,7 +113,7 @@ def main():
         if not m.get('image'):
             continue
         mid = m['id']
-        size = make_og_image(os.path.join(ROOT, m['image']), os.path.join(ROOT, 'images', 'og', 'memes', f'{mid}.jpg'))
+        size = make_og_image(os.path.join(ROOT, m['image'].lstrip('/')), os.path.join(ROOT, 'images', 'og', 'memes', f'{mid}.jpg'))
         desc_raw = strip_tags(m.get('desc') or m.get('description') or m.get('explanation') or '')
         meta = META_BLOCK.format(
             title=html.escape(f"{strip_tags(m['title'])} | Quantum Memeology", quote=True),

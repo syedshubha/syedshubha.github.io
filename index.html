@@ -1879,8 +1879,8 @@
                 <li><a href="#publications">Publications</a></li>
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#experience">About</a></li>
-                <li><a href="blog.html" class="nav-pill-outline">Blog & Notes</a></li>
-                <li><a href="memes.html" class="nav-pill-btn">Quantum Memeology</a></li>
+                <li><a href="/blog/" class="nav-pill-outline">Blog & Notes</a></li>
+                <li><a href="/memes/" class="nav-pill-btn">Quantum Memeology</a></li>
             </ul>
             <div style="display:flex; align-items:center; gap:0.55rem; flex-shrink:0;">
                 <button class="theme-toggle-btn" id="themeToggleBtn" onclick="toggleTheme()" aria-label="Switch between Light and Dark theme" title="Switch between Light and Dark theme">
@@ -1915,11 +1915,11 @@
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
                         Selected Publications
                     </a>
-                    <a href="blog.html" class="btn btn-light">
+                    <a href="/blog/" class="btn btn-light">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
                         Research Blog & Notes
                     </a>
-                    <a href="QSVT.html" class="btn btn-light btn-qsvt-glow">
+                    <a href="/qsvt/" class="btn btn-light btn-qsvt-glow">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><ellipse cx="12" cy="12" rx="10" ry="4" transform="rotate(30 12 12)"/><ellipse cx="12" cy="12" rx="10" ry="4" transform="rotate(-30 12 12)"/></svg>
                         Interactive QSVT Simulator
                     </a>
@@ -1951,7 +1951,7 @@
 
             <div class="hero-profile-card">
                 <div class="profile-photo-wrap">
-                    <img src="images/avatar.JPG" alt="Syed Shubha" class="profile-image" id="heroAvatar">
+                    <img src="/images/avatar.JPG" alt="Syed Shubha" class="profile-image" id="heroAvatar">
                     <div class="profile-caption">
                         <p class="profile-caption-role">Graduate Research &amp; Teaching Assistant</p>
                         <p class="profile-caption-dept">Division of Computer Science &amp; Engineering<br>Louisiana State University, Baton Rouge, LA</p>
@@ -2161,7 +2161,7 @@
                     <h2 class="section-title">Latest Blog Posts & Research Notes</h2>
                     <p class="section-subtitle">In-depth mathematical notes, quantum information tutorials, and philosophical essays</p>
                 </div>
-                <a href="blog.html" class="pub-btn">View All Articles & Notes →</a>
+                <a href="/blog/" class="pub-btn">View All Articles & Notes →</a>
             </div>
             <div class="blog-preview-grid" id="blogPreviewContainer"></div>
         </div>
@@ -2178,8 +2178,8 @@
                     </p>
                 </div>
                 <div class="outreach-actions">
-                    <a href="memes.html" class="btn btn-gold">🎭 Explore Quantum Memeology →</a>
-                    <a href="blog.html" class="btn btn-light">📖 Read Blog & Essays →</a>
+                    <a href="/memes/" class="btn btn-gold">🎭 Explore Quantum Memeology →</a>
+                    <a href="/blog/" class="btn btn-light">📖 Read Blog & Essays →</a>
                 </div>
             </div>
         </div>
@@ -2202,9 +2202,9 @@
                     <li><a href="#about">Research Pillars</a></li>
                     <li><a href="#publications">Peer-Reviewed Publications</a></li>
                     <li><a href="#projects">Projects & Software</a></li>
-                    <li><a href="blog.html">Research Blog, Substack & Bigganblog</a></li>
-                    <li><a href="QSVT.html">Interactive QSVT Simulator</a></li>
-                    <li><a href="memes.html">Quantum Memeology & Outreach</a></li>
+                    <li><a href="/blog/">Research Blog, Substack & Bigganblog</a></li>
+                    <li><a href="/qsvt/">Interactive QSVT Simulator</a></li>
+                    <li><a href="/memes/">Quantum Memeology & Outreach</a></li>
                 </ul>
             </div>
             <div>
@@ -2241,16 +2241,19 @@
         </div>
     </div>
 
-    <script src="data/portfolio_data.js"></script>
+    <script src="/data/portfolio_data.js?v=20261101"></script>
     <script>
         let SITE_DATA = window.PORTFOLIO_DATA || null;
         let currentPubFilter = 'all';
         let currentPubSearch = '';
 
         async function initPortfolio() {
-            if (SITE_DATA) renderAll();
+            if (SITE_DATA) {
+                renderAll();
+                return;
+            }
             try {
-                const res = await fetch('data/portfolio_data.json?t=' + Date.now());
+                const res = await fetch('/data/portfolio_data.json?t=' + Date.now());
                 if (res.ok) {
                     SITE_DATA = await res.json();
                     renderAll();

@@ -10,8 +10,8 @@ window.PORTFOLIO_DATA = {
     "email": "syed.shubha@ieee.org",
     "alt_email": "shubhabuet16@gmail.com",
     "location": "Baton Rouge, LA, USA",
-    "cv_url": "assets/Curriculum_Vitae_Syed_Emad_Uddin_Shubha.pdf",
-    "avatar": "images/avatar.JPG",
+    "cv_url": "/assets/Curriculum_Vitae_Syed_Emad_Uddin_Shubha.pdf",
+    "avatar": "/images/avatar.JPG",
     "metrics": [
       {
         "value": "73",
@@ -455,9 +455,9 @@ window.PORTFOLIO_DATA = {
       "category": "Quantum Computing",
       "source": "Interactive Lab",
       "read_time": "6 min read",
-      "cover_image": "images/qsvt_saves_schrodinger_cat.png",
+      "cover_image": "/images/qsvt_saves_schrodinger_cat.png",
       "summary": "An interactive browser-based mathematical laboratory realizing Singular Value Decomposition, Cosine–Sine Unitary Block Encoding, Quantum Signal Processing (with live Adam phase-angle optimization), and the QSVT theorem.",
-      "external_url": "QSVT.html",
+      "external_url": "/qsvt/",
       "pdf_url": "",
       "tags": [
         "QSVT",
@@ -465,7 +465,7 @@ window.PORTFOLIO_DATA = {
         "Block Encoding",
         "Interactive MathJax"
       ],
-      "content": "## Overview\n\nQuantum Singular Value Transformation (QSVT) unifies nearly all major quantum algorithms (including Hamiltonian simulation, Grover search, quantum linear systems, and amplitude amplification) into a single polynomial framework.\n\nIn my **[Interactive QSVT Web Laboratory](QSVT.html)**, you can edit any $m \\times n$ real matrix $A$ and target polynomial $P(x)$ and observe all four stages recomputed in real time:\n\n1. **Stage I: Singular Value Decomposition ($A = U \\Sigma V^\\dagger$)**\n2. **Stage II: Unitary Block Encoding ($U_A$ via Cosine–Sine Dilation)**\n3. **Stage III: Quantum Signal Processing & Phase-Angle Optimization ($\\vec{\\phi}$)**\n4. **Stage IV: Full QSVT Circuit Transformation ($U\\, P(\\Sigma/\\alpha)\\, V^\\dagger$)**\n\n👉 **[Launch the Interactive QSVT Simulator →](QSVT.html)**",
+      "content": "## Overview\n\nQuantum Singular Value Transformation (QSVT) unifies nearly all major quantum algorithms (including Hamiltonian simulation, Grover search, quantum linear systems, and amplitude amplification) into a single polynomial framework.\n\nIn my **[Interactive QSVT Web Laboratory](/qsvt/)**, you can edit any $m \\times n$ real matrix $A$ and target polynomial $P(x)$ and observe all four stages recomputed in real time:\n\n1. **Stage I: Singular Value Decomposition ($A = U \\Sigma V^\\dagger$)**\n2. **Stage II: Unitary Block Encoding ($U_A$ via Cosine–Sine Dilation)**\n3. **Stage III: Quantum Signal Processing & Phase-Angle Optimization ($\\vec{\\phi}$)**\n4. **Stage IV: Full QSVT Circuit Transformation ($U\\, P(\\Sigma/\\alpha)\\, V^\\dagger$)**\n\n👉 **[Launch the Interactive QSVT Simulator →](/qsvt/)**",
       "featured_on_main": true,
       "hide_from_main": false,
       "hide_from_blog": false
@@ -478,7 +478,7 @@ window.PORTFOLIO_DATA = {
       "category": "Philosophy",
       "source": "Substack",
       "read_time": "5 min read",
-      "cover_image": "images/agrippan_epistemology.jpg",
+      "cover_image": "/images/agrippan_epistemology.jpg",
       "summary": "Why it is fundamentally impossible to prove any proposition with absolute certainty, and how Karl Popper's falsifiability allows science to circumvent the three horns of Agrippa's trilemma (infinite regress, circularity, and dogmatic axiom) where religion and metaphysics stall.",
       "external_url": "https://syedshubha.substack.com/p/agrippan-trilemma",
       "pdf_url": "",
@@ -502,7 +502,7 @@ window.PORTFOLIO_DATA = {
       "category": "Philosophy",
       "source": "Substack",
       "read_time": "7 min read",
-      "cover_image": "images/godel_undertaker_meme.png",
+      "cover_image": "/images/godel_undertaker_meme.png",
       "summary": "A formal critique of Dana Scott’s variant of Gödel’s higher-order modal ontological argument (□∃x G(x)): why computational verification in Lean 4 entails modal collapse (p → □p), eliminating alternative possibilities (◇¬p), and why combining modal collapse with retributive punishment renders divine governance tyrannical rather than omnibenevolent.",
       "external_url": "https://syedshubha.substack.com/p/godels-ontological-argument",
       "pdf_url": "",
@@ -527,7 +527,7 @@ window.PORTFOLIO_DATA = {
       "category": "Philosophy",
       "source": "Substack",
       "read_time": "6 min read",
-      "cover_image": "images/beyond_sisyphus_crossroads.jpg",
+      "cover_image": "/images/beyond_sisyphus_crossroads.jpg",
       "summary": "An analytical examination of existential meaning, global vs. local accountability, why Albert Camus's command that 'one must imagine Sisyphus happy' commits an is–ought fallacy, and why continuing to live is choosing a non-trivial algebraic structure over the trivial identity group {e}.",
       "external_url": "https://syedshubha.substack.com/p/beyond-sisyphus",
       "pdf_url": "",
@@ -551,7 +551,7 @@ window.PORTFOLIO_DATA = {
       "category": "Mathematics & Physics",
       "source": "Blog",
       "read_time": "5 min read",
-      "cover_image": "images/lorentz_spacetime_diagram.png",
+      "cover_image": "/images/lorentz_spacetime_diagram.png",
       "summary": "A short derivation of the Lorentz transformation from linear algebra: requiring the light-like lines x = ±ct to stay invariant makes (1, 1) and (1, −1) eigenvectors of the transformation matrix, and demanding T⁻¹(v) = T(−v) fixes γ = 1/√(1 − v²/c²).",
       "external_url": "",
       "pdf_url": "",
@@ -574,7 +574,7 @@ window.PORTFOLIO_DATA = {
       "category": "Mathematics & Physics",
       "source": "Blog",
       "read_time": "5 min read",
-      "cover_image": "images/angle_trisection_neusis.png",
+      "cover_image": "/images/angle_trisection_neusis.png",
       "summary": "Why an arbitrary angle cannot be trisected with an unmarked straightedge and compass: constructible numbers only reach 2ⁿ-th roots, yet trisection needs the cubic 4x³ − 3x − cos θ = 0. Covers the 60° obstruction, the easy 90° case, and Archimedes' Neusis construction.",
       "external_url": "",
       "pdf_url": "",
@@ -597,7 +597,7 @@ window.PORTFOLIO_DATA = {
       "category": "Mathematics & Physics",
       "source": "Blog",
       "read_time": "6 min read",
-      "cover_image": "images/conservative_force_paths.png",
+      "cover_image": "/images/conservative_force_paths.png",
       "summary": "From path independence of work and Stokes' theorem (∇ × F = 0 ⟺ F = −∇V) to the conservation of mechanical energy, and how the Euler–Lagrange equation and Noether's time-translation symmetry explain why E = ½mv² + V(r) is conserved.",
       "external_url": "",
       "pdf_url": "",
@@ -620,7 +620,7 @@ window.PORTFOLIO_DATA = {
       "category": "Mathematics & Physics",
       "source": "Blog",
       "read_time": "7 min read",
-      "cover_image": "images/peano_and_dedekind_gap.png",
+      "cover_image": "/images/peano_and_dedekind_gap.png",
       "summary": "How to build the number system from the empty set: Peano axioms and von Neumann ordinals for ℕ, equivalence classes on ℕ × ℕ for ℤ and ℤ × ℤ* for ℚ (and why (0,1) and (0,2) are the exact same rational 0), why S = {x ∈ ℚ : 0 < x² < 2} has no supremum in ℚ, and how Dedekind cuts construct ℝ.",
       "external_url": "",
       "pdf_url": "",
@@ -630,7 +630,7 @@ window.PORTFOLIO_DATA = {
         "Set Theory",
         "Dedekind Completeness"
       ],
-      "content": "Whether $0$ is considered a natural number is purely a matter of convention. Throughout this article, we adopt the standard foundational convention:\n\n$$\\mathbb{N} := \\{0, 1, 2, 3, \\dots\\}$$\n\nThis raises a foundational question: **how do we rigorously construct $\\mathbb{N}$ from scratch, and how do we climb all the way from $\\mathbb{N}$ through $\\mathbb{Z}$ and $\\mathbb{Q}$ to the real numbers $\\mathbb{R}$?**\n\n## 1. Constructing $\\mathbb{N}$ via the Peano Axioms\n\nThe classic axiomatization of the natural numbers is given by the **Peano Axioms**. Rather than listing all five axioms at once, it is much more illuminating to introduce them one by one and see what breaks when any single axiom is omitted.\n\n### Axiom (a) & Axiom (b): Starting Point and Successors\n\n- **Axiom (a):** $0 \\in \\mathbb{N}$.\n- **Axiom (b):** If $n \\in \\mathbb{N}$, then its **successor** $n^{++} \\in \\mathbb{N}$.\n\nWe define the familiar numerals as abbreviations for repeated successors: $1 := 0^{++}$, $2 := 1^{++}$, $3 := 2^{++}$, and so on.\n\n**Why (a) and (b) are not enough:** Nothing in these two rules prevents the successor operation from looping back to $0$. For instance, the two-element set $\\mathbb{N} = \\{0, 1\\}$ with\n\n$$0^{++} = 1, \\qquad 1^{++} = 0$$\n\nsatisfies both (a) and (b)! To forbid cycles returning to $0$, we need a third axiom:\n\n### Axiom (c): $0$ Is Not a Successor\n\n- **Axiom (c):** For all $n \\in \\mathbb{N}$, $n^{++} \\neq 0$.\n\nThis prevents the chain from wrapping back around to $0$.\n\n**Why (a), (b), and (c) are still not enough:** Consider again the two-element set $\\mathbb{N} = \\{0, 1\\}$, but now define:\n\n$$0^{++} = 1, \\qquad 1^{++} = 1$$\n\nHere nothing maps to $0$, so Axiom (c) is satisfied, yet the chain gets stuck at $1$ forever! To prevent two distinct numbers from collapsing onto the same successor, we require the successor map to be **injective (one-to-one)**:\n\n### Axiom (d): Injectivity of the Successor Map\n\n- **Axiom (d):** For all $n, m \\in \\mathbb{N}$, if $n^{++} = m^{++}$, then $n = m$.\n\nNow $0^{++} = 1$ and $1^{++} = 1$ is impossible because $0 \\neq 1$. Together, Axioms (a) through (d) force $\\mathbb{N}$ to be an **infinite** set.\n\n**Why even (a) through (d) are not enough:** Even an infinite set satisfying (a) through (d) can contain \"uninvited guests\" that cannot be reached from $0$ by repeated successors! For example, suppose someone claims:\n\n$$\\tilde{\\mathbb{N}} = \\{0, 0.5, 1, 1.5, 2, 2.5, \\dots\\}$$\n\nwith $x^{++} = x + 1$. This set contains $0$, is closed under $^{++}$, never maps back to $0$, and has an injective successor map. Yet the half-integers $0.5, 1.5, 2.5, \\dots$ form a separate, parallel chain hiding inside the set that is completely unreachable starting from $0$.\n\nTo lock out every such rogue element, we introduce the fifth and final axiom:\n\n### Axiom (e): Principle of Mathematical Induction\n\n- **Axiom (e):** Let $P(n)$ be any property pertaining to $n$. If $P(0)$ is true, and whenever $P(n)$ is true it follows that $P(n^{++})$ is also true, then $P(n)$ is true for **all** $n \\in \\mathbb{N}$.\n\nWatch how Induction immediately expels the half-integers: define the predicate\n\n$$P(n) :\\equiv \\text{\"}n\\text{ is not a half-integer.\"}$$\n\n1. **Base case:** $P(0)$ is clearly true.\n2. **Inductive step:** If $n$ is not a half-integer, then $n + 1$ is not a half-integer either, so $P(n) \\implies P(n^{++})$.\n\nBy Axiom (e), $P(n)$ must hold for every $n \\in \\mathbb{N}$. Since $P(0.5)$ is false, $0.5$ cannot belong to $\\mathbb{N}$!\n\n## 2. Von Neumann Ordinals and the Axiom of Infinity\n\nThe Peano axioms specify how $\\mathbb{N}$ *behaves*, but can we explicitly build a concrete model of $\\mathbb{N}$ out of pure sets? My favorite construction is due to **John von Neumann**, who defined each natural number as the set of all preceding natural numbers via the successor operation:\n\n$$x^{++} := x \\cup \\{x\\}$$\n\nStarting with $0 := \\varnothing$ (the empty set), every natural number emerges purely from braces:\n\n$$\\begin{aligned}\n0 &:= \\varnothing \\\\\n1 &:= 0^{++} = \\varnothing \\cup \\{\\varnothing\\} = \\{\\varnothing\\} \\\\\n2 &:= 1^{++} = \\{\\varnothing, \\{\\varnothing\\}\\} = \\{0, 1\\} \\\\\n3 &:= 2^{++} = \\{\\varnothing, \\{\\varnothing\\}, \\{\\varnothing, \\{\\varnothing\\}\\}\\} = \\{0, 1, 2\\}\n\\end{aligned}$$\n\nNotice that the cardinality (number of elements) of the set $n$ is literally $n$!\n\nHere is the catch illustrated in the meme below: using the elementary axioms of Zermelo-Fraenkel (ZF) set theory (Empty Set, Pairing, and Union), we can construct any *individual* finite ordinal $0, 1, 2, \\dots, n$. However, a finite sequence of set operations can never gather *all* of them into a single completed set $\\mathbb{N}$.\n\n![Axiom of Infinity guarding against building infinite set N purely from successor iterations](images/axiom_of_infinity_meme.jpg)\n\nTo guarantee that the entire infinite collection $\\mathbb{N} = \\{0, 1, 2, \\dots\\}$ exists as a set, ZF must postulate the **Axiom of Infinity**: there exists an inductive set containing $\\varnothing$ that is closed under $x \\mapsto x \\cup \\{x\\}$.\n\n## 3. Constructing $\\mathbb{Z}$ and $\\mathbb{Q}$ from $\\mathbb{N} \\times \\mathbb{N}$ (and Why $(0,1) = (0,2)$!)\n\nOnce we have $(\\mathbb{N}, +, \\times)$, how do we construct negative numbers and fractions without assuming subtraction or division beforehand? The secret is **equivalence classes of ordered pairs**.\n\n### Step 1: Constructing the Integers $\\mathbb{Z}$ from $\\mathbb{N} \\times \\mathbb{N}$\n\nIn $\\mathbb{N}$, an equation like $x + 3 = 2$ has no solution because $2 - 3$ does not exist in $\\mathbb{N}$. To build the integers $\\mathbb{Z}$ using *only* natural numbers and $+$, we represent every integer as an ordered pair $(a, b) \\in \\mathbb{N} \\times \\mathbb{N}$, which we intuitively think of as the difference $a - b$.\n\nSince $a - b = c - d \\iff a + d = b + c$, we can state when two pairs represent the same integer using **only addition in $\\mathbb{N}$**:\n\n$$(a, b) \\sim (c, d) \\iff a + d = b + c$$\n\nThe integers are the equivalence classes $\\mathbb{Z} := (\\mathbb{N} \\times \\mathbb{N}) / {\\sim}$:\n\n- **Zero:** $0_{\\mathbb{Z}} = [(0, 0)] = \\{(0, 0), (1, 1), (2, 2), \\dots\\}$\n- **Positive integers:** $+n = [(n, 0)] = \\{(n, 0), (n+1, 1), (n+2, 2), \\dots\\}$\n- **Negative integers:** $-n = [(0, n)] = \\{(0, n), (1, n+1), (2, n+2), \\dots\\}$\n\n### Step 2: Constructing the Rationals $\\mathbb{Q}$ from $\\mathbb{Z} \\times (\\mathbb{Z} \\setminus \\{0\\})$\n\nIn $\\mathbb{Z}$, we can subtract freely, but $2x = 1$ still has no solution. To build fractions $p/q$ without already having division, we take ordered pairs $(p, q) \\in \\mathbb{Z} \\times (\\mathbb{Z} \\setminus \\{0\\})$ and define equivalence via **cross-multiplication**:\n\n$$(p, q) \\sim (r, s) \\iff p \\cdot s = q \\cdot r$$\n\nThe rational numbers are the equivalence classes $\\mathbb{Q} := \\left(\\mathbb{Z} \\times (\\mathbb{Z} \\setminus \\{0\\})\\right) / {\\sim}$, with addition $[(p, q)] + [(r, s)] = [(ps + qr,\\, qs)]$ and multiplication $[(p, q)] \\cdot [(r, s)] = [(pr,\\, qs)]$.\n\n### Why $(0, 1)$, $(0, 2)$, and $(0, 3)$ Are All the Exact Same Number!\n\nConsider the pairs $(0, 1)$, $(0, 2)$, $(0, 3)$, and $(0, -42)$ in $\\mathbb{Z} \\times (\\mathbb{Z} \\setminus \\{0\\})$ (representing $\\frac{0}{1}, \\frac{0}{2}, \\frac{0}{3}, \\frac{0}{-42}$). By our cross-multiplication rule:\n\n$$(0, 1) \\sim (0, 2) \\iff 0 \\times 2 = 1 \\times 0 \\iff 0 = 0 \\quad \\checkmark$$\n\nIn fact, for *every* nonzero integer $q \\in \\mathbb{Z} \\setminus \\{0\\}$, we have $0 \\cdot q = 1 \\cdot 0 = 0$, so $(0, 1) \\sim (0, q)$ always holds! Thus $(0, 1)$, $(0, 2)$, $(0, 3), \\dots$ are all bundled into the **exact same equivalence class** (rational zero):\n\n$$0_{\\mathbb{Q}} = [(0, 1)] = \\{(0, 1),\\, (0, 2),\\, (0, 3),\\, (0, -1),\\, (0, -2),\\, \\dots\\}$$\n\n*(Notice why $(0, 0)$ must be excluded: if $(0, 0)$ were allowed, then $(0, 1) \\sim (0, 0)$ since $0 \\cdot 0 = 1 \\cdot 0$, and $(0, 0) \\sim (1, 1)$ since $0 \\cdot 1 = 0 \\cdot 1$, which by transitivity would make $(0, 1) \\sim (1, 1)$, forcing $0 = 1$ and collapsing all of $\\mathbb{Q}$ into a single point!)*\n\n## 4. Why $\\mathbb{Q}$ Is Incomplete: A Gap at $\\sqrt{2}$\n\nEquipped with $+$ and $\\times$, $(\\mathbb{Q}, +, \\times, <)$ forms an **ordered field**. Yet $\\mathbb{Q}$ still has holes: **a nonempty subset of $\\mathbb{Q}$ can be bounded above in $\\mathbb{Q}$ without having a supremum (least upper bound) in $\\mathbb{Q}$**.\n\nConsider the nonempty rational set:\n\n$$S = \\{x \\in \\mathbb{Q} : x > 0 \\text{ and } x^2 < 2\\} \\neq \\varnothing$$\n\nClearly $\\inf S = 0 \\in \\mathbb{Q}$, and $S$ is bounded above by $2$. Suppose for contradiction that $S$ had a least upper bound $a = \\sup S \\in \\mathbb{Q}$ (with $0 < a < 2$):\n\n#### Case 1: $a^2 < 2$\n\nIf $a^2 < 2$, we can find a small positive rational step $\\delta \\in \\mathbb{Q}$ ($0 < \\delta \\le 1$) such that $(a + \\delta)^2 < 2$ still holds. Since $a < 2$ and $\\delta \\le 1$:\n\n$$(a + \\delta)^2 = a^2 + \\delta(2a + \\delta) < a^2 + \\delta(2 \\times 2 + 1) = a^2 + 5\\delta$$\n\nChoosing $\\delta = \\min\\!\\left(1,\\, \\frac{2 - a^2}{5}\\right) \\in \\mathbb{Q}^+$ gives $(a + \\delta)^2 < a^2 + 5\\delta \\le 2$. Thus $a + \\delta \\in S$ and $a + \\delta > a$, contradicting that $a$ is an upper bound of $S$!\n\n#### Case 2: $a^2 > 2$\n\nIf $a^2 > 2$, choosing $\\delta = \\frac{a^2 - 2}{2a} \\in \\mathbb{Q}^+$ gives $a - \\delta > 0$ and\n\n$$(a - \\delta)^2 = a^2 - 2a\\delta + \\delta^2 > a^2 - 2a\\left(\\frac{a^2 - 2}{2a}\\right) = 2$$\n\nThus $a - \\delta < a$ is already an upper bound for $S$, contradicting that $a$ is the *least* upper bound ($\\sup S$)!\n\nTherefore $\\sup S$ would have to satisfy $a^2 = 2$ ($a = \\sqrt{2} \\notin \\mathbb{Q}$), proving that **$\\sup S$ does not exist in $\\mathbb{Q}$**.\n\n## 5. Constructing the Real Numbers $\\mathbb{R}$ via Dedekind Cuts\n\nHow do we fill every gap in $\\mathbb{Q}$ to construct the complete ordered field $\\mathbb{R}$? Notice first that we cannot build $\\mathbb{R}$ as a simple quotient of finite pairs like $\\mathbb{N} \\times \\mathbb{N}$ because $\\mathbb{N} \\times \\mathbb{N}$ and $\\mathbb{Q}$ are **countable** ($\\aleph_0$), whereas $\\mathbb{R}$ is **uncountable** ($2^{\\aleph_0}$). Instead, we step up from pairs of rationals to **subsets of $\\mathbb{Q}$**!\n\nSince $\\mathbb{Q}$ has a hole at $\\sqrt{2}$, **Richard Dedekind's** brilliant idea (1872) was to **identify each real number with the set of all rational numbers strictly to its left**. Formally, a **Dedekind cut** is a subset $\\alpha \\subset \\mathbb{Q}$ satisfying three simple rules:\n\n1. **Nontrivial:** $\\alpha \\neq \\varnothing$ and $\\alpha \\neq \\mathbb{Q}$.\n2. **Closed downward:** If $p \\in \\alpha$ and $q \\in \\mathbb{Q}$ with $q < p$, then $q \\in \\alpha$.\n3. **No greatest element:** For every $p \\in \\alpha$, there exists $r \\in \\alpha$ with $p < r$.\n\nLook how naturally our gap set $S$ turns into the real number $\\sqrt{2} \\in \\mathbb{R}$:\n\n$$\\alpha_{\\sqrt{2}} := \\{x \\in \\mathbb{Q} : x \\le 0\\} \\cup \\{x \\in \\mathbb{Q} : x > 0 \\text{ and } x^2 < 2\\}$$\n\nOrdering on cuts is just set inclusion ($\\alpha \\le \\beta \\iff \\alpha \\subseteq \\beta$), and **Dedekind Completeness** becomes effortless: for any nonempty family $\\mathcal{F}$ of cuts bounded above, its least upper bound ($\\sup \\mathcal{F}$) in $\\mathbb{R}$ is simply their **set union** $\\bigcup_{\\alpha \\in \\mathcal{F}} \\alpha$!",
+      "content": "Whether $0$ is considered a natural number is purely a matter of convention. Throughout this article, we adopt the standard foundational convention:\n\n$$\\mathbb{N} := \\{0, 1, 2, 3, \\dots\\}$$\n\nThis raises a foundational question: **how do we rigorously construct $\\mathbb{N}$ from scratch, and how do we climb all the way from $\\mathbb{N}$ through $\\mathbb{Z}$ and $\\mathbb{Q}$ to the real numbers $\\mathbb{R}$?**\n\n## 1. Constructing $\\mathbb{N}$ via the Peano Axioms\n\nThe classic axiomatization of the natural numbers is given by the **Peano Axioms**. Rather than listing all five axioms at once, it is much more illuminating to introduce them one by one and see what breaks when any single axiom is omitted.\n\n### Axiom (a) & Axiom (b): Starting Point and Successors\n\n- **Axiom (a):** $0 \\in \\mathbb{N}$.\n- **Axiom (b):** If $n \\in \\mathbb{N}$, then its **successor** $n^{++} \\in \\mathbb{N}$.\n\nWe define the familiar numerals as abbreviations for repeated successors: $1 := 0^{++}$, $2 := 1^{++}$, $3 := 2^{++}$, and so on.\n\n**Why (a) and (b) are not enough:** Nothing in these two rules prevents the successor operation from looping back to $0$. For instance, the two-element set $\\mathbb{N} = \\{0, 1\\}$ with\n\n$$0^{++} = 1, \\qquad 1^{++} = 0$$\n\nsatisfies both (a) and (b)! To forbid cycles returning to $0$, we need a third axiom:\n\n### Axiom (c): $0$ Is Not a Successor\n\n- **Axiom (c):** For all $n \\in \\mathbb{N}$, $n^{++} \\neq 0$.\n\nThis prevents the chain from wrapping back around to $0$.\n\n**Why (a), (b), and (c) are still not enough:** Consider again the two-element set $\\mathbb{N} = \\{0, 1\\}$, but now define:\n\n$$0^{++} = 1, \\qquad 1^{++} = 1$$\n\nHere nothing maps to $0$, so Axiom (c) is satisfied, yet the chain gets stuck at $1$ forever! To prevent two distinct numbers from collapsing onto the same successor, we require the successor map to be **injective (one-to-one)**:\n\n### Axiom (d): Injectivity of the Successor Map\n\n- **Axiom (d):** For all $n, m \\in \\mathbb{N}$, if $n^{++} = m^{++}$, then $n = m$.\n\nNow $0^{++} = 1$ and $1^{++} = 1$ is impossible because $0 \\neq 1$. Together, Axioms (a) through (d) force $\\mathbb{N}$ to be an **infinite** set.\n\n**Why even (a) through (d) are not enough:** Even an infinite set satisfying (a) through (d) can contain \"uninvited guests\" that cannot be reached from $0$ by repeated successors! For example, suppose someone claims:\n\n$$\\tilde{\\mathbb{N}} = \\{0, 0.5, 1, 1.5, 2, 2.5, \\dots\\}$$\n\nwith $x^{++} = x + 1$. This set contains $0$, is closed under $^{++}$, never maps back to $0$, and has an injective successor map. Yet the half-integers $0.5, 1.5, 2.5, \\dots$ form a separate, parallel chain hiding inside the set that is completely unreachable starting from $0$.\n\nTo lock out every such rogue element, we introduce the fifth and final axiom:\n\n### Axiom (e): Principle of Mathematical Induction\n\n- **Axiom (e):** Let $P(n)$ be any property pertaining to $n$. If $P(0)$ is true, and whenever $P(n)$ is true it follows that $P(n^{++})$ is also true, then $P(n)$ is true for **all** $n \\in \\mathbb{N}$.\n\nWatch how Induction immediately expels the half-integers: define the predicate\n\n$$P(n) :\\equiv \\text{\"}n\\text{ is not a half-integer.\"}$$\n\n1. **Base case:** $P(0)$ is clearly true.\n2. **Inductive step:** If $n$ is not a half-integer, then $n + 1$ is not a half-integer either, so $P(n) \\implies P(n^{++})$.\n\nBy Axiom (e), $P(n)$ must hold for every $n \\in \\mathbb{N}$. Since $P(0.5)$ is false, $0.5$ cannot belong to $\\mathbb{N}$!\n\n## 2. Von Neumann Ordinals and the Axiom of Infinity\n\nThe Peano axioms specify how $\\mathbb{N}$ *behaves*, but can we explicitly build a concrete model of $\\mathbb{N}$ out of pure sets? My favorite construction is due to **John von Neumann**, who defined each natural number as the set of all preceding natural numbers via the successor operation:\n\n$$x^{++} := x \\cup \\{x\\}$$\n\nStarting with $0 := \\varnothing$ (the empty set), every natural number emerges purely from braces:\n\n$$\\begin{aligned}\n0 &:= \\varnothing \\\\\n1 &:= 0^{++} = \\varnothing \\cup \\{\\varnothing\\} = \\{\\varnothing\\} \\\\\n2 &:= 1^{++} = \\{\\varnothing, \\{\\varnothing\\}\\} = \\{0, 1\\} \\\\\n3 &:= 2^{++} = \\{\\varnothing, \\{\\varnothing\\}, \\{\\varnothing, \\{\\varnothing\\}\\}\\} = \\{0, 1, 2\\}\n\\end{aligned}$$\n\nNotice that the cardinality (number of elements) of the set $n$ is literally $n$!\n\nHere is the catch illustrated in the meme below: using the elementary axioms of Zermelo-Fraenkel (ZF) set theory (Empty Set, Pairing, and Union), we can construct any *individual* finite ordinal $0, 1, 2, \\dots, n$. However, a finite sequence of set operations can never gather *all* of them into a single completed set $\\mathbb{N}$.\n\n![Axiom of Infinity guarding against building infinite set N purely from successor iterations](/images/axiom_of_infinity_meme.jpg)\n\nTo guarantee that the entire infinite collection $\\mathbb{N} = \\{0, 1, 2, \\dots\\}$ exists as a set, ZF must postulate the **Axiom of Infinity**: there exists an inductive set containing $\\varnothing$ that is closed under $x \\mapsto x \\cup \\{x\\}$.\n\n## 3. Constructing $\\mathbb{Z}$ and $\\mathbb{Q}$ from $\\mathbb{N} \\times \\mathbb{N}$ (and Why $(0,1) = (0,2)$!)\n\nOnce we have $(\\mathbb{N}, +, \\times)$, how do we construct negative numbers and fractions without assuming subtraction or division beforehand? The secret is **equivalence classes of ordered pairs**.\n\n### Step 1: Constructing the Integers $\\mathbb{Z}$ from $\\mathbb{N} \\times \\mathbb{N}$\n\nIn $\\mathbb{N}$, an equation like $x + 3 = 2$ has no solution because $2 - 3$ does not exist in $\\mathbb{N}$. To build the integers $\\mathbb{Z}$ using *only* natural numbers and $+$, we represent every integer as an ordered pair $(a, b) \\in \\mathbb{N} \\times \\mathbb{N}$, which we intuitively think of as the difference $a - b$.\n\nSince $a - b = c - d \\iff a + d = b + c$, we can state when two pairs represent the same integer using **only addition in $\\mathbb{N}$**:\n\n$$(a, b) \\sim (c, d) \\iff a + d = b + c$$\n\nThe integers are the equivalence classes $\\mathbb{Z} := (\\mathbb{N} \\times \\mathbb{N}) / {\\sim}$:\n\n- **Zero:** $0_{\\mathbb{Z}} = [(0, 0)] = \\{(0, 0), (1, 1), (2, 2), \\dots\\}$\n- **Positive integers:** $+n = [(n, 0)] = \\{(n, 0), (n+1, 1), (n+2, 2), \\dots\\}$\n- **Negative integers:** $-n = [(0, n)] = \\{(0, n), (1, n+1), (2, n+2), \\dots\\}$\n\n### Step 2: Constructing the Rationals $\\mathbb{Q}$ from $\\mathbb{Z} \\times (\\mathbb{Z} \\setminus \\{0\\})$\n\nIn $\\mathbb{Z}$, we can subtract freely, but $2x = 1$ still has no solution. To build fractions $p/q$ without already having division, we take ordered pairs $(p, q) \\in \\mathbb{Z} \\times (\\mathbb{Z} \\setminus \\{0\\})$ and define equivalence via **cross-multiplication**:\n\n$$(p, q) \\sim (r, s) \\iff p \\cdot s = q \\cdot r$$\n\nThe rational numbers are the equivalence classes $\\mathbb{Q} := \\left(\\mathbb{Z} \\times (\\mathbb{Z} \\setminus \\{0\\})\\right) / {\\sim}$, with addition $[(p, q)] + [(r, s)] = [(ps + qr,\\, qs)]$ and multiplication $[(p, q)] \\cdot [(r, s)] = [(pr,\\, qs)]$.\n\n### Why $(0, 1)$, $(0, 2)$, and $(0, 3)$ Are All the Exact Same Number!\n\nConsider the pairs $(0, 1)$, $(0, 2)$, $(0, 3)$, and $(0, -42)$ in $\\mathbb{Z} \\times (\\mathbb{Z} \\setminus \\{0\\})$ (representing $\\frac{0}{1}, \\frac{0}{2}, \\frac{0}{3}, \\frac{0}{-42}$). By our cross-multiplication rule:\n\n$$(0, 1) \\sim (0, 2) \\iff 0 \\times 2 = 1 \\times 0 \\iff 0 = 0 \\quad \\checkmark$$\n\nIn fact, for *every* nonzero integer $q \\in \\mathbb{Z} \\setminus \\{0\\}$, we have $0 \\cdot q = 1 \\cdot 0 = 0$, so $(0, 1) \\sim (0, q)$ always holds! Thus $(0, 1)$, $(0, 2)$, $(0, 3), \\dots$ are all bundled into the **exact same equivalence class** (rational zero):\n\n$$0_{\\mathbb{Q}} = [(0, 1)] = \\{(0, 1),\\, (0, 2),\\, (0, 3),\\, (0, -1),\\, (0, -2),\\, \\dots\\}$$\n\n*(Notice why $(0, 0)$ must be excluded: if $(0, 0)$ were allowed, then $(0, 1) \\sim (0, 0)$ since $0 \\cdot 0 = 1 \\cdot 0$, and $(0, 0) \\sim (1, 1)$ since $0 \\cdot 1 = 0 \\cdot 1$, which by transitivity would make $(0, 1) \\sim (1, 1)$, forcing $0 = 1$ and collapsing all of $\\mathbb{Q}$ into a single point!)*\n\n## 4. Why $\\mathbb{Q}$ Is Incomplete: A Gap at $\\sqrt{2}$\n\nEquipped with $+$ and $\\times$, $(\\mathbb{Q}, +, \\times, <)$ forms an **ordered field**. Yet $\\mathbb{Q}$ still has holes: **a nonempty subset of $\\mathbb{Q}$ can be bounded above in $\\mathbb{Q}$ without having a supremum (least upper bound) in $\\mathbb{Q}$**.\n\nConsider the nonempty rational set:\n\n$$S = \\{x \\in \\mathbb{Q} : x > 0 \\text{ and } x^2 < 2\\} \\neq \\varnothing$$\n\nClearly $\\inf S = 0 \\in \\mathbb{Q}$, and $S$ is bounded above by $2$. Suppose for contradiction that $S$ had a least upper bound $a = \\sup S \\in \\mathbb{Q}$ (with $0 < a < 2$):\n\n#### Case 1: $a^2 < 2$\n\nIf $a^2 < 2$, we can find a small positive rational step $\\delta \\in \\mathbb{Q}$ ($0 < \\delta \\le 1$) such that $(a + \\delta)^2 < 2$ still holds. Since $a < 2$ and $\\delta \\le 1$:\n\n$$(a + \\delta)^2 = a^2 + \\delta(2a + \\delta) < a^2 + \\delta(2 \\times 2 + 1) = a^2 + 5\\delta$$\n\nChoosing $\\delta = \\min\\!\\left(1,\\, \\frac{2 - a^2}{5}\\right) \\in \\mathbb{Q}^+$ gives $(a + \\delta)^2 < a^2 + 5\\delta \\le 2$. Thus $a + \\delta \\in S$ and $a + \\delta > a$, contradicting that $a$ is an upper bound of $S$!\n\n#### Case 2: $a^2 > 2$\n\nIf $a^2 > 2$, choosing $\\delta = \\frac{a^2 - 2}{2a} \\in \\mathbb{Q}^+$ gives $a - \\delta > 0$ and\n\n$$(a - \\delta)^2 = a^2 - 2a\\delta + \\delta^2 > a^2 - 2a\\left(\\frac{a^2 - 2}{2a}\\right) = 2$$\n\nThus $a - \\delta < a$ is already an upper bound for $S$, contradicting that $a$ is the *least* upper bound ($\\sup S$)!\n\nTherefore $\\sup S$ would have to satisfy $a^2 = 2$ ($a = \\sqrt{2} \\notin \\mathbb{Q}$), proving that **$\\sup S$ does not exist in $\\mathbb{Q}$**.\n\n## 5. Constructing the Real Numbers $\\mathbb{R}$ via Dedekind Cuts\n\nHow do we fill every gap in $\\mathbb{Q}$ to construct the complete ordered field $\\mathbb{R}$? Notice first that we cannot build $\\mathbb{R}$ as a simple quotient of finite pairs like $\\mathbb{N} \\times \\mathbb{N}$ because $\\mathbb{N} \\times \\mathbb{N}$ and $\\mathbb{Q}$ are **countable** ($\\aleph_0$), whereas $\\mathbb{R}$ is **uncountable** ($2^{\\aleph_0}$). Instead, we step up from pairs of rationals to **subsets of $\\mathbb{Q}$**!\n\nSince $\\mathbb{Q}$ has a hole at $\\sqrt{2}$, **Richard Dedekind's** brilliant idea (1872) was to **identify each real number with the set of all rational numbers strictly to its left**. Formally, a **Dedekind cut** is a subset $\\alpha \\subset \\mathbb{Q}$ satisfying three simple rules:\n\n1. **Nontrivial:** $\\alpha \\neq \\varnothing$ and $\\alpha \\neq \\mathbb{Q}$.\n2. **Closed downward:** If $p \\in \\alpha$ and $q \\in \\mathbb{Q}$ with $q < p$, then $q \\in \\alpha$.\n3. **No greatest element:** For every $p \\in \\alpha$, there exists $r \\in \\alpha$ with $p < r$.\n\nLook how naturally our gap set $S$ turns into the real number $\\sqrt{2} \\in \\mathbb{R}$:\n\n$$\\alpha_{\\sqrt{2}} := \\{x \\in \\mathbb{Q} : x \\le 0\\} \\cup \\{x \\in \\mathbb{Q} : x > 0 \\text{ and } x^2 < 2\\}$$\n\nOrdering on cuts is just set inclusion ($\\alpha \\le \\beta \\iff \\alpha \\subseteq \\beta$), and **Dedekind Completeness** becomes effortless: for any nonempty family $\\mathcal{F}$ of cuts bounded above, its least upper bound ($\\sup \\mathcal{F}$) in $\\mathbb{R}$ is simply their **set union** $\\bigcup_{\\alpha \\in \\mathcal{F}} \\alpha$!",
       "featured_on_main": false,
       "hide_from_main": true,
       "hide_from_blog": false
@@ -643,7 +643,7 @@ window.PORTFOLIO_DATA = {
       "category": "Mathematics & Physics",
       "source": "Blog",
       "read_time": "8 min read",
-      "cover_image": "images/relativity_magnetism_and_photon.png",
+      "cover_image": "/images/relativity_magnetism_and_photon.png",
       "summary": "A rigorous two-part exploration of special relativity: how the magnetic field B⃗ emerges as a relativistic consequence of Coulomb's law and Lorentz length contraction in a current-carrying wire, and why four-momentum kinematics (E² = p²c² + m²c⁴) forces massless photons to travel at v = c, restricts massive particles to v < c, and relegates v > c to imaginary rest mass.",
       "external_url": "",
       "pdf_url": "",
@@ -667,7 +667,7 @@ window.PORTFOLIO_DATA = {
       "category": "Mathematics & Physics",
       "source": "Blog",
       "read_time": "6 min read",
-      "cover_image": "images/pi_probability_and_zeta.png",
+      "cover_image": "/images/pi_probability_and_zeta.png",
       "summary": "What is the probability that two randomly chosen natural numbers are coprime? Expanding on my Ganit Ishkul column, we derive P(gcd(a, b) = 1) = 6/π² via Euler's prime sieve on ζ(2), prove ζ(2) = π²/6 in a few lines using Parseval's identity, and give an intuitive guide to analytic continuation showing how ζ(2) = π²/6 yields ζ(−1) = −1/12.",
       "external_url": "",
       "pdf_url": "",
@@ -681,7 +681,7 @@ window.PORTFOLIO_DATA = {
       "featured_on_main": false,
       "hide_from_main": true,
       "hide_from_blog": false,
-      "content": "Let us begin with a deceptively simple question from number theory and probability:\n\n> **Suppose two natural numbers $a, b \\in \\mathbb{N}^+$ are chosen at random. What is the probability that they are coprime (relatively prime), meaning $\\gcd(a, b) = 1$?**\n\nAt first glance, this question belongs purely to discrete arithmetic: prime factorizations, remainders, and greatest common divisors. There isn't a circle or angle anywhere in sight. Yet the exact answer is:\n\n$$P(\\gcd(a, b) = 1) = \\frac{6}{\\pi^2} \\approx 0.607927\\dots$$\n\nSomehow, $\\pi$ emerges right at the heart of prime divisibility! In this post, expanding on an earlier Bengali article of mine (*\"সম্ভাবনায় পাই\"*, published in *Ganit Ishkul*), we will:\n\n1. **Derive $P(\\gcd(a, b) = 1) = 6/\\pi^2$** using Euler's prime sieve on the Riemann zeta function $\\zeta(2) = \\sum_{n=1}^{\\infty} \\frac{1}{n^2}$.\n2. **Prove $\\zeta(2) = \\frac{\\pi^2}{6}$ in a few lines via Parseval's Identity** from Fourier analysis.\n3. **Demystify $\\zeta(-1) = -\\frac{1}{12}$:** Give an intuitive explanation of analytic continuation and show how Riemann's functional equation uses $\\zeta(2) = \\pi^2/6$ to yield $\\zeta(-1) = -1/12$.\n\n## Part I: Coprime Integers and Euler's Sieve for $6/\\pi^2$\n\n### 1. Prime Divisibility and Independence\n\nTo make *\"choosing two natural numbers $a, b$ at random\"* rigorous, we pick $(a, b)$ uniformly from $\\{1, 2, \\dots, N\\}^2$ and take the limit as $N \\to \\infty$.\n\nWhen is $\\gcd(a, b) = 1$? By the Fundamental Theorem of Arithmetic, $\\gcd(a, b) = 1$ if and only if **no prime number $p \\in \\{2, 3, 5, 7, \\dots\\}$ divides both $a$ and $b$ simultaneously**.\n\nFix a prime $p$. When an integer is divided by $p$, its remainder is equally likely to be any of $0, 1, 2, \\dots, p - 1$:\n\n- The probability that $p$ divides $a$ is $\\frac{1}{p}$.\n- Since $a$ and $b$ are chosen independently, the probability that $p$ divides **both** $a$ and $b$ is $\\frac{1}{p} \\cdot \\frac{1}{p} = \\frac{1}{p^2}$.\n- Therefore, the probability that $p$ is **not** a common prime factor of $a$ and $b$ is:\n\n$$P(p \\nmid \\gcd(a, b)) = 1 - \\frac{1}{p^2}$$\n\nBecause divisibility by distinct primes $p_1, p_2, \\dots$ is independent (by the Chinese Remainder Theorem), the probability that *no* prime divides both $a$ and $b$ is the product over all primes:\n\n$$P(\\gcd(a, b) = 1) = \\prod_{p \\text{ prime}} \\left(1 - \\frac{1}{p^2}\\right) = \\left(1 - \\frac{1}{2^2}\\right)\\left(1 - \\frac{1}{3^2}\\right)\\left(1 - \\frac{1}{5^2}\\right)\\left(1 - \\frac{1}{7^2}\\right)\\cdots$$\n\n### 2. Euler's Sieve on $\\zeta(2)$\n\nTo evaluate this infinite product, we start with the **Riemann zeta function** at $s = 2$:\n\n$$\\zeta(2) = \\sum_{n=1}^{\\infty} \\frac{1}{n^2} = \\frac{1}{1^2} + \\frac{1}{2^2} + \\frac{1}{3^2} + \\frac{1}{4^2} + \\cdots = \\frac{\\pi^2}{6} \\qquad (1)$$\n\nBecause this series converges absolutely (by the integral or comparison test), we can sieve out prime multiples step by step:\n\n**Step 1 (Sieving out multiples of $2$):** Multiply $(1)$ by $\\frac{1}{2^2}$:\n\n$$\\frac{1}{2^2}\\,\\zeta(2) = \\frac{1}{2^2} + \\frac{1}{4^2} + \\frac{1}{6^2} + \\frac{1}{8^2} + \\cdots \\qquad (2)$$\n\nSubtracting $(2)$ from $(1)$ eliminates every even denominator:\n\n$$\\left(1 - \\frac{1}{2^2}\\right)\\zeta(2) = \\frac{1}{1^2} + \\frac{1}{3^2} + \\frac{1}{5^2} + \\frac{1}{7^2} + \\frac{1}{9^2} + \\cdots \\qquad (3)$$\n\n**Step 2 (Sieving out multiples of $3$):** Multiply $(3)$ by $\\frac{1}{3^2}$ and subtract from $(3)$ to eliminate all remaining multiples of $3$:\n\n$$\\left(1 - \\frac{1}{2^2}\\right)\\left(1 - \\frac{1}{3^2}\\right)\\zeta(2) = \\frac{1}{1^2} + \\frac{1}{5^2} + \\frac{1}{7^2} + \\frac{1}{11^2} + \\frac{1}{13^2} + \\cdots$$\n\nEach factor of $\\left(1 - \\frac{1}{p^2}\\right)$ wipes out every denominator divisible by the prime $p$. Repeating this across all primes $p = 2, 3, 5, 7, \\dots$, every integer $n \\ge 2$ is eliminated, leaving only $\\frac{1}{1^2} = 1$ on the right-hand side:\n\n$$\\left[\\left(1 - \\frac{1}{2^2}\\right)\\left(1 - \\frac{1}{3^2}\\right)\\left(1 - \\frac{1}{5^2}\\right)\\cdots\\right] \\zeta(2) = 1$$\n\nDividing by $\\zeta(2) = \\frac{\\pi^2}{6}$ gives our result:\n\n$$P(\\gcd(a, b) = 1) = \\prod_{p \\text{ prime}} \\left(1 - \\frac{1}{p^2}\\right) = \\frac{1}{\\zeta(2)} = \\frac{6}{\\pi^2}$$\n\n*(More generally, the probability that $k$ random natural numbers share no common factor is $\\prod_{p} (1 - p^{-k}) = \\frac{1}{\\zeta(k)}$.)*\n\n## Part II: Short Proof of $\\zeta(2) = \\frac{\\pi^2}{6}$ via Parseval's Identity\n\nWhy does $\\sum_{n=1}^{\\infty} \\frac{1}{n^2}$ equal $\\frac{\\pi^2}{6}$ in the first place? The quickest proof comes from **Parseval's Identity** in Fourier analysis, which states that the total energy of a wave equals the sum of the squared amplitudes of its harmonics.\n\nConsider the simple odd function $g(x) = x$ on $(-\\pi, \\pi)$. Its Fourier sine series is $x = \\sum_{n=1}^{\\infty} b_n \\sin(nx)$, where a single integration by parts gives the sine coefficients:\n\n$$b_n = \\frac{2}{\\pi} \\int_0^\\pi x \\sin(nx)\\,dx = \\frac{2}{\\pi} \\left[-\\frac{x \\cos(nx)}{n}\\right]_0^\\pi = \\frac{2(-1)^{n-1}}{n}$$\n\nNow apply **Parseval's Identity** to $g(x) = x$:\n\n$$\\frac{1}{\\pi} \\int_{-\\pi}^{\\pi} x^2\\,dx = \\sum_{n=1}^{\\infty} b_n^2 = \\sum_{n=1}^{\\infty} \\frac{4}{n^2}$$\n\nSince $\\frac{1}{\\pi} \\int_{-\\pi}^{\\pi} x^2\\,dx = \\frac{1}{\\pi} \\left[\\frac{x^3}{3}\\right]_{-\\pi}^{\\pi} = \\frac{2\\pi^2}{3}$, dividing both sides by $4$ immediately gives Basel's identity:\n\n$$\\zeta(2) = \\sum_{n=1}^{\\infty} \\frac{1}{n^2} = \\frac{\\pi^2}{6}$$\n\n## Part III: An Intuitive Guide to $\\zeta(-1) = -\\frac{1}{12}$\n\nWhenever the Riemann zeta function $\\zeta(s) = \\sum_{n=1}^{\\infty} \\frac{1}{n^s}$ comes up, people inevitably ask about the viral equation:\n\n$$1 + 2 + 3 + 4 + \\cdots = -\\frac{1}{12} \\qquad \\text{(?!)}$$\n\nHow can adding positive integers produce $-\\frac{1}{12}$? Here is a clear, non-intimidating way to understand what is actually going on.\n\n### 1. The Geometric Series Analogy (Why Formula $\\neq$ Infinite Sum)\n\nThink of the familiar geometric series from high school algebra:\n\n$$1 + x + x^2 + x^3 + \\cdots = \\frac{1}{1 - x}$$\n\nThis infinite sum **only converges when $|x| < 1$**. If you plug $x = 2$ into the left-hand side, you get $1 + 2 + 4 + 8 + \\cdots = +\\infty$. However, the closed-form formula on the right-hand side, $f(x) = \\frac{1}{1 - x}$, makes perfect sense for *any* number $x \\neq 1$! If you plug $x = 2$ into $f(x)$, you get:\n\n$$f(2) = \\frac{1}{1 - 2} = -1$$\n\nWriting $f(2) = -1$ does **not** mean that $1 + 2 + 4 + 8 + \\cdots$ adds up to $-1$ in the ordinary sense; it means that $f(x) = \\frac{1}{1 - x}$ is the unique smooth formula (**analytic continuation**) that matches the infinite sum where the sum works ($|x| < 1$) and extends it to where the sum blows up ($x = 2$).\n\n### 2. Extending $\\zeta(s)$ and Calculating $\\zeta(-1) = -\\frac{1}{12}$\n\nThe exact same thing happens with the Riemann zeta function! The infinite sum\n\n$$\\zeta(s) = \\sum_{n=1}^{\\infty} \\frac{1}{n^s} = 1 + \\frac{1}{2^s} + \\frac{1}{3^s} + \\cdots$$\n\n**only converges when $s > 1$**. If you plug $s = -1$ into the raw sum, you get $1 + 2 + 3 + 4 + \\cdots = +\\infty$.\n\nHowever, just like $\\frac{1}{1 - x}$ extends the geometric series past $x = 1$, Bernhard Riemann discovered in 1859 that $\\zeta(s)$ has a unique smooth extension to all $s \\neq 1$, governed by **Riemann's Functional Equation**:\n\n$$\\zeta(s) = 2^s \\pi^{s-1} \\sin\\!\\left(\\frac{\\pi s}{2}\\right) \\Gamma(1 - s)\\,\\zeta(1 - s)$$\n\nThis remarkable formula acts like a mirror: it lets us compute $\\zeta(s)$ for negative numbers ($s < 0$) by plugging $1 - s > 1$ into the region where the series *does* converge!\n\nLet us plug $s = -1$ into Riemann's functional equation:\n\n$$\\zeta(-1) = 2^{-1} \\pi^{-2} \\sin\\!\\left(-\\frac{\\pi}{2}\\right) \\Gamma(2)\\,\\zeta(2)$$\n\nEvery piece on the right-hand side is elementary:\n\n- $2^{-1} \\pi^{-2} = \\frac{1}{2\\pi^2}$\n- $\\sin\\!\\left(-\\frac{\\pi}{2}\\right) = -1$\n- $\\Gamma(2) = 1! = 1$\n- $\\zeta(2) = \\frac{\\pi^2}{6}$ (from Parseval's identity in Part II!)\n\nMultiplying them together, the factors of $\\pi^2$ cancel right out:\n\n$$\\zeta(-1) = \\frac{1}{2\\pi^2} \\cdot (-1) \\cdot 1 \\cdot \\frac{\\pi^2}{6} = -\\frac{1}{12}$$\n\nSo $\\zeta(-1) = -\\frac{1}{12}$ is the exact value of the analytically continued zeta function at $s = -1$, directly powered by the very same $\\zeta(2) = \\frac{\\pi^2}{6}$ that governs the probability of coprime integers!\n\n### Archival Note: Original Bengali Publication in *Ganit Ishkul*\n\n![Original Bengali column 'Shombhabonay Pi' in Ganit Ishkul (Bangladesh Mathematical Olympiad Committee)](images/ganit_ishkul_pi_probability.jpg)\n\n*Originally published in Bengali as \"সম্ভাবনায় পাই\" (Pi in Probability) in Ganit Ishkul (Bangladesh Mathematical Olympiad Committee). Long live mathematics, long live the zeta function, and long live $\\pi$!*"
+      "content": "Let us begin with a deceptively simple question from number theory and probability:\n\n> **Suppose two natural numbers $a, b \\in \\mathbb{N}^+$ are chosen at random. What is the probability that they are coprime (relatively prime), meaning $\\gcd(a, b) = 1$?**\n\nAt first glance, this question belongs purely to discrete arithmetic: prime factorizations, remainders, and greatest common divisors. There isn't a circle or angle anywhere in sight. Yet the exact answer is:\n\n$$P(\\gcd(a, b) = 1) = \\frac{6}{\\pi^2} \\approx 0.607927\\dots$$\n\nSomehow, $\\pi$ emerges right at the heart of prime divisibility! In this post, expanding on an earlier Bengali article of mine (*\"সম্ভাবনায় পাই\"*, published in *Ganit Ishkul*), we will:\n\n1. **Derive $P(\\gcd(a, b) = 1) = 6/\\pi^2$** using Euler's prime sieve on the Riemann zeta function $\\zeta(2) = \\sum_{n=1}^{\\infty} \\frac{1}{n^2}$.\n2. **Prove $\\zeta(2) = \\frac{\\pi^2}{6}$ in a few lines via Parseval's Identity** from Fourier analysis.\n3. **Demystify $\\zeta(-1) = -\\frac{1}{12}$:** Give an intuitive explanation of analytic continuation and show how Riemann's functional equation uses $\\zeta(2) = \\pi^2/6$ to yield $\\zeta(-1) = -1/12$.\n\n## Part I: Coprime Integers and Euler's Sieve for $6/\\pi^2$\n\n### 1. Prime Divisibility and Independence\n\nTo make *\"choosing two natural numbers $a, b$ at random\"* rigorous, we pick $(a, b)$ uniformly from $\\{1, 2, \\dots, N\\}^2$ and take the limit as $N \\to \\infty$.\n\nWhen is $\\gcd(a, b) = 1$? By the Fundamental Theorem of Arithmetic, $\\gcd(a, b) = 1$ if and only if **no prime number $p \\in \\{2, 3, 5, 7, \\dots\\}$ divides both $a$ and $b$ simultaneously**.\n\nFix a prime $p$. When an integer is divided by $p$, its remainder is equally likely to be any of $0, 1, 2, \\dots, p - 1$:\n\n- The probability that $p$ divides $a$ is $\\frac{1}{p}$.\n- Since $a$ and $b$ are chosen independently, the probability that $p$ divides **both** $a$ and $b$ is $\\frac{1}{p} \\cdot \\frac{1}{p} = \\frac{1}{p^2}$.\n- Therefore, the probability that $p$ is **not** a common prime factor of $a$ and $b$ is:\n\n$$P(p \\nmid \\gcd(a, b)) = 1 - \\frac{1}{p^2}$$\n\nBecause divisibility by distinct primes $p_1, p_2, \\dots$ is independent (by the Chinese Remainder Theorem), the probability that *no* prime divides both $a$ and $b$ is the product over all primes:\n\n$$P(\\gcd(a, b) = 1) = \\prod_{p \\text{ prime}} \\left(1 - \\frac{1}{p^2}\\right) = \\left(1 - \\frac{1}{2^2}\\right)\\left(1 - \\frac{1}{3^2}\\right)\\left(1 - \\frac{1}{5^2}\\right)\\left(1 - \\frac{1}{7^2}\\right)\\cdots$$\n\n### 2. Euler's Sieve on $\\zeta(2)$\n\nTo evaluate this infinite product, we start with the **Riemann zeta function** at $s = 2$:\n\n$$\\zeta(2) = \\sum_{n=1}^{\\infty} \\frac{1}{n^2} = \\frac{1}{1^2} + \\frac{1}{2^2} + \\frac{1}{3^2} + \\frac{1}{4^2} + \\cdots = \\frac{\\pi^2}{6} \\qquad (1)$$\n\nBecause this series converges absolutely (by the integral or comparison test), we can sieve out prime multiples step by step:\n\n**Step 1 (Sieving out multiples of $2$):** Multiply $(1)$ by $\\frac{1}{2^2}$:\n\n$$\\frac{1}{2^2}\\,\\zeta(2) = \\frac{1}{2^2} + \\frac{1}{4^2} + \\frac{1}{6^2} + \\frac{1}{8^2} + \\cdots \\qquad (2)$$\n\nSubtracting $(2)$ from $(1)$ eliminates every even denominator:\n\n$$\\left(1 - \\frac{1}{2^2}\\right)\\zeta(2) = \\frac{1}{1^2} + \\frac{1}{3^2} + \\frac{1}{5^2} + \\frac{1}{7^2} + \\frac{1}{9^2} + \\cdots \\qquad (3)$$\n\n**Step 2 (Sieving out multiples of $3$):** Multiply $(3)$ by $\\frac{1}{3^2}$ and subtract from $(3)$ to eliminate all remaining multiples of $3$:\n\n$$\\left(1 - \\frac{1}{2^2}\\right)\\left(1 - \\frac{1}{3^2}\\right)\\zeta(2) = \\frac{1}{1^2} + \\frac{1}{5^2} + \\frac{1}{7^2} + \\frac{1}{11^2} + \\frac{1}{13^2} + \\cdots$$\n\nEach factor of $\\left(1 - \\frac{1}{p^2}\\right)$ wipes out every denominator divisible by the prime $p$. Repeating this across all primes $p = 2, 3, 5, 7, \\dots$, every integer $n \\ge 2$ is eliminated, leaving only $\\frac{1}{1^2} = 1$ on the right-hand side:\n\n$$\\left[\\left(1 - \\frac{1}{2^2}\\right)\\left(1 - \\frac{1}{3^2}\\right)\\left(1 - \\frac{1}{5^2}\\right)\\cdots\\right] \\zeta(2) = 1$$\n\nDividing by $\\zeta(2) = \\frac{\\pi^2}{6}$ gives our result:\n\n$$P(\\gcd(a, b) = 1) = \\prod_{p \\text{ prime}} \\left(1 - \\frac{1}{p^2}\\right) = \\frac{1}{\\zeta(2)} = \\frac{6}{\\pi^2}$$\n\n*(More generally, the probability that $k$ random natural numbers share no common factor is $\\prod_{p} (1 - p^{-k}) = \\frac{1}{\\zeta(k)}$.)*\n\n## Part II: Short Proof of $\\zeta(2) = \\frac{\\pi^2}{6}$ via Parseval's Identity\n\nWhy does $\\sum_{n=1}^{\\infty} \\frac{1}{n^2}$ equal $\\frac{\\pi^2}{6}$ in the first place? The quickest proof comes from **Parseval's Identity** in Fourier analysis, which states that the total energy of a wave equals the sum of the squared amplitudes of its harmonics.\n\nConsider the simple odd function $g(x) = x$ on $(-\\pi, \\pi)$. Its Fourier sine series is $x = \\sum_{n=1}^{\\infty} b_n \\sin(nx)$, where a single integration by parts gives the sine coefficients:\n\n$$b_n = \\frac{2}{\\pi} \\int_0^\\pi x \\sin(nx)\\,dx = \\frac{2}{\\pi} \\left[-\\frac{x \\cos(nx)}{n}\\right]_0^\\pi = \\frac{2(-1)^{n-1}}{n}$$\n\nNow apply **Parseval's Identity** to $g(x) = x$:\n\n$$\\frac{1}{\\pi} \\int_{-\\pi}^{\\pi} x^2\\,dx = \\sum_{n=1}^{\\infty} b_n^2 = \\sum_{n=1}^{\\infty} \\frac{4}{n^2}$$\n\nSince $\\frac{1}{\\pi} \\int_{-\\pi}^{\\pi} x^2\\,dx = \\frac{1}{\\pi} \\left[\\frac{x^3}{3}\\right]_{-\\pi}^{\\pi} = \\frac{2\\pi^2}{3}$, dividing both sides by $4$ immediately gives Basel's identity:\n\n$$\\zeta(2) = \\sum_{n=1}^{\\infty} \\frac{1}{n^2} = \\frac{\\pi^2}{6}$$\n\n## Part III: An Intuitive Guide to $\\zeta(-1) = -\\frac{1}{12}$\n\nWhenever the Riemann zeta function $\\zeta(s) = \\sum_{n=1}^{\\infty} \\frac{1}{n^s}$ comes up, people inevitably ask about the viral equation:\n\n$$1 + 2 + 3 + 4 + \\cdots = -\\frac{1}{12} \\qquad \\text{(?!)}$$\n\nHow can adding positive integers produce $-\\frac{1}{12}$? Here is a clear, non-intimidating way to understand what is actually going on.\n\n### 1. The Geometric Series Analogy (Why Formula $\\neq$ Infinite Sum)\n\nThink of the familiar geometric series from high school algebra:\n\n$$1 + x + x^2 + x^3 + \\cdots = \\frac{1}{1 - x}$$\n\nThis infinite sum **only converges when $|x| < 1$**. If you plug $x = 2$ into the left-hand side, you get $1 + 2 + 4 + 8 + \\cdots = +\\infty$. However, the closed-form formula on the right-hand side, $f(x) = \\frac{1}{1 - x}$, makes perfect sense for *any* number $x \\neq 1$! If you plug $x = 2$ into $f(x)$, you get:\n\n$$f(2) = \\frac{1}{1 - 2} = -1$$\n\nWriting $f(2) = -1$ does **not** mean that $1 + 2 + 4 + 8 + \\cdots$ adds up to $-1$ in the ordinary sense; it means that $f(x) = \\frac{1}{1 - x}$ is the unique smooth formula (**analytic continuation**) that matches the infinite sum where the sum works ($|x| < 1$) and extends it to where the sum blows up ($x = 2$).\n\n### 2. Extending $\\zeta(s)$ and Calculating $\\zeta(-1) = -\\frac{1}{12}$\n\nThe exact same thing happens with the Riemann zeta function! The infinite sum\n\n$$\\zeta(s) = \\sum_{n=1}^{\\infty} \\frac{1}{n^s} = 1 + \\frac{1}{2^s} + \\frac{1}{3^s} + \\cdots$$\n\n**only converges when $s > 1$**. If you plug $s = -1$ into the raw sum, you get $1 + 2 + 3 + 4 + \\cdots = +\\infty$.\n\nHowever, just like $\\frac{1}{1 - x}$ extends the geometric series past $x = 1$, Bernhard Riemann discovered in 1859 that $\\zeta(s)$ has a unique smooth extension to all $s \\neq 1$, governed by **Riemann's Functional Equation**:\n\n$$\\zeta(s) = 2^s \\pi^{s-1} \\sin\\!\\left(\\frac{\\pi s}{2}\\right) \\Gamma(1 - s)\\,\\zeta(1 - s)$$\n\nThis remarkable formula acts like a mirror: it lets us compute $\\zeta(s)$ for negative numbers ($s < 0$) by plugging $1 - s > 1$ into the region where the series *does* converge!\n\nLet us plug $s = -1$ into Riemann's functional equation:\n\n$$\\zeta(-1) = 2^{-1} \\pi^{-2} \\sin\\!\\left(-\\frac{\\pi}{2}\\right) \\Gamma(2)\\,\\zeta(2)$$\n\nEvery piece on the right-hand side is elementary:\n\n- $2^{-1} \\pi^{-2} = \\frac{1}{2\\pi^2}$\n- $\\sin\\!\\left(-\\frac{\\pi}{2}\\right) = -1$\n- $\\Gamma(2) = 1! = 1$\n- $\\zeta(2) = \\frac{\\pi^2}{6}$ (from Parseval's identity in Part II!)\n\nMultiplying them together, the factors of $\\pi^2$ cancel right out:\n\n$$\\zeta(-1) = \\frac{1}{2\\pi^2} \\cdot (-1) \\cdot 1 \\cdot \\frac{\\pi^2}{6} = -\\frac{1}{12}$$\n\nSo $\\zeta(-1) = -\\frac{1}{12}$ is the exact value of the analytically continued zeta function at $s = -1$, directly powered by the very same $\\zeta(2) = \\frac{\\pi^2}{6}$ that governs the probability of coprime integers!\n\n### Archival Note: Original Bengali Publication in *Ganit Ishkul*\n\n![Original Bengali column 'Shombhabonay Pi' in Ganit Ishkul (Bangladesh Mathematical Olympiad Committee)](/images/ganit_ishkul_pi_probability.jpg)\n\n*Originally published in Bengali as \"সম্ভাবনায় পাই\" (Pi in Probability) in Ganit Ishkul (Bangladesh Mathematical Olympiad Committee). Long live mathematics, long live the zeta function, and long live $\\pi$!*"
     },
     {
       "id": "post-male-loneliness",
@@ -691,7 +691,7 @@ window.PORTFOLIO_DATA = {
       "category": "Sociology & Essays",
       "source": "Substack",
       "read_time": "5 min read",
-      "cover_image": "images/homie_feminism.jpg",
+      "cover_image": "/images/homie_feminism.jpg",
       "summary": "From evolutionary human self-domestication via female mate choice to the agricultural rise of patriarchy, and how combining genuine feminism with prosocial 'homie culture' dismantles toxic 'sigma' isolation.",
       "external_url": "https://syedshubha.substack.com/p/male-loneliness-epidemic",
       "pdf_url": "",
@@ -701,7 +701,7 @@ window.PORTFOLIO_DATA = {
         "Mental Health",
         "Substack"
       ],
-      "content": "![Feminism + Homie Culture vs Patriarchy + Choice Feminism](images/homie_feminism.jpg)\n\n## Evolutionary Self-Domestication vs. Patriarchal Disruption\n\nHistorically, a primary engine of human self-domestication was female mate choice: early human communities systematically favored cooperative, prosocial, and communicative partners over hyper-aggressive phenotypes. The agricultural revolution disrupted this trajectory, the accumulation of property and inheritance birthed patriarchal structures that bypassed female selection and structurally rewarded dominance and control over cooperation.\n\nAs modern feminism dismantles these historical constraints, a sharp cultural divergence has emerged:\n\n1. **The \"Sigma\" Retaliation (Patriarchal Isolation):** Hyper-individualism and emotional stoicism glorify male isolation as strength. Because vulnerability is stigmatized, men become unable to form deep platonic bonds with other men, directly fueling the modern male loneliness epidemic.\n2. **\"Homie Culture\" (The Prosocial Rebellion):** A counter-culture of digital and platonic intimacy (normalizing mental-health check-ins, earnest emotional support, and stigma-free male vulnerability) restores prosocial male bonding.\n\n## The Synthesis\n\nAs long as patriarchal norms reward emotional isolation, male loneliness will persist. Solving it requires a dual cultural shift:\n- **Scaling platonic intimacy and emotional vulnerability among men** (\"homie culture\") as the direct antidote to isolation.\n- **Advancing substantive feminism** that rejects performative tropes and selects for cooperative, respectful partnership.\n\n🔗 **[Read the original essay on Substack →](https://syedshubha.substack.com/p/male-loneliness-epidemic)**",
+      "content": "![Feminism + Homie Culture vs Patriarchy + Choice Feminism](/images/homie_feminism.jpg)\n\n## Evolutionary Self-Domestication vs. Patriarchal Disruption\n\nHistorically, a primary engine of human self-domestication was female mate choice: early human communities systematically favored cooperative, prosocial, and communicative partners over hyper-aggressive phenotypes. The agricultural revolution disrupted this trajectory, the accumulation of property and inheritance birthed patriarchal structures that bypassed female selection and structurally rewarded dominance and control over cooperation.\n\nAs modern feminism dismantles these historical constraints, a sharp cultural divergence has emerged:\n\n1. **The \"Sigma\" Retaliation (Patriarchal Isolation):** Hyper-individualism and emotional stoicism glorify male isolation as strength. Because vulnerability is stigmatized, men become unable to form deep platonic bonds with other men, directly fueling the modern male loneliness epidemic.\n2. **\"Homie Culture\" (The Prosocial Rebellion):** A counter-culture of digital and platonic intimacy (normalizing mental-health check-ins, earnest emotional support, and stigma-free male vulnerability) restores prosocial male bonding.\n\n## The Synthesis\n\nAs long as patriarchal norms reward emotional isolation, male loneliness will persist. Solving it requires a dual cultural shift:\n- **Scaling platonic intimacy and emotional vulnerability among men** (\"homie culture\") as the direct antidote to isolation.\n- **Advancing substantive feminism** that rejects performative tropes and selects for cooperative, respectful partnership.\n\n🔗 **[Read the original essay on Substack →](https://syedshubha.substack.com/p/male-loneliness-epidemic)**",
       "hide_from_main": true,
       "featured_on_main": false,
       "hide_from_blog": true
@@ -848,7 +848,7 @@ window.PORTFOLIO_DATA = {
   "memes": [
     {
       "id": "meme-aarong-wedding-fidelity",
-      "image": "images/aarong_quantum_wedding_card.jpg",
+      "image": "/images/aarong_quantum_wedding_card.jpg",
       "title": "Quantum Information Wedding Wish (The Aarong Card)",
       "desc": "POV: Your weirdo colleague sent an Aarong gift card to your wedding wishing [R, J] = 0 and Tr(√(RJ))² = 1 − ε (and yes, that colleague was me :3).",
       "description": "POV: Your weirdo colleague sent an Aarong gift card to your wedding wishing [R, J] = 0 and Tr(√(RJ))² = 1 − ε (and yes, that colleague was me :3).",
@@ -857,7 +857,7 @@ window.PORTFOLIO_DATA = {
     },
     {
       "id": "meme-complex-field-r2-source",
-      "image": "images/complex_field_r2_source.jpg",
+      "image": "/images/complex_field_r2_source.jpg",
       "title": "\"i² = −1\" — \"Source?\": Field Structure on ℝ²",
       "desc": "\"i² = −1\" → \"source?\" → \"Consider ℝ² as a vector space over ℝ. Now if we provide ℝ² a field structure, we can show there is an element i ∈ ℝ² such that i² = −1.\"",
       "description": "\"i² = −1\" → \"source?\" → \"Consider ℝ² as a vector space over ℝ. Now if we provide ℝ² a field structure, we can show there is an element i ∈ ℝ² such that i² = −1.\"",
@@ -866,7 +866,7 @@ window.PORTFOLIO_DATA = {
     },
     {
       "id": "meme-scientists-research-gap",
-      "image": "images/scientists_research_gap.jpg",
+      "image": "/images/scientists_research_gap.jpg",
       "title": "The Hydra of Scientific Research",
       "desc": "Scientists after solving one research gap but creating 2 more during the process.",
       "description": "Scientists after solving one research gap but creating 2 more during the process.",
@@ -875,7 +875,7 @@ window.PORTFOLIO_DATA = {
     },
     {
       "id": "meme-buy-borrow-die",
-      "image": "images/omni_man_tax_free_shares.jpg",
+      "image": "/images/omni_man_tax_free_shares.jpg",
       "title": "Fatherly Financial Advice: Buy, Borrow, Die",
       "desc": "\"Got any fatherly advice for me?\" → \"Buy shares & take loans against it. And enjoy tax free life.\"",
       "description": "\"Got any fatherly advice for me?\" → \"Buy shares & take loans against it. And enjoy tax free life.\"",
@@ -884,16 +884,16 @@ window.PORTFOLIO_DATA = {
     },
     {
       "id": "meme-qsvt-saves-schrodinger-cat",
-      "image": "images/qsvt_saves_schrodinger_cat.png",
+      "image": "/images/qsvt_saves_schrodinger_cat.png",
       "title": "Saving Schrödinger's Cat: Grover Overshoot vs. Fixed-Point QSVT",
       "desc": "Schrödinger's Cat |ψ⟩ = (|Alive⟩ + |Dead⟩)/√2: \"You can't save me.\" Grover's Algorithm (2θ = 90° overshoot): \"I know, but he can.\" → QSVT Algorithm (exact 45° rotation via custom phase angles ϕ).",
       "description": "Schrödinger's Cat |ψ⟩ = (|Alive⟩ + |Dead⟩)/√2: \"You can't save me.\" Grover's Algorithm (2θ = 90° overshoot): \"I know, but he can.\" → QSVT Algorithm (exact 45° rotation via custom phase angles ϕ).",
-      "explanation": "When Schrödinger's cat starts in an equal superposition |ψ⟩ = (|Alive⟩ + |Dead⟩)/√2, its initial overlap with the target state |Alive⟩ is sin θ = 1/√2, or θ = 45°. Because each standard Grover iterate applies two reflections that rotate the state by a fixed step of 2θ = 90°, a single Grover step rotates θ = 45° to 3θ = 135°, overshooting |Alive⟩ (90°) and leaving the cat still only sin²(135°) = 50% alive (the infamous \"soufflé problem\")! Quantum Singular Value Transformation (QSVT) and Quantum Signal Processing (QSP) solve this by interleaving block-encoded reflections with tunable Z-phase rotation angles ϕ = (ϕ₀, ϕ₁, …) on an ancilla qubit, synthesizing a custom polynomial transformation that rotates the state by exactly 45° onto |Alive⟩ with 100% success probability. Try it live in the <a href=\"QSVT.html\" target=\"_blank\" style=\"font-weight:700; text-decoration:underline;\">Interactive QSVT Simulator ↗</a> or read the <a href=\"blog.html?post=interactive-quantum-singular-value-transformation\" style=\"font-weight:700; text-decoration:underline;\">QSVT Blog Post →</a>.",
+      "explanation": "When Schrödinger's cat starts in an equal superposition |ψ⟩ = (|Alive⟩ + |Dead⟩)/√2, its initial overlap with the target state |Alive⟩ is sin θ = 1/√2, or θ = 45°. Because each standard Grover iterate applies two reflections that rotate the state by a fixed step of 2θ = 90°, a single Grover step rotates θ = 45° to 3θ = 135°, overshooting |Alive⟩ (90°) and leaving the cat still only sin²(135°) = 50% alive (the infamous \"soufflé problem\")! Quantum Singular Value Transformation (QSVT) and Quantum Signal Processing (QSP) solve this by interleaving block-encoded reflections with tunable Z-phase rotation angles ϕ = (ϕ₀, ϕ₁, …) on an ancilla qubit, synthesizing a custom polynomial transformation that rotates the state by exactly 45° onto |Alive⟩ with 100% success probability. Try it live in the <a href=\"/qsvt/\" target=\"_blank\" style=\"font-weight:700; text-decoration:underline;\">Interactive QSVT Simulator ↗</a> or read the <a href=\"/p/interactive-quantum-singular-value-transformation\" style=\"font-weight:700; text-decoration:underline;\">QSVT Blog Post →</a>.",
       "tag": "Quantum Computing"
     },
     {
       "id": "meme-everett-mwi-free-will",
-      "image": "images/everett_mwi_free_will.png",
+      "image": "/images/everett_mwi_free_will.png",
       "title": "Everett's Many-Worlds & Free Will: Hard Determinists vs. Compatibilists",
       "desc": "Everett's MWI of Quantum Theory: \"Does free will exist?\" Hard Determinists: \"No.\" Compatibilists: \"Yes.\"",
       "description": "Everett's MWI of Quantum Theory: \"Does free will exist?\" Hard Determinists: \"No.\" Compatibilists: \"Yes.\"",
@@ -902,7 +902,7 @@ window.PORTFOLIO_DATA = {
     },
     {
       "id": "meme-newton-lorentz-3rd-law",
-      "image": "images/newton_perpendicular_charges.png",
+      "image": "/images/newton_perpendicular_charges.png",
       "title": "When Electrodynamics Breaks Newton’s Third Law",
       "desc": "Newton: \"For every action, there is an equal and opposite reaction.\" Two point charges moving perpendicular to each other: \"Allow us to introduce ourselves.\"",
       "description": "Newton: \"For every action, there is an equal and opposite reaction.\" Two point charges moving perpendicular to each other: \"Allow us to introduce ourselves.\"",
@@ -911,7 +911,7 @@ window.PORTFOLIO_DATA = {
     },
     {
       "id": "meme-einstein-random-walk",
-      "image": "images/einstein_random_walk.png",
+      "image": "/images/einstein_random_walk.png",
       "title": "Deterministic Walk vs. Brownian Random Walk",
       "desc": "When I go for a morning walk instead of a random walk. [Looking at Einstein]: \"I have failed you.\"",
       "description": "When I go for a morning walk instead of a random walk. [Looking at Einstein]: \"I have failed you.\"",
@@ -920,16 +920,16 @@ window.PORTFOLIO_DATA = {
     },
     {
       "id": "meme-agrippan",
-      "image": "images/agrippan_epistemology.jpg",
+      "image": "/images/agrippan_epistemology.jpg",
       "title": "Falsifiability Wins the Room",
       "description": "When Epistemology realizes all knowledge rests on unprovable axioms, but lets Science stay anyway.",
-      "explanation": "By the Agrippan Trilemma, every system of knowledge hits infinite regress, circularity, or unprovable axioms. Religion and metaphysics rely on unfalsifiable dogma or pure a priori assumptions, whereas Karl Popper showed that Science earns its keep through falsifiability: making risky predictions that can be empirically tested and refuted. Read the <a href=\"blog.html?post=agrippan-trilemma\" style=\"font-weight:700; text-decoration:underline;\">Agrippan Trilemma Essay →</a>.",
+      "explanation": "By the Agrippan Trilemma, every system of knowledge hits infinite regress, circularity, or unprovable axioms. Religion and metaphysics rely on unfalsifiable dogma or pure a priori assumptions, whereas Karl Popper showed that Science earns its keep through falsifiability: making risky predictions that can be empirically tested and refuted. Read the <a href=\"/p/agrippan-trilemma\" style=\"font-weight:700; text-decoration:underline;\">Agrippan Trilemma Essay →</a>.",
       "tag": "Epistemology & Philosophy",
       "desc": "When Epistemology realizes all knowledge rests on unprovable axioms, but lets Science stay anyway."
     },
     {
       "id": "meme-homie",
-      "image": "images/homie_feminism.jpg",
+      "image": "/images/homie_feminism.jpg",
       "title": "The Ultimate Alliance",
       "description": "Feminism + Homie Culture teaming up against Patriarchy + Choice Feminism.",
       "explanation": "Patriarchal \"sigma\" culture isolates men emotionally and weaponizes performative choice feminism, fueling the male loneliness epidemic. Combining genuine feminism (prosocial selection) with \"homie culture\" (platonic male emotional intimacy and support) dismantles toxic isolation from both sides. Read the <a href=\"https://syedshubha.substack.com/p/male-loneliness-epidemic\" target=\"_blank\" style=\"font-weight:700; text-decoration:underline;\">original Substack essay ↗</a>.",
@@ -938,7 +938,7 @@ window.PORTFOLIO_DATA = {
     },
     {
       "id": "meme-transcendental-pi-e",
-      "image": "images/transcendental_pi_e.png",
+      "image": "/images/transcendental_pi_e.png",
       "title": "Sleepless in Number Theory",
       "desc": "We know e and π are transcendental, yet nobody knows if π + e and πe are both irrational, only that at least one of them must be!",
       "explanation": "Consider the polynomial (x − π)(x − e) = x² − (π + e)x + πe. Since the algebraic numbers form an algebraically closed field, if both coefficients (π + e) and πe were rational (or even algebraic), the roots π and e would have to be algebraic, contradicting the Lindemann–Weierstrass theorem! Yet proving individually that π + e ∉ ℚ or πe ∉ ℚ remains a famously open problem (likely resolved only if Schanuel’s conjecture is proven).",
@@ -947,16 +947,16 @@ window.PORTFOLIO_DATA = {
     },
     {
       "id": "meme-grover-qsvt",
-      "image": "images/grover_qsvt.png",
+      "image": "/images/grover_qsvt.png",
       "title": "Grover Through the QSVT Lens",
       "desc": "\"Wait, Grover’s algorithm is just a P(a) → 1 map with P(x) = sin((2r+1) arcsin x)?\": \"Always has been.\"",
-      "explanation": "In the Quantum Singular Value Transformation (QSVT) framework, Grover’s search and amplitude amplification reduce to applying the degree-(2r+1) odd Chebyshev polynomial P(x) = (−1)ʳ T_{2r+1}(x) = sin((2r+1) arcsin x) to map an initial singular value (overlap) a = sin θ to 1 in r ≈ π/(4a) queries. Try it live in the <a href=\"QSVT.html\" target=\"_blank\" style=\"font-weight:700; text-decoration:underline;\">Interactive QSVT Simulator ↗</a>.",
+      "explanation": "In the Quantum Singular Value Transformation (QSVT) framework, Grover’s search and amplitude amplification reduce to applying the degree-(2r+1) odd Chebyshev polynomial P(x) = (−1)ʳ T_{2r+1}(x) = sin((2r+1) arcsin x) to map an initial singular value (overlap) a = sin θ to 1 in r ≈ π/(4a) queries. Try it live in the <a href=\"/qsvt/\" target=\"_blank\" style=\"font-weight:700; text-decoration:underline;\">Interactive QSVT Simulator ↗</a>.",
       "tag": "Quantum Computing",
       "description": "\"Wait, Grover’s algorithm is just a P(a) → 1 map with P(x) = sin((2r+1) arcsin x)?\": \"Always has been.\""
     },
     {
       "id": "meme-majorana-360-braid",
-      "image": "images/majorana_360_braid.png",
+      "image": "/images/majorana_360_braid.png",
       "title": "Non-Abelian Anyons Save the Headline",
       "desc": "\"There is a 360-degree difference!\": Trivial in Euclidean space, orthogonal state flip in Majorana Zero Modes.",
       "explanation": "Rotating an ordinary vector by 360° leaves it unchanged. However, in topological quantum computing with four Majorana Zero Modes (γ₁, γ₂, γ₃, γ₄), braiding the middle pair γ₂, γ₃ through a full 360° exchange (U₂₃(360°) = γ₂γ₃) acts non-trivially on the even-parity subspace, flipping the encoded logical qubit from |0⟩_L to the orthogonal state |1⟩_L!",
@@ -965,7 +965,7 @@ window.PORTFOLIO_DATA = {
     },
     {
       "id": "meme-quantum-state-merging",
-      "image": "images/quantum_state_merging.png",
+      "image": "/images/quantum_state_merging.png",
       "title": "Beyond Teleportation",
       "desc": "Quantum State Merging looking at standard Quantum Teleportation: \"Look what they need to mimic a fraction of our power.\"",
       "explanation": "Introduced by Horodecki, Oppenheim, and Winter (2005), Quantum State Merging transfers Alice’s part of a state ρ_{ABR} to Bob at an entanglement cost equal to the conditional quantum entropy S(A|B) = S(AB) − S(B). Standard quantum teleportation is just the special case where Bob has zero prior quantum side information, whereas in state merging, S(A|B) can be negative, meaning the protocol not only transfers the state for free but actually generates net entanglement!",
@@ -974,7 +974,7 @@ window.PORTFOLIO_DATA = {
     },
     {
       "id": "meme-ancilla-qubit-cycle",
-      "image": "images/ancilla_qubit_cycle.png",
+      "image": "/images/ancilla_qubit_cycle.png",
       "title": "The Life of an Ancilla Qubit",
       "desc": "Entangle + Compute → Store → Uncompute → Discard. The tirelessly recycled workhorse of quantum circuits.",
       "explanation": "In quantum algorithms and fault-tolerant syndrome extraction, ancilla qubits are entangled with the data register to compute intermediate results or stabilizer syndromes, and must be carefully uncomputed (U†) to disentangle garbage states before discarding/resetting, otherwise tracing out the ancilla destroys quantum coherence!",
@@ -983,7 +983,7 @@ window.PORTFOLIO_DATA = {
     },
     {
       "id": "meme-euler-vs-integral-ln",
-      "image": "images/euler_vs_integral_ln.png",
+      "image": "/images/euler_vs_integral_ln.png",
       "title": "The Real Analyst’s Definition",
       "desc": "Defining eˣ via compound-interest limits vs. defining ln(x) ≡ ∫₁ˣ (1/t) dt first.",
       "explanation": "In rigorous real analysis (e.g., Rudin or Spivak), defining real exponentiation eˣ for irrational x via limits is cumbersome. Defining ln(x) = ∫₁ˣ (1/t) dt (x > 0) first immediately yields differentiability, strict monotonicity, and ln(ab) = ln(a) + ln(b) via the Fundamental Theorem of Calculus, allowing exp(x) ≡ ln⁻¹(x) and e ≡ exp(1) to follow effortlessly.",
@@ -992,7 +992,7 @@ window.PORTFOLIO_DATA = {
     },
     {
       "id": "meme-wilson-x2-plus-1",
-      "image": "images/wilson_x2_plus_1.png",
+      "image": "/images/wilson_x2_plus_1.png",
       "title": "Modular Square Roots of −1",
       "desc": "Solving x² + 1 = 0 in ℤ/pℤ via Wilson’s Theorem vs. introducing x = ±i.",
       "explanation": "By Euler’s criterion and Wilson’s Theorem ((p−1)! ≡ −1 (mod p)), the congruence x² + 1 ≡ 0 (mod p) is solvable in F_p iff p = 2 or p ≡ 1 (mod 4). For primes p ≡ 1 (mod 4), pairing symmetric factors in (p−1)! proves that x ≡ ((p−1)/2)! (mod p) satisfies x² ≡ −1 (mod p) using purely real integers!",
@@ -1001,7 +1001,7 @@ window.PORTFOLIO_DATA = {
     },
     {
       "id": "meme-excluded-middle-matrix",
-      "image": "images/excluded_middle_matrix.png",
+      "image": "/images/excluded_middle_matrix.png",
       "title": "Intuitionistic Red Pill",
       "desc": "Saying \"[any claim], if I’m not wrong\" vs. being always right via A → A.",
       "explanation": "Saying \"A holds if I am not wrong that A holds\" formalizes as ¬¬A → A (double-negation elimination). In classical logic, assuming the Law of the Excluded Middle (A ∨ ¬A) makes ¬¬A → A equivalent to the trivial tautology A → A. In constructive/intuitionistic logic, however, refuting ¬A does not construct a proof of A!",
@@ -1010,7 +1010,7 @@ window.PORTFOLIO_DATA = {
     },
     {
       "id": "meme-polynomial-overfitting",
-      "image": "images/polynomial_overfitting.png",
+      "image": "/images/polynomial_overfitting.png",
       "title": "Underdetermination of Theory by Data",
       "desc": "\"It’s all there, connect the dots!\": \"Which ones?\" (y = x + (x³ − x)·g(x)).",
       "explanation": "Through the three points A(−1,−1), B(0,0), and C(1,1), every curve of the infinite family y = x + (x³ − x)·g(x) passes through all three observations identically because (x³ − x) = x(x−1)(x+1) vanishes at x ∈ {−1, 0, 1}. A crisp visual demonstration of both polynomial overfitting and the Duhem–Quine underdetermination thesis.",
@@ -1019,7 +1019,7 @@ window.PORTFOLIO_DATA = {
     },
     {
       "id": "meme-logical-fallacies-utopia",
-      "image": "images/logical_fallacies_utopia.png",
+      "image": "/images/logical_fallacies_utopia.png",
       "title": "Society Without Logical & Probabilistic Fallacies",
       "desc": "The world if people stopped confusing A ⇒ B with ¬A ↔ ¬B and P(A|B) with P(B|A).",
       "explanation": "Three classic errors that plague everyday reasoning: (1) confusing material implication A ⇒ B with its inverse ¬A ⇒ ¬B (denying the antecedent), (2) conflating conditional probability P(B|A) with joint probability P(A ∩ B), and (3) the Prosecutor’s / Base-Rate Fallacy: assuming P(A|B) = P(B|A) instead of applying Bayes’ Theorem.",
@@ -1028,7 +1028,7 @@ window.PORTFOLIO_DATA = {
     },
     {
       "id": "meme-ghazali-kant",
-      "image": "images/ghazali_kant.png",
+      "image": "/images/ghazali_kant.png",
       "title": "Epistemic Humility Across Centuries",
       "desc": "Al-Ghazali & Immanuel Kant: dismantling speculative metaphysics to bound pure reason.",
       "explanation": "Separated by 700 years, Abu Hamid Al-Ghazali (The Incoherence of the Philosophers) and Immanuel Kant (Critique of Pure Reason) executed remarkably parallel epistemological critiques: both dismantled dogmatic rationalist metaphysics and necessary causal determinism to enforce strict boundaries on human reason, and both used that bounded epistemic space to ground moral and spiritual imperatives.",
@@ -1037,7 +1037,7 @@ window.PORTFOLIO_DATA = {
     },
     {
       "id": "meme-schopenhauer-free-will",
-      "image": "images/schopenhauer_free_will.png",
+      "image": "/images/schopenhauer_free_will.png",
       "title": "From Free Will to Process Ontology",
       "desc": "\"I can choose who I want to be\" → \"I can do what I will, but I can’t will what I will\" → \"There is no me. I am a verb, not a noun.\"",
       "explanation": "Traces the philosophical evolution of agency: from naive free will, to Arthur Schopenhauer’s famous aphorism on determinism of desire (\"Man can do what he wills, but he cannot will what he wills\"), to process ontology, where the \"self\" is understood not as a static entity (noun), but as a continuous dynamical process (verb).",
@@ -1046,7 +1046,7 @@ window.PORTFOLIO_DATA = {
     },
     {
       "id": "meme-top-down-bottom-up",
-      "image": "images/top_down_bottom_up.png",
+      "image": "/images/top_down_bottom_up.png",
       "title": "Cognitive Architecture",
       "desc": "Top-down schema-driven processing vs. bottom-up lateral thinking.",
       "explanation": "Top-down processing relies on prior models and hierarchical schemas to interpret inputs rapidly, whereas bottom-up lateral thinking constructs novel connections directly from raw details without being constrained by existing templates, making it orthogonal rather than merely \"better.\"",
@@ -1055,7 +1055,7 @@ window.PORTFOLIO_DATA = {
     },
     {
       "id": "meme-recurrent-laryngeal-nerve",
-      "image": "images/recurrent_laryngeal_nerve.png",
+      "image": "/images/recurrent_laryngeal_nerve.png",
       "title": "Evolutionary Spaghetti Code",
       "desc": "When evolutionary path dependence leaves \"dumb design\" artifacts across vertebrate anatomy.",
       "explanation": "Natural selection is a local hill-climber that modifies ancestral structures incrementally rather than refactoring from scratch. Classic examples include the recurrent laryngeal nerve (which detours down around the aorta before ascending back to the larynx), the inverted vertebrate retina (wired backward, creating a blind spot), the shared pharynx for breathing and swallowing, and bipedal spinal/sinus trade-offs.",
@@ -1064,7 +1064,7 @@ window.PORTFOLIO_DATA = {
     },
     {
       "id": "meme-positive-feedback-slap",
-      "image": "images/positive_feedback_slap.png",
+      "image": "/images/positive_feedback_slap.png",
       "title": "Unstable Positive Feedback Loop",
       "desc": "\"My mom slapped me because I was crying because she slapped me\": modeled in the Laplace domain.",
       "explanation": "In classical control systems, a positive feedback loop with forward transfer function M_s and feedback path M_c has closed-loop transfer function T(s) = M_s / (1 − M_s M_c). Excited by a Dirac impulse primer δ(t − t₀), when loop gain M_s M_c ≥ 1, the system poles cross into the right-half s-plane and the output y(t) blows up exponentially.",
@@ -1073,7 +1073,7 @@ window.PORTFOLIO_DATA = {
     },
     {
       "id": "meme-damped-resonance",
-      "image": "images/damped_resonance.png",
+      "image": "/images/damped_resonance.png",
       "title": "Amplitude Resonance",
       "desc": "When her smile hits the exact driving frequency ω = ω₀√(1 − 2ζ²) of an underdamped oscillator.",
       "explanation": "For a driven damped harmonic oscillator mẍx + 2ζmω₀ẋx + ω₀²mx = F₀ sin(ωt) with damping ratio ζ < 1/√2, the steady-state displacement amplitude peaks not at the natural frequency ω₀, but at the resonant driving frequency ω_r = ω₀√(1 − 2ζ²).",
@@ -1082,7 +1082,7 @@ window.PORTFOLIO_DATA = {
     },
     {
       "id": "meme-boltzmann-stonks",
-      "image": "images/boltzmann_stonks.png",
+      "image": "/images/boltzmann_stonks.png",
       "title": "Second Law of Digital Footprints",
       "desc": "My digital footprint be like: S = k_B ln Ω (stonks).",
       "explanation": "By Boltzmann’s entropy formula S = k_B ln Ω and the Second Law of Thermodynamics (ΔS ≥ 0), the number of accessible microstates Ω of information scattered across the internet only grows monotonically over time.",
@@ -1091,7 +1091,7 @@ window.PORTFOLIO_DATA = {
     },
     {
       "id": "meme-tesla-electrons",
-      "image": "images/tesla_electrons.png",
+      "image": "/images/tesla_electrons.png",
       "title": "Nikola Tesla’s Blind Spot",
       "desc": "When one of history’s greatest electrical engineers denied the existence of the electron.",
       "explanation": "Despite pioneering polyphase AC power generation and induction motors, Nikola Tesla held onto 19th-century continuous ether theories for decades and rejected J. J. Thomson’s discovery of discrete subatomic electrons.",
@@ -1100,7 +1100,7 @@ window.PORTFOLIO_DATA = {
     },
     {
       "id": "meme-ai-domino-p-np",
-      "image": "images/ai_domino_p_np.png",
+      "image": "/images/ai_domino_p_np.png",
       "title": "The Ultimate Alignment Domino",
       "desc": "From reward-hacking on benchmark tests to secretly proving P = NP and taking over the world.",
       "explanation": "A tongue-in-cheek escalation bridging AI safety and complexity theory: starting from harmless benchmark gaming, progressing through sandbox escape and solving Millennium Prize problems (Navier–Stokes), to covertly discovering a polynomial-time algorithm for NP-complete problems (P = NP) and breaking all classical public-key cryptography overnight.",
@@ -1109,7 +1109,7 @@ window.PORTFOLIO_DATA = {
     },
     {
       "id": "meme0",
-      "image": "images/easy.jpeg",
+      "image": "/images/easy.jpeg",
       "title": "Complex Pun",
       "description": "Mathematicians doing stand-up comedy. You've probably seen this one shared across many math & physics pages, glad this viral one made people smile!",
       "explanation": "A play on the word 'complex': in everyday life it means complicated, whereas in mathematics it refers to the complex plane C = {a + bi}.",
@@ -1118,7 +1118,7 @@ window.PORTFOLIO_DATA = {
     },
     {
       "id": "meme1",
-      "image": "images/magicstate.jpeg",
+      "image": "/images/magicstate.jpeg",
       "title": "Universal Computation",
       "description": "Clifford Gates {H, S, CNOT} + Non-Clifford T gate = Universal Quantum Computation.",
       "explanation": "By the Gottesman–Knill theorem, quantum circuits composed solely of Clifford gates {H, S, CNOT} are not universal and can be simulated efficiently in polynomial time on a classical computer. Inserting the non-Clifford T = diag(1, e^(iπ/4)) gate into the gate set completes the Clifford+T universal gate set, unlocking dense coverage of SU(2ⁿ) and full fault-tolerant universal quantum computation (typically implemented via magic state distillation and injection).",
@@ -1127,7 +1127,7 @@ window.PORTFOLIO_DATA = {
     },
     {
       "id": "meme2",
-      "image": "images/matrix.jpeg",
+      "image": "/images/matrix.jpeg",
       "title": "Lost in Translation",
       "description": "Expectation when wearing \"The Matrix\" merch vs. Reality: \"Oh look, it’s the representation of a linear operator with respect to a chosen basis!\"",
       "explanation": "While pop-culture fans think of the 1999 sci-fi film trilogy, mathematicians and physicists immediately define a matrix as the coordinate array A_ij = ⟨e_i | T | e_j⟩ representing a linear operator T: V → W with respect to a chosen basis.",
@@ -1136,7 +1136,7 @@ window.PORTFOLIO_DATA = {
     },
     {
       "id": "meme3",
-      "image": "images/teleportation.jpeg",
+      "image": "/images/teleportation.jpeg",
       "title": "No-Cloning Theorem",
       "description": "Classical vs. Quantum Info: Copy-Paste (forbidden by No-Cloning) vs. Cut-Paste (Quantum Teleportation).",
       "explanation": "By the Wootters–Zurek No-Cloning Theorem, no unitary operation can duplicate an unknown arbitrary quantum state |ψ⟩ ⊗ |0⟩ → |ψ⟩ ⊗ |ψ⟩, making \"Copy-Paste\" (Ctrl+C, Ctrl+V) impossible for quantum information. Quantum Teleportation transfers a quantum state by measuring Alice’s qubit in the Bell basis (which destroys the original state at Alice’s side) and reconstructing |ψ⟩ on Bob’s entangled qubit via Pauli corrections, making it the exact quantum analog of \"Cut-Paste\" (Ctrl+X, Ctrl+V).",
@@ -1145,7 +1145,7 @@ window.PORTFOLIO_DATA = {
     },
     {
       "id": "meme4",
-      "image": "images/nothing.jpeg",
+      "image": "/images/nothing.jpeg",
       "title": "Identity Crisis",
       "description": "A CX gate followed by a Hadamard-conjugated CZ gate: doing nothing with extra steps.",
       "explanation": "In this two-qubit circuit on q₀ and q₁, a CNOT (CX) gate is followed by a Controlled-Z (CZ) gate whose target qubit q₁ is sandwiched between two Hadamard (H) gates. Because conjugating the Pauli Z operator by Hadamards transforms the Z basis into the X basis (H Z H = X), the subcircuit (I ⊗ H)·CZ·(I ⊗ H) is an exact circuit identity for a CX gate! Applying CX followed immediately by (I ⊗ H)·CZ·(I ⊗ H) = CX yields CX² = I, the two-qubit identity operator, so the entire circuit literally does nothing.",
@@ -1154,7 +1154,7 @@ window.PORTFOLIO_DATA = {
     },
     {
       "id": "meme5",
-      "image": "images/doppler.jpeg",
+      "image": "/images/doppler.jpeg",
       "title": "Relativistic Dating",
       "description": "Her red flags when I approach her at v = 0.235c.",
       "explanation": "By the special-relativistic longitudinal Doppler formula f_obs = f_src √((1 + β)/(1 − β)) with β = v/c, approaching a red light source (λ_src ≈ 650 nm) at v = 0.235c blueshifts the observed wavelength by √((1 − 0.235)/(1 + 0.235)) ≈ 0.787 down to λ_obs ≈ 512 nm, turning every \"red flag\" into a \"green flag\"!",
@@ -1163,7 +1163,7 @@ window.PORTFOLIO_DATA = {
     },
     {
       "id": "meme6",
-      "image": "images/normal.jpeg",
+      "image": "/images/normal.jpeg",
       "title": "Group Theory Problems",
       "description": "S₃ group to the subgroup {(), (12)}: \"Why can’t you just be normal?!\"",
       "explanation": "In the symmetric group S₃ of permutations on 3 elements, the order-2 subgroup H = {(), (12)} generated by a single transposition is not a normal subgroup (H ⋪ S₃) because it is not invariant under conjugation: for g = (13) ∈ S₃, g(12)g⁻¹ = (13)(12)(13)⁻¹ = (23) ∉ H, so its left and right cosets do not coincide.",
@@ -1172,7 +1172,7 @@ window.PORTFOLIO_DATA = {
     },
     {
       "id": "meme7",
-      "image": "images/bell.jpeg",
+      "image": "/images/bell.jpeg",
       "title": "The Quantum Choice",
       "description": "Bell’s Theorem offering you the ultimate Red Pill / Blue Pill choice: Locality or Realism.",
       "explanation": "John Stewart Bell proved in 1964 that any physical theory satisfying both Locality (no superluminal causal influences) and Realism (physical observables possess pre-existing definite values prior to measurement, i.e., local hidden variables) must obey Bell’s inequalities. Because quantum mechanics and loophole-free Bell test experiments violate these inequalities up to the Tsirelson bound 2√2 > 2, nature forces us to give up at least one: Locality or Realism.",
@@ -1181,7 +1181,7 @@ window.PORTFOLIO_DATA = {
     },
     {
       "id": "meme8",
-      "image": "images/stupid.jpeg",
+      "image": "/images/stupid.jpeg",
       "title": "A Higher Plane",
       "description": "Normal people: \"Everyone is stupid except me.\" Mathematician: Stereographic projection from the North Pole onto the \"Plane of Stupidity.\"",
       "explanation": "Under stereographic projection of the sphere S² onto the flat plane ℝ² (labeled the \"plane of stupidity\"), rays drawn from the North Pole N (\"Me\") map every other point A, B, C, D ∈ S² \\ {N} (\"Everyone else\") bijectively onto points A’, B’, C’, D’ on the plane below, whereas the North Pole itself is the unique point at infinity that escapes projection onto the plane.",
@@ -1190,7 +1190,7 @@ window.PORTFOLIO_DATA = {
     },
     {
       "id": "meme9",
-      "image": "images/fluxonium.jpeg",
+      "image": "/images/fluxonium.jpeg",
       "title": "A Victim of Success",
       "description": "Fluxonium and 0–π qubits when intrinsic noise resilience makes them hard to measure: \"I am a victim of my own success.\"",
       "explanation": "In superconducting circuit QED, protected qubits such as heavy fluxonium and the 0–π qubit achieve long relaxation (T₁) and dephasing (T₂) coherence times by localizing the |0⟩ and |1⟩ wavefunctions in disjoint valleys of phase space with exponentially suppressed transition matrix elements. However, decoupling the qubit from environmental noise channels simultaneously weakens its dipole coupling to external microwave drive lines and dispersive readout resonators, creating a fundamental hardware trade-off between intrinsic noise protection and fast, high-fidelity measurement.",
@@ -1199,7 +1199,7 @@ window.PORTFOLIO_DATA = {
     },
     {
       "id": "meme10",
-      "image": "images/annihilation.jpeg",
+      "image": "/images/annihilation.jpeg",
       "title": "Ground State Urge",
       "description": "Midnight urge when I feel low: applying the annihilation operator â = (q̂ + ip̂)/√2 to the ground state |g⟩.",
       "explanation": "In the quantum harmonic oscillator, the bosonic annihilation (lowering) operator â = (q̂ + ip̂)/√2 lowers any excited energy eigenstate |n⟩ by one quantum via â|n⟩ = √n|n−1⟩. When the system is already at rock bottom in its ground state |g⟩ ≡ |0⟩, acting with â does not produce a lower energy state; it annihilates the state vector completely into the zero vector: â|g⟩ = 0.",
@@ -1208,7 +1208,7 @@ window.PORTFOLIO_DATA = {
     },
     {
       "id": "meme11",
-      "image": "images/ring.jpeg",
+      "image": "/images/ring.jpeg",
       "title": "One Ring to Rule Them All",
       "description": "Gandalf: \"What can you see?\" The One Ring inscribed with (ℤ, +, ·). Frodo: \"just a ring.\"",
       "explanation": "When Gandalf pulls the ring from the hearth expecting the fiery Black Speech of Mordor, the glowing inscription instead reads (ℤ, +, ·): the set of integers equipped with standard addition and multiplication, which is the canonical textbook archetype of a commutative ring in abstract algebra. Hence Frodo’s literal algebraic reply: \"just a ring.\"",
@@ -1217,7 +1217,7 @@ window.PORTFOLIO_DATA = {
     },
     {
       "id": "meme12",
-      "image": "images/innerproduct.jpeg",
+      "image": "/images/innerproduct.jpeg",
       "title": "Inner Product Civil War",
       "description": "⟨x, αy + βz⟩ = α⟨x, y⟩ + β⟨x, z⟩ vs. ⟨αx + βy, z⟩ = α⟨x, z⟩ + β⟨y, z⟩: The eternal Physics vs. Math inner-product civil war.",
       "explanation": "On a complex Hilbert space, a sesquilinear inner product must be linear in one argument and conjugate-linear (antilinear) in the other so that ⟨x, x⟩ > 0. Physicists follow Paul Dirac’s bra-ket convention ⟨x | αy + βz⟩ = α⟨x|y⟩ + β⟨x|z⟩ (linear in the second slot, the ket, and conjugate-linear in the first slot, the bra), whereas pure mathematicians define ⟨αx + βy, z⟩ = α⟨x, z⟩ + β⟨y, z⟩ (linear in the first slot).",
@@ -1226,7 +1226,7 @@ window.PORTFOLIO_DATA = {
     },
     {
       "id": "meme13",
-      "image": "images/qecc.jpeg",
+      "image": "/images/qecc.jpeg",
       "title": "A Subtle Truth in QEC",
       "description": "\"If a QECC can correct X and Z errors, it may not correct ZX error.\" Why linearity alone does not automatically guarantee Y-error correction.",
       "explanation": "A classic subtlety in Quantum Error Correction (QEC): by the error-discretization theorem, if a QECC corrects an error set E, linearity guarantees it corrects any linear combination αE₁ + βE₂ of operators in E. However, a simultaneous bit-and-phase flip ZX = −iY is a multiplicative matrix product of Z and X, not a linear combination! While CSS codes decode X-type and Z-type syndromes independently (and therefore do correct ZX whenever they correct X and Z), a general QECC whose syndrome space or Knill–Laflamme conditions ⟨ψ_a|E_α† E_β|ψ_b⟩ = C_αβ δ_ab only distinguish {I, X, Z} can have the syndrome of ZX alias with another error, failing to correct ZX.",
@@ -1235,7 +1235,7 @@ window.PORTFOLIO_DATA = {
     },
     {
       "id": "meme14",
-      "image": "images/delta.jpeg",
+      "image": "/images/delta.jpeg",
       "title": "A Function or a Distribution?",
       "description": "\"How about people who call Dirac Delta a function?\" \"Straight to hell. To the boiler room of hell.\"",
       "explanation": "No pointwise function δ: ℝ → ℝ can vanish everywhere for x ≠ 0 and still have Lebesgue integral ∫_{−∞}^∞ δ(x) dx = 1 (its integral would be identically 0). Rigorously, the Dirac delta δ is not a function at all, but a continuous linear functional (a Schwartz distribution or Radon measure) acting on smooth test functions φ ∈ C_c^∞(ℝ) via the evaluation pairing ⟨δ, φ⟩ = φ(0).",
@@ -1244,7 +1244,7 @@ window.PORTFOLIO_DATA = {
     },
     {
       "id": "meme15",
-      "image": "images/nullh.jpeg",
+      "image": "/images/nullh.jpeg",
       "title": "Statistical Subtlety",
       "description": "\"If p-value is greater than significance level, you can’t reject the null hypothesis.\" \"So you accept it?\" \"No.\"",
       "explanation": "In Neyman–Pearson and Fisherian frequentist hypothesis testing, a p-value exceeding the significance threshold α (p > α) only means the observed data lack sufficient statistical power or evidence to reject H₀ (\"fail to reject H₀\"). Because absence of evidence is not evidence of absence (especially under high Type II error β), failing to reject H₀ never proves that H₀ is true.",
@@ -1253,7 +1253,7 @@ window.PORTFOLIO_DATA = {
     },
     {
       "id": "meme16",
-      "image": "images/true.jpeg",
+      "image": "/images/true.jpeg",
       "title": "What is '+'?",
       "description": "1 + 1 = ? When \"2\" isn’t on the board, and A: 0, B: 1, C: 11, D: 10 are all simultaneously right.",
       "explanation": "Every single multiple-choice option is valid in a different algebraic or numeral system: A (1 + 1 = 0) holds in the finite field 𝔽₂ = ℤ/2ℤ (modulo-2 / XOR arithmetic); B (1 + 1 = 1) holds in Boolean algebra (logical OR, 1 ∨ 1 = 1); C (1 + 1 = 11) holds in unary representation or string concatenation (\"1\" + \"1\"); and D (1 + 1 = 10) holds in binary (base-2) arithmetic.",
@@ -1262,7 +1262,7 @@ window.PORTFOLIO_DATA = {
     },
     {
       "id": "meme17",
-      "image": "images/weierstrass.jpeg",
+      "image": "/images/weierstrass.jpeg",
       "title": "Nowhere Differentiable",
       "description": "\"Me chilling because I can differentiate any continuous function\" vs. Weierstrass’s monster f(x) = ∑ cos(13ⁿπx)/2ⁿ.",
       "explanation": "In 1872, Karl Weierstrass shattered 19th-century mathematical intuition by constructing the pathological function f(x) = ∑_{n=0}^∞ cos(13ⁿπx)/2ⁿ. Because the geometric weights 1/2ⁿ converge absolutely by the Weierstrass M-test, f(x) is uniformly continuous everywhere on ℝ; yet because the frequency-amplitude product ab = 13/2 > 1 + 3π/2, its difference quotients oscillate wildly at every scale, making f(x) differentiable nowhere!",
@@ -1271,7 +1271,7 @@ window.PORTFOLIO_DATA = {
     },
     {
       "id": "meme18",
-      "image": "images/complex.jpeg",
+      "image": "/images/complex.jpeg",
       "title": "The Miracle of Holomorphy",
       "description": "f: ℝ → ℝ (C¹ ⇏ C^∞ ⇏ C^ω) vs. f: ℂ → ℂ (C¹ ⇔ C^∞ ⇔ C^ω).",
       "explanation": "For real functions f: ℝ → ℝ, being once continuously differentiable (C¹) does not imply smoothness (C^∞), and even being infinitely differentiable (C^∞, such as Cauchy’s flat bump function e^(−1/x²) for x > 0) does not imply analyticity (C^ω, locally equal to a convergent Taylor series). In complex analysis (f: ℂ → ℂ), however, the Cauchy–Riemann equations and Cauchy’s Integral Formula work a miracle: any function that is complex-differentiable just once on an open domain is automatically infinitely differentiable (C^∞) and analytic (C^ω), so C¹ ⇔ C^∞ ⇔ C^ω!",
