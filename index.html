@@ -1666,6 +1666,73 @@
             color: #94a3b8;
         }
 
+        .footer-cta-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.65rem;
+            margin-top: 1.25rem;
+        }
+
+        .footer-cta-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.45rem;
+            padding: 0.5rem 0.95rem;
+            border-radius: 7px;
+            font-size: 0.84rem;
+            font-weight: 600;
+            text-decoration: none;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            border: 1px solid rgba(70, 29, 124, 0.22);
+            background: rgba(255, 255, 255, 0.85);
+            color: #2b144d;
+            font-family: inherit;
+        }
+
+        .footer-cta-btn:hover {
+            background: #461d7c;
+            color: #ffffff;
+            border-color: #461d7c;
+            transform: translateY(-1px);
+        }
+
+        .footer-cta-btn.primary {
+            background: #c59b27;
+            color: #160b28;
+            border-color: #c59b27;
+        }
+
+        .footer-cta-btn.primary:hover {
+            background: #d4af37;
+            color: #160b28;
+            border-color: #d4af37;
+        }
+
+        html[data-theme="dark"] .footer-cta-btn {
+            background: rgba(255, 255, 255, 0.07);
+            color: #e2e8f0;
+            border-color: rgba(255, 255, 255, 0.16);
+        }
+
+        html[data-theme="dark"] .footer-cta-btn:hover {
+            background: rgba(255, 255, 255, 0.15);
+            color: #ffffff;
+            border-color: rgba(212, 175, 55, 0.55);
+        }
+
+        html[data-theme="dark"] .footer-cta-btn.primary {
+            background: #c59b27;
+            color: #160b28;
+            border-color: #c59b27;
+        }
+
+        html[data-theme="dark"] .footer-cta-btn.primary:hover {
+            background: #d4af37;
+            color: #160b28;
+            border-color: #d4af37;
+        }
+
         .footer-links {
             list-style: none;
             display: flex;
@@ -1927,9 +1994,9 @@
                 </div>
 
                 <div class="hero-QuickLinks">
-                    <a href="mailto:syed.shubha@ieee.org">
+                    <a href="#contact" class="obfuscated-email" data-u="syed.shubha" data-d="ieee.org">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
-                        syed.shubha@ieee.org
+                        <span class="email-label">Email</span>
                     </a>
                     <a href="https://scholar.google.com/citations?user=8EK8VJMAAAAJ" target="_blank">
                         <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 3 1 9l11 6 9-4.91V17h2V9L12 3zm0 14.2L5 13.4v3.8c0 2.1 3.1 3.8 7 3.8s7-1.7 7-3.8v-3.8l-7 3.8z"/></svg>
@@ -2196,11 +2263,16 @@
                     Louisiana State University, Baton Rouge, LA, USA<br><br>
                     Open to research collaborations, academic discussions, and peer-review invitations in quantum hardware security, quantum error correction, and quantum communication.
                 </p>
+                <div class="footer-cta-row">
+                    <a href="https://www.linkedin.com/in/syedshubha/" target="_blank" rel="noopener" class="footer-cta-btn primary">💬 Message on LinkedIn ↗</a>
+                    <button type="button" class="footer-cta-btn" onclick="openProtectedEmail()">✉️ Send Email</button>
+                    <button type="button" class="footer-cta-btn" id="copyEmailFooterBtn" onclick="copyProtectedEmail(this)">📋 Copy Email</button>
+                </div>
             </div>
             <div>
                 <h3>Contact & Profiles</h3>
                 <ul class="footer-links">
-                    <li><a href="mailto:syed.shubha@ieee.org">✉️ syed.shubha@ieee.org</a></li>
+                    <li><a href="#contact" class="obfuscated-email" data-u="syed.shubha" data-d="ieee.org">✉️ <span class="email-label">Email</span></a></li>
                     <li><a href="https://scholar.google.com/citations?user=8EK8VJMAAAAJ" target="_blank">🎓 Google Scholar</a></li>
                     <li><a href="https://orcid.org/0009-0005-1435-5958" target="_blank">🆔 ORCID: 0009-0005-1435-5958</a></li>
                     <li><a href="https://github.com/syedshubha" target="_blank">💻 GitHub: syedshubha</a></li>
@@ -2564,10 +2636,40 @@
             if (btt) btt.classList.toggle('visible', window.scrollY > 450);
         }, { passive: true });
 
+        function getProtectedEmail() {
+            return ['syed', 'shubha'].join('.') + '@' + ['ieee', 'org'].join('.');
+        }
+
+        function openProtectedEmail() {
+            window.location.href = 'mailto:' + getProtectedEmail();
+        }
+
+        function copyProtectedEmail(btn) {
+            const addr = getProtectedEmail();
+            navigator.clipboard.writeText(addr).then(() => {
+                const orig = btn.textContent;
+                btn.textContent = '✓ Copied: ' + addr;
+                setTimeout(() => { btn.textContent = orig; }, 2200);
+            });
+        }
+
+        function initProtectedEmails() {
+            const addr = getProtectedEmail();
+            document.querySelectorAll('.obfuscated-email').forEach(el => {
+                const lbl = el.querySelector('.email-label');
+                if (lbl) lbl.textContent = addr;
+                el.addEventListener('click', e => {
+                    e.preventDefault();
+                    openProtectedEmail();
+                });
+            });
+        }
+
         if (window.location.protocol !== 'file:' && window.location.pathname.endsWith('/index.html')) {
             history.replaceState({}, '', window.location.pathname.replace(/\/index\.html$/, '/') + window.location.search + window.location.hash);
         }
         syncThemeBtn();
+        initProtectedEmails();
         initPortfolio();
     </script>
     <button class="back-to-top" id="backToTopBtn" onclick="window.scrollTo({top: 0, behavior: 'smooth'})" aria-label="Back to top">↑ Top</button>
