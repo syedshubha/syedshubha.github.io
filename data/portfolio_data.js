@@ -852,13 +852,13 @@ window.PORTFOLIO_DATA = {
       "title": "Quantum Information Wedding Wish (The Aarong Card)",
       "desc": "POV: Your weirdo colleague sent an Aarong gift card to your wedding wishing [R, J] = 0 and Tr(√(RJ))² = 1 − ε (and yes, that colleague was me :3).",
       "description": "POV: Your weirdo colleague sent an Aarong gift card to your wedding wishing [R, J] = 0 and Tr(√(RJ))² = 1 − ε (and yes, that colleague was me :3).",
-      "explanation": "Fun fact: I was that \"weirdo colleague\"—I actually handwrote and gifted this Aarong card at a colleague's wedding! Modeling the newlyweds R and J as quantum states—positive semidefinite density matrices (R, J ⪰ 0) with unit trace Tr(R) = Tr(J) = 1—the card makes two formal wishes: (i) [R, J] = RJ − JR = 0, meaning their density operators commute, so they share a common eigenbasis and are simultaneously compatible without measurement disturbance; and (ii) since [R, J] = 0, the Uhlmann–Jozsa quantum state fidelity F(R, J) = (Tr√(√R J √R))² simplifies to (Tr√(RJ))² = 1 − ε with 0 < ε ≪ 1. Wishing for F(R, J) = 1 − ε wishes for near-unit quantum fidelity (maximum harmony and state overlap) while keeping a tiny positive ε so R ≠ J and both partners retain their distinct individual identities!",
+      "explanation": "Fun fact: I was that \"weirdo colleague\" and actually handwrote and gifted this Aarong card at a colleague's wedding! Modeling the newlyweds R and J as quantum states, represented as positive semidefinite density matrices (R, J ⪰ 0) with unit trace Tr(R) = Tr(J) = 1, the card makes two formal wishes: (i) [R, J] = RJ − JR = 0, meaning R and J commute and therefore share a common eigenbasis, so measuring one partner's state does not disturb or collapse the other's (perfect compatibility without measurement back-action); and (ii) the Uhlmann–Jozsa quantum state fidelity F(R, J) = (Tr √(√R J √R))² = (Tr √(RJ))² = 1 − ε (which simplifies to (Tr √(RJ))² because R and J commute!) is arbitrarily close to 1, with a tiny positive ε > 0 so they remain nearly one in spirit and state space while still preserving a sliver of individual distinguishability.",
       "tag": "Quantum Computing"
     },
     {
       "id": "meme-complex-field-r2-source",
       "image": "/images/complex_field_r2_source.jpg",
-      "title": "\"i² = −1\" — \"Source?\": Field Structure on ℝ²",
+      "title": "\"i² = −1\" vs. \"Source?\": Field Structure on ℝ²",
       "desc": "\"i² = −1\" → \"source?\" → \"Consider ℝ² as a vector space over ℝ. Now if we provide ℝ² a field structure, we can show there is an element i ∈ ℝ² such that i² = −1.\"",
       "description": "\"i² = −1\" → \"source?\" → \"Consider ℝ² as a vector space over ℝ. Now if we provide ℝ² a field structure, we can show there is an element i ∈ ℝ² such that i² = −1.\"",
       "explanation": "Instead of postulating i = √(−1) as a mysterious \"imaginary\" symbol, William Rowan Hamilton (1833) constructed the complex field ℂ rigorously on the 2D real vector space ℝ² by equipping ordered pairs (a, b) ∈ ℝ² with componentwise addition (a, b) + (c, d) = (a + c, b + d) and the multiplication rule (a, b)·(c, d) = (ac − bd, ad + bc). Embedding ℝ ↪ ℝ² via a ↦ (a, 0) (so −1 ≡ (−1, 0)) and defining i := (0, 1) ∈ ℝ², direct calculation yields i² = (0, 1)·(0, 1) = (0·0 − 1·1, 0·1 + 1·0) = (−1, 0) = −1 with complete algebraic rigor! (Equivalently, ℂ is the quotient field ℝ[x]/(x² + 1).)",
@@ -870,7 +870,7 @@ window.PORTFOLIO_DATA = {
       "title": "The Hydra of Scientific Research",
       "desc": "Scientists after solving one research gap but creating 2 more during the process.",
       "description": "Scientists after solving one research gap but creating 2 more during the process.",
-      "explanation": "In scientific and engineering research, closing one research gap almost never ends the inquiry—it expands the boundary of knowledge and uncovers new edge cases, higher-order couplings, and deeper open questions. As Karl Popper noted in The Logic of Scientific Discovery, every resolution of a scientific problem generates new, more fertile unsolved problems (and conveniently writes the \"Future Work\" section of the next two papers and grant proposals!).",
+      "explanation": "In scientific and engineering research, closing one research gap almost never ends the inquiry. Instead, it expands the boundary of knowledge and uncovers new edge cases, higher-order couplings, and deeper open questions. Far from being a failure, spawning two new well-posed problems while resolving one is the engine of scientific progress (and a reason to celebrate in the lab: \"Future Work\" and the next two papers practically write themselves).",
       "tag": "Science & Engineering"
     },
     {
@@ -879,7 +879,7 @@ window.PORTFOLIO_DATA = {
       "title": "Fatherly Financial Advice: Buy, Borrow, Die",
       "desc": "\"Got any fatherly advice for me?\" → \"Buy shares & take loans against it. And enjoy tax free life.\"",
       "description": "\"Got any fatherly advice for me?\" → \"Buy shares & take loans against it. And enjoy tax free life.\"",
-      "explanation": "Illustrates the well-known \"Buy, Borrow, Die\" tax-planning strategy in public finance: under realization-based tax codes, unrealized capital gains on appreciating equities are untaxed until sold. By holding appreciating shares indefinitely (\"Buy\"), pledging those shares as collateral for low-interest securities-backed lines of credit to fund living expenses (\"Borrow\"—since loan proceeds are debt rather than realized income, they are tax-free), and passing the assets to heirs with a stepped-up cost basis (\"Die\"), wealthy shareholders legally bypass both income tax and capital gains tax.",
+      "explanation": "A reference to the well-known \"Buy, Borrow, Die\" tax-planning strategy used by ultra-high-net-worth equity holders: (1) accumulate appreciating assets such as equities (\"Buy\") without selling them, because unrealized capital gains are not taxed under current income tax law; (2) pledge those shares as collateral for low-interest securities-backed lines of credit (\"Borrow\", where loan proceeds are debt rather than realized income and are therefore tax-free) to fund lifestyle expenses; and (3) hold the assets until death (\"Die\"), when heirs receive a stepped-up cost basis to fair market value, permanently erasing the accumulated capital gains tax liability.",
       "tag": "Miscellaneous"
     },
     {
