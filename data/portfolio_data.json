@@ -615,7 +615,7 @@
     {
       "id": "post-constructing-numbers",
       "slug": "from-peano-to-real-numbers",
-      "title": "From Peano Axioms to ℝ and ℂ: Constructing the Number System",
+      "title": "Constructing the Numbers: From Peano Axioms to ℂ",
       "date": "October 2026",
       "category": "Mathematics & Physics",
       "source": "Blog",
@@ -638,7 +638,7 @@
     {
       "id": "post-relativity-magnetism-photon",
       "slug": "relativistic-electrodynamics-and-photon-mass",
-      "title": "From Relativistic Electrodynamics to the Speed of Light Limit: Why Magnetic Fields Exist and Why Only Massless Particles Reach c",
+      "title": "Why Magnetic Fields Exist: Relativity & the Speed of Light",
       "date": "October 2026",
       "category": "Mathematics & Physics",
       "source": "Blog",
@@ -662,7 +662,7 @@
     {
       "id": "post-pi-in-probability-zeta",
       "slug": "pi-in-probability-and-riemann-zeta",
-      "title": "π in Probability: Coprime Integers, Parseval's Identity for ζ(2) = π²/6, and Analytic Continuation to ζ(−1) = −1/12",
+      "title": "π in Probability: From Coprime Integers to ζ(−1) = −1/12",
       "date": "October 2026",
       "category": "Mathematics & Physics",
       "source": "Blog",
@@ -861,7 +861,7 @@
       "title": "\"i² = −1\" vs. \"Source?\": Field Structure on ℝ²",
       "desc": "\"i² = −1\" → \"source?\" → \"Consider ℝ² as a vector space over ℝ. Now if we provide ℝ² a field structure, we can show there is an element i ∈ ℝ² such that i² = −1.\"",
       "description": "\"i² = −1\" → \"source?\" → \"Consider ℝ² as a vector space over ℝ. Now if we provide ℝ² a field structure, we can show there is an element i ∈ ℝ² such that i² = −1.\"",
-      "explanation": "Instead of postulating i = √(−1) as a mysterious \"imaginary\" symbol, William Rowan Hamilton (1833) constructed the complex field ℂ rigorously on the 2D real vector space ℝ² by equipping ordered pairs (a, b) ∈ ℝ² with componentwise addition (a, b) + (c, d) = (a + c, b + d) and the multiplication rule (a, b)·(c, d) = (ac − bd, ad + bc). Embedding ℝ ↪ ℝ² via a ↦ (a, 0) (so −1 ≡ (−1, 0)) and defining i := (0, 1) ∈ ℝ², direct calculation yields i² = (0, 1)·(0, 1) = (0·0 − 1·1, 0·1 + 1·0) = (−1, 0) = −1 with complete algebraic rigor! (Equivalently, ℂ is the quotient field ℝ[x]/(x² + 1).) (See the full step-by-step proof in the blog article: <a href=\"/p/from-peano-to-real-numbers\">From Peano Axioms to ℝ and ℂ: Constructing the Number System</a>.)",
+      "explanation": "Instead of postulating i = √(−1) as a mysterious \"imaginary\" symbol, William Rowan Hamilton (1833) constructed the complex field ℂ rigorously on the 2D real vector space ℝ² by equipping ordered pairs (a, b) ∈ ℝ² with componentwise addition (a, b) + (c, d) = (a + c, b + d) and the multiplication rule (a, b)·(c, d) = (ac − bd, ad + bc). Embedding ℝ ↪ ℝ² via a ↦ (a, 0) (so −1 ≡ (−1, 0)) and defining i := (0, 1) ∈ ℝ², direct calculation yields i² = (0, 1)·(0, 1) = (0·0 − 1·1, 0·1 + 1·0) = (−1, 0) = −1 with complete algebraic rigor! (Equivalently, ℂ is the quotient field ℝ[x]/(x² + 1).) (See the full step-by-step proof in the blog article: <a href=\"/p/from-peano-to-real-numbers\">Constructing the Numbers: From Peano Axioms to ℂ</a>.)",
       "tag": "Mathematics"
     },
     {
