@@ -1320,9 +1320,11 @@
         }
 
         function closeReader() {
+            window.__INITIAL_POST_SLUG__ = null;
             const isWeb = window.location.protocol !== 'file:';
             history.pushState({}, '', isWeb ? '/blog/' : 'blog.html');
             checkRoute();
+            window.scrollTo({ top: 0, behavior: 'smooth' });
         }
 
         function checkRoute() {
@@ -1330,6 +1332,7 @@
             const pathMatch = window.location.pathname.match(/^\/(?:p|blog)\/([^\/]+?)(?:\.html)?\/?$/);
             const pathSlug = (pathMatch && pathMatch[1] !== 'index') ? decodeURIComponent(pathMatch[1]) : null;
             const slug = pathSlug || (history.state && history.state.post) || params.get('post') || params.get('slug') || params.get('id') || window.__INITIAL_POST_SLUG__ || null;
+            window.__INITIAL_POST_SLUG__ = null;
             const orderedPosts = getOrderedVisiblePosts();
             const allPosts = SITE_DATA.posts || [];
             const found = slug ? allPosts.find(p => (p.slug || p.id) === slug || (Array.isArray(p.legacy_slugs) && p.legacy_slugs.includes(slug))) : null;
