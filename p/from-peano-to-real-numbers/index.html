@@ -6,12 +6,12 @@
         <base href="/">
     <title>From Peano Axioms to ℝ and ℂ: Constructing the Number System | Syed Emad Uddin Shubha</title>
     <meta name="description" content="How to build the entire number system from the empty set: Peano axioms and von Neumann ordinals for ℕ, equivalence classes for ℤ and ℚ, why S = {x ∈ ℚ : 0 &lt; x² &lt; 2} has no supremum in ℚ, Dedekind cuts for ℝ, and why equipping the vector space ℝ² with any field structure forces an element z ∈ ℂ with z² = −1.">
-    <link rel="canonical" href="https://syedshubha.com/p/from-peano-to-real-numbers">
+    <link rel="canonical" href="https://syedshubha.com/p/from-peano-to-real-and-complex-numbers">
 
     <!-- Open Graph / LinkedIn / Facebook -->
     <meta property="og:type" content="article">
     <meta property="og:site_name" content="Syed Emad Uddin Shubha">
-    <meta property="og:url" content="https://syedshubha.com/p/from-peano-to-real-numbers">
+    <meta property="og:url" content="https://syedshubha.com/p/from-peano-to-real-and-complex-numbers">
     <meta property="og:title" content="From Peano Axioms to ℝ and ℂ: Constructing the Number System">
     <meta property="og:description" content="How to build the entire number system from the empty set: Peano axioms and von Neumann ordinals for ℕ, equivalence classes for ℤ and ℚ, why S = {x ∈ ℚ : 0 &lt; x² &lt; 2} has no supremum in ℚ, Dedekind cuts for ℝ, and why equipping the vector space ℝ² with any field structure forces an element z ∈ ℂ with z² = −1.">
     <meta property="og:image" content="https://syedshubha.com/images/og/from-peano-to-real-numbers.jpg">
@@ -22,12 +22,12 @@
 
     <!-- Twitter / X -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:url" content="https://syedshubha.com/p/from-peano-to-real-numbers">
+    <meta name="twitter:url" content="https://syedshubha.com/p/from-peano-to-real-and-complex-numbers">
     <meta name="twitter:title" content="From Peano Axioms to ℝ and ℂ: Constructing the Number System">
     <meta name="twitter:description" content="How to build the entire number system from the empty set: Peano axioms and von Neumann ordinals for ℕ, equivalence classes for ℤ and ℚ, why S = {x ∈ ℚ : 0 &lt; x² &lt; 2} has no supremum in ℚ, Dedekind cuts for ℝ, and why equipping the vector space ℝ² with any field structure forces an element z ∈ ℂ with z² = −1.">
     <meta name="twitter:image" content="https://syedshubha.com/images/og/from-peano-to-real-numbers.jpg">
     <meta name="twitter:creator" content="@syed_shubha">
-    <script>window.__INITIAL_POST_SLUG__ = "from-peano-to-real-numbers";</script>
+    <script>window.__INITIAL_POST_SLUG__ = "from-peano-to-real-and-complex-numbers";</script>
     <script>
         (function() {
             if (window.location.protocol !== 'file:' && !document.querySelector('base')) {
@@ -1335,7 +1335,7 @@
             const slug = pathSlug || (history.state && history.state.post) || params.get('post') || params.get('slug') || params.get('id') || window.__INITIAL_POST_SLUG__ || null;
             const orderedPosts = getOrderedVisiblePosts();
             const allPosts = SITE_DATA.posts || [];
-            const found = slug ? allPosts.find(p => (p.slug || p.id) === slug) : null;
+            const found = slug ? allPosts.find(p => (p.slug || p.id) === slug || (Array.isArray(p.legacy_slugs) && p.legacy_slugs.includes(slug))) : null;
 
             const readerEl = document.getElementById('readerView');
             const listingEl = document.getElementById('listingView');

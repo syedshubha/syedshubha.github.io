@@ -1335,7 +1335,7 @@
             const slug = pathSlug || (history.state && history.state.post) || params.get('post') || params.get('slug') || params.get('id') || window.__INITIAL_POST_SLUG__ || null;
             const orderedPosts = getOrderedVisiblePosts();
             const allPosts = SITE_DATA.posts || [];
-            const found = slug ? allPosts.find(p => (p.slug || p.id) === slug) : null;
+            const found = slug ? allPosts.find(p => (p.slug || p.id) === slug || (Array.isArray(p.legacy_slugs) && p.legacy_slugs.includes(slug))) : null;
 
             const readerEl = document.getElementById('readerView');
             const listingEl = document.getElementById('listingView');

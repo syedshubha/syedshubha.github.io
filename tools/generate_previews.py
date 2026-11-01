@@ -92,21 +92,23 @@ def main():
         slug = p.get('slug') or p['id']
         cover_rel = (p.get('cover_image') or '').lstrip('/')
         cover_abs = os.path.join(ROOT, cover_rel) if cover_rel else fallback_cover
-        size = make_og_image(cover_abs, os.path.join(ROOT, 'images', 'og', f'{slug}.jpg'))
-        meta = META_BLOCK.format(
-            title=html.escape(strip_tags(p['title']), quote=True),
-            desc=html.escape(strip_tags(p.get('summary', '')), quote=True),
-            url=f'{SITE}/p/{slug}',
-            img=f'{SITE}/images/og/{slug}.jpg',
-            w=W, h=H,
-            init_js=f'window.__INITIAL_POST_SLUG__ = {json.dumps(slug)};',
-        )
-        page = inject_meta(blog_tpl, meta)
-        open(os.path.join(ROOT, 'p', f'{slug}.html'), 'w', encoding='utf-8').write(page)
-        slug_dir = os.path.join(ROOT, 'p', slug)
-        os.makedirs(slug_dir, exist_ok=True)
-        open(os.path.join(slug_dir, 'index.html'), 'w', encoding='utf-8').write(page)
-        made.append((f'/p/{slug}', size))
+        all_slugs = [slug] + [s for s in p.get('legacy_slugs', []) if s and s != slug]
+        for s in all_slugs:
+            size = make_og_image(cover_abs, os.path.join(ROOT, 'images', 'og', f'{s}.jpg'))
+            meta = META_BLOCK.format(
+                title=html.escape(strip_tags(p['title']), quote=True),
+                desc=html.escape(strip_tags(p.get('summary', '')), quote=True),
+                url=f'{SITE}/p/{slug}',
+                img=f'{SITE}/images/og/{s}.jpg',
+                w=W, h=H,
+                init_js=f'window.__INITIAL_POST_SLUG__ = {json.dumps(slug)};',
+            )
+            page = inject_meta(blog_tpl, meta)
+            open(os.path.join(ROOT, 'p', f'{s}.html'), 'w', encoding='utf-8').write(page)
+            slug_dir = os.path.join(ROOT, 'p', s)
+            os.makedirs(slug_dir, exist_ok=True)
+            open(os.path.join(slug_dir, 'index.html'), 'w', encoding='utf-8').write(page)
+            made.append((f'/p/{s}', size))
 
     meme_made = []
     for m in data.get('memes', []):
